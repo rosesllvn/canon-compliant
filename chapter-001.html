@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter One — Flowers Bloom on the Path — Canon Compliant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.85;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+    .topbar {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .topbar-inner {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      font-family: 'Zilla Slab', serif;
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--muted);
+      text-align: center;
+      flex: 1;
+    }
+    .kofi-btn {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--rust);
+      color: #fff;
+      padding: 0.35rem 0.85rem;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    .chapter-header {
+      max-width: var(--reading-width);
+      margin: 4rem auto 3rem;
+      padding: 0 2rem;
+      text-align: center;
+    }
+    .novel-name {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .chapter-label {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+    .chapter-date {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--muted);
+      margin-top: 0.75rem;
+    }
+    .chapter-divider {
+      margin: 2rem auto;
+      width: 3rem;
+      height: 1px;
+      background: var(--border);
+    }
+    .chapter-body {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      padding: 0 2rem 6rem;
+      position: relative;
+      z-index: 1;
+    }
+    .chapter-body p { margin-bottom: 1.4em; }
+    .chapter-body p:last-child { margin-bottom: 0; }
+    .scene-break {
+      text-align: center;
+      margin: 2.5em 0;
+      color: var(--gold);
+      letter-spacing: 0.3em;
+      font-size: 0.85rem;
+      user-select: none;
+    }
+    .chapter-body em { font-style: italic; }
+    .chapter-nav {
+      border-top: 1px solid var(--border);
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .chapter-nav a {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .chapter-nav a:hover { color: var(--rust); }
+    .chapter-nav .prev::before { content: '← '; }
+    .chapter-nav .next::after { content: ' →'; }
+    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      background: var(--paper-dark);
+      position: relative;
+      z-index: 1;
+    }
+    .footer-inner {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="topbar-home">Canon Compliant</a>
+      <span class="topbar-novel">Flowers Bloom on the Path</span>
+      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+    </div>
+  </nav>
+  <header class="chapter-header">
+    <p class="novel-name">Flowers Bloom on the Path · 陌上花開</p>
+    <h1 class="chapter-label">Chapter One</h1>
+    <p class="chapter-date">May 2026</p>
+    <div class="chapter-divider"></div>
+  </header>
+  <main class="chapter-body">
+    <p>While travelling through Jiuxian Mountain, I heard the children of a village singing the folk song "Flowers on the Path." The village elders told me: each spring, the consort of the King of Wu-Yue would return to her family home in Lin'an. The King would write to her: "The flowers have bloomed on the path; you may come home slowly."</p>
+
+    <p><em>— Su Shi, Preface to Three Poems on "Flowers on the Path"</em></p>
+
+    <div class="scene-break">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+    <p>Da Shao Dynasty, eighteenth sovereign. Twelfth year of the Virtuous Reign.</p>
+
+    <p>At the head of the assembled ministers, one official was levelling an elaborate indictment against another official — charges of accepting bribes, selling appointments, and oppressing the common people. He respectfully awaited the Emperor's final verdict from the high seat of the dragon throne. Then a second official stepped forward to intercede for the accused — a lifetime of devoted service to the realm deserved consideration, surely the offence was a momentary lapse of judgment, the Emperor in his wisdom and compassion — the first official promptly disputed this — the misconduct had been systematic over many years, hardly a lapse — and so it went, two men arguing in exhaustive circles over the fate of a fat old man trembling on his knees, debating whether to roll him up the mountain of swords or down into the pit of boiling oil.</p>
+
+    <p>At the very back of the assembled ranks, Li Congqing nodded along at intervals, conveying what appeared to be sincere and wholehearted agreement — though which side he was agreeing with was entirely unclear, even to himself. When uncertain, nod at everything. Foolproof.</p>
+
+    <p>"Your Majesty, this official has been falsely accused by villainous men!" the fat old man cried out, loud with grievance, his tears very convincing.</p>
+
+    <p>The young Emperor, who had been listening to both arguments with quiet attention, allowed the corner of his mouth to lift very slightly. Then, without any particular hurry, he opened his imperial mouth and said: "Oh? And which villainous man had the nerve to fabricate such comprehensive and well-evidenced charges against you? Name them. We would be most interested to hear."</p>
+
+    <p>One imperial sentence, and the squabbling ministers fell into instant silence, every mouth snapping shut. Anyone who couldn't read the meaning in those words had no business being in government.</p>
+
+    <p>Li Congqing was still nodding. His head was, in fact, dropping lower with increasing frequency, angling toward the floor.</p>
+
+    <p>The Emperor's sharp eyes swept the assembled ranks and settled on the back of Li Congqing's head.</p>
+
+    <p>"Li Congqing," he said, unhurried.</p>
+
+    <p>Li Congqing nodded.</p>
+
+    <p>Geng Baizuo, standing closest to him, jabbed him urgently in the ribs with an elbow. No response. Geng Baizuo, barely suppressing an eyeroll, tried again with more force.</p>
+
+    <p>The man was asleep. Again. At morning court. Again.</p>
+
+    <p>"Vice Minister of Rites, Li Congqing," the Emperor said once more — demonstrating remarkable patience, his tone warm and measured, with no discernible fury in it.</p>
+
+    <p>Cold sweat nonetheless broke out on every neck in the hall. These ministers collectively thought: Li Congqing, where did you borrow your courage? Standing here at court, fast asleep, repeatedly — you clearly have no interest in keeping your head attached to your body.</p>
+
+    <p>The perplexing thing was that this particular head had somehow remained very comfortably attached for six years now. The Emperor had neither taken his life nor found cause to strip his position or banish him from the hall; Li Congqing had simply floated on in his pleasant indeterminate way, occupying a modest post without achievement or misconduct, never advancing and never falling, suspended in his perfectly agreeable nowhere.</p>
+
+    <p>The Emperor caught the eye of his chief personal attendant, Wei Xiaomiao, who glided silently from the side of the hall to Li Congqing's position and said, with calm friendliness: "Lord Li, His Majesty is calling for you."</p>
+
+    <p>Geng Baizuo dug his elbow in with renewed vigour, nearly sending Li Congqing sideways. Wei Xiaomiao steadied him.</p>
+
+    <p>Li Congqing raised his head, half a beat behind. He blinked — those perpetually half-asleep eyes, soft and vague as a man who has never had quite enough rest — and found the Emperor looking down at him from on high.</p>
+
+    <p>What?</p>
+
+    <p>"Li Congqing," the Emperor said again.</p>
+
+    <p>Li Congqing collected himself and answered with impeccable courtesy: "This official is present."</p>
+
+    <p>"What do you think?"</p>
+
+    <p>Think about what? Li Congqing blinked again, glanced at the ministers who had been arguing, and produced the answer he kept ready for exactly such occasions: "To respond to Your Majesty — Minister Huang makes an excellent point, and Vice Minister Gao makes an equally excellent point. This official is in full agreement with both gentlemen. And as for Minister Chen —"</p>
+
+    <p><em>— who was currently trembling on his knees, shaking so hard every roll of him rippled —</em></p>
+
+    <p>"— what is this official to say?"</p>
+
+    <p>"Yes?" said the Emperor, his smile tilting a few degrees higher.</p>
+
+    <p>The assembled ministers thought: the Emperor is toying with him. A small, collective, shameful flicker of anticipatory delight passed through the hall. Would he strip Li Congqing's hat today? Have him dragged out and flogged?</p>
+
+    <p>"Lord Li," Wei Xiaomiao offered helpfully, "His Majesty is asking your view on the charges of bribery, appointment-selling, and oppression of the people against Minister Chen."</p>
+
+    <p>This at last resolved Li Congqing's uncertainty about what exactly he had nearly slept through. He reached for his most reliable instrument: "To respond to Your Majesty — there is a saying: one who does not hold the post should not concern himself with its affairs. This official is not in a position to hold, and therefore dare not venture, any opinion on Minister Chen's case."</p>
+
+    <p>Might as well have said nothing. Everyone in the hall thought this simultaneously.</p>
+
+    <p>The Emperor did not explode into imperial fury. He did not pursue the matter. He only smiled, withdrew his gaze, and turned back to the other ministers as if Li Congqing had simply ceased to exist. In the general estimation of the court, the Emperor had just waved Li Congqing away like an irrelevant moth — no contempt, but no particular regard either. A person of no consequence.</p>
+
+    <p>For his part, Li Congqing did not appear remotely troubled by this. No embarrassment, no alarm. He stood where he was, made a private resolution (his hundred-and-first) to perfect the art of the upright nap to a level of absolute invisibility, and quietly tried to blink the sleep from his eyes.</p>
+
+    <p>Here is what you need to know about Li Congqing: he had no notable virtues and no notable faults. His face was average. His intelligence was average. His character was average. His official rank was average. He had, in short, taken the Doctrine of the Mean and applied it to every dimension of his existence with such thoroughness that he had essentially dissolved into the middle of things.</p>
+
+    <p>By rights, a man of no particular achievement and no particular error should never have risen high enough to attend morning court at all. But six years ago, Li Congqing had — not entirely intentionally — stepped in front of an assassin's blade meant for the Emperor, which constituted a service to the throne whether he had planned it or not. He was accordingly promoted on the spot from a Fifth-Rank position in the Ministry of Revenue to Third-Rank Vice Minister of Rites, leaping himself into the imperial hall in a single bound.</p>
+
+    <p>He had nearly died for the privilege, which seemed in retrospect a steep price for a job he spent mostly sleeping. The great opportunity it represented — a chance to demonstrate brilliance, to seize the morning and make his mark — had not made any impression on Li Congqing whatsoever. He never vied for speaking time. He never sought occasion to shine. He drifted in, dozed, drifted out, and submitted no proposals that anyone could remember. This drove the hall's more ambitious occupants to a particular species of furious despair. They had clawed their way to court through years of sacrifice and study; this man was here because he'd stumbled into a blade. And he was occupying the space they coveted while doing absolutely nothing with it.</p>
+
+    <p>When pressed on the matter, Li Congqing would only sigh and say: "Now, you can't call the court a cesspit. Because if the court were a cesspit, that would make court officials — what, exactly? A sort of fat white wriggling thing?"</p>
+
+    <p>This remark made its way through the halls with alarming speed. The affronted officials filed a joint memorial accusing him of "slandering and disgracing the court" and requesting appropriate punishment.</p>
+
+    <p>The Emperor summoned Li Congqing to the Imperial Study to ask directly: had he or had he not made the comparison between the court and a privy, and the officials of the realm and something found therein?</p>
+
+    <p>Your Majesty, this official would never dare slander the court or its officials in any such manner. The person who called the court a cesspit was not I. Li Congqing wore an expression of complete innocence, though he showed no distress either.</p>
+
+    <p>He was, technically, correct.</p>
+
+    <p>The Emperor smiled and said: what a curious person you are — should one call you clever or foolish?</p>
+
+    <p>Your Majesty is discerning, Li Congqing replied, with the utmost sincerity.</p>
+
+    <p>The matter was closed. The Emperor wrote on the memorial in red brushwork: "The speaker had no such intent; the listeners read in what they chose."</p>
+
+    <p>Eight red characters. The petitioners understood at once that if they pressed further, the slander charge was far more likely to land on them than on Li Congqing. They continued to mutter darkly among themselves but filed no further memorials, and the affair simply evaporated.</p>
+
+    <p>Li Congqing emerged without a scratch, and went on living his pleasant, small official's life.</p>
+
+    <p>As for the Da Shao dynasty in this, its eighteenth generation: the realm was flourishing. The granaries were full, the borders were secure, the people were at peace. There were no great internal disorders and no foreign threats pressing at the gates. Catastrophe, when it came, was mostly the natural kind. Man-made disasters tended toward the flavour of Minister Chen — corrupt officials, the occasional oppressed subject — rather than anything that required a hero. Morning court was, as a result, not very dramatic. The routine reports were routine; the crises were manageable; the Duke of Zhou had plenty of occasion to come looking for Li Congqing, and one really couldn't blame him.</p>
+
+    <p>You could doze below the throne; you could not doze on it. The Emperor was obliged, regardless of the day's agenda, to maintain impeccable composure and the full weight of imperial dignity — the ancestral code required the sovereign to hold court in person every day without exception. Da Shao's long line of emperors had, remarkably, upheld this without fail, which accounted in no small part for the dynasty's enduring strength.</p>
+
+    <p>A prosperous age does not produce heroes of the forceful kind. It does produce officials of the Li Congqing kind. One follows the other, in the natural order of things.</p>
+
+    <p>An unremarkable official of this stripe had no business attracting the imperial eye. And yet — at some point that no one had quite pinpointed — the Emperor had begun calling Li Congqing to private audiences, for purposes unknown. He was called to accompany the Emperor at banquets and hunting expeditions. The two men exchanged few words and displayed nothing that could be called intimacy; indeed the Emperor sometimes seemed to barely acknowledge Li Congqing's presence, as though he had quite forgotten him.</p>
+
+    <p>Certain observant ministers found this odd. There was something slightly off about it, though they couldn't put their finger on what. Why keep this particular man at his side? If it was to have a distinguished companion, there were powerful ministers and great families. If it was for pleasant company, there was the noted scholar-beauty Lou Chuyun. Li Congqing was neither. His face was acceptable at best — nothing close to the "Pan An of the court" that Lou Chuyun was called. Even Wei Xiaomiao was better-looking.</p>
+
+    <p>Completely inexplicable.</p>
+
+    <p>One puzzled minister mentioned it to the Sixth Prince, the Emperor's most beloved brother, who gave him a very direct answer: "If the Emperor's mind were so easy to read, you might as well be Emperor yourself."</p>
+
+    <p>Your servant is most humbled, your servant is most humbled. After that, the ministers stopped speculating aloud about the Emperor's interest in Li Congqing. The man was, by any measure, harmless. He didn't impede anything.</p>
+
+    <p>Back in the hall — from the Emperor's vantage point, Li Congqing had stopped his compulsive nodding, but he was clearly in considerable physical distress: he was scrunching his brow, biting back yawns, quietly rubbing his lower back, discreetly pressing his thighs together, shifting his weight like a man who has been standing rather too long after rather too little sleep.</p>
+
+    <p>After the final item — summer flood control measures for the White River — the Emperor said: "We conclude here. Court is dismissed."</p>
+
+    <p>"We respectfully bid farewell to His Majesty."</p>
+
+    <p>The hall bowed in unison, and the Emperor departed.</p>
+
+    <p>Finally. Li Congqing exhaled, and in the next breath was already halfway out of the hall, plotting a direct route to his office and the horizontal position he had been denied all morning.</p>
+
+    <p>He had gone perhaps ten steps when Wei Xiaomiao's voice came after him.</p>
+
+    <p>"Lord Li — one moment, please."</p>
+
+    <p>Li Congqing nearly pretended not to hear. He managed to stop himself, turned back. "Xiaomiao. Is something the matter?"</p>
+
+    <p>"His Majesty has summoned you to the Imperial Study."</p>
+
+    <p>"Now?"</p>
+
+    <p>"At once. Please don't keep His Majesty waiting."</p>
+
+    <p>Li Congqing dearly wanted to say: could I possibly have a brief nap first and then attend? But one did not delay an imperial summons unless one had given up on living, and he had not, so he followed Wei Xiaomiao toward the Imperial Study.</p>
+
+    <p>"Xiaomiao — thank you, earlier," Li Congqing said, meaning it.</p>
+
+    <p>"Lord Li, please, just call me Xiaomiao. All this 'Chief Wei' business is too much."</p>
+
+    <p>"Chief Wei is the head of the palace's inner administration and the Emperor's closest personal attendant. For a minor official like me to address you by name would be the embarrassment, not the other way around."</p>
+
+    <p>"Lord Li is teasing me again."</p>
+
+    <p>"Truly, though — Xiaomiao." He lowered his voice. "Do you know what the Emperor wants to see me about?"</p>
+
+    <p>"Lord Li will find out when he gets there."</p>
+
+    <p>"Is there any possibility I could find out at no point ever?"</p>
+
+    <p>He couldn't help himself — he muttered it anyway, soft and slightly plaintive. He wanted to sleep. That was the entire content of his mind right now.</p>
+
+    <p>"Lord Li understands His Majesty far better than I do."</p>
+
+    <p>"I have absolutely no wish to understand what he's thinking," Li Congqing said to himself, keeping it very quiet. That was not a thought one could say aloud.</p>
+
+    <p>They arrived at the Imperial Study.</p>
+
+    <p>"Your Majesty — Lord Li is here," Wei Xiaomiao announced from the doorway.</p>
+
+    <p>"Let him in."</p>
+
+    <p>"Yes, Your Majesty. Lord Li — please."</p>
+
+    <p>Li Congqing did not perform the full kneeling ceremony. He offered a respectful bow from the waist. "This official pays his respects to His Majesty."</p>
+
+    <p>Wei Xiaomiao closed the doors behind him, leaving the two of them alone.</p>
+
+    <p>"Come here," Song Yu said.</p>
+
+    <p>Li Congqing crossed the room to stand beside the imperial desk, eyes lowered in appropriate deference.</p>
+
+    <p>Song Yu looked up. His gaze softened, almost imperceptibly. His fingers traced the shadows beneath Li Congqing's eyes. "You were quite worn out from last night."</p>
+
+    <p>Li Congqing paused. He glanced back to confirm the doors were properly closed. Then he said, with a distinct edge: "If Your Majesty knew I was worn out, why call me just now?"</p>
+
+    <p>"Because," Song Yu said, "you were about to nod your head all the way to the floor. The court is not a place for you to sleep yourself into the ground."</p>
+
+    <p>"I was managing a perfectly good nap and absolutely no one would have noticed if you hadn't called attention to it." There was a faint note of grievance in this. Insufficient sleep made his disposition sharp; he was a man who needed sleep the way other men needed food, and three hours in a night was slow torture.</p>
+
+    <p>Song Yu watched the unusual sulkiness with quiet amusement. "Mm. But I noticed."</p>
+
+    <p>"There is nothing about this official that merits the imperial notice."</p>
+
+    <p>"Are you angry?"</p>
+
+    <p>"This official would not dare."</p>
+
+    <p>"I want you to dare." Song Yu reached out, pulled Li Congqing onto his lap, drew him in, and murmured against his ear: "I didn't know that particular tribute medicine would be so potent. Don't be cross. We won't use it again."</p>
+
+    <p>Being coaxed in this manner by the most unattainable man under heaven — Li Congqing found his grievance draining away. He was too tired to maintain it, and besides, anger consumed energy, and he was profoundly opposed to anything that consumed energy when he was already running on nothing.</p>
+
+    <p>Still — ever since this entanglement with the Emperor had begun, he had been tired more often than not. Not just the body's tiredness, but a deeper kind. Concealment was exhausting work, even if the alternative was a thousandfold worse.</p>
+
+    <p>He was a man who had been lazy all his life, who avoided complications as one avoids bad weather, and yet here he was: entangled, concealing, complicated. He would occasionally feel a dim, drifting bewilderment about precisely when and where his life had taken this particular turn. Then the bewilderment itself would make him feel tired, and he would stop thinking about it, because thinking also consumed energy. He had a consistent solution to most problems.</p>
+
+    <p>If he could sit, he didn't stand. If he could lie down, he didn't sit. Sometimes he secretly envied people with genuine invaluable illnesses, who had the social permission to stay horizontal for ten days at a stretch and have everyone worry they weren't getting enough rest. Unfortunately he was in perfect health, his only infirmity a love of sleep too profound to be called anything so dignified as a medical condition.</p>
+
+    <p>If he went to bed at a reasonable hour, he could generally manage four or five hours — not enough, but survivable. The trouble was that a night spent with Song Yu usually yielded three hours at best, for reasons that were —</p>
+
+    <p>"Congqing," Song Yu was saying, his voice low and slightly rough at the edges, "your sounds are very beautiful. I'm very fond of them. If you could manage not to be so — in control — and make a little more noise, perhaps I wouldn't be quite so compelled to spend so much effort on you, or keep you all night on tribute remedies."</p>
+
+    <p>The words were, by most standards, not appropriate for any occasion involving the phrase "Your Majesty." Li Congqing abandoned ceremony entirely and gave him a look. "Making noise is exhausting. And it ruins the voice. Also, if you find the sound so appealing, why don't you make it yourself?"</p>
+
+    <p>"Mine doesn't sound nearly as good as yours," Song Yu said, with a smile. "And we're speaking to each other like this — doesn't it embarrass you at all?"</p>
+
+    <p>"We've done every embarrassing thing imaginable. Nothing left to blush about." Li Congqing pursed his mouth again. His back and legs were still aching from last night, and the more private discomforts needed no further enumeration. He frowned slightly at the memory of the Emperor's nocturnal excesses.</p>
+
+    <p>It wasn't that he objected to such things in principle — he was perfectly content to participate in the pleasures available to him. It was the aftermath: the overwhelming tiredness, the need to sleep for ten consecutive hours that could never be satisfied.</p>
+
+    <p>And yet he still came to court every morning. Song Yu himself sometimes found this puzzling — a man so clearly uninterested in proceedings, so monumentally indifferent to advancement, who still refused to miss a session. When Song Yu had once tried to order him to rest and skip morning court, Li Congqing — who never displayed anger — had actually produced a small, genuine temper about it. Song Yu, surprised, had not pushed further; he tolerated the sleeping in court, turned his imperial blind eye to it, even though every part of him wanted to carry Li Congqing bodily to a bed.</p>
+
+    <p>Don't exhaust me to the point where I can't stand up in the morning, Li Congqing had told him once.</p>
+
+    <p>But I can't control it, Song Yu had answered. There's no help for it — I simply can't stop wanting you.</p>
+
+    <p>"How did I come to be so taken with you?" the young Emperor said now, half to himself, genuinely puzzled. What was the particular quality of this ordinary man that had gotten so far under his skin? "Is it your lips? Or your eyes?"</p>
+
+    <p>Song Yu's fingers traced the landscape of Li Congqing's face, settled on his mouth. There was a small, round lip-pearl, perfectly placed — a detail that made the whole face look, at certain angles, as if it were perpetually on the verge of a pout; it gave the unspectacular features something unexpected and young.</p>
+
+    <p>The half-lidded eyes, lashes soft against the lower lid — those accounted for three parts drowsiness. Add to that a pervasive air of unhurried detachment from the concerns of the world, five parts serenity — and you had nine-tenths of Li Congqing.</p>
+
+    <p>The remaining tenth, Song Yu couldn't quite define. Something elusive. Like a landscape seen through mist.</p>
+
+    <p>A man who loved sleep this much had left some portion of himself in the dream-world, somewhere private, where other people couldn't look.</p>
+
+    <p>Song Yu studied his face with searching intensity, as if he might find there what he was looking for — and Li Congqing, entirely undermining the moment, lost the battle with his own eyelids and produced a tremendous yawn. "If there's nothing pressing, perhaps Your Majesty might let me go and sleep for a while."</p>
+
+    <p>"No hurry."</p>
+
+    <p>"I want to sleep."</p>
+
+    <p>Those words, accompanied by the blink of heavy-lidded eyes, and a particular helpless, unselfconscious expression that appeared only when Li Congqing was genuinely overcome with tiredness — and everyone who saw that expression immediately felt an inexplicable compulsion to let him go to sleep without further argument.</p>
+
+    <p>Song Yu felt the opposite compulsion with an intensity that ran straight through him. He captured Li Congqing's face in his hands and kissed him — the sleepy expression was the very thing he found most irresistible, the thing that made him least inclined to release this man and most inclined to keep him right here, thoroughly and completely —</p>
+
+    <p>"Your Majesty — Minister Xu requests an audience." Wei Xiaomiao's voice, perfectly timed, broke through the door.</p>
+
+    <p>Song Yu released Li Congqing and reassembled the full, impenetrable authority of the Emperor. "Go sit over there," he said, nodding toward the long couch along the wall. "Show him in."</p>
+
+    <p>Li Congqing obligingly retreated to the couch. He was exhausted; he was deeply comfortable; he lasted perhaps five minutes in a dignified semi-upright position before the weight of his eyelids became definitive. He listed, settled, and was horizontal, and then simply absent from the world — thoroughly and peacefully asleep, entirely unconcerned with propriety.</p>
+
+    <p>When Minister Xu entered the Imperial Study and saw him, the minister spared him only a brief glance. Li Congqing's presence in the Imperial Study had become semi-regular — the Emperor called him in after morning-court napping incidents, presumably, Xu thought, to do copying work or similar tasks, which was what the man deserved. Though he had pushed that particular limit today: not merely nodding off in the hall but actually lying flat out and sleeping in the Imperial Study as if it were his own bedroom.</p>
+
+    <p>Minister Xu, who had accumulated a long catalogue of grievances against Li Congqing's laziness over the years, fought a continuous internal battle about whether to say something, and shot him increasingly pointed sidelong looks as the audience with the Emperor wore on.</p>
+
+    <p>The early spring chill crept through the room. Li Congqing sneezed in his sleep — a small, private sneeze — and curled in slightly on himself without waking.</p>
+
+    <p>The sound drew the Emperor's gaze toward the couch.</p>
+
+    <p>Your Majesty, look at this — the man is impossible — surely now — Minister Xu was crying internally at the Emperor with considerable energy, hoping the imperial attention would translate to appropriate imperial consequence.</p>
+
+    <p>The Emperor stood. He walked toward Li Congqing.</p>
+
+    <p>Minister Xu readied himself to applaud.</p>
+
+    <p>The Emperor accepted the lightweight imperial robe that Wei Xiaomiao had silently produced, and draped it over Li Congqing's sleeping form. He indicated to Wei Xiaomiao to ease off Li Congqing's shoes. He lifted the official's hat from his head and set it aside. He moved him gently into a more comfortable position on the couch, and placed a cushion — with his own hands — beneath the sleeping man's head, so he might rest easier.</p>
+
+    <p>The movements were entirely natural, entirely unselfconscious. The kind of naturalness that comes from having done something many times before. The kind of care that can only be called devotion.</p>
+
+    <p>Minister Xu's jaw detached itself.</p>
+
+    <p>The Emperor returned to his desk and resumed the audience as though nothing had occurred, as though Li Congqing had already been quite forgotten.</p>
+
+    <p>But Minister Xu found himself unable to focus on anything — the document before him, the matters requiring discussion, the point of his being here. His mind was entirely occupied with what he had just seen, and with a sensation of having had a wall fall away to reveal a room he had not known was there.</p>
+
+    <p>The Emperor and Li Congqing — that quality he had always found vaguely inexplicable about their proximity, neither warm nor cold, neither intimate nor indifferent —</p>
+
+    <p>It looked, he realised now, like two people who had agreed, without discussion, to give nothing away.</p>
+
+    <p>When had this begun? When had the Emperor started looking after Li Congqing? The assassin incident six years ago, perhaps — had it started then?</p>
+
+    <p>Minister Xu turned these questions over all the way out of the Imperial Study and long after, eaten alive by curiosity, but knowing with absolute certainty that the Emperor's private affairs were not a topic for further inquiry.</p>
+
+    <p>As the day progressed, other ministers came and went. Each of them saw the same thing: the Vice Minister of Rites asleep on the Imperial Study couch, covered in the Emperor's yellow robe.</p>
+
+    <p>One minister witnessed the Emperor pulling the robe back up when it slipped. Another witnessed the Emperor using a handkerchief to dab away the thin trickle of drool that had found its way to Li Congqing's chin. Small gestures. Intimate gestures. Gestures that did not belong to an Emperor and a minor official.</p>
+
+    <p>Some stared. Some went speechless. All of them felt some variant of the shock that had overcome Minister Xu.</p>
+
+    <p>And after the shock — a certain itch. A sense of having accidentally glimpsed a secret. An almost irresistible urge to go and tell someone.</p>
+
+    <p>You couldn't blame the ministers. The work of governing a realm was weighty; a man needed something lighter for the intervals between crises. No one had the nerve to gossip about the Emperor directly. They could only hold this inside them and tell themselves that the Emperor truly was an extraordinarily compassionate sovereign, who looked after every subject with such paternal care.</p>
+
+    <p>Which was a great deal of virtue to ascribe to tucking a man's chin with a handkerchief.</p>
+
+    <p>But secrets do not keep. There is no wall without a gap in it; there is no secret too unspeakable to eventually find an ear.</p>
+
+    <p>And there in the Imperial Study, Li Congqing slept on in placid oblivion, entirely unaware that he was in the process of becoming the most talked-about scandal of the current reign.</p>
+
+    <p>Well. Congratulations to him, one supposes. (Though he would not have agreed.)</p>
+  </main>
+  <nav class="chapter-nav">
+    <span class="prev disabled">Previous</span>
+    <a href="index.html">Chapter List</a>
+    <a href="chapter-002.html" class="next">Next Chapter</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 黑白劍妖 (Heibai Jian Yao).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>
