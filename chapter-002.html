@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter Two — Flowers Bloom on the Path — Canon Compliant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.85;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+    .topbar {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .topbar-inner {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      font-family: 'Zilla Slab', serif;
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--muted);
+      text-align: center;
+      flex: 1;
+    }
+    .kofi-btn {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--rust);
+      color: #fff;
+      padding: 0.35rem 0.85rem;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    .chapter-header {
+      max-width: var(--reading-width);
+      margin: 4rem auto 3rem;
+      padding: 0 2rem;
+      text-align: center;
+    }
+    .novel-name {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .chapter-label {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+    .chapter-date {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--muted);
+      margin-top: 0.75rem;
+    }
+    .chapter-divider {
+      margin: 2rem auto;
+      width: 3rem;
+      height: 1px;
+      background: var(--border);
+    }
+    .chapter-body {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      padding: 0 2rem 6rem;
+      position: relative;
+      z-index: 1;
+    }
+    .chapter-body p { margin-bottom: 1.4em; }
+    .chapter-body p:last-child { margin-bottom: 0; }
+    .scene-break {
+      text-align: center;
+      margin: 2.5em 0;
+      color: var(--gold);
+      letter-spacing: 0.3em;
+      font-size: 0.85rem;
+      user-select: none;
+    }
+    .chapter-body em { font-style: italic; }
+    .chapter-nav {
+      border-top: 1px solid var(--border);
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .chapter-nav a {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .chapter-nav a:hover { color: var(--rust); }
+    .chapter-nav .prev::before { content: '← '; }
+    .chapter-nav .next::after { content: ' →'; }
+    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      background: var(--paper-dark);
+      position: relative;
+      z-index: 1;
+    }
+    .footer-inner {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="topbar-home">Canon Compliant</a>
+      <span class="topbar-novel">Flowers Bloom on the Path</span>
+      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+    </div>
+  </nav>
+  <header class="chapter-header">
+    <p class="novel-name">Flowers Bloom on the Path · 陌上花開</p>
+    <h1 class="chapter-label">Chapter Two</h1>
+    <p class="chapter-date">June 2026</p>
+    <div class="chapter-divider"></div>
+  </header>
+  <main class="chapter-body">
+    <p>Song Xuan strode into the Imperial Study and stopped dead. There, stretched out beneath the north window on the long couch, lay Li Congqing — sound asleep under the Emperor's own yellow dragon robe.</p>
+
+    <p>Song Xuan blinked. "Third Brother," he ventured carefully, "isn't that a bit... reckless?"</p>
+
+    <p>"There's nothing to be reckless about," the Emperor said, without looking up from his memorial.</p>
+
+    <p>"Then why not simply name him Shangjun and be done with it? Everything above board, all perfectly official."</p>
+
+    <p>"You know his temperament."</p>
+
+    <p>"True enough." Song Xuan laughed. "The Li clan — every last one of them stubborn as oxen."</p>
+
+    <p>"Sixth Brother. You came to find me for a reason, I assume?"</p>
+
+    <p>"Does Third Brother know about Seventh's business in Chu'nan?"</p>
+
+    <p>"Clearing land, stockpiling grain. Recruiting soldiers, purchasing horses."</p>
+
+    <p>"Ah — you already know?"</p>
+
+    <p>"All beneath heaven is imperial earth."</p>
+
+    <p>"Third Brother, I am in absolute awe of you. No wonder people call you the Emperor with Ten Thousand Eyes. Nothing escapes you."</p>
+
+    <p>"The Seventh Prince has no treasonous intent."</p>
+
+    <p>"Then why do things that invite precisely that interpretation?"</p>
+
+    <p>"He simply wants to ask me for someone."</p>
+
+    <p>"Who?"</p>
+
+    <p>"Xiaomiao."</p>
+
+    <p>A sharp crash rang out from beyond the door. Wei Xiaomiao stood in the corridor, a freshly brewed pot of tea shattered at his feet, his fair, delicate face drained of colour.</p>
+
+    <p>"This servant deserves death," he gasped, and hurried to crouch down and collect the pieces.</p>
+
+    <p>"Come in here." Song Xuan crossed to the doorway, hauled him upright, and pulled him inside the study, pressing him with urgent questions. "Xiaomiao — what exactly is going on between you and the Seventh Prince?"</p>
+
+    <p>"Mmph... so loud..." The sudden commotion disturbed Li Congqing's sleep. He muttered something unintelligible and turned over.</p>
+
+    <p>"Sixth Brother. Lower your voice." The Emperor set down his brush, walked to the couch, and tucked the sliding robe back around Li Congqing's shoulders, brushing the stray hair from his cheek with one hand and bending close to murmur: "Nothing to worry about. Go back to sleep."</p>
+
+    <p>Song Xuan watched this performance and could not quite suppress an eye-roll. He had not expected the Emperor's indulgence to have reached quite these proportions. He had never understood it, if he was being honest — how a man as handsome, accomplished, and imperial as his third brother had come to fix his attentions on the thoroughly unremarkable Li Congqing. Li Congqing was, after all, Song Xuan's own brother-in-law, which meant Song Xuan could speak with some authority: among all the Li siblings — the men graceful and handsome, the women lovely and poised — Li Congqing was the undeniable ugly duckling of the flock.</p>
+
+    <p>As a footnote: four years prior, Song Xuan had taken Li Congqing's younger sister Li Congtong as his principal consort, which made Li Congqing and the Emperor, strictly speaking, relations by marriage. One more absurdity to add to the pile.</p>
+
+    <p>In any case. The Wei Xiaomiao who had been dragged inside was struggling to conceal his confusion and alarm.</p>
+
+    <p>"Xiaomiao," Song Xuan said, lowering his voice. "What is there between you and Seventh? I've never heard of any connection before. Be straight with me."</p>
+
+    <p>"This servant does not know, Your Highness." Wei Xiaomiao composed himself with remarkable speed and answered with his usual careful deference.</p>
+
+    <p>"Don't be frightened. We grew up together, you and I — the Emperor and I won't make things difficult for you."</p>
+
+    <p>"Sixth Brother." The Emperor's voice was quiet but final. "You needn't concern yourself with the Seventh Prince's affairs. Xiaomiao — you may go."</p>
+
+    <p>"Yes. This servant withdraws." Wei Xiaomiao retreated.</p>
+
+    <p>"Third Brother — you're really not worried about Seventh?"</p>
+
+    <p>"Instead of worrying about Seventh Brother, you might put more thought into your consort. I hear she's expecting a second child. That's presumably the other thing you came to tell me."</p>
+
+    <p>"I don't merely suspect you have ten thousand eyes," Song Xuan said, executing an elaborate, theatrical bow. "I'm fairly certain you can read minds as well." He grinned. "I only wonder when our honourable Second Brother-in-Law is going to become my Imperial Sister-in-Law."</p>
+
+    <p>"He's a man."</p>
+
+    <p>"I know perfectly well he's a man. Our dynasty has had Shangjun before — officially acknowledged imperial favourites, standing somewhere between a consort and a close companion. If Your Majesty truly cares for him, conferring that title would be an acknowledgement. It would be official."</p>
+
+    <p>"Would you force Li Congtong to become a concubine?"</p>
+
+    <p>"Absolutely not," Song Xuan said, without hesitation. Then, after a pause: "But nor would I keep her hidden in the shadows with no name and no standing — sneaking about as though she were something shameful. Third Brother — do you know what ordinary people call secret lovers who can't show their faces in public?"</p>
+
+    <p>"Kept mistresses?"</p>
+
+    <p>"Your Majesty, I said nothing of the sort!"</p>
+
+    <p>The Emperor laughed. "In all the realm, you alone dare to spar with me."</p>
+
+    <p>Song Xuan swept into an extravagant bow. "This subject is deeply grateful for His Imperial Majesty's boundless tolerance and generosity."</p>
+
+    <p>After a while of desultory family talk, Song Xuan took his leave. At the door he turned back, unable to resist a parting remark: "Third Brother — I genuinely don't know how long you intend to keep carrying on like this in secret with my brother-in-law. But if you don't want people to know, you should stop doing things they might find out about. Unless, of course, you're doing it on purpose — in which case that's another matter entirely."</p>
+
+    <p>The Emperor smiled and said nothing.</p>
+
+    <p>After Song Xuan had gone, Wei Xiaomiao came back with a freshly brewed pot of tea.</p>
+
+    <p>"Xiaomiao," the Emperor said. "If you were asked to go to the Seventh Prince — would you be willing?"</p>
+
+    <p>Wei Xiaomiao lowered himself to his knees. "Wherever Your Majesty commands this servant to go, this servant will go."</p>
+
+    <p>"I'm not sending you to him. I want you to observe him. Tomorrow I'll issue the decree — three days from now, you'll accompany Li Congqing to inspect Chu'nan in my name."</p>
+
+    <p>"Your Majesty — from the capital to Chu'nan is a considerable distance. As an official inspection, Lord Li would be away from the capital for at least a year. Perhaps longer."</p>
+
+    <p>"It will be good for him to get out and see the world for a while. I'm entrusting him to your care in the meantime."</p>
+
+    <p>"Yes. This servant will attend to Lord Li with all diligence."</p>
+
+    <p>The Emperor smiled faintly. "I said care for him — not wait on him hand and foot. He won't want you playing nursemaid. As for the Seventh Prince — I may be asking something difficult of you."</p>
+
+    <p>Wei Xiaomiao pressed his lips together, composing his denial carefully. "Your Majesty — this servant has been in Your Majesty's service since childhood. This servant has met the Seventh Prince only a handful of times. There is nothing between us that cannot be spoken of openly."</p>
+
+    <p>"I know. When the time comes, whether you stay or go will be your own decision. I won't interfere." The Emperor paused. "Go and make preparations."</p>
+
+    <p>"Yes. This servant withdraws."</p>
+
+    <p>Li Congqing, meanwhile, slept on in magnificent oblivion, quite unaware that his life was about to be uprooted, dreaming peacefully until he woke of his own accord. By then the sun outside was angled low and turning golden — nearly dusk.</p>
+
+    <p>He stretched, slow and thorough, and sat up. The yellow robe slithered down to pool around his waist.</p>
+
+    <p>"You're awake," Song Yu said.</p>
+
+    <p>"Mm."</p>
+
+    <p>Song Yu returned to his memorials. Li Congqing put on his shoes and sat quietly.</p>
+
+    <p>A palace attendant set a small table beside the couch; another brought in a bowl of fragrant pea porridge on a tray — made to the Emperor's personal specifications by the head imperial chef. Song Yu knew Li Congqing's tastes thoroughly: no bear's paws, no swallow's nest, no expensive rarities. Just plain food. Though whatever the imperial kitchen produced could never truly be called plain — the crushed peas were like scattered jade, green and vivid, arranged with impeccable care.</p>
+
+    <p>"Eat a little to settle your stomach," Song Yu said, not looking up. "We'll have proper dinner together later."</p>
+
+    <p>"Mm." Li Congqing picked up the ceramic spoon and stirred the porridge with complete indifference. He had not eaten all day, but found he had very little appetite. He managed two mouthfuls and set the spoon down.</p>
+
+    <p>"Why aren't you eating more?"</p>
+
+    <p>Song Yu's head had not moved an inch; his eyes were ostensibly fixed on his memorials. Yet somehow he was aware of Li Congqing's every movement.</p>
+
+    <p>"Not hungry."</p>
+
+    <p>"Are you unwell?"</p>
+
+    <p>"No."</p>
+
+    <p>"Unhappy about something?"</p>
+
+    <p>"...You could have let me sleep at Tingjia Tower." Being permitted to stretch out here in the Imperial Study was already extraordinary enough. Being covered with the imperial dragon robe went rather beyond anything that could be excused by 'cherishing the people like children.'</p>
+
+    <p>"You were sleeping so soundly I didn't want to wake you."</p>
+
+    <p>"Who came by?"</p>
+
+    <p>"Minister Xu, Minister Huang, the Left Chancellor, the Grand Marshal, General Shen." A pause. "And your brother-in-law."</p>
+
+    <p>Li Congqing's brow creased slightly. "Was that deliberate?"</p>
+
+    <p>"You're imagining things." Song Yu set down his brush, rose, and came to sit beside him on the couch. He picked up the bowl, ladled a spoonful of porridge, and held it out. "In three days, you'll travel to Chu'nan on my behalf. An inspection."</p>
+
+    <p>"On my own?" Li Congqing accepted the spoon from his hand without protest and ate.</p>
+
+    <p>"I'm sending Xiaomiao with you."</p>
+
+    <p>"I haven't been that far from the capital in a long time."</p>
+
+    <p>"You can look in on your third brother while you're there."</p>
+
+    <p>"When do I come back?"</p>
+
+    <p>"When the flowers bloom on the path," Song Yu said softly, "come home slowly."</p>
+
+    <p>Li Congqing's eyes narrowed, and a bright, liquid smile gathered in them. The salty porridge in his mouth seemed to turn sweet all at once. "Your Majesty," he said, "I must respectfully remind you that I am your Minister of Rites, not the consort of the Prince of Wu-Yue."</p>
+
+    <p>Song Yu set the bowl aside. He drew Li Congqing up and settled him across his lap, licked the trace of porridge from the corner of his mouth, then caught the soft gleam of those lips — the little bead there, always more luminous when he'd just been eating — and kissed him, slow and thorough, murmuring against his mouth: "There are times when I would like to be open about this — simply, openly. What kind of sovereign must skulk about with his own lover. It's undignified."</p>
+
+    <p>He always thought Li Congqing's lips tasted sweet. And sweeter every time, too — sweet enough that kissing him sometimes made Song Yu want to devour him whole.</p>
+
+    <p>Li Congqing, docile, opened his mouth and let Song Yu's tongue slide in, kissing him back with a soft, unhurried thoroughness. Between kisses he mumbled, indistinct: "Forbidden fruit is always sweeter, isn't it."</p>
+
+    <p>"You—" Song Yu bit his lip with slightly more force than strictly necessary, then ended the kiss and pulled him close, vexed. "Being with me — is it truly so reluctant?"</p>
+
+    <p>Reluctant? In his heart, Li Congqing could admit that at the very beginning, it had not been without reluctance. He was a man of comfortable laziness by nature: he never sought trouble, and trouble never sought him. And then, of course, there was nothing more troublesome in the known world than conducting a clandestine affair with the Emperor.</p>
+
+    <p>At first he had been genuinely at a loss. He could not fathom why the Emperor had fixed on him, of all people. He was not enthusiastic about being pinned beneath a man, but he was also too lazy to put up much of a struggle. The Emperor was, after all, the most powerful person in the world — resistance would simply be wasted energy. That sort of defiant virtue that would rather die than yield could stay with other people, thank you. Li Congqing only wished to be a soft, comfortable, entirely undisturbed little slug.</p>
+
+    <p>He had assumed the Emperor's interest was novelty; that it would fade. Endure for a while, he had thought, and it will pass. But it had not passed. The two of them had accumulated, day by day, affection neither of them had deliberately cultivated — until, almost without noticing, they had each become something the other couldn't quite do without.</p>
+
+    <p>He was fairly certain by now that the Emperor's feelings were not novelty. He was also certain he had genuinely come to care for the Emperor. Concealment had slowly become a weary business. But if they stopped concealing it — that would be a hundred times wearier.</p>
+
+    <p>There were moments when he too wished he could love openly. But the person in question was the Emperor of the realm. If their secret were to come out — Li Congqing suspected he would flee at the first possible moment. Find somewhere no one could find him and simply disappear, and pretend none of it had ever happened.</p>
+
+    <p>Call him a coward if you like. Laugh at him for having no backbone. He preferred the middle road: a life of ease, unbothered, unconstrained. He'd sooner be an ostrich with its head in the sand any day. Except...</p>
+
+    <p>"How did we end up like this?" Li Congqing murmured into Song Yu's shoulder, as though asking him, or perhaps asking himself.</p>
+
+    <p>Occasionally he thought: if, six years ago, he had not been dozing at the wrong moment and had not had the spectacularly bad luck to be grabbed by a rogue assassin and stabbed — if the Emperor had never noticed him at all — would things be any different now? Should he thank or curse that idiot assassin, who had chosen to take an entirely powerless minor official as his hostage?</p>
+
+    <p>The Emperor — who never sighed — sighed, barely perceptibly. "Fate, I suppose."</p>
+
+    <p>"Ill fate, more like."</p>
+
+    <p>"Then I will let that ill fate bind us together for the rest of our lives."</p>
+
+    <p>"The rest of our lives... can it really be the rest of our lives?" The tone of Li Congqing's voice drifted, uncertain; his eyes went vague.</p>
+
+    <p>"Yes." Song Yu cupped his face, steadily, and looked at him. "Li Congqing. Li Congqing. You are destined to be mine. This life, the next, every one after."</p>
+
+    <p>Li Congqing looked back at him in silence for a moment, seemingly thinking something over. Then he gave a soft, noncommittal "Oh," yawned, kissed his imperial lover once on the cheek, and lay back down to do what he loved best in all the world.</p>
+
+    <p>Sleep.</p>
+
+    <p>Song Yu laughed — a helpless, exasperated sound — pinched his nose, then stroked his face, equally helpless. He loved the man's easy serenity. Loved the way he carried himself like a clear wind over clean water. But that same indifference and whimsy was maddening sometimes; it was impossible to know how much room one actually occupied in his heart.</p>
+
+    <p>"Congqing," the young Emperor murmured, so softly, to the lover who had already fallen back asleep. "Care about me a little more. Would that be so hard?"</p>
+
+    <p>Whether the words reached whatever dream he'd tumbled into, no one could say.</p>
+
+    <div class="scene-break">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+    <p>How had the Emperor of the Great Shao dynasty come to be with a minor official of the Ministry of Rites, of all people? In secret, no less? It was surely the question on many minds.</p>
+
+    <p>To explain how the two of them came together, one must go back seven years.</p>
+
+    <p>The fourth year of the Dezhi reign, in spring. It was the triennial grand civil examination — held every six years, in this dynasty — and some three hundred candidates, having passed their prefectural trials or qualifying examinations at the Imperial Academy, were assembled to sit the Metropolitan Examinations at the Spring Examination Hall. A hundred of the best would then be selected for the Palace Examination, conducted under the Emperor's supervision, where strategy questions would be posed and final rankings determined. The top three — the First Class Scholars — would be named, along with sixteen Second Class Scholars, and the remainder assigned to the Third Class, to be posted according to their abilities.</p>
+
+    <p>In short: the highest civil service examination in the land.</p>
+
+    <p>Li Congqing was nineteen that year. Under a combination of cajoling and coercion from his eldest brother Li Congyin, he and the third sibling, seventeen-year-old Li Congxuan, were both entered for the Spring Examination.</p>
+
+    <p>He had not wanted to be an official at all. Keeping the accounts at Li Congyin's bookshop had suited him perfectly well. But Li Congyin, with his relentless appetite for expanding his merchant empire, had decided that having a family member in official robes would be an invaluable asset — a tiger with wings, as they said. He had therefore required his second and third brothers to study diligently, insisting that at least one of them obtain a government post so that he could engage in the time-honoured practice of official-merchant collusion and general profitable scheming.</p>
+
+    <p>When the Metropolitan Examination results were posted, Li Congyin was thrilled. Both younger brothers had made the cut for the Palace Examination. Even if neither landed a top ranking, simply becoming a Third Class Scholar and getting one's foot in the door of officialdom was the beginning of a very promising career — at least from Li Congyin's perspective.</p>
+
+    <p>Li Congqing had enjoyed reading since childhood, but the Classics, histories, and philosophical canons required for the examinations had been force-fed to him rather than loved. He had absorbed them with his eyes while his mind wandered elsewhere. What he actually enjoyed was fiction, travelogues, gossip collections, and comic tales — the more scandalous and unrespectable, the more interesting. He was particularly fond of anything that would never be admitted to a serious examination.</p>
+
+    <p>So at every stage of the examinations, he had squeezed out what he could, and watched enviously as other candidates handed in stacks of ten-thousand-character essays while he was relieved to have scraped together three sheets of a thousand words each.</p>
+
+    <p>This had led him to the not unreasonable suspicion that his ability to progress through all stages of the examination had less to do with his own talent than with the considerable sums Li Congyin had spent smoothing his path. Li Congxuan, by contrast, was clearly there on merit.</p>
+
+    <p>The Palace Examination was nominally presided over by the Emperor himself, but in practice it was run by the Chief Examiner, and it was rare for the Emperor to feel moved to question a candidate personally. Generally the Emperor grew weary and inattentive somewhere around the fiftieth candidate, which meant that anyone ranked below that was at a severe disadvantage when it came to attracting imperial notice.</p>
+
+    <p>Li Congxuan was ranked seventeenth, in the first group examined. Li Congqing was ranked ninety-second — in the last group, last batch. The interminable wait outside the palace hall had him nodding off repeatedly, and he only managed to pinch his thigh hard enough to drag himself back to approximate alertness when his name was finally called.</p>
+
+    <p>The young Emperor, having barely crossed the threshold of twenty, sat high above on the Nine Dragon Throne and looked down upon the assembled candidates. Li Congqing stood below with his head lowered, listening to the speeches before him. The others declaimed magnificently, with great passion and flourish; he listened until he felt almost as though he were headed bravely to his own execution, and the army of sleep once again mounted its relentless assault — his eyes drooping open, falling shut, struggling open again.</p>
+
+    <p>Want to sleep... can't hold on much longer... really want to sleep...</p>
+
+    <p>"Li Congqing... Li Congqing..."</p>
+
+    <p>He knew that name from somewhere... In a daze, someone shoved him. "Oi. They're calling you."</p>
+
+    <p>Oh. That's me. Li Congqing wrenched his nearly-sealed eyelids open and stepped forward.</p>
+
+    <p>The Chief Examiner regarded him — blank-faced, dull-eyed, clearly not a man of any particular sharpness — and decided to give him the simplest possible question. "The subject asks: by what means is all under heaven brought to peace?"</p>
+
+    <p>No florid rhetorical flights. No ten-thousand-character exposition on grand strategy. He simply answered: "When the people have enough to eat, all under heaven is at peace." The people live by food, after all.</p>
+
+    <p>"Is that all?"</p>
+
+    <p>"Yes."</p>
+
+    <p>"You may elaborate. Say as much as you wish." The Chief Examiner gave him a second chance out of sheer generosity.</p>
+
+    <p>"Cultivate virtue among the people, and the realm faces no peril."</p>
+
+    <p>"Is there more?"</p>
+
+    <p>There's more required?</p>
+
+    <p>Li Congqing made an effort and thought. "All under heaven belongs to the earth and the heavens above. Therefore: when the Emperor's heart is settled, the people's hearts are settled. May the virtuous and sagely Son of Heaven live ten thousand years."</p>
+
+    <p>The hall fell into a dead silence.</p>
+
+    <p>Li Congqing had no idea what he had just said to make everyone stop breathing, and he didn't particularly care. He simply wanted to finish and go home and sleep. He'd been dragged out of bed before dawn for this, and he was exhausted.</p>
+
+    <p>The Chief Examiner was staring at him as though he'd grown a second head. This impertinent young man — had he truly just urged the Emperor to be a 'virtuous and sagely Son of Heaven'? Was he implying the present Emperor was insufficiently virtuous?</p>
+
+    <p>"In your view," the Emperor said, quite suddenly, "what constitutes a virtuous and sagely Son of Heaven?"</p>
+
+    <p>Everyone in the hall jumped. Li Congqing, too, startled slightly, then answered without thinking: "Eat what the people eat, think what the people think. Share the people's joy in joy, share the people's grief in grief. Love what the people love, abhor what the people abhor. Revere the people as you would revere a tiger. Care for them as you would care for the wounded."</p>
+
+    <p>"In your view, the Son of Heaven has no self — he belongs entirely to the people of the realm?"</p>
+
+    <p>"Sovereigns always say: 'I am the realm.' The Son of Heaven governs the people of the realm. Without the people, there is no realm."</p>
+
+    <p>A deeper silence settled over the hall.</p>
+
+    <p>In truth, there was nothing new in what Li Congqing had said — it was old wisdom, oft-repeated. The difference was simply whether one had the nerve to say it to the Emperor's face. Even the line about 'I am the realm' — quoting it back in this context bordered on disrespect. Everyone present was holding their breath on his behalf.</p>
+
+    <p>The Emperor showed no sign of anger. He gave a quiet, almost imperceptible smile and said: "What you say is quite right."</p>
+
+    <p>The Chief Examiner and the other presiding officials read their sovereign's expression, decided he seemed rather pleased with this Li Congqing, and quietly circled his name in vermilion.</p>
+
+    <p>After the Palace Examination, the Emperor personally named Li Congxuan as First Scholar — the top rank. The remaining placements were decided by the examiners.</p>
+
+    <p>Blind cat, meet dead mouse. Li Congqing's half-asleep improvisation had stumbled him into First Class — Third Place Scholar, the Tanhua — and the rank of Fifth Degree, appointed to the Ministry of Revenue.</p>
+
+    <p>Li Congxuan, by genuine merit, took the First Place Scholar position, was similarly ranked Fifth Degree, and was dispatched to Er-He Province to serve as Regional Governor.</p>
+
+    <p>Two brothers, both First Class scholars — one a minor palace official, one a powerful regional governor, both excellent postings by any measure. Li Congyin was so delighted that he didn't stop grinning for three days, set off firecrackers for three days solid, and threw a lavish celebratory banquet (admission by gift only, naturally, which he proceeded to collect from the swarms of social climbers eager to attach themselves to official connections). A thoroughly jubilant occasion for the entire household, with Li Congyin the most jubilant of all.</p>
+
+    <p>The day after the results were posted, the court held the traditional Scholars' Banquet at the shores of Taiye Lake — pavilions set up, food and wine laid out, a festive outing. The three First Class scholars were granted the singular honour of sharing a tent with the Emperor himself. 'Sharing,' in practice, meant that the Emperor's seat remained at a slight remove from the others, and there were numerous other high officials and nobles present. But still — the same tent.</p>
+
+    <p>The Scholars' Banquet had an unwritten tradition: the Third Place Scholar must bring the most beautiful peony in the capital to present to the Emperor on behalf of all scholars under heaven, reciting: "Heaven sends this fragrance of a thousand springs to man — this peerless bloom, I offer to my Emperor."</p>
+
+    <p>The Emperor would reply: "Heaven's gifts are not for tall towers alone — the spring fills every courtyard, returns to the world."</p>
+
+    <p>Then the Emperor would give the peony back to the Third Place Scholar, signifying a shared joy between ruler and subject, a shared hope for a prosperous and enduring dynasty. Elegantly symbolic.</p>
+
+    <p>When Li Congqing stepped forward and, with scrupulous ceremony, presented a great blazing red peony — wide and gaudy and gorgeous as a flame — the Emperor regarded it with an expression that was not quite a smile, and did not immediately accept it. The previously cheerful noise of the tent died down, and every gaze in the room swung toward Li Congqing.</p>
+
+    <p>Now what? Li Congqing was at a complete loss. He had gone to bed early the night before specifically to be well-rested for this. He had found a peony, as instructed. Why was the atmosphere strange again?</p>
+
+    <p>The Sixth Prince, Song Xuan, leaned over with wide eyes. "Isn't that the Emperor's own Flowing Fire Celestial Fragrance?"</p>
+
+    <p>The tent erupted. The audacity of this man — he had actually cut the Emperor's personal peony off the plant!</p>
+
+    <p>Li Congqing stood in arrested dismay. Only now did he understand what he'd done.</p>
+
+    <p>He thought back to that morning: when he'd been given the task of finding a peony, even his habitual laziness had not permitted him to be cavalier about a flower for the Emperor. He had wandered back and forth along the shores of Taiye Lake, unable to decide, when the Buddhist abbot Shangzhi happened to pass by and kindly asked what he was looking for.</p>
+
+    <p>The most beautiful peony in the capital, Li Congqing had answered.</p>
+
+    <p>Shangzhi had pointed him toward the White Crane Temple. All the finest peonies in the capital are there, he'd said.</p>
+
+    <p>The White Crane Temple was the imperial clan's ancestral shrine — no ordinary person was permitted to enter. But Li Congqing had the fortunate company of the abbot, and was able to walk straight in without issue. And there, in a bamboo pavilion set back from Taiye Lake, he had seen it: a peony grown in an enormous yellow jade planter, blazing crimson and outrageously proud, its fragrance immense. Clearly extraordinary.</p>
+
+    <p>Abbot Shangzhi had not made a sound of alarm. He had, in fact, smiled and nodded approvingly, saying: good choice, what an excellent choice.</p>
+
+    <p>Good, yes. Excellent. Excellent enough that his hands might be cut off for it.</p>
+
+    <p>He had made a genuine effort for once, and managed to make things significantly worse. Li Congqing found himself at a loss about whether to fling himself on the ground weeping and beg for his life, or to devise some impressive-sounding argument for the principle of innocent ignorance.</p>
+
+    <p>The Emperor watched Li Congqing. Li Congqing stared blankly back. Neither of them paid any attention to the murmuring crowd; they simply regarded each other.</p>
+
+    <p>When they had appeared together in the great hall during the Palace Examination, the Emperor had been seated at a vast height above, and could only see the top of Li Congqing's official cap. Li Congqing had kept his head lowered the whole time, and besides, the Emperor had been so far away — remote as a distant star — that neither had had any clear impression of the other. Round or square, memorable or forgettable, entirely unknown.</p>
+
+    <p>Now, at close quarters, Li Congqing could see the Emperor properly for the first time. A commanding face: strong brows and clear eyes, exactly as rumoured — extraordinarily handsome, with a natural refinement and grace. In appearance alone, he compared favourably with Li Congqing's own extremely handsome elder brothers Li Congyin and Li Congxuan; and unlike Li Congyin he had no trace of craftiness, unlike Li Congxuan none of that severe chill — but over all of it lay an innate imperial bearing, oceanic in its depth, not threatening and yet impossible not to stand in awe of.</p>
+
+    <p>The Emperor, meanwhile, had noticed something about Li Congqing's lips: a small bead, barely visible, poised at the centre of the upper lip — like a flower bud holding a single dewdrop, making the lips look perpetually, slightly pouted. Against an otherwise rather ordinary face it was an incongruous note of artlessness and — there was no other word for it — charm, particularly now, with Li Congqing blinking up at him with an expression of pure, bewildered innocence, the lips unconsciously pursed a little higher. It was, unexpectedly, quite endearing; it produced in the Emperor an impulse he had absolutely no intention of acting on.</p>
+
+    <p>He did not act on it. He gave a mild smile, and began:</p>
+
+    <p>"Heaven's gifts are not for tall towers alone — the spring returns to court the Third Place Scholar."</p>
+
+    <p>He had changed the last three words of the traditional response. The tent went rather quiet, parsing the implication.</p>
+
+    <p>"I hear this flower is sweet," the Emperor continued. "Won't our Third Place Scholar try it?" He gestured for someone to bring a small dish of honey.</p>
+
+    <p>Li Congqing steadied himself. There didn't seem to be much use in dropping to the ground in a display of weeping — if this was the end, no amount of wailing would help. Better to conserve his energy. So, under the astonished gaze of everyone present, he proceeded to eat the peony, petal by petal, dipping each into the honey.</p>
+
+    <p>The petals were slightly bitter. Fortunately the honey was very sweet. The dense floral fragrance mingled with the clean sweetness of the syrup — surprisingly good, actually. He found himself thinking: is it poisoned? Is the Emperor poisoning him as punishment?</p>
+
+    <p>Li Congqing's lips — delicate pink, now stained with the red of the petals, glossy with honey — were engaged in eating a peony. The Emperor watched that mouth, which looked, at the moment, considerably more edible than the flower it was consuming, and found he couldn't quite look away.</p>
+
+    <p>Li Congxuan, beside his brother, observed all this in characteristic silence, arctic in his composure.</p>
+
+    <p>The second-place scholar — the Bangyan, Geng Baizuo — managed two awkward laughs, screwed up his courage, and offered: "Our Third Place Scholar was born in the year of the Ox. I suppose this is truly, literally, an ox eating peonies."</p>
+
+    <p>The terrible joke broke the tension. Everyone laughed.</p>
+
+    <p>After Li Congqing finished the peony without dying of poison, he saw that the Emperor was still smiling pleasantly and concluded he was probably not in immediate danger of execution. He let out a breath, and smiled back — easy and unhurried, without a trace of embarrassment or awkwardness — and thanked the Emperor graciously for the gift of celestial fragrance.</p>
+
+    <p>When he smiled, his lips lifted like a dew-wet flower opening — vivid and fresh.</p>
+
+    <p>No one had ever particularly noticed this. But the Emperor noticed it, and thought: how can a man's lips bloom like spring flowers? More compelling than any woman's cherry red mouth — and growing on an otherwise quite ordinary face.</p>
+
+    <p>What would those lips taste like?</p>
+
+    <p>The thought crossed his mind in an instant and was gone. The Emperor laughed softly. "Our Third Place Scholar has found himself quite a peony," he said.</p>
+
+    <p>The imperial mood was excellent. The Emperor called Li Congqing to come and sit closer, and the Scholars' Banquet proceeded cheerfully.</p>
+
+    <p>The Third Place Scholar to the Emperor's left, the First Place Scholar to his right — and those two scholars were the Li brothers. When Li Congyin found out afterward, he couldn't stop grinning for days. Ha! With this, wouldn't their family rise to the highest heights and make their fortune? Could anything be more fortunate?</p>
+
+    <p>No one present that day could have predicted that Li Congqing's ox-eating-peonies would, in time, chew all the way into the Emperor's heart.</p>
+  </main>
+  <nav class="chapter-nav">
+    <a href="chapter-001.html" class="prev">Previous Chapter</a>
+    <a href="index.html">Chapter List</a>
+    <a href="chapter-003.html" class="next">Next Chapter</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 黑白劍妖 (Heibai Jian Yao).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>
