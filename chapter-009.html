@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter Nine — Flowers Bloom on the Path — Canon Compliant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad; --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: var(--paper); color: var(--ink); font-family: 'Zilla Slab', Georgia, serif; font-size: 18px; line-height: 1.85; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 0; }
+    .topbar { border-bottom: 1px solid var(--border); padding: 1rem 2rem; background: var(--paper); position: sticky; top: 0; z-index: 10; }
+    .topbar-inner { max-width: var(--reading-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .topbar-home { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel { font-family: 'Zilla Slab', serif; font-size: 0.85rem; font-style: italic; color: var(--muted); text-align: center; flex: 1; }
+    .kofi-btn { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 0.35rem 0.85rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; flex-shrink: 0; }
+    .kofi-btn:hover { background: var(--rust-light); }
+    .chapter-header { max-width: var(--reading-width); margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
+    .novel-name { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 2rem; font-weight: 700; color: var(--ink); line-height: 1.1; }
+    .chapter-date { font-size: 0.8rem; font-style: italic; color: var(--muted); margin-top: 0.75rem; }
+    .chapter-divider { margin: 2rem auto; width: 3rem; height: 1px; background: var(--border); }
+    .chapter-body { max-width: var(--reading-width); margin: 0 auto; padding: 0 2rem 6rem; position: relative; z-index: 1; }
+    .chapter-body p { margin-bottom: 1.4em; }
+    .chapter-body p:last-child { margin-bottom: 0; }
+    .scene-break { text-align: center; margin: 2.5em 0; color: var(--gold); letter-spacing: 0.3em; font-size: 0.85rem; user-select: none; }
+    .chapter-body em { font-style: italic; }
+    .chapter-nav { border-top: 1px solid var(--border); max-width: var(--reading-width); margin: 0 auto; padding: 2rem 2rem 4rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+    .chapter-nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .chapter-nav a:hover { color: var(--rust); }
+    .chapter-nav .prev::before { content: '← '; }
+    .chapter-nav .next::after { content: ' →'; }
+    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) { body { font-size: 16px; } .chapter-label { font-size: 1.5rem; } .topbar-novel { display: none; } }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="topbar-home">Canon Compliant</a>
+      <span class="topbar-novel">Flowers Bloom on the Path</span>
+      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+    </div>
+  </nav>
+  <header class="chapter-header">
+    <p class="novel-name">Flowers Bloom on the Path · 陌上花開</p>
+    <h1 class="chapter-label">Chapter Nine</h1>
+    <p class="chapter-date">Sep 2026</p>
+    <div class="chapter-divider"></div>
+  </header>
+  <main class="chapter-body">
+    <p>Li Congqing had finally understood the Emperor's mind.</p>
+
+    <p>And so he went home.</p>
+
+    <p>By the time he leapt into his carriage, the rumours about him and the Emperor had reached the point of no return — boiling over, splashing in every direction, and suffusing every teahouse and alleyway with gleeful chatter. Anyone who hadn't heard was mockingly accused of being behind the times. A children's rhyme had even appeared:</p>
+
+    <p>Peonies bloom, bloom, bloom, my heart picks its fill —</p>
+
+    <p>The fairy has descended from heaven to repay her lord's grace.</p>
+
+    <p>Little chrysanthemums bloom, bloom, bloom, my heart picks them still —</p>
+
+    <p>Fairy, oh fairy, where do you now make your place?</p>
+
+    <p>All the flowers have bloomed, grandfather waits for you to come home fast,</p>
+
+    <p>Don't let all the blossoms wither and fall before you return at last.</p>
+
+    <p>The lyrics were simple and unambiguous — three parts childlike fancy to seven parts ribald suggestion. They swept through the streets and lanes with astonishing speed. Children sang them with perfect innocence; adults sang them with knowing smirks.</p>
+
+    <p>The entire nation of Da Shao had dissolved into cheerful scandal. Citizens from all walks of life had united as one in collective delight. The Vice Minister of Rites had been away rather a long time, and the whole country was more anxious than the Emperor himself for his return — so anxious, in fact, that they had begun to worry on the Emperor's behalf that the great and enlightened Son of Heaven might have been jilted.</p>
+
+    <p>"Third Brother, the stories about you and Li Congqing just keep growing — and getting more preposterous," Song Xuan reported daily from his position as palace errand-runner-in-chief. "More with every passing day."</p>
+
+    <p>"I know," the Emperor said, entirely unperturbed.</p>
+
+    <p>"Are you not going to summon him back?"</p>
+
+    <p>"When he's thought it through properly, he'll come back on his own."</p>
+
+    <p>"What if he doesn't come back?"</p>
+
+    <p>"He will." The Emperor's tone was serene with certainty. Li Congqing had been, since six years ago, a Song man in life and a Song ghost in death — no matter how far he wandered or how long he was gone, he would always return here. This was the only place he truly belonged.</p>
+
+    <p>"I genuinely don't understand why you sent him away in the first place," Song Xuan said.</p>
+
+    <p>"I have indulged his wilfulness long enough. This time, I want him to think it through completely."</p>
+
+    <p>Song Xuan paused at that, then blinked in sudden realisation. Now that he thought about it — the Emperor had deliberately let Li Congqing sleep in the Imperial Study that day, had deliberately allowed witnesses to see him spread the imperial robe over his favourite, had deliberately dispatched him out of the capital, and had quite deliberately allowed the subsequent storm of gossip to develop unchecked. Every step of it had been calculated.</p>
+
+    <p>Well. Perhaps the pressure of conducting a secret love affair had simply grown too great — hence this elaborate scheme of bends and turns that had whipped the whole city into a frenzy and left Li Congqing with no choice but to acknowledge the forbidden attachment.</p>
+
+    <p>"Third Brother…" Song Xuan asked carefully. "Were you testing him?"</p>
+
+    <p>"There is no need for tests between us."</p>
+
+    <p>"Then why…?"</p>
+
+    <p>The Emperor only smiled and offered no explanation.</p>
+
+    <p>Song Xuan dared not press further. To borrow his own words: if the Emperor's mind were so easy to read, Song Xuan himself could be Emperor. In any case, a shrewd ruler always played with a winning hand. Whatever he did, he had his reasons.</p>
+
+    <p>What was certain was that the Emperor had gone to extraordinary lengths for Li Congqing's sake, evidently hoping that the path would clear and the moon would emerge from behind the clouds — because this state of affairs couldn't go on indefinitely.</p>
+
+    <p>"But, Third Brother — have you heard the popular songs they're singing in the streets lately?"</p>
+
+    <p>"The flower one?"</p>
+
+    <p>"There are others. Rather more… ahem… not fit for polite company."</p>
+
+    <p>"Oh? Sing one for me."</p>
+
+    <p>"You're sure you want to hear?"</p>
+
+    <p>"Go ahead."</p>
+
+    <p>Song Xuan summoned a small eunuch, who sang in a timid voice: "Cherish-flower lover, lover of peonies, come settle every flower's debt — my bones are delicate and tender, be gentle please, don't gnaw the peony as an ox chews grass — slowly stroke the branches, frequently water the shade, until the work is done and the flower's heart opens of itself. O trembling little flower, she still wants a fine cherish-flower lover, to come gently, sweetly, and pluck her…"</p>
+
+    <p>The small eunuch finished. Song Xuan's face was the colour of a ripe pomegranate. Who couldn't tell that the "cherish-flower lover" and the "peony" were allegories for the Emperor and the Vice Minister of Rites?</p>
+
+    <p>The Emperor remained entirely composed. Only the smile at the corner of his mouth widened slightly. "Sung rather well. Are there more? Sing a few more."</p>
+
+    <p>The small eunuch, thrilled to receive imperial praise, took a breath and launched into another, and then another. Each successive song was bolder and more explicit than the last — something about "lord and lover joining night after night, do not waste the fine hour," something else about "close and warm and tight, O how the lord loves the flower of the back garden" — an entire catalogue of bawdy allusion to the Emperor and his Vice Minister, vivid enough to make one's nose bleed.</p>
+
+    <p>The Emperor did not grow angry. By the final song he was laughing outright, genuinely and freely, the kind of full-bodied laughter one rarely heard from him.</p>
+
+    <p>Song Xuan, meanwhile, burned hotter with each passing verse. He thought: to be the subject of lurid folk songs and respond not with fury but with laughter — you could call his imperial elder brother exceptionally broad-minded, or you could call it what it was.</p>
+
+    <p>Repressed.</p>
+
+    <p>Still, these street songs — lewdness aside — carried a positive sentiment. They celebrated the beauty and romance of the attachment, revelling in the image of springtime pleasures on the dragon bed, two hearts entwined, desire unbound.</p>
+
+    <p>The following day, Song Yu received a carrier pigeon. Its message was four characters: three of them punctuation; one of them a word.</p>
+
+    <p>That word was: Return.</p>
+
+    <p>He was finally willing to come back and face this.</p>
+
+    <p>Song Yu turned the character over in his mind, smiling quietly. He thought of those days after their first night together, years ago — the same feeling of waiting, of holding himself still in patient suspension, waiting for a definitive answer.</p>
+
+    <p>On the surface Song Yu appeared entirely untroubled. In truth, his state of mind was not much lighter than Li Congqing's. He had more dimensions to weigh, heavier pressures to bear — and yet he had waited in silence for Li Congqing to arrive at his own "yes."</p>
+
+    <p>A gourd forced off the vine is never sweet; a flower plucked before its time has no fragrance. He wanted Li Congqing to be the sweetest gourd of his life, the most fragrant flower.</p>
+
+    <p>The trouble was that this particular gourd had slept so much that his mind had gone slightly blunt — dulled enough to mistake their feelings for mere habit, to overlook the depth of love that ran beneath that habit. Perhaps they had simply been too close, too long. Too near to see each other's hearts clearly. So Song Yu had sent him a little distance away, to give him room to look back and see truly.</p>
+
+    <p>Song Yu had no interest in counting who loved whom more, or more deeply. But it was undeniable that in this love, he had done most of the pursuing. Set aside rank and status — what remained between them was an inverse inequality. They stood on opposite ends of a set of scales, and Li Congqing's end always hung higher in the air.</p>
+
+    <p>This time Song Yu had stopped chasing. He had let Li Congqing turn of his own accord and walk toward him — had stopped relentlessly pursuing and demanding, which had allowed Li Congqing to mistake the entire affair for something thrust upon him against his will.</p>
+
+    <p>Only when Li Congqing recognised that his own feelings were no less than Song Yu's would they truly stand equal — shoulder to shoulder on level ground.</p>
+
+    <p>And then a new chapter could begin.</p>
+
+    <p>✦  ✦  ✦</p>
+
+    <p>On the subject of "a Song man in life and a Song ghost in death" — that particular verdict had not come from the Emperor at all. It had issued from the golden mouth of National Preceptor Shangzhi. Li Congqing, at the time, hadn't known whether to laugh or weep.</p>
+
+    <p>Let us go back to the beginning of it, then. On the day the Emperor summoned Li Congqing to accompany the imperial procession to White Crane Temple for the ancestral rites, the two of them had ridden out in a state of mutual distraction. When the procession finally arrived, the temple's abbot and National Preceptor Shangzhi was already standing reverently at the gate to receive them.</p>
+
+    <p>White Crane Temple was the imperial ancestral shrine. Only members of the imperial family were permitted to enter; attending officials waited outside. Song Yu, however, commanded Li Congqing to accompany him in — and brought him all the way to the inner pagoda.</p>
+
+    <p>The pagoda had nine levels. The upper three enshrined the Buddhas and bodhisattvas. The middle three housed the tablets of the Song ancestors. The lower three commemorated the heroic dead of Da Shao.</p>
+
+    <p>Song Yu led Li Congqing up to the topmost floor. National Preceptor Shangzhi, being of advanced years, was borne up by two young monks on a palanquin.</p>
+
+    <p>Li Congqing assumed he would stand at a respectful distance while the Emperor prayed — perhaps hand over the incense, or arrange the kneeling cushions. He had not expected Song Yu to call him to stand directly beside him and participate in the rites himself.</p>
+
+    <p>Bewildering as it was, an imperial command was an imperial command. Li Congqing accepted a lit stick of incense from Shangzhi's hands and followed the Emperor through the full sequence — bowing first to the Buddhas on the upper floors, then to the Song ancestors in the middle, then offering incense to the heroic dead below. The Buddhas and ancestors required three kneeling prostrations each; the heroes required only the offering of incense.</p>
+
+    <p>He followed carefully, step by step, floor by floor — kneeling when the Emperor knelt, rising when the Emperor rose, burning incense when the Emperor burned incense. Through the solemn gravity of it all, and through his own considerable bafflement, he emerged fragrant with temple smoke and quite thoroughly confused.</p>
+
+    <p>The imperial ancestral rites were, he discovered, exhaustively elaborate. All that rising and kneeling and prostrating was remarkably tiring. By the final floor Li Congqing's knees were threatening to give way entirely, while the Emperor remained composed and meticulous throughout — not a trace of impatience.</p>
+
+    <p>When it was finally over, National Preceptor Shangzhi turned to Li Congqing with a smile like a crescent moon and said: "You have now paid your respects to all the Song ancestors. For this life: a Song man. For the next: a Song ghost."</p>
+
+    <p>What in the— How had he gone from a Li to a Song ghost without anyone asking him?</p>
+
+    <p>If he had been holding tea or food in that moment, he would certainly have spat it all over Shangzhi's robes.</p>
+
+    <p>As it was, he could only stand with his mouth open, a long row of speechless question marks spreading across his face, struggling to process whether the old preceptor was joking or in deadly earnest.</p>
+
+    <p>What was it about this old gentleman? Every time he opened his mouth, Li Congqing couldn't tell whether to laugh or cry.</p>
+
+    <p>Song Yu offered a faint, private smile, and said nothing.</p>
+
+    <p>Afterwards they walked into the garden, where Song Yu took up a pair of golden shears to trim the peony growing in a large jadestone planter. He handed Li Congqing a small trowel and asked him to loosen the soil.</p>
+
+    <p>It was flowering season. The peony bloomed in full extravagance — rich-petalled, fragrant, vivid. The two of them attended to it together, careful and absorbed.</p>
+
+    <p>"By custom, I am supposed to plant a new peony each year," Song Yu said conversationally. "But I have grown rather partial to this one. Even if it someday stopped flowering, I would still be just as fond of it."</p>
+
+    <p>Li Congqing wasn't sure how to respond. Should he commend the Emperor's constancy? That seemed off. Compliment him as a devoted cultivator of flowers? That also seemed off. Remark that the peony was fortunate to receive the imperial gaze? That seemed worst of all.</p>
+
+    <p>He thought it over at length, found no satisfactory option, and fell into dignified silence. Some occasions were best served by keeping one's mouth shut.</p>
+
+    <p>"Li Congqing," Song Yu said abruptly. "What have you decided?"</p>
+
+    <p>Li Congqing's expression went carefully blank. He said nothing.</p>
+
+    <p>Song Yu set down the shears and took the trowel from Li Congqing's hand. He took hold of Li Congqing's hand and guided both their hands into the water basin beside them, washing away the soil.</p>
+
+    <p>Li Congqing stood blankly while Song Yu cleaned his hands for him. His heart was thumping loudly. Thump. Thump. Thump.</p>
+
+    <p>When Song Yu lifted his freshly-washed hand to his lips and kissed the damp fingertips and the centre of his palm, Li Congqing's face went up in flames. He couldn't pull away — that would be awkward. But not pulling away was also awkward. His heart was hammering hard enough to break his ribs.</p>
+
+    <p>"I have been watching you all this time."</p>
+
+    <p>Li Congqing blinked, slow to process, then felt a surge of private indignation. Oh yes, very attentive — since you'd left me completely alone these past months, I was beginning to think I'd been picked up and put down again.</p>
+
+    <p>Song Yu caught the unguarded flicker of dissatisfaction on his face before Li Congqing could school his expression. The corner of his mouth curved slightly. He guessed the thought with no difficulty — and guessed, too, that the reaction meant Li Congqing wasn't as indifferent as he liked to pretend. He cared, at least a little.</p>
+
+    <p>Quietly pleased, Song Yu held his hand and asked once more: "Li Congqing. Tell me — what am I supposed to do with you?"</p>
+
+    <p>Li Congqing thought. Then thought some more. Then thought a third time.</p>
+
+    <p>He had always wanted only a quiet, stable life. The Emperor clearly had no intention of letting him go. Even if he were released this time, he'd be caught again the next. He, Li Congqing, was no hero — but he was, he liked to think, a pragmatist. He was willing to admit that he craved comfort and feared dying young. He wanted to live a long life and be a menace to society for generations.</p>
+
+    <p>And if he searched his heart honestly — he didn't truly object to being with the Emperor. Besides, they'd already tumbled together in the dragon bed; maintaining an elaborate performance of offended chastity after the fact would be frankly absurd.</p>
+
+    <p>The restless, churning feeling in his chest gradually settled. What couldn't be escaped would never be escaped. And if he refused and the Emperor remained fixed in his purpose, the alternative was years of exhausting push-and-pull, probably followed by capitulating anyway — but only after suffering a great deal of unnecessary distress. Why squander the energy?</p>
+
+    <p>When Li Congqing imagined those melodramatic scenarios, he felt tired just thinking about them. Virtuous maiden resistance was simply not worth the effort. So — since a monk could only strike the bell from one day to the next —</p>
+
+    <p>Let things be as they were.</p>
+
+    <p>Li Congqing stopped fighting what wasn't worth fighting. He abandoned his not-very-strenuous resistance and, in a voice that was somewhat stilted but genuine, replied: "I leave it entirely in the Emperor's hands."</p>
+
+    <p>"You've thought it through?"</p>
+
+    <p>He could think until his brain gave out, and he still wouldn't have properly thought it through. "I have only one request," he said.</p>
+
+    <p>"Name it."</p>
+
+    <p>"Don't make it public."</p>
+
+    <p>He was a man who hated complications, and Song Yu knew this perfectly well. "I promise," he said immediately.</p>
+
+    <p>"Thank you, Your Majesty."</p>
+
+    <p>"Any other requests?"</p>
+
+    <p>"Let me think." Li Congqing tilted his head, turning the matter over. He felt vaguely that he was getting a bad deal and ought to extract some compensation. He didn't want rank or fortune — neither appealed to him — and after straining for inspiration he managed: "Keep me as Vice Minister of Rites."</p>
+
+    <p>Song Yu had been planning to promote him. He laughed aloud and pulled Li Congqing into a firm embrace. "Li Congqing. You really are a singular creature."</p>
+
+    <p>"Oh, and one more thing."</p>
+
+    <p>"Mm?"</p>
+
+    <p>"I — ahem — I bruise easily. So, ahem, when it comes to that sort of business — you mustn't hurt me." Li Congqing delivered this with a faint dusting of pink across his cheekbones.</p>
+
+    <p>"Naturally. Did I hurt you very much that first night?"</p>
+
+    <p>"It was… manageable." He grew more flustered, face redder. "Also, no such business in the daytime. I have standards."</p>
+
+    <p>"The ancestral code expressly forbids the sovereign from such conduct during daylight hours." A virtuous Emperor had to observe the ancestral code, even with the flames of desire climbing his collar.</p>
+
+    <p>"Good. And — if I fall asleep at morning court, don't hold it against me."</p>
+
+    <p>"When have I ever held it against you?"</p>
+
+    <p>Li Congqing continued producing items one after another, emboldened now by the rare experience of having the upper hand. None of the demands were particularly significant, but he kept going cheerfully enough.</p>
+
+    <p>Song Yu granted nearly everything with a smile that would have put a benevolent earth deity to shame. His eyes filled, without his realising it, with a warmth he hadn't known he was carrying. Naturally he saw through the delaying tactic — and stopped Li Congqing's voice with the most practical available method.</p>
+
+    <p>Well. He supposed the Emperor really did have him thoroughly figured out.</p>
+
+    <p>Li Congqing sighed internally, and then opened his mouth, and suffered Song Yu's tongue to enter and do as it pleased. Then he closed his eyes too, and allowed himself to enjoy the sweet, feverishly stirring kiss.</p>
+
+    <p>The desire Song Yu had suppressed for many days flared instantly to full blaze — but the hour and the place were wrong, and he forced it back down, breathing into Li Congqing's ear with a voice gone rough: "You should prepare yourself. Tonight I will not be satisfied with only once."</p>
+
+    <p>Li Congqing's whole face ignited on the spot. He was still new to this — Song Yu's provocations cut straight through his defences; the slightest teasing set his shyness off in immediate conflagration. It was quite endearing.</p>
+
+    <p>Song Yu thought, not for the first time, that he would like to be a worse Emperor — to simply press this man down on the spot and damn the ancestral code. A thought of magnificent impropriety that had never occurred to him about another living soul, and could only occur to him about Li Congqing.</p>
+
+    <p>He controlled himself, naturally. For now. He could only hope the sun would run a little faster toward the western hills, so that the two of them could set off hand in hand for paradise.</p>
+
+    <p>That night, it must be said, was every bit as limitless and intoxicating as Song Yu had promised.</p>
+
+    <p>Li Congqing, for his part, spent the entire afternoon in a state of anxious anticipation. He had survived the dragon bed once before, but that did not make the prospect any less alarming. By evening, he was nearly prepared to bolt — but Wei Xiaomiao arrived to collect him before courage and cowardice could finish their argument.</p>
+
+    <p>At Tíng Xià Tower, Song Yu was already waiting.</p>
+
+    <p>"Come — eat with me." Song Yu took his hand and guided him to the table. He served Li Congqing personally — filling his bowl, ladling his soup, pressing extra morsels on him. "Eat your fill. You'll need the strength later."</p>
+
+    <p>Li Congqing choked so dramatically on his tea that his eyes watered. Your Majesty, was that entirely necessary to say aloud?</p>
+
+    <p>Song Yu patted his back and handed him a cup of wine. "Drink a little."</p>
+
+    <p>"Thank you."</p>
+
+    <p>"Have another."</p>
+
+    <p>He drank three cups in succession. The warm glow of good liquor spread through him quickly, and the clenched anxiety of the day began, unhurriedly, to dissolve. His cheeks flushed a rich crimson, his half-lowered eyes grew soft and hazy, his lips curved into a slow, languid smile that made him look, of a sudden, quite entirely beautiful — the kind of beauty that existed not in the face but in something less definable, something that made an observer want to reach out and take hold of it.</p>
+
+    <p>Song Yu, observing the transformation, felt his very bones itch with restraint.</p>
+
+    <p>"Li Congqing," he murmured, his voice gone rough, his hands already finding the warmth of the other man's skin. "I am going to lose my mind over you. Will you lose yours with me?"</p>
+
+    <p>"Mm…" A low sound, acquiescent, a little impatient — and then the wine and the unfamiliar heat together dismantled what remained of his resistance.</p>
+
+    <p>"Then I won't stand on ceremony."</p>
+
+    <p>That night they did not do it once, or twice, or three times. Song Yu worked through his way through the ci-verse names of the traditional positions — Night-River Boat, Watching the Ocean's Tide, Magpie on the Branch, Inverted Lotus, Drunk Coming Home, Butterfly Hunt, Fish Swimming in Spring Water, Golden Figure Bearing the Dew Tray — unhurriedly, thoroughly, and without remorse.</p>
+
+    <p>"Ah — no more — please — no more —"</p>
+
+    <p>"I'm not finished — not yet —"</p>
+
+    <p>"Mm — ah — ah ah ah —"</p>
+
+    <p>"Your voice is the most beautiful thing I have ever heard. It makes me want to swallow you whole."</p>
+
+    <p>"I can't — stop — I truly cannot take any more —"</p>
+
+    <p>"Shh, don't cry, just a moment longer — I'm almost — just almost —"</p>
+
+    <p>"That — not there — AH AH AH —"</p>
+
+    <p>Spring rain filled the terrace that night, the dew fell on the peony's heart — petals stirred, fragrant and trembling, in the long dance of the small hours.</p>
+
+    <p>Poor Li Congqing was thoroughly vanquished by a very satisfied Emperor. He was eventually released only when he was weeping and begging through the tears — whereupon the Emperor wrapped him up contentedly and they slept.</p>
+
+    <p>It was a night full of stars.</p>
+
+    <p>In their dream, Song Yu extended his hand and said: Shall we walk together?</p>
+
+    <p>Yes. Li Congqing put his hand in Song Yu's.</p>
+
+    <p>They walked side by side down a long road that had no visible end — but they were not uneasy; they were at peace. On and on they walked, perhaps to the farthest corner of the earth, perhaps to the end of time. Neither of them let go of the other's hand.</p>
+
+    <p>They simply walked, and walked, and walked.</p>
+
+    <p>✦  ✦  ✦</p>
+
+    <p>And so, naturally and quietly, the Virtuous Emperor and the Vice Minister of Rites came to be together.</p>
+
+    <p>There was no great drama about it. No one was unduly disturbed. On one side, Wei Xiaomiao's gift for discretion was unimpeachable. On the other, no one could quite believe that the handsome, brilliant Emperor would take a liking to the perfectly ordinary Li Congqing — and the Emperor had no prior history of taking male favourites, so only a small circle of intimates guessed the truth, and they guarded it in their bellies without a word.</p>
+
+    <p>One year passed, and then another. Before long the two of them had been together for six years — unable to be openly devoted, but too deeply entwined to be separated. The feeling had grown thick and permanent between them, like the roots of an old tree.</p>
+
+    <p>And then, in the year that the Emperor sent Li Congqing to inspect Chu'nan Province, the secret was — slowly, then all at once — a secret no longer.</p>
+
+    <p><em>— Flowers bloom on the path; you may come home slowly.</em></p>
+
+    <p>The Wu-Yue king had once written to his consort, away visiting her family, in words that seemed not to urge her return — and yet the briefest of sentences concealed a longing deep as the sea, hoping she would come back soon.</p>
+
+    <p>Kan Gate: the smallest and most obscure of the palace's side entrances, tucked into a corner, connected to the outer city by a narrow path. Legend held that some long-ago emperor had built it to meet a lover outside the palace walls. Ordinarily it saw no traffic at all — practically abandoned, guarded by only two men. Today, however, the gate stood open, and beside the two guards stood two additional palace attendants.</p>
+
+    <p>"We've been waiting three months," muttered the younger of the two eunuchs, unable to bear the tedium. "When is that gentleman finally going to come back?"</p>
+
+    <p>"Stop talking. Stand straight." The elder eunuch reprimanded him.</p>
+
+    <p>The young eunuch straightened, then couldn't help whispering: "But Eunuch Zhang — what if he doesn't come back at all?"</p>
+
+    <p>"Then we wait until we die."</p>
+
+    <p>"Wouldn't it be faster to just issue an imperial edict summoning him?"</p>
+
+    <p>"One more word and I'll have your tongue cut out."</p>
+
+    <p>The young eunuch yelped and fell silent, stretching his neck at intervals to peer down the road. Day after day of watching and waiting — until the sun began to lean westward, and he was beginning to think this was another empty vigil, when a great cloud of dust rolled in from the distance.</p>
+
+    <p>"Eunuch Zhang, look! Someone's coming this way!"</p>
+
+    <p>Shortly, a man came riding up on horseback — one of Li Congqing's escort guards. "Lord Li is on his way back. The carriage should arrive in about an hour."</p>
+
+    <p>"Go inform the Imperial Study at once," the elder eunuch ordered.</p>
+
+    <p>"Yes, sir!" The young eunuch sprinted off with enormous enthusiasm.</p>
+
+    <p>True to his word, approximately one hour later a carriage came flying down the road and drew to a halt before the gate. The elder eunuch stepped forward. But the passenger inside did not emerge.</p>
+
+    <p>"My lord, we have arrived," the dusty coachman said.</p>
+
+    <p>"Mm." A pause. Then a low, quiet sigh drifted out from behind the carriage curtain. Then, at last, Li Congqing pushed the curtain aside.</p>
+
+    <p>"You have come a long way, my lord. Well done." The elder eunuch helped him down with careful deference.</p>
+
+    <p>"Where is the Emperor?" Li Congqing asked.</p>
+
+    <p>"The Imperial Study."</p>
+
+    <p>Li Congqing looked at the red-lacquered palace gate. A tangle of feelings shifted through him. All those years of slipping in through Kan Gate for their private meetings — it had served its legendary purpose perfectly.</p>
+
+    <p>He had been in such a hurry to get back. But now that he was here, he hesitated. He wanted so desperately to see Song Yu — and yet he didn't know how to face him. Isn't this what they meant by "the closer to home, the more the heart falters"?</p>
+
+    <p>He knew, stepping through this gate, that his position would change. That this time he probably had no choice but to accept the title of Shangjun after all. He sighed at the thought —</p>
+
+    <p>And stepped over the high threshold anyway.</p>
+
+    <p>He walked through the familiar side path, his thoughts circling with each step — restless, uncertain, caught between wanting and fearing what he wanted. He reached the outside of the Imperial Study and stopped. His feet refused to carry him further.</p>
+
+    <p>"Your Majesty, shall I announce Lord Li?" asked Eunuch He-Gui, standing in for Wei Xiaomiao.</p>
+
+    <p>"No need." The Emperor's voice was mild. He had received the message but made no move to go out. He continued marking memorials, waiting for Li Congqing to walk in on his own.</p>
+
+    <p>Another long stretch of time. Li Congqing still hadn't walked in.</p>
+
+    <p>"Your Majesty, Lord Li may be weary from the road," the eunuch murmured gently. Among all the Emperor's attendants, who did not know the Vice Minister of Rites was their master's most cherished possession?</p>
+
+    <p>"Bring a chair for him. And that tray of refreshments and that pot of tea — have them carried out."</p>
+
+    <p>"Yes, Your Majesty."</p>
+
+    <p>Several attendants filed out bearing a chair, tea, and a plate of cakes, announcing that they were imperial gifts, attending on him with solicitous care.</p>
+
+    <p>Li Congqing felt simultaneously like laughing and like crying. Song Yu had always worried about him — worried he was tired, worried he was thirsty, worried he was hungry. This unfailing, meticulous care. He really did tend to Li Congqing like a delicate flower.</p>
+
+    <p>Well. What was there left to hesitate over?</p>
+
+    <p>I looked for him in the crowd a thousand times; when I turned back, there he was, standing in the dim lantern light.</p>
+
+    <p>A perfect, tender lover like this — where would you find another if you let him go? This entire lifetime would be wasted. Li Congqing crossed the threshold of the Imperial Study without any further hesitation, walked directly to his Emperor's side.</p>
+
+    <p>"You've come back." Song Yu's manner was exactly as it had always been — unhurried, calm, unruffled — as though they had been apart no more than a few days, as though Li Congqing had never gone so far or been gone so long.</p>
+
+    <p>For once, it was Li Congqing who made the first move. He sat down in Song Yu's lap.</p>
+
+    <p>"Yes. I'm back." Li Congqing put his arms around Song Yu's neck and buried his face in that broad chest, greedily drawing in warmth and the familiar scent. "It's gotten cold," he said, muffled. "My shoulder hurts."</p>
+
+    <p>Song Yu set down his memorials without a word, raised his hand, and rubbed Li Congqing's shoulder.</p>
+
+    <p>"My back hurts too."</p>
+
+    <p>Song Yu rubbed his back.</p>
+
+    <p>"And my legs."</p>
+
+    <p>He rubbed his legs.</p>
+
+    <p>"I hurt everywhere."</p>
+
+    <p>Song Yu understood, and smiled. After all this time — of course he knew what lay beneath the surliness and the roundabout affection —</p>
+
+    <p>That for every part of his body that "ached," there was a corresponding part of him that had been unhappy for every day of their separation.</p>
+
+    <p>"If you'd waited much longer to come back," Song Yu said, with fond exasperation, giving Li Congqing's nose a gentle pinch, "I would have come to fetch you myself."</p>
+
+    <p>"You would not have done that."</p>
+
+    <p>"My patience does run out eventually. I've told you so."</p>
+
+    <p>"So you deliberately arranged for people to see you being kind to me — deliberately sent me away — deliberately let the rumours run wild — didn't you?" Li Congqing's mouth went into a distinct pout.</p>
+
+    <p>"You're imagining things."</p>
+
+    <p>"Seven years," Li Congqing narrowed his eyes, a speculative gleam entering them. "We've been together almost exactly seven years. You don't suppose this is the legendary seven-year itch? Is that what all this was about?"</p>
+
+    <p>Song Yu found this delightful. "What an idea."</p>
+
+    <p>"Oh well. I suppose it doesn't matter. If you want to make our relationship public — make it public."</p>
+
+    <p>"You're not afraid of the complications?"</p>
+
+    <p>"You'll protect me from the complications. Won't you?"</p>
+
+    <p>"And the Shangjun title?"</p>
+
+    <p>"Not a chance." Decisively, without the slightest waver. "Making our relationship public doesn't mean I have to become your Shangjun."</p>
+
+    <p>"But the Empress Dowager wants me to give you a proper designation," Song Yu said, with a put-upon expression.</p>
+
+    <p>"My designation as Vice Minister of Rites is sufficient, thank you." Since he was being stubborn, he intended to see it through. "I would sooner be struck dead than agree to that absurd Shangjun business."</p>
+
+    <p>"I wouldn't have you struck dead — I need you with me for all the storms still to come, Congqing. There's still so much ahead of us."</p>
+
+    <p>Li Congqing knew it, of course. The state, the people, the inner court, the question of succession — love and mutual trust wouldn't solve every problem. The Emperor would need wisdom and diplomacy; Li Congqing would need determination and courage. These were things they would have to face and work through together.</p>
+
+    <p>But tomorrow's problems could wait for tomorrow.</p>
+
+    <p>"…I missed you," Li Congqing said, plainly and honestly.</p>
+
+    <p>Song Yu missed him too — god, he had missed him — missed his spring-flower lips, his half-lidded eyes, the drowsy sprawl of his body, the warm tightness of his —</p>
+
+    <p>He reined himself in, cupped Li Congqing's face in both hands, looked at him, and smiled. "It's rare for you to say that first. All this longing hasn't been entirely wasted, then."</p>
+
+    <p>"Sentimental," Li Congqing said at once, and then — "haahh —" — produced an enormous, entirely unstoppable yawn. "I've been riding continuously for days. I'm exhausted. I want to sleep."</p>
+
+    <p>"All right. Sleep properly first." Song Yu's voice was gentle, his hand tender against the weary face.</p>
+
+    <p>"Mm." Li Congqing kissed Song Yu's lips once — on his own initiative, a small thing — then arranged himself on the couch in the Imperial Study, pulled the hanging imperial robe over himself as a blanket, and was asleep in minutes. Soon the sound of contented snoring filled the room. A small, living cat-nap in imperial yellow.</p>
+
+    <p>The days of constant travel had genuinely worn him out. Whoever saw him sleeping here under the yellow robe could only be adding one more embellishment to the rumours that had already spread this far. It didn't matter in the slightest.</p>
+
+    <p>When he woke, it would be a fresh and beautiful day. And even if the sky fell down, the Emperor — tallest pillar under heaven — would hold it up for him, and Li Congqing could go on living without a care in the world, in his little office of Vice Minister of Rites. Which suited him perfectly.</p>
+
+    <p>Complete trust, completely given — that was the greatest love he had to offer.</p>
+
+    <p>And before any onlooker could object that this was an unfair arrangement: when one party is willing to hit and the other is willing to take it, that's an arrangement both parties have chosen. Whether it's fair or not is irrelevant to the two people involved. If they're happy — then what business is it of ours?</p>
+
+    <p>As for holding the sky up for the Vice Minister of Rites —</p>
+
+    <p>The Emperor was entirely delighted by the arrangement.</p>
+
+    <p>It was a crisp and peaceful autumn afternoon. When a handful of ministers arrived at the Imperial Study to confer with the Emperor, they experienced a sudden, vivid sensation that time had reversed itself — back six months to a day that seemed not so very different from this one.</p>
+
+    <p>The Emperor attending to his memorials with focused diligence.</p>
+
+    <p>The Vice Minister of Rites asleep over there.</p>
+
+    <p>An invisible thread stretched between them — red, stubborn, impossible to sever.</p>
+
+    <p>The eyes of the ministers stopped their speculative rotation. What replaced the curiosity was something quieter and more settled — knowing. A few frowned; a few smiled. But no one raised an objection or offered a censure. As long as the relationship between the Emperor and the Vice Minister was not causing the nation to collapse, what business was it of anyone else's?</p>
+
+    <p>The age was prosperous, the harvests were good, the realm was at peace.</p>
+
+    <p><em>— You know, I always expected the palace to descend into complete chaos over all this, Li Congqing remarked idly, some time later. Looking a tiny bit disappointed.</em></p>
+
+    <p><em>— Did you want chaos?</em></p>
+
+    <p><em>— I just thought — you know. Never mind.</em></p>
+
+    <p><em>— If you want chaos, I can oblige.</em></p>
+
+    <p><em>— Don't. I was only speaking carelessly.</em></p>
+
+    <p><em>— So was I.</em></p>
+
+    <p><em>— My goodness. The great Virtuous Emperor, picking up my bad habits.</em></p>
+
+    <p><em>— With your saliva in my mouth every day, how could I not?</em></p>
+
+    <p><em>— Your Majesty. I respectfully request that you not say improper things with such a solemn face.</em></p>
+
+    <p><em>— Of course. Give me a kiss, and I'll say solemn things with an improper face instead.</em></p>
+
+    <p><em>— (That is NOT an emperor. That is NOT an emperor. That is NOT an emperor.)</em></p>
+
+    <p><em>— (So delightful. How can someone be this adorable.)</em></p>
+
+    <p><em>— (Third Brother. You've forgotten your little brother is standing right here. I think I'm going to be sick.)</em></p>
+
+    <p><em>— (Old Two, congratulations on successfully selling your brother's assets to the Emperor. The finest investment of my career.)</em></p>
+
+    <p>✦  ✦  ✦</p>
+
+    <p><em>[Translator's note: The folk songs in this chapter are adapted from "Hanging Branch Songs" (掛枝兒), compiled by Feng Menglong of the Ming dynasty.]</em></p>
+  </main>
+  <nav class="chapter-nav">
+    <a href="chapter-008.html" class="prev">Chapter Eight</a>
+    <a href="index.html">Chapter List</a>
+    <a href="extra-001.html" class="next">Extra One</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 黑白劍妖 (Heibai Jian Yao).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>
