@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extra Four — Flowers Bloom on the Path — Canon Compliant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad; --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: var(--paper); color: var(--ink); font-family: 'Zilla Slab', Georgia, serif; font-size: 18px; line-height: 1.85; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 0; }
+    .topbar { border-bottom: 1px solid var(--border); padding: 1rem 2rem; background: var(--paper); position: sticky; top: 0; z-index: 10; }
+    .topbar-inner { max-width: var(--reading-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .topbar-home { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel { font-family: 'Zilla Slab', serif; font-size: 0.85rem; font-style: italic; color: var(--muted); text-align: center; flex: 1; }
+    .kofi-btn { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 0.35rem 0.85rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; flex-shrink: 0; }
+    .kofi-btn:hover { background: var(--rust-light); }
+    .chapter-header { max-width: var(--reading-width); margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
+    .novel-name { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.75rem; font-weight: 700; color: var(--ink); line-height: 1.2; }
+    .chapter-sublabel { font-family: 'Zilla Slab', serif; font-size: 1rem; font-style: italic; color: var(--muted); margin-top: 0.5rem; }
+    .chapter-date { font-size: 0.8rem; font-style: italic; color: var(--muted); margin-top: 0.75rem; }
+    .chapter-divider { margin: 2rem auto; width: 3rem; height: 1px; background: var(--border); }
+    .chapter-body { max-width: var(--reading-width); margin: 0 auto; padding: 0 2rem 6rem; position: relative; z-index: 1; }
+    .chapter-body p { margin-bottom: 1.4em; }
+    .chapter-body p:last-child { margin-bottom: 0; }
+    .scene-break { text-align: center; margin: 2.5em 0; color: var(--gold); letter-spacing: 0.3em; font-size: 0.85rem; user-select: none; }
+    .chapter-body em { font-style: italic; }
+    .chapter-nav { border-top: 1px solid var(--border); max-width: var(--reading-width); margin: 0 auto; padding: 2rem 2rem 4rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+    .chapter-nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .chapter-nav a:hover { color: var(--rust); }
+    .chapter-nav .prev::before { content: '← '; }
+    .chapter-nav .next::after { content: ' →'; }
+    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) { body { font-size: 16px; } .chapter-label { font-size: 1.4rem; } .topbar-novel { display: none; } }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="topbar-home">Canon Compliant</a>
+      <span class="topbar-novel">Flowers Bloom on the Path</span>
+      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+    </div>
+  </nav>
+  <header class="chapter-header">
+    <p class="novel-name">Flowers Bloom on the Path · 陌上花開</p>
+    <h1 class="chapter-label">Extra Four</h1>
+    <p class="chapter-sublabel">Spring Fills the Palace: Part Two</p>
+    <p class="chapter-date">Oct 2026</p>
+    <div class="chapter-divider"></div>
+  </header>
+  <main class="chapter-body">
+    <p>Night settled; the moon rose to the treetops.</p>
+
+    <p>The Emperor — satisfied, unhurried, cloudbursts concluded — held Li Congqing in his arms for a while, simply being warm together. Then he personally helped the utterly stationary Vice Minister to bathe and dress, and they sat down to dinner.</p>
+
+    <p>Li Congqing and the Emperor eating at the same table had long since become a habit. But tonight Li Congqing had an extra bowl at his place — a soup that had not appeared before. The broth was clear and faintly pink, scattered with fresh red flower petals, beautiful and fragrant.</p>
+
+    <p>"What is this soup? I've never had it before." He picked it up and drank a sip. It was chicken broth with floral notes. "It's very good. Why is it only for me?"</p>
+
+    <p>"It was made specially for you," Song Yu said, his eyes shifting for one unguarded instant.</p>
+
+    <p>Li Congqing receiving extra tonic soups was not unusual — after their intimate hours together, Song Yu would often instruct the kitchen to prepare fortifying dishes for him. The kitchens had long since learned his preferences by heart.</p>
+
+    <p>Without any particular suspicion, he drank the soup to the last drop and praised it effusively. Song Yu told him he could have it regularly if he liked it. After dinner they walked in the garden to aid digestion, and then Li Congqing retired early. The Emperor typically came to bed later — there were always matters requiring his attention.</p>
+
+    <p>Li Congqing spent most of his time in the palace these days, returning to the Li household only on rest days to see his family. Li Congyin, the eldest, was frequently heard lamenting: "A married-off brother is a river poured out."</p>
+
+    <p>The six Li siblings were growing up, all settling into their lives.</p>
+
+    <p>Li Congyin, the eldest, deserves a chapter of his own, but not now.</p>
+
+    <p>Li Congqing, the second, had effectively made the palace his home.</p>
+
+    <p>Li Congxuan, the third, had married the princess and was serving as Governor of Er-He Province.</p>
+
+    <p>Li Congtong, the only daughter, had married the Sixth Prince and was now producing children at a remarkable pace — two sons, one daughter already, and a fourth currently on the way.</p>
+
+    <p>Li Congzi, the fifth, was a man but had been properly married off to the second son of Flower-Heart Manor, a celebrated martial arts household, and was now co-master of the estate.</p>
+
+    <p>And finally little Li Congbai, the sixth, remained at home, constitutionally frail since childhood and deeply devoted to the Buddhist path. The Li family kept him wrapped in cotton wool.</p>
+
+    <p>To return to the second Li: he and the Emperor continued their pleasant, undramatic existence until, two months later, one morning he woke dizzy, and found at breakfast that he had neither appetite nor the ability to smell meat without a violent need to vomit. The Emperor urgently fetched an imperial physician, who said it was heatstroke — appropriate remedies were prescribed.</p>
+
+    <p>But even with the physician's remedies, Li Congqing continued to feel unwell for days — no appetite, nausea after eating (better after sour or sweet food), a heavy fog in his head, constant fatigue, and a sleep cycle that had reached new depths of thoroughness. The imperial physicians examined him several times and maintained: summer heat had lodged in the system, creating dampness and disrupting the spleen and stomach. Certain teas and congees were prescribed. Nothing serious.</p>
+
+    <p>And yet — there was something about these symptoms that planted a seed of doubt in the minds of certain observers. Weren't these also the signs of early pregnancy?</p>
+
+    <p>Thus: "Word is — the Vice Minister of Rites is with child." And thus the rumour sprang into life.</p>
+
+    <p>The Li household received congratulations, leaving eldest brother Li Congyin thoroughly at a loss — he'd had a younger brother just moments ago; somehow it seemed he now had a pregnant sister. Bewildering.</p>
+
+    <p>Rumours, peculiarly, always reach the person they concern last. Li Congqing had no idea he was supposedly carrying an imperial heir. He only noticed that everyone around him had begun looking at him oddly — his colleagues in the Ministry of Rites treating him with exceptional tenderness, not letting him carry anything heavy, insisting on steadying him over thresholds, hesitating to wake him when he napped.</p>
+
+    <p>For instance, one day when Li Congqing climbed a rolling library ladder to retrieve a book from the upper shelf, an official from the Ministry froze in alarm and cried: "Lord Li, wait! Your current condition is — fragile — you mustn't climb, it's dangerous!"</p>
+
+    <p>He rushed over and seized the ladder.</p>
+
+    <p>"I only have heatstroke," Li Congqing said, baffled.</p>
+
+    <p>"Of course, of course — you've been having dizzy spells recently, we can't risk a fall." The official smoothly scaled the ladder himself and retrieved the books.</p>
+
+    <p>Li Congqing frowned slightly. Something about the official's tone was distinctly odd. "Current condition." "Fragile." As if he were gravely ill, or —</p>
+
+    <p>In any case, since his bout of heatstroke, nearly everyone had begun treating him as if he were made of extraordinarily fine porcelain that would shatter at the first vibration.</p>
+
+    <p>He was puzzling over this when a commotion erupted outside the archival room — a woman's voice raised in fury: "Out of my way, impertinent creature!" "No one obstructs Imperial Consort Gong!" "Get away from me!" "Tell Li Congqing to come out this instant!" — accompanied by the sounds of officials attempting ineffectual intervention, furniture scraping, and something that might have been a chair being knocked over.</p>
+
+    <p>By any law or protocol, consorts — even the Empress herself — were strictly forbidden from entering the public administrative offices. That this woman had breached those boundaries was extraordinary; that she was specifically targeting the Vice Minister of Rites was alarming.</p>
+
+    <p>"Lord Li," the official whispered, tugging at Li Congqing's sleeve, "shall I — perhaps there's a back door —"</p>
+
+    <p>"No." Li Congqing, despite his surprise, was reasonably collected. Only thoroughly resigned. He had known something like this was coming eventually. He accompanied his anxious colleague out.</p>
+
+    <p>Outside the archive stood a beautiful woman in palatial robes, her headdress elaborate, her expression incandescent with fury. She was attended by several ladies and eunuchs.</p>
+
+    <p>She looked at Li Congqing as if she intended to set him alight.</p>
+
+    <p>"Li Congqing!" she snapped.</p>
+
+    <p>"This official pays his respects to Imperial Consort Gong." Li Congqing bowed with perfect composure.</p>
+
+    <p>"You shameless creature — you dare try to steal my daughter!" she screamed, pointing at him, trembling with rage. "Are you carrying a dragon-child or not? Someone — strip off his clothes! I want to see for myself whether this person is a man or a woman!"</p>
+
+    <p>Her entourage surged forward.</p>
+
+    <p>The Ministry officials yelped and threw themselves in the way — they dared not lay a hand on the Consort, but her servants were another matter, and there was a good deal of undignified wrestling and shoving.</p>
+
+    <p>Li Congqing was genuinely at a loss. He understood, in a detached way, that he had in some sense stolen this woman's husband's favour. There was nothing he could say to justify that. Her ladies were getting through the defensive line.</p>
+
+    <p>His colleague pulled frantically at his sleeve, urging him to take another exit. Li Congqing and the Consort — the Consort would win any such comparison. Both of them knew it.</p>
+
+    <p>The palace guards arrived quickly enough to pull away her servants. But then the Consort herself lunged forward, directly and personally, and seized Li Congqing by his robes.</p>
+
+    <p>"Shameless! I'll tear you to pieces myself!"</p>
+
+    <p>"Your Highness, please —" Li Congqing was doing his best to dodge and retreat, entirely unable to raise his voice against this wild-eyed woman, and equally unable to use force — he wouldn't hit a woman under any circumstances, let alone one of imperial rank.</p>
+
+    <p>"You stole the Emperor and that wasn't enough — now you want my daughter too? I could kill you!"</p>
+
+    <p>"Your Highness, you are mistaken, this official hasn't —"</p>
+
+    <p>"Silence!"</p>
+
+    <p>Imperial Consort Gong, born to a family of ministers, daughter of privilege, a woman of breeding and station — she looked now like nothing so much as a market vendor in a brawl, every remnant of dignity abandoned. She scratched and pulled and shoved, and no one could restrain her.</p>
+
+    <p>Since no one dared touch the Vice Minister (lest they be blamed for injuring him) and no one dared touch the Consort (lest they be hanged for impertinence), they could only crowd around the two of them, imploring uselessly.</p>
+
+    <p>"The Vice Minister is with child!" someone wailed internally. "If he miscarries now, we're all losing our heads!"</p>
+
+    <p>"STOP."</p>
+
+    <p>A voice of absolute authority cut through the chaos.</p>
+
+    <p>The Emperor.</p>
+
+    <p>Every person in the room dropped to their knees simultaneously, as if pressed down by an invisible hand, except for the still-struggling Consort and the dishevelled Li Congqing. She had torn his outer robe; she was working on the sash of the second layer. He looked like a garden after a storm.</p>
+
+    <p>Song Yu walked into the Ministry of Rites. He was always composed, dignified, elegant — but today his eyes were cold as winter stone, his expression carrying a quality of quiet menace that made both parties tremble.</p>
+
+    <p>"Your — Your Majesty…" the Consort released Li Congqing and stumbled backward. "Your servant received word that Lord Li intended to take my daughter — in a moment of panic I lost my head and came to —"</p>
+
+    <p>"You need not explain yourself," the Emperor interrupted. His voice was even colder than his eyes. "You ignored propriety, violated decorum, and conducted yourself without dignity. Effective immediately, you are confined to your quarters. You may not leave without permission." He paused. "Furthermore: as Imperial Consort Gong has demonstrated insufficient virtue and wisdom to educate Princess Xile, the princess will be temporarily placed in the care of Noble Consort Shu."</p>
+
+    <p>The room went quiet with a different quality.</p>
+
+    <p>The sentence was equivalent to a cold palace — with the further cruelty of the child stripped away.</p>
+
+    <p>"Your Majesty!" the Consort's wail was like something tearing. She collapsed before him, tears streaming. "Punish me however you choose — but do not take Xile from me, I beg you —"</p>
+
+    <p>Li Congqing, watching, felt no flicker of triumph. Only a chill. He knew why she had come. That thoughtless, offhand joke he'd made — I'm rather fond of little Princess Xile, why not give her to me as a daughter — he had never imagined those words would result in this.</p>
+
+    <p>He deserved this, he thought.</p>
+
+    <p>He understood what must have reached Consort Gong's ears. He could understand exactly why she had erupted like this. If someone threatened to take a child away from him — if he had a child — he would fight too. A mother defending her young was a force that required no justification.</p>
+
+    <p>The Consort loved Princess Xile with ferocious intensity. The Emperor visited them sometimes, charmed by his little daughter, which had given the Consort more imperial attention than her rivals. Without it, her position in the hierarchy would be precarious. Her whole remaining world was that child.</p>
+
+    <p>However the story had been distorted before it reached her ears — the original speaker was still Li Congqing, who had not been careful. He had forgotten that in the palace, every word carried consequences. A careless joke could plant seeds of catastrophe.</p>
+
+    <p>He was not the innocent party here.</p>
+
+    <p>"Your Majesty," Li Congqing spoke quietly. "This official also bears some responsibility. If there is punishment to assign, please include me in it."</p>
+
+    <p>"You have done nothing wrong," the Emperor said, his voice warming as he turned to Li Congqing. "Imperial Consort Gong violated propriety and made false accusations against you."</p>
+
+    <p>"This official's health is not entirely reliable today," Li Congqing said, drawing himself straight and bowing formally. "I fear contaminating the imperial presence. I beg leave to withdraw."</p>
+
+    <p>The Emperor did not stop him. He watched him go.</p>
+
+    <p>The kneeling officials trembled, wondering how far the imperial anger would carry. When the Emperor had also turned and departed without a word, they remained prostrate for a considerable additional interval before daring to peel themselves off the floor.</p>
+
+    <p>"That's probably enough disaster for one day," someone whispered cautiously, looking around as if expecting more to fall from the ceiling.</p>
+
+    <p>It was not going to be a restful day for anyone in the Ministry of Rites.</p>
+  </main>
+  <nav class="chapter-nav">
+    <a href="extra-003.html" class="prev">Extra Three</a>
+    <a href="index.html">Chapter List</a>
+    <a href="extra-005.html" class="next">Extra Five</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 黑白劍妖 (Heibai Jian Yao).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

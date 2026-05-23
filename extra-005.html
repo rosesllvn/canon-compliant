@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extra Five — Flowers Bloom on the Path — Canon Compliant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad; --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: var(--paper); color: var(--ink); font-family: 'Zilla Slab', Georgia, serif; font-size: 18px; line-height: 1.85; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 0; }
+    .topbar { border-bottom: 1px solid var(--border); padding: 1rem 2rem; background: var(--paper); position: sticky; top: 0; z-index: 10; }
+    .topbar-inner { max-width: var(--reading-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .topbar-home { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel { font-family: 'Zilla Slab', serif; font-size: 0.85rem; font-style: italic; color: var(--muted); text-align: center; flex: 1; }
+    .kofi-btn { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 0.35rem 0.85rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; flex-shrink: 0; }
+    .kofi-btn:hover { background: var(--rust-light); }
+    .chapter-header { max-width: var(--reading-width); margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
+    .novel-name { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.75rem; font-weight: 700; color: var(--ink); line-height: 1.2; }
+    .chapter-sublabel { font-family: 'Zilla Slab', serif; font-size: 1rem; font-style: italic; color: var(--muted); margin-top: 0.5rem; }
+    .chapter-date { font-size: 0.8rem; font-style: italic; color: var(--muted); margin-top: 0.75rem; }
+    .chapter-divider { margin: 2rem auto; width: 3rem; height: 1px; background: var(--border); }
+    .chapter-body { max-width: var(--reading-width); margin: 0 auto; padding: 0 2rem 6rem; position: relative; z-index: 1; }
+    .chapter-body p { margin-bottom: 1.4em; }
+    .chapter-body p:last-child { margin-bottom: 0; }
+    .scene-break { text-align: center; margin: 2.5em 0; color: var(--gold); letter-spacing: 0.3em; font-size: 0.85rem; user-select: none; }
+    .chapter-body em { font-style: italic; }
+    .chapter-nav { border-top: 1px solid var(--border); max-width: var(--reading-width); margin: 0 auto; padding: 2rem 2rem 4rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+    .chapter-nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .chapter-nav a:hover { color: var(--rust); }
+    .chapter-nav .prev::before { content: '← '; }
+    .chapter-nav .next::after { content: ' →'; }
+    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) { body { font-size: 16px; } .chapter-label { font-size: 1.4rem; } .topbar-novel { display: none; } }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="topbar-home">Canon Compliant</a>
+      <span class="topbar-novel">Flowers Bloom on the Path</span>
+      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+    </div>
+  </nav>
+  <header class="chapter-header">
+    <p class="novel-name">Flowers Bloom on the Path · 陌上花開</p>
+    <h1 class="chapter-label">Extra Five</h1>
+    <p class="chapter-sublabel">Spring Fills the Palace: Part Three</p>
+    <p class="chapter-date">Nov 2026</p>
+    <div class="chapter-divider"></div>
+  </header>
+  <main class="chapter-body">
+    <p>"Someone is saying I'm with child?"</p>
+
+    <p>Li Congqing slowly pieced together, with deepening consternation, the meaning behind all the odd behaviour that had surrounded him for the past weeks. That would explain everything. Yes. All of it.</p>
+
+    <p>The heatstroke symptoms had been misread as early pregnancy symptoms. Which was — he genuinely didn't know whether to laugh or cry.</p>
+
+    <p>The rumour must have been running very thick for some time, and he, as usual, was the last person in the world to know.</p>
+
+    <p>Well — not to mention the absurd rumour — the Consort Gong incident had left his mood in a very dark place. He had no interest in tracking the gossip. He walked out of the palace alone, feeling guilty and deflated, and made his way to the Li household.</p>
+
+    <p>What today had revealed, starkly, was that the palace was not quite the comfortable little haven he had come to treat it as. Under the beautiful, easy surface was a bottomless pit full of dragons and tigers, and one misstep could send you in — either to drown or to be eaten.</p>
+
+    <p>He counted back in his mind. He and the Emperor had been together nine years now. For the first seven, he had absolutely refused to go public — for exactly this reason. After he'd understood Song Yu's intentions and his own heart, he had allowed the relationship to be acknowledged. He should have anticipated that a day like today would come.</p>
+
+    <p>Unless he accepted the Shangjun title — or even the unprecedented step of being named a male consort — he was nothing more, in formal terms, than a favoured companion of uncertain status, monopolising imperial favour without legitimate standing. How could the consorts, who had formal standing and legitimate grievances, not resent him? Consort Gong had erupted because of her daughter; but the others? How much longer could they tolerate his existence?</p>
+
+    <p>Previously, perhaps, the fact of his being male had been a buffer — he couldn't produce children, so he was no direct threat. But now that the rumour said he might bear an heir, he had become a direct threat to every woman in that inner court.</p>
+
+    <p>He was not naive. He was, in fact, quite perceptive — which was precisely why he had spent seven years refusing to make the relationship public. He had known that to flaunt his position would be to invite exactly this kind of disaster.</p>
+
+    <p>He should never have let his guard down.</p>
+
+    <p>He flopped onto his bed and stared at the ceiling, too troubled even to sleep, then eventually gave up trying and sat by the window watching the courtyard.</p>
+
+    <p>The riot of summer colour in the garden — greens and reds tumbling over each other — filled his eyes and crowded his thoughts. A whole knot of worries, no end to them.</p>
+
+    <p>Li Congyin came home that evening and was immediately told by the housekeeper that Second Master had returned. He came directly.</p>
+
+    <p>"So, Old Two — are you actually carrying an imperial heir or what?"</p>
+
+    <p>Li Congqing, propping his chin in his palm, staring into the middle distance, feeling entirely sorry for himself, couldn't stop an eye-roll. "I am a man in full possession of masculine physiology. How would I be carrying anything? Stop saying ridiculous things."</p>
+
+    <p>"Is that so," Li Congyin said, and his expression remained full of doubt. "There's a story going around that the Turfan King's tribute included Blood Phoenix Pills and Pregnancy Elixirs. Did the Emperor give you some?"</p>
+
+    <p>"What are those?"</p>
+
+    <p>"The Blood Phoenix Pill and Pregnancy Elixir together enable conception — they're legendary fertility medicine worth more than gold."</p>
+
+    <p>"What do they look like?"</p>
+
+    <p>"The Blood Phoenix Pill is crimson red, like blood. The Pregnancy Elixir is snow white."</p>
+
+    <p>"I'm quite certain I haven't taken anything of that description."</p>
+
+    <p>"Are you sure? Maybe they were put in your food or drink without your knowledge." Li Congyin suggested.</p>
+
+    <p>Li Congqing stopped.</p>
+
+    <p>He thought of the flower-petalled chicken broth. He'd had it roughly every few days for a month, until the heat intensified — and then he'd switched to a white, sweet bird's nest and silver fungus soup that was said to clear the heat. The new soup, now that he thought of it, had also arrived with a very particular insistence on his drinking it…</p>
+
+    <p>"That can't be…" His thoughts began, reluctantly, to reorganise themselves.</p>
+
+    <p>"What is it? Did something occur to you?" Li Congyin leaned forward, urgent with the desire to know the truth. There was nothing strange in this world. Male pregnancy had been recorded, if rarely. His younger brother was not going to be taken advantage of — even if the person doing the taking was the Emperor.</p>
+
+    <p><em>(The principle was what mattered. Obviously the compensation was also somewhat important. But the principle came first. Definitely.)</em></p>
+
+    <p>"He wouldn't do that," Li Congqing said — but his expression could no longer fully conceal the shadow of suspicion.</p>
+
+    <p>"Let me call a physician to take your pulse. Then we'll know."</p>
+
+    <p>"There's no need. Even if I ate those things, I couldn't possibly be —"</p>
+
+    <p>Li Congyin saw the flash of real anger in his usually placid younger brother and reconsidered the direct approach. He reached out to pat him on the shoulder, then stopped himself halfway. Someone had mentioned you shouldn't pat a pregnant woman on the shoulder — might disturb the fetal energy. He said: "If it is true — what will you do?"</p>
+
+    <p>Li Congqing pressed his lips together and fell silent. He didn't know. He could only keep telling himself it wasn't possible, it couldn't be happening —</p>
+
+    <p>Without quite meaning to, he found his hand resting against his abdomen, which seemed — perhaps — to have a very faint roundness to it that hadn't been there before. He nearly thought he felt something move. His face went white. He trembled slightly.</p>
+
+    <p>This was his imagination, obviously. If there was actually anything there, it would have formed only recently and would not yet be moving.</p>
+
+    <p>Li Congyin watched the younger brother he had raised — who had always floated through life as if nothing could touch him — looking genuinely bewildered and frightened, and felt his chest clench. He reached out and put a hand on his shoulder.</p>
+
+    <p>"Whatever happens, the Li family stands behind you. Even if it costs every coin we have, your brother won't let anyone wrong you."</p>
+
+    <p>Li Congyin, who treated money as a second soul, invoking the family fortune as a pledge — that was a measure of what his brother meant to him. Money could be made again. A brother could not be replaced.</p>
+
+    <p>"Elder Brother…" Li Congqing was too moved for words.</p>
+
+    <p>"And if there is a child — it's Li family blood too. Don't you dare talk about ending it. If you don't want it, I want it."</p>
+
+    <p>Li Congqing withdrew his hand from his brother's grip and composed himself with visible effort. He felt like screaming into a pillow. In conclusion: everyone had decided he was carrying a baby, regardless of his actual biological configuration.</p>
+
+    <p>"You came home early today," Li Congyin changed direction casually. "It's not a rest day."</p>
+
+    <p>Li Congqing considered whether to tell his brother about the Consort Gong incident, and decided he was too tired. He wasn't a child who ran home to tattle anymore. "Nothing happening in the palace today. I felt like coming home."</p>
+
+    <p>"You're sure nothing happened?"</p>
+
+    <p>"Yes…"</p>
+
+    <p>"Second Brother! Is it true you're with child?!" Li Congtong's bright voice came floating in from outside the room even before she herself appeared, big belly and all, treading with an energy that suggested the weight was barely an inconvenience. "How exciting — tell me everything —"</p>
+
+    <p>Her attendants filed in after her, murmuring anxiously: "My lady, please slow down — the young master inside needs consideration —"</p>
+
+    <p>Li Congqing stared at the ceiling with the expression of a man whose life has become a performance piece. Of all times for his sister to come visiting. She was clearly here to laugh at him.</p>
+
+    <p>"Second Brother, you're back." Li Congbai followed his sister in, serene and fragrant with incense, concern written gently across his face. "How are you?"</p>
+
+    <p>"I'm fine. Don't worry." Li Congqing felt a small knot loosen at the sight of his youngest brother — at least one of them wasn't going to make this worse.</p>
+
+    <p>The delicate child who had once gripped his hand and said "Second Brother, make sure you help the Emperor become a truly kind and wise ruler" had grown into a quiet, pale young man, his face a little sickly but entirely without bitterness — full only of stillness and detachment. Most physicians had given up on his surviving past fifteen. He was nearly twenty now. Li Congyin had spent fortunes on medicines and famous doctors, dragging years back from the underworld one at a time.</p>
+
+    <p><em>(This, if one were being honest about it, was why Li Congyin had become the most ruthless merchant in the realm. Someone had to pay for it.)</em></p>
+
+    <p>Li Congtong was already circling Li Congqing with the focused intensity of a woman who knew exactly what morning sickness looked like. "Is it true you've been feeling like vomiting in the mornings? Losing your appetite? Sick when you smell meat? Sleeping much more than usual? Do you want to eat sour things? Is your chest heavy? Are you getting irritable without reason? Also —"</p>
+
+    <p>"Stop." Li Congqing cut her off. "You remember I am your older brother, yes? Not your sister?"</p>
+
+    <p>"Obviously I remember." Li Congtong was not remotely abashed. "If men could have babies it would be wonderful — next time my husband can have one for a change. I've had quite enough."</p>
+
+    <p>The three brothers stared at her. If a man were to carry a child, he would first need another man to provide the seed — his husband was not, on his own, equipped for the task.</p>
+
+    <p>The rest of the evening passed in the warm chaos of siblings gathered — though the gathering was missing Li Congxuan and Li Congzi. Li Congyin watched his brothers and sister with profound, complicated emotion. He had kept his promise to their parents. They had all grown up well, safe and comfortable.</p>
+
+    <p>All except possibly Old Two, who was not, at the moment, exactly flourishing. Li Congyin watched him carefully, privately resolved to pay very close attention to what unfolded. Serving an emperor was always treacherous, and Li Congyin had resources and plans for all contingencies. No one was going to harm his brother.</p>
+
+    <p>Li Congqing, wrapped in his own spiral of thoughts, didn't notice his brother's watchful gaze.</p>
+
+    <p>Then, at dinner, Li Congqing ate several bites of braised crucian carp and was immediately, urgently, violently sick.</p>
+
+    <p>The table fell silent. Everyone stared.</p>
+
+    <p>Li Congtong set down her chopsticks with a decisive click. She no longer looked amused. Her brow furrowed. "Second Brother. You look… you actually look a bit like me, when I was first expecting."</p>
+
+    <p>She had dismissed the rumour as street gossip. But seeing this with her own eyes — concern was unavoidable. Childbirth for a woman was already life-or-death. For a man — where would a child even emerge from? Through the back? Through the stomach directly? Either option sounded, she reflected, rather extremely fatal.</p>
+
+    <p>"Someone fetch Doctor He," Li Congyin said.</p>
+
+    <p>"There's no need," Li Congqing said, panicking. "I'm fine, it's only heat —" and then the second wave of nausea hit, and someone was pushing a basin toward him, and he emptied his stomach.</p>
+
+    <p>"Second Brother, let me check." Li Congbai took his hand gently, intending to read his pulse. He had taught himself basic medicine as a precaution against his own frailty, and could read common pulse patterns — including a happiness pulse.</p>
+
+    <p>"I'm fine, truly." Li Congqing pulled his hand away quickly. Firmly.</p>
+
+    <p>The table read the situation with perfect clarity. He was afraid of the answer.</p>
+
+    <p>"This isn't something you can keep ignoring," Li Congyin said firmly.</p>
+
+    <p>"I can't… actually be… pregnant…" Li Congqing muttered, the suspicion in his heart deepening by the second, casting a shadow he couldn't quite shake loose. Had Song Yu actually — had he really —</p>
+
+    <p>"Let the doctor look, so we can all rest easy." Li Congtong agreed.</p>
+
+    <p>"Second Brother — 'what is bitter and sweet, no one can bear for you; thus acts create their causes; what is, perhaps, destined.'" Li Congbai offered Buddhist counsel gently.</p>
+
+    <p>Li Congqing dropped his head, closed his eyes, and after a long moment, said: "All right. Don't worry on my account. Whatever comes of it — I'll go and get the truth from him directly."</p>
+
+    <p>He stood and walked out before anyone could reply.</p>
+
+    <p>The Li family didn't try to stop him. This needed to be settled as soon as possible. And they didn't fear for his safety alone in the dark — the Li household's personal guards and the imperial shadow guards combined added up to enough people to fill two mahjong tables, and everyone in the realm knew who he was. Attacking Li Congqing was a death sentence.</p>
+
+    <p>"I'm worried it's going to be a mess," Li Congtong fretted, watching him go. "That three-cousin of mine is an artful creature. Our lazy brother is completely helpless against him."</p>
+
+    <p>"'All conditioned things are like a dream, an illusion, a bubble, a shadow,'" Li Congbai replied serenely. "The eye deceives; all is attachment."</p>
+
+    <p>"Your big brother will keep him safe," Li Congyin said, picking up his chopsticks and resuming dinner with an air of considerable private calculation. Whatever happened: no one was going to get away with mistreating a Li.</p>
+
+    <p>Li Congqing walked toward the palace in a fog.</p>
+
+    <p>With every step, his heart lurched.</p>
+
+    <p><em>— Congqing, would you want to have a child?</em></p>
+
+    <p>That question. Song Yu had been looking at the tribute list when he said it. And the tribute list had contained those strange Blood Phoenix Pills and Pregnancy Elixirs.</p>
+
+    <p>When the high dark-red palace walls came into view, his heart lurched harder.</p>
+
+    <p><em>— I'm wondering whether to try this thing out on you.</em></p>
+
+    <p>If Song Yu had truly done this — what in the world was Li Congqing supposed to do?</p>
+  </main>
+  <nav class="chapter-nav">
+    <a href="extra-004.html" class="prev">Extra Four</a>
+    <a href="index.html">Chapter List</a>
+    <a href="extra-006.html" class="next">Extra Six</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 黑白劍妖 (Heibai Jian Yao).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

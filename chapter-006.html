@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter Six — Flowers Bloom on the Path — Canon Compliant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.85;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+    .topbar {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .topbar-inner {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      font-family: 'Zilla Slab', serif;
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--muted);
+      text-align: center;
+      flex: 1;
+    }
+    .kofi-btn {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--rust);
+      color: #fff;
+      padding: 0.35rem 0.85rem;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    .chapter-header {
+      max-width: var(--reading-width);
+      margin: 4rem auto 3rem;
+      padding: 0 2rem;
+      text-align: center;
+    }
+    .novel-name {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .chapter-label {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+    .chapter-date {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--muted);
+      margin-top: 0.75rem;
+    }
+    .chapter-divider {
+      margin: 2rem auto;
+      width: 3rem;
+      height: 1px;
+      background: var(--border);
+    }
+    .chapter-body {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      padding: 0 2rem 6rem;
+      position: relative;
+      z-index: 1;
+    }
+    .chapter-body p { margin-bottom: 1.4em; }
+    .chapter-body p:last-child { margin-bottom: 0; }
+    .scene-break {
+      text-align: center;
+      margin: 2.5em 0;
+      color: var(--gold);
+      letter-spacing: 0.3em;
+      font-size: 0.85rem;
+      user-select: none;
+    }
+    .chapter-body em { font-style: italic; }
+    .chapter-nav {
+      border-top: 1px solid var(--border);
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .chapter-nav a {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .chapter-nav a:hover { color: var(--rust); }
+    .chapter-nav .prev::before { content: '← '; }
+    .chapter-nav .next::after { content: ' →'; }
+    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      background: var(--paper-dark);
+      position: relative;
+      z-index: 1;
+    }
+    .footer-inner {
+      max-width: var(--reading-width);
+      margin: 0 auto;
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="topbar-home">Canon Compliant</a>
+      <span class="topbar-novel">Flowers Bloom on the Path</span>
+      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+    </div>
+  </nav>
+  <header class="chapter-header">
+    <p class="novel-name">Flowers Bloom on the Path · 陌上花開</p>
+    <h1 class="chapter-label">Chapter Six</h1>
+    <p class="chapter-date">August 2026</p>
+    <div class="chapter-divider"></div>
+  </header>
+  <main class="chapter-body">
+    <p>Chu'nan lay at the southernmost edge of the empire — high mountains, steep wilderness, valleys of bare rock. Visitors, after admiring the rugged grandeur of the landscape for approximately thirty seconds, universally arrived at the same conclusion:</p>
+
+    <p>Rough mountains, difficult people.</p>
+
+    <p>The region had originally been an independent tribal territory, later conquered and absorbed into the Great Shao as a place to exile criminals. The official version was that convicts were sent here to clear land and do productive labour; the actual version was that they were left to survive or not as they saw fit. Over time, the area had developed into something almost outside the normal order of things.</p>
+
+    <p>The court had since posted officials and stationed troops, so it was no longer completely lawless — but the inherited streak of fierce, untameable stubbornness in the local character remained. The men ran to about eighty percent rough brutes; the women ran to about ninety percent sharp-tongued terrors. Walking down the street, you could hear 'You mangy wretch!' and 'You awful harpy!' traded back and forth at regular intervals, accompanied by uninhibited public brawling between men and women alike — chickens flying, dogs bolting, a very lively scene altogether, and nobody clearly winning.</p>
+
+    <p>Ooh — that woman's Nine-Yin White Bone Claw technique is quite something.</p>
+
+    <p>Tsk, tsk — that man's Lightning Chest-Grab is frankly very low-class.</p>
+
+    <p>Li Congqing found every viewing entirely fresh and entertaining. After years of living in the capital, where men were expected to be courtly and women to be composed and genteel, Chu'nan's brutes and terrors were a genuine novelty.</p>
+
+    <p>The capital had its own women who had no idea what 'genteel' meant, of course — one such woman had been raised in the Li household, and Li Congqing thought with private amusement that Li Congtong would probably love it here.</p>
+
+    <p>Despite arriving as a Surveillance Censor, nominally to be received with respect and ceremony, nobody apart from the Seventh Prince — who was exclusively occupied with staring at Wei Xiaomiao — paid them much attention. The Chu'nan people were not interested in flattering officials. Li Congqing was not bothered in the slightest; no one tiptoeing around him meant he could be comfortable.</p>
+
+    <p>He was also fairly certain that the Emperor had not genuinely entrusted the serious work of provincial inspection to him. He knew his own limitations — this was not his kind of task. He had a persistent feeling that beyond the Xiaomiao matter, the Emperor had wanted him out of the capital for a while, and the official inspection duty was simply a plausible reason to send them.</p>
+
+    <p>He didn't think too hard about it. The bridge would present itself when they got there. Spending mental energy on speculation was not his preferred activity.</p>
+
+    <p>Still, since he was wearing the Surveillance Censor's hat, he made a token show of the job. Li Congqing sent his retinue off on various tasks and rode out with Wei Xiaomiao and their two most insistent guards, ambling around the province to have a look.</p>
+
+    <p>What he found was not nothing. The Seventh Prince had genuinely transformed the place in three years: cleared land, cultivated fields spreading in all directions, and troops that looked well-trained and well-supplied, with an air of purposeful readiness.</p>
+
+    <p>Was this part of why the Emperor had sent them here?</p>
+
+    <p>Li Congqing's instinct was that Song Wei, whatever his energies and ambitions, was not a man with treasonous designs on the throne. But there was clearly something driving him. And if that something could be guessed at, it was obvious enough — only the blind could miss the Seventh Prince's manner with Wei Xiaomiao.</p>
+
+    <p>To prevent Wei Xiaomiao from being devoured, bones and all, Li Congqing kept him close on every outing.</p>
+
+    <p>The Seventh Prince had trailed after them like a shadow for the first few days, but he had a province to run and couldn't follow them around indefinitely. He was forced, with considerable ill grace, to let Li Congqing take Wei Xiaomiao out from under his nose.</p>
+
+    <p>On one of their usual wandering days, they stopped here and there to talk with the locals — listening to the thick regional accent, collecting stories about Chu'nan — and found a pleasant viewpoint to sit and enjoy the scenery, then rested at a roadside tea stall when they tired of walking. All in all, quite agreeable.</p>
+
+    <p>"Chu'nan has its own order here," Li Congqing remarked, in a tone that sounded idle and carried rather different weight. "The people don't know the Emperor — they only know the King of Chu'nan. It's almost an independent state." He looked at Wei Xiaomiao. "Don't you think?"</p>
+
+    <p>"This servant doesn't dare speak carelessly."</p>
+
+    <p>"Your maternal grandmother was from Chu'nan, as I recall."</p>
+
+    <p>"Yes."</p>
+
+    <p>"So Chu'nan is your home of sorts."</p>
+
+    <p>"This servant did live here for a time in childhood."</p>
+
+    <p>"Do you still have family here?"</p>
+
+    <p>"Dead and scattered. No one here remembers me." A shadow of sadness crossed Wei Xiaomiao's composed features.</p>
+
+    <p>"I'm still curious why the Seventh Prince came here in the first place." Li Congqing sipped his tea slowly. Then, with the air of someone making a casual remark: "You know — it occurs to me the Seventh Prince might be planning to offer Chu'nan itself as a betrothal gift."</p>
+
+    <p>"Lord Li—!" Wei Xiaomiao's composure cracked.</p>
+
+    <p>"I'm guessing wildly — don't take it seriously. Look how white you've gone — if the Seventh Prince saw that, he'd assume I'd been bullying you, and he'd use my head as a football." He grinned, then continued: "I'll stay a few more days, and if nothing pressing comes up, I'll head to Er-He. What about you?"</p>
+
+    <p>Wei Xiaomiao didn't answer immediately, still visibly uncertain.</p>
+
+    <p>"Xiaomiao." Li Congqing's voice dropped to something more direct. "You are a person worth respecting. You don't need to diminish yourself."</p>
+
+    <p>"A servant is always diminished. Someone like me — a eunuch — no matter how much wealth or authority falls to me, I'll always be less than whole. Not quite a person." It was the first time Wei Xiaomiao had said it plainly aloud; a faint, bitter smile passed over his fine features.</p>
+
+    <p>Li Congqing heard this and said nothing more. When assumptions of hierarchy were worn this deeply into the bone, three sentences wouldn't shift them. What Wei Xiaomiao had lost wasn't only a part of his body — a piece of his sense of self had been excised with it, leaving him incomplete in body and spirit both.</p>
+
+    <p>He found himself, unexpectedly, understanding the Seventh Prince's frustration a little better. Song Wei cared for Wei Xiaomiao the person, not the servant — but Wei Xiaomiao didn't see himself as a person, had built his entire sense of value on being a perfect servant, and could not accept any gesture of care, which left the Seventh Prince with nowhere to go but force: pushing his feelings and desires on him coarsely, without room for gentleness.</p>
+
+    <p>The clearest eyes are always outside the situation.</p>
+
+    <p>Perhaps it would be good for Wei Xiaomiao to stay in Chu'nan. Song Wei could show him a different world, perhaps help him become whole again.</p>
+
+    <p>Speaking of those outside the situation seeing clearly — in the weeks since leaving the capital, Li Congqing had been turning over his own history with Song Yu, detail by detail, and had suddenly seen how thoroughly he had been in the middle of it, unable to see it for what it was — especially in the beginning, before he had understood anything at all. He thought of that Lantern Festival encounter, when his mind had been a complete fog and he had let a very large piece of himself be taken without quite noticing it had happened.</p>
+
+    <p>Perhaps it was the beauty of the lanterns and the fireworks that night. Beautiful enough to dazzle both of them into something they hadn't planned.</p>
+
+    <p>The further you went from something, the more clearly you saw it. And the more clearly he saw it, the more sharply he missed it. Every scene felt like yesterday.</p>
+
+    <p>He missed him fiercely.</p>
+
+    <p>Missed his indulgent tenderness. Missed his sweet kisses. Missed the warmth of his hands. Missed the wild intensity of him...</p>
+
+    <p>His body began, without permission, to warm.</p>
+
+    <p>"Lord Li — your face is very flushed. Are you unwell?" Wei Xiaomiao asked, attentive as always.</p>
+
+    <p>"No — just the heat." Li Congqing flicked open his fan and waved it vigorously.</p>
+
+    <p>He thought about that Lantern Festival. If not for Li Congyin's outrageous commentary, would the Emperor have become interested in his... ahem, his person? Before that night, Li Congqing had never imagined being forcibly kissed by a man, let alone being stripped bare the following day and thoroughly consumed from head to toe until nothing was left.</p>
+
+    <p>That man — such still, calm depths on the surface, and underneath, something torrential. When the tide came in, you couldn't brace against it; it simply swept you under with him.</p>
+
+    <p>And now he was entirely submerged. Body and soul.</p>
+
+    <p>He missed him with his mind; his body missed him too...</p>
+
+    <p>"It really is very hot." The fan in his hand moved faster.</p>
+
+    <p>Wei Xiaomiao hurriedly took out his own fan and added it to the cooling effort.</p>
+
+    <p>But the yearning that tormented him — urgent and relentless — was not the sort that could be fanned away. No amount of breeze could extinguish the fire burning from inside.</p>
+
+    <p>That fire had been lit the night of the Lantern Festival, and it had never gone out.</p>
+
+    <div class="scene-break">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+    <p>The lanterns were brilliant, the music soaring, the crowd laughing and jostling, the night air full of fragrant warmth.</p>
+
+    <p>The Festival night crowd was immense; they were carried along toward the riverbank to watch the fireworks, the press of bodies almost impenetrable, and their group was gradually broken apart by the flow of people.</p>
+
+    <p>When Li Congqing was swept sideways, Song Yu reached out and caught his wrist, pulling him back — then raised his arm and curved it around Li Congqing's shoulders, drawing him in close.</p>
+
+    <p>Li Congqing found himself forcibly pressed against Song Yu's side, and given that he was not exactly built on the imposing scale, had the inexplicable sensation of becoming very small and bird-like — a sensation that produced in him, simultaneously, a mild case of the creeping horrors and a difficulty breathing. He very much wanted to push away, but couldn't move: the crowd was too dense, and Song Yu's arm was too firm.</p>
+
+    <p>In the space of a moment, they were separated from the others, surrounded entirely by unfamiliar faces.</p>
+
+    <p>Li Congqing went slightly rigid and cleared his throat. "Ah — Third Master — it's getting rather late, shouldn't you be heading home? If anything were to happen to you, this small person could not bear the responsibility."</p>
+
+    <p>"No hurry."</p>
+
+    <p>"For your own safety, this humble person boldly suggests you return as quickly as possible—"</p>
+
+    <p>"We haven't seen the fireworks."</p>
+
+    <p>"If you want fireworks, a single word from you and there will be better ones than these — there's no need to stand here being jostled—"</p>
+
+    <p>"Li Congqing."</p>
+
+    <p>"Yes."</p>
+
+    <p>"Are you arguing with me?"</p>
+
+    <p>"Ah — this servant would not dare." Li Congqing immediately lowered his eyes and composed his manner. He liked his head where it was.</p>
+
+    <p>Song Yu opened his mouth to say something else — and at that moment an enormous thundering crack split the air, and the sky blazed open with brilliant fireworks. The crowd's collective gasp rose up.</p>
+
+    <p>One after another the fireworks burst — five colours, ten colours, the night sky woven into an extravagance that the eye couldn't take in all at once.</p>
+
+    <p>"This is the most beautiful fireworks display I have ever seen." Song Yu leaned down, his voice low and unhurried close to Li Congqing's ear, a warmth and depth to it that was entirely inappropriate for a public thoroughfare.</p>
+
+    <p>The warm breath touched the hair at his temple like a cat's paw brushing an ear. Li Congqing shivered involuntarily, and felt the arm around him tighten.</p>
+
+    <p>The fireworks exploded above — crack, crack, crack. His heart kept pace — thump, thump, thump.</p>
+
+    <p>"I've just thought of a position that would suit you very well," Song Yu said, quite abruptly.</p>
+
+    <p>"...What position?"</p>
+
+    <p>"Shangjun."</p>
+
+    <p>Li Congqing startled. He turned his face — and before his eyes could so much as blink, Song Yu's lips had brushed, swift and light, across his.</p>
+
+    <p>Those habitually half-shut eyes flew open. He stared. The Emperor had just, in broad public view—</p>
+
+    <p>Taken liberties with him?!</p>
+
+    <p>Fortunately the crowd's entire attention was fixed skyward on the fireworks, and no one had seen the brief moment of contact between two men. But Li Congqing's heart had nearly stopped.</p>
+
+    <p>"Your— no — Third — Third Master—" He stumbled over the words.</p>
+
+    <p>"Let's go." Song Yu pulled him through the crowd.</p>
+
+    <p>Li Congqing allowed himself to be half-dragged along, his head in a complete muddle, away from the noise and press of the main street. When his surroundings grew quieter — a narrow lane, no one in sight — he just had time to open his mouth before his back hit the wall. Before he could even register surprise, his mouth was stopped.</p>
+
+    <p>Li Congqing's eyes went wide for the second time that evening, shock locking his jaw shut. He didn't dare move.</p>
+
+    <p>Song Yu's eyes were open too, watching him, mouth pressed to his lips — also not moving.</p>
+
+    <p>Big eyes staring into each other, as though testing patience — would Li Congqing capitulate first, or would Song Yu stand down? They held the position, which was well past the point where 'ambiguous' was an adequate description.</p>
+
+    <p>Each breath fell warm on the other's face, sending little waves of something soft and disorienting washing through them both.</p>
+
+    <p>"Open your mouth," Song Yu said, quietly.</p>
+
+    <p>Li Congqing — who was, in all normal circumstances, a very compliant person — refused. He pressed his lips together harder and stared back without any deference at all.</p>
+
+    <p>In truth his mind was chaos; there was no thought involved. Pure self-protective instinct.</p>
+
+    <p>"You are not cooperative at all," Song Yu said, sounding amused rather than displeased. He changed his approach, and suddenly took Li Congqing's earlobe into his mouth.</p>
+
+    <p>Li Congqing froze. A wave of prickling heat swept from his scalp down. From childhood to now, besides a large yellow dog he'd once kept who had licked him indiscriminately, no one had ever touched his ear — let alone in this extremely indecent fashion. His body shook slightly against his will, a hot rush flooding up through him. He tried to push Song Yu away; his hands were caught and held at his sides.</p>
+
+    <p>"Your Maj— Your Majesty — please — don't—" He couldn't hold back the plea.</p>
+
+    <p>Song Yu paid no attention, and moved his lips back to Li Congqing's mouth.</p>
+
+    <p>Li Congqing clamped shut again, a defensive clam, absolutely refusing to let anything in.</p>
+
+    <p>Song Yu didn't force him. He simply ran his tongue lightly along the tension of those closed lips, patient and unhurried, as though tasting something delicious. Sweet. Sweeter than he'd imagined.</p>
+
+    <p>Li Congqing's thought process, in this moment, was: this is exactly what the big yellow dog used to do to him—</p>
+
+    <p>And then, from the corner of his eye, he saw three figures running toward them. He focused: Wei Xiaomiao, and two guards.</p>
+
+    <p>Rescue! Salvation had arrived!</p>
+
+    <p>"Your Majesty, Chief Wei—mmph—"</p>
+
+    <p>The distraction was all Song Yu needed. He pressed the advantage, and entered.</p>
+
+    <p>Wei Xiaomiao and the two guards, arriving to find the Emperor in the process of making a very thorough investigation of someone's mouth, stopped dead five paces away. They did not intervene. They turned, collectively, to face outward — partly out of propriety, partly to form a wall of human shields, preventing anyone else from witnessing the scene.</p>
+
+    <p>Not saviours. Accomplices. Li Congqing almost wanted to cry. If the Emperor decided to consume him entirely on this spot, he thought despairingly, they'd probably fetch a large cloth to provide privacy.</p>
+
+    <p>If he struggled and resisted with full determination, they'd probably helpfully hold his arms and legs down so their master could eat in peace.</p>
+
+    <p>Heaven would not answer; earth would not respond. Li Congqing gave up. He stopped fighting the pointless resistance, let his body go soft, and allowed the Emperor to kiss him however he wished.</p>
+
+    <p>Song Yu felt him yield, and couldn't help himself — the kiss turned fierce, a driving, consuming urgency, and he bit and pulled at Li Congqing's lips until they were swollen and sore.</p>
+
+    <p>Li Congqing had never experienced a kiss anything like this. It left him dizzy and unable to breathe, his face flushed scarlet, on the verge of unconsciousness.</p>
+
+    <p>Only when Song Yu noticed he was about to pass out did he finally let him go.</p>
+
+    <p>Li Congqing sucked in air in great desperate gulps, trembling faintly all over. His lips were wet; he reflexively lifted his sleeve to wipe them.</p>
+
+    <p>"Don't." Song Yu's voice was soft but immediate.</p>
+
+    <p>Li Congqing put his sleeve down.</p>
+
+    <p>Song Yu touched the reddened, glistening lips with his fingertips, then looked at Li Congqing for a long, steady moment. "Li Congqing — will you accept the position of Shangjun?"</p>
+
+    <p>Li Congqing was still catching his breath; it took him a moment to manage words, and they came out faint: "In reply to Your Majesty — this official is of poor talent and little virtue, entirely unequal to such an important appointment."</p>
+
+    <p>"Didn't someone say they'd wash a certain portion of themselves thoroughly and present it to me? Aren't you willing even to do that?"</p>
+
+    <p>"That was my elder brother. If Your Majesty wants his, he would surely consider it an honour."</p>
+
+    <p>"You won't agree?"</p>
+
+    <p>"Your Majesty is joking."</p>
+
+    <p>"Look carefully." Song Yu lifted his chin, making him meet his eyes — the fire in them no longer concealed. "Do I look like I'm joking?"</p>
+
+    <p>Li Congqing dropped his gaze, those not-long but thick eyelashes coming down between them like a curtain, and gathered the remnants of his composure to say, insincerely: "Your Majesty's countenance is too august for an ordinary person to look directly upon. This official is overwhelmed with awe."</p>
+
+    <p>"I didn't expect you to be stubborn about this too." Song Yu's smile was warm, but his gaze was steady and deep and absolutely certain, carrying the particular quality of a person who has decided what he wants. He said, unhurried: "Li Congqing — I will not force you."</p>
+
+    <p>"Your Majesty is wise."</p>
+
+    <p>"But I will not let you go, either."</p>
+
+    <p>Li Congqing's internal commentary was a single long groan. He bowed deeply and formally: "It is late, Your Majesty. This servant respectfully urges you to return to the palace at once. Please excuse this servant's withdrawal."</p>
+
+    <p>Without waiting for a reply, he turned and walked away at pace, greasing the soles of his feet and fleeing before the situation could get any worse. Whatever happened, he was not going to be stripped and devoured in a public lane tonight. That was not the kind of mistake you recovered from.</p>
+
+    <p>"Remember to wash thoroughly," Song Yu called after the rapidly retreating figure.</p>
+
+    <p>Li Congqing's step faltered; he nearly went down. He stumbled on, faster now, fleeing like a man pursued by demons.</p>
+
+    <p>Song Yu watched him disappear into the crowd, and something lit and danced in his gaze in the darkness — two small bright flames. He hadn't felt this alive in years. Desire stirred through him in steady waves, deep and patient, after its long dormancy.</p>
+
+    <p>Well. Now that he knew clearly what he wanted, there was no need to be troubled by the irrationality of it. He was the Son of Heaven — the supreme authority in the world. Nothing he wanted was beyond his reach. Li Congqing, he thought, I look forward to you.</p>
+
+    <p>Li Congqing, meanwhile, made his way home in a daze, his mind a complete disaster.</p>
+
+    <p>Li Congyin had returned before him. He saw his second brother in the doorway — more absent than usual, eyes unfocused, cheeks flushed in a way that was not entirely natural, and those lips more vivid than he'd ever seen them, as if they'd been rather thoroughly harvested.</p>
+
+    <p>Now what's this? Li Congyin circled him, examining from all angles, left, right, up, down, making small thoughtful clicking sounds — the same expression he wore when assessing merchandise.</p>
+
+    <p>"Why are you looking at me like that?" Li Congqing was still dazed, and felt, for no clear reason, slightly guilty.</p>
+
+    <p>Li Congyin rubbed his chin and delivered his verdict: "I always thought the most valuable assets in this family were Three and Four. I never realised the rarest commodity was you."</p>
+
+    <p>Li Congqing processed this a full beat late, then felt a flicker of actual irritation — rare enough to be notable. "Elder brother," he said, with unwonted volume, "you have absolutely no decency."</p>
+
+    <p>"Merchants don't need decency — they need profit. I'm merely advertising my own goods at a slight premium. I'm not forcing anyone to buy. And in any case, whether the buyer is interested is not something I have the power to compel." A smile, brilliant and sharp as sunlight off a blade. He patted Li Congqing's cheek. "Good boy. Listen to your big brother — wash yourself thoroughly and wait nicely."</p>
+
+    <p>This was practically tyranny. This was driving a good man to ruin.</p>
+
+    <p>"Why don't YOU wash yourself and go first!"</p>
+
+    <p>"I'd love to — unfortunately someone has already noticed you specifically." Li Congyin shrugged, and adopted a tone of profound elder-brotherly wisdom: "Second brother — once that sort of person has his eye on you, you can't run from it. You might as well take it as a blessing dropped from heaven. The entire Li family is counting on your backside to bring glory to our ancestors. You must carry this burden with courage, selfless in service, thinking of the greater good."</p>
+
+    <p>Glory, he says! The whole family! If the Li ancestors knew their descendants were selling backsides for social advancement, they'd climb out of their graves in a righteous fury!</p>
+
+    <p>"Mercenary! Conscienceless!" Li Congqing, who had not lost his temper in approximately eight hundred years, was genuinely riled.</p>
+
+    <p>"Conscience? What's that? Can you eat it? How many coins would it fetch at the pawnshop?" Li Congyin grinned. His conscience had been fed to the dogs many years ago.</p>
+
+    <p>Li Congqing could not out-argue him. He turned and stormed toward his own courtyard. Backsides! Backsides! Backsides! If one more person said those two words to him, he would lose his temper at them, whoever they were.</p>
+
+    <p>Back in his room, fuming, he climbed into bed and pulled the covers over his head entirely.</p>
+
+    <p>Sleep. Sleep now. Wake up and everything will be as though it never happened.</p>
+
+    <p>He repeated this lie to himself insistently — but the sensation of being kissed lingered in his lips, his mouth, even his ears; his thoughts were tangled beyond unsnarling, a chaos of fear and confusion and something else he couldn't name and wasn't sure he was allowed to have. He curled into himself, his body warm in a way he couldn't suppress. He'd been less disoriented when that assassin had a sword to his throat.</p>
+
+    <p>How had it come to this? Why had the Emperor suddenly kissed him... God, the Emperor had kissed him... terrifying... and he himself, body going soft, had nearly — had almost, by the end, not found it disgusting at all — had nearly sunk into it entirely...</p>
+
+    <p>That was absolutely terrifying.</p>
+
+    <div class="scene-break">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+    <p>The following morning. First court session of the new year.</p>
+
+    <p>No major business was typically transacted on this day; by custom, each minister in turn came forward to offer the Emperor auspicious words for the new year, wishing stable and prosperous governance.</p>
+
+    <p>Song Yu had privately expected Li Congqing to call in sick — too frightened to appear. Instead, there he was, at the back in his usual spot. Thinking about it: for all the man's love of leisure and his near-total silence in the hall, he had never once been absent. Song Yu found himself revising his estimation of him, again.</p>
+
+    <p>Li Congqing had his head bowed noticeably lower than usual, his shoulders hunched, doing his utmost to make himself as small and unobtrusive as possible — desperately hoping the Emperor, seated high on the Dragon Throne, would simply not notice him. Especially the Emperor.</p>
+
+    <p>Song Yu, needless to say, was more attentive to Li Congqing today than to anyone else. He could see the man was more awake than usual — not dozing — and there were faint shadows beneath his eyes. He thought of last night's kiss, found it entirely insufficient, and felt the urge to have the whole of him.</p>
+
+    <p>"May our sovereign reign ten thousand years, may the Great Shao endure forever." Li Congqing was the last to step forward with his auspicious words, head as low as it would go; he finished and retreated at speed.</p>
+
+    <p>All the ministers had spoken. The Emperor would give a short reply, and court would be dismissed.</p>
+
+    <p>"We too wish for all our ministers to hold the welfare of the people in their hearts," the Emperor said, and then added, quite conversationally: "We have been considering appointing a Shangjun. What do the court's ministers think?"</p>
+
+    <p>The hall erupted. Ministers looked at each other.</p>
+
+    <p>Li Congqing gave a nearly imperceptible flinch, and made himself as small as physically possible. He would very much have liked to dig a hole in the floor.</p>
+
+    <p>On the subject of Shangjun: the title was originally a perfectly legitimate official post. Its founding purpose had been to assist the Emperor with everything from major policy to daily personal needs — in essence, the Emperor's most trusted personal secretary, serving the Emperor alone, not participating in court deliberations.</p>
+
+    <p>It appeared to be a position of ceremonial prestige with no real power — yet its occupant was the person closest to the Emperor, and being that person required the Emperor's absolute trust. The Shangjun therefore had a very real influence over imperial decisions. Historically, a few emperors had appointed male favourites to the position — making it official and open — and this had, over time, given the title a particular flavour. The coincidental tendency for Shangjun to be attractive men had crystallised, across the centuries, into a nearly universal assumption: if someone was Shangjun, they were almost certainly the Emperor's companion in the intimate sense.</p>
+
+    <p>Most ordinary men could not bear such an implication and refused the post. Over time, the position fell into disuse — not every Emperor bothered with it, and if they did appoint one, the assumption was nine times out of ten correct.</p>
+
+    <p>Nominally it still ranked First Grade Lower — below only the Emperor and Empress at First Grade Upper — but in real terms, the occupant lived alongside the Emperor's consorts, and was essentially an openly acknowledged companion, distinct from the formally married consorts only in having no official matrimonial standing.</p>
+
+    <p>"Might we ask whom His Majesty has in mind?" an elderly minister ventured, with careful phrasing — the word 'in mind' carrying, in context, the unmistakable secondary meaning of 'drawn to,' 'desirous of.'</p>
+
+    <p>The Emperor's gaze swept the hall.</p>
+
+    <p>Every minister's heart leapt: The Emperor looked at me! The Emperor looked at me!</p>
+
+    <p>Only Li Congqing's heart screamed: You cannot see me! You cannot see me!</p>
+
+    <p>The Emperor's smile was faint, barely there. "As for the person..."</p>
+
+    <p>Please, please, please do not say my name—</p>
+
+    <p>The Emperor left his sentence unfinished, leaving every minister suspended in breathless uncertainty, and said: "We have not yet decided."</p>
+
+    <p>A collective, relieved exhale from the assembled court, followed immediately by intense speculation about who, precisely, the Emperor had his eye on.</p>
+
+    <p>The Emperor said no more on the subject and dismissed the court.</p>
+
+    <p>Li Congqing exhaled deeply. But his relief lasted about thirty seconds before Wei Xiaomiao appeared in the corridor, drew him aside, and said quietly: "Lord Li — His Majesty has summoned you. Please come with me."</p>
+
+    <p>A premonition of imminent doom settled over him. Li Congqing thought, not for the first time, that if he fainted and played dead right now, he might be able to avoid the immediate consequences.</p>
+
+    <p>He immediately dismissed the thought. Even if he actually fainted and was genuinely half-dead, someone would carry him there anyway — either stripped and hauled into the imperial bed, or dressed in funeral robes and hauled into a coffin.</p>
+
+    <p>There was, as Li Congyin had said, no running from a person who had decided to notice you.</p>
+
+    <p>Li Congqing trailed after Wei Xiaomiao, dark cloud over his head, with the distinct sensation that a certain part of his anatomy had begun to ache in anticipatory dread.</p>
+  </main>
+  <nav class="chapter-nav">
+    <a href="chapter-005.html" class="prev">Previous Chapter</a>
+    <a href="index.html">Chapter List</a>
+    <a href="chapter-007.html" class="next">Next Chapter</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 黑白劍妖 (Heibai Jian Yao).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

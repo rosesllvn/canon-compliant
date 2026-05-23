@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extra One — Flowers Bloom on the Path — Canon Compliant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad; --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: var(--paper); color: var(--ink); font-family: 'Zilla Slab', Georgia, serif; font-size: 18px; line-height: 1.85; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 0; }
+    .topbar { border-bottom: 1px solid var(--border); padding: 1rem 2rem; background: var(--paper); position: sticky; top: 0; z-index: 10; }
+    .topbar-inner { max-width: var(--reading-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .topbar-home { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel { font-family: 'Zilla Slab', serif; font-size: 0.85rem; font-style: italic; color: var(--muted); text-align: center; flex: 1; }
+    .kofi-btn { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 0.35rem 0.85rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; flex-shrink: 0; }
+    .kofi-btn:hover { background: var(--rust-light); }
+    .chapter-header { max-width: var(--reading-width); margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
+    .novel-name { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.75rem; font-weight: 700; color: var(--ink); line-height: 1.2; }
+    .chapter-sublabel { font-family: 'Zilla Slab', serif; font-size: 1rem; font-style: italic; color: var(--muted); margin-top: 0.5rem; }
+    .chapter-date { font-size: 0.8rem; font-style: italic; color: var(--muted); margin-top: 0.75rem; }
+    .chapter-divider { margin: 2rem auto; width: 3rem; height: 1px; background: var(--border); }
+    .chapter-body { max-width: var(--reading-width); margin: 0 auto; padding: 0 2rem 6rem; position: relative; z-index: 1; }
+    .chapter-body p { margin-bottom: 1.4em; }
+    .chapter-body p:last-child { margin-bottom: 0; }
+    .scene-break { text-align: center; margin: 2.5em 0; color: var(--gold); letter-spacing: 0.3em; font-size: 0.85rem; user-select: none; }
+    .chapter-body em { font-style: italic; }
+    .chapter-nav { border-top: 1px solid var(--border); max-width: var(--reading-width); margin: 0 auto; padding: 2rem 2rem 4rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+    .chapter-nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .chapter-nav a:hover { color: var(--rust); }
+    .chapter-nav .prev::before { content: '← '; }
+    .chapter-nav .next::after { content: ' →'; }
+    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) { body { font-size: 16px; } .chapter-label { font-size: 1.4rem; } .topbar-novel { display: none; } }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="topbar-home">Canon Compliant</a>
+      <span class="topbar-novel">Flowers Bloom on the Path</span>
+      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+    </div>
+  </nav>
+  <header class="chapter-header">
+    <p class="novel-name">Flowers Bloom on the Path · 陌上花開</p>
+    <h1 class="chapter-label">Extra One</h1>
+    <p class="chapter-sublabel">Epilogue</p>
+    <p class="chapter-date">Sep 2026</p>
+    <div class="chapter-divider"></div>
+  </header>
+  <main class="chapter-body">
+    <p>Li Congqing had returned.</p>
+
+    <p>Word rippled through the court in whispers, a stone dropped in still water.</p>
+
+    <p>The ministers who had previously looked at Li Congqing through a crack in the door — that is to say, who had been looking down at him — found themselves with a good deal to reconsider. Who could have imagined that the napping Vice Minister, whose sole distinguishing professional feature appeared to be an ability to sleep through anything, had managed to doze his way right onto the Emperor's pillow?</p>
+
+    <p>Look at him sideways or straight-on, from any angle — the Vice Minister of Rites was not the sort of specimen destined to bewitch a sovereign with beauty or charm. That the Emperor should have taken such a deep and lasting liking to him struck the assembled court as nothing short of miraculous.</p>
+
+    <p>The court divided, broadly, into three factions: those in favour (the Emperor having a male favourite was hardly earth-shattering news in the annals of history); those opposed (this was a violation of moral propriety and an affront to social custom); and those who simply had no opinion (let the Emperor be happy, what business was it of theirs?).</p>
+
+    <p>The most astonishing development was that Minister Xu — traditionally Li Congqing's most vociferous critic — had landed squarely in the pro faction, causing several jawbones to disconnect from their faces.</p>
+
+    <p>"A man's personal conduct and his official performance are separate matters," Minister Xu was heard to say. "Li Congqing is tolerable at his work. I shall continue to find fault with him on his professional merits. It is called keeping one's public and private lives distinct." A model of correct thinking, apparently.</p>
+
+    <p>"May all who seek love find it; may all wishes be granted," said National Preceptor Shangzhi, with that crescent smile. "Amitabha. So it is." A few words; infinite depth.</p>
+
+    <p>The Emperor continued to hold morning court punctually, every day. The Vice Minister of Rites continued to fall asleep at morning court, every day. Ten years passed as one.</p>
+
+    <p>What was different was: people could now watch them walking hand in hand through the imperial garden at their leisure, without needing to pretend not to see. At the autumn hunt, when the Emperor sent the tenderest cut of meat to Li Congqing's place, no one glowered with envy anymore. And when Li Congqing drank too much at a state banquet and leaned against the Emperor's shoulder with no particular ceremony, no one gasped in horror or thought it constituted lèse-majesté. It had come to seem, strangely, like the natural order of things.</p>
+
+    <p><em>— How did we just end up walking through life together like that? Li Congqing reflected one day, grey beginning to thread through his hair, with something like wonder.</em></p>
+
+    <p><em>— It was written in our fates. The retired Emperor Song Yu smiled.</em></p>
+
+    <p>They looked at each other, and smiled, and said nothing more.</p>
+
+    <p>In the thirty-second year of the Virtuous Reign, after the Emperor and the Vice Minister had both retired from their positions, they left together to travel the rivers and mountains of Da Shao — and then beyond — roaming the four seas and five lakes, inseparable as a pair of shadows. They spent the rest of their lives thus, together, and people said: not even immortals could envy this.</p>
+
+    <p>Li Congqing held the title of Vice Minister of Rites for the entirety of his official career. He died peacefully in old age at sixty-nine.</p>
+
+    <p>The following year, the retired Emperor Song Yu followed him. He was seventy-one.</p>
+
+    <p>On his deathbed, Song Yu made a special instruction: that Li Congqing's remains be transferred and placed with him in the same coffin, to be buried together. The story became a legend of Da Shao, repeated in later generations with tears and admiration.</p>
+
+    <p>Some said that the Peony Fairy and the Son of Heaven were inscribed together in the celestial register, and that in paradise they continued their love, eternal and unbroken.</p>
+
+    <p>There was no grand consuming passion between them, no love torn from the sky, no hatred ferocious enough to wish each other dead. Just a quiet, steady stream of feeling — blossoming gently, in a time of peace, into something beautiful enough to colour the whole of a life.</p>
+  </main>
+  <nav class="chapter-nav">
+    <a href="chapter-009.html" class="prev">Chapter Nine</a>
+    <a href="index.html">Chapter List</a>
+    <a href="extra-002.html" class="next">Extra Two</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 黑白劍妖 (Heibai Jian Yao).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

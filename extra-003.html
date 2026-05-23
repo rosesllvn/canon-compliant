@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extra Three — Flowers Bloom on the Path — Canon Compliant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad; --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: var(--paper); color: var(--ink); font-family: 'Zilla Slab', Georgia, serif; font-size: 18px; line-height: 1.85; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 0; }
+    .topbar { border-bottom: 1px solid var(--border); padding: 1rem 2rem; background: var(--paper); position: sticky; top: 0; z-index: 10; }
+    .topbar-inner { max-width: var(--reading-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .topbar-home { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel { font-family: 'Zilla Slab', serif; font-size: 0.85rem; font-style: italic; color: var(--muted); text-align: center; flex: 1; }
+    .kofi-btn { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 0.35rem 0.85rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; flex-shrink: 0; }
+    .kofi-btn:hover { background: var(--rust-light); }
+    .chapter-header { max-width: var(--reading-width); margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
+    .novel-name { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.75rem; font-weight: 700; color: var(--ink); line-height: 1.2; }
+    .chapter-sublabel { font-family: 'Zilla Slab', serif; font-size: 1rem; font-style: italic; color: var(--muted); margin-top: 0.5rem; }
+    .chapter-date { font-size: 0.8rem; font-style: italic; color: var(--muted); margin-top: 0.75rem; }
+    .chapter-divider { margin: 2rem auto; width: 3rem; height: 1px; background: var(--border); }
+    .chapter-body { max-width: var(--reading-width); margin: 0 auto; padding: 0 2rem 6rem; position: relative; z-index: 1; }
+    .chapter-body p { margin-bottom: 1.4em; }
+    .chapter-body p:last-child { margin-bottom: 0; }
+    .scene-break { text-align: center; margin: 2.5em 0; color: var(--gold); letter-spacing: 0.3em; font-size: 0.85rem; user-select: none; }
+    .chapter-body em { font-style: italic; }
+    .chapter-nav { border-top: 1px solid var(--border); max-width: var(--reading-width); margin: 0 auto; padding: 2rem 2rem 4rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+    .chapter-nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .chapter-nav a:hover { color: var(--rust); }
+    .chapter-nav .prev::before { content: '← '; }
+    .chapter-nav .next::after { content: ' →'; }
+    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) { body { font-size: 16px; } .chapter-label { font-size: 1.4rem; } .topbar-novel { display: none; } }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="topbar-home">Canon Compliant</a>
+      <span class="topbar-novel">Flowers Bloom on the Path</span>
+      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+    </div>
+  </nav>
+  <header class="chapter-header">
+    <p class="novel-name">Flowers Bloom on the Path · 陌上花開</p>
+    <h1 class="chapter-label">Extra Three</h1>
+    <p class="chapter-sublabel">Spring Fills the Palace: Part One</p>
+    <p class="chapter-date">Oct 2026</p>
+    <div class="chapter-divider"></div>
+  </header>
+  <main class="chapter-body">
+    <p>Spring fills the palace, green as jade —</p>
+
+    <p>Five towers, twelve cities within cities,</p>
+
+    <p>A white jade heaven,</p>
+
+    <p>A world of coloured glass.</p>
+
+    <p>In the fifteenth year of the Virtuous Reign, in the blazing heat of midsummer, under a sky stretched wide with long bright days:</p>
+
+    <p>A new rumour began quietly circulating through the streets of the capital —</p>
+
+    <p>They were saying — the Vice Minister of Rites was with child.</p>
+
+    <p>Pardon me, you ask, with what?</p>
+
+    <p>With a dragon child, of course. An imperial heir.</p>
+
+    <p>What?! How could that possibly be?!</p>
+
+    <p>You may well be shocked. You should be shocked. This rumour was, by any measure, absolutely thunderstruck, jaw-dropping news.</p>
+
+    <p>The actual origin of the story was this: one morning, the Vice Minister of Rites woke and, getting out of bed, was struck by dizziness, loss of appetite, and a violent urge to retch. The Emperor urgently summoned the imperial physician, who said it was simply heatstroke — nothing to worry about —</p>
+
+    <p>Of course it wasn't heatstroke. He was with child, obviously.</p>
+
+    <p>It was unclear whether this was a case of collective boredom in a prosperous and under-stimulated age, or simply too much imagination distributed across too many people — but a significant portion of the population simply did not believe the physician's diagnosis. Word had it that the Vice Minister felt ill at the smell of meat and fish — a symptom strongly reminiscent of early pregnancy. The Emperor had been diligently tending the garden for years; surely some seed had taken root.</p>
+
+    <p>The Minister of Revenue was one of the chief sceptics. In his view, if the Vice Minister was going to monopolise the Emperor's favour, the absolute least he could do was produce an heir; not doing so was a personal affront to the imperial ancestors and to every citizen of Da Shao.</p>
+
+    <p>This momentous news proved impossible to contain. It whispered out of the palace, passed from mouth to ear, ten ears to a hundred mouths — then a thousand — and since each teller delivered it with confident authority, the cumulative effect was one of established fact. By the time it had spread sufficiently, nine out of ten people were quite certain the Vice Minister of Rites was carrying an imperial heir, and wasn't that the most exciting thing in living memory? The whole nation rejoiced.</p>
+
+    <p>Since the Emperor and Vice Minister's relationship had become public knowledge, these two had become the most closely-watched couple in all of Da Shao — an inexhaustible topic for idle hours. The vocal minority of naysayers — those perpetually anxious voices muttering "the court is full of the willow-sleeve set, the nation will collapse" — had largely been drowned out, since the Emperor already had two princes and the matter of succession was settled. The Emperor could love whoever he pleased.</p>
+
+    <p>But wait, you object — the Vice Minister is a man, how can he be with child?</p>
+
+    <p>Some said he was actually a woman in disguise.</p>
+
+    <p>Some said he was the Peony Fairy descended from heaven — flower spirits being of dual nature, it was entirely possible for him to conceive and repay the Emperor's kindness with a child.</p>
+
+    <p>Some said the Emperor's love ran so deep that he had dispatched agents to the four corners of the known world in search of a mythical medicine that could allow a man to carry a child…</p>
+
+    <p>That last theory, frankly, came closest to the truth.</p>
+
+    <p>To explain properly, we must go back two months, to the beginning —</p>
+
+    <p>At the Dragon Boat Festival, the Turfan King — who had, recall, acquired Prince Twelve as his consort — sent an elaborate collection of festival gifts, a vast display of rare and exotic items.</p>
+
+    <p>Emperor Song Yu received them with proper ceremony and sent silk and gold in return. He had not been paying particular attention to the tribute list when his eye was caught by one item and its description:</p>
+
+    <p>Blood Phoenix Pill, three vials. Pregnancy Elixir, three vials. For those long unable to conceive: take one Blood Phoenix Pill every seven days over three vials to nourish the vital essence and generate yin energy. Before intercourse, take one Pregnancy Elixir. Conception will follow. Males who take this preparation may be able to conceive. Use with caution.</p>
+
+    <p>Song Yu read it. His eyes took on a particular quality.</p>
+
+    <p>Various tribute gifts typically included jewels, rare animals, and exotic plants, but also medicinal preparations — some for health and longevity, some of a more intimate nature. The Emperor's policy was to distribute the health tonics among his civil and military officials, and to keep the more intimate preparations for personal use, which — ahem — tended to be applied to the Vice Minister of Rites.</p>
+
+    <p>Males who take this preparation may be able to conceive…</p>
+
+    <p>Song Yu lifted his gaze toward the figure lounging by the window. "One wonders," he murmured half to himself, "whether it could be true."</p>
+
+    <p>"What did you say, Your Majesty?" Li Congqing turned his head with leisurely slowness.</p>
+
+    <p>"The Turfan King has been thoughtful," Song Yu replied with a small smile. Very thoughtful indeed, to send something like this. The man clearly had motives.</p>
+
+    <p>"He kidnapped little Prince Twelve, so of course he has to put in the effort to stay in Da Shao's good graces," Li Congqing said, with a luxurious stretch. "Honestly, the days have been so terribly dull lately."</p>
+
+    <p>"Feeling bored?"</p>
+
+    <p>"Every day looks exactly the same. There's nothing interesting."</p>
+
+    <p>Song Yu reflected for a moment, then said, somewhat experimentally: "Congqing — would you want to have children?"</p>
+
+    <p>Li Congqing blinked. "If I wanted them, would you permit it?"</p>
+
+    <p>"If you want them, I could find a woman from a good family as your concubine, to have children for you. Any child of yours would be as dear to me as my own." Song Yu's expression was even, his words entirely reasonable, exhibiting the magnanimity of a wise and benevolent ruler.</p>
+
+    <p>Since their relationship had become settled, Song Yu no longer called himself 'We' in private, nor maintained imperial distance. He was simply Li Congqing's partner.</p>
+
+    <p>Li Congqing sat up straight, his expression uncharacteristically solemn. "Is that genuine? If so, shall I thank the Emperor's benevolence?"</p>
+
+    <p>Song Yu's eyes sharpened slightly. "You truly want that?"</p>
+
+    <p>"Ha! As if I'd believe a word of that." Li Congqing pursed his mouth. "If I actually took a concubine and produced children — how long do you think that mother and child would last?"</p>
+
+    <p>"I'm surprised you see me as so petty and jealous." Song Yu smiled ambiguously. "Many contract-brothers keep wives and have children, to continue the family line. This is entirely reasonable and proper — and besides, you and I have no formal status, so who am I to prevent you from continuing your bloodline?"</p>
+
+    <p>Li Congqing could tell he was being tested, and felt a flash of irritation, and then a wave of resignation. He was not foolish — not at all. He could see Song Yu clearly: possessed of a jealousy so thorough it left no evidence, having quietly dispatched every match-minded official who'd come sniffing around Li Congqing over the years. Outwardly virtuous and magnanimous; privately full of dark water. That was why Li Congqing had ended up entirely consumed — the man had eaten him alive, one small bite at a time, until he'd surrendered his whole life.</p>
+
+    <p>Oh well. What was the use of quarrelling with a man who loved you this tenaciously? He shifted lazily back against the cushions. "I'm too much trouble. Never mind. The Li family isn't short of nephews and nieces to carry on the line, and every one of them has Song blood in them anyway. Don't fuss over me."</p>
+
+    <p>Song Yu set aside the tribute list and came to sit beside him, taking his hand. "Congqing — do you resent me for any of this?"</p>
+
+    <p>Strictly speaking, Song Yu had seized Li Congqing and kept him at his side by steady accumulated strategy. You could, if you were being blunt, call it pressing a man into service. If Song Yu had never noticed that napping Vice Minister all those years ago, Li Congqing might have lived a perfectly ordinary life, married, had children — they might be walking by now.</p>
+
+    <p>"I chose what I love. What is there to resent?"</p>
+
+    <p>Li Congqing was both exasperated and amused. It was well past the point of no return anyway. Even if he harboured resentment, what purpose would it serve? He wasn't going to torment himself unnecessarily. He had said it to Wei Xiaomiao once, and he believed it —</p>
+
+    <p>Ten thousand things in this world are only what the heart makes of them.</p>
+
+    <p>A hundred years was short. He chose to live simply and freely, following his own nature. That was enough.</p>
+
+    <p>"After everything, what use is resenting you," he said lightly. Then, improvising: "If you really want me to have a child — I'm actually rather fond of little Princess Xile. You could give her to me as a daughter. What do you think?"</p>
+
+    <p>"If you truly like her, that could be arranged."</p>
+
+    <p>"I was joking! Don't take it seriously — I'd be hated for the rest of my life!"</p>
+
+    <p>Song Yu looked at him with an expression of deep meaning, but smiled and said nothing.</p>
+
+    <p>Li Congqing found the Emperor oddly moody today, and oddly annoying, and had no idea what scheme was being turned over in that inscrutable mind. He tried to change the subject: "Have you finished looking at the tribute list? Was there anything interesting?"</p>
+
+    <p>"There was one rather interesting item indeed." Song Yu's eyes brightened in a way that did not bode well, and the corner of his mouth curved with a hint of something not entirely benign.</p>
+
+    <p>"Why are you looking at me like that?" Li Congqing had a bad feeling.</p>
+
+    <p>"Because I'm wondering whether to try this thing out on you."</p>
+
+    <p>"What on earth — don't tell me it's another disgusting tribute drug or bedroom appliance!"</p>
+
+    <p>"Language," Song Yu said. "That earns a punishment."</p>
+
+    <p>And before Li Congqing could launch his retreat, the Emperor had already pounced.</p>
+
+    <p>"A ruler of the realm conducting improper business in broad daylight — have you no shame?" the Vice Minister howled, his attempts at struggling undermined by limbs that were, frankly, not trying very hard.</p>
+
+    <p>"The sun is practically at the hills. This hardly qualifies as daytime."</p>
+
+    <p>And well, when an Emperor wished to be improper with someone, what was there to be done about it? He was the Son of Heaven. Who would dare say a word —</p>
+
+    <p>Except the Vice Minister of Rites.</p>
+
+    <p>What followed — the sun continuing its descent, the complaints from beneath him growing gradually less coherent — is left to the reader's imagination. Suffice to say that by the time the sun did finally finish setting over those hills, both parties were in a state of mutual satisfaction, entirely consistent with the afternoon's earlier intentions.</p>
+
+    <p>In the palace of His Majesty the Virtuous Emperor, Tíng Xià Tower rang for some time with the sounds of spring.</p>
+  </main>
+  <nav class="chapter-nav">
+    <a href="extra-002.html" class="prev">Extra Two</a>
+    <a href="index.html">Chapter List</a>
+    <a href="extra-004.html" class="next">Extra Four</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 黑白劍妖 (Heibai Jian Yao).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

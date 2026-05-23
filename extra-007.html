@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extra Seven — Flowers Bloom on the Path — Canon Compliant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad; --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: var(--paper); color: var(--ink); font-family: 'Zilla Slab', Georgia, serif; font-size: 18px; line-height: 1.85; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 0; }
+    .topbar { border-bottom: 1px solid var(--border); padding: 1rem 2rem; background: var(--paper); position: sticky; top: 0; z-index: 10; }
+    .topbar-inner { max-width: var(--reading-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .topbar-home { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel { font-family: 'Zilla Slab', serif; font-size: 0.85rem; font-style: italic; color: var(--muted); text-align: center; flex: 1; }
+    .kofi-btn { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 0.35rem 0.85rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; flex-shrink: 0; }
+    .kofi-btn:hover { background: var(--rust-light); }
+    .chapter-header { max-width: var(--reading-width); margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
+    .novel-name { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.75rem; font-weight: 700; color: var(--ink); line-height: 1.2; }
+    .chapter-sublabel { font-family: 'Zilla Slab', serif; font-size: 1rem; font-style: italic; color: var(--muted); margin-top: 0.5rem; }
+    .chapter-date { font-size: 0.8rem; font-style: italic; color: var(--muted); margin-top: 0.75rem; }
+    .chapter-divider { margin: 2rem auto; width: 3rem; height: 1px; background: var(--border); }
+    .chapter-body { max-width: var(--reading-width); margin: 0 auto; padding: 0 2rem 6rem; position: relative; z-index: 1; }
+    .chapter-body p { margin-bottom: 1.4em; }
+    .chapter-body p:last-child { margin-bottom: 0; }
+    .scene-break { text-align: center; margin: 2.5em 0; color: var(--gold); letter-spacing: 0.3em; font-size: 0.85rem; user-select: none; }
+    .chapter-body em { font-style: italic; }
+    .chapter-nav { border-top: 1px solid var(--border); max-width: var(--reading-width); margin: 0 auto; padding: 2rem 2rem 4rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+    .chapter-nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .chapter-nav a:hover { color: var(--rust); }
+    .chapter-nav .prev::before { content: '← '; }
+    .chapter-nav .next::after { content: ' →'; }
+    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) { body { font-size: 16px; } .chapter-label { font-size: 1.4rem; } .topbar-novel { display: none; } }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="topbar-home">Canon Compliant</a>
+      <span class="topbar-novel">Flowers Bloom on the Path</span>
+      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+    </div>
+  </nav>
+  <header class="chapter-header">
+    <p class="novel-name">Flowers Bloom on the Path · 陌上花開</p>
+    <h1 class="chapter-label">Extra Seven</h1>
+    <p class="chapter-sublabel">Spring Fills the Palace: Part Five</p>
+    <p class="chapter-date">Nov 2026</p>
+    <div class="chapter-divider"></div>
+  </header>
+  <main class="chapter-body">
+    <p>Word spread: the Vice Minister of Rites had been imprisoned deep in the palace.</p>
+
+    <p>He had missed morning court three days running — unprecedented in living memory. The Emperor, meanwhile, was attending court with unusual brevity and departing with unusual speed, apparently returning directly to his bedchamber, leaving major affairs of state to the Crown Prince under the supervision of Fifth Prince. Everyone agreed that this was very clearly the beginning of the famous condition whereby a devoted monarch forgets his morning duties.</p>
+
+    <p>This time the rumour had about seven or eight parts of truth in it. Li Congqing was effectively under voluntary house arrest in Ziyun Palace — unable to leave.</p>
+
+    <p>Every time he thought about three nights ago, his face went a fascinating shade of green. He had nearly lost the use of certain critical infrastructure, and was still deeply aggrieved about it.</p>
+
+    <p>Song Yu, for his part, was bending over backwards in contrition — waiting on Li Congqing hand and foot, personally attending to his every need — while simultaneously and very firmly not allowing him to leave Ziyun Palace. Technically, this was "allowing him to recover in comfort."</p>
+
+    <p>In practice, it was preventing him from bolting.</p>
+
+    <p>Song Yu's concern was not unfounded. Li Congyin, if he set his mind to hiding Li Congqing, was perfectly capable of making him extremely difficult to retrieve. And Li Congyin had recently acquired an even more formidably tenacious ally at his side — someone who even Song Yu was obliged to be slightly careful about provoking.</p>
+
+    <p>The three days of Li Congqing's stony silence were, in short, the Emperor's own fault.</p>
+
+    <p>Was he furious? Had it gotten all the way into his bones? Song Yu reflected privately: possibly still a little short of fully boiled. Perhaps another day would do it.</p>
+
+    <p>On the afternoon of the third day, while Song Yu was attending to unavoidable business in the Imperial Study, Ziyun Palace received an unexpected guest.</p>
+
+    <p>"Liu-xiongdi? What are you doing here?" Li Congqing was genuinely surprised to see Liu Jiyou.</p>
+
+    <p>"I came to see you, of course." Liu Jiyou's expression was warm and slightly worried. "My Prince said you were… unwell and resting. So I pestered him until he brought me to visit."</p>
+
+    <p>In truth: Liu Jiyou had simply refused to leave the Fifth Prince alone until the man gave in. The Fifth Prince had observed to Song Yu that keeping Li Congqing confined was a poor strategy — someone who knew him well and could actually put the situation to him rationally would be more effective than continued imprisonment. And it couldn't be a family member. The Li family, predictably, would not say a single good word on the Emperor's behalf — they would probably make things worse.</p>
+
+    <p>Song Yu had considered Wei Xiaomiao, and the Fifth Prince had quickly suggested Liu Jiyou.</p>
+
+    <p>Song Yu thought it over and agreed. Let him come.</p>
+
+    <p>And so the Fifth Prince's "properly married" contract-brother, holder of the Second-Rank consort designation, had arrived at Ziyun Palace with official clearance.</p>
+
+    <p>Liu Jiyou found Li Congqing in one piece, but distinctly unhappy — a furrow between his brows, a cloud in his expression.</p>
+
+    <p>After some idle conversation that didn't reach any important points, Liu Jiyou said directly: "Li-xiongzhang — I'll speak plainly. Did the Emperor force you to try to conceive?"</p>
+
+    <p>Li Congqing paused. He sighed.</p>
+
+    <p>It was true — in the fury of three nights ago, in the subsequent shock, he'd almost lost track of the more important question: namely, whether he was actually pregnant. These past days, well-fed and well-tended, his head had cleared considerably. He was no longer dizzy, no longer nauseous at the smell of things.</p>
+
+    <p>He touched his flat stomach and thought: if the medicine had taken effect — if it had actually worked — it had been before those nights, in the soups. He might, by now…</p>
+
+    <p>"Li-xiongzhang," Liu Jiyou said quietly. "I may be speaking out of turn. But — is it not a beautiful thing, to carry a child for the person you love?"</p>
+
+    <p>Li Congqing looked at him.</p>
+
+    <p>"I also came to ask you something," Liu Jiyou continued. "If there are any Blood Phoenix Pills and Pregnancy Elixirs remaining — could I have them?"</p>
+
+    <p>"You want to…"</p>
+
+    <p>"Yes. I want to give my Prince a child." Liu Jiyou said it without any hesitation or self-consciousness. "His former consort once said she didn't want his child — said that his children would be mongrels. I will never let his children be called mongrels. If I can give him one, I'll give him one. A whole houseful, warm and noisy and happy."</p>
+
+    <p>Li Congqing regarded him for a long moment. He was sincere. Straightforward. He truly loved the Fifth Prince, without reservation.</p>
+
+    <p>"I'll look into it for you," Li Congqing said.</p>
+
+    <p>"Thank you." Liu Jiyou smiled with genuine warmth, then looked slightly abashed. "Do you think I'm being — not very male? Wanting to carry a child for another man?"</p>
+
+    <p>"Not at all," Li Congqing said honestly. He smiled a little too. "You're right. It isn't a bad thing. Carrying the child of someone you love — that's a fine thing. I'm the one who's been too small-minded about it."</p>
+
+    <p>"I don't mean to press you. Everyone has their own view, and I understand why you feel the way you do."</p>
+
+    <p>"Thank you," Li Congqing said.</p>
+
+    <p>They talked a while longer. Song Yu returned, accompanied by the Fifth Prince. Liu Jiyou gathered himself with cheerful efficiency and departed hand in hand with his Prince.</p>
+
+    <p>Liu Jiyou's visit had, as intended, been effective. Song Yu saw that Li Congqing's expression had softened considerably, and sat beside him, taking his hand. "Still angry with me?"</p>
+
+    <p>Li Congqing sighed again — his third or fourth of the day. Angry? How could he not be angry.</p>
+
+    <p>But the anger had been cooling since the afternoon, turning into helpless resignation. He was angry, yes. He was not bitter toward Song Yu — not a particle of bitterness. He understood that he still loved this man with complete commitment.</p>
+
+    <p>And now that he had calmed down, and thought about it clearly — Liu Jiyou's words had knocked a small hole in the corner of the wall he'd been building. If it really were possible — to carry a child that was his and Song Yu's both — the thought was no longer only alarming. It was also, quietly, something else.</p>
+
+    <p>In the end, he was simply afraid of complications. And afraid of pain.</p>
+
+    <p>He had been somewhat indulged as a child, never subjected to serious illness or injury. Oh — except for the year of the assassin, when he had accidentally taken a sword blow intended for the Emperor. He thought about it now, rueful — what a farce that had been. That unfortunate blundering assassin.</p>
+
+    <p>His entanglement with Song Yu — surely it had started from that moment.</p>
+
+    <p>In a manner of speaking, that assassin had been their matchmaker.</p>
+
+    <p>"What are you smiling at?" Song Yu asked.</p>
+
+    <p>"The year I blocked a sword for you," Li Congqing said. "I should say — I wasn't trying to protect the Emperor. It was completely accidental."</p>
+
+    <p>"I know."</p>
+
+    <p>"Oh. You've known all along. Is there anything in the world that the great and enlightened Emperor doesn't know?"</p>
+
+    <p>"Many things I don't know," Song Yu said easily — and as he spoke, reached down and began a careful, apologetic massage of a particular area that had recently required an imperial physician's attention.</p>
+
+    <p>The physician had prescribed frequent gentle circulation therapy. Song Yu had been applying it conscientiously for three days.</p>
+
+    <p>"It's much better now. You don't need to keep doing that." Li Congqing deflected his hand quickly. He did not want Song Yu to discover that the relevant structures had, in fact, fully recovered this morning and were currently in excellent spirits. The less Song Yu knew about this, the better.</p>
+
+    <p>"Congqing, I should tell you —"</p>
+
+    <p>"ASSASSIN! Guards! Protect the Emperor!" The shout erupted suddenly from outside.</p>
+
+    <p>Multiple black-clad figures came crashing through the palace doors, engaged with the guards. The guards closed around Song Yu and Li Congqing immediately, directing them to flee. But the intruders split, and one lunged through the defense perimeter —</p>
+
+    <p>It was not the Emperor they were after.</p>
+
+    <p>Li Congqing found himself grabbed and thrown over a shoulder, the palace blurring past him at speed, shouts everywhere, Song Yu's voice cutting through the chaos —</p>
+
+    <p>"After them!"</p>
+
+    <p>Song Yu was in pursuit himself. The black-clad figures moved through the palace's corridors and side-paths with uncanny familiarity, flying through the winding routes, outpacing the Emperor and the converging palace guards, making for a small side gate on the perimeter.</p>
+
+    <p>When Song Yu reached it, Li Congqing was already being hauled onto a horse.</p>
+
+    <p>"CONGQING!" Song Yu lunged forward, and his own guards caught him to prevent his running alone into the courtyard.</p>
+
+    <p>Li Congqing, upside down and spinning, had barely processed any of this. He heard Song Yu's shout and began to struggle.</p>
+
+    <p>"Your brother sent me," the man holding him said in a low voice. "I'm rescuing you."</p>
+
+    <p>Li Congqing stared, dazed — and in that moment's hesitation, the horse was kicked to a gallop.</p>
+
+    <p>"CONGQING!"</p>
+
+    <p>Li Congqing twisted around, and saw Song Yu spit blood.</p>
+
+    <p>"Stop!" he shouted. "Let me down — I'm not imprisoned, I'm there by choice, I don't need rescuing —"</p>
+
+    <p>A hand chopped down on the back of his neck, and everything went dark.</p>
+
+    <p>Song Yu watched him vanish into the distance. His face was white and cold and furious.</p>
+
+    <p>"Li Congyin," he said quietly. "Qiu Luan."</p>
+
+    <p>✦  ✦  ✦</p>
+
+    <p>"WHAT WERE YOU THINKING, KNOCKING MY BROTHER OUT LIKE THAT?"</p>
+
+    <p>"He was trying to escape."</p>
+
+    <p>"Did you TELL him it was me who sent you?"</p>
+
+    <p>"Yes. He told me to let him go."</p>
+
+    <p>"And so you just — knocked him unconscious?! He's been out for half a day! What if there's permanent damage, what do you have to say for —"</p>
+
+    <p>Li Congqing's eyes opened to the dimness of a small ship cabin, his head ringing, and the sight of his eldest brother being vigorously physically restrained against a wall by a large black-bearded man who was apparently addressing Li Congyin's complaints about his methodology by pressing him against that wall with his mouth.</p>
+
+    <p>Right. I haven't seen anything. I haven't seen anything.</p>
+
+    <p>"Mmm — get OFF me, he's WAKING UP —" Li Congyin wrenched free and was across the cabin in three strides. "Old Two! Old Two, can you hear me?"</p>
+
+    <p>Li Congqing opened his eyes fully and found his brother's face hovering over him, tight with worry. "Elder Brother…"</p>
+
+    <p>Li Congyin exhaled. "Good. You're awake. You've been out half a day. I was worried they'd broken something."</p>
+
+    <p>"Where am I?"</p>
+
+    <p>"Calm down. That monster can't follow us. We're already at sea. Drink some water."</p>
+
+    <p>"At sea?" Li Congqing sat up and tried to clear his head.</p>
+
+    <p>"I'm taking you somewhere safe. He'll never find you there, and even if he does, he can't take you by force."</p>
+
+    <p>"He?" Li Congqing stared.</p>
+
+    <p>"That monster."</p>
+
+    <p>"Which monster?"</p>
+
+    <p>"Oh no," Li Congyin said, blanching. "They actually broke your brain."</p>
+
+    <p>Li Congqing turned toward the doorway, and for the first time got a clear look at the large, square-jawed man with the dense beard, half his face hidden in black hair. Familiar eyes — sharp as a hunting cat's.</p>
+
+    <p>"Lord Dongyang?" Li Congqing said, startled.</p>
+
+    <p>Lord Dongyang — a legendary figure in the southern seas — ignored him, opened the cabin door, and walked out.</p>
+
+    <p>"You're not brain-damaged," Li Congyin exhaled again. "Good. In any case — your elder brother will protect you. You have nothing to worry about."</p>
+
+    <p>"Elder Brother. You misunderstood. You didn't need to rescue me. I wasn't imprisoned. I was there by choice." Li Congqing said urgently. "I need to go back. I saw him cough blood — I need to go back to him right now —"</p>
+
+    <p>"Too late. We're at sea. The ship doesn't turn back."</p>
+
+    <p>"Elder Brother. Please."</p>
+
+    <p>"You've been thoroughly humiliated and you're still rushing back to let him humiliate you further — useless!" Li Congyin flicked him twice on the forehead, bristling with protective indignation. "Forget it. Stay here. When that man figures out how to show some proper remorse, then we'll see."</p>
+
+    <p>Li Congyin turned and walked out, refusing further discussion. His mind was made up. He'd done what he'd done. There was no going back.</p>
+
+    <p>"The ship is at the west dock," said Lord Dongyang's sandpaper voice, as he followed Li Congyin out.</p>
+
+    <p>Li Congqing stared at the cabin ceiling, thoroughly outmanoeuvred.</p>
+
+    <p>The image of Song Yu spitting blood wouldn't leave his mind. His chest ached with it, a scraping, pulling pain. He prayed, over and over, that it was nothing serious.</p>
+
+    <p>Far away, across the water, the nation of Da Shao was in grief.</p>
+
+    <p>Because: the Vice Minister of Rites had been abducted.</p>
+
+    <p>This was not a rumour. It was true.</p>
+
+    <p>The Virtuous Emperor had gone cold as glacial stone. The entire court walked on glass.</p>
+
+    <p>A month later: word came that the Emperor had fallen ill with longing. He was fading. Life hung in the balance.</p>
+
+    <p>The Crown Prince had taken over governance of daily affairs. The Fifth and Sixth Princes assisted him in administration.</p>
+
+    <p>All of Da Shao worried itself to pieces. Millions of subjects prayed to heaven to protect the Emperor, and prayed that the Vice Minister would hurry back to his side, so that heaven and earth could be set to rights.</p>
+
+    <p>On the small island in the eastern seas, when Li Congqing heard that the Emperor was gravely ill, he went frantic. He hounded Li Congyin every hour: take him back to Da Shao, take him back now, he'd swim if he had to —</p>
+
+    <p>"He's dying. If he dies I'm going with him — I'll be buried with him!"</p>
+
+    <p>"You — what kind of sentimental nonsense is that — am I going to die and have you go with me?!"</p>
+
+    <p>"I'd… probably not follow you," Li Congqing admitted, a trace of guilty conscience crossing his face. "But I'd tend your grave."</p>
+
+    <p>"I raised the lot of you, and one by one you've all gone off and become someone else's. Every single one of you gone. All that labour, all that investment, completely squandered." Li Congyin threw his hands up in outrage. "Fine! Fine! Figure out your own way back. The ship is at the west dock. By the time you paddle your little boat back to Da Shao, he'll have died peacefully and you can jump into his coffin, how's that!"</p>
+
+    <p>He stormed off, Lord Dongyang at his heels as usual, the two of them inseparable.</p>
+
+    <p>Li Congqing stared at the infinite horizon of the eastern sea and felt profoundly, comprehensively sorry for himself. Then he thought about Song Yu, and felt worse, and opened his mouth and shouted at the sky like a madman:</p>
+
+    <p>"Song Yu — wait for me — wait until I can see you one last time before you die — I'm coming, I'm on my way —"</p>
+
+    <p>"I'm not dead yet," said a voice behind him.</p>
+
+    <p>Li Congqing turned, very slowly, with the precision of a man who is afraid his hearing has failed.</p>
+
+    <p>Then — he moved.</p>
+
+    <p>Song Yu caught him, held him, tight, arms locked like he would never release them, because he wouldn't, not again, not ever.</p>
+
+    <p>The sun was going down. Two people stood on a dock at the edge of the world, holding each other while their shadows stretched and merged behind them, two becoming one long dark shape that neither could separate from the other.</p>
+
+    <p>One loves with the kind of passion that borders on madness. The other loves with the kind of devotion that has no regrets. One who is mad; one without regrets. Like this, they would stay beside each other for a lifetime, and grow old.</p>
+
+    <p>And here, dear readers, we can close the curtain on this particular chapter of events. A handful of small pills managed to send everyone into chaos and rearrange the furniture of the known world.</p>
+
+    <p>If you're still wondering: did the Vice Minister of Rites ever actually take the Blood Phoenix Pill and the Pregnancy Elixir?</p>
+
+    <p>The answer lies back in the palace.</p>
+
+    <p>After various ordeals, negotiations, and the creative diplomacy of Li Congyin (which Song Yu endured with remarkably good grace, given the circumstances), the two of them returned together to Da Shao. As for the inner court and its arrangements — that, as the saying goes, is a matter for the parties concerned.</p>
+
+    <p>Back at Tíng Xià Tower, Song Yu personally placed six wax-sealed medicine pills before Li Congqing and said: "I didn't give these to you. You were not with child. Your symptoms truly were heatstroke."</p>
+
+    <p>"Is this actually true? Maybe you've substituted different pills." Li Congqing picked one up, examining it. There was a trace of bright cinnabar on the surface. "Is this the Blood Phoenix Pill?"</p>
+
+    <p>"It should be. I consulted the Chief Imperial Physician. He said the medicine only functions in women; the preparation's effect on men is entirely negligible. The idea that a man might conceive is, he said, pure fantasy."</p>
+
+    <p>"I see. Well, I know for certain I was never pregnant." Li Congqing said levelly. He had been examined by more than ten physicians. His pulse was normal. There was nothing at all in his belly. The whole affair had been a storm in a teacup.</p>
+
+    <p>But somewhere very deep and very quiet, Li Congqing found that he felt — a very small, almost imperceptible —</p>
+
+    <p>Regret.</p>
+
+    <p>If there really had been something there — even if he'd raged and fought and protested — in the end, he probably would have kept it. Their child, his and Song Yu's…</p>
+
+    <p>"Since that's all it was," he said, coming back to the surface, "why did you cause all this trouble?"</p>
+
+    <p>"Ahem." Song Yu cleared his throat. "You did mention that the days had been feeling dull."</p>
+
+    <p>Li Congqing stared at him, jaw slightly loose. Then, after a long moment: "You made the whole world believe I was pregnant with your heir — in order to make the days more interesting?"</p>
+
+    <p>"Ahem." Another careful throat-clearing, a slightly evasive sideways glance.</p>
+
+    <p>"I see." Li Congqing absorbed this. "And were you honestly considering giving me that medicine?"</p>
+
+    <p>"Honestly — yes." Song Yu said it with complete candour. "I want your child. If it were possible — I would want you to give me children."</p>
+
+    <p>"Regretting that I'm a rooster who can't lay eggs?"</p>
+
+    <p>"You know I have never regretted a single thing." Song Yu said simply.</p>
+
+    <p>"Why do we put ourselves through all this?" Li Congqing asked.</p>
+
+    <p>"Because I intend to make a commotion with you for the rest of my life."</p>
+
+    <p>"Hm. I wonder what these pills taste like."</p>
+
+    <p>And then, with no further deliberation, entirely out of idle curiosity, Li Congqing peeled the wax seal off one of the crimson pills, plucked it from the wrapping, and popped it into his mouth. Chewed twice. Swallowed. "Fishy. Tastes disgusting."</p>
+
+    <p>He turned his head.</p>
+
+    <p>The Emperor's eyes were gleaming.</p>
+
+    <p>Like a tiger who has been hungry for a very long time, and has finally spotted his dinner.</p>
+  </main>
+  <nav class="chapter-nav">
+    <a href="extra-006.html" class="prev">Extra Six</a>
+    <a href="index.html">Chapter List</a>
+    <span class="next disabled">End</span>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 黑白劍妖 (Heibai Jian Yao).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

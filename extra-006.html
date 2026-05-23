@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extra Six — Flowers Bloom on the Path — Canon Compliant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad; --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: var(--paper); color: var(--ink); font-family: 'Zilla Slab', Georgia, serif; font-size: 18px; line-height: 1.85; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 0; }
+    .topbar { border-bottom: 1px solid var(--border); padding: 1rem 2rem; background: var(--paper); position: sticky; top: 0; z-index: 10; }
+    .topbar-inner { max-width: var(--reading-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .topbar-home { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel { font-family: 'Zilla Slab', serif; font-size: 0.85rem; font-style: italic; color: var(--muted); text-align: center; flex: 1; }
+    .kofi-btn { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 0.35rem 0.85rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; flex-shrink: 0; }
+    .kofi-btn:hover { background: var(--rust-light); }
+    .chapter-header { max-width: var(--reading-width); margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
+    .novel-name { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.75rem; font-weight: 700; color: var(--ink); line-height: 1.2; }
+    .chapter-sublabel { font-family: 'Zilla Slab', serif; font-size: 1rem; font-style: italic; color: var(--muted); margin-top: 0.5rem; }
+    .chapter-date { font-size: 0.8rem; font-style: italic; color: var(--muted); margin-top: 0.75rem; }
+    .chapter-divider { margin: 2rem auto; width: 3rem; height: 1px; background: var(--border); }
+    .chapter-body { max-width: var(--reading-width); margin: 0 auto; padding: 0 2rem 6rem; position: relative; z-index: 1; }
+    .chapter-body p { margin-bottom: 1.4em; }
+    .chapter-body p:last-child { margin-bottom: 0; }
+    .scene-break { text-align: center; margin: 2.5em 0; color: var(--gold); letter-spacing: 0.3em; font-size: 0.85rem; user-select: none; }
+    .chapter-body em { font-style: italic; }
+    .chapter-nav { border-top: 1px solid var(--border); max-width: var(--reading-width); margin: 0 auto; padding: 2rem 2rem 4rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+    .chapter-nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .chapter-nav a:hover { color: var(--rust); }
+    .chapter-nav .prev::before { content: '← '; }
+    .chapter-nav .next::after { content: ' →'; }
+    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) { body { font-size: 16px; } .chapter-label { font-size: 1.4rem; } .topbar-novel { display: none; } }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="topbar-home">Canon Compliant</a>
+      <span class="topbar-novel">Flowers Bloom on the Path</span>
+      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+    </div>
+  </nav>
+  <header class="chapter-header">
+    <p class="novel-name">Flowers Bloom on the Path · 陌上花開</p>
+    <h1 class="chapter-label">Extra Six</h1>
+    <p class="chapter-sublabel">Spring Fills the Palace: Part Four</p>
+    <p class="chapter-date">Nov 2026</p>
+    <div class="chapter-divider"></div>
+  </header>
+  <main class="chapter-body">
+    <p>The Emperor had apparently anticipated Li Congqing's return. Palace attendants were waiting at the gate.</p>
+
+    <p>He was led, not to Tíng Xià Tower, but to Ziyun Palace.</p>
+
+    <p>He had been there before; it just made him feel constrained. The atmosphere of the inner sanctum, the weight of all that implied history — it sat on him uncomfortably.</p>
+
+    <p>Outside the doors of Ziyun Palace, his nerve failed him. He nearly turned and fled.</p>
+
+    <p>He had actually turned and was in the process of fleeing when Song Yu's voice came from behind him.</p>
+
+    <p>"Congqing — you've come all this way. Where are you going?"</p>
+
+    <p>Li Congqing went rigid. He turned around with great caution, as if expecting a blow.</p>
+
+    <p>Song Yu was standing at the top of the steps, dressed for the night, looking down at him from the height of a few steps that somehow managed to feel like several miles. He wore an expression of complete equanimity.</p>
+
+    <p>"It's late. Come inside. We can talk in here."</p>
+
+    <p>"Mm." Li Congqing went, one step at a time, up the stairs toward the man waiting for him.</p>
+
+    <p>Inside Ziyun Palace he saw, on a side table, a tray bearing the consorts' sleeping-arrangement tablets. This was palace protocol — every night the Emperor returned to his chambers, the tablets were presented for him to choose a companion. Since the Emperor had devoted himself to the Vice Minister exclusively, presenting the tablets was pure formality; but there they were, and Li Congqing caught sight of them, and felt as if he had looked directly at the sun.</p>
+
+    <p>He glanced away. His mouth bent into a brief, private curve of self-mockery. He felt simultaneously sour, bitter, ashamed, and something else he couldn't name — something like the question: what am I, then?</p>
+
+    <p>"Have you had dinner?" Song Yu asked.</p>
+
+    <p>"I ate. But I… vomited it up."</p>
+
+    <p>"You're unwell again? We'll summon the physician —"</p>
+
+    <p>"What use is calling him!" Li Congqing's voice rose sharply before he could stop it. The cloud of suspicion broke, and it all poured out at once: "Have you been deceiving me?"</p>
+
+    <p>Song Yu met his eyes with perfect composure. "What do you think I've deceived you about?"</p>
+
+    <p>"Bring me the Turfan tribute list."</p>
+
+    <p>The attendant eunuch blinked, then nodded to Song Yu's quiet approval, and hurried out.</p>
+
+    <p>Li Congqing stared at Song Yu — eyes that were ordinarily half-closed with laziness now wide open and bright with accusation, trying to bore through the impenetrable calm.</p>
+
+    <p>The truth was still uncertain, but the feeling of having been deceived was already there, solid and irritating.</p>
+
+    <p>"You've heard the rumours, presumably," Song Yu said.</p>
+
+    <p>"I am almost certainly the last person in the world who has." Li Congqing fumed.</p>
+
+    <p>"Hollow street gossip. Don't agitate yourself."</p>
+
+    <p>Magnanimous and untroubled. The picture of serene imperial wisdom. Li Congqing thought darkly: or the picture of a man who knows exactly what he did. "Still waters run deep, as they say. I worry the person who caused all this has something to answer for."</p>
+
+    <p>"Oh? You think it might be true?"</p>
+
+    <p>"Hmm-hmm. What do you think?"</p>
+
+    <p>Song Yu watched him with calm, private amusement — that narrowed glare, those wide, outraged eyes, the overall impression of a person who was furious in an entirely endearing way —</p>
+
+    <p>The tribute list arrived.</p>
+
+    <p>Li Congqing scanned it rapidly and found the Blood Phoenix Pills and Pregnancy Elixirs immediately. The properties and instructions were perfectly explicit. His hand trembled slightly. He looked up. "Did you give this to me?"</p>
+
+    <p>"What thing is that?" The Emperor performed ignorance.</p>
+
+    <p>Asking when he knew the answer perfectly well!</p>
+
+    <p>"The Blood Phoenix Pill and the Pregnancy Elixir," Li Congqing said, his voice tightening. "Was that what was in the flower-broth and the bird's nest soup?"</p>
+
+    <p>Song Yu regarded him for a long, quiet moment, then said, very softly: "Congqing — do you truly not wish to carry my child?"</p>
+
+    <p>He had not denied it. The ambiguous non-answer, in this context, was essentially a confession.</p>
+
+    <p>"Did you actually —" Li Congqing's expression transformed.</p>
+
+    <p>Song Yu said nothing. Only looked at him.</p>
+
+    <p>"If you wanted children," Li Congqing said, voice rising with fury, "you have an entire inner court of women who would be thrilled to give them to you!"</p>
+
+    <p>"And you?" Song Yu asked.</p>
+
+    <p>"What about me?"</p>
+
+    <p>"Do you wish to give me a child?"</p>
+
+    <p>"Of course not!" Li Congqing's voice reached a pitch it had never reached in a decade of imperial audience. "I AM A MAN!"</p>
+
+    <p>Song Yu's eyes went very deep. "Congqing — are you truly certain you would not want to bear my child?"</p>
+
+    <p>"I —"</p>
+
+    <p>He stopped.</p>
+
+    <p>He had never seen this expression on Song Yu's face before — something feral, something hungry, the look of a beast that is already certain of its prey but wants the confirmation of surrender. Li Congqing felt the cold curl of genuine fear — he knew this man better than anyone, knew that beneath the perfect benevolence there was something ancient and sharp, usually contained, and not often shown to him. But this —</p>
+
+    <p>"If I had made you take those medicines," Song Yu said, "if I had given you my child to carry — what would you do?"</p>
+
+    <p>"WHY?" Li Congqing's voice was raw with incomprehension. "You have all those women who can give you children — why would you need me to —"</p>
+
+    <p>"Because I love you. I want only the child you would give me." Song Yu said it very quietly, very simply. "I want a child with both our blood. If the inner court troubles you, I will scatter it. If there are mouths that say vile things, I will stop them — however I have to. I would become a tyrant for you."</p>
+
+    <p>Song Yu's face was all tenderness. His words were the most terrifying thing Li Congqing had ever heard.</p>
+
+    <p>"Are you deranged?"</p>
+
+    <p>"You remember those autumn hunts, years ago — the nights we met on the grassland — I had already lost my mind over you, back then."</p>
+
+    <p>Li Congqing stared at him, at that gentle smile that had nothing gentle in the eyes behind it, and felt the cold go all the way through him. On instinct he stepped back, wanting to run.</p>
+
+    <p>Song Yu caught the intention and moved first — one arm around him from behind, trapping him with absolute efficiency.</p>
+
+    <p>"Li Congqing — don't try to run from me. You cannot run." Song Yu bent his head and spoke low beside his ear, the danger in his voice a living thing. "You don't know how often I think about simply eating you — swallowing you whole, bit by bit, until you are part of me, inside me, completely and entirely mine."</p>
+
+    <p>"Song Yu —" Li Congqing, for the first time in all his years of knowing this man, felt a deep, animal flash of terror. "Don't —"</p>
+
+    <p>It hit him, fully, in that moment: this love was too vast, too absolute. The weight of it was nearly enough to crush him. He had always known, in the abstract, that Song Yu felt strongly; he had not known it was like this. That it was this kind of love — the kind that would swallow the world to get what it wanted.</p>
+
+    <p>"Frightened?"</p>
+
+    <p>"…Yes." Li Congqing said honestly. He was, in fact, feeling something quite close to panic.</p>
+
+    <p>"Don't be afraid." The Emperor's laugh was warm but threaded with something faintly unhinged, faintly teasing. "I'm not actually going to eat you. If I ate you, how would I ever —"</p>
+
+    <p>The second half of the sentence, which involved a verb and the word "again," was entirely unsuitable for print.</p>
+
+    <p>"YOUR MAJESTY." Li Congqing snapped back in an instant, turning on him. "Are you JOKING with me right now?"</p>
+
+    <p>"No." Song Yu's eyes were dark and unfathomable, like water with no bottom. "I am always perfectly serious about you. Except that one time your brother offered to sell your — assets."</p>
+
+    <p>"I can't believe you still remember that." Li Congqing gave a broken laugh. In hindsight, it really had been prophetic. It hadn't just been his posterior. He'd sold himself entirely — body, soul, and the entire rest of his life — to this man.</p>
+
+    <p>"Congqing — what am I supposed to do with you?"</p>
+
+    <p>"Will you actually listen to me if I tell you?"</p>
+
+    <p>"If it's within my power."</p>
+
+    <p>"I don't want to… have a baby…" Li Congqing said, very plaintively, blinking up at him with the eyes of a man who had survived a decade of this relationship on his natural talent for strategic capitulation.</p>
+
+    <p>Song Yu looked at him, then smiled, and patted his cheek. "We will discuss it at length," he said.</p>
+
+    <p>Then in one swift motion he hoisted Li Congqing over his shoulder.</p>
+
+    <p>"What are you doing?!" Li Congqing yelped, flailing without any productive result, and was deposited on the centre of the dragon bed. The mattress was extremely thick and extremely soft; the impact was more disorienting than painful, leaving him dizzy and blinking at the canopy.</p>
+
+    <p>Song Yu did not lunge at him with the face of a man who had waited long enough. He stood at the bedside and looked down at him with a smile, calm, almost amused.</p>
+
+    <p>The expression was precisely described by a line that would become famous in a later century of martial arts cinema:</p>
+
+    <p>He always seemed to be smiling at you — smiling in a way that made your blood run cold.</p>
+
+    <p>Li Congqing felt a bucket of ice-water pour from his scalp to his heels. He scrambled backward, genuinely alarmed. "Your — Your Majesty — let's be reasonable about this —"</p>
+
+    <p>"What shall we reason about? Whether you'd like to carry my child?"</p>
+
+    <p>"I — I don't want to —"</p>
+
+    <p>"It's perfectly all right if you don't want to yet. I have methods to make you cry and beg to conceive. So, Congqing — do you wish to carry my child?"</p>
+
+    <p>"YES. Yes I do. As many as you want. As many as you say."</p>
+
+    <p>Backbone? He had never had much of one.</p>
+
+    <p>Li Congqing was on the verge of weeping at his own spinelessness. Two half-hearted threats from the Emperor, and he'd already dissolved and agreed to everything. A contemptible coward.</p>
+
+    <p>Well, he would manage the immediate situation first and figure out the rest later. Facing a Song Yu who had apparently abandoned all remaining inhibitions, the risk of dying in this bed was quite real, and he wasn't ready to die.</p>
+
+    <p>Though he lacked backbone, he had been known to turn mule-stubborn when pushed past a certain point. He simply wasn't there yet.</p>
+
+    <p>"Good," Song Yu said, with a smile of peculiar contentment. Then: "Bring it in."</p>
+
+    <p>Bring what in?</p>
+
+    <p>Eunuch He-Gui appeared bearing a small tray on which sat a bowl of bird's nest in sweet milk. Li Congqing's expression crumpled as the implications landed. He had drunk that soup twice already. Three bowls' worth of medicine, plus the more direct delivery method that followed each bowl — how could he not be pregnant?</p>
+
+    <p>"This is coercion," he said, bereft. "This is extortion. Pregnancy by imperial ambush."</p>
+
+    <p>"There, now. Drink up. Made specially for you." Song Yu lifted the bowl himself and held it toward him with every appearance of tender solicitude.</p>
+
+    <p>Made specially for him. Ha-ha. HA.</p>
+
+    <p>Something snapped. Li Congqing's entire chest went red with fury. For one burning moment, despite everything, despite knowing perfectly well what the consequences of defiance might be, he made a grab for the bowl — in the spirit of the immortal gesture of throwing it to the floor.</p>
+
+    <p>Song Yu moved the bowl out of range with reflex speed. Not a single drop spilled.</p>
+
+    <p>Li Congqing grabbed empty air. He turned back to Song Yu, trembling with righteous fury, biting his lower lip.</p>
+
+    <p>This — and unfortunately for him — was the expression that activated something specific in Song Yu, something that really was not supposed to be activated right now.</p>
+
+    <p>"Quite naughty," Song Yu murmured, his voice going rough at the edges, his eyes lit with a quality that suggested the evening's character was about to shift considerably.</p>
+
+    <p>He gripped Li Congqing's face in one hand, took a mouthful of the soup himself, and delivered it the direct way — holding him still and feeding him mouthful by mouthful until the bowl was finished.</p>
+
+    <p>He then tossed the bowl. Eunuch He-Gui, outside the bed-curtain, caught it with the reflexes of a trained guardian, preventing any damage to the porcelain. Remarkable man.</p>
+
+    <p>Li Congqing had no time to admire his dexterity, because Song Yu had already begun removing his clothing with the practised efficiency of long familiarity.</p>
+
+    <p>"Congqing. Let's make a child."</p>
+
+    <p>"Oh, get on with it." Li Congqing snapped, breathing hard — angry or anticipatory, he could no longer tell — ceasing his struggle and lying still. He had decided: he would be a dead fish tonight. Silent, inert, unmoved. His protest would be the protest of absolute non-participation.</p>
+
+    <p>He closed his eyes, spread his arms, and resigned himself.</p>
+
+    <p>Song Yu knew him too well to fall for this. He went directly for the most unfair location available, and did something precise and targeted, and Li Congqing's entire body jolted despite himself.</p>
+
+    <p>He lay still again. The silence between them crackled.</p>
+
+    <p>Song Yu, in no hurry at all, worked with patience and precision, and eventually Li Congqing's body made its own declaration, independent of his stated preferences. At which point Song Yu produced a ribbon.</p>
+
+    <p>"What are you tying that there for!" Li Congqing burst upright in alarm, reaching to intervene.</p>
+
+    <p>"To prevent too rapid expenditure of vital energy. Bad for you."</p>
+
+    <p>Li Congqing's attempts to untie himself were not successful. Neither were his attempts to have his wrists and ankles liberated from the silken ties that then appeared, with alarming speed, trapping him in a position that was simultaneously uncomfortable and deeply, deeply humiliating.</p>
+
+    <p>"I've always wanted to —" Song Yu stepped back and observed his handiwork with unabashed appreciation — "— to tie you like this and have you properly. Tonight I have my wish."</p>
+
+    <p>Li Congqing gave up on his dignity, which had long since fled, and thought only:</p>
+
+    <p>Disaster.</p>
+
+    <p>Outside his audience, Song Yu was always the image of measured composure. In private, it had long been established, the man was possessed of certain proclivities he exercised exclusively in this direction — namely, a strong inclination to take Li Congqing to the precise edge of endurance.</p>
+
+    <p>In this respect, the Virtuous Emperor was a man who harboured a hidden ferocity that manifested only when applied to the Vice Minister of Rites, and which only the Vice Minister of Rites was specifically designed to provoke to its fullest expression.</p>
+
+    <p>By the time the night was half over, Li Congqing's last coherent thought was approximately:</p>
+
+    <p><em>— I do not want to be actually loved to death. But it is beginning to seem like a real possibility.</em></p>
+
+    <p>Ahem. The Vice Minister of Rites was not, technically, loved to death. He only fainted twice and came back. But the experience of that night was sufficiently thorough that every accidental memory of it, for years thereafter, triggered an involuntary full-body cringe and the thought:</p>
+
+    <p>NEVER AGAIN.</p>
+
+    <p><em>(It happened again. Many times.)</em></p>
+
+    <p><em>(The Vice Minister of Rites resigned himself, eventually, to fate.)</em></p>
+  </main>
+  <nav class="chapter-nav">
+    <a href="extra-005.html" class="prev">Extra Five</a>
+    <a href="index.html">Chapter List</a>
+    <a href="extra-007.html" class="next">Extra Seven</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 黑白劍妖 (Heibai Jian Yao).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

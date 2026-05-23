@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extra Two — Flowers Bloom on the Path — Canon Compliant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad; --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: var(--paper); color: var(--ink); font-family: 'Zilla Slab', Georgia, serif; font-size: 18px; line-height: 1.85; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 0; }
+    .topbar { border-bottom: 1px solid var(--border); padding: 1rem 2rem; background: var(--paper); position: sticky; top: 0; z-index: 10; }
+    .topbar-inner { max-width: var(--reading-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .topbar-home { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel { font-family: 'Zilla Slab', serif; font-size: 0.85rem; font-style: italic; color: var(--muted); text-align: center; flex: 1; }
+    .kofi-btn { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 0.35rem 0.85rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; flex-shrink: 0; }
+    .kofi-btn:hover { background: var(--rust-light); }
+    .chapter-header { max-width: var(--reading-width); margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
+    .novel-name { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.75rem; font-weight: 700; color: var(--ink); line-height: 1.2; }
+    .chapter-sublabel { font-family: 'Zilla Slab', serif; font-size: 1rem; font-style: italic; color: var(--muted); margin-top: 0.5rem; }
+    .chapter-date { font-size: 0.8rem; font-style: italic; color: var(--muted); margin-top: 0.75rem; }
+    .chapter-divider { margin: 2rem auto; width: 3rem; height: 1px; background: var(--border); }
+    .chapter-body { max-width: var(--reading-width); margin: 0 auto; padding: 0 2rem 6rem; position: relative; z-index: 1; }
+    .chapter-body p { margin-bottom: 1.4em; }
+    .chapter-body p:last-child { margin-bottom: 0; }
+    .scene-break { text-align: center; margin: 2.5em 0; color: var(--gold); letter-spacing: 0.3em; font-size: 0.85rem; user-select: none; }
+    .chapter-body em { font-style: italic; }
+    .chapter-nav { border-top: 1px solid var(--border); max-width: var(--reading-width); margin: 0 auto; padding: 2rem 2rem 4rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+    .chapter-nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .chapter-nav a:hover { color: var(--rust); }
+    .chapter-nav .prev::before { content: '← '; }
+    .chapter-nav .next::after { content: ' →'; }
+    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) { body { font-size: 16px; } .chapter-label { font-size: 1.4rem; } .topbar-novel { display: none; } }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="topbar-home">Canon Compliant</a>
+      <span class="topbar-novel">Flowers Bloom on the Path</span>
+      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+    </div>
+  </nav>
+  <header class="chapter-header">
+    <p class="novel-name">Flowers Bloom on the Path · 陌上花開</p>
+    <h1 class="chapter-label">Extra Two</h1>
+    <p class="chapter-sublabel">Bonus Chapter: Absence Makes the Heart Grow Fonder</p>
+    <p class="chapter-date">Sep 2026</p>
+    <div class="chapter-divider"></div>
+  </header>
+  <main class="chapter-body">
+    <p>Spring fills the palace, green as jade —</p>
+
+    <p>Five towers, twelve cities within cities,</p>
+
+    <p>A white jade heaven,</p>
+
+    <p>A world of coloured glass.</p>
+
+    <p>Serene on earth and joyful in the skies,</p>
+
+    <p>On the Cold Food night of the third month and the thirteenth day,</p>
+
+    <p>We drink the wine of long life together —</p>
+
+    <p>My lord, do not let your hair go white.</p>
+
+    <p><em>— Bodhisattva Barbarian (ci melody)</em></p>
+
+    <p>✦  ✦  ✦</p>
+
+    <p>When Li Congqing woke, the sky outside was black as ink, and Song Yu was no longer in the Imperial Study.</p>
+
+    <p>"Lord Li, you've woken," Eunuch Zhang said, gliding forward.</p>
+
+    <p>"Where is the Emperor?"</p>
+
+    <p>"His Majesty is at Taiping Hall hosting the farewell banquet for the Turfan King. His Majesty has sent word: please wait for him in Ziyun Palace."</p>
+
+    <p>Li Congqing's eyebrows drew together. "I don't want to go to Ziyun Palace."</p>
+
+    <p>Ziyun Palace was the Emperor's private bedchamber — his innermost sanctum — and Li Congqing had never set foot in it. Their assignations had always taken place at Tíng Xià Tower, the secluded pleasure pavilion. Song Yu had tried to invite him to Ziyun Palace before, but Li Congqing had refused.</p>
+
+    <p>I have no desire to sleep in a place where you've slept with other women. He'd said it directly, without softening, because he was not the type for polite evasions. He was not about to play the docile junior wife, nor was he inclined to weep and smash crockery — both options sounded exhausting. He freely acknowledged that he was not entirely free of jealousy; his stomach was not so capacious as to float a boat. But he was too lazy to wage a campaign of jealousy. He understood the Emperor's constraints — the inner court was bound up with politics and dynastic succession, not a matter to be taken lightly. He had never asked for exclusive devotion. He had only asked not to become one of the harem himself.</p>
+
+    <p>"Please do not make things difficult for this servant, my lord," Eunuch Zhang said gently, and added: "His Majesty has not summoned any consort to Ziyun Palace for many years now. You are the only one."</p>
+
+    <p>Their relationship was effectively public knowledge by now. There was no longer any need for concealment. And Song Yu hadn't called any concubines to his private chambers in years. There was truly no longer any reason to refuse. Li Congqing allowed Eunuch Zhang to escort him, with some reluctance, to Ziyun Palace.</p>
+
+    <p>Inside, a lavish supper had been laid out. He ate and drank his fill, then had a long and luxuriant bath in the Emperor's private pool, washing away the dust and exhaustion of his journey. By the time he was dry and dressed, he felt thoroughly renewed.</p>
+
+    <p>The Emperor had not yet returned. Seeking entertainment, Li Congqing was approached by a small eunuch who offered, with touching eagerness: "Lord Li, shall I sing some ditties for you? His Majesty once said my singing was very good."</p>
+
+    <p>"Oh? Let's hear one then." Li Congqing was charmed. Odd that Song Yu had developed a taste for folk songs. "Sing me the ones you sang for the Emperor."</p>
+
+    <p>"Yes, my lord. Please listen." The little eunuch cleared his throat with great ceremony and began: "Lord and lover together month after month, seeking pleasure, seeking joy. Lord and lover joined night after night — do not waste the fine hour. Lord and lover, old together young — let no one else mock the pair. Never mind the twelve sororities — don't let my darling suffer. I only wish for a hundred kinds of tender care, and to sing the peony song with you until the end of life."</p>
+
+    <p>Li Congqing spat out a full mouthful of tea directly onto the small eunuch's face.</p>
+
+    <p>"Was my singing bad, my lord?" The small eunuch was on the verge of tears.</p>
+
+    <p>"No, no — very good, very good." Li Congqing's face performed an interesting series of expressions before settling. "Are there more? Sing a few more."</p>
+
+    <p>The small eunuch rallied magnificently, wiped his face with his sleeve, and launched into a fresh repertoire — one song after another, every one of them more outrageous and imaginative than the last.</p>
+
+    <p>Fascinating. Absolutely fascinating. Li Congqing found himself convulsing with laughter — forward, backward, almost falling off his seat. The sheer fertile imagination of whoever had written these. Ha ha ha —</p>
+
+    <p>Song Yu had just stepped through the gates of Ziyun Palace when he heard, from some distance away, the sound of singing accompanied by Li Congqing's laughter. He needed no explanation. He smiled to himself, waved away the servant about to announce his arrival, and walked in directly.</p>
+
+    <p>Li Congqing was sitting with his back to the door and hadn't noticed. The small eunuch stopped abruptly and prostrated himself.</p>
+
+    <p>"I rarely hear you laugh like that," Song Yu said.</p>
+
+    <p>Li Congqing turned his head, smiling — his eyes curved into crescents, entirely charming. "You're back. Were the Turfan melons sweet?"</p>
+
+    <p>"Not as sweet as you." Song Yu stepped forward and drew him into his arms, pressing a kiss to his cheek and his lips, then pressing his nose into the curve of Li Congqing's neck. "You smell wonderful."</p>
+
+    <p>Li Congqing's face warmed. After so long apart from his lover, his body responded before his mind could form a contrary opinion. He thought, with mild self-mockery: sure enough, warmth and comfort bring that particular appetite right back.</p>
+
+    <p>The attendants, reading the room with impeccable professionalism, filed out and closed the palace doors.</p>
+
+    <p>"I missed you, Congqing."</p>
+
+    <p>"I missed you too."</p>
+
+    <p>Before another word could be said, four lips met — a deep, hungry kiss, tongues chasing and entwining, heartbeats suddenly disordered in the way of people too long without rain who find it falling all at once.</p>
+
+    <p>Song Yu could wait no longer. He stripped off Li Congqing's loosely-worn house robe and pulled him, three steps at a time, toward the dragon bed.</p>
+
+    <p>"Not so quickly," Li Congqing caught his wrist. Perhaps because it had been so long, he felt an unexpected shyness, almost as if it were the first time.</p>
+
+    <p>"I cannot wait." Song Yu pressed him back onto the bed with efficient urgency, and in short order Li Congqing was stripped to nothing. Song Yu's hands moved everywhere at once, impatient as a man who has been holding back for months. "Congqing — Congqing — every day you were gone felt like a year."</p>
+
+    <p>Song Yu, composed and measured in all public matters, was a thoroughly different person in private — all that suppressed longing pouring out at once. There is a saying: the more correct the outward manner, the wilder what lies beneath. In his case, the description was accurate. You could sum it up in two words: deeply repressed.</p>
+
+    <p>What followed was — literary convention requires us to draw the veil here — an extended reunion of considerable heat, which Li Congqing ultimately survived only by the intervention of exhaustion, and which left him in a state that strongly suggested the skeleton had made a voluntary exit from the body.</p>
+
+    <p>Afterwards Song Yu filled his mouth with water, one small sip at a time, feeding him to drink. Then he carried him in his arms to the bath pool, settled them both in the warm water, and held Li Congqing in the shallows as he gently, patiently undid the day's accumulated knots.</p>
+
+    <p>"A pity about the dragon seed," Song Yu murmured, somewhat ruefully, while doing so. "If you could carry children, I wonder how many you'd have given me by now."</p>
+
+    <p>"If you want children, go find one of your consorts. They'd be delighted."</p>
+
+    <p>"I haven't visited the inner court in many years."</p>
+
+    <p>"That isn't good. You really ought to go more often. Alternate days — odd days the inner court, even days summon me."</p>
+
+    <p>Song Yu laughed low, privately. "Since when are you managing my inner court?"</p>
+
+    <p>A silence followed. Then Li Congqing said, in a quiet voice: "Your Majesty understands me. I don't want to manage your inner court at all."</p>
+
+    <p>Song Yu heard the shift to formal address. He exhaled, and drew him a little closer. "I would never say: what a pity you weren't born a woman, otherwise I would make you Empress. You are a man, and I don't regret a single thing about that."</p>
+
+    <p>Li Congqing's heart shifted, moved. He glanced back, a flicker of wry mischief in his eyes. "You like men, then? Should I expect additional male favourites in future?"</p>
+
+    <p>"You alone occupy my entire mind." Song Yu smiled, and kissed those spring-flower lips again — and again, and again. However many times he kissed them, they were always sweet, honey soaking through to somewhere in his chest, brewing into wine.</p>
+
+    <p>The kiss deepened. Hands moved.</p>
+
+    <p>No woman's delicacy, no woman's softness, no woman's elaborate loveliness — not even a particularly striking face. This entirely ordinary man, unexceptional by every conventional measure — and yet he had lodged himself so deep in the heart of the Son of Heaven, the most powerful man under heaven, that there was no dislodging him. Song Yu was, without question, quite thoroughly besotted.</p>
+
+    <p>Desire reignited. The night continued, quite thoroughly, into its third chapter.</p>
+
+    <p>The following morning, Li Congqing's only thought, as he drifted into and out of consciousness for what felt like the forty-seventh time, was:</p>
+
+    <p>I am not being loved. I am being processed.</p>
+
+    <p>Ahem — the Vice Minister of Rites was not, in the end, processed entirely to death. He merely fainted twice. But what he experienced on the altar of reunion was thorough enough that every subsequent accidental recollection caused an involuntary full-body shudder and the internal refrain of:</p>
+
+    <p>Never again. Never again. Never again.</p>
+
+    <p>From that time forward, the Emperor and the Vice Minister of Rites lived happily — and in a certain highly specific sense, very happily — ever after. (Li Congqing: Ha.)</p>
+  </main>
+  <nav class="chapter-nav">
+    <a href="extra-001.html" class="prev">Extra One</a>
+    <a href="index.html">Chapter List</a>
+    <a href="extra-003.html" class="next">Extra Three</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 黑白劍妖 (Heibai Jian Yao).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>
