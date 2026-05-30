@@ -1,130 +1,308 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Chapter 62 – Blockhead — Canon Compliant</title>
-<link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 62 – Blockhead — A Certain Someone — Canon Compliant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad; --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: var(--paper); color: var(--ink); font-family: 'Zilla Slab', Georgia, serif; font-size: 18px; line-height: 1.85; }
+    body::before { content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; }
+    .topbar { border-bottom: 1px solid var(--border); padding: 1rem 2rem; background: var(--paper); position: sticky; top: 0; z-index: 10; }
+    .topbar-inner { max-width: var(--reading-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .topbar-home { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel { font-family: 'Zilla Slab', serif; font-size: 0.85rem; font-style: italic; color: var(--muted); text-align: center; flex: 1; }
+    .kofi-btn { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 0.35rem 0.85rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; flex-shrink: 0; }
+    .kofi-btn:hover { background: var(--rust-light); }
+    .chapter-header { max-width: var(--reading-width); margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
+    .novel-name { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 2rem; font-weight: 700; color: var(--ink); line-height: 1.1; }
+    .chapter-sublabel { font-size: 1.1rem; font-style: italic; color: var(--muted); margin-top: 0.4rem; font-family: 'Zilla Slab', serif; }
+    .chapter-date { font-size: 0.8rem; font-style: italic; color: var(--muted); margin-top: 0.75rem; }
+    .chapter-readtime { font-size: 0.75rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    .chapter-divider { margin: 2rem auto; width: 3rem; height: 1px; background: var(--border); }
+    .chapter-body { max-width: var(--reading-width); margin: 0 auto; padding: 0 2rem 4rem; position: relative; z-index: 1; }
+    .chapter-body p { margin-bottom: 1.4em; }
+    .chapter-body p:last-child { margin-bottom: 0; }
+    .scene-break { text-align: center; margin: 2.5em 0; color: var(--gold); letter-spacing: 0.3em; font-size: 0.85rem; user-select: none; }
+    .chapter-body em { font-style: italic; }
+    .chapter-body strong { font-weight: bold; }
+    .kofi-note { max-width: var(--reading-width); margin: 0 auto; padding: 2rem 2rem 0; position: relative; z-index: 1; }
+    .kofi-note p { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 1.5rem; line-height: 1.7; }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .chapter-nav { border-top: 1px solid var(--border); max-width: var(--reading-width); margin: 2rem auto 0; padding: 2rem 2rem 4rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+    .chapter-nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .chapter-nav a:hover { color: var(--rust); }
+    .chapter-nav .prev::before { content: '← '; }
+    .chapter-nav .next::after { content: ' →'; }
+    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) { body { font-size: 16px; } .chapter-label { font-size: 1.5rem; } .topbar-novel { display: none; } }
+</style>
 </head>
 <body>
-<div class="wrap">
-<header class="site"><a href="index.html">Canon Compliant</a></header>
-<p class="eyebrow">Chapter 62</p>
-<h1 class="title">Blockhead</h1>
-<p class="byline">A Certain Someone (某某) by Musuli — fan translation</p>
-<p>Sheng Wang felt, all at once, a little wretched.</p>
-<p>Like someone had pinched the edge of his heart and given it a squeeze, a wave of aching softness in an instant.</p>
-<p>Faced with a Jiang Tian like this, he simply couldn't get the word "no" out. He suddenly found himself a little laughable—all those days of bustling busyness, and in the end one sentence from his ge had knocked him right back to his original shape. He wanted to say you've really got some nerve, but he couldn't get his mouth open at all.</p>
-<p>For a long stretch of time, he only gripped that notebook tightly—didn't speak, didn't look up, didn't even move. Not until that aching softness seeped down through his blood and stopped hurting so much did he blink his eyes rapidly a few times.</p>
-<p>"I can," he said in a low voice, his throat still coming out hoarse. He pressed his lips and cleared it, then lifted his head and waggled the notebook. "If I can't test my way back even with this, then I might as well give up entirely."</p>
-<p>Jiang Tian said nothing.</p>
-<p>His eyes were very good-looking, the lids thin, the creases at the outer corners not wide or long but tilting slightly upward. When his gaze swept over from those outer corners it was always cold and proud, as if no one merited his attention. But when he looked over straight on like this, his eyes lowered slightly, a few stars of not-very-bright light reflected in them—then you were standing inside his eyes.</p>
-<p>Sheng Wang stood inside his eyes for a long while before Jiang Tian nodded once and said, "Good." And then the edge all over him slowly eased, as if he'd finally let out a breath.</p>
-<p>In those few seconds, Sheng Wang even had the illusion of a tacit understanding between him and his ge. The illusion bred an impulse in him—he wanted to say, Ge, can I hug you? But just as he was about to open his mouth, the lights-out bell rang.</p>
-<p>He startled, coming back to himself.</p>
-<p>Outside the balcony drifted a faint, barely-there scent of osmanthus. At late-November temperatures the flower clusters had long since fallen, scattered and gone, and who knew where a stray speck or two still hid, stubbornly giving off an almost imperceptible fragrance. That little impulse of Sheng Wang's slowly eased away in the lingering scent.</p>
-<p>He gripped the notebook and straightened up, saying to Jiang Tian, "Going in?"</p>
-<p>"Mm. Temperature's dropped." Jiang Tian glanced past the railing, turned sideways to pull open the balcony door, and gestured for Sheng Wang to go ahead.</p>
-<p>His fingers had been gripping too tightly just now, and loosening abruptly left them numb and aching. Sheng Wang flexed his joints as he walked into the dorm, and as he stepped over the low balcony threshold, someone gave the back of his head a light pat.</p>
-<p>Whether it was meant to soothe him or something else, he didn't know.</p>
-<p>Sheng Wang froze and whipped his head around, but Jiang Tian had already gone inside. He walked straight past the long desk, took clothes and a towel from the wardrobe, and said, "I'm taking a shower."</p>
-<p>Shi Yu lay on his bed with his legs crossed, sending messages; Qiu Wenbing had clipped his charging desk lamp onto the bed rail and reminded them, "You'd better hurry, great one, the patrol teacher's coming soon."</p>
-<p>"I know," Jiang Tian said, and went into the bathroom.</p>
-<p>"Sheng-ge, what are you standing here for?" Qiu Wenbing climbed down from his bunk to get a book; with Sheng Wang planted there by the balcony door, the space felt a bit cramped.</p>
-<p>"Hm?" Sheng Wang scratched at the hair on the back of his head. "Oh, nothing. Just mulling something over."</p>
-<p>Jiang Tian finished quickly and came out, and Sheng Wang took his shift, clothes and towel in hand. The bathroom was thick with steam, and the moment the hot water sluiced down from the showerhead, he suddenly understood. Or rather, he'd already understood the instant he told Jiang Tian "I can test my way back."</p>
-<p>He'd just fallen for someone, that was all—what was the big deal? A human lifespan was eighty, ninety years, and he was still at the very beginning. The future ahead was so long, so far it stretched clean out of sight; he'd merely fallen for Jiang Tian during this stretch of it, no telling how long it would last. He hadn't planned to say anything, and he understood there couldn't be any kind of outcome.</p>
-<p>The future was a straight line, and he'd just gone a little crooked at this one node; sooner or later he'd curve back. Was that so serious?</p>
-<p>Not in the slightest.</p>
-<p>The hot water finally ran out that day, the stream over his body quickly turning cool. Sheng Wang slapped a hand against the faucet and grabbed his towel to dry his hair.</p>
-<p>He sneezed in the dissipating steam and thought: to hell with cooling down, I'm going back to Class A.</p>
-<p>Sixteen, seventeen—it was drink today the wine you have today.</p>
-<p>Other people gawked at the sights in passing; what did it matter to anyone if he gawked at his ge a few extra times? It wasn't going to cost him a pound of flesh. Besides, his ge was a blockhead. What did he have to be afraid of?</p>
-<hr class="sep"/>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="topbar-home">Canon Compliant</a>
+      <span class="topbar-novel">A Certain Someone</span>
+      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+    </div>
+  </nav>
+  <header class="chapter-header">
+    <p class="novel-name">A Certain Someone · 某某</p>
+    <h1 class="chapter-label">Chapter 62</h1>
+    <p class="chapter-sublabel">Blockhead</p>
+    <p class="chapter-date">Jun 2026</p>
+    <p class="chapter-readtime">~15 min read</p>
+    <div class="chapter-divider"></div>
+  </header>
+  <main class="chapter-body">
+    <p>Sheng Wang felt, all at once, a little wretched.</p>
 
-<p>A teenager's moods could rival the weather of June—when the rainstorm poured down, black clouds smothered the sky, as if they'd never disperse in this lifetime. The rain would stop, and at once it was all suddenly bright and clear, the sun blazing.</p>
-<p>These past few days, Sheng Wang was the blazing sun itself.</p>
-<p>As Sheng Wang's roommate and new behind-the-desk neighbor, Shi Yu had the most direct read on it.</p>
-<p>A while back, Sheng Wang had seemed unwilling to deal with anyone, head down grinding through problem sets, finishing one after another. It had made Shi Yu so antsy that he'd picked up a few sets himself and quietly compared—only to find that no matter how he sped up, he couldn't catch the guy.</p>
-<p>These past few days, Sheng Wang had suddenly gone lazy again. Often the teacher would be up front explaining problems in painstaking detail while he sat below cutting up paper. The problem sets he'd worked through got picked over, a few pages snipped out, the rest dumped straight into the discard pile.</p>
-<p>He'd stopped doing problems, and didn't pay especially rapt attention in class either. More often he'd twirl his pen and look at a dark-brown leather-bound notebook, occasionally pulling out a pad to scratch out a couple of lines of rough work—and partway through the scratching he'd fish out his phone to chat with someone on WeChat.</p>
-<p>Shi Yu caught a glimpse once. Because he'd glanced too fast he hadn't made out the content, only seen the first two characters of the contact name: "Changbai." He was puzzled for a good while and couldn't recall anyone around named Changbai.</p>
-<p>It wasn't until Wednesday's evening study that he learned who this mysterious "Changbai" was.</p>
-<p>The boarding students' dedicated evening study began after the day students were dismissed. People from each class would come trickling into the assigned lecture hall, bags in hand, books in arms. There was a teacher on the podium responsible for answering questions and clearing up difficulties—usually teachers from the grade taking turns.</p>
-<p>The lecture hall was large enough that seating was free, not assigned by class. Sheng Wang, as ever, sat in his old spot in the very back row, with Shi Yu and Qiu Wenbing in front of him so they could leave together after study.</p>
-<p>When the warning bell rang, everyone had mostly relocated, and the room gradually quieted.</p>
-<p>The teacher on duty scanned around, judged that everyone had arrived, and got up to close the classroom door. But the moment he stood, a boy walked in with his bag over his shoulder. The teacher was taken aback and said reflexively, "What are you doing here?"</p>
-<p>The studying students all looked up, and then came an uproar.</p>
-<p>The newcomer was Jiang Tian, and the uproar was because everyone knew Class A had the privilege of not having to come to the lecture hall for study at all.</p>
-<p>Sheng Wang lifted his head amid the buzzing murmurs. Jiang Tian was talking with the duty teacher; in a gap in the conversation he raised his head, swept his gaze over the back rows, paused for a moment on Sheng Wang, then turned and said something low to the teacher. After that he came up the steps two at a time, unhurried, threading through a row of desks.</p>
-<p>The whole classroom's worth of geese—no, people—craned their necks to watch him come toward the back. Shi Yu, being closest, accidentally caught sight of Sheng Wang's phone.</p>
-<p>This guy's phone screen was wide open with no cover, just laid out flat on the desk as if he wasn't even afraid of being seen. On the screen was a WeChat chat, and at the very top of it was the other party's contact name. This time Shi Yu finally made out the full thing: <strong>Sacred Tree of Changbai Mountain.</strong></p>
-<p>This Sacred Tree of Changbai Mountain had sent a message half a minute ago, asking Sheng Wang: which row do you usually sit in for study?</p>
-<p>Sheng Wang had answered: last row.</p>
-<p>And then Jiang Tian had come. Who the Sacred Tree was went without saying. Shi Yu thought, I really cannot understand the nicknames between brothers—what on earth is this stuff.</p>
-<p>Jiang Tian was deaf to the attention. He sat down beside Sheng Wang, pulled a thick dark-blue leather-bound book from his bag, drew out a pen, and only then lifted his eyelids to ask the person beside him, "What are you spacing out for?"</p>
-<p>Sheng Wang opened his mouth and asked, puzzled, "Aren't you allowed to stay on the top floor to study?"</p>
-<p>Jiang Tian flipped the book open and gave an "Mm."</p>
-<p>"Then what'd you come down for?"</p>
-<p>Without raising his head, Jiang Tian said, "Sitting up there studying alone is too damn stupid."</p>
-<p>"Oh." Something shifted in Sheng Wang's heart, and he lowered his eyes and went back to his book. After a moment, he suddenly started laughing under his breath.</p>
-<p>Jiang Tian looked over with a frown, and Sheng Wang said, "I pictured it. It really is pretty damn stupid."</p>
-<p>"……"</p>
-<p>Jiang Tian ignored him for the rest of evening study.</p>
-<hr class="sep"/>
+    <p>Like someone had pinched the edge of his heart and given it a squeeze, a wave of aching softness in an instant.</p>
 
-<p>On Friday, Yang Jing called for them and handed over two forms, saying the intensive training started next week. She told them to fill out the forms and to prepare two two-inch photos each.</p>
-<p>"Photos again?" Jiang Tian said. "Didn't we hand some in before?"</p>
-<p>Yang Jing said, out of sorts, "They all got stuck up on the honor wall by that Xu fellow at the Political and Educational Office. You want me to go peel them off, or what?"</p>
-<p>Sheng Wang had been planning to just snap any old one at the print shop by the gate, when he heard Yang Jing say to him, "Find a good one, at least smile. If you test well your photo's going on the wall too—don't take it looking like a wanted poster."</p>
-<p>"Oh," Sheng Wang drawled in agreement.</p>
-<p>There was a print shop right next to Xile, and on the way there Sheng Wang kept scrolling through his phone's photo album. He was practically on "auto-follow," staying half a step behind Jiang Tian the whole time. When the other turned, he turned; when the other stopped, he stopped, never lifting his head.</p>
-<p>Jiang Tian said "watch the road" twice, and both went in one ear and out the other. At his wit's end, Jiang Tian, without a word, steered him toward a tree. It wasn't until Sheng Wang couldn't brake in time and his forehead bumped into something that he blanked and looked up. Jiang Tian's palm was held flat in front of him; one more step and it would've been the trunk.</p>
-<p>"You really dared not watch the road?" Jiang Tian said, incredulous.</p>
-<p>Sheng Wang was even more incredulous. "You actually steered me into a tree?"</p>
-<p>Jiang Tian was caught short and started, expressionless, scanning their surroundings.</p>
-<p>Sheng Wang looked around with him, but it was leaves and more leaves. "What are you looking for?"</p>
-<p>Jiang Tian said, "A straighter branch."</p>
-<p>Sheng Wang didn't catch on, and actually pointed at a cluster of leaves overhead. "This one's pretty straight, what do you want it for?"</p>
-<p>Jiang Tian: "To snap off and give you for a blind man's cane."</p>
-<p>It had never once crossed Sheng Wang's mind that his ge would now lay groundwork before he insulted you. He was choked silent. He pictured himself gripping one end of a blind man's cane, Jiang Tian leading him by the other, the two of them each wearing a pair of round dark sunglasses… oh my god.</p>
-<p>"What are you laughing at?" Jiang Tian said, out of sorts.</p>
-<p>Something moved in Sheng Wang's heart, and he stuck his left hand straight out. "Here, a human blind man's cane for you—do you dare take it?"</p>
-<p>He saw Jiang Tian blank for a moment, then drew his hand back and pretended to sneer. "Have to actually think about it, do you. Let's go."</p>
-<p>With that he ducked his head, played with his phone, and went strolling off ahead again.</p>
-<p>Ever since he'd worked things out that day, he'd been in this state.</p>
-<p>"Sacred Tree of Changbai Mountain"—the meaning being a cold, aloof blockhead. It was as if a little troublemaker with itchy hands lived inside him, who, banking on Jiang Tian knowing nothing, would scratch at him now and then, like that cat in the meme that picks fights, standing right at the edge, reckless and lawless.</p>
-<p>It was all feints anyway. Jiang Tian wasn't on the same wavelength as him at all; he could never possibly scratch the real thing.</p>
-<p>This way of thinking, however, lasted little more than a week before it was shattered with a crash.</p>
-<p>That day was Thursday, one day before they set off for intensive training. Yang Jing had already been urging them to pack their luggage; they'd been granted, by way of exception, two evening-study leave slips, but the daytime classes still had to be attended as normal.</p>
-<p>The last period on Thursday afternoon was Class A's competition tutorial—physics. He Jin had lately been teaching them a portion of university-level physics. But that day He Jin was feeling unwell and went to the hospital, so they pulled in Zhao Xi to fill in for the competition class.</p>
-<p>Sheng Wang had promised several teachers that he'd definitely come upstairs for the competition class. Although the scene in the alley had passed a long time ago, he still felt an instant of awkwardness seeing Zhao Xi in the classroom.</p>
-<p>He thought he'd hidden the unnaturalness well, but after class, Zhao Xi went to the office to drop off his lesson plan and then came back to Class A, sitting down on the edge of the desk in front of Sheng Wang.</p>
-<p>"Xi-ge," Sheng Wang greeted him.</p>
-<p>"Waiting for Jiang Tian?" Zhao Xi glanced out the window. The people in Class A had gone—some to eat, some to shower; only Sheng Wang and he were left, the two of them. "Did Old Zhao from the management office drag him off again?"</p>
-<p>Sheng Wang nodded. "We're not doing evening study today anyway. Waiting for him to come back so we can go eat at Wutongwai."</p>
-<p>"Oh."</p>
-<p>"Aren't you heading back, Xi-ge?" Sheng Wang asked.</p>
-<p>Zhao Xi smiled. "No rush. I came to have a chat with you."</p>
-<p>Sheng Wang asked hesitantly, "Chat about what?"</p>
-<p>"About why you, you little brat, have been dodging me and Lin lately," Zhao Xi said.</p>
-<p>In an instant Sheng Wang was awkward beyond all measure.</p>
-<p>"Eh, what are you embarrassed about?" Zhao Xi's manner of talking was rather roguish, very different from in class, like some delinquent senior. "I'm not even embarrassed."</p>
-<p>Sheng Wang blanked and asked, "You know?"</p>
-<p>"More or less." Zhao Xi shifted into a more relaxed posture. "I heard a bit of sound at the time. Nobody usually walks down that alley—the few old houses emptied out long ago, just the mute and the old man still live there. Older folks sleep early; there's no way they'd be out wandering around at that hour. The only ones who'd go over there would be you and Jiang Tian."</p>
-<p>"This whole thing would've just blown over. But I talked it through with Lin, and we were worried it might leave some kind of shadow on a kid going through puberty—" He was joking, and gave a rueful laugh himself. "—so while I had time today, I came to talk to you. You… got a fright, didn't you?"</p>
-<p>Sheng Wang realized that after agonizing over it for so many days, he'd actually forgotten whether his very first reaction had been fright. He hesitated a moment, then answered, "Honestly, it was okay."</p>
-<p>"Really? Your acceptance is that high?" Zhao Xi raised a brow.</p>
-<p>"It's just that I hadn't expected it, was a bit caught off guard, and then thinking it over later…" Sheng Wang's expression went complicated for an instant, then slowly relaxed. "I just felt it wasn't really anything."</p>
-<p>Zhao Xi gazed at him and nodded thoughtfully.</p>
-<p>His eyes were a shade lighter in color than most people's, close to a watery brown. Or maybe it was that the windowpane reflected a big swath of brightness in them, so that when he looked over like this, Sheng Wang had the illusion that his every thought had been laid completely bare.</p>
-<p>He lowered his eyes, the book in his hand spinning a few turns on his fingertips. He wanted to change the subject, so for lack of anything better he asked Zhao Xi, "Weren't you worried about leaving someone with a shadow? Then why only talk to me and not Jiang Tian? Are you and Lin-ge that certain I was the only one who saw?"</p>
-<p>"Not certain," Zhao Xi said. "But it's different."</p>
-<p>"What's different?"</p>
-<p>Zhao Xi said, "You don't know about me and Lin. But Jiang Tian does."</p>
-<nav class="pager">
-<a href="someone-chapter-061-the-gift.html">← Chapter 61</a><span class="spacer"></span><a class="home" href="index.html">Contents</a><span class="spacer"></span><a href="someone-chapter-063-declaration.html">Chapter 63 →</a>
-</nav>
-</div>
+    <p>Faced with a Jiang Tian like this, he simply couldn't get the word "no" out. He suddenly found himself a little laughable—all those days of bustling busyness, and in the end one sentence from his ge had knocked him right back to his original shape. He wanted to say you've really got some nerve, but he couldn't get his mouth open at all.</p>
+
+    <p>For a long stretch of time, he only gripped that notebook tightly—didn't speak, didn't look up, didn't even move. Not until that aching softness seeped down through his blood and stopped hurting so much did he blink his eyes rapidly a few times.</p>
+
+    <p>"I can," he said in a low voice, his throat still coming out hoarse. He pressed his lips and cleared it, then lifted his head and waggled the notebook. "If I can't test my way back even with this, then I might as well give up entirely."</p>
+
+    <p>Jiang Tian said nothing.</p>
+
+    <p>His eyes were very good-looking, the lids thin, the creases at the outer corners not wide or long but tilting slightly upward. When his gaze swept over from those outer corners it was always cold and proud, as if no one merited his attention. But when he looked over straight on like this, his eyes lowered slightly, a few stars of not-very-bright light reflected in them—then you were standing inside his eyes.</p>
+
+    <p>Sheng Wang stood inside his eyes for a long while before Jiang Tian nodded once and said, "Good." And then the edge all over him slowly eased, as if he'd finally let out a breath.</p>
+
+    <p>In those few seconds, Sheng Wang even had the illusion of a tacit understanding between him and his ge. The illusion bred an impulse in him—he wanted to say, Ge, can I hug you? But just as he was about to open his mouth, the lights-out bell rang.</p>
+
+    <p>He startled, coming back to himself.</p>
+
+    <p>Outside the balcony drifted a faint, barely-there scent of osmanthus. At late-November temperatures the flower clusters had long since fallen, scattered and gone, and who knew where a stray speck or two still hid, stubbornly giving off an almost imperceptible fragrance. That little impulse of Sheng Wang's slowly eased away in the lingering scent.</p>
+
+    <p>He gripped the notebook and straightened up, saying to Jiang Tian, "Going in?"</p>
+
+    <p>"Mm. Temperature's dropped." Jiang Tian glanced past the railing, turned sideways to pull open the balcony door, and gestured for Sheng Wang to go ahead.</p>
+
+    <p>His fingers had been gripping too tightly just now, and loosening abruptly left them numb and aching. Sheng Wang flexed his joints as he walked into the dorm, and as he stepped over the low balcony threshold, someone gave the back of his head a light pat.</p>
+
+    <p>Whether it was meant to soothe him or something else, he didn't know.</p>
+
+    <p>Sheng Wang froze and whipped his head around, but Jiang Tian had already gone inside. He walked straight past the long desk, took clothes and a towel from the wardrobe, and said, "I'm taking a shower."</p>
+
+    <p>Shi Yu lay on his bed with his legs crossed, sending messages; Qiu Wenbing had clipped his charging desk lamp onto the bed rail and reminded them, "You'd better hurry, great one, the patrol teacher's coming soon."</p>
+
+    <p>"I know," Jiang Tian said, and went into the bathroom.</p>
+
+    <p>"Sheng-ge, what are you standing here for?" Qiu Wenbing climbed down from his bunk to get a book; with Sheng Wang planted there by the balcony door, the space felt a bit cramped.</p>
+
+    <p>"Hm?" Sheng Wang scratched at the hair on the back of his head. "Oh, nothing. Just mulling something over."</p>
+
+    <p>Jiang Tian finished quickly and came out, and Sheng Wang took his shift, clothes and towel in hand. The bathroom was thick with steam, and the moment the hot water sluiced down from the showerhead, he suddenly understood. Or rather, he'd already understood the instant he told Jiang Tian "I can test my way back."</p>
+
+    <p>He'd just fallen for someone, that was all—what was the big deal? A human lifespan was eighty, ninety years, and he was still at the very beginning. The future ahead was so long, so far it stretched clean out of sight; he'd merely fallen for Jiang Tian during this stretch of it, no telling how long it would last. He hadn't planned to say anything, and he understood there couldn't be any kind of outcome.</p>
+
+    <p>The future was a straight line, and he'd just gone a little crooked at this one node; sooner or later he'd curve back. Was that so serious?</p>
+
+    <p>Not in the slightest.</p>
+
+    <p>The hot water finally ran out that day, the stream over his body quickly turning cool. Sheng Wang slapped a hand against the faucet and grabbed his towel to dry his hair.</p>
+
+    <p>He sneezed in the dissipating steam and thought: to hell with cooling down, I'm going back to Class A.</p>
+
+    <p>Sixteen, seventeen—it was drink today the wine you have today.</p>
+
+    <p>Other people gawked at the sights in passing; what did it matter to anyone if he gawked at his ge a few extra times? It wasn't going to cost him a pound of flesh. Besides, his ge was a blockhead. What did he have to be afraid of?</p>
+
+    <div class="scene-break">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+    <p>A teenager's moods could rival the weather of June—when the rainstorm poured down, black clouds smothered the sky, as if they'd never disperse in this lifetime. The rain would stop, and at once it was all suddenly bright and clear, the sun blazing.</p>
+
+    <p>These past few days, Sheng Wang was the blazing sun itself.</p>
+
+    <p>As Sheng Wang's roommate and new behind-the-desk neighbor, Shi Yu had the most direct read on it.</p>
+
+    <p>A while back, Sheng Wang had seemed unwilling to deal with anyone, head down grinding through problem sets, finishing one after another. It had made Shi Yu so antsy that he'd picked up a few sets himself and quietly compared—only to find that no matter how he sped up, he couldn't catch the guy.</p>
+
+    <p>These past few days, Sheng Wang had suddenly gone lazy again. Often the teacher would be up front explaining problems in painstaking detail while he sat below cutting up paper. The problem sets he'd worked through got picked over, a few pages snipped out, the rest dumped straight into the discard pile.</p>
+
+    <p>He'd stopped doing problems, and didn't pay especially rapt attention in class either. More often he'd twirl his pen and look at a dark-brown leather-bound notebook, occasionally pulling out a pad to scratch out a couple of lines of rough work—and partway through the scratching he'd fish out his phone to chat with someone on WeChat.</p>
+
+    <p>Shi Yu caught a glimpse once. Because he'd glanced too fast he hadn't made out the content, only seen the first two characters of the contact name: "Changbai." He was puzzled for a good while and couldn't recall anyone around named Changbai.</p>
+
+    <p>It wasn't until Wednesday's evening study that he learned who this mysterious "Changbai" was.</p>
+
+    <p>The boarding students' dedicated evening study began after the day students were dismissed. People from each class would come trickling into the assigned lecture hall, bags in hand, books in arms. There was a teacher on the podium responsible for answering questions and clearing up difficulties—usually teachers from the grade taking turns.</p>
+
+    <p>The lecture hall was large enough that seating was free, not assigned by class. Sheng Wang, as ever, sat in his old spot in the very back row, with Shi Yu and Qiu Wenbing in front of him so they could leave together after study.</p>
+
+    <p>When the warning bell rang, everyone had mostly relocated, and the room gradually quieted.</p>
+
+    <p>The teacher on duty scanned around, judged that everyone had arrived, and got up to close the classroom door. But the moment he stood, a boy walked in with his bag over his shoulder. The teacher was taken aback and said reflexively, "What are you doing here?"</p>
+
+    <p>The studying students all looked up, and then came an uproar.</p>
+
+    <p>The newcomer was Jiang Tian, and the uproar was because everyone knew Class A had the privilege of not having to come to the lecture hall for study at all.</p>
+
+    <p>Sheng Wang lifted his head amid the buzzing murmurs. Jiang Tian was talking with the duty teacher; in a gap in the conversation he raised his head, swept his gaze over the back rows, paused for a moment on Sheng Wang, then turned and said something low to the teacher. After that he came up the steps two at a time, unhurried, threading through a row of desks.</p>
+
+    <p>The whole classroom's worth of geese—no, people—craned their necks to watch him come toward the back. Shi Yu, being closest, accidentally caught sight of Sheng Wang's phone.</p>
+
+    <p>This guy's phone screen was wide open with no cover, just laid out flat on the desk as if he wasn't even afraid of being seen. On the screen was a WeChat chat, and at the very top of it was the other party's contact name. This time Shi Yu finally made out the full thing: <strong>Sacred Tree of Changbai Mountain.</strong></p>
+
+    <p>This Sacred Tree of Changbai Mountain had sent a message half a minute ago, asking Sheng Wang: which row do you usually sit in for study?</p>
+
+    <p>Sheng Wang had answered: last row.</p>
+
+    <p>And then Jiang Tian had come. Who the Sacred Tree was went without saying. Shi Yu thought, I really cannot understand the nicknames between brothers—what on earth is this stuff.</p>
+
+    <p>Jiang Tian was deaf to the attention. He sat down beside Sheng Wang, pulled a thick dark-blue leather-bound book from his bag, drew out a pen, and only then lifted his eyelids to ask the person beside him, "What are you spacing out for?"</p>
+
+    <p>Sheng Wang opened his mouth and asked, puzzled, "Aren't you allowed to stay on the top floor to study?"</p>
+
+    <p>Jiang Tian flipped the book open and gave an "Mm."</p>
+
+    <p>"Then what'd you come down for?"</p>
+
+    <p>Without raising his head, Jiang Tian said, "Sitting up there studying alone is too damn stupid."</p>
+
+    <p>"Oh." Something shifted in Sheng Wang's heart, and he lowered his eyes and went back to his book. After a moment, he suddenly started laughing under his breath.</p>
+
+    <p>Jiang Tian looked over with a frown, and Sheng Wang said, "I pictured it. It really is pretty damn stupid."</p>
+
+    <p>"……"</p>
+
+    <p>Jiang Tian ignored him for the rest of evening study.</p>
+
+    <div class="scene-break">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+    <p>On Friday, Yang Jing called for them and handed over two forms, saying the intensive training started next week. She told them to fill out the forms and to prepare two two-inch photos each.</p>
+
+    <p>"Photos again?" Jiang Tian said. "Didn't we hand some in before?"</p>
+
+    <p>Yang Jing said, out of sorts, "They all got stuck up on the honor wall by that Xu fellow at the Political and Educational Office. You want me to go peel them off, or what?"</p>
+
+    <p>Sheng Wang had been planning to just snap any old one at the print shop by the gate, when he heard Yang Jing say to him, "Find a good one, at least smile. If you test well your photo's going on the wall too—don't take it looking like a wanted poster."</p>
+
+    <p>"Oh," Sheng Wang drawled in agreement.</p>
+
+    <p>There was a print shop right next to Xile, and on the way there Sheng Wang kept scrolling through his phone's photo album. He was practically on "auto-follow," staying half a step behind Jiang Tian the whole time. When the other turned, he turned; when the other stopped, he stopped, never lifting his head.</p>
+
+    <p>Jiang Tian said "watch the road" twice, and both went in one ear and out the other. At his wit's end, Jiang Tian, without a word, steered him toward a tree. It wasn't until Sheng Wang couldn't brake in time and his forehead bumped into something that he blanked and looked up. Jiang Tian's palm was held flat in front of him; one more step and it would've been the trunk.</p>
+
+    <p>"You really dared not watch the road?" Jiang Tian said, incredulous.</p>
+
+    <p>Sheng Wang was even more incredulous. "You actually steered me into a tree?"</p>
+
+    <p>Jiang Tian was caught short and started, expressionless, scanning their surroundings.</p>
+
+    <p>Sheng Wang looked around with him, but it was leaves and more leaves. "What are you looking for?"</p>
+
+    <p>Jiang Tian said, "A straighter branch."</p>
+
+    <p>Sheng Wang didn't catch on, and actually pointed at a cluster of leaves overhead. "This one's pretty straight, what do you want it for?"</p>
+
+    <p>Jiang Tian: "To snap off and give you for a blind man's cane."</p>
+
+    <p>It had never once crossed Sheng Wang's mind that his ge would now lay groundwork before he insulted you. He was choked silent. He pictured himself gripping one end of a blind man's cane, Jiang Tian leading him by the other, the two of them each wearing a pair of round dark sunglasses… oh my god.</p>
+
+    <p>"What are you laughing at?" Jiang Tian said, out of sorts.</p>
+
+    <p>Something moved in Sheng Wang's heart, and he stuck his left hand straight out. "Here, a human blind man's cane for you—do you dare take it?"</p>
+
+    <p>He saw Jiang Tian blank for a moment, then drew his hand back and pretended to sneer. "Have to actually think about it, do you. Let's go."</p>
+
+    <p>With that he ducked his head, played with his phone, and went strolling off ahead again.</p>
+
+    <p>Ever since he'd worked things out that day, he'd been in this state.</p>
+
+    <p>"Sacred Tree of Changbai Mountain"—the meaning being a cold, aloof blockhead. It was as if a little troublemaker with itchy hands lived inside him, who, banking on Jiang Tian knowing nothing, would scratch at him now and then, like that cat in the meme that picks fights, standing right at the edge, reckless and lawless.</p>
+
+    <p>It was all feints anyway. Jiang Tian wasn't on the same wavelength as him at all; he could never possibly scratch the real thing.</p>
+
+    <p>This way of thinking, however, lasted little more than a week before it was shattered with a crash.</p>
+
+    <p>That day was Thursday, one day before they set off for intensive training. Yang Jing had already been urging them to pack their luggage; they'd been granted, by way of exception, two evening-study leave slips, but the daytime classes still had to be attended as normal.</p>
+
+    <p>The last period on Thursday afternoon was Class A's competition tutorial—physics. He Jin had lately been teaching them a portion of university-level physics. But that day He Jin was feeling unwell and went to the hospital, so they pulled in Zhao Xi to fill in for the competition class.</p>
+
+    <p>Sheng Wang had promised several teachers that he'd definitely come upstairs for the competition class. Although the scene in the alley had passed a long time ago, he still felt an instant of awkwardness seeing Zhao Xi in the classroom.</p>
+
+    <p>He thought he'd hidden the unnaturalness well, but after class, Zhao Xi went to the office to drop off his lesson plan and then came back to Class A, sitting down on the edge of the desk in front of Sheng Wang.</p>
+
+    <p>"Xi-ge," Sheng Wang greeted him.</p>
+
+    <p>"Waiting for Jiang Tian?" Zhao Xi glanced out the window. The people in Class A had gone—some to eat, some to shower; only Sheng Wang and he were left, the two of them. "Did Old Zhao from the management office drag him off again?"</p>
+
+    <p>Sheng Wang nodded. "We're not doing evening study today anyway. Waiting for him to come back so we can go eat at Wutongwai."</p>
+
+    <p>"Oh."</p>
+
+    <p>"Aren't you heading back, Xi-ge?" Sheng Wang asked.</p>
+
+    <p>Zhao Xi smiled. "No rush. I came to have a chat with you."</p>
+
+    <p>Sheng Wang asked hesitantly, "Chat about what?"</p>
+
+    <p>"About why you, you little brat, have been dodging me and Lin lately," Zhao Xi said.</p>
+
+    <p>In an instant Sheng Wang was awkward beyond all measure.</p>
+
+    <p>"Eh, what are you embarrassed about?" Zhao Xi's manner of talking was rather roguish, very different from in class, like some delinquent senior. "I'm not even embarrassed."</p>
+
+    <p>Sheng Wang blanked and asked, "You know?"</p>
+
+    <p>"More or less." Zhao Xi shifted into a more relaxed posture. "I heard a bit of sound at the time. Nobody usually walks down that alley—the few old houses emptied out long ago, just the mute and the old man still live there. Older folks sleep early; there's no way they'd be out wandering around at that hour. The only ones who'd go over there would be you and Jiang Tian."</p>
+
+    <p>"This whole thing would've just blown over. But I talked it through with Lin, and we were worried it might leave some kind of shadow on a kid going through puberty—" He was joking, and gave a rueful laugh himself. "—so while I had time today, I came to talk to you. You… got a fright, didn't you?"</p>
+
+    <p>Sheng Wang realized that after agonizing over it for so many days, he'd actually forgotten whether his very first reaction had been fright. He hesitated a moment, then answered, "Honestly, it was okay."</p>
+
+    <p>"Really? Your acceptance is that high?" Zhao Xi raised a brow.</p>
+
+    <p>"It's just that I hadn't expected it, was a bit caught off guard, and then thinking it over later…" Sheng Wang's expression went complicated for an instant, then slowly relaxed. "I just felt it wasn't really anything."</p>
+
+    <p>Zhao Xi gazed at him and nodded thoughtfully.</p>
+
+    <p>His eyes were a shade lighter in color than most people's, close to a watery brown. Or maybe it was that the windowpane reflected a big swath of brightness in them, so that when he looked over like this, Sheng Wang had the illusion that his every thought had been laid completely bare.</p>
+
+    <p>He lowered his eyes, the book in his hand spinning a few turns on his fingertips. He wanted to change the subject, so for lack of anything better he asked Zhao Xi, "Weren't you worried about leaving someone with a shadow? Then why only talk to me and not Jiang Tian? Are you and Lin-ge that certain I was the only one who saw?"</p>
+
+    <p>"Not certain," Zhao Xi said. "But it's different."</p>
+
+    <p>"What's different?"</p>
+
+    <p>Zhao Xi said, "You don't know about me and Lin. But Jiang Tian does."</p>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> ☕</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="someone-chapter-061-the-gift.html" class="prev">Chapter 61</a>
+    <a href="someone.html">Chapter List</a>
+    <a href="someone-chapter-063-declaration.html" class="next">Chapter 63</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 木苏里 (Mu Su Li). Please support the author on
+      <a href="https://www.jjwxc.net/onebook.php?novelid=3173202" target="_blank">JJWXC</a>.
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
 </body>
 </html>
