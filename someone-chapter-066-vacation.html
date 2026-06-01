@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 66 – "Vacation" — A Certain Someone — Canon Compliant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad; --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: var(--paper); color: var(--ink); font-family: 'Zilla Slab', Georgia, serif; font-size: 18px; line-height: 1.85; }
+    body::before { content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; }
+    .topbar { border-bottom: 1px solid var(--border); padding: 1rem 2rem; background: var(--paper); position: sticky; top: 0; z-index: 10; }
+    .topbar-inner { max-width: var(--reading-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .topbar-home { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel { font-family: 'Zilla Slab', serif; font-size: 0.85rem; font-style: italic; color: var(--muted); text-align: center; flex: 1; }
+    .kofi-btn { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 0.35rem 0.85rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; flex-shrink: 0; }
+    .kofi-btn:hover { background: var(--rust-light); }
+    .chapter-header { max-width: var(--reading-width); margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
+    .novel-name { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 2rem; font-weight: 700; color: var(--ink); line-height: 1.1; }
+    .chapter-sublabel { font-size: 1.1rem; font-style: italic; color: var(--muted); margin-top: 0.4rem; font-family: 'Zilla Slab', serif; }
+    .chapter-date { font-size: 0.8rem; font-style: italic; color: var(--muted); margin-top: 0.75rem; }
+    .chapter-readtime { font-size: 0.75rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    .chapter-divider { margin: 2rem auto; width: 3rem; height: 1px; background: var(--border); }
+    .chapter-body { max-width: var(--reading-width); margin: 0 auto; padding: 0 2rem 4rem; position: relative; z-index: 1; }
+    .chapter-body p { margin-bottom: 1.4em; }
+    .chapter-body p:last-child { margin-bottom: 0; }
+    .scene-break { text-align: center; margin: 2.5em 0; color: var(--gold); letter-spacing: 0.3em; font-size: 0.85rem; user-select: none; }
+    .chapter-body em { font-style: italic; }
+    .chapter-body strong { font-weight: bold; }
+    .kofi-note { max-width: var(--reading-width); margin: 0 auto; padding: 2rem 2rem 0; position: relative; z-index: 1; }
+    .kofi-note p { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 1.5rem; line-height: 1.7; }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .chapter-nav { border-top: 1px solid var(--border); max-width: var(--reading-width); margin: 2rem auto 0; padding: 2rem 2rem 4rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+    .chapter-nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .chapter-nav a:hover { color: var(--rust); }
+    .chapter-nav .prev::before { content: '← '; }
+    .chapter-nav .next::after { content: ' →'; }
+    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) { body { font-size: 16px; } .chapter-label { font-size: 1.5rem; } .topbar-novel { display: none; } }
+</style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="topbar-home">Canon Compliant</a>
+      <span class="topbar-novel">A Certain Someone</span>
+      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+    </div>
+  </nav>
+  <header class="chapter-header">
+    <p class="novel-name">A Certain Someone · 某某</p>
+    <h1 class="chapter-label">Chapter 66</h1>
+    <p class="chapter-sublabel">"Vacation"</p>
+    <p class="chapter-date">Jun 2026</p>
+    <p class="chapter-readtime">~12 min read</p>
+    <div class="chapter-divider"></div>
+  </header>
+  <main class="chapter-body">
+    <p>The first half of the sentence was for Sheng Wang.</p>
+
+    <p>Because he'd seen the not-quite-two-seconds of silence before Sheng Wang offered his comfort, seen the faint hiding and sadness in Sheng Wang's slightly lowered gaze—he always seemed able to see these things. Every pause, every word swallowed back, every time Sheng Wang laughed and carried on loudly when he plainly wasn't that happy: Jiang Tian saw all of it.</p>
+
+    <p>So he wanted Sheng Wang to know that he'd long since stopped splitting hairs over it. He loathed only Ji Huanyu; it had nothing to do with anyone else.</p>
+
+    <p>As for the second half—</p>
+
+    <p>For a long stretch of time, he'd believed himself objective and rational enough. His relationship with Zhao Xi and Lin Beiting had always been good; getting along with Gao Tianyang and the rest had never been a problem. He'd thought he'd found the best possible point of balance, just outside the line. Until Sheng Wang appeared, and that fulcrum suddenly wouldn't hold.</p>
+
+    <p>He'd realized it long ago, in fact—had long understood that Sheng Wang was, to him, not like other people. He'd only been wrestling with himself the whole time.</p>
+
+    <p>Sometimes he'd reflect, would think back on a lot of people and things, but he always steered clear of that one point, deliberately ignoring certain ambiguous or out-of-place feelings, as though if he didn't think about them they wouldn't exist.</p>
+
+    <p>Until today, seeing Ji Huanyu out at Wutongwai, hearing him say what he'd said, it suddenly came clear. The man wanted to drag him down into the dark—so he'd make a point of climbing out. The man wanted to sicken him—so he'd refuse to give him the satisfaction.</p>
+
+    <p>Ji Huanyu wanted him to stand frozen in place; instead he made his peace with himself. He didn't want to fight himself anymore.</p>
+
+    <p>He just liked Sheng Wang. Had liked him for a long time.</p>
+
+    <p>Because of Zhao Xi and Lin Beiting, he understood this road better than most—he'd watched the comings together and the comings apart of it. Reason told him not to pull another person in. That person was precious; he wanted him to smile more.</p>
+
+    <p>But sometimes—on the very rarest of occasions—he couldn't hold the impulse down.</p>
+
+    <p>He wanted to say it for Sheng Wang to hear, and at the same time hoped Sheng Wang wouldn't hear him.</p>
+
+    <p>The dorm was a racket—the next room over had just sent a whole tide of people surging up the stairs, and Old Mao and Tongzi were tugging at Sheng Wang to say hello, telling the two of them the camp started tomorrow, to give it their all and bring a little honor to Fuzhong.</p>
+
+    <p>He knew. Sheng Wang hadn't heard.</p>
+
+    <p>He could stand alone on the road and hope Sheng Wang would stop at its edge, rest his feet a while, and then leave—best of all without even saying hello to him. He wasn't as steady as he'd imagined. He was afraid he wouldn't be able to hold himself back.</p>
+
+    <p>*</p>
+
+    <p>The training camp was in another city, across the river from Fuzhong.</p>
+
+    <p>According to Sister Jing, they'd deliberately picked an extremely out-of-the-way school, a hundred and eighty thousand li from the city center, a nightmare of transfers and connections. To spare them the back-and-forth of travel, Fuzhong had laid on a chartered bus. Yang Jing, as the teacher leading the group, was in charge of getting them there.</p>
+
+    <p>The pickup point was still the spot where they waited for the school bus.</p>
+
+    <p>"It took everything I had to scrounge one day where I didn't have to write or grade papers, and now I've got to get up this early to stand in the cold wind—the sun's not even up!" Yang Jing, bundled in a thin wool coat long enough to cover her ankles over a knit top and a patent-leather skirt, stamped her feet in the wind and cursed Big Mouth Xu—the middle-aged-and-up crowd got up early themselves and scheduled cars without a thought for young people needing sleep.</p>
+
+    <p>Done cursing Big Mouth Xu, she started in on Sheng Wang, because Sheng Wang was dressed even lighter than she was.</p>
+
+    <p>The Sheng young master regretted it too. He'd actually picked up a thick jacket this morning. Out of Fuzhong, no longer having to wear the uniform all day, those simple, sharp-looking clothes of his had finally found their use. But right before heading out, some short circuit in his brain had him swapping it, as if possessed, for a thin one.</p>
+
+    <p>Yang Jing, scrolling her phone, said the temperature was dropping sharply today. Ears reddening with cold, Sheng Wang sauntered around in front of his ge with the zipper hanging open. Jiang Tian shot him several frowning looks and asked whether he "knew how many degrees it was today," to which he just kept his earbuds in and pretended not to hear.</p>
+
+    <p>By the fourth lap, Jiang Tian finally couldn't hold back. Like last time, he zipped him up, then plucked out one earbud and said, "Enjoying the cold?"</p>
+
+    <p>Sheng Wang thought: Of course I'm not enjoying it, the wind's about to blow tears out of my eyes. I'm only doing this to check whether your mood's recovered or not, you know?!</p>
+
+    <p>Mercifully, the unpleasantness that scum Ji Huanyu had left behind seemed to have stayed in last night. His ge would still frown and scold; there was no recoiling, no keeping his distance, and he'd still reach over to do up the zipper—which meant the damage wasn't as bad as he'd feared.</p>
+
+    <p>But he was still a little uneasy.</p>
+
+    <p>That worry outweighed every other feeling, so much that he'd even forgotten what Zhao Xi had said yesterday, forgotten the fact that Jiang Tian understood everything, fixed only on confirming whether the other had been left with some shadow because of Ji Huanyu.</p>
+
+    <p>Of course, it was also possible that, somewhere beneath the surface, he'd simply wanted to ignore those things.</p>
+
+    <p>Sometimes a student's mind worked strangely, as if every single thing that happened at school ended at the school gate, and past it everything was different.</p>
+
+    <p>They were off to training camp, off to another city, briefly away from Fuzhong. Those feelings that had quietly taken root in the corner of a classroom, on a dorm balcony, at the edge of a field or under the shade of a tree could also slip out for a breath of air, no longer needing to tread so carefully.</p>
+
+    <p>Call it a vacation, for a limited time only.</p>
+
+    <p>As it turned out, the vacation opened on a less-than-ideal note—Sheng Wang, of all the rare things, got carsick. Not the kind he'd faked last time.</p>
+
+    <p>The bus had barely passed the toll station before his stomach started churning in waves. The air inside carried a faint whiff of leather that he normally wouldn't have noticed; now its presence turned overwhelming, boring desperately at his nose.</p>
+
+    <p>He'd still been chatting with Sister Jing, hunting around for material to tease Jiang Tian. Now he finally settled down, said "I'm going to lean back and sleep a bit," and tipped his head back against the seat, pulling the hood of the sweatshirt underneath down to block out the light.</p>
+
+    <p>He thought his own temperament was genuinely strange. Last time he'd faked carsickness, the words had come out easy; this time he really felt awful and was being stubborn about it, as if saying one word out loud would make him look especially weak.</p>
+
+    <p>Jiang Tian was good at riling people, not at small talk. Once Sheng Wang shut his mouth, Yang Jing lost interest in chatting too, and after scrolling her phone a while she settled in to prop up her head and sleep; the bus quickly went quiet. In his misery Sheng Wang cracked one eye and caught sight of Jiang Tian, white earbuds in, head down, fingers flying across his phone—no telling what he was searching for.</p>
+
+    <p>The nausea was getting heavy. Sheng Wang didn't look long before hurriedly closing his eyes again.</p>
+
+    <p>When you're carsick every second drags, and your sense of time goes haywire. He didn't know how long he'd had his head tipped back when he suddenly felt the person beside him shift, leaning forward, it seemed.</p>
+
+    <p>Jiang Tian lowered his voice and called to Yang Jing, said something. Sheng Wang's eardrums were buzzing and he didn't catch it clearly. Yang Jing's pitch came a little higher: "Two kilometers, maybe."</p>
+
+    <p>Then the sound of a zipper—no telling what she was rummaging for.</p>
+
+    <p>A moment later the soft leather seat shifted lightly again as the person beside him leaned back.</p>
+
+    <p>The next second, Sheng Wang felt something touch the edge of his lips. Jiang Tian's low voice sounded by his ear: "Open up."</p>
+
+    <p>Sheng Wang: "?"</p>
+
+    <p>He opened his mouth on instinct, and only then opened his eyes too.</p>
+
+    <p>In Jiang Tian's hand was a freshly torn-open packet of dried plums, and the one he'd taken out was already in Sheng Wang's mouth.</p>
+
+    <p>"Sister Jing gave them," Jiang Tian said.</p>
+
+    <p>Yang Jing turned around from the front passenger seat. "Why didn't you say you get carsick? There's a rest stop coming up—I'll have the driver pull over there. It's at least three more hours from there, were you really going to tough it out all the way to the end?"</p>
+
+    <p>That packet of plums of hers, no telling where she'd bought it, was fiercely sour—probably kept on hand for exactly this. The nausea was instantly tamped down a good deal, and Sheng Wang finally got a bit of his spirit back.</p>
+
+    <p>He nudged the plum into the side of his cheek and said to Sister Jing, "I don't usually get carsick."</p>
+
+    <p>Jiang Tian glanced at him. "You clearly got carsick last time."</p>
+
+    <p>Sheng Wang: "…Oh."</p>
+
+    <p>Yang Jing cracked up; the driver couldn't keep it in either and asked, "Do I drive too aggressively?"</p>
+
+    <p>Sheng Wang said, "No, you drive really smooth—it's just that I got up too early today, not enough blood to the brain."</p>
+
+    <p>Yang Jing seized her opening and started in on Big Mouth Xu again, fearlessly firing off a long voice message at him, denouncing this whole business of not letting people get a decent night's sleep.</p>
+
+    <p>While she machine-gunned the leadership up front, the driver listened along, thoroughly entertained. Sheng Wang tugged the hood back down and leaned against the seat, meaning to rest his eyes a while longer—but he hadn't shut them all the way, and through the thin slits he watched his ge, lost in thought.</p>
+
+    <p>Jiang Tian was still holding the plum packet, whether because he hadn't found a place to put it or because he was afraid Sheng Wang would want another soon. His other hand hovered, index finger and thumb slightly curled—maybe dusted with the powder off the plums.</p>
+
+    <p>There were tissues on the bus, but they sat by the windshield up front, and Sister Jing was busy; she couldn't get to the back for the moment.</p>
+
+    <p>Sheng Wang watched the show through narrowed eyes, holding in a laugh. Every time he caught Jiang Tian wearing this look of mild helplessness, he felt enormously pleased—even the carsickness was more than half cured.</p>
+
+    <p>The lady doing the denouncing was deaf to the world. Jiang Tian called Yang Jing twice and then gave up; he just leaned back against the seat, took another plum from the packet and ate it himself, then licked the leftover powder off his fingers.</p>
+
+    <p>Sheng Wang suddenly couldn't laugh anymore.</p>
+
+    <p>He silently closed his eyes, thinking: I'm… so…</p>
+
+    <p>A moment later, Yang Jing finally let Big Mouth Xu go and turned around to fetch the plum packet. She asked, puzzled, "Sheng Wang, is it cold in here?"</p>
+
+    <p>Sheng Wang opened his eyes. "Hm?"</p>
+
+    <p>Yang Jing said, "Why have your ears gone red again?"</p>
+
+    <p>Sheng Wang: "…"</p>
+
+    <p>He gritted his teeth and said, "It's cold—can we turn on the heat?"</p>
+
+    <p>Without a word the driver switched on the hot air, and Sheng Wang felt his carsickness take a sharp turn for the worse.</p>
+
+    <p>The trip ran three and a half hours. They stopped once at a rest area along the way, ate a little something, wandered around to get some air, and by the time they got back on Sheng Wang was completely fine.</p>
+
+    <p>Toward noon, they finally pulled to a stop at their destination.</p>
+
+    <p>Getting off the bus, Sheng Wang remarked, "This isn't a little out-of-the-way, this is the deep mountains and ancient forests, isn't it? Why pick a place like this?"</p>
+
+    <p>Yang Jing said, "To pen you all up, what else."</p>
+
+    <p>"We're not here for hard labor."</p>
+
+    <p>"A few years back it wasn't this remote—the winter and summer camps for every subject got scheduled at schools in the city. Do you have any idea how hard you little terrors are to manage? Banking on not being at your own school, you'll get up to anything. I remember one year they caught twelve in a single night climbing the wall to go to internet cafés. It's awkward for them to name names directly, so they just sent reports of overnight absences to the camp office, day after day."</p>
+
+    <p>Sheng Wang and Jiang Tian exchanged a look, feeling that all the scoldings those upperclassmen had dodged were about to be cashed out on the two of them.</p>
+
+    <p>"All right," he said, resigned, and followed Yang Jing off to the office to check in.</p>
+
+    <p>The school was even bigger than he'd imagined, split into front and back sections by that little hillock—the back was the main campus, the front a bit smaller. The school leadership had been extremely generous and carved off this whole front area for the training camp.</p>
+
+    <p>"Classes are in the lab building up front; lodging's that staff dormitory they've lent us. Conditions definitely can't compare to a hotel—it's bunk beds too—but it's a lot better than a normal student dorm, two to a room." The teacher in charge of logistics handed Sheng Wang and Jiang Tian two key cards. "Rooms are assigned by school. You two are in luck—happens to be exactly two of you. There's no lights-out rule at night, and no limits on electricity or hot water, but—"</p>
+
+    <p>He looked thoroughly traumatized as he stressed, "Learn from those who came before—I still have to say it: mind the school rules, all right? You're not here on holiday."</p>
+
+    <p>Sheng Wang remembered the thought he'd had before coming, and suddenly felt a little guilty.</p>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> ☕</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="someone-chapter-065-unspoken-words.html" class="prev">Chapter 65</a>
+    <a href="someone.html">Chapter List</a>
+    <a href="someone-chapter-067-tug-of-war.html" class="next">Chapter 67</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 木苏里 (Mu Su Li). Please support the author on
+      <a href="https://www.jjwxc.net/onebook.php?novelid=3173202" target="_blank">JJWXC</a>.
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

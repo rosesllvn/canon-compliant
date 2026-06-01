@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 64 – Father and Son — A Certain Someone — Canon Compliant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad; --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: var(--paper); color: var(--ink); font-family: 'Zilla Slab', Georgia, serif; font-size: 18px; line-height: 1.85; }
+    body::before { content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; }
+    .topbar { border-bottom: 1px solid var(--border); padding: 1rem 2rem; background: var(--paper); position: sticky; top: 0; z-index: 10; }
+    .topbar-inner { max-width: var(--reading-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .topbar-home { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel { font-family: 'Zilla Slab', serif; font-size: 0.85rem; font-style: italic; color: var(--muted); text-align: center; flex: 1; }
+    .kofi-btn { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 0.35rem 0.85rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; flex-shrink: 0; }
+    .kofi-btn:hover { background: var(--rust-light); }
+    .chapter-header { max-width: var(--reading-width); margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
+    .novel-name { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 2rem; font-weight: 700; color: var(--ink); line-height: 1.1; }
+    .chapter-sublabel { font-size: 1.1rem; font-style: italic; color: var(--muted); margin-top: 0.4rem; font-family: 'Zilla Slab', serif; }
+    .chapter-date { font-size: 0.8rem; font-style: italic; color: var(--muted); margin-top: 0.75rem; }
+    .chapter-readtime { font-size: 0.75rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    .chapter-divider { margin: 2rem auto; width: 3rem; height: 1px; background: var(--border); }
+    .chapter-body { max-width: var(--reading-width); margin: 0 auto; padding: 0 2rem 4rem; position: relative; z-index: 1; }
+    .chapter-body p { margin-bottom: 1.4em; }
+    .chapter-body p:last-child { margin-bottom: 0; }
+    .scene-break { text-align: center; margin: 2.5em 0; color: var(--gold); letter-spacing: 0.3em; font-size: 0.85rem; user-select: none; }
+    .chapter-body em { font-style: italic; }
+    .chapter-body strong { font-weight: bold; }
+    .kofi-note { max-width: var(--reading-width); margin: 0 auto; padding: 2rem 2rem 0; position: relative; z-index: 1; }
+    .kofi-note p { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 1.5rem; line-height: 1.7; }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .chapter-nav { border-top: 1px solid var(--border); max-width: var(--reading-width); margin: 2rem auto 0; padding: 2rem 2rem 4rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+    .chapter-nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .chapter-nav a:hover { color: var(--rust); }
+    .chapter-nav .prev::before { content: '← '; }
+    .chapter-nav .next::after { content: ' →'; }
+    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) { body { font-size: 16px; } .chapter-label { font-size: 1.5rem; } .topbar-novel { display: none; } }
+</style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="topbar-home">Canon Compliant</a>
+      <span class="topbar-novel">A Certain Someone</span>
+      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+    </div>
+  </nav>
+  <header class="chapter-header">
+    <p class="novel-name">A Certain Someone · 某某</p>
+    <h1 class="chapter-label">Chapter 64</h1>
+    <p class="chapter-sublabel">Father and Son</p>
+    <p class="chapter-date">Jun 2026</p>
+    <p class="chapter-readtime">~14 min read</p>
+    <div class="chapter-divider"></div>
+  </header>
+  <main class="chapter-body">
+    <p>They walked toward the west gate together—Zhao Xi was headed to Xile, Sheng Wang and Jiang Tian to Wutongwai.</p>
+
+    <p>When there'd been three of them they could all chat normally, but the moment Zhao Xi left, with only Sheng Wang and Jiang Tian walking side by side, the mood abruptly fell silent.</p>
+
+    <p>The west gate was full of comings and goings in the early evening. Honking wasn't allowed within the school grounds; there was only the clatter of odds and ends hanging off the roving snack carts. The sky was dim and indistinct, the lamplight scattered and sparse, not yet lit into a continuous line.</p>
+
+    <p>Sheng Wang's head was full of that scene from just outside the classroom, and he couldn't think of anything to say. Jiang Tian was sparing with words to begin with, and ordinarily it was hard to tell whether he was turning something over in his mind or simply couldn't be bothered to speak.</p>
+
+    <p>But this moment still felt too quiet.</p>
+
+    <p>At some point, a hazy notion took shape in Sheng Wang. He seemed to know why Jiang Tian was silent, and seemed not to.</p>
+
+    <p>They said a teenager's thoughts were the hardest to read. His ge was top-tier among them—and he himself, honestly, was no slouch either.</p>
+
+    <p>An old woman at the mouth of the alley was walking her grandchild, bending down to coax him in baby talk. Sheng Wang turned sideways to make way, and his shoulder accidentally bumped Jiang Tian's chest; the other steadied him.</p>
+
+    <p>Jiang Tian's hands were big, but not thick. Sheng Wang could feel the long, slender fingers pressing on his shoulder, and after a moment they withdrew again.</p>
+
+    <p>He tugged at the bag slung over one shoulder and waited for the old woman to leave before stepping forward again. Maybe it was the bump—he suddenly wanted to say something to break this inexplicable standoff. But before he could open his mouth, he heard Jiang Tian say, "I heard a bit just now, outside the classroom."</p>
+
+    <p>The topic came up so abruptly that Sheng Wang blanked for a second.</p>
+
+    <p>Jiang Tian looked at the narrow alley ahead, and only after a moment did his gaze turn to him, like a careless glance. "You've got a girl you like?"</p>
+
+    <p>"No." It nearly burst out of Sheng Wang.</p>
+
+    <p>Maybe he'd answered too fast; Jiang Tian blanked for a moment too.</p>
+
+    <p>Sheng Wang seemed to have finally seized his chance. "That was just idle chat with Xi-ge a second ago. He asked offhand, so I answered offhand. There was nothing to it."</p>
+
+    <p>He thought about it and added, "There's no girl I like. There are only so many of us in our class anyway."</p>
+
+    <p>Jiang Tian looked at him. After a while he drew his gaze back and nodded, saying nothing more. As if he, too, had only asked offhand.</p>
+
+    <p>Having explained away the words bottled up in him, Sheng Wang felt his heart slowly settle back to the ground. He was too busy letting out a breath to notice anything else—until they rounded the last bend in the alley and he heard voices not far off. Only then did a question suddenly flash through him—</p>
+
+    <p>Jiang Tian… why would he ask that?</p>
+
+    <p>The instant the thought flashed by, he glanced at Jiang Tian—only to find him staring straight ahead, his face having somehow turned ugly, like disgust and like irritation both.</p>
+
+    <p>The last time he'd seen him like this had been because of Ji Huanyu.</p>
+
+    <p>Reflexively, Sheng Wang looked ahead, and sure enough, he saw the man coming out of Old Man Ding's courtyard gate. He was as impeccably dressed as ever, only his expression was thick with wretchedness.</p>
+
+    <p>Old Man Ding's coarse, hoarse voice carried out from inside the gate: "Look at the state of you—aren't you the one who cares about face? Dragging these things back and forth, don't you find it shameful? Listen to yourself—is any of that fit for a human to say? Oh, what you don't want you discard, what you want you take, and everyone's supposed to revolve around you? Xiao Tian is a person! You're simply not fit to be one! Don't come to me, and don't go to Xiao Tian either. Neither of us claims you. Get as far away from me as you can!"</p>
+
+    <p>This was the first time Sheng Wang had seen the old man genuinely furious, rather than putting on a doting scare for someone. The old man's build wasn't as strong as in his younger years, but he'd been a soldier once, and his strength was still considerable. Without the slightest courtesy he shoved the man out the gate, and Ji Huanyu staggered back several steps.</p>
+
+    <p>The old man poked his head out to close the door—and then saw the people over on this side of the alley. He blanked for a moment and hurriedly gestured to Sheng Wang, signaling for them to leave quickly and not crowd in for the spectacle.</p>
+
+    <p>But Ji Huanyu had already seen them. Losing face like this in front of the younger generation, his expression carried, beneath the awkwardness, a flush of shame turning to anger.</p>
+
+    <p>He squared his shoulders, pulled his clothes straight and neat, and only then walked toward Jiang Tian.</p>
+
+    <p>"You! Don't you go telling him this and that nonsense, nobody wants to hear those words of yours! If anyone did they'd have heard them long ago—why wait till now?" Old Man Ding still wanted to grab at him.</p>
+
+    <p>Ji Huanyu reined in his temper and, brooking no argument, pushed the old man back into the courtyard and pulled the door shut on him. "I said, I just want to talk with him. Can you go inside and rest a bit? When all's said and done, this is a matter between me and Xiao Tian. It's got nothing to do with anyone else."</p>
+
+    <p>The old man cursed and grumbled from inside. Ji Huanyu drew the outer door bolt across. He said, in Jiang Tian's direction, "I haven't locked it, just latched it. When we're done you can undo it for him."</p>
+
+    <p>Sheng Wang felt a sudden flicker of admiration—that the man could keep his tone like this under such circumstances. You could hear he was at the edge of irritation, but for now, at least, he was calm.</p>
+
+    <p>A person like this, twenty-some years younger, would probably have drawn attention at school. Sheng Wang remembered Old Man Ding saying that Jiang Ou and he had met in high school, stayed together afterward, and married as a matter of course after graduating university. That the Jiang Ou of those days would have liked someone like this seemed, after all, to stand to reason.</p>
+
+    <p>He and Jiang Tian were father and son; in Old Man Ding's old photos, there was a touch of resemblance. But standing before him in person, Sheng Wang felt they weren't alike at all.</p>
+
+    <p>He couldn't say where the difference lay—but they were utterly different.</p>
+
+    <p>"Let's find somewhere," Ji Huanyu said, pulling out his phone to check the time. "Isn't there a corner over there—"</p>
+
+    <p>"Right here." Jiang Tian cut him off impatiently. "Whatever you've got to say, say it here."</p>
+
+    <p>Ji Huanyu looked at him and sighed, setting down his phone. "Fine."</p>
+
+    <p>He glanced around. This stretch of alley was secluded enough; no one would come, more hidden even than some restaurant or café or anywhere else.</p>
+
+    <p>A secret place in broad daylight.</p>
+
+    <p>"Fine. Then—" He nodded again, then turned to look at Sheng Wang.</p>
+
+    <p>Jiang Tian gave a cold snort.</p>
+
+    <p>He found Ji Huanyu genuinely laughable—the man had come looking for him saying he wanted to talk, and yet every time put on that air of this mustn't be overheard by outsiders. What for? Wasn't that a contradiction?</p>
+
+    <p>The mockery on his face was too plain. Ji Huanyu was pricked by the expression and suddenly couldn't go on. The calm he'd worked to maintain finally showed a hairline crack.</p>
+
+    <p>He took two steps toward Jiang Tian, then stopped halfway, unable to keep from saying, "Xiao Tian, it's been so many years. Your mother's found a suitable person too. I hear she's actually doing quite well now, far better than she was with me. Why do you keep holding on to that one thing?"</p>
+
+    <p>Jiang Tian glanced away, as if even one more look at him grated. "You're qualified to bring up my mother?"</p>
+
+    <p>"No." Ji Huanyu conceded it quickly, eyes lowered, silent for a long while, staring at some spot on the ground recalling who knew what. After a long time he said, "I'm not qualified to bring her up, which is why I haven't gone to see her again to this day—"</p>
+
+    <p>"You'd better not dare." Jiang Tian's foot shifted.</p>
+
+    <p>Ji Huanyu said hastily, "I haven't, I never went looking for her, I've kept clear of her ever since I came back. But Xiao Tian, it really was a very long time ago. Yes, I was a bit of a mess back then—nothing was going right, the gap between it and what I'd imagined when I was young was too big, and I got a little… possessed. Your mother and I had been living apart a long while by then. You were small, you didn't really know, but the truth was things had already…"</p>
+
+    <p>He weighed his words, no telling whether it was to defend himself or for fear of provoking Jiang Tian. He hesitated a while before going on: "There wasn't much feeling left. I won't lie to you—Xiao Ou… your mother had actually started looking into divorce-agreement matters quite early on, and I had the same thought, only I always felt we could wait a bit longer, could go on living together a bit longer. After all, we'd known each other since high school, gotten together so early."</p>
+
+    <p>He looked at Jiang Tian. "You probably think I was scum from start to finish. And I know why you don't want your mother to find out—you're afraid she'll feel she fed a dozen-some years of her life to the dogs. Right?"</p>
+
+    <p>Jiang Tian didn't refute it.</p>
+
+    <p>He gave a vague, bitter laugh. "Believe it or not—at least back when I was with her, I really did like her quite a lot. I never thought about anything else. But living a life isn't dating, there are too many vexing things. There was the factor of fighting with your mother too. In short, too many messy things, and I got a little dispirited. I don't know if you'll ever be in such a state—sometimes the pressure gets too great, and a few wild thoughts crop up, and you think, forget it, I won't keep on with this, and then you want to do something completely out of line. So…"</p>
+
+    <p>So you tangled yourself up with an unrelated man in a room of that old house?</p>
+
+    <p>Jiang Tian often found certain people laughable—they did things even they were ashamed to put into words, and every time it came up they either steered clear of a third person or stopped short. As if so long as it went unspoken, those things would slowly be drowned over and forgotten. As if just because he wanted to turn the page, others were obliged to forget along with him.</p>
+
+    <p>As if other people's feelings and thoughts counted for nothing, as if other people's memories could be erased at will, as if other people… didn't count as people?</p>
+
+    <p>Ji Huanyu always stressed one line: you were still small then.</p>
+
+    <p>Yes, he really had been very small then—small enough that, looking back later, many things were only disjointed fragments. Just as when he recalled that day, all he remembered was the room wreathed in smoke, choking him until he could barely open his eyes. Cigarette butts everywhere on the floor, burned-out ones, some still carrying a faint red ember. And Ji Huanyu, in the curling smoke, tangled together with another man.</p>
+
+    <p>He'd been ill that day to begin with, dizzy and muddled, maybe even running a fever. The images weren't even quite real, like the snarling, clawing limbs in a doodle or a cheap film.</p>
+
+    <p>He'd probably said something, startling the entangled pair, and then there was chaos. He seemed to have been flung aside, or maybe someone had knocked into him, and then he'd fallen to the floor, perhaps pressing onto an unextinguished butt—a burning pain at the back of his neck.</p>
+
+    <p>That first year, he was always having nightmares like it. Not frightening ones; only that after waking he'd have to down half a glass of water to push back that nauseating feeling.</p>
+
+    <p>Later the images grew blurrier year by year, until all he remembered was the smell of smoke and that nauseating feeling.</p>
+
+    <p>Zhao Xi often said he was a bit precocious. Maybe so. Just as, at such a young age, he'd already known Ji Huanyu was someone who cared extremely about face, fond of papering over the cracks.</p>
+
+    <p>They all said Jiang Ou and Ji Huanyu were two of a kind, both clueless about caring for him—but he could tell apart who was driven by having no choice and who was simply that by nature.</p>
+
+    <p>The care he received was limited, so even the kind that stayed bottled up inside could count, and so he was protective of Jiang Ou. Back when he'd been taken away, Jiang Ou had held him and cried for a very, very long time, saying it seemed she'd been doing the wrong thing all along, saying she was a bit useless.</p>
+
+    <p>Because of him, Jiang Ou had negated several years of her own life. He didn't want her to negate a dozen-some more years of it because of Ji Huanyu. So he'd kept hiding it.</p>
+
+    <p>As long as he hid it, Ji Huanyu would never tell either.</p>
+
+    <p>And so over the long stretch of time afterward, he both loathed it and had to suppress that loathing in front of Jiang Ou, until slowly the impulse to erupt was gone.</p>
+
+    <p>A jar sealed too long will rust.</p>
+
+    <p>For a long while, he was repelled by all overly intimate contact. Rationally he knew that going too far was as bad as not far enough, but those subconscious things were truly hard to correct.</p>
+
+    <p>Luckily, there'd been Zhao Xi and Lin Beiting.</p>
+
+    <p>From those two friends a few years older, he'd seen something rather different, and then forced himself to slowly grow calm, slowly adjust. Until one day he could finally cleave Ji Huanyu apart from everyone else, and cleave himself apart from those things too.</p>
+
+    <p>Just as the two friends had said: not all closeness represents one kind of feeling. No need to start at shadows—doing so only made it easier to overshoot and ruin things.</p>
+
+    <p>It actually made a lot of sense. Just as he had Zhao Xi, had Lin Beiting, had Gao Tianyang… had many friends near and far, and not one of them had bred any absurd notion in him.</p>
+
+    <p>He wasn't like Ji Huanyu.</p>
+
+    <p>……</p>
+
+    <p>The sky grew darker and darker, and their outlines finally turned indistinct.</p>
+
+    <p>Ji Huanyu had explained for a long time, and toward the end finally grew agitated. He felt he hadn't actually said anything wrong, and yet he couldn't budge Jiang Tian's mind no matter what. He couldn't help thinking again of Old Man Ding's words—back then you were the one shut outside the door; now it's your turn.</p>
+
+    <p>He'd done nothing, yet felt rather worn out, and so he slowly fell silent. And however agitated, calm, anxious, or guilty he got, Jiang Tian stayed that same cold figure throughout.</p>
+
+    <p>Sheng Wang watched Ji Huanyu, and amid the mounting words finally caught the thread. He thought of the things Zhao Xi had said, thought of Jiang Tian's so-called "shadow." Though Ji Huanyu hadn't named anything specific, Sheng Wang had guessed it all.</p>
+
+    <p>He couldn't help looking at Jiang Tian again, and in that instant he suddenly had an illusion—that Jiang Tian's disgust and irritation were floating in the air, not those of the party involved, but more like an onlooker's.</p>
+
+    <p>As if he'd spent many, many years forcibly peeling himself out of those tangled bygones, then planted himself there as an unrelated outsider—and now, today, all these years later, was delivering a line on behalf of the boy who'd once lodged here and there, to the man before him.</p>
+
+    <p>He said to Ji Huanyu, "I think you're disgusting."</p>
+
+    <p>There were no bright streetlamps around, but Sheng Wang could see the man's face go ashen—he really had been pricked by the words.</p>
+
+    <p>He stood rooted in place. Old Man Ding's cursing, Jiang Tian's cold eyes… every kind of pressure and emotion came surging up, and he had that old impulse again, to do something or say something.</p>
+
+    <p>Sheng Wang saw him move and reflexively stepped a little in front of Jiang Tian, as if afraid the man might do something. But the other's gaze swept over the two of them, and then he said one line to Jiang Tian.</p>
+
+    <p>Ji Huanyu said, "Xiao Tian, do you know? Some things are hereditary."</p>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> ☕</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="someone-chapter-063-declaration.html" class="prev">Chapter 63</a>
+    <a href="someone.html">Chapter List</a>
+    <a href="someone-chapter-065-unspoken-words.html" class="next">Chapter 65</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 木苏里 (Mu Su Li). Please support the author on
+      <a href="https://www.jjwxc.net/onebook.php?novelid=3173202" target="_blank">JJWXC</a>.
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

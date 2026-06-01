@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 68 – [Forms of Address] — A Certain Someone — Canon Compliant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad; --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: var(--paper); color: var(--ink); font-family: 'Zilla Slab', Georgia, serif; font-size: 18px; line-height: 1.85; }
+    body::before { content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; }
+    .topbar { border-bottom: 1px solid var(--border); padding: 1rem 2rem; background: var(--paper); position: sticky; top: 0; z-index: 10; }
+    .topbar-inner { max-width: var(--reading-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .topbar-home { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel { font-family: 'Zilla Slab', serif; font-size: 0.85rem; font-style: italic; color: var(--muted); text-align: center; flex: 1; }
+    .kofi-btn { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 0.35rem 0.85rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; flex-shrink: 0; }
+    .kofi-btn:hover { background: var(--rust-light); }
+    .chapter-header { max-width: var(--reading-width); margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
+    .novel-name { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 2rem; font-weight: 700; color: var(--ink); line-height: 1.1; }
+    .chapter-sublabel { font-size: 1.1rem; font-style: italic; color: var(--muted); margin-top: 0.4rem; font-family: 'Zilla Slab', serif; }
+    .chapter-date { font-size: 0.8rem; font-style: italic; color: var(--muted); margin-top: 0.75rem; }
+    .chapter-readtime { font-size: 0.75rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    .chapter-divider { margin: 2rem auto; width: 3rem; height: 1px; background: var(--border); }
+    .chapter-body { max-width: var(--reading-width); margin: 0 auto; padding: 0 2rem 4rem; position: relative; z-index: 1; }
+    .chapter-body p { margin-bottom: 1.4em; }
+    .chapter-body p:last-child { margin-bottom: 0; }
+    .scene-break { text-align: center; margin: 2.5em 0; color: var(--gold); letter-spacing: 0.3em; font-size: 0.85rem; user-select: none; }
+    .chapter-body em { font-style: italic; }
+    .chapter-body strong { font-weight: bold; }
+    .kofi-note { max-width: var(--reading-width); margin: 0 auto; padding: 2rem 2rem 0; position: relative; z-index: 1; }
+    .kofi-note p { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 1.5rem; line-height: 1.7; }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .chapter-nav { border-top: 1px solid var(--border); max-width: var(--reading-width); margin: 2rem auto 0; padding: 2rem 2rem 4rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+    .chapter-nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .chapter-nav a:hover { color: var(--rust); }
+    .chapter-nav .prev::before { content: '← '; }
+    .chapter-nav .next::after { content: ' →'; }
+    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) { body { font-size: 16px; } .chapter-label { font-size: 1.5rem; } .topbar-novel { display: none; } }
+</style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="topbar-home">Canon Compliant</a>
+      <span class="topbar-novel">A Certain Someone</span>
+      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+    </div>
+  </nav>
+  <header class="chapter-header">
+    <p class="novel-name">A Certain Someone · 某某</p>
+    <h1 class="chapter-label">Chapter 68</h1>
+    <p class="chapter-sublabel">[Forms of Address]</p>
+    <p class="chapter-date">Jun 2026</p>
+    <p class="chapter-readtime">~15 min read</p>
+    <div class="chapter-divider"></div>
+  </header>
+  <main class="chapter-body">
+    <p>The truth was, Sheng Wang regretted the words the moment they were out.</p>
+
+    <p>Sometimes when an impulse takes hold a person can't even stop himself. He didn't know what he'd meant by saying it, and he hadn't worked out what answer he'd rather hear, either.</p>
+
+    <p>He'd assumed Jiang Tian wouldn't engage with a joke like that at all—and yet Jiang Tian had spoken.</p>
+
+    <p>It was hard to describe what he felt in that instant. Sheng Wang's mind went blank for two seconds, and he turned to ask, "Who?"</p>
+
+    <p>Jiang Tian made no sound—like some silent self-reproach or regret, as if that just now had only been an impulse of the moment for him too. He let his hand drop, and without lifting his eyes wound the white towel once around his palm. "Who, what?"</p>
+
+    <p>"Didn't you just say <em>not necessarily</em>?" Sheng Wang straightened up.</p>
+
+    <p>His state right now was like he'd just downed three big glasses of ice-cold beer—his whole chest gone cool, while his blood and his head burned as if half-drunk. He didn't know what answer Jiang Tian would give, and he couldn't say whether he was hoping or hurting.</p>
+
+    <p>Jiang Tian glanced at him; for one instant he very nearly said something—but in the end he only turned away and tossed the towel, balled up in his hand, into the washing machine.</p>
+
+    <p>"Just contradicting you off the top of my head. There's no one." Bracing a hand on the balcony door, he said to Sheng Wang, "Go in and sleep. The wind's picking up."</p>
+
+    <p>Sheng Wang didn't answer right away.</p>
+
+    <p>Those few seconds of quiet were faintly strange, exactly like some ambiguous standoff. Only after another moment did Sheng Wang lift his feet and head inside. As he passed in front of Jiang Tian, he grumbled, "Brush-off. Keeping secrets even from me."</p>
+
+    <p>He took two steps, then turned back. "Is it someone I know?"</p>
+
+    <p>Jiang Tian, shutting the door tight behind him, said sourly, "You done yet?"</p>
+
+    <p>"Fine, fine, sleep." Sheng Wang hung the jacket he'd thrown on after his shower on the rack, climbed the little wooden staircase to the upper bunk, and quickly burrowed into the covers.</p>
+
+    <p>Jiang Tian glanced up: the gray-striped quilt bulged into a lump, the back of Sheng Wang's head at the top of it. He walked to the wall and switched off the light. The room plunged into pitch dark, the only glow the fluorescent edge of a phone screen at the rim of that lump up top.</p>
+
+    <p>"Want me to light the way a bit for you?" the lump asked.</p>
+
+    <p>"I can see," Jiang Tian said.</p>
+
+    <p>"Oh."</p>
+
+    <p>Though it was Jiang Tian who'd pushed for sleep, he in fact felt no drowsiness. Pillowed at the head of the bed, he scrolled his phone a while—</p>
+
+    <p>He sorted out a few things with Zhao Xi, replied to Gao Tianyang's screen-flooding messages, flipped through his photo album, then switched back into WeChat again. He'd meant to keep talking with Zhao Xi, only to find that the person at the very top of his chat list had quietly changed their avatar.</p>
+
+    <p>Jiang Tian paused, tapped into Sheng Wang's profile page, and discovered he'd also posted to Moments—</p>
+
+    <p><em>Throttled by curiosity. @Someone</em></p>
+
+    <p>The image below was a little red carton of milk crushed flat by a hand.</p>
+
+    <p>His new avatar was exactly that picture, and his display name had been changed to: <em>Recyclable.</em></p>
+
+    <p>There was already a row of comments under the post.</p>
+
+    <p><strong>Gao Tianyang:</strong> What?? Didn't get to finish the gossip, or did you get stuck halfway through a problem?</p>
+
+    <p><strong>Song Sirui</strong> replied to Gao Tianyang: You dumbass, think about it, obviously the former</p>
+
+    <p><strong>Gao Tianyang</strong> replied to Song Sirui: You're the dumbass</p>
+
+    <p><strong>Gao Tianyang:</strong> Which clown is jerking around our Sheng-ge like this? People who tell half a piece of gossip ought to be outlawed.</p>
+
+    <p><strong>Song Sirui:</strong> People who tell half a piece of gossip ought to be outlawed</p>
+
+    <p><strong>Wu Kai:</strong> People who tell half a piece of gossip ought to be outlawed</p>
+
+    <p><strong>Li Yu:</strong> Now I'm being throttled by curiosity too</p>
+
+    <p><strong>Zhang Qinglan:</strong> Now I'm being throttled by curiosity too</p>
+
+    <p>…</p>
+
+    <p>When the Class A crowd reply to a Moments post they love to line up and play parrot, the row stretching into a long dragon—genuinely a procession of idiocy carried off with real momentum. Not until the very tail of the line did someone break formation.</p>
+
+    <p>He said: <em>Camping here live for a Someone.</em></p>
+
+    <p>Someone: "…"</p>
+
+    <p>He reached up and rapped on the bed board over his head, like knocking on someone's bedroom door. He'd actually meant to say "there really isn't anyone" one more time—but what came out was, "Why'd you suddenly change your avatar?"</p>
+
+    <p>Sheng Wang said up top, in a buzz, "Don't knock. He's asleep."</p>
+
+    <p>Jiang Tian was rendered speechless.</p>
+
+    <p>The phone switched back to a certain someone's profile page, the avatar quite a bit larger than the one in Moments. The crushed little red carton bowed at the waist, the cartoon's smiling face slightly warped, the corners of its mouth tugged down.</p>
+
+    <p>Without that Moments post, it would honestly be hard to tell from the avatar alone whether he was joking or not in the best of moods.</p>
+
+    <p>Jiang Tian looked a while, then swiped a thumb across the screen—like patting someone's head through the picture.</p>
+
+    <p>The person in the upper bunk turned over. After a long while, his breathing slowly went soft and even; he must really have fallen asleep. The dorm was utterly still, and listening to that faint breathing, Jiang Tian opened Moments again. He wanted to say something but didn't know what he could say, and in the end posted only a string of punctuation.</p>
+
+    <p>His ellipsis settled at the very bottom, unlike the joking parrot-relay of the rest of the class, and across the long line it answered the "@Someone" at the very top from afar—and those two simple words, all at once, took on something ambiguous.</p>
+
+    <p>*</p>
+
+    <p>The camp's classes weren't scheduled all that tightly. Mornings were grammar-point training, afternoons oral, and evenings had no mandatory content; the study room stayed open all day, and the dorm had no rest restrictions either.</p>
+
+    <p>A competition was a frill in the first place—whether you wanted to add the frill, and how much of it, no one minded for you, at least not the way a homeroom teacher would. It was all on your own initiative.</p>
+
+    <p>Compared with the other schools, the Yizhong students were a touch more brazen. The first day they'd been fairly tame, behaving themselves in the front area, going obediently back to the dorm after meals—and then the second day they changed.</p>
+
+    <p>Come every break, the pack would sprawl across their desks and start plotting where to go raise hell that night.</p>
+
+    <p>Bian Chen, leading the charge, had a wicked-loud voice; thanks to him the whole class learned that this school actually wasn't so desolate—there were some shops, all clustered around the south gate of that area behind the hill. The storefronts were extremely one-note, though: eat and drink, eat and drink, with an internet café or two and a board-game shop wedged in between.</p>
+
+    <p>"Sounds like there's an escape room—newly opened, supposedly, wasn't there last year, the setup should be decent," a Yizhong girl said.</p>
+
+    <p>"How about we go scout it tomorrow?" Bian Chen proposed.</p>
+
+    <p>After he'd squeezed into the back row to apologize to Sheng Wang the day before, he hadn't moved seats again, dragging another classmate to settle in front of Sheng Wang and Jiang Tian, and it had become his fixed seat.</p>
+
+    <p>Having egged the Yizhong classmates on, he turned around to ask the two at the back desk, "How about it, come along?"</p>
+
+    <p>"Got something on tomorrow." Sheng Wang declined flatly.</p>
+
+    <p>"What thing?" Bian Chen asked, then turned to the other. "Jiang Tian, you?"</p>
+
+    <p>Sheng Wang quietly turned his head to stare at his ge. His ge tipped his head Sheng Wang's way and said, "I'm with him."</p>
+
+    <p>Bian Chen shrugged toward the side, and several tables of girls drew their eyes back, half-disappointed, half-bashful.</p>
+
+    <p>"What's the thing tomorrow, is it important?" Bian Chen tried to push a little, looking at Sheng Wang and then at Jiang Tian. "Eh? Jiang-ge, old classmates and all."</p>
+
+    <p>Jiang Tian showed no sign of budging. He knew Sheng Wang's birthday was the day after tomorrow; by rights there really was nothing on tomorrow—but he could tell Sheng Wang had zero interest in going out with the group, and he himself had no real friendship with Bian Chen. They'd barely spoken in the same class in middle school, never mind being at different schools now.</p>
+
+    <p>"Why don't you go today?" Sheng Wang asked offhand.</p>
+
+    <p>"How are we supposed to go today?" Bian Chen lifted the two sheets of paper off the desk and shook them. "Big bro, you forget all this stuff they just handed out? You don't have to prep tonight?"</p>
+
+    <p>The papers in his hand were from the first oral-class period that afternoon. There'd been no two-against-two contest arranged today, just some basic training, a talk on the things to mind in a speech, and then an assigned theme around which every student was to put together speech material. Starting tomorrow, the group PKs would begin for real.</p>
+
+    <p>Bian Chen asked, half-joking, "We two are opponents tomorrow afternoon—why don't you give me a peek at your hand, let me brace myself a little. How's your oral?"</p>
+
+    <p>Sheng Wang thought about it. "Pretty good."</p>
+
+    <p>Bian Chen: "…"</p>
+
+    <p>He'd been all set to play modest first and then talk up his opponent—a little courtesy, after all, made a person underestimate you. Who could have guessed that before he'd even started the talking-up, the other was already floating sky-high.</p>
+
+    <p>Jiang Tian laughed once beside them, and only then did Bian Chen come back from his stupor, thinking: I was only asking, and you damn well start bragging. Among Yizhong students there really weren't many who'd call their own oral good—Sheng Wang had opened his eyes for him.</p>
+
+    <p>People who liked to brag never had a clue. Bian Chen thought: tomorrow's in the bag.</p>
+
+    <p>But this kind of prepared-in-advance speech actually had a lot of give to it, since the script itself still came down to penmanship. Someone whose oral was only so-so might still earn a few points with a well-written script. Bian Chen didn't want to hand his opponent the chance to earn those points.</p>
+
+    <p>His written test had come in just one point below Sheng Wang—a gap like that proved nothing at all. He planned to grind out a good script tonight and rattle his opponent again with his oral tomorrow, going for an overwhelming win.</p>
+
+    <p>First impressions mattered in an exam like this. If he came out crushing from the start, then over all the days that followed he wouldn't have to worry about the other turning it around—the two-week PK points would be safely in hand.</p>
+
+    <p>Competition was just like this: outside the exam room you could be friends, but when it came to scoring points you still had to bare your teeth. Bian Chen told himself so.</p>
+
+    <p>The next day, he wanted to slap himself.</p>
+
+    <p>The speech PK ran in reverse order, starting with the group ranked 39th and 40th. Five teachers scored, total of ten, win or loss by the average. This pack of teachers was one stricter than the next; before the group ranked 14th and 15th took the stage, not a single one of all those students had even broken 8.</p>
+
+    <p>Number 15 was Jiang Tian's middle-school classmate Ge Hui, and compared with the ones before her, her pronunciation counted as quite pretty. But folded together with the script it came to only 8.6 in the end—the first to barely clear 8.</p>
+
+    <p>The room broke into an uproar on the spot, the Yizhong crowd most of all. The day before they'd figured a 9 was a sure thing for themselves; instead, after all that waiting, the first high score had gone to Fuzhong.</p>
+
+    <p>Jiang Tian's scores were, in fact, extreme.</p>
+
+    <p>One teacher said outright that he loved his pronunciation and that cool-toned style, giving him the highest score of the whole field so far, 9.7. Another was the complete opposite, reckoning he deserved a negative for "vivid feeling and expression," though the script was excellent, and grudgingly landed on 8.6. But averaged across the five, he still took a 9.3.</p>
+
+    <p>While he was still off the stage, Sheng Wang sent him a string of stickers over WeChat—nationwide-celebration ones, gongs-and-drums ones, headbanging-rock ones… and at the end his hand slipped and he sent one of two cats, one of them with its arms around the other, kissing and nibbling.</p>
+
+    <p>He froze, looked up on instinct, and met Jiang Tian's gaze. The other had just come down off the stage and was walking back toward the seats.</p>
+
+    <p>Sheng Wang rubbed at the screen and, eyes down, recalled the last sticker. Having recalled it, he felt that drew too much attention to itself, so he simply recalled the one above it too.</p>
+
+    <p>So when Jiang Tian sat down and glanced at WeChat, in a certain someone's chat box there was a row of nine "The other party recalled a message." All in a tidy line.</p>
+
+    <p>"…"</p>
+
+    <p>Jiang Tian stared at the screen expressionlessly for a moment, then truly couldn't help it and turned to look at Sheng Wang. This person, banking on having recalled all his messages, was airing his screen without a care, not the least bit afraid of being seen. And so Jiang Tian saw his own bizarre contact name.</p>
+
+    <p>"Best Actor of the Forest?" Jiang Tian's brows drew together.</p>
+
+    <p>Sheng Wang thought: damn, forgot about that. He stole a look at the expression of the person beside him and instantly soothed, "Change it, change it, changing it now. I just wrote it at random—Sheng Mingyang's still saved as Wellness Encyclopedia."</p>
+
+    <p>So saying, he tapped into Jiang Tian's profile page, cleared the contact name blank, and typed in "Jiang Tian." The other was unmoved; his expression didn't improve in the slightest.</p>
+
+    <p>Sheng Wang met his eye, deleted the two characters, and typed in "Ge." The other's expression began to turn complicated—still no sign of being pleased.</p>
+
+    <p>Sheng Wang cleared the field a third time.</p>
+
+    <p>His fingers hovered above the keyboard, stopping a good while before he pressed in the corner of his lips and, as if possessed, typed "Someone." He'd meant only to make a joke off last night's Moments post, but once it was typed he felt the name carried a hidden weight, like that deep alley out at Wutongwai—always there, never traveled by anyone.</p>
+
+    <p>The student speaking up at the podium was reaching the close, pitch climbing. Sheng Wang snapped back to himself and was about to delete the name—only to see Jiang Tian's lowered eyes shift, his gaze turning back to the podium, like a wordless tacit consent.</p>
+
+    <p>The tip of Sheng Wang's heart gave a heavy jump, and he hurriedly lifted his eyes to the front too. A long while later, he pressed confirm on the screen and put the phone away.</p>
+
+    <p>Sheng Wang didn't take in a single word of the next several speeches, until the Yizhong crowd suddenly burst into whistles and applause and he realized Bian Chen had finished and it was his turn on stage.</p>
+
+    <p>Bian Chen set off the second little climax of the afternoon. His scores weren't extreme like Jiang Tian's; every teacher's appraisal trended the same, saying his script was good, his delivery good, very compelling—and his final score was likewise 9.3. Tying with Jiang Tian was enough to thrill him, given that Jiang Tian sat year-round at first place in the joint exams. And after three years of middle school, he knew Jiang Tian's oral level inside out; he'd long been braced for it.</p>
+
+    <p>There were still five people after him. The Yizhong few he knew well, and where oral—especially speeches—was concerned, if he dared call himself second in the class, no one dared call themselves first. So he reckoned the top score was about as good as it would get; tying with Jiang Tian was respectable enough.</p>
+
+    <p>He even thought that if he'd stayed up a little later last night and polished the script a little finer, today's score might have hit 9.5, and then he'd have left them all in the dust.</p>
+
+    <p>Right up until Sheng Wang took the podium, he was still reckoning his odds of a 9.5. And then Sheng Wang finished, and he had no heart for any of it.</p>
+
+    <p>His whole head held only two words—I'm done.</p>
+
+    <p>No wonder the guy had dared call himself "pretty good" yesterday. If that damn well counted as "not so good," then there was no good to be found in the room.</p>
+
+    <p>The five scoring teachers praised him one after another, then chatted with Sheng Wang a few lines, and only then did Bian Chen learn that the guy had been running around with foreigners since he was small.</p>
+
+    <p>He was still reckoning how to land a 9.5; Sheng Wang had already left them in the dust with a 9.7. His own words from last night had come true like a curse: outside the exam room you could be friends, but on the floor certain people really did bare their teeth when they took their points. He just happened to be the one getting bared at…</p>
+
+    <p>First impressions mattered. Crushed from the start, and for the dozen-odd days that followed he could basically give up hope.</p>
+
+    <p>His deskmate clapped Bian Chen on the shoulder. Bian Chen said, "Forget it, I'm not testing anymore…"</p>
+
+    <p>After class the Yizhong crowd swarmed in and dragged Bian Chen off toward the south gate, saying they'd cheer him up.</p>
+
+    <p>Sheng Wang, on the other hand, was in a fine mood. He picked up his bag, glanced at the still-early sky, and said to Jiang Tian, "I feel like eating out today."</p>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> ☕</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="someone-chapter-067-tug-of-war.html" class="prev">Chapter 67</a>
+    <a href="someone.html">Chapter List</a>
+    <span class="next disabled">Coming Soon</span>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 木苏里 (Mu Su Li). Please support the author on
+      <a href="https://www.jjwxc.net/onebook.php?novelid=3173202" target="_blank">JJWXC</a>.
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

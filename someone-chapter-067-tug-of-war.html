@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 67 – Tug-of-War — A Certain Someone — Canon Compliant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad; --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: var(--paper); color: var(--ink); font-family: 'Zilla Slab', Georgia, serif; font-size: 18px; line-height: 1.85; }
+    body::before { content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; }
+    .topbar { border-bottom: 1px solid var(--border); padding: 1rem 2rem; background: var(--paper); position: sticky; top: 0; z-index: 10; }
+    .topbar-inner { max-width: var(--reading-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .topbar-home { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel { font-family: 'Zilla Slab', serif; font-size: 0.85rem; font-style: italic; color: var(--muted); text-align: center; flex: 1; }
+    .kofi-btn { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 0.35rem 0.85rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; flex-shrink: 0; }
+    .kofi-btn:hover { background: var(--rust-light); }
+    .chapter-header { max-width: var(--reading-width); margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
+    .novel-name { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 2rem; font-weight: 700; color: var(--ink); line-height: 1.1; }
+    .chapter-sublabel { font-size: 1.1rem; font-style: italic; color: var(--muted); margin-top: 0.4rem; font-family: 'Zilla Slab', serif; }
+    .chapter-date { font-size: 0.8rem; font-style: italic; color: var(--muted); margin-top: 0.75rem; }
+    .chapter-readtime { font-size: 0.75rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    .chapter-divider { margin: 2rem auto; width: 3rem; height: 1px; background: var(--border); }
+    .chapter-body { max-width: var(--reading-width); margin: 0 auto; padding: 0 2rem 4rem; position: relative; z-index: 1; }
+    .chapter-body p { margin-bottom: 1.4em; }
+    .chapter-body p:last-child { margin-bottom: 0; }
+    .scene-break { text-align: center; margin: 2.5em 0; color: var(--gold); letter-spacing: 0.3em; font-size: 0.85rem; user-select: none; }
+    .chapter-body em { font-style: italic; }
+    .chapter-body strong { font-weight: bold; }
+    .kofi-note { max-width: var(--reading-width); margin: 0 auto; padding: 2rem 2rem 0; position: relative; z-index: 1; }
+    .kofi-note p { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 1.5rem; line-height: 1.7; }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .chapter-nav { border-top: 1px solid var(--border); max-width: var(--reading-width); margin: 2rem auto 0; padding: 2rem 2rem 4rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+    .chapter-nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .chapter-nav a:hover { color: var(--rust); }
+    .chapter-nav .prev::before { content: '← '; }
+    .chapter-nav .next::after { content: ' →'; }
+    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) { body { font-size: 16px; } .chapter-label { font-size: 1.5rem; } .topbar-novel { display: none; } }
+</style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="topbar-home">Canon Compliant</a>
+      <span class="topbar-novel">A Certain Someone</span>
+      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+    </div>
+  </nav>
+  <header class="chapter-header">
+    <p class="novel-name">A Certain Someone · 某某</p>
+    <h1 class="chapter-label">Chapter 67</h1>
+    <p class="chapter-sublabel">Tug-of-War</p>
+    <p class="chapter-date">Jun 2026</p>
+    <p class="chapter-readtime">~14 min read</p>
+    <div class="chapter-divider"></div>
+  </header>
+  <main class="chapter-body">
+    <p>The staff dorm at this school really was far better appointed than an ordinary student dorm. Besides a private bathroom it came with a little kitchen, a mini fridge, and a sterilized washing machine—even the so-called bunk bed was a notch more "deluxe" than the student-dorm kind, at least wide enough, with a small wooden staircase to the upper bunk instead of an iron bar to climb.</p>
+
+    <p>Yang Jing dutifully delivered the two students to their room. She made a circuit of the place and then came out to the balcony—the terrace, more precisely, since it was meant for teachers and not so strictly guarded; there was even a pair of café chairs, as if anyone would sit out here taking the cold wind.</p>
+
+    <p>The balcony looked straight out at the rolling autumn-leaf woods of the little hill. Yang Jing clicked her tongue and muttered, "Quite the ambiance."</p>
+
+    <p>Sheng Wang was unpacking. Hearing this, he asked, "Better than the teachers' apartments at our school?"</p>
+
+    <p>Yang Jing delivered her verdict: "The place is smaller than mine—mine's got a bedroom and a living room. The view's not bad though. There's got to be one good point, hasn't there. It's not easy being a teacher, grading those papers of yours day in and day out—one careless slip and you've gone and given yourself depression."</p>
+
+    <p>Without a shred of modesty Sheng Wang said, "Well, it's not me giving you the English-paper depression, anyway."</p>
+
+    <p>"Stop fanning your tail and hand over your key card." Jiang Tian set the emptied case down and stretched out a hand toward him.</p>
+
+    <p>"Oh." Sheng Wang obediently dug through his pocket.</p>
+
+    <p>Yang Jing found this a little funny, and couldn't help asking Jiang Tian, "Isn't it one card per person? What do you want his for?"</p>
+
+    <p>Jiang Tian slid the card away, his thin eyelids lifting in plain mockery. "Let him tell you himself."</p>
+
+    <p>Sheng Wang said, face blank, "Reporting, Sister Jing: as of today, I have lost three school cards, two dorm keys, three rulers, and—how many pens was it?"</p>
+
+    <p>Yang Jing: "…How have you not lost your head?"</p>
+
+    <p>Sheng Wang thought about it, then defended himself, "But I've reformed lately. Haven't lost anything this whole stretch."</p>
+
+    <p>Jiang Tian's fingers paused. He lowered his eyes, silent for a moment, then quietly tucked the card into the inner pocket of his bag.</p>
+
+    <p>Their door was open, and outside there was a sudden uproar—a whole wave of boys came surging up from downstairs, half jeering, half laughing.</p>
+
+    <p>"What's the racket?" Yang Jing walked to the doorway, Sheng Wang and Jiang Tian following.</p>
+
+    <p>The boys from the few neighboring dorms were all sprawled along the corridor, heads together, studying the camp's class schedule, while a scattered few more came up the stairs still marveling, "Holy crap, this arrangement's incredible."</p>
+
+    <p>At a camp like this, students inevitably cliqued up a little, the same-school ones liking to stick together. A group this size—one look told you they were from Yizhong.</p>
+
+    <p>Yizhong had held more than half the field at the English camp for years running; these students moved through the place like it was home, free and uninhibited, with a certain host's swagger.</p>
+
+    <p>It took Sheng Wang a while of listening to their chatter to work out why the boys were carrying on like this: all the camp students, male and female alike, were housed in this one building—the boys on this floor, the girls on the floor right below.</p>
+
+    <p>Sure enough, a chorus of startled cries soon rose from downstairs; the girls had caught on too.</p>
+
+    <p>"Are you serious—has the school lost its mind?" Sheng Wang said, astonished.</p>
+
+    <p>Yang Jing shook her head. "That's just them hyping it up. Every floor has an iron grille door. It's open now to make hauling luggage easier; once your classes start, those doors are locked on a timer. I asked logistics the moment I saw the arrangement—they do room checks at curfew. Yizhong passes this down generation to generation; how could they not know."</p>
+
+    <p>"Then what are they hollering about?" Sheng Wang was caught between laughing and crying.</p>
+
+    <p>"No idea," Yang Jing said sourly.</p>
+
+    <p>Adolescence was all jumps and starts; pack a big crowd together and the slightest thing out of the ordinary set them off. Before long the boys had broken into a chase-and-shove, the whole group pinning some kid flat against the wall—no different from Gao Tianyang, Song Sirui, and that pack of dimwits.</p>
+
+    <p>Yang Jing pointed loosely at the two of them. "I'm warning you—don't come back from this camp infected with Yizhong's brand of stupid. And another thing: whether it's boys or girls downstairs, grille door or not, it's none of your business. Don't go stirring up trouble, hear me?"</p>
+
+    <p>The words landed, and two pairs of eyes looked at her in wordless silence. Yang Jing thought it over and decided these two really didn't look the type to go chasing girls. She revised herself: "Even if a girl makes the first move, that's a no too. Don't engage."</p>
+
+    <p>The two pairs of eyes went on looking at her in wordless silence. Yang Jing: "…"</p>
+
+    <p>"Forget it, pretend I said nothing." These two gave her a stomachache. She waved a hand. "Just keep your minds on it and win me the second round. For anyone else I'd run a pre-competition coaching session, but the two of you with your nerves of steel can skip it. I've got exactly one demand: do not hand in your papers early. Let me catch you doing it again and you'll see."</p>
+
+    <p>Having settled them in, Yang Jing left with the chartered bus.</p>
+
+    <p>Sheng Wang chewed over her words and decided all that worry of hers was a bit superfluous. How would he go stirring up trouble—and if he did, it wouldn't be with anyone downstairs. As for those girls, they didn't know the two of them from anyone; what move would they possibly make.</p>
+
+    <p>But he soon discovered he might have it wrong. There really were some who knew them.</p>
+
+    <p>There were no formal classes the afternoon of check-in, only a camp opening ceremony—essentially the same as a start-of-term homeroom meeting, just handing out some materials and saying a few motivating words.</p>
+
+    <p>There was a print room in front of the lab building. Jiang Tian went to print the student information forms they had to submit, while Sheng Wang took his bag ahead to grab seats in the classroom—only to walk in and hear Jiang Tian's name.</p>
+
+    <p>Sheng Wang shot a glance at the chatting cluster and found a window-side desk for two in the back row. The conversation up front carried clearly to his ears, and after listening a while he pieced it together: two of the Yizhong crowd had been Jiang Tian's middle-school classmates, one boy and one girl.</p>
+
+    <p>The girl sat perched on a desk, hair in a loose ponytail, in an oversized jacket, arm hooked through another girl's, laughing in a tangle with the rest—every joke was started by her, and she looked even feistier than Class A's resident pepper.</p>
+
+    <p>She was apparently easy to talk to; the Yizhong crowd were all ribbing her, saying things like "old deskmates ought to catch up" and "when Jiang Tian gets here I'll drag you over to sit in front of him."</p>
+
+    <p>The boy leading the ribbing had dark skin and wore a bright silver sports jacket—he was the boy who'd been Jiang Tian's classmate.</p>
+
+    <p>Sheng Wang quietly eyed the empty seat in front, pulled out a chair, sat down, and messaged Jiang Tian on WeChat.</p>
+
+    <p><strong>Sticker:</strong> Old classmate of yours here at Yizhong</p>
+
+    <p>When he sent it, he'd thought his tone was perfectly normal; looking again after sending, it felt a little odd, so he recalled it.</p>
+
+    <p>The next second, Jiang Tian's reply came through.</p>
+
+    <p><strong>Best Actor of the Forest:</strong> Which one?</p>
+
+    <p>Sheng Wang: "…"</p>
+
+    <p>Aren't you printing? What are you doing staring at WeChat?</p>
+
+    <p>Sheng Wang grumbled inwardly.</p>
+
+    <p>If Jiang Tian had just not seen it, fine—but with him replying like this, that "You recalled a message" line above looked a touch unnatural.</p>
+
+    <p>In truth the middle school Jiang Tian had attended was famous to begin with; running into old classmates at a competition like this was hardly strange. His ge was that outstanding; for there to be people among his old classmates who'd liked him was the most natural thing in the world. Sheng Wang genuinely felt nothing about it. But after a few WeChat messages, it somehow looked like there was something to feel.</p>
+
+    <p>Sheng Wang looked at the chat box and laughed despite himself, then just said a few more lines.</p>
+
+    <p><strong>Sticker:</strong> Don't know the names</p>
+
+    <p><strong>Sticker:</strong> One boy one girl</p>
+
+    <p><strong>Sticker:</strong> Seem to be your middle school classmates</p>
+
+    <p><strong>Best Actor of the Forest:</strong> Didn't notice</p>
+
+    <p><strong>Sticker:</strong> You'll probably know once you're in the classroom</p>
+
+    <p>By the time he sent that, the Yizhong crowd had switched topics—this time something actually related to the competition.</p>
+
+    <p>"I heard this camp's going to factor in our preliminary scores?"</p>
+
+    <p>"Then I'm done for, I bombed the prelims," someone said, chagrined.</p>
+
+    <p>"Oh, get out, quit faking, will you? You placed top ten and you call that bombing? You and I tied, and I sure don't feel like I bombed." That was Bright Silver.</p>
+
+    <p>"Right, the few people ranked around you are all ties, basically a sixth place—if you bombed, where does that leave the rest of us?"</p>
+
+    <p>"Don't even bring it up. Fifth's from Fuzhong, number 11's Jiang Tian, and we're caught in the middle—wolves in front, tigers behind."</p>
+
+    <p>Bright Silver said, "What's there to be scared of, the second round has a speech and a Q&A, that's half the points. If nothing else, our school's got a big edge in oral English. Once you tally up all the bits and pieces, we'll leave them in the dust."</p>
+
+    <p>"Jiang Tian's oral isn't good?" someone asked.</p>
+
+    <p>Bright Silver gave a dry laugh. "Him, never mind—his oral's better than mine."</p>
+
+    <p>"Then what the hell are you on about!"</p>
+
+    <p>"We can still beat fifth!" Bright Silver said. "You've seen the Fuzhong lot at other competitions—either dumbasses or dead weight. They never used to crack the English top forty. My guess is fifth is somebody who grinds books and drills problems to death—I'd bet on the latter."</p>
+
+    <p>Sheng Wang: "…"</p>
+
+    <p>"Tone it down a little, there's someone in the room," a classmate cautioned. The Yizhong boys and girls reflexively turned to sweep their eyes around; when the girls' gaze passed over Sheng Wang it lingered a moment before they turned away, murmuring with smiles.</p>
+
+    <p>Apart from Sheng Wang, there were a few other students scattered about the room—plainly from other provincial key schools.</p>
+
+    <p>Bright Silver waved a hand. "Are you stupid? He came with Jiang Tian, obviously they came together. Jiang Tian's not in the room yet, what are you afraid of."</p>
+
+    <p>"Oh—right." The others thought it over, found it reasonable enough, and nodded along.</p>
+
+    <p>He'd barely finished when Jiang Tian walked in with the printed materials.</p>
+
+    <p>Thanks to those two old classmates, his level of notoriety in the Yizhong elite class was no lower than at Fuzhong. The moment he came through the door, the whole chatting group turned their heads in unison.</p>
+
+    <p>Bright Silver gave the girl a teasing shove, then raised a hand and called, "Jiang Tian!"</p>
+
+    <p>Jiang Tian's steps paused; he looked over. "You're here too?"</p>
+
+    <p>"Yeah, lucked into a spot through dumb luck. Ge Hui's here as well." Bright Silver looked at his hands, puzzled. "You didn't even bring your bag, just the materials?"</p>
+
+    <p>"Bag's there." Jiang Tian pointed, then walked toward Sheng Wang.</p>
+
+    <p>The Yizhong crowd blanked first, then slowly turned to follow him toward Sheng Wang, and their faces all went green. The girls broke into laughter first; Bright Silver's skin went from dark to red, mortified out of his mind. He came trotting over with his tail between his legs, dropped into the empty seat in front of the two, and gave Sheng Wang a couple of dry laughs. "So, uh—when I was just talking all that nonsense, why didn't you cut me off?"</p>
+
+    <p>Sheng Wang thought about it. "If I'd cut you off right then, you'd probably have been even more embarrassed."</p>
+
+    <p>Bright Silver: "…"</p>
+
+    <p>"My mouth's always been a bit foul—let's call it no fight, no friendship, all right?" Bright Silver introduced himself. "I'm Bian Chen."</p>
+
+    <p>This no-fight-no-friendship Bian Chen wasn't quite dumb and wasn't quite sharp, but his mouth really was a menace. He probably carried a flicker of guilt, because he spent the whole afternoon trying to cozy up to Sheng Wang and chat at random—and managed to step on every landmine, the more he talked the blanker Sheng Wang's face got, and so the grudge was officially struck.</p>
+
+    <p>The teacher said half the course time this round would be oral training, run with a competitive edge: students paired off two to a group, practicing speeches, Q&A and the like in a PK format—a win scored 1, a loss 0—and over the two weeks of camp the tallies would be summed and folded into the second-round total.</p>
+
+    <p>Pairings followed the preliminary scores. The forty were split by odd and even ranks: fifth-place Sheng Wang, for instance, was grouped with sixth—and with several people tied for sixth this time, they went by initial, and the one who came first happened to be Bian Chen.</p>
+
+    <p>Once the groups were sorted, the teacher handed everyone a camp uniform and textbook, and that was the day's business done.</p>
+
+    <p>Logistics had given them a campus map, and Sheng Wang and Jiang Tian picked a shortcut by it to the cafeteria for dinner. On the way back to the staff dorm they ran into the Yizhong crowd again. Several girls were nudging the one called Ge Hui forward, a tide of murmuring buzzing up before they giggled and walked off; no one quite dared to actually start anything.</p>
+
+    <p>Later, back in the dorm, the girls downstairs spotted him and Jiang Tian leaning at the balcony talking, and swarmed their heads out to look, then drew back in—even their giggling and chatter pitched low.</p>
+
+    <p>For all the fierce ribbing that afternoon, the moment they were actually in front of Jiang Tian they turned bashful one and all. Even Ge Hui, who'd once been Jiang Tian's deskmate for a year, kept her exchange with him today to a single hello.</p>
+
+    <p>It always seemed to go this way—girls swarming over, then balking at Jiang Tian's cool, indifferent air. Sheng Wang had seen it too many times.</p>
+
+    <p>The last girl downstairs drew back in too. Sheng Wang lowered his eyes for a glance, then drew his gaze back, and joked, "Balcony's all cleared out—everyone who came out got frozen off by you, not one left."</p>
+
+    <p>Jiang Tian had just showered, a white towel draped over his neck, his slightly damp hair lifting in the evening wind. His thumb scrolled through the calendar and weather on his phone; then he pressed the screen dark and said, "The wind froze them off. What's that got to do with me."</p>
+
+    <p>Sheng Wang clicked his tongue.</p>
+
+    <p>Sheng Mingyang was messaging him just then, asking that his birthday was two days off—how did he plan to spend it, and if there were no restrictions at the camp, he and Jiang Ou wanted to rush over and treat the two of them to a proper meal.</p>
+
+    <p>Sheng Wang's fingers flew across the phone, saying there were restrictions here and parents couldn't come. Having tapped send, he spoke again. "Lao Gao was right."</p>
+
+    <p>"What was Lao Gao right about?" Jiang Tian asked, puzzled.</p>
+
+    <p>"Back at the sports meet, a girl from Class 9 asked Lao Gao to pass you a love letter. Lao Gao turned it down flat, said one line to her," Sheng Wang said.</p>
+
+    <p>"What line?"</p>
+
+    <p>"He said, does my Tian-ge look like the type who'd like anybody?" Sheng Wang mimicked Gao Tianyang's tone, and laughed before he'd even finished.</p>
+
+    <p>He held his phone, gazing lazily at the low hill across the way.</p>
+
+    <p>The autumn-leaf woods were a dense black under the night, rolling and unbroken; because there was so little light, you could make out a few stars, some bright, some dim.</p>
+
+    <p>Sheng Wang tucked in the corner of his mouth and added, still joking, "He really doesn't look like the type who'd like anybody."</p>
+
+    <p>In the corner of his vision, Jiang Tian's hand paused mid-towel. After a moment, he ruffled his damp hair a couple of times and said, "Not necessarily."</p>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> ☕</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="someone-chapter-066-vacation.html" class="prev">Chapter 66</a>
+    <a href="someone.html">Chapter List</a>
+    <a href="someone-chapter-068-forms-of-address.html" class="next">Chapter 68</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 木苏里 (Mu Su Li). Please support the author on
+      <a href="https://www.jjwxc.net/onebook.php?novelid=3173202" target="_blank">JJWXC</a>.
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>
