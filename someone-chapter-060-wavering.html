@@ -3,241 +3,197 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chapter 60 – Wavering — A Certain Someone — Canon Compliant</title>
+  <title>Ch. 60 — Wavering — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
       --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
       --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
-      --muted: #6b5f52; --border: #c8bfad; --reading-width: 660px;
+      --muted: #6b5f52; --border: #c8bfad;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background-color: var(--paper); color: var(--ink); font-family: 'Zilla Slab', Georgia, serif; font-size: 18px; line-height: 1.85; }
-    body::before { content: ''; position: fixed; inset: 0;
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none; z-index: 0; }
-    .topbar { border-bottom: 1px solid var(--border); padding: 1rem 2rem; background: var(--paper); position: sticky; top: 0; z-index: 10; }
-    .topbar-inner { max-width: var(--reading-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-    .topbar-home { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-    .topbar-home:hover { color: var(--rust); }
-    .topbar-novel { font-family: 'Zilla Slab', serif; font-size: 0.85rem; font-style: italic; color: var(--muted); text-align: center; flex: 1; }
-    .kofi-btn { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 0.35rem 0.85rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; flex-shrink: 0; }
-    .kofi-btn:hover { background: var(--rust-light); }
-    .chapter-header { max-width: var(--reading-width); margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
-    .novel-name { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
-    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 2rem; font-weight: 700; color: var(--ink); line-height: 1.1; }
-    .chapter-sublabel { font-size: 1.1rem; font-style: italic; color: var(--muted); margin-top: 0.4rem; font-family: 'Zilla Slab', serif; }
-    .chapter-date { font-size: 0.8rem; font-style: italic; color: var(--muted); margin-top: 0.75rem; }
-    .chapter-readtime { font-size: 0.75rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
-    .chapter-divider { margin: 2rem auto; width: 3rem; height: 1px; background: var(--border); }
-    .chapter-body { max-width: var(--reading-width); margin: 0 auto; padding: 0 2rem 4rem; position: relative; z-index: 1; }
-    .chapter-body p { margin-bottom: 1.4em; }
-    .chapter-body p:last-child { margin-bottom: 0; }
-    .scene-break { text-align: center; margin: 2.5em 0; color: var(--gold); letter-spacing: 0.3em; font-size: 0.85rem; user-select: none; }
-    .chapter-body em { font-style: italic; }
-    .chapter-body strong { font-weight: bold; }
-    .kofi-note { max-width: var(--reading-width); margin: 0 auto; padding: 2rem 2rem 0; position: relative; z-index: 1; }
-    .kofi-note p { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 1.5rem; line-height: 1.7; }
-    .kofi-note a { color: var(--rust); text-decoration: none; }
-    .chapter-nav { border-top: 1px solid var(--border); max-width: var(--reading-width); margin: 2rem auto 0; padding: 2rem 2rem 4rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
-    .chapter-nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-    .chapter-nav a:hover { color: var(--rust); }
-    .chapter-nav .prev::before { content: '← '; }
-    .chapter-nav .next::after { content: ' →'; }
-    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
-    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
-    .footer-inner a { color: var(--rust); text-decoration: none; }
-    .footer-inner a:hover { text-decoration: underline; }
-    @media (max-width: 560px) { body { font-size: 16px; } .chapter-label { font-size: 1.5rem; } .topbar-novel { display: none; } }
-</style>
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
 </head>
 <body>
-  <nav class="topbar">
-    <div class="topbar-inner">
-      <a href="index.html" class="topbar-home">Canon Compliant</a>
-      <span class="topbar-novel">A Certain Someone</span>
-      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
     </div>
-  </nav>
-  <header class="chapter-header">
-    <p class="novel-name">A Certain Someone · 某某</p>
-    <h1 class="chapter-label">Chapter 60</h1>
-    <p class="chapter-sublabel">Wavering</p>
-    <p class="chapter-date">May 2026</p>
-    <p class="chapter-readtime">~12 min read</p>
-    <div class="chapter-divider"></div>
   </header>
-  <main class="chapter-body">
-    <p>The study atmosphere in Class B wasn't especially intense. Just as Shi Yu had said, half the class spent the lessons with their heads down. There were those playing PSP in the desk compartment, those on mobile games, those chatting on QQ and WeChat, and one with his phone wedged sideways into a canvas pencil case, screen peeking out, reading a web novel—plus another watching videos behind the cover of his long hair, wireless earbuds tucked in.</p>
-
-    <p>The relationship between teachers and students fully demonstrated the principle that the higher the virtue, the higher the devil: one side always had ways to catch you, the other always had ways to play.</p>
-
-    <p>The few students who'd shifted down from Class A weren't quite used to it—or maybe they'd just been in a bad mood to begin with—and one and all wore tight, drawn faces.</p>
-
-    <p>Sheng Wang was the sole exception.</p>
-
-    <p>When Shi Yu had told him all this before, there'd been a touch of bragging and showing off in it. But he'd forgotten: Sheng Wang had moved around too many places, seen too many classes.</p>
-
-    <p>Every class had its own atmosphere, and Sheng Wang had been in ones rowdier than Class B. Back when he was moving up to high school, the top students with the credentials to sit the recommended-admission exam had been pulled out and thrown together into a pre-exam cram class—now that was truly lawless.</p>
-
-    <p>Lock the classroom door, draw the curtains, and pushing desks together for cards, chess, or huddling head-to-head to game online were all routine. Sheng Wang had nailed a folding basketball hoop to the back wall of that classroom, and whenever the boys' hands got itchy they'd toss anything and everything into it—and they'd dare to hold competitions, too. His freakishly accurate shooting was mainly thanks to those two months.</p>
-
-    <p>Some went further still and brought dice, using a mug for a dice cup; whoever lost treated the whole class to a midnight snack. "The whole class" being all of eighteen people. Sheng Wang's luck was bad, so he'd treated many times.</p>
-
-    <p>Back then the school cafeteria's late-night snacks were reserved for the teachers on duty—students theoretically couldn't buy them, for fear it'd keep them from lights-out and sleep. But the eighteen of them succeeded again and again. Twice somebody tipped off the duty teacher, who came hunting them down with the demerit ledger in hand, and they split into three groups and managed to shake him off in the chase, slipping back to the dorm with their loot to raise a triumphant toast—and then reuniting joyfully at Monday's "denunciation rally beneath the national flag."</p>
-
-    <p>Whatever Shi Yu had seen and hadn't seen, Sheng Wang had probably done. Big Mouth Xu had it right: he just traded on his looks, that was all, looking so well-behaved and honest.</p>
-
-    <p>For a while he'd thought that was his favorite class—because it was unbridled, because it was lively, because it let him avoid going home to an empty, boring house.</p>
-
-    <p>Later, when the recommended-admission exam ended and that temporary class disbanded, he discovered his so-called fondness amounted to nothing much—</p>
-
-    <p>By the second day of the holiday, those wild, out-of-line days had already begun to blur. A month later he couldn't even say some classmates' names smoothly anymore, remembering only a few nicknames. And after that, the people from that stretch of time all became "them."</p>
-
-    <p>Because in hindsight, it had all been scattered, trivial things, things that hadn't required any effort, nothing worth mentioning.</p>
-
-    <p>Class B's afternoon was packed with physics and math. The teachers up front lectured hard on problem-solving approaches, while below only a scant few obligingly held their pens. Sheng Wang was one of them.</p>
-
-    <p>He wasn't taking notes, though.</p>
-
-    <p>During the break, the class rep had distributed the make-up assignments the Chinese and English teachers had left for the new students. Sheng Wang lent one ear to the person at the podium while his pen worked, unhurried, through English problems.</p>
-
-    <p>Turning a page, he braced a foot on the desk's crossbar and rocked his chair lightly, thinking that downstairs and upstairs really weren't all that different.</p>
-
-    <p>The teacher's pace was a touch slow, the breakdowns too fine-grained, the difficulty not dug as deep as Lao He and the others dug it; the extension material was a little thin, and there were rather too many repeated problems on the practice papers. But all of that he could regulate himself. Beyond that, there didn't seem to be much wrong with it.</p>
-
-    <p>I told you it wasn't that hard. See—I've already adjusted, haven't I.</p>
-
-    <p>He said this to himself.</p>
-
-    <p>Outside the wind and rain didn't let up; for a long stretch the drops struck the windowpane in dense rhythm, so evenly it grew monotonous, like the clock hanging on the back wall of the classroom endlessly repeating one same sound, time slipping quietly past inside it.</p>
-
-    <p>The sky was dim and indistinct, hard to tell morning from evening, and the teacher's voice was the kind that made you drowsy.</p>
-
-    <p>In the gap between problems Sheng Wang lifted his eyes and suddenly couldn't get a fix on the day. He pulled out a Chinese paper and spent a class and a half on it, writing down to the last reading passage, when the strokes from his pen began to come and go.</p>
-
-    <p>He scratched at it a few times before realizing the ink in the barrel had run dry without his noticing, leaving only a thin film of faintly yellow oil seal—Chinese papers really did burn through ink as ever.</p>
-
-    <p>Out of habit he twisted off the pen's nib, leaned his chair back, and without turning around tapped on the desk behind him, then held out his hand and waited.</p>
-
-    <p>A few seconds of blank time appeared; no one pressed anything into his open palm. He didn't get a new refill—he got, instead, Shi Yu's puzzled question: "What's up? Borrowing a ruler, or a pen?"</p>
-
-    <p>Sheng Wang blanked for an instant, then was abruptly mortified.</p>
-
-    <p>The rain seemed to grow louder from that moment, noisy to the point of being maddening. He turned around amid the din, meaning to say to the baffled Shi Yu, "Got a spare refill? Lend me one, I'll give it back tomorrow."</p>
-
-    <p>But before he could open his mouth, he no longer wanted to say it.</p>
-
-    <p>Shi Yu was still at a total loss. Sheng Wang gave a little smile. "Never mind. I've gone cross-eyed from doing problems."</p>
-
-    <p>"Oh……" Shi Yu answered blankly.</p>
-
-    <p>Without waiting to say anything more, Sheng Wang had already turned back around.</p>
-
-    <p>He looked at the gel pen split into two halves in his hand and suddenly lost all interest in working through any more problems. He sat for a long time amid the pouring rain and finally admitted he'd been taking a little too much for granted.</p>
-
-    <p>He'd overestimated his adaptability, and overestimated his endurance, too.</p>
-
-    <p>In less than half a day, he'd started to miss that seat upstairs.</p>
-
-    <p>How the latter half of the period went by, Sheng Wang no longer remembered. He only remembered coming abruptly back to himself at the bell, pulling the all-but-unused umbrella from his bag, and hurrying off on a trip to the Xile convenience store.</p>
-
-    <p>Boss Zhao was bewildered, muttering and grumbling, "Aiyo, what are you doing running over here in the pouring rain? Look at your trouser cuffs, look how much water you've splashed up. You'll be crying when it comes time to wash them."</p>
-
-    <p>"It's fine, there's the laundry auntie." Sheng Wang burrowed straight to the very back.</p>
-
-    <p>Boss Zhao craned his neck over, puzzled, to look, and found him picking up three boxes of refills—red, black, and blue—and on top of that a paper knife, a ruler, tape, a card-marking pencil…</p>
-
-    <p>"Okay, okay, okay, what are you doing? Buying wholesale?" Boss Zhao came hurrying out from behind the register like a parent worried his son was spending recklessly, trailing Sheng Wang back and forth in front of the shelves.</p>
-
-    <p>Sheng Wang's gaze was still roaming over the racks. "I'm not buying wholesale, these are all things I need."</p>
-
-    <p>Boss Zhao was even more confused. "The refills I'll grant you, I know you lot go through them fast. But where don't you already have a ruler, a knife, a card-marking pencil? Were you not attending class before or something?"</p>
-
-    <p>Sheng Wang explained, in all seriousness, "I have them, but I'm always losing this and dropping that, can't find them the moment I turn around, and then I have to borrow."</p>
-
-    <p>Boss Zhao gave a couple of "tsk, tsk"s. "Brat sons the whole world over are the same, scatterbrained and never tidy."</p>
-
-    <p>He'd barely finished when he noticed Sheng Wang had picked up three packs of sticky notes, and couldn't help scolding again: "One pack's about enough, what do you want that many for?"</p>
-
-    <p>"To stick up. To remind me not to lose things all over the place," Sheng Wang said. "So I don't keep having to borrow from people."</p>
-
-    <p>He grabbed a few more things, until he could barely hold them all against his chest, and only then said, in a low voice, "I don't want to borrow from people anymore."</p>
-
-    <p>Three years to a generation gap—Boss Zhao felt there was a whole Pacific Ocean between him and Sheng Wang. He couldn't understand what students these days were thinking; he only knew that if Sheng Wang kept circling much longer he'd be late for class.</p>
-
-    <p>Besides, Sheng Wang's manner as he wandered in front of the shelves was a little dazed, as if even he didn't know what else he meant to buy. Boss Zhao patted his back and pushed him over to the register. "Stop picking, and put the duplicates back down for me. Come get them when you've used these up. Just these few things, let me scan and ring you up."</p>
-
-    <p>He found a bag and packed the things in, then thought about it and slipped another layer over the outside so the rain wouldn't soak it. Handing the bag to Sheng Wang, Boss Zhao couldn't help saying, "You know, there's only one more class till dinner—you could perfectly well have come to buy these then. You're going to Wutongwai to eat anyway. It's not like any of this is urgent."</p>
-
-    <p>Sheng Wang said, "My refill just happened to run dry. If I don't buy now I'll have nothing to use next period."</p>
-
-    <p>Boss Zhao nodded, believing it.</p>
-
-    <p>But Sheng Wang himself knew it was all an excuse. He just didn't want to put it off until dinnertime, because Jiang Tian would surely be right there, and he didn't want Jiang Tian to see what he looked like buying these things.</p>
-
-    <p>Flustered, fumbling, aimless.</p>
-
-    <p>He must have looked like a real idiot.</p>
-
-    <p>Sheng Wang carried the bag and hurried back to Mingli Building. Maybe it was the warning bell ringing with its note of urgency, maybe people just got muddled on overcast rainy days—his legs ran faster than his brain, and by the time he came to, he was already standing on the top floor.</p>
-
-    <p>Old Wu was walking toward Class A with his thermos and called out halfway to a boy passing by: "Jiang Tian—take these papers and go hand them out first."</p>
-
-    <p>Jiang Tian took the papers and strode toward the classroom, and as he passed the stairwell he saw Sheng Wang standing there in a daze.</p>
-
-    <p>In one hand Sheng Wang held an umbrella, water trickling off it, a large patch of the floor darkened with wet. In the other he carried a bag, the Xile convenience store's name and the affiliated high school's emblem printed on its face—he'd clearly just bought something and was rushing back to class.</p>
-
-    <p>One look and Jiang Tian knew: he'd run to the wrong floor. His face showed the blank surprise and embarrassment, even a trace of inexplicable wretchedness.</p>
-
-    <p>Jiang Tian glanced away, knit his brows quickly, then turned back and said to Sheng Wang, "Here to see Sister Jing?"</p>
-
-    <p>Sheng Wang shook his head, his pitch-black eyes fixed unblinking on Jiang Tian. After another moment, as if only just coming to, he shook his head again and said, "No, I just…"</p>
-
-    <p>He paused, and finally, helpless and self-mocking, broke into a smile. "Wrong floor."</p>
-
-    <p>Jiang Tian's eyes swept over the smile tugged out at the corner of his mouth, and he didn't answer.</p>
-
-    <p>Even though it was Sheng Wang who'd failed on purpose, who was walking off into the distance all on his own—seeing that smile still made Jiang Tian uncomfortable, still gave him a little pang.</p>
-
-    <p>"Too embarrassing. Just pretend you never saw me, I'm going down." With that, Sheng Wang turned and ran toward the stairs. As he rounded the corner, he lifted his eyes toward this side.</p>
-
-    <p>But Old Wu had already come over and asked, puzzled, "How are you still not in the classroom?"</p>
-
-    <p>By the time the words landed, Sheng Wang had already vanished down the corridor.</p>
-
-    <div class="scene-break">✦ &nbsp; ✦ &nbsp; ✦</div>
-
-    <p>When he got back to his seat, Shi Yu was startled by the big bag of stuff: "What's all this? Planning to move into the classroom?"</p>
-
-    <p>Sheng Wang put the things into the desk compartment one by one and said, without turning around, "I wish."</p>
-
-    <p>"Why? What set you off?"</p>
-
-    <p>"Nothing set me off." Sheng Wang tore open a new refill and swapped it into the gel pen he'd emptied last period. "It's just, the rain's too annoying, and I'm too lazy."</p>
-
-    <p>It was just that the rainy weather was too annoying. He'd finally, with great effort, pressed down certain sprouting things, and before the effort had even shown results, it was on the verge of falling apart at the last step.</p>
-
-    <p>All over just one glimpse of Jiang Tian upstairs.</p>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 60 · A Certain Someone</p>
+      <h1 class="reader-title">Wavering</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>The study atmosphere in Class B wasn't especially intense. Just as Shi Yu had said, half the class spent the lessons with their heads down. There were those playing PSP in the desk compartment, those on mobile games, those chatting on QQ and WeChat, and one with his phone wedged sideways into a canvas pencil case, screen peeking out, reading a web novel—plus another watching videos behind the cover of his long hair, wireless earbuds tucked in.</p>
+        <p>The relationship between teachers and students fully demonstrated the principle that the higher the virtue, the higher the devil: one side always had ways to catch you, the other always had ways to play.</p>
+        <p>The few students who'd shifted down from Class A weren't quite used to it—or maybe they'd just been in a bad mood to begin with—and one and all wore tight, drawn faces.</p>
+        <p>Sheng Wang was the sole exception.</p>
+        <p>When Shi Yu had told him all this before, there'd been a touch of bragging and showing off in it. But he'd forgotten: Sheng Wang had moved around too many places, seen too many classes.</p>
+        <p>Every class had its own atmosphere, and Sheng Wang had been in ones rowdier than Class B. Back when he was moving up to high school, the top students with the credentials to sit the recommended-admission exam had been pulled out and thrown together into a pre-exam cram class—now that was truly lawless.</p>
+        <p>Lock the classroom door, draw the curtains, and pushing desks together for cards, chess, or huddling head-to-head to game online were all routine. Sheng Wang had nailed a folding basketball hoop to the back wall of that classroom, and whenever the boys' hands got itchy they'd toss anything and everything into it—and they'd dare to hold competitions, too. His freakishly accurate shooting was mainly thanks to those two months.</p>
+        <p>Some went further still and brought dice, using a mug for a dice cup; whoever lost treated the whole class to a midnight snack. "The whole class" being all of eighteen people. Sheng Wang's luck was bad, so he'd treated many times.</p>
+        <p>Back then the school cafeteria's late-night snacks were reserved for the teachers on duty—students theoretically couldn't buy them, for fear it'd keep them from lights-out and sleep. But the eighteen of them succeeded again and again. Twice somebody tipped off the duty teacher, who came hunting them down with the demerit ledger in hand, and they split into three groups and managed to shake him off in the chase, slipping back to the dorm with their loot to raise a triumphant toast—and then reuniting joyfully at Monday's "denunciation rally beneath the national flag."</p>
+        <p>Whatever Shi Yu had seen and hadn't seen, Sheng Wang had probably done. Big Mouth Xu had it right: he just traded on his looks, that was all, looking so well-behaved and honest.</p>
+        <p>For a while he'd thought that was his favorite class—because it was unbridled, because it was lively, because it let him avoid going home to an empty, boring house.</p>
+        <p>Later, when the recommended-admission exam ended and that temporary class disbanded, he discovered his so-called fondness amounted to nothing much—</p>
+        <p>By the second day of the holiday, those wild, out-of-line days had already begun to blur. A month later he couldn't even say some classmates' names smoothly anymore, remembering only a few nicknames. And after that, the people from that stretch of time all became "them."</p>
+        <p>Because in hindsight, it had all been scattered, trivial things, things that hadn't required any effort, nothing worth mentioning.</p>
+        <p>Class B's afternoon was packed with physics and math. The teachers up front lectured hard on problem-solving approaches, while below only a scant few obligingly held their pens. Sheng Wang was one of them.</p>
+        <p>He wasn't taking notes, though.</p>
+        <p>During the break, the class rep had distributed the make-up assignments the Chinese and English teachers had left for the new students. Sheng Wang lent one ear to the person at the podium while his pen worked, unhurried, through English problems.</p>
+        <p>Turning a page, he braced a foot on the desk's crossbar and rocked his chair lightly, thinking that downstairs and upstairs really weren't all that different.</p>
+        <p>The teacher's pace was a touch slow, the breakdowns too fine-grained, the difficulty not dug as deep as Lao He and the others dug it; the extension material was a little thin, and there were rather too many repeated problems on the practice papers. But all of that he could regulate himself. Beyond that, there didn't seem to be much wrong with it.</p>
+        <p>I told you it wasn't that hard. See—I've already adjusted, haven't I.</p>
+        <p>He said this to himself.</p>
+        <p>Outside the wind and rain didn't let up; for a long stretch the drops struck the windowpane in dense rhythm, so evenly it grew monotonous, like the clock hanging on the back wall of the classroom endlessly repeating one same sound, time slipping quietly past inside it.</p>
+        <p>The sky was dim and indistinct, hard to tell morning from evening, and the teacher's voice was the kind that made you drowsy.</p>
+        <p>In the gap between problems Sheng Wang lifted his eyes and suddenly couldn't get a fix on the day. He pulled out a Chinese paper and spent a class and a half on it, writing down to the last reading passage, when the strokes from his pen began to come and go.</p>
+        <p>He scratched at it a few times before realizing the ink in the barrel had run dry without his noticing, leaving only a thin film of faintly yellow oil seal—Chinese papers really did burn through ink as ever.</p>
+        <p>Out of habit he twisted off the pen's nib, leaned his chair back, and without turning around tapped on the desk behind him, then held out his hand and waited.</p>
+        <p>A few seconds of blank time appeared; no one pressed anything into his open palm. He didn't get a new refill—he got, instead, Shi Yu's puzzled question: "What's up? Borrowing a ruler, or a pen?"</p>
+        <p>Sheng Wang blanked for an instant, then was abruptly mortified.</p>
+        <p>The rain seemed to grow louder from that moment, noisy to the point of being maddening. He turned around amid the din, meaning to say to the baffled Shi Yu, "Got a spare refill? Lend me one, I'll give it back tomorrow."</p>
+        <p>But before he could open his mouth, he no longer wanted to say it.</p>
+        <p>Shi Yu was still at a total loss. Sheng Wang gave a little smile. "Never mind. I've gone cross-eyed from doing problems."</p>
+        <p>"Oh……" Shi Yu answered blankly.</p>
+        <p>Without waiting to say anything more, Sheng Wang had already turned back around.</p>
+        <p>He looked at the gel pen split into two halves in his hand and suddenly lost all interest in working through any more problems. He sat for a long time amid the pouring rain and finally admitted he'd been taking a little too much for granted.</p>
+        <p>He'd overestimated his adaptability, and overestimated his endurance, too.</p>
+        <p>In less than half a day, he'd started to miss that seat upstairs.</p>
+        <p>How the latter half of the period went by, Sheng Wang no longer remembered. He only remembered coming abruptly back to himself at the bell, pulling the all-but-unused umbrella from his bag, and hurrying off on a trip to the Xile convenience store.</p>
+        <p>Boss Zhao was bewildered, muttering and grumbling, "Aiyo, what are you doing running over here in the pouring rain? Look at your trouser cuffs, look how much water you've splashed up. You'll be crying when it comes time to wash them."</p>
+        <p>"It's fine, there's the laundry auntie." Sheng Wang burrowed straight to the very back.</p>
+        <p>Boss Zhao craned his neck over, puzzled, to look, and found him picking up three boxes of refills—red, black, and blue—and on top of that a paper knife, a ruler, tape, a card-marking pencil…</p>
+        <p>"Okay, okay, okay, what are you doing? Buying wholesale?" Boss Zhao came hurrying out from behind the register like a parent worried his son was spending recklessly, trailing Sheng Wang back and forth in front of the shelves.</p>
+        <p>Sheng Wang's gaze was still roaming over the racks. "I'm not buying wholesale, these are all things I need."</p>
+        <p>Boss Zhao was even more confused. "The refills I'll grant you, I know you lot go through them fast. But where don't you already have a ruler, a knife, a card-marking pencil? Were you not attending class before or something?"</p>
+        <p>Sheng Wang explained, in all seriousness, "I have them, but I'm always losing this and dropping that, can't find them the moment I turn around, and then I have to borrow."</p>
+        <p>Boss Zhao gave a couple of "tsk, tsk"s. "Brat sons the whole world over are the same, scatterbrained and never tidy."</p>
+        <p>He'd barely finished when he noticed Sheng Wang had picked up three packs of sticky notes, and couldn't help scolding again: "One pack's about enough, what do you want that many for?"</p>
+        <p>"To stick up. To remind me not to lose things all over the place," Sheng Wang said. "So I don't keep having to borrow from people."</p>
+        <p>He grabbed a few more things, until he could barely hold them all against his chest, and only then said, in a low voice, "I don't want to borrow from people anymore."</p>
+        <p>Three years to a generation gap—Boss Zhao felt there was a whole Pacific Ocean between him and Sheng Wang. He couldn't understand what students these days were thinking; he only knew that if Sheng Wang kept circling much longer he'd be late for class.</p>
+        <p>Besides, Sheng Wang's manner as he wandered in front of the shelves was a little dazed, as if even he didn't know what else he meant to buy. Boss Zhao patted his back and pushed him over to the register. "Stop picking, and put the duplicates back down for me. Come get them when you've used these up. Just these few things, let me scan and ring you up."</p>
+        <p>He found a bag and packed the things in, then thought about it and slipped another layer over the outside so the rain wouldn't soak it. Handing the bag to Sheng Wang, Boss Zhao couldn't help saying, "You know, there's only one more class till dinner—you could perfectly well have come to buy these then. You're going to Wutongwai to eat anyway. It's not like any of this is urgent."</p>
+        <p>Sheng Wang said, "My refill just happened to run dry. If I don't buy now I'll have nothing to use next period."</p>
+        <p>Boss Zhao nodded, believing it.</p>
+        <p>But Sheng Wang himself knew it was all an excuse. He just didn't want to put it off until dinnertime, because Jiang Tian would surely be right there, and he didn't want Jiang Tian to see what he looked like buying these things.</p>
+        <p>Flustered, fumbling, aimless.</p>
+        <p>He must have looked like a real idiot.</p>
+        <p>Sheng Wang carried the bag and hurried back to Mingli Building. Maybe it was the warning bell ringing with its note of urgency, maybe people just got muddled on overcast rainy days—his legs ran faster than his brain, and by the time he came to, he was already standing on the top floor.</p>
+        <p>Old Wu was walking toward Class A with his thermos and called out halfway to a boy passing by: "Jiang Tian—take these papers and go hand them out first."</p>
+        <p>Jiang Tian took the papers and strode toward the classroom, and as he passed the stairwell he saw Sheng Wang standing there in a daze.</p>
+        <p>In one hand Sheng Wang held an umbrella, water trickling off it, a large patch of the floor darkened with wet. In the other he carried a bag, the Xile convenience store's name and the affiliated high school's emblem printed on its face—he'd clearly just bought something and was rushing back to class.</p>
+        <p>One look and Jiang Tian knew: he'd run to the wrong floor. His face showed the blank surprise and embarrassment, even a trace of inexplicable wretchedness.</p>
+        <p>Jiang Tian glanced away, knit his brows quickly, then turned back and said to Sheng Wang, "Here to see Sister Jing?"</p>
+        <p>Sheng Wang shook his head, his pitch-black eyes fixed unblinking on Jiang Tian. After another moment, as if only just coming to, he shook his head again and said, "No, I just…"</p>
+        <p>He paused, and finally, helpless and self-mocking, broke into a smile. "Wrong floor."</p>
+        <p>Jiang Tian's eyes swept over the smile tugged out at the corner of his mouth, and he didn't answer.</p>
+        <p>Even though it was Sheng Wang who'd failed on purpose, who was walking off into the distance all on his own—seeing that smile still made Jiang Tian uncomfortable, still gave him a little pang.</p>
+        <p>"Too embarrassing. Just pretend you never saw me, I'm going down." With that, Sheng Wang turned and ran toward the stairs. As he rounded the corner, he lifted his eyes toward this side.</p>
+        <p>But Old Wu had already come over and asked, puzzled, "How are you still not in the classroom?"</p>
+        <p>By the time the words landed, Sheng Wang had already vanished down the corridor.</p>
+        <div class="scene-break">❖</div>
+        <p>When he got back to his seat, Shi Yu was startled by the big bag of stuff: "What's all this? Planning to move into the classroom?"</p>
+        <p>Sheng Wang put the things into the desk compartment one by one and said, without turning around, "I wish."</p>
+        <p>"Why? What set you off?"</p>
+        <p>"Nothing set me off." Sheng Wang tore open a new refill and swapped it into the gel pen he'd emptied last period. "It's just, the rain's too annoying, and I'm too lazy."</p>
+        <p>It was just that the rainy weather was too annoying. He'd finally, with great effort, pressed down certain sprouting things, and before the effort had even shown results, it was on the verge of falling apart at the last step.</p>
+        <p>All over just one glimpse of Jiang Tian upstairs.</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-059-class-shift.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-061-the-gift.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
   </main>
-  <div class="kofi-note">
-    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> ☕</p>
-  </div>
-  <nav class="chapter-nav">
-    <a href="someone-chapter-059-class-shift.html" class="prev">Chapter 59</a>
-    <a href="someone.html">Chapter List</a>
-    <a href="someone-chapter-061-the-gift.html" class="next">Chapter 61</a>
-  </nav>
   <footer>
     <div class="footer-inner">
-      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
-      All rights to the original work belong to 木苏里 (Mu Su Li). Please support the author on
-      <a href="https://www.jjwxc.net/onebook.php?novelid=3173202" target="_blank">JJWXC</a>.
-      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
     </div>
   </footer>
 </body>

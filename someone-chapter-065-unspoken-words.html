@@ -3,203 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chapter 65 – Unspoken Words — A Certain Someone — Canon Compliant</title>
+  <title>Ch. 65 — Unspoken Words — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
       --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
       --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
-      --muted: #6b5f52; --border: #c8bfad; --reading-width: 660px;
+      --muted: #6b5f52; --border: #c8bfad;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background-color: var(--paper); color: var(--ink); font-family: 'Zilla Slab', Georgia, serif; font-size: 18px; line-height: 1.85; }
-    body::before { content: ''; position: fixed; inset: 0;
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none; z-index: 0; }
-    .topbar { border-bottom: 1px solid var(--border); padding: 1rem 2rem; background: var(--paper); position: sticky; top: 0; z-index: 10; }
-    .topbar-inner { max-width: var(--reading-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-    .topbar-home { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-    .topbar-home:hover { color: var(--rust); }
-    .topbar-novel { font-family: 'Zilla Slab', serif; font-size: 0.85rem; font-style: italic; color: var(--muted); text-align: center; flex: 1; }
-    .kofi-btn { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 0.35rem 0.85rem; border-radius: 2px; text-decoration: none; transition: background 0.2s; flex-shrink: 0; }
-    .kofi-btn:hover { background: var(--rust-light); }
-    .chapter-header { max-width: var(--reading-width); margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
-    .novel-name { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
-    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 2rem; font-weight: 700; color: var(--ink); line-height: 1.1; }
-    .chapter-sublabel { font-size: 1.1rem; font-style: italic; color: var(--muted); margin-top: 0.4rem; font-family: 'Zilla Slab', serif; }
-    .chapter-date { font-size: 0.8rem; font-style: italic; color: var(--muted); margin-top: 0.75rem; }
-    .chapter-readtime { font-size: 0.75rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
-    .chapter-divider { margin: 2rem auto; width: 3rem; height: 1px; background: var(--border); }
-    .chapter-body { max-width: var(--reading-width); margin: 0 auto; padding: 0 2rem 4rem; position: relative; z-index: 1; }
-    .chapter-body p { margin-bottom: 1.4em; }
-    .chapter-body p:last-child { margin-bottom: 0; }
-    .scene-break { text-align: center; margin: 2.5em 0; color: var(--gold); letter-spacing: 0.3em; font-size: 0.85rem; user-select: none; }
-    .chapter-body em { font-style: italic; }
-    .chapter-body strong { font-weight: bold; }
-    .kofi-note { max-width: var(--reading-width); margin: 0 auto; padding: 2rem 2rem 0; position: relative; z-index: 1; }
-    .kofi-note p { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 1.5rem; line-height: 1.7; }
-    .kofi-note a { color: var(--rust); text-decoration: none; }
-    .chapter-nav { border-top: 1px solid var(--border); max-width: var(--reading-width); margin: 2rem auto 0; padding: 2rem 2rem 4rem; display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
-    .chapter-nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-    .chapter-nav a:hover { color: var(--rust); }
-    .chapter-nav .prev::before { content: '← '; }
-    .chapter-nav .next::after { content: ' →'; }
-    .chapter-nav .disabled { opacity: 0.3; pointer-events: none; font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-    footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
-    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
-    .footer-inner a { color: var(--rust); text-decoration: none; }
-    .footer-inner a:hover { text-decoration: underline; }
-    @media (max-width: 560px) { body { font-size: 16px; } .chapter-label { font-size: 1.5rem; } .topbar-novel { display: none; } }
-</style>
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
 </head>
 <body>
-  <nav class="topbar">
-    <div class="topbar-inner">
-      <a href="index.html" class="topbar-home">Canon Compliant</a>
-      <span class="topbar-novel">A Certain Someone</span>
-      <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
     </div>
-  </nav>
-  <header class="chapter-header">
-    <p class="novel-name">A Certain Someone · 某某</p>
-    <h1 class="chapter-label">Chapter 65</h1>
-    <p class="chapter-sublabel">Unspoken Words</p>
-    <p class="chapter-date">Jun 2026</p>
-    <p class="chapter-readtime">~9 min read</p>
-    <div class="chapter-divider"></div>
   </header>
-  <main class="chapter-body">
-    <p>The alley fell into a dead silence. Sheng Wang was stunned for several seconds before the meaning of Ji Huanyu's words sank in. He glanced at Jiang Tian on instinct, but the night had grown deep and he couldn't make out Jiang Tian's expression.</p>
-
-    <p>He didn't know how Jiang Tian felt right now. Embarrassed? Furious? Or doubly sickened.</p>
-
-    <p>But he himself was already nearly mad with anger.</p>
-
-    <p>He had never met anyone like Ji Huanyu—a man who, having made a wreck of his own life, had to drag others down into the water with him; who, having lost his own dignity, had to make everyone around him squirm in shame too.</p>
-
-    <p>He looked at Ji Huanyu's gradually blurring outline, half the face sunk in shadow, and suddenly thought that the boy who'd once pored over those old photographs must have been blind. How could he ever have thought a piece of scum like this had looked like Jiang Tian as a child?</p>
-
-    <p>Sheng Wang tugged at his bag strap and stepped half a pace forward. "Mister—what you're talking about doesn't really have anything to do with me. But I'd really like to put in a word."</p>
-
-    <p>It was a knack he'd picked up from Sheng Mingyang: the angrier he got, the better he could meet someone with a smile in that exact moment. He had the face of a refined, studious good kid, and Ji Huanyu had taken him for some classmate of Jiang Tian's brought along as a foil—so even hearing the mockery in his tone, he didn't take it too seriously.</p>
-
-    <p>"Put in what word?" Ji Huanyu asked.</p>
-
-    <p>Sheng Wang slid the bag off his shoulder, hefted it, and held it up for him to see. "I just wanted to say—if you weren't Jiang Tian's dad, this bag would already be swinging into your face."</p>
-
-    <p>Ji Huanyu's left foot reflexively drew back half a step, then stopped. He frowned, looking down at Sheng Wang, unsure whether he resented the boy butting in or was simply betting that an outsider wouldn't go barging into his family business with Jiang Tian.</p>
-
-    <p>Who'd have known the boy in front of him would open his mouth again—</p>
-
-    <p>He shot Jiang Tian a glance. "Though from where I stand, Jiang Tian doesn't plan on claiming you as a dad anyway, does he?"</p>
-
-    <p>The words had barely landed before he swung the bag straight at Ji Huanyu.</p>
-
-    <p>"What the hell does it matter to you how Jiang Tian's life turns out? He's got a home now. Damn." Done swinging, Sheng Wang grabbed Jiang Tian and started hauling him toward Old Man Ding's house.</p>
-
-    <p>Ji Huanyu hadn't been around boys of seventeen or eighteen in a long time; he didn't know there were people who'd just swing the moment they said they would. Looking faintly graceless, he pressed a hand to his face and strode after them, brows knit.</p>
-
-    <p>Sheng Wang heard the footsteps and was about to turn and look, but a hand pressed down on his shoulder and steered him to the back.</p>
-
-    <p>Jiang Tian dropped his right shoulder, let the strap slide to the crook of his elbow, then looped it up and said to Ji Huanyu, "One wasn't enough?"</p>
-
-    <p>Ji Huanyu's steps jolted to a halt.</p>
-
-    <p>Just how much he owed this son, he in fact knew better than anyone. His halted steps were the proof. Because he knew, clearly, that Sheng Wang would only ever take one swing—that was just anger boiling over on someone else's behalf. But if Jiang Tian raised a hand, all these years of accounts would likely be settled at once.</p>
-
-    <p>Old Man Ding, who couldn't see how the battle was going, was hammering on the door inside, shouting, "Xiao-Tian? Xiao-Wang! Xiao-Wang! Help me get the door open, I'll beat this no-account thing to death! Who do you think you're bullying, coming to bully us right at my door!"</p>
-
-    <p>His voice was loud, and it set off some neighbor's dog—nobody knew whose—barking along, the whole alley dissolving into noise. A cough and the sound of voices drifted closer. Ji Huanyu hesitated, and at last his feet moved.</p>
-
-    <p>From childhood he had been proud, stubborn to the point of splitting hairs, vain to a degree that bordered on the extreme. Whenever he appeared before others he was always immaculately dressed and elegantly composed—and yet there was always someone… always someone who remembered the sorry figure he'd cut in those dim rooms, so that he could never truly shine.</p>
-
-    <p>After scrabbling through all these years, he still felt, in certain moments, that he was something not fit to be seen.</p>
-
-    <p>Not fit to be seen.</p>
-
-    <p>Jiang Tian tugged the corner of his mouth—a sneer too lazy to make a sound. He walked to the old courtyard gate, lifted the bar that had been thrown across it, and pulled Sheng Wang inside.</p>
-
-    <p>Old Man Ding, red-faced and thick-necked, was held off by Sheng Wang propping him under the arms. Jiang Tian shut the gate again, sealing the man out there in the night, and didn't spare him another glance.</p>
-
-    <p>A long while later, Sheng Wang peered out through the cement lattice of the courtyard wall. The little drying-yard in front of the gate had long since emptied of any figure—only Mute Uncle's heap of scrap cardboard and plastic bottles in the corner, knocking against one another in the wind with a rattling sound.</p>
-
-    <p>Old Man Ding was a little sheepish that evening. He kept feeling it had been his own fault for not giving notice in time. "If I'd found a free minute and called ahead, maybe Xiao-Tian wouldn't have run into that dog of a Ji Huanyu."</p>
-
-    <p>When Sheng Wang went into the kitchen to rinse the cups, he heard the old man mutter this for the Nth time. Mutter done, the old fellow turned with a cleaver in hand and asked him, "Dried bamboo shoots, lotus root, chestnuts—which do you think Xiao-Tian likes better?"</p>
-
-    <p>Sheng Wang ducked clear of the blade, caught between laughing and crying. The old man wasn't good at comforting people, least of all Jiang Tian—after all, from boyhood on Jiang Tian had always kept things squared away in his head, rarely in need of consoling. The only method the old man could think of was to make something good to eat. The boy had already been angered; his stomach couldn't be shortchanged on top of it.</p>
-
-    <p>What Jiang Tian liked to eat was a philosophical question. Old Man Ding had raised him like his own grandson all these years and still hadn't gotten to the bottom of it, because every time he asked, the answer was "whatever."</p>
-
-    <p>Sheng Wang had assumed he didn't know either—only to think it over and find he really could rank the three in order of preference. "Dried bamboo shoots, then. They're crunchy. He seems to like crunchier things—eats more of them than the rest. Eggplant, loofah, that kind of thing he hardly ever reaches for."</p>
-
-    <p>The old man gave him a thumbs-up and went digging through the fridge.</p>
-
-    <p>Sheng Wang had only meant to pour two cups of water, but the old man had given him an idea: he rummaged through the kitchen and turned up a packet of chamomile, scattering a few buds into a cup, thinking to take the heat out of Jiang Tian's temper. Better than nothing.</p>
-
-    <p>That night the old man and the boy did everything they could at the dinner table, yet Jiang Tian stayed silent through it all.</p>
-
-    <p>Sheng Wang suddenly remembered when he'd first met Jiang Tian. He'd wondered about it for a long time—why did this person keep his face frozen all day, always looking unhappy? Now at last he understood. If he'd been saddled with a father like that, had seen the same tangle of ugly things, had grown up in an environment like that, he wouldn't be able to pick out many things worth being happy about either.</p>
-
-    <p>The luggage for the training camp had been packed long ago. There was no evening study hall that night, so they stayed at Old Man Ding's a good while. By the time they got back to school, the boarders' evening study had already let out.</p>
-
-    <p>Road No. 3 was full of students coming and going—some who'd trekked "a thousand li" to Xile to buy the few snacks no other convenience store carried, some cradling basketballs who, passing the field, still had to put up a couple of shots to scratch the itch.</p>
-
-    <p>Now and then Jiang Tian would look up toward the field, eyes narrowing slightly, only to draw his gaze back a moment later. He was off somewhere in his head, no telling about what.</p>
-
-    <p>Sheng Wang watched him for a few seconds, then spoke. "Ge?"</p>
-
-    <p>A few students went whooping past beside them; Jiang Tian seemed not to catch it.</p>
-
-    <p>Sheng Wang thought for a moment and called again, "Jiang Tian!"</p>
-
-    <p>"Mm?" The other finally came back to himself and turned to look at him.</p>
-
-    <p>"Heredity's all crap," Sheng Wang said. "It's only when there's nothing worth pointing to in a person, top to bottom, that anyone bothers dragging heredity into it—he just wanted to mess with your head. Don't pay him any mind."</p>
-
-    <p>"Besides, Auntie Jiang's got so many good points in her, that's plenty to inherit—where's the turn ever going to come round to him? Whatever you do is yours to decide, and it's got nothing to do with him at all. You're not the same as him—"</p>
-
-    <p>Sheng Wang remembered the implication buried under that word, <em>heredity</em>, fell quiet for a few seconds, then said, "Relax. It won't be the same."</p>
-
-    <p>But Jiang Tian didn't answer.</p>
-
-    <p>Without realizing it they'd walked all the way to the dormitory building. Plenty of people were running downstairs—to fetch water, to buy things, to drop in on friends. The two of them moved against the current. The sixth-floor corridor was lit up its whole length, and the dorm at the very end stood with its door open; Shi Yu and Qiu Wenbing had probably just gotten back too.</p>
-
-    <p>Just as they neared the dorm door, Jiang Tian, silent the whole way, suddenly spoke. "Xi-ge said something once."</p>
-
-    <p>"Said what?" Sheng Wang asked.</p>
-
-    <p>"Told me not to overcorrect to the extreme—that it backfires too easily that way," Jiang Tian said.</p>
-
-    <p>Zhao Xi had said: <em>The harder you force yourself the opposite way, the more you'll fixate on the road behind you. The more you want to scrub something out, the stronger its presence grows.</em></p>
-
-    <p>Lin Beiting had said: <em>The people you'll meet down the road come in every shape, far too many—how could getting a little closer to someone ever turn into something else?</em></p>
-
-    <p>Sheng Wang had said: <em>Relax, the two of you won't be the same.</em></p>
-
-    <p>He understood all of it, really. But—</p>
-
-    <p>Jiang Tian drew his gaze back from Sheng Wang, slid the bag off his shoulder, and walked into the dorm. The lights-out bugle hadn't sounded yet; the room was ablaze with light, wrapping the late-returning boy in a soft fuzzy halo.</p>
-
-    <p>As he stepped through the door, he said in a low voice, "Actually, it backfired a long time ago."</p>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 65 · A Certain Someone</p>
+      <h1 class="reader-title">Unspoken Words</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>The alley fell into a dead silence. Sheng Wang was stunned for several seconds before the meaning of Ji Huanyu's words sank in. He glanced at Jiang Tian on instinct, but the night had grown deep and he couldn't make out Jiang Tian's expression.</p>
+        <p>He didn't know how Jiang Tian felt right now. Embarrassed? Furious? Or doubly sickened.</p>
+        <p>But he himself was already nearly mad with anger.</p>
+        <p>He had never met anyone like Ji Huanyu—a man who, having made a wreck of his own life, had to drag others down into the water with him; who, having lost his own dignity, had to make everyone around him squirm in shame too.</p>
+        <p>He looked at Ji Huanyu's gradually blurring outline, half the face sunk in shadow, and suddenly thought that the boy who'd once pored over those old photographs must have been blind. How could he ever have thought a piece of scum like this had looked like Jiang Tian as a child?</p>
+        <p>Sheng Wang tugged at his bag strap and stepped half a pace forward. "Mister—what you're talking about doesn't really have anything to do with me. But I'd really like to put in a word."</p>
+        <p>It was a knack he'd picked up from Sheng Mingyang: the angrier he got, the better he could meet someone with a smile in that exact moment. He had the face of a refined, studious good kid, and Ji Huanyu had taken him for some classmate of Jiang Tian's brought along as a foil—so even hearing the mockery in his tone, he didn't take it too seriously.</p>
+        <p>"Put in what word?" Ji Huanyu asked.</p>
+        <p>Sheng Wang slid the bag off his shoulder, hefted it, and held it up for him to see. "I just wanted to say—if you weren't Jiang Tian's dad, this bag would already be swinging into your face."</p>
+        <p>Ji Huanyu's left foot reflexively drew back half a step, then stopped. He frowned, looking down at Sheng Wang, unsure whether he resented the boy butting in or was simply betting that an outsider wouldn't go barging into his family business with Jiang Tian.</p>
+        <p>Who'd have known the boy in front of him would open his mouth again—</p>
+        <p>He shot Jiang Tian a glance. "Though from where I stand, Jiang Tian doesn't plan on claiming you as a dad anyway, does he?"</p>
+        <p>The words had barely landed before he swung the bag straight at Ji Huanyu.</p>
+        <p>"What the hell does it matter to you how Jiang Tian's life turns out? He's got a home now. Damn." Done swinging, Sheng Wang grabbed Jiang Tian and started hauling him toward Old Man Ding's house.</p>
+        <p>Ji Huanyu hadn't been around boys of seventeen or eighteen in a long time; he didn't know there were people who'd just swing the moment they said they would. Looking faintly graceless, he pressed a hand to his face and strode after them, brows knit.</p>
+        <p>Sheng Wang heard the footsteps and was about to turn and look, but a hand pressed down on his shoulder and steered him to the back.</p>
+        <p>Jiang Tian dropped his right shoulder, let the strap slide to the crook of his elbow, then looped it up and said to Ji Huanyu, "One wasn't enough?"</p>
+        <p>Ji Huanyu's steps jolted to a halt.</p>
+        <p>Just how much he owed this son, he in fact knew better than anyone. His halted steps were the proof. Because he knew, clearly, that Sheng Wang would only ever take one swing—that was just anger boiling over on someone else's behalf. But if Jiang Tian raised a hand, all these years of accounts would likely be settled at once.</p>
+        <p>Old Man Ding, who couldn't see how the battle was going, was hammering on the door inside, shouting, "Xiao-Tian? Xiao-Wang! Xiao-Wang! Help me get the door open, I'll beat this no-account thing to death! Who do you think you're bullying, coming to bully us right at my door!"</p>
+        <p>His voice was loud, and it set off some neighbor's dog—nobody knew whose—barking along, the whole alley dissolving into noise. A cough and the sound of voices drifted closer. Ji Huanyu hesitated, and at last his feet moved.</p>
+        <p>From childhood he had been proud, stubborn to the point of splitting hairs, vain to a degree that bordered on the extreme. Whenever he appeared before others he was always immaculately dressed and elegantly composed—and yet there was always someone… always someone who remembered the sorry figure he'd cut in those dim rooms, so that he could never truly shine.</p>
+        <p>After scrabbling through all these years, he still felt, in certain moments, that he was something not fit to be seen.</p>
+        <p>Not fit to be seen.</p>
+        <p>Jiang Tian tugged the corner of his mouth—a sneer too lazy to make a sound. He walked to the old courtyard gate, lifted the bar that had been thrown across it, and pulled Sheng Wang inside.</p>
+        <p>Old Man Ding, red-faced and thick-necked, was held off by Sheng Wang propping him under the arms. Jiang Tian shut the gate again, sealing the man out there in the night, and didn't spare him another glance.</p>
+        <p>A long while later, Sheng Wang peered out through the cement lattice of the courtyard wall. The little drying-yard in front of the gate had long since emptied of any figure—only Mute Uncle's heap of scrap cardboard and plastic bottles in the corner, knocking against one another in the wind with a rattling sound.</p>
+        <p>Old Man Ding was a little sheepish that evening. He kept feeling it had been his own fault for not giving notice in time. "If I'd found a free minute and called ahead, maybe Xiao-Tian wouldn't have run into that dog of a Ji Huanyu."</p>
+        <p>When Sheng Wang went into the kitchen to rinse the cups, he heard the old man mutter this for the Nth time. Mutter done, the old fellow turned with a cleaver in hand and asked him, "Dried bamboo shoots, lotus root, chestnuts—which do you think Xiao-Tian likes better?"</p>
+        <p>Sheng Wang ducked clear of the blade, caught between laughing and crying. The old man wasn't good at comforting people, least of all Jiang Tian—after all, from boyhood on Jiang Tian had always kept things squared away in his head, rarely in need of consoling. The only method the old man could think of was to make something good to eat. The boy had already been angered; his stomach couldn't be shortchanged on top of it.</p>
+        <p>What Jiang Tian liked to eat was a philosophical question. Old Man Ding had raised him like his own grandson all these years and still hadn't gotten to the bottom of it, because every time he asked, the answer was "whatever."</p>
+        <p>Sheng Wang had assumed he didn't know either—only to think it over and find he really could rank the three in order of preference. "Dried bamboo shoots, then. They're crunchy. He seems to like crunchier things—eats more of them than the rest. Eggplant, loofah, that kind of thing he hardly ever reaches for."</p>
+        <p>The old man gave him a thumbs-up and went digging through the fridge.</p>
+        <p>Sheng Wang had only meant to pour two cups of water, but the old man had given him an idea: he rummaged through the kitchen and turned up a packet of chamomile, scattering a few buds into a cup, thinking to take the heat out of Jiang Tian's temper. Better than nothing.</p>
+        <p>That night the old man and the boy did everything they could at the dinner table, yet Jiang Tian stayed silent through it all.</p>
+        <p>Sheng Wang suddenly remembered when he'd first met Jiang Tian. He'd wondered about it for a long time—why did this person keep his face frozen all day, always looking unhappy? Now at last he understood. If he'd been saddled with a father like that, had seen the same tangle of ugly things, had grown up in an environment like that, he wouldn't be able to pick out many things worth being happy about either.</p>
+        <p>The luggage for the training camp had been packed long ago. There was no evening study hall that night, so they stayed at Old Man Ding's a good while. By the time they got back to school, the boarders' evening study had already let out.</p>
+        <p>Road No. 3 was full of students coming and going—some who'd trekked "a thousand li" to Xile to buy the few snacks no other convenience store carried, some cradling basketballs who, passing the field, still had to put up a couple of shots to scratch the itch.</p>
+        <p>Now and then Jiang Tian would look up toward the field, eyes narrowing slightly, only to draw his gaze back a moment later. He was off somewhere in his head, no telling about what.</p>
+        <p>Sheng Wang watched him for a few seconds, then spoke. "Ge?"</p>
+        <p>A few students went whooping past beside them; Jiang Tian seemed not to catch it.</p>
+        <p>Sheng Wang thought for a moment and called again, "Jiang Tian!"</p>
+        <p>"Mm?" The other finally came back to himself and turned to look at him.</p>
+        <p>"Heredity's all crap," Sheng Wang said. "It's only when there's nothing worth pointing to in a person, top to bottom, that anyone bothers dragging heredity into it—he just wanted to mess with your head. Don't pay him any mind."</p>
+        <p>"Besides, Auntie Jiang's got so many good points in her, that's plenty to inherit—where's the turn ever going to come round to him? Whatever you do is yours to decide, and it's got nothing to do with him at all. You're not the same as him—"</p>
+        <p>Sheng Wang remembered the implication buried under that word, <em>heredity</em>, fell quiet for a few seconds, then said, "Relax. It won't be the same."</p>
+        <p>But Jiang Tian didn't answer.</p>
+        <p>Without realizing it they'd walked all the way to the dormitory building. Plenty of people were running downstairs—to fetch water, to buy things, to drop in on friends. The two of them moved against the current. The sixth-floor corridor was lit up its whole length, and the dorm at the very end stood with its door open; Shi Yu and Qiu Wenbing had probably just gotten back too.</p>
+        <p>Just as they neared the dorm door, Jiang Tian, silent the whole way, suddenly spoke. "Xi-ge said something once."</p>
+        <p>"Said what?" Sheng Wang asked.</p>
+        <p>"Told me not to overcorrect to the extreme—that it backfires too easily that way," Jiang Tian said.</p>
+        <p>Zhao Xi had said: <em>The harder you force yourself the opposite way, the more you'll fixate on the road behind you. The more you want to scrub something out, the stronger its presence grows.</em></p>
+        <p>Lin Beiting had said: <em>The people you'll meet down the road come in every shape, far too many—how could getting a little closer to someone ever turn into something else?</em></p>
+        <p>Sheng Wang had said: <em>Relax, the two of you won't be the same.</em></p>
+        <p>He understood all of it, really. But—</p>
+        <p>Jiang Tian drew his gaze back from Sheng Wang, slid the bag off his shoulder, and walked into the dorm. The lights-out bugle hadn't sounded yet; the room was ablaze with light, wrapping the late-returning boy in a soft fuzzy halo.</p>
+        <p>As he stepped through the door, he said in a low voice, "Actually, it backfired a long time ago."</p>
+    </article>
+    <nav class="chapter-nav">
+      <span class="nav-link disabled">Coming soon</span>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <span class="nav-link disabled">Coming soon</span>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
   </main>
-  <div class="kofi-note">
-    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> ☕</p>
-  </div>
-  <nav class="chapter-nav">
-    <a href="someone-chapter-064-father-and-son.html" class="prev">Chapter 64</a>
-    <a href="someone.html">Chapter List</a>
-    <a href="someone-chapter-066-vacation.html" class="next">Chapter 66</a>
-  </nav>
   <footer>
     <div class="footer-inner">
-      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
-      All rights to the original work belong to 木苏里 (Mu Su Li). Please support the author on
-      <a href="https://www.jjwxc.net/onebook.php?novelid=3173202" target="_blank">JJWXC</a>.
-      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
     </div>
   </footer>
 </body>

@@ -6,207 +6,48 @@
   <title>A Certain Someone — Canon Compliant</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ink: #1a1510;
-      --paper: #f5f0e8;
-      --paper-dark: #ede6d6;
-      --rust: #8b3a2a;
-      --rust-light: #c4624e;
-      --gold: #b8933a;
-      --muted: #6b5f52;
-      --border: #c8bfad;
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
-      background-color: var(--paper);
-      color: var(--ink);
+      background-color: var(--paper); color: var(--ink);
       font-family: 'Zilla Slab', Georgia, serif;
-      font-size: 17px;
-      line-height: 1.7;
-      min-height: 100vh;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
     }
     body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
+      content: ''; position: fixed; inset: 0;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 0;
+      pointer-events: none; z-index: 0;
     }
-    header {
-      border-bottom: 1px solid var(--border);
-      padding: 2.5rem 2rem 2rem;
-      background: var(--paper);
-    }
-    .header-inner {
-      max-width: 780px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-    }
-    .site-eyebrow {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    .site-title {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: var(--ink);
-      letter-spacing: -0.01em;
-      line-height: 1.1;
-      text-decoration: none;
-    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
     .site-title span { color: var(--rust); }
-    .site-tagline {
-      font-size: 0.9rem;
-      color: var(--muted);
-      font-style: italic;
-      margin-top: 0.25rem;
-    }
-    nav {
-      margin-top: 1.25rem;
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    nav a {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
     nav a:hover { color: var(--rust); }
-    .kofi-btn {
-      margin-left: auto;
-      background: var(--rust);
-      color: #fff !important;
-      padding: 0.4rem 1rem;
-      border-radius: 2px;
-      font-size: 0.75rem !important;
-      letter-spacing: 0.1em !important;
-      text-transform: uppercase !important;
-      transition: background 0.2s !important;
-    }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
     .kofi-btn:hover { background: var(--rust-light) !important; }
-    main {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 3rem 2rem 5rem;
-      position: relative;
-      z-index: 1;
-    }
-    .section-label {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1.25rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .novel-card {
-      padding: 1.5rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .novel-card:first-of-type { border-top: 1px solid var(--border); }
-    .novel-meta {
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-family: 'Libre Baskerville', serif;
-      margin-bottom: 0.4rem;
-    }
-    .novel-title-link {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--ink);
-      text-decoration: none;
-      line-height: 1.2;
-      transition: color 0.2s;
-    }
-    .novel-title-link:hover { color: var(--rust); }
-    .novel-title-zh {
-      font-size: 0.95rem;
-      font-weight: 400;
-      color: var(--muted);
-      font-style: italic;
-    }
-    .novel-description {
-      margin-top: 0.6rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-      max-width: 560px;
-      line-height: 1.7;
-    }
-    .novel-tags {
-      margin-top: 0.75rem;
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-    .tag {
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-family: 'Libre Baskerville', serif;
-      color: var(--rust);
-      border: 1px solid var(--rust);
-      padding: 0.15rem 0.5rem;
-      border-radius: 1px;
-    }
-    .novel-card--upcoming .novel-title-link { color: var(--muted); pointer-events: none; }
-    .novel-card--upcoming .novel-title-link:hover { color: var(--muted); }
-    .novel-card--upcoming { opacity: 0.6; }
-    .section-group { margin-bottom: 3rem; }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem;
-      background: var(--paper-dark);
-      position: relative;
-      z-index: 1;
-    }
-    .footer-inner {
-      max-width: 780px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .footer-note {
-      font-size: 0.8rem;
-      color: var(--muted);
-      line-height: 1.6;
-      max-width: 480px;
-    }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
     .footer-note a { color: var(--rust); text-decoration: none; }
     .footer-note a:hover { text-decoration: underline; }
-    .footer-sig {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.75rem;
-      color: var(--muted);
-      font-style: italic;
-      text-align: right;
-      flex-shrink: 0;
-    }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
     @media (max-width: 560px) {
       .site-title { font-size: 1.6rem; }
       nav { gap: 1rem; }
@@ -215,14 +56,13 @@
       .footer-sig { text-align: left; }
     }
 
-    .chapters-label {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1.25rem;
-    }
+    .novel-header { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    .novel-meta { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.6rem; }
+    .novel-title { font-family: 'Libre Baskerville', serif; font-size: 1.75rem; font-weight: 700; line-height: 1.2; color: var(--ink); margin-bottom: 0.5rem; }
+    .novel-title-zh { font-size: 1.1rem; font-weight: 400; color: var(--muted); font-style: italic; }
+    .novel-description { margin-top: 1rem; font-size: 0.95rem; color: var(--muted); max-width: 560px; line-height: 1.7; }
+    .novel-tags { margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .chapters-label { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.25rem; }
     .chapter-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
     .chapter-item { border-top: 1px solid var(--border); opacity: 0; animation: fadeUp 0.4s ease forwards; }
     .chapter-item:last-child { border-bottom: 1px solid var(--border); }
@@ -237,25 +77,14 @@
     .chapter-link:hover .chapter-arrow { opacity: 1; transform: translateX(3px); }
     .chapter-num { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); min-width: 4.5rem; flex-shrink: 0; }
     .chapter-title { font-size: 1rem; font-weight: 400; flex: 1; }
-    .chapter-date { font-size: 0.78rem; color: var(--muted); font-style: italic; flex-shrink: 0; }
     .chapter-arrow { font-size: 0.85rem; color: var(--rust); opacity: 0; transition: opacity 0.15s, transform 0.15s; flex-shrink: 0; }
-    .novel-header { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
-    .novel-title { font-family: 'Libre Baskerville', serif; font-size: 1.75rem; font-weight: 700; line-height: 1.2; color: var(--ink); margin-bottom: 0.5rem; }
-    .novel-title-zh { font-size: 1.1rem; font-weight: 400; color: var(--muted); font-style: italic; }
-    .novel-description { margin-top: 1rem; font-size: 0.95rem; color: var(--muted); max-width: 560px; line-height: 1.7; }
-    .novel-tags { margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
-    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
-    .back-link:hover { color: var(--rust); }
-    .back-link::before { content: '← '; }
-    @media (max-width: 560px) { .chapter-date { display: none; } }
+    /* coming-soon variant */
+    .chapter-item.soon { opacity: 0.5; }
+    .chapter-item.soon .chapter-link-soon { display: flex; align-items: baseline; gap: 1rem; padding: 1rem 0.25rem; color: var(--muted); cursor: default; }
+    .chapter-item.soon .chapter-num { color: var(--muted); }
+    .chapter-item.soon .chapter-flag { font-family: 'Libre Baskerville', serif; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); flex-shrink: 0; font-style: italic; }
 
-    .chapter-item--soon .chapter-link { pointer-events: none; cursor: default; opacity: 0.38; }
-    .chapter-item--soon .chapter-link:hover { color: var(--ink); }
-    .prev-tl-note { margin-top: 2rem; padding: 1.25rem 1.5rem; border: 1px solid var(--border); border-radius: 2px; font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
-    .prev-tl-note a { color: var(--rust); text-decoration: none; }
-    .prev-tl-note a:hover { text-decoration: underline; }
-</style>
+  </style>
 </head>
 <body>
   <header>
@@ -265,7 +94,7 @@
       <p class="site-tagline">Canon compliant. Mostly.</p>
       <nav>
         <a href="index.html">Novels</a>
-        <a href="#about">About</a>
+        <a href="index.html#about">About</a>
         <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
       </nav>
     </div>
@@ -273,78 +102,72 @@
   <main>
     <a href="index.html" class="back-link">All Novels</a>
     <div class="novel-header">
-      <p class="novel-meta" style="font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);font-family:'Libre Baskerville',serif;margin-bottom:0.6rem;">木苏里 · Mu Su Li</p>
+      <p class="novel-meta">木苏里 · Mu Su Li</p>
       <h2 class="novel-title">A Certain Someone <span class="novel-title-zh"> · 某某</span></h2>
-      <p class="novel-description">Sheng Wang transfers schools mid-year and ends up sharing a home with the woman his father is seeing — and her son. A slow-burn coming-of-age BL set in modern China. 112 chapters, complete in the original. Translation picks up from Chapter 59.<br><br>Leave a comment or make a request at <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">ko-fi.com/rosesllvn</a> ☕</p>
+      <p class="novel-description">Sheng Wang transfers schools and ends up sharing a home with the woman his father is seeing — and her son. A slow-burn coming-of-age BL set in modern China, 112 chapters plus an extra. Translation picks up from Chapter&nbsp;59; new chapters posted as they’re ready.<br><br>Leave a comment or make a request at <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">ko-fi.com/rosesllvn</a> ☕</p>
       <div class="novel-tags">
         <span class="tag">Danmei</span><span class="tag">Modern</span><span class="tag">BL</span><span class="tag">Ongoing</span>
-      </div>    <p style="font-size:0.82rem;color:var(--muted);margin-top:1.25rem;line-height:1.7;">
-      Please support the author 木苏里 by purchasing or reading the original work on
-      <a href="https://www.jjwxc.net/onebook.php?novelid=3173202" target="_blank" style="color:var(--rust);text-decoration:none;">JJWXC</a>.
-    </p>
+      </div>
     </div>
-    <div class="prev-tl-note">
-      📖 Chapters 1–58 are available in an earlier translation on <a href="https://www.novelupdates.com/series/a-certain-someone/" target="_blank">Novel Updates</a>.
-    </div>
-    <p style="font-size:0.75rem;color:var(--muted);font-style:italic;margin-top:0.5rem;">Last updated: May 2026</p>
-    <p class="chapters-label" style="margin-top:1.25rem;">Chapters (rosesllvn translation)</p>
+    <p style="font-size:0.75rem;color:var(--muted);font-style:italic;margin-top:-1rem;margin-bottom:1.5rem;">Last updated: June 2026 · 5 of 55 chapters available</p>
+    <p class="chapters-label">Chapters & Extras</p>
     <ul class="chapter-list">
-        <li class="chapter-item"><a class="chapter-link" href="someone-chapter-059-class-shift.html"><span class="chapter-num">Ch. 059</span><span class="chapter-title">Class Shift</span><span class="chapter-date">May 2026</span><span class="chapter-arrow">→</span></a></li>
-        <li class="chapter-item"><a class="chapter-link" href="someone-chapter-060-wavering.html"><span class="chapter-num">Ch. 060</span><span class="chapter-title">Wavering</span><span class="chapter-date">May 2026</span><span class="chapter-arrow">→</span></a></li>
-        <li class="chapter-item"><a class="chapter-link" href="someone-chapter-061-the-gift.html"><span class="chapter-num">Ch. 061</span><span class="chapter-title">The Gift</span><span class="chapter-date">May 2026</span><span class="chapter-arrow">→</span></a></li>
-        <li class="chapter-item"><a class="chapter-link" href="someone-chapter-062-blockhead.html"><span class="chapter-num">Ch. 062</span><span class="chapter-title">Blockhead</span><span class="chapter-date">May 2026</span><span class="chapter-arrow">→</span></a></li>
-        <li class="chapter-item"><a class="chapter-link" href="someone-chapter-063-declaration.html"><span class="chapter-num">Ch. 063</span><span class="chapter-title">Declaration</span><span class="chapter-date">May 2026</span><span class="chapter-arrow">→</span></a></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 064</span><span class="chapter-title">Father and Son</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 065</span><span class="chapter-title">Unspoken Words</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 066</span><span class="chapter-title">"Vacation"</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 067</span><span class="chapter-title">Tug-of-War</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 068</span><span class="chapter-title">[Forms of Address]</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 069</span><span class="chapter-title">Impulse</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 070</span><span class="chapter-title">Wild Grass</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 071</span><span class="chapter-title">Anniversary Sale</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 072</span><span class="chapter-title">Thwarted</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 073</span><span class="chapter-title">Liar</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 074</span><span class="chapter-title">Numb Leg</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 075</span><span class="chapter-title">Surprise</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 076</span><span class="chapter-title">Back to School</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 077</span><span class="chapter-title">Possessed</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 078</span><span class="chapter-title">Nickname</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 079</span><span class="chapter-title">Accident</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 080</span><span class="chapter-title">Going Home</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 081</span><span class="chapter-title">"Neighbor"</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 082</span><span class="chapter-title">Weekly Exam</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 083</span><span class="chapter-title">Mark</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 084</span><span class="chapter-title">False Alarm</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 085</span><span class="chapter-title">Moving</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 086</span><span class="chapter-title">Family Dinner</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 087</span><span class="chapter-title">Winter Break</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 088</span><span class="chapter-title">Gift</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 089</span><span class="chapter-title">Needle Point</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 090</span><span class="chapter-title">Blunt Knife</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 091</span><span class="chapter-title">Ice Arrow</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 092</span><span class="chapter-title">Wilderness</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 093</span><span class="chapter-title">Bitter Summer</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 094</span><span class="chapter-title">Fleeting Years</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 095</span><span class="chapter-title">Reunion</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 096</span><span class="chapter-title">Drunken Nonsense</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 097</span><span class="chapter-title">Old Feelings</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 098</span><span class="chapter-title">Speaking Up</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 099</span><span class="chapter-title">Melting</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 100</span><span class="chapter-title">"Wangzai"</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 101</span><span class="chapter-title">Loosening</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 102</span><span class="chapter-title">Neutering</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 103</span><span class="chapter-title">The Gathering</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 104</span><span class="chapter-title">Dog Food</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 105</span><span class="chapter-title">Sobering Up</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 106</span><span class="chapter-title">Branches</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 107</span><span class="chapter-title">Weeds</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 108</span><span class="chapter-title">Pruning</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 109</span><span class="chapter-title">Incoming Call</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 110</span><span class="chapter-title">Hometown</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 111</span><span class="chapter-title">The Mortal World</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Ch. 112</span><span class="chapter-title">Young</span><span class="chapter-date">Coming soon</span></span></li>
-        <li class="chapter-item chapter-item--soon"><span class="chapter-link"><span class="chapter-num">Extra</span><span class="chapter-title">Extra — Extra</span><span class="chapter-date">Coming soon</span></span></li>
-      </ul>
+        <li class="chapter-item"><a class="chapter-link" href="someone-chapter-059-class-shift.html"><span class="chapter-num">Ch. 59</span><span class="chapter-title">Class Shift</span><span class="chapter-arrow">→</span></a></li>
+        <li class="chapter-item"><a class="chapter-link" href="someone-chapter-060-wavering.html"><span class="chapter-num">Ch. 60</span><span class="chapter-title">Wavering</span><span class="chapter-arrow">→</span></a></li>
+        <li class="chapter-item"><a class="chapter-link" href="someone-chapter-061-the-gift.html"><span class="chapter-num">Ch. 61</span><span class="chapter-title">The Gift</span><span class="chapter-arrow">→</span></a></li>
+        <li class="chapter-item"><a class="chapter-link" href="someone-chapter-062-blockhead.html"><span class="chapter-num">Ch. 62</span><span class="chapter-title">Blockhead</span><span class="chapter-arrow">→</span></a></li>
+        <li class="chapter-item"><a class="chapter-link" href="someone-chapter-063-declaration.html"><span class="chapter-num">Ch. 63</span><span class="chapter-title">Declaration</span><span class="chapter-arrow">→</span></a></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 64</span><span class="chapter-title">Father and Son</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 65</span><span class="chapter-title">Unspoken Words</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 66</span><span class="chapter-title">&quot;Vacation&quot;</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 67</span><span class="chapter-title">Tug-of-War</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 68</span><span class="chapter-title">[Forms of Address]</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 69</span><span class="chapter-title">Impulse</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 70</span><span class="chapter-title">Wild Grass</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 71</span><span class="chapter-title">Anniversary Sale</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 72</span><span class="chapter-title">Thwarted</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 73</span><span class="chapter-title">Liar</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 74</span><span class="chapter-title">Numb Leg</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 75</span><span class="chapter-title">Surprise</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 76</span><span class="chapter-title">Back to School</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 77</span><span class="chapter-title">Possessed</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 78</span><span class="chapter-title">Nickname</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 79</span><span class="chapter-title">Accident</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 80</span><span class="chapter-title">Going Home</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 81</span><span class="chapter-title">&quot;Neighbor&quot;</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 82</span><span class="chapter-title">Weekly Exam</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 83</span><span class="chapter-title">Mark</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 84</span><span class="chapter-title">False Alarm</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 85</span><span class="chapter-title">Moving</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 86</span><span class="chapter-title">Family Dinner</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 87</span><span class="chapter-title">Winter Break</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 88</span><span class="chapter-title">Gift</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 89</span><span class="chapter-title">Needle Point</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 90</span><span class="chapter-title">Blunt Knife</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 91</span><span class="chapter-title">Ice Arrow</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 92</span><span class="chapter-title">Wilderness</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 93</span><span class="chapter-title">Bitter Summer</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 94</span><span class="chapter-title">Fleeting Years</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 95</span><span class="chapter-title">Reunion</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 96</span><span class="chapter-title">Drunken Nonsense</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 97</span><span class="chapter-title">Old Feelings</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 98</span><span class="chapter-title">Speaking Up</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 99</span><span class="chapter-title">Melting</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 100</span><span class="chapter-title">&quot;Wangzai&quot;</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 101</span><span class="chapter-title">Loosening</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 102</span><span class="chapter-title">Neutering</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 103</span><span class="chapter-title">The Gathering</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 104</span><span class="chapter-title">Dog Food</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 105</span><span class="chapter-title">Sobering Up</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 106</span><span class="chapter-title">Branches</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 107</span><span class="chapter-title">Weeds</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 108</span><span class="chapter-title">Pruning</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 109</span><span class="chapter-title">Incoming Call</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 110</span><span class="chapter-title">Hometown</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 111</span><span class="chapter-title">The Mortal World</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Ch. 112</span><span class="chapter-title">Young</span><span class="chapter-flag">Coming soon</span></span></li>
+        <li class="chapter-item soon"><span class="chapter-link-soon"><span class="chapter-num">Extra</span><span class="chapter-title">Extra</span><span class="chapter-flag">Coming soon</span></span></li>
+    </ul>
   </main>
   <footer>
     <div class="footer-inner">
