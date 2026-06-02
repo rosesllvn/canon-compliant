@@ -74,10 +74,10 @@
     .chapter-item:nth-child(5) { animation-delay: 0.17s; }
     .chapter-link { display: flex; align-items: baseline; gap: 1rem; padding: 1rem 0.25rem; text-decoration: none; color: var(--ink); transition: color 0.15s; border-radius: 1px; }
     .chapter-link:hover { color: var(--rust); }
-    .chapter-link:hover .chapter-arrow { opacity: 1; transform: translateX(3px); }
+    .chapter-link:hover .chapter-arrow { transform: translateX(3px); }
     .chapter-num { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); min-width: 4.5rem; flex-shrink: 0; }
     .chapter-title { font-size: 1rem; font-weight: 400; flex: 1; }
-    .chapter-arrow { font-size: 0.85rem; color: var(--rust); opacity: 0; transition: opacity 0.15s, transform 0.15s; flex-shrink: 0; }
+    .chapter-arrow { font-size: 0.85rem; color: var(--rust); opacity: 1; transition: transform 0.15s; flex-shrink: 0; }
     /* coming-soon variant */
     .chapter-item.soon { opacity: 0.5; }
     .chapter-item.soon .chapter-link-soon { display: flex; align-items: baseline; gap: 1rem; padding: 1rem 0.25rem; color: var(--muted); cursor: default; }
