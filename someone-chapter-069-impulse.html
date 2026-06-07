@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 69 — Impulse — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 69 · A Certain Someone</p>
+      <h1 class="reader-title">Impulse</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Sheng Wang had assumed that the "few shops" really meant a few. But when they reached the school's back gate and took a look, it was a whole long street.</p>
+        <p>The terrain around the school wasn't level. The long street wound down along a gentle slope, curling almost halfway around the school, its far end vanishing behind the wall along the hillside—hard to take in at a single glance.</p>
+        <p>It was the only lively spot anywhere nearby, the only place the people of this school could go to roam, so even at dusk it wasn't deserted but bustling.</p>
+        <p>Students who attended regular classes still had evening study at night, though; even if they came out, they only had time for dinner. Sheng Wang and Jiang Tian had come at a bad hour, hitting peak time, and every place that served food was packed to the rafters.</p>
+        <p>After circling twice Sheng Wang couldn't help saying, "Just how bad is the cafeteria, to stuff everyone in here like this?"</p>
+        <p>The school had opened a separate window for them—regular students used their cards, they used meal tickets. The food at that window was mediocre, its one virtue being no line. Yesterday they'd still been muttering that the regular windows had more variety and probably tasted a bit better. Now it seemed they were six of one, half a dozen of the other, which was why students seized any spare moment to come treat themselves out front.</p>
+        <p>Jiang Tian fished out his phone and checked the time—classes let out at 5:40, the students had only just gotten into the shops; by the time they finished and freed up seats it would be at least 6:30.</p>
+        <p>He asked Sheng Wang, "Anywhere you want to go?"</p>
+        <p>There was only the one street here, the same handful of options cycling round and round; if Sheng Wang had come alone, he'd honestly have had no interest in any of them. But with Jiang Tian beside him it was another matter entirely.</p>
+        <p>He swept a glance front and back. "I want to go everywhere."</p>
+        <p>Jiang Tian: "…"</p>
+        <p>Sheng Wang said, "What do we do?"</p>
+        <p>"Pick one."</p>
+        <p>"Decision paralysis. Can't pick."</p>
+        <p>"…"</p>
+        <p>Plain mischief was written in Sheng Wang's eyes. "Aren't you my ge? You've got an obligation to help me decide."</p>
+        <p>Jiang Tian knit his brows and looked at him, speechless, then after a moment gave a small nod and held out a hand, saying mildly, "Give me the knife, I'll cut you a share. How many places do you want to go?"</p>
+        <p>Sheng Wang: "…Damn, who're you trying to scare? You'd really go through with it?"</p>
+        <p>He'd only said it offhand, one word following the next; whether between brothers or friends the line was ordinary enough—but in front of a particular person it took on an indescribable weight.</p>
+        <p>Jiang Tian paused.</p>
+        <p>They were still walking shoulder to shoulder up the gentle slope, steps unhurried, like strolling to clear the mind. Jiang Tian's right hand was still open, the long thin fingers slightly curled.</p>
+        <p>The corner of Sheng Wang's eye fell right there. He saw Jiang Tian's fingers crook once, then withdraw and slide into his trouser pocket. For a few seconds Jiang Tian said nothing, as if turning over the question of whether he'd go through with it—or as if digesting that faint, unnameable ambiguity.</p>
+        <p>Only after a moment did he speak. "Forget it, then."</p>
+        <p>And only after another moment did Sheng Wang give a low, soft "Oh."</p>
+        <p>So the wind slipped between the two of them, threading round in fine little curls.</p>
+        <p>The evening lamps along the street came on one by one. The two suddenly went quiet. Sheng Wang took a few steps, feigning ease as he looked over the shops. Among all the gaudy signboards, one shop's style was genuinely unusual.</p>
+        <p>That storefront had one floor at street level and one floor below the road, with a wooden staircase running straight down to it. A few golden-rain trees grew on either side of the door, branches sprawled over the roof, the upper crowns pink-orange and the lower green, blurring together into a hazy mass under the drifting night.</p>
+        <p>A string of pale, ghastly paper lanterns hung from the tree on the left, with an arrow beneath them pointing downstairs. A very modern blue-and-white ring of lights wrapped the tree on the right, with an arrow pointing upstairs.</p>
+        <p>On the storefront wall, graffiti rendered in glow-in-the-dark material spelled out four characters: <em>Escape Room.</em></p>
+        <p>What really drew Sheng Wang's eye, though, was the people at the door. A group of boys and girls were clustered at the top of the stairs, plainly just up from the floor below, several of them clutching their chests, looking like their souls had left their bodies.</p>
+        <p>"Scared me to death," one girl said.</p>
+        <p>"I'm going to have nightmares tonight," another agreed. "It's actually fine in itself, the mechanisms are just too responsive, and it's set up way too seriously, so it's really scary. Where's Bian Chen? Bian Chen, you okay? Your face went white."</p>
+        <p>Several boys broke into laughter, ribbing, "Since when does <em>his</em> face go white from fright?"</p>
+        <p>"Screw you, <em>you're</em> the one who couldn't go white." Bian Chen's voice was easy to pick out of the crowd; having cursed, he felt the line wasn't quite right and, over even louder jeering, roared, "Who the hell said I went white from being scared, it was too stuffy in there, all right?! You absolute idiot, you've got the nerve to laugh at me? Who was just now screaming worse than the girls?!"</p>
+        <p>"You," said the boy he'd jabbed at, without the slightest courtesy.</p>
+        <p>Bian Chen let out a curse, and the two went chasing each other right on the stairs.</p>
+        <p>A girl asked, "Still playing?"</p>
+        <p>The boys who'd just been mocking each other said in unison, "Play my foot!"</p>
+        <p>The girls cracked up. "Every one of you a coward and won't admit it for your lives. But there's no seat for dinner now—how about we go upstairs and play the modern-future version? Or play some board games for a bit?"</p>
+        <p>"Board games, let's go, go, go." Off they ran upstairs.</p>
+        <p>"You all head up, then, we'll go back down and look some more," a girl said. She still felt unsatisfied, and tugged two other boys who wanted to play back down, the three of them going into the shop again.</p>
+        <p>Sheng Wang stared at the storefront, mulled it over, then turned to Jiang Tian, his whole face writing <em>I want to play.</em></p>
+        <p>Jiang Tian looked at the horror-styled décor downstairs, then at Sheng Wang's eager expression, and seemed about to remind him of something—but in the end only nodded. "Let's go."</p>
+        <p>The escape-room owner was a young man who, to suit the theme, had gotten himself up all ghoulish. When Sheng Wang and Jiang Tian went in, the three Yizhong students were still squabbling over which one to play.</p>
+        <p>The girl pointed at a two-to-three-person room. "How about this one?"</p>
+        <p>One of the boys grumbled, "Small rooms are boring, we should do one for five or more."</p>
+        <p>"But we don't have enough people."</p>
+        <p>"Boss, can three people do a five-person room?" the boy asked.</p>
+        <p>The owner nodded. "You can, but it's a bit hard. Why don't you ask those two whether they'll join?"</p>
+        <p>"Who?" They turned, puzzled, and saw Sheng Wang and Jiang Tian.</p>
+        <p>"Eh?! It's you two! Perfect, perfect—" The boy who'd scorned the small rooms perked right up. He wasn't really close with Jiang Tian or Sheng Wang, but somebody beat nobody, so he hailed them: "We're a little short here, want to join?"</p>
+        <p>Of course Sheng Wang didn't want to join anyone, but before he could so much as react, he heard Jiang Tian tell the boy, "No need."</p>
+        <p>He rapped on the counter and asked the owner, "Any two-person rooms free?"</p>
+        <p>The owner pointed at one with a haunted-school theme. "Yeah, this one's open."</p>
+        <p>"Hey, Jiang-ge, why play a two-person?" the Yizhong boy said. "Those are all for little couples, no fun."</p>
+        <p>The speaker meant nothing by it; the listener took it to heart.</p>
+        <p>He'd grumbled it just offhand, and Sheng Wang's motion of shrugging off his bag stalled. On instinct he glanced at Jiang Tian—only to see Jiang Tian tell the boy, "Oh."</p>
+        <div class="scene-break">❖</div>
+        <p>After that, whatever the Yizhong kid said, whatever the owner said, Sheng Wang didn't catch any of it, couldn't take in a word. He knew Jiang Tian had never had any patience for people who faked closeness like this, knew that "Oh" was probably just to shut the boy up—but his heart still gave a violent jump.</p>
+        <p>He suddenly remembered something Sheng Mingyang had said when he was small: "Other people's kids all get a little wild with an audience—how come mine's never once gone wild, lazy little thing."</p>
+        <p>For a while he'd thought there was nothing wrong with that. He really didn't get especially worked up just because someone was watching him or beside him—until today, when he discovered it had only been a matter of never meeting the right person.</p>
+        <p>He was a bit "wild with an audience" that night. All through the escape room his mind stayed in a faintly excited state, even if it didn't much show on his face.</p>
+        <p>Before they went in, the owner had said something like "this little room is scarier than several of the big ones." No telling how it felt to anyone else, but Sheng Wang felt no terror from start to finish—which had nothing to do with whether he was brave, only that his attention wasn't on those things at all.</p>
+        <p>He and Jiang Tian never once got stuck on a puzzle, sailing through smoothly. From the dim classroom they opened, to the corridor with its broken ceiling light, to the girls' dorm with blood-words scrawled under the bed, and finally to the bathroom at the corridor's far end.</p>
+        <p>In the bathroom was a mirror rigged with a mechanism: at the end of the puzzle they had to turn on the tap and wash their faces, and a female ghost's face would appear in the mirror, hinting at which stall she was in. Then they had to knock three times on that stall door, and a ceiling panel overhead would slide aside, dropping a wild-haired humanoid mannequin to dangle on a length of hemp rope.</p>
+        <p>The "missing girl" story ended there; then the hidden door on the wall would rise slowly, and that was the exit.</p>
+        <p>But when Sheng Wang knocked open the stall door, the mannequin bounced off the wall, its wig accidentally fell off, and what was left was a bald head hanging on the hemp rope.</p>
+        <p>So when the hidden door rose, the two of them bent and came out, and Sheng Wang collapsed laughing right onto the counter. Jiang Tian couldn't hold it either.</p>
+        <p>Even the ghoulish owner was struck dumb.</p>
+        <p>He'd had customers who said "not that scary," seen people scared to tears, seen people walk out discussing the mechanisms and savoring the plot—but never anyone nearly dying of laughter.</p>
+        <p>"Did you two really come out by hitting the mechanism? You didn't kick the door open?" the owner couldn't help asking.</p>
+        <p>Sheng Wang was laughing so hard his neck had flushed red, slumped on the counter and utterly unable to answer. Jiang Tian scanned the code to pay and told the owner, "Remember to glue the wig down."</p>
+        <p>Then he patted Sheng Wang. "Stop laughing, let's go eat."</p>
+        <p>It wasn't until they'd sat down in a Hangzhou-style restaurant that Sheng Wang recovered. He let out a long breath and fanned himself with a hand. "Laughed myself hot."</p>
+        <p>Jiang Tian was ordering on his phone; he handed it over. "See what you want."</p>
+        <p>Sheng Wang's eyes were still curved, looking extra bright under the lights. "Dinner's on me, no fighting me on it. Any other time's fine, just not today."</p>
+        <p>"What's special about today?" Jiang Tian asked.</p>
+        <p>"Birthday," Sheng Wang said. "Jianghu custom—I treat you."</p>
+        <p>Jiang Tian paused, not bothering to argue against his nonsense "jianghu custom." On instinct he opened the calendar and looked again, then frowned. "Isn't your birthday December 4th? Today's the 3rd."</p>
+        <p>"I know," Sheng Wang said, scanning the order code on the table. "Technically it's tomorrow, but I don't like spending my birthday on that day."</p>
+        <p>"Why?"</p>
+        <p>Sheng Wang looked up and found Jiang Tian a little dazed—an expression so rare on his ge's face that he blanked too, and asked, "What's with that look?"</p>
+        <p>Only then did Jiang Tian gather himself. "Nothing."</p>
+        <p>Sheng Wang stared at him a while, then suddenly leaned in. "Ge."</p>
+        <p>Jiang Tian's gaze shifted; he looked up at him.</p>
+        <p>Sheng Wang narrowed his eyes. "Don't tell me you're planning to celebrate my birthday tomorrow? Or—you've got me some present?"</p>
+        <p>"No," Jiang Tian said.</p>
+        <p>"Oh." Sheng Wang leaned back against his chair and went on ordering on the phone.</p>
+        <p>"Why don't you like celebrating on the actual day?" Sheng Wang heard Jiang Tian suddenly ask.</p>
+        <p>"It's nothing, really. When I was little my mom and dad celebrated it with me together, so the impression runs kind of deep. Later my mom was gone, and the birthday was always short a person, a little cheerless." Sheng Wang chose dishes in earnest. "A birthday's about eating and drinking, better to be happy. If I celebrated tomorrow… I might think of my mom."</p>
+        <p>He finished selecting a few and handed the phone to Jiang Tian. "Spend it with me today instead. All right?"</p>
+        <p>Maybe it was the light, but Jiang Tian's brow was very faintly furrowed, his gaze unexpectedly gentle. He said, "Okay."</p>
+        <p>For the sake of that one word, Jiang Tian was nearly all yes that night, even reining in his usual gibes by a good deal. A Jiang Tian like this was a rare sight indeed, and Sheng Wang felt that not seizing the chance to tease him would be a waste of the day.</p>
+        <p>This restaurant's true signature wasn't actually a dish but its rice wine, served in specially made bowl-cups under the artful name "White Jade Brew." Sheng Wang ordered a big jug and plunked it down before Jiang Tian, blade-bold. "You've watched me get rowdy drunk how many times now—I've never once seen what you're like drunk. Isn't that a bit unfair?"</p>
+        <p>He pointed at the jug of "White Jade Brew." "Tell me honestly, how much does it take to get you drunk? Is this enough?"</p>
+        <p>Jiang Tian: "…I don't know."</p>
+        <p>Sheng Wang: "???"</p>
+        <p>He nearly had the waiter bring another jug on the spot; luckily Jiang Tian stopped him. Two big jugs of rice wine down the hatch—drunk or not was hard to say, but there'd certainly be a lot of trips to the bathroom.</p>
+        <p>In the end it was the waiter who couldn't stand it, reminding them, "Our rice wine has a strong delayed kick. You might not feel much right after drinking it, but once it hits, it's still pretty easy to get drunk."</p>
+        <p>Sheng Wang had just finished a cup, and because it really was delicious he'd been about to have a bit more. The moment he heard "strong delayed kick," he pushed the cup across to the other side without a word. "It's yours. The rest is yours too. I'm done."</p>
+        <p>To wait out this so-called delayed kick, Sheng Wang deliberately dawdled, dragging dinner out to nearly two hours. But when the bill came, Jiang Tian was still perfectly clearheaded.</p>
+        <p>The place had opened not long ago and was still running promotions, so they gave Sheng Wang a little gift—two clay wine flasks tied with coarse hemp rope, filled with the signature "White Jade Brew."</p>
+        <p>It was almost ten by the time they came out of the shop.</p>
+        <p>A young person's inner fire ran hot to begin with; though Sheng Wang had drunk only one cup of rice wine, a thin film of sweat had still steamed up on him. The late-autumn, early-winter night wind blowing over him felt rather nice.</p>
+        <p>He hooked the hemp rope and lifted the wine up before his face, sizing up the flasks, and asked Jiang Tian, "You're not drunk now, right?"</p>
+        <p>"Mm," Jiang Tian answered.</p>
+        <p>"Then what if you add these two flasks?" Sheng Wang asked.</p>
+        <p>"Probably still wouldn't get drunk," Jiang Tian said.</p>
+        <p>Sheng Wang clicked his tongue and let his hand drop. "Forget it, I give up."</p>
+        <p>"You don't have to," Jiang Tian said.</p>
+        <p>"Hm?" Sheng Wang blanked, turning to look at him.</p>
+        <p>The night wind blew the hair off his forehead, the contours of his brows and eyes and the bridge of his nose sketched out unusually clearly by the street lamps—clean and handsome. The patches of yellow-white light reflected in his eyes; he glanced over at Sheng Wang and said, "We can try again next birthday."</p>
+        <p>"Makes sense." Sheng Wang suddenly cheered up—whether because of the birthday planned a year ahead or something else. He shook the wine in his hand, the clay flasks knocking lightly together with a clink.</p>
+        <p>He'd barely finished before adding, "No—almost let you reel me in. Besides birthdays, am I not allowed to test you?"</p>
+        <p>Jiang Tian said, "Let's skip the everyday ones."</p>
+        <p>"How come?"</p>
+        <p>"If you knock yourself out first, I'm the one who ends up unlucky," Jiang Tian said.</p>
+        <p>"Damn."</p>
+        <p>Sheng Wang was left with nothing to argue and reached out to throttle him. Jiang Tian dodged with great agility and even reminded him, "Don't swing around, the wine's on you."</p>
+        <p>The two went back to school half walking, half horsing around. On the way Jiang Tian now and then pulled out his phone to send a few WeChat messages; by the fifth time he got one, they happened to have reached the foot of the dorm building.</p>
+        <p>Jiang Tian said, "You go up first."</p>
+        <p>"What about you?" Sheng Wang asked.</p>
+        <p>"I'm going to grab something."</p>
+        <p>Sheng Wang stayed a bit puzzled all the way back to the dorm. He leaned on the balcony playing on his phone for a good while, took a shower, went to wait in the corridor for a bit, and never saw a shadow of Jiang Tian—no idea where he'd gone to grab what.</p>
+        <p>The waiter at that Hangzhou restaurant hadn't been wrong: the rice wine gave no sensation going down but had a strong delayed kick. After he'd been pacing the dorm a while, the wine slowly climbed up on him.</p>
+        <p>Sheng Wang started getting sleepy, but he was a little unwilling to sleep.</p>
+        <p>This was the birthday he'd decided on himself, planned days ago to spend with Jiang Tian. Over the day he'd laughed hard, horsed around, and through the excitement there'd been a subtle thrum and ambiguity threaded in. He'd plainly done so much, yet it felt like something was still missing.</p>
+        <p>Now the day was nearly over, the night deep and heavy, all around fallen silent—and yet he suddenly felt a little hollow, no telling whether it was being left wanting more or something else.</p>
+        <p class="ellipsis">…</p>
+        <div class="scene-break">❖</div>
+        <p>It was already half past eleven when Jiang Tian came back. The whole campus had sunk into deep, thick silence; not until he'd rounded the little hill did he hear, at the edge of the autumn-leaf woods, the laughing and talking of a few boys and girls—probably the Yizhong crowd, with what sounded like Bian Chen's voice. But he didn't pay much attention, just ran past them and strode up the stairs.</p>
+        <p>Behind him came the faint low cries and whispers of girls, and someone called to him once. But by the time he heard it he'd already rounded onto the upper floor.</p>
+        <p>He braked to a halt in front of the dorm, the hair the wind had lifted falling back down. Holding a thick paper bag, he steadied his breathing outside the door.</p>
+        <p>Most of the dorms along the corridor were dark; apart from those few who'd just come back downstairs, most must already be asleep. Jiang Tian swiped the door open, meaning to greet whoever was inside, only to find the room silent, the quilt up top a little rumpled—Sheng Wang was already asleep.</p>
+        <p>From his awkward posture, he must have gotten drowsy while waiting and tipped over onto the pillow without meaning to.</p>
+        <p>Jiang Tian paused.</p>
+        <p>He stood in the doorway a while, eyes lowered on the paper bag in his hand. Only after a long while did he tug up the corner of his mouth in a small smile, no telling whether it was at himself or something else.</p>
+        <p>He had in fact prepared a present—but for all his rushing, it seemed he'd still come too late.</p>
+        <p>Sheng Wang was sleeping rather deeply, his face half buried in the quilt, hair faintly mussed and spilled across the pillow. He seemed a little warm, his forehead lightly damp with sweat. Jiang Tian walked to the bedside and set the paper bag on the lower bunk.</p>
+        <p>He stood there a long while watching, then wiped the sweat at Sheng Wang's temple with his thumb. The other was wholly unaware.</p>
+        <p>He looked up at the overly bright cold light, walked to the wall and switched it off, and the dorm plunged into darkness. He left himself one phone light, and under that limited glow set the clay flasks of rice wine in the fridge, got his clothes and showered, then came back to the lower bunk drying his hair.</p>
+        <p>The dorm building was well soundproofed; even when that group of late-returning students came back they made no real noise—everywhere was quiet.</p>
+        <p>Jiang Tian leaned against the head of the bed, the towel draped over his neck, water beading at his hair tips and dripping down to soak soundlessly into the towel. He picked up the paper bag beside the pillow, looked at it in silence a while, then set it down again.</p>
+        <p>Beyond the balcony, silver-white light spilled in over the railing. From his angle he could see the distant outline of the hills' silhouette, just as quiet and silent, standing long in the night.</p>
+        <p>The person up top seemed to turn over in deep sleep, the bed swaying lightly, and Sheng Wang's arm slipped down off the edge, the thin pale fingers slightly curled, long and clean.</p>
+        <p>Jiang Tian looked up at it.</p>
+        <p>He was still leaning against the railing at the head of the bed, one leg stretched straight, one bent, the present he'd brought back resting on his leg, unremarkable—like the feelings he'd always hidden away in some secret place, smoldering and unspoken.</p>
+        <p>But in this moment, perhaps because the night was deep and still, those feelings stirred faintly, restless.</p>
+        <p>The rice wine he'd downed earlier had finally taken effect, more than two hours on. He was a little tired, but with no trace of sleepiness.</p>
+        <p>On the phone screen, a clock app slowly turned its hands, drawing nearer and nearer to midnight.</p>
+        <p>From ten, nine, eight, seven, it walked unhurried to four, three, two, one.</p>
+        <p>It was December 4th, a clear day; the moonlight at this moment was beautiful, and this person he liked was seventeen.</p>
+        <p>In this instant all was silent, and no one knew, so he took hold of Sheng Wang's drooping hand and said in a low voice, "Happy birthday."</p>
+        <p>Happy birthday, Wangzai.</p>
+        <p>He held it a long while, until the hand he was holding suddenly curled, and he came abruptly back to himself. Then Sheng Wang's voice, a touch hoarse, sounded.</p>
+        <p>He said, "I heard you."</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-068-forms-of-address.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-070-wild-grass.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

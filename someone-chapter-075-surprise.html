@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 75 — Surprise — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 75 · A Certain Someone</p>
+      <h1 class="reader-title">Surprise</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Jiang Tian's gaze fell on his own flicked finger, and he was quiet a good while.</p>
+        <p>"Why do you ask that?" He lifted his eyes to Sheng Wang.</p>
+        <p>"Don't know." Sheng Wang rested the back of his head against the wall, chin tipped slightly up, his gaze dropping with it, watching the dust suspended in the light. He reached out to scoop at those motes and came up with nothing.</p>
+        <p>"Just feels like it's floating—can't go up, can't come down, can't reach either end." He lazily let his hand drop again to his knee. "Putting it that way sounds melodramatic, since—"</p>
+        <p>We've already kissed.</p>
+        <p>He paused a few seconds, skipping over the thing they both understood, and pressed his slightly dry lips. "Anyway… it's pretty strange. Don't you think?"</p>
+        <p>Another moment passed before Jiang Tian's gaze moved off him.</p>
+        <p>Though Sheng Wang had put it vaguely, Jiang Tian knew the meaning—he'd always known, always understood clearly. He just hadn't expected Sheng Wang to ask.</p>
+        <p>To be precise, hadn't expected him to ask this early.</p>
+        <p>He'd thought they were in tacit accord on this, had reached a kind of unspoken understanding, like in the countless moments before. But he also knew that this so-called "unspoken understanding" couldn't last; it was bound to be broken, bound to have someone unable to hold back.</p>
+        <p>After all, nothing could stay smothered in the dark for long. Either it erupted, or it died out.</p>
+        <p>So the question came suddenly, yet entirely as a matter of course. Jiang Tian had in fact long since settled on his answer. He'd rehearsed it many times in the back of his mind: when Sheng Wang raised the question, he would say, <em>wait a while longer.</em></p>
+        <p>Wait until camp ends, until we leave this closed-off school, leave Utopia and Neverland. Wait until there are people standing all around us again, the air full of clamor you want or don't want to hear—and if you still want to ask, I can tell you the answer.</p>
+        <p>And if you don't want to ask, that's fine too. As long as there's no solemn beginning, there's no need to deliberately announce an end. The way back has always been left open for you, free of obstacles or qualms; no one will be put in an awkward spot, no step down even needs laying.</p>
+        <p>It was the most rational method that impulse could be wrapped around.</p>
+        <p>But the sunlight was too bright, and it warmed the person beside him too much. Only seeing Sheng Wang's light-filled eyes, seeing him proud and expectant and uneasy all at once, Jiang Tian couldn't get out the words <em>wait a while longer.</em></p>
+        <p>All the subconscious preparation was thrown into total disarray. He came to and asked Sheng Wang, "Are you unhappy?"</p>
+        <p>"No." Sheng Wang shook his head. "Pretty happy."</p>
+        <p>He paused, then just threw away his pride and added a line: "Especially happy."</p>
+        <p>Then he heard Jiang Tian say, "Good, then."</p>
+        <p>Sheng Wang stilled an instant, and suddenly understood where that ungrounded floating sensation came from.</p>
+        <p>It was this line. This "good, then."</p>
+        <p>In the back of his mind he'd actually been worrying about exactly this point all along.</p>
+        <p>Jiang Tian's edges were sharp; sometimes he gave a person the illusion that, in certain situations, he too had a boy's impulses. But Sheng Wang knew that wasn't impulse—it was pride.</p>
+        <p>Sheng Wang knew clearly how calm Jiang Tian was. With even someone like Ji Huanyu, something like that, set across his path, he could pen the shadow into the smallest possible range and reach a reconciliation with himself and everyone around him—so it followed.</p>
+        <p>He was proud, but never impulsive, let alone in matters of feeling.</p>
+        <p>So these past few days, in the gaps of his spring-breeze contentment, Sheng Wang had occasionally wondered: why had the two of them suddenly come this far? Of course he knew his own reasons—but he didn't know Jiang Tian's.</p>
+        <p>Was it because he himself hid nothing? Sometimes his hope showed too plainly, sometimes his disappointment showed too plainly; here he went forward one moment and back the next, run ragged—so his ge couldn't watch any longer and walked over to pull him up.</p>
+        <p>He just worried, in the back of his mind, that the ambiguity and the intimacy hadn't come from a thrum Jiang Tian couldn't hold back, but only that he himself had run too fast, too close, and Jiang Tian feared he'd be disappointed and embarrassed.</p>
+        <p>If that were really so, then it was a bit much to ask of someone.</p>
+        <p>For the happiness and the elation all to be his alone—too domineering, and too unfair.</p>
+        <p>This was supposed to be split evenly between two people.</p>
+        <p>Sheng Wang pondered a long while, then smiled. "So everything you did was to make me happy?"</p>
+        <p>"Which things?" Jiang Tian said.</p>
+        <p>"Quite a few." Sheng Wang counted them off one by one, his tone a little lazy, like idle chat he wasn't really invested in. "Watching me mess with your contact name, celebrating my birthday early with me, putting up with me forcing wine on you, hunting all over for photos to make the album, and—"</p>
+        <p>The hand resting on his knee played along as if joking, bending a finger for each one counted. At the last finger, he stopped a good while before saying, "And kissing."</p>
+        <p>The room went quiet a long time—long enough that Sheng Wang couldn't help looking at Jiang Tian, and only then heard the other speak.</p>
+        <p>Maybe playing along with his idle talk, Jiang Tian started counting on bent fingers too.</p>
+        <p>He said, "The contact name was. Celebrating the birthday early was. Forcing wine was. Hunting for photos to make the album was. The last one wasn't."</p>
+        <p>Sheng Wang nodded very lightly and licked his dry lower lip.</p>
+        <p>He rarely got nervous, really—no matter the occasion, no matter how many people stood or sat before him, he could hardly feel nervous. Only in front of Jiang Tian did that inborn pride and self-assurance briefly vanish for a while.</p>
+        <p>"Then what was the last one because of?"</p>
+        <p>He waited for the answer, his thumb unconsciously rubbing his index knuckle, until that patch of skin went red—and then he heard Jiang Tian say hoarsely, "Impulse."</p>
+        <p>"Not enough restraint."</p>
+        <p>"Couldn't help it."</p>
+        <p>The finger pressing the knuckle stilled, and a long while later finally relaxed. As if he'd stood holding an armful of joy a long time and someone had finally taken half of it from him, so that he could at last set down the weight and be purely, simply happy.</p>
+        <p>He asked Jiang Tian, "Do you get impulses too?"</p>
+        <p>Jiang Tian: "Yes."</p>
+        <p>"When?" Sheng Wang asked.</p>
+        <p>"A lot," Jiang Tian said. "When my willpower's not strong."</p>
+        <p>Sheng Wang gave an "oh," then suddenly said, "Is your willpower strong right now?"</p>
+        <p>Jiang Tian glanced at him and withdrew his gaze, then after a moment said, "Not strong."</p>
+        <p>"Then I've got a question for you."</p>
+        <p>"Go on."</p>
+        <p>"Out there I always say you're my ge." Sheng Wang hesitated a few seconds and looked at him. "In private, can we swap it for something else?"</p>
+        <p>"What counts as private?"</p>
+        <p>"When the door's shut." Because he'd pitched it low, Sheng Wang's voice was a little hoarse too. "When no one else is around."</p>
+        <p>"Swap it for what?" Jiang Tian asked.</p>
+        <p>"What can it be swapped for?"</p>
+        <p>Maybe because of that clear "willpower's not strong," Sheng Wang suddenly seemed unbound, turning brazen. He tipped his chin up, thought, then turned and asked, "Swap it for boyfriend, that work?"</p>
+        <p>Jiang Tian rested the back of his head against the wall, his half-lowered eyes blinking very lightly. He was about to open his mouth when Sheng Wang added, "If you say it doesn't work, I'm coming in with my mouth—kissing you till you say it does."</p>
+        <p>Jiang Tian's gaze swept over from the corner of his eye, dropping for an instant before drawing back. "Then it doesn't work."</p>
+        <p>A fire roared up in Sheng Wang's head, burning his ears red. He blinked, turned, and kissed him.</p>
+        <p>Jiang Tian was very restrained, letting Sheng Wang touch at him green and clumsy, until the other tentatively licked at the seam of his lips—and only then did he tilt his head aside to dodge.</p>
+        <p>Sheng Wang, eyes narrowed, saw Jiang Tian's jutting Adam's apple slide once.</p>
+        <p>After a moment Jiang Tian turned back. "You really do want to catch it, huh?"</p>
+        <p>"Whose fault is it for saying it didn't work." Sheng Wang was a little unsatisfied; a dragonfly skimming the water wasn't intimate enough.</p>
+        <p>"It works now," Jiang Tian said.</p>
+        <p>"Oh, then let's celebrate." Sheng Wang grinned, having gotten his way, then licked his lower lip and went to pester him again. No telling how many haphazard kisses later, Jiang Tian was finally pestered past holding out.</p>
+        <p>He yielded a little, his right hand sliding down the side of Sheng Wang's face and jaw, the thumb at the jaw nudging once to turn Sheng Wang's head aside, then kissed the side of his neck.</p>
+        <p>Restrained, and unable to help himself.</p>
+        <p>Sheng Wang grabbed at his hair, neither hard nor soft, his breath all trembling.</p>
+        <p>He knew this way it wasn't catching, but—</p>
+        <p>Damn.</p>
+        <div class="scene-break">❖</div>
+        <p>A boy's willpower in the throes of infatuation is all for show, and the upshot was that Jiang Tian's fever broke clean that night—only to unfortunately convert into a far more drawn-out cold, while Sheng Wang, after three sneezes in a row the next morning, gloriously fell in the line of duty and joined the cold's ranks too.</p>
+        <p>The upside was that, broken pot smashed to bits, there was no more fear of contagion; the downside was that both their throats went hoarse, accompanied by coughing, which badly affected their speech delivery.</p>
+        <p>Though the scoring teachers all knew their true level, and knew illness was a factor beyond willpower and ought to be weighed a little in the marking, the final effect was still there for all to see, and they couldn't shut their eyes and forgive every problem. So Sheng Wang and Jiang Tian had their colds on and off for over a week, and the PK scores rose and fell that whole while.</p>
+        <p>The most conflicted one in this span was Bian Chen. He swept seven PK points in ten days—thrilled and elated on one hand, and on the other feeling he was taking advantage of someone in a pinch.</p>
+        <p>It was Sheng Wang himself who took it in stride, telling him, "Where there's gain there's loss, only right. Just a good reminder to work twice as hard for the real final."</p>
+        <p>The latter half made plenty of sense; the front part—"where there's gain there's loss" and "only right"—was beyond Bian Chen's comprehension, a thing of metaphysics. He couldn't for the life of him see where Sheng Wang's "gain" was, or why he called it his "due."</p>
+        <p>Before they knew it, camp had come to its tail end. The venue for the real final wasn't at this school. The camp teachers arranged the itinerary; all forty students would head north.</p>
+        <p>Right before departure, Sheng Wang finally found time to go to the top of the long street behind the hill, where the shop that had closed several days for renovation was now made over good as new. He exported the group photo from his phone and had two copies printed.</p>
+        <p>One he gave Jiang Tian; the other he was going to put in that album.</p>
+        <p>He'd just turned seventeen, with eighteen photos in all—and this last one was an accident, and the greatest surprise.</p>
+        <p>Each page of the album had gold-flecked card stock for a base, with a clear film top and bottom. Before slipping this group photo under the film, a thought suddenly came to him.</p>
+        <p>He asked Jiang Tian, "Did you write the year in the upper right corner of the photos?"</p>
+        <p>"Printed," Jiang Tian said. "How would a surface like that take writing well."</p>
+        <p>"All right." Sheng Wang asked again, "Then what if I wanted to write a few words?"</p>
+        <p>Jiang Tian thought. "Write on the back."</p>
+        <p>"Slip the back in and you can't see it," Sheng Wang said.</p>
+        <p>"What do you want to write?"</p>
+        <p>At the question, Sheng Wang blanked, then laughed. "Oh right, I'm being dumb—it wasn't meant for anyone else to see anyway."</p>
+        <p>He grabbed a pen, turned the photo over, and held it to the light to see the outlines of the figures. Behind his own back he wrote one character—<em>Me.</em></p>
+        <p>Then behind Jiang Tian's back he wrote the rest—<em>the you I love.</em></p>
+        <p>Me and the you I love.</p>
+        <p>Jiang Tian stood right beside him, watching him write the line in earnest, and suddenly felt that all his earlier struggling, his back-and-forth, his so-called reason had been too foolish—foolish in a way that was like him and yet not quite like him. Better to be a little reckless.</p>
+        <p>Because I love you so much, I've trodden as if on the edge of an abyss, as if on thin ice.</p>
+        <p>So much that I'd nearly forgotten: I'm seventeen, and at this age the whole world is mine. No need to hesitate, no need to weigh.</p>
+        <p>I'm indestructible, and capable of anything.</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-074-numb-leg.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-076-back-to-school.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

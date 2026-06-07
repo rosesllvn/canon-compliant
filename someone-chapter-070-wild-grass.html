@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 70 — Wild Grass — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 70 · A Certain Someone</p>
+      <h1 class="reader-title">Wild Grass</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Jiang Tian's hand instinctively drew back a little, his warmth sliding a hair's breadth down off the fingertips—and then Sheng Wang caught it, turning his own hand to lock it in place.</p>
+        <p>I heard the happy birthday you said, and I know you reached out a hand in the dark too. Sheng Wang said hoarsely, "I caught you."</p>
+        <p>I've already caught you, so you can't pretend nothing happened.</p>
+        <p>The wooden staircase gave a faint creak, the footsteps a little urgent, the last two steps all but taken in a single stride. By the time Sheng Wang came to, he was already down off the upper bunk in a rush.</p>
+        <p>Before he'd worked out what to ask, what to say, he was already standing in front of that person.</p>
+        <p>Jiang Tian was no longer leaning back against the bed rail. He sat on the bed, right hand propped on a bent knee, shoulders and back slightly bowed. Moonlight slanted across the bed, brushing a stretch of silver-white light past him—yet he sat within the shadow.</p>
+        <p>The hand that had held Sheng Wang's hung at his side, long fingers half-curled. His eyes were lowered, his gaze fallen into that patch of emptiness in his palm, lost in silence.</p>
+        <p>Not until Sheng Wang's shadow fell crooked and wavering across that sheet did he lift his eyes.</p>
+        <p>Sheng Wang suddenly couldn't open his mouth. He looked into Jiang Tian's eyes, his heart racing, his chest so full it might burst, his mind a blank.</p>
+        <p>They sank into quiet at the same moment, and the intimacy of those just-tangled fingers grew wildly in that instant, savage and soundless, filling the whole room in the space of a breath.</p>
+        <p>No one could see it. Only they themselves knew, in their hearts.</p>
+        <p>In their hearts they knew it better than anyone.</p>
+        <p>Jiang Tian's low voice was a little blurred in the night. "When did you wake?"</p>
+        <p>Sheng Wang's chest rose and fell; though he'd only come down five or six steps, run from the bed to the floor, it felt like he'd traveled three thousand li.</p>
+        <p>He said, "I've been awake a long time."</p>
+        <p>The moment you caught me, I woke.</p>
+        <p>"Why didn't you make a sound?" Jiang Tian said.</p>
+        <p>Sheng Wang said, "What do you think?"</p>
+        <p>Jiang Tian's gaze shifted once, a tremor light as breathing or a heartbeat.</p>
+        <p>Sheng Wang looked at him and, for some reason, found that sudden silence a little unbearable. He said hoarsely, "I thought when you said you'd step out a minute you meant a few minutes, ten or so, so I wandered around waiting for you. Waited and waited and never saw you come back, so I climbed up to play on my phone a while."</p>
+        <p>He gave a self-mocking little laugh. "Didn't think that wine's kick would be so strong—fell asleep without meaning to."</p>
+        <p>He went still a moment. "Actually I was never really under."</p>
+        <p>He hadn't felt it as he spoke, as if he'd just found a topic at random. Only after he'd finished did he realize the words carried a hint of complaint—as if said on purpose to soften Jiang Tian's heart. As if, if he didn't say something, the night would come to an abrupt stop.</p>
+        <p>Reason told him it was better not to open this mouth, that the night's events really ought to stop just like that, abruptly.</p>
+        <p>But he still couldn't hold back, and asked one more thing: "Didn't you say you were grabbing something? Why'd you take so long?"</p>
+        <p>Jiang Tian glanced at the paper bag resting on his leg. "Because it wasn't supposed to be ready until tomorrow."</p>
+        <p>Sheng Wang blanked. "A present? Didn't you say there wasn't one?"</p>
+        <p>"I lied," Jiang Tian said. "How could there not be one."</p>
+        <p>He pinched the corner of the paper bag and frowned very faintly. "But I'm not very good at it."</p>
+        <p>"At what?"</p>
+        <p>"Not very good at preparing presents for people."</p>
+        <p>"You don't need to be good at it," Sheng Wang said. He took the paper bag with lowered eyes, and as he tore the wrapping said, "I'll probably be happy with whatever you give me."</p>
+        <p>It was wrapped thickly, probably out of worry the corners would get crushed, or it would get caught in the rain and damp. Sheng Wang peeled off two layers, and finally glimpsed a corner of the present through the opening.</p>
+        <p>It looked like a leather cover.</p>
+        <p>He almost thought it was another notebook; only after fully unwrapping it did he find it was a photo album. These days photos all lived in phone cloud drives—he'd never once used anything like this himself.</p>
+        <p>But he remembered that, in the gap of some idle chat, he seemed to have told Jiang Tian he very much liked looking at that old album of Old Man Ding's.</p>
+        <p>Phones broke; cloud drives held too much, too jumbled. Those photos that recorded some single point in time were drowned in a vast sea of data, and unless he happened to be searching for something, it never occurred to him to look.</p>
+        <p>So much so that he sometimes felt the past sixteen years had gone hazy and indistinct—he could no longer quite remember where he'd been, or where he'd once lived a long while.</p>
+        <p>There was only moonlight in the dorm. Jiang Tian rose, came over, and switched on the desk lamp. By its light Sheng Wang saw the album in full.</p>
+        <p>This album was a little special. The cover was a sketch—of the little red carton he often used as his avatar, as if made specially for him.</p>
+        <p>He tugged the corner of his mouth in a smile, then opened to the first page.</p>
+        <p>He hadn't actually settled on what photos the album might hold, but he still blanked when he saw the first one.</p>
+        <p>It was an old photo, maybe limited by the equipment, not as sharp as photos now. But the roadside trees and passersby all had halos of light around them.</p>
+        <p>Right—there was no particular person in the photo, but a bustling street.</p>
+        <p>At first Sheng Wang was a little lost, but he soon noticed the street sign in the corner—it was the big street outside the old residence in Baima Lane, the doorway of his home.</p>
+        <p>In the upper right corner, someone had written a year at the edge.</p>
+        <p>Sheng Wang vaguely sensed something, and turned to the second page. It was a shopping mall, at the junction of some intersection where traffic converged, sunlight striking the glass and blazing into a single bright sheet.</p>
+        <p>Likewise, the upper right corner of this photo bore a number too—the year after the first.</p>
+        <p>He suddenly remembered some morning waiting for the bus, some evening walking toward the discipline office, and other moments he'd mentioned to Jiang Tian—</p>
+        <p>"When I was little I was a real handful, always rousing people up at the crack of dawn."</p>
+        <p>"And then?"</p>
+        <p>"And then I'd come inspect the people's conditions on this street—had to walk it from one end to the other, and only once I'd seen everyone living in peace could I go back for my second sleep."</p>
+        <p>"Why this street?"</p>
+        <p>"Because it was lively."</p>
+        <p class="ellipsis">…</p>
+        <p>"See that intersection? Wasn't there a mall here before? When I was little my mom said that back when my grandpa was still alive, I'd throw tantrums every day demanding to go shopping."</p>
+        <p>"Did you actually understand any of it?"</p>
+        <p>"Two years old—of course I didn't understand. I was just going incognito among the people, born with an emperor's destiny, what can you do. The mall's gone now, though—no idea what year they tore it down."</p>
+        <p>"Torn down last year."</p>
+        <p>"Then I really came back at a bad time. A year earlier and I could've relived it."</p>
+        <p class="ellipsis">…</p>
+        <p>Sheng Wang turned page after page, the number in the upper right corner changing year by year. He saw many roads in the photos—near home, near elementary school, outside the gate of his middle school. Then he reached another province and city, and saw the school gate he used to slip off to for snacks in his last year of junior high, and the flower-lined street of his first-year-of-senior-high school.</p>
+        <p>The last photo had been taken this year. It was Fuzhong's west gate—you could see the big characters on the lintel above the gate, and through it a cross street, with a narrow lane along its edge where a little cart selling jianbing was parked year-round; that was the entrance to those long alleys out at Wutongwai.</p>
+        <p>On the other side of the photo was the convenience store he went to most, two large characters written on it—Xile.</p>
+        <p>This year's most special places for him were all there in that single photo.</p>
+        <p>On the road leading to Xile was the back of a boy with his bag slung over one shoulder, his right hand raised as if hailing the person behind him.</p>
+        <p>That was Sheng Wang himself.</p>
+        <p>From the first year of his life to the sixteenth, every road he'd walked was in this album. He himself had already lost track of them—he'd never imagined someone would quietly piece them all together for him, and seal them away here.</p>
+        <p>Every road in here was thronged and bustling, full of voices; every year was a day of brilliant sun.</p>
+        <p>Sheng Wang gazed down at the last photo, and for a long while didn't look up.</p>
+        <p>He reached back and switched off the desk lamp, and the whole dorm sank into night again, the photos blurring; he blinked several times, fast.</p>
+        <p>After another long while, he turned and asked Jiang Tian, "Where'd you get these photos?"</p>
+        <p>His voice was hoarser than before, with the very faintest catch of a nasal note.</p>
+        <p>Jiang Tian leaned against the edge of the desk, right beside Sheng Wang, shoulder against shoulder. There was the color of the moon in his eyes, clear and bright—but the moment he lowered them it was all hidden away in the depths. "Found them. Xi-ge helped a bit."</p>
+        <p>Sheng Wang asked again, "When was the last one taken?"</p>
+        <p>Jiang Tian said, "Don't remember. A long time ago."</p>
+        <p>Sheng Wang nodded once.</p>
+        <p>After a moment, he said, "Why were you walking behind me, taking my picture?"</p>
+        <p>Jiang Tian said nothing.</p>
+        <p>Sheng Wang: "Why are you so good to me?"</p>
+        <p>Jiang Tian was silent a long time, brow furrowing once and then easing. "I'm your ge."</p>
+        <p>Sheng Wang nodded again. This time he stayed quiet a long while—long enough that the hand Jiang Tian had braced on the desk edge clenched hard, the knuckles paling. Only then did he speak. "Then was reaching out to catch my hand just now also because you're my ge?"</p>
+        <p>Jiang Tian offered no new explanation; instead he fell into a long silence.</p>
+        <p>That album had left Sheng Wang's mood running heavy, and the wine had welled back up. He felt himself quite calm, really, yet each thing he said came out more reckless than the last.</p>
+        <p>Every time Jiang Tian was asked into speechlessness, his own heart beat a little faster.</p>
+        <p>Maybe it was because shoulder against shoulder the distance was truly close, or maybe just an illusion, but he felt Jiang Tian's heart seemed to be pounding too—the opposite of his silent look, like the surge of waves beneath a calm sea.</p>
+        <p>He listened a while, then turned and looked at Jiang Tian. "Ge, your heart's beating as fast as mine."</p>
+        <p>Jiang Tian shut his eyes very lightly, as if to bar the ambiguity and the impulse outside—but when he opened them again, the feeling in them had only grown thicker.</p>
+        <p>"Don't call me that," he said, turning to look at Sheng Wang.</p>
+        <p>Because they were looking at each other, the distance seemed all the closer. Sheng Wang's breathing turned a little ragged, suddenly losing its rhythm.</p>
+        <p>He saw Jiang Tian's gaze flick down for an instant, falling below the tip of his nose, then draw restrainedly back.</p>
+        <p>Sheng Wang blinked very lightly. "You said it yourself just now—everything's because you're my ge. So why won't you let me call it now?"</p>
+        <p>In the end Jiang Tian still turned his gaze back. He looked at Sheng Wang, a tangled, hard-to-suppress feeling in his lowered eyes.</p>
+        <p>After no telling how long, he spoke. "Because it makes me feel like I've lost my mind."</p>
+        <p>And with that, he tilted his head and leaned in.</p>
+        <p>The moonlight came through the window glass, pooling at the corner of the desk and on the floor like cut geometric shapes.</p>
+        <p>Outside the window, someone in some dorm wasn't asleep yet—maybe late-night talk, maybe horsing around—their blurred laughter sounding in the night.</p>
+        <p>Inside, the two boys leaned side by side against the desk, fingers braced and clenched on its edge, their crossing breaths trembling faint and testing. They kissed each other, green and dizzied, fierce and quiet.</p>
+        <p>A boy's first stirring is a midsummer night's wilderness—you can't mow it all, can't burn it out.</p>
+        <p>One sweep of the long wind, and the wild grass runs to meet the sky.</p>
+        <p>【Cherry】</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-069-impulse.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-071-anniversary-sale.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 71 — Anniversary Sale — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 71 · A Certain Someone</p>
+      <h1 class="reader-title">Anniversary Sale</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Sheng Wang's heart was pounding fit to burst.</p>
+        <p>He felt like a hot-air balloon someone had quietly set alight—everything above his neck burned dizzy and reeling, while his hands and feet drifted. By the time he startled awake and dropped back to earth, the sky had already gone light.</p>
+        <p>He stared blankly at the white expanse of ceiling for a good long while, suddenly unable to make sense of it. He wasn't sure whether he'd actually slept, wasn't even sure whether the concept of "yesterday" truly existed.</p>
+        <p>He groped around by the pillow a long time, found his phone, and pressed the screen alight. The lock screen said today was December 4th, clear—every character crisp as could be. He felt around the right side of the pillow again and touched the album's leather cover; only then was he certain he really wasn't dreaming.</p>
+        <p>Half the sunlight was blocked by the door and window, slanting onto the edge of the upper bunk. After flailing about a while, Sheng Wang finally tipped back onto the pillow as if reassured—and a few seconds later, suddenly yanked the quilt up over his head.</p>
+        <p>In the dark and stuffy heat he thought: damn, he'd kissed his ge.</p>
+        <p>Just thinking the word set his heart racing.</p>
+        <p>How he'd climbed back up to the bunk last night, how he'd burrowed into the covers, Sheng Wang remembered none of it. When a person's nervous, memory turns to chaos—like suddenly losing all sense of time, no before or after, no long or short.</p>
+        <p>Did I say anything?</p>
+        <p>Seemed like no—every line of it forgotten clean, as if his mouth had been sawn off.</p>
+        <p>And Jiang Tian?</p>
+        <p>Seemed like no, too.</p>
+        <p>Sheng Wang strained to recall, but remembered only that when Jiang Tian leaned in his breath had fallen very lightly at the corner of his mouth, and that Jiang Tian's lips had been soft, a little cool.</p>
+        <p>I…</p>
+        <p>Hell.</p>
+        <p>Sheng Wang's open hand drooped over the edge of the bed, very much in the posture of giving up the ghost on the spot. After stewing a while, he rolled over with the quilt in his arms and buried his face down in the pillow.</p>
+        <p>He may have been trying to smother himself, but it didn't work, and in the end he got up as if conceding defeat.</p>
+        <p>The quilt was tossed aside, his hair mussed from all the tossing and turning. Sheng Wang ruffled it twice, knelt up, and went to peer over the bed edge at the person in the lower bunk—only to feel a dull ache shoot through his right knee.</p>
+        <p>He hissed in a breath and, puzzled, rolled up his trouser leg to find two bruises on his knee and shin. He blanked a moment, then finally remembered that after kissing last night he'd put on a show of composure, trying to climb back up to the bunk all worldly and unbothered—and had banged into the corner of the staircase twice running.</p>
+        <p>By comparison, Jiang Tian had been much calmer; he—</p>
+        <p>Where was he???</p>
+        <p>Sheng Wang leaned over the bed rail and found the lower bunk completely empty. The quilt was folded neatly at the foot, the person who'd slept there long since vanished without a trace.</p>
+        <p>He let down the rolled trouser cuff, took two steps down the staircase, then just braced on the handrail and jumped to the floor. He circled the dorm twice and genuinely couldn't find Jiang Tian.</p>
+        <p>It was only 7 now, an hour till the camp's first class—how had the guy disappeared?</p>
+        <p>Sheng Wang grabbed his phone from the upper bunk and, without a second thought, called Jiang Tian—then, the moment he'd pressed dial, regretted it a little. Compared with talking, the two of them might be better suited to typing on WeChat right now.</p>
+        <p>He'd just worked this out when the call connected.</p>
+        <p>The people at both ends of the line went quiet a good while, almost in tacit accord.</p>
+        <p>Sheng Wang listened to Jiang Tian's very faint breathing and thought again of the breath that had fallen at the corner of his mouth yesterday.</p>
+        <p>He licked that spot on his lip, picked up the cup on the desk and drank a little water—and Jiang Tian's low, deep voice finally sounded against his ear: "Hey."</p>
+        <p>The fingers gripping the cup curled, and Sheng Wang set it down.</p>
+        <p>"Where are you?" he asked.</p>
+        <p>"Cafeteria," Jiang Tian answered. "You up?"</p>
+        <p>"Just woke."</p>
+        <p>Sheng Wang sat down by his bed, then said, "Scared me. I thought you—"</p>
+        <p>He stuck, vaguely omitting the two words <em>after kissing</em>: "—just took off."</p>
+        <p>The person at the other end seemed to stick too. Then Jiang Tian's voice came again: "I didn't."</p>
+        <p>Sheng Wang nodded, and only after nodding realized the person on the other end couldn't see it.</p>
+        <p>A whistle came faintly through the phone, far off, like the assembly whistle a teacher blows in P.E. Sheng Wang asked, suspicious, "You're really in the cafeteria?"</p>
+        <p class="ellipsis">…</p>
+        <p>Of course he wasn't.</p>
+        <p>This school sounded the wake-up bugle at 5:40; at 6:10 the regular students started their morning run; at 6:30 the main body poured off the field and filed, laughing and chatting, into the teaching building—and only then did the daylight truly come up.</p>
+        <p>Just now a batch of P.E. students had arrived, lifting their legs and stretching along the track. A coach blew a whistle at the far end of the field, and they drifted that way one after another. Jiang Tian sat in the top row of the stands on this side of the field.</p>
+        <p>He was of course not as unruffled as he looked, or he wouldn't have muddled the kid back up to the upper bunk last night with every word he'd meant to say forgotten.</p>
+        <p>He'd slept a rough few dozen minutes in the stretch near dawn, then gotten up and come to the field, taking the cold morning wind to clear his head—until Sheng Wang's call came.</p>
+        <p>He stood up from the stands and walked down the broad steps, saying to the person on the other end, "What do you want to eat? I'll buy it and wait for you."</p>
+        <div class="scene-break">❖</div>
+        <p>The sky in this season was especially high and far. Sheng Wang pulled his collar up over his head, chin tucked into it, and walked toward the cafeteria.</p>
+        <p>The sun was extraordinarily good that day. Though it hadn't rained, the roadside grass and trees were unusually clean; even the withered leaves fallen on the ground had a brilliant rim of light.</p>
+        <p>The air was cold but fresh. Sheng Wang drew it into his chest, and a lazy pleasure suffused his whole body, as if he could be happy without having to do a thing.</p>
+        <p>Only one special window was open in the cafeteria, and in that vast space only a few dozen camp students were scattered about. He spotted Jiang Tian at a glance.</p>
+        <p>Sheng Wang trotted over and sat down across from him—then, not paying attention, banged his right knee on the table bar again and let out an immediate "ssss."</p>
+        <p>"What's wrong?" Jiang Tian lowered his head to look under the table.</p>
+        <p>Sheng Wang rubbed it haphazardly. "Nothing. Hit a bruised spot."</p>
+        <p>"Where'd a bruise come from?" Jiang Tian looked at the spot he was rubbing, a little puzzled.</p>
+        <p>"Banged into the staircase corner last night."</p>
+        <p>"…"</p>
+        <p>As for why he'd banged into the staircase corner, that needed no elaboration.</p>
+        <p>The hand rubbing the sore spot suddenly went very mechanical. Jiang Tian's gaze still rested there; after a moment he quietly lifted his eyes.</p>
+        <p>The two met each other's eyes once, then bent their heads and got on with breakfast.</p>
+        <p>With a secret tucked away in their hearts, they hadn't noticed their surroundings. Only when they faintly heard chatter and laughter and looked up did they find the empty tables nearby had all been taken by girls.</p>
+        <p>The two girls on the right must have just sat down; a classmate beside them teased, "Hey, do you have to be this obvious?"</p>
+        <p>"About what?" one girl shot back, ears red. "You're so annoying."</p>
+        <p>"All right, all right, eat, eat," the boy said. "Lend me your speech draft later? Mazi and I both think this topic's hard to do anything with."</p>
+        <p>The girl shot a glance toward Jiang Tian and Sheng Wang's table. "We didn't write ours well either—"</p>
+        <p>Riding the back-and-forth, with Jiang Tian just happening to have his head up, the girl turned, face flushed crimson, and asked him, "Jiang Tian? Could we borrow your oral-class speech draft and your answers to the few questions the teacher left yesterday?"</p>
+        <p>Jiang Tian's expression went blank for one second.</p>
+        <p>A mouthful of congee caught in Sheng Wang's throat, and he coughed until his neck went red.</p>
+        <p>The girl who'd asked hadn't expected this effect either, gave a start, and hurriedly fumbled out tissues to hand him.</p>
+        <p>"Thanks." Sheng Wang slumped face-down on the table catching his breath, his thin pale hand waving the tissue at her.</p>
+        <p>The girl asked cautiously, "Why'd you suddenly choke?"</p>
+        <p>Jiang Tian got up, went to the vending machine for a bottle of water, touched its base to Sheng Wang's hand and set it on his side, then told the girl, "Borrow someone else's."</p>
+        <p>"Huh?" The girl blanked.</p>
+        <p>"I didn't write one," Jiang Tian said.</p>
+        <p>The girl: "???"</p>
+        <p>Sheng Wang lifted his head from the crook of his elbow, the color just receding down from his neck. He cracked open the water Jiang Tian had bought, gulped twice, and caught in the corner of his eye the two girls turning to him again.</p>
+        <p>He swallowed the water and gave an awkward laugh. "I didn't write one either."</p>
+        <p>The girl: "???"</p>
+        <p>"Are you two not planning to write them, or…"</p>
+        <p>Sheng Wang gave a dry laugh. "Forgot."</p>
+        <p>The teacher in charge of the speech class was extremely strict, even a little fierce. The girl thought of that teacher's face and couldn't help saying, "With all that time last night… you didn't write a single word?"</p>
+        <p>Sheng Wang was just about to gulp some more water and stopped in time, lest he choke to death a second time. He and Jiang Tian met each other's eyes and looked away again. "Yeah, not a word. We'll make it up at lunch break."</p>
+        <p>The moment he heard Jiang Tian and Sheng Wang hadn't done the work, Bian Chen came alive. Not out of schadenfreude, but because he figured today he could finally bag a PK point.</p>
+        <p>He'd gotten back late last night too, but somehow hadn't dared forget the speech, so he'd burned the midnight oil past 3 a.m. and ground out a draft he was quite pleased with.</p>
+        <p>Lunch break was only an hour. To write a good speech draft, look up the answers the teacher had left, and also prep for today's impromptu speech… short of taking stimulants, there was no way.</p>
+        <p>Bian Chen looked forward to it the better part of the day, and finally the afternoon's speech class arrived. Right before it started, he even told his deskmate, "Just watch—Daddy's destined to slay the whole room today."</p>
+        <p>He soon discovered he'd thought too much of it.</p>
+        <p>Those two bastards must really have taken stimulants—not only had they finished their drafts, they delivered them especially well, and from the reactions of the few girls in the front row, the guess was that they'd been blindingly handsome.</p>
+        <p>Bian Chen thought sourly: like a peacock fanning its tail, and who even knew who they were fanning it <em>for</em>!</p>
+        <p>On the first day, with only the prepared speech, the gap between him and Sheng Wang hadn't been that large. Today, with the impromptu Q&amp;A and speech added in, that gap was downright despairing.</p>
+        <p>So for the back half of class he was completely out of it, half-dead, sprawled over his desk, feeling like he was sleepwalking.</p>
+        <p>What he didn't know was that the two pleased-as-punch people at the back desk weren't quite in form either—Sheng Wang especially.</p>
+        <p>When he came down off the podium after his impromptu speech, he'd just gotten WeChat messages from some old classmates, all wishing him a happy birthday.</p>
+        <p>He replied to everyone one by one, and chatted a while longer with Eight-leg Crab.</p>
+        <p>Crab was an unusually gossipy person, even more so than Gao Tianyang—you could tell from the way he used to follow Fuzhong's confession wall. But he differed from Gao Tianyang in one respect: Gao Tianyang's wits were thicker than a cannon barrel, while Crab was different—when it came to gossip, he was extraordinarily sharp.</p>
+        <p>He shot the breeze with Sheng Wang every which way for a while, then said, slyly, <em>Sheng-ge, I noticed something.</em></p>
+        <p class="msg"><strong>Recyclable:</strong> What thing?</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> To keep you from taking me for a creep, I should explain first</p>
+        <p class="msg"><strong>Recyclable:</strong> ?</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> We started competition class lately too, and the problems make me want to tear my hair out. Every time I can't solve one I want to ask you, but!</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> Considerate as I am, I know your papers are even more disgusting than mine, so I always held back in the end</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> Although!</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> I never ended up sending you a single problem, I have opened your chat box countless times</p>
+        <p class="msg"><strong>Recyclable:</strong> …</p>
+        <p class="msg"><strong>Recyclable:</strong> Keep talking this creepy and I'm deleting you as a friend</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> Don't</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> kowtow</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> I'm done with the setup</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> All I wanted to say is, Sheng-ge, you've been changing your avatar and name kind of frequently these past few months, huh</p>
+        <p class="msg"><strong>Recyclable:</strong> …</p>
+        <p>Sheng Wang stared at the screen, vaguely guessing what that idiot on the other end was about to say.</p>
+        <p>Sure enough, several new messages popped up one after another in the chat box.</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> I've been mulling it over</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> Sheng-ge, have you got a situation going on</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> [fly rubbing its hands]</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> [narrow-eyed smile]</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> Look how long you rode one "Canned." From when I met you it was Canned, and right up to when you transferred away I never saw you upgrade.</p>
+        <p class="msg"><strong>Recyclable:</strong> ………………</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> What you've changed lately is more than several years' worth before</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> Are you in a relationship?</p>
+        <p>Sheng Wang's brow gave a jump.</p>
+        <p>He stared at those words a good while, then turned and glanced at Jiang Tian.</p>
+        <p>The other noticed his gaze and lowered his head slightly. "What is it?"</p>
+        <p>Under cover of the impassioned voice of the boy on the podium, Sheng Wang said, "Chatting on WeChat with an old buddy."</p>
+        <p>For some psychology he couldn't name, he flipped the phone screen around for the other to see.</p>
+        <p>Jiang Tian's gaze flicked down; at that angle he must have seen the "in a relationship" line at once. He held still a few seconds, then lifted his eyes to Sheng Wang.</p>
+        <p>The teacher on the podium was scoring; most of the students in the room were nervous. Only this last corner by the window was filled brimful with something hard to describe.</p>
+        <p>The boy walked down off the podium, the teacher said a few words, and the next girl went up. Sheng Wang shot a quick glance that way, then dropped his eyes and typed a reply to Crab.</p>
+        <p class="msg"><strong>Recyclable:</strong> You just reminded me</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> ?</p>
+        <p class="msg"><strong>Recyclable:</strong> I should change to a new avatar</p>
+        <p class="msg"><strong>Eight-leg Crab:</strong> ???</p>
+        <p>Jiang Tian watched him send these. The scoring teacher for the speeches walked down off the podium again and dropped into any empty seat in the back row.</p>
+        <p>Left with no choice, Jiang Tian withdrew his gaze and watched the impromptu speeches a while without the slightest interest. After a moment he lowered his eyes again, fished his phone from his bag, opened Sheng Wang's WeChat and refreshed.</p>
+        <p>The guy had changed his avatar to a Want Want gift pack and his name to two characters: <em>Anniversary Sale.</em></p>
+        <p>Jiang Tian: "…"</p>
+        <p>Having changed his avatar and name, Sheng Wang went back to playing with Crab, working the other into a yelping frenzy of frantic stickers, and only then put the phone away, satisfied.</p>
+        <p>By then there were only a few minutes till the end of class. He flipped idly through Moments, finding everyone's posts rather interesting, and at last, without quite realizing it, tapped into that "Someone" chat box.</p>
+        <p>The real person sat right beside him, yet here he was, looking at the other's profile.</p>
+        <p>Compared with him, Jiang Tian's avatar and name were far steadier: Captain forever unchanging, the period forever unchanging.</p>
+        <p>Though he could predict the Moments would be the same forever-blank, he still tapped in—and saw a change.</p>
+        <p>Before, Jiang Tian's Moments cover had been the most original default one, untouched. Today it had changed, swapped for a photo.</p>
+        <p>The photo had been taken when the sky was about to lighten but hadn't yet, dawn glimmering faintly, shining in from the terrace and cutting the dorm into two blocks of light and dark.</p>
+        <p>That empty desk sat right between the light and the dark—half in the light, half in the night.</p>
+        <p>No one knew that a few hours earlier it had witnessed the thrum and intimacy between two boys.</p>
+        <p>Sheng Wang stared at that photo, color creeping up his neck inch by inch.</p>
+        <p>Damn…</p>
+        <p>Whether or not Jiang Tian had drunk too much when he took it last night, this wine of his was never going to wear off now.</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-070-wild-grass.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-072-thwarted.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

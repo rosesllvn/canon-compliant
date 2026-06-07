@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 78 — Nickname — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 78 · A Certain Someone</p>
+      <h1 class="reader-title">Nickname</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Weekly exams were old hat to Fuzhong students—a semester in, they were close to numb to them.</p>
+        <p>The day before an exam, every class went through the routine of clearing their desks. Class A students didn't like stacking books on their desks; they generally brought only what they needed for the day's classes, and one swing of the bag into the satchel left the desk clean. Class B was different.</p>
+        <p>No telling who'd started it, but Class B liked to stand all the books and handouts they'd use in a semester up on their desks, the bookshelves on either side forming a natural barrier.</p>
+        <p>It was very relaxing day to day—you only had to bring a few papers to and from school, and sleeping in class or getting up to mischief wasn't on full display—but it was agony before a weekly exam, when whole stacks had to be hauled to the back of the room.</p>
+        <p>Class B had a lot of girls, and at times like this they could only ask the boys for help. "Which boy a girl asks for help" and "which girl a boy volunteers to help" weren't so simple; they often hid all sorts of little intentions.</p>
+        <p>It was Sheng Wang's first time taking direct part in this process, and before he'd even caught on he saw a boy walk over from the back row, wordlessly hoist a front-row girl's books, and set them down with a thud at the very back of the room.</p>
+        <p>The whole class went silent a few seconds, then erupted, banging desks and jeering. Then the boy walked back to his seat feigning composure—actually flushed red holding it in—the girl redder than he was.</p>
+        <p>Sheng Wang: "…"</p>
+        <p>His phone was buzzing, and overhead came the thunder of a thousand marching feet: Class A had let out.</p>
+        <p>Jiang Tian asked if he was done; he replied soon.</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> Good thing Big Mouth Xu isn't here</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> Or he'd nab one with every grab</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> I don't even know everyone's names yet, but just watching them move books I now know every couple in the class</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> Precision sniping</p>
+        <p class="msg"><strong>Someone:</strong> …</p>
+        <p class="msg"><strong>Someone:</strong> The Class B homeroom teacher said his whole class is dumb</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> Old Zhang's exact words were "our whole class is rather innocent"</p>
+        <p>He and Jiang Tian had just finished grumbling when Shi Yu beside him swaggered off—not only hauling He Shi's books but also taking her empty water cup to the back of the room and filling it up.</p>
+        <p>In the spirit of a little roommate solidarity, Sheng Wang added a line: <em>Though it's understandable—at times like this you'd obviously help whoever you like.</em></p>
+        <p>He'd no sooner sent it and looked up than four girls came shoving and jostling over together. "Sheng Wang, could you help move some books?"</p>
+        <p>Sheng Wang: "…"</p>
+        <p>Damn, spoke too soon.</p>
+        <p>Jiang Tian was walking downstairs with Gao Tianyang. Two steps down, he suddenly got a new message from a certain someone—four characters: <em>I like you.</em></p>
+        <p>Jiang Tian had no idea what fit that young master across the way had thrown, and sent a baffled question mark, only to be rewarded with a row of little figures kneeling and crying.</p>
+        <p>"Hm?" Gao Tianyang suddenly raised his pitch into a question.</p>
+        <p>Jiang Tian turned to look at him and saw the other hastily withdraw his gaze from the phone screen.</p>
+        <p>"I think I saw a line of text…" Gao Tianyang said with a powerful survival instinct, "I'll state up front—I wasn't peeking on purpose, I just wanted to tell you something and accidentally caught the screen. See, I'm turning myself in right away."</p>
+        <p>"What text?" Jiang Tian let his hand drop, thumb pressing the screen dark. But the instant he'd done it he felt the reaction was a bit <em>no silver buried here.</em></p>
+        <p>Sure enough, Gao Tianyang glanced at his lowered hand and his expression instantly turned sly. He looked left and right, slung an arm over Jiang Tian's shoulder to squeeze him into the stairwell corner, cleared his throat, and asked mischievously, "Tian-ge, did I just witness some girl's confession?"</p>
+        <p>Jiang Tian: "…"</p>
+        <p>In that instant, Gao Tianyang felt his Tian-ge's expression was extremely numb—a trace of hesitation within the coolness, and a hard-to-describe something within the hesitation.</p>
+        <p>He unilaterally took this for an iceberg's bashfulness, because after staring at him numbly a few seconds, Jiang Tian actually gave an "mm" and admitted it.</p>
+        <p>Not admitting wouldn't have worked anyway—Gao Tianyang's eyes were like a hawk's, one sweep had nailed the key point, that line of "I like you."</p>
+        <p>He observed a bit, judged Jiang Tian's mood was okay, and with dog's audacity probed on: "Would you normally bother responding when someone confesses to you? Definitely not. But you just typed a reply!"</p>
+        <p>Jiang Tian maintained that hard-to-describe look. "…So?"</p>
+        <p>Gao Tianyang quailed for half a second, then shut his eyes, braced his legs, and delivered his verdict: "So I think that girl's got a shot."</p>
+        <p>Jiang Tian heard him out, was silent a moment, then answered, "Oh."</p>
+        <p>Gao Tianyang's face filled with astonishment. "You said <em>oh</em>??? You actually said <em>oh</em>???"</p>
+        <p>He'd thought that whether he was right or wrong, Jiang Tian would surely deny it; he'd braced himself for a faceful of stubborn denial and mockery, and never expected the other to own it!</p>
+        <p>Jiang Tian went straight on down the stairs. Gao Tianyang stood dumb a few seconds, then sprinted after him, and the two arrived together outside Class B.</p>
+        <p>They'd been showing up here very frequently of late, Jiang Tian especially, coming every day at lunch and dinner to wait for Sheng Wang.</p>
+        <p>The Class B teachers liked to run over; sometimes they had to stand outside the back door several minutes. Even this frequent, the Class B girls still stirred when they saw Jiang Tian come.</p>
+        <p>Right now there was no teacher in the Class B room, everyone busy hauling books. The instant the stir went up, Jiang Tian found a certain someone's seat empty, and after sweeping the room saw Sheng Wang in the aisle, carrying books.</p>
+        <p>He looked refined and handsome, not burly, yet his grip was unexpectedly strong. He held that long stack steady as could be, while the girl beside him kept saying, "Isn't it heavy? Want to rest a bit?"</p>
+        <p>"It's fine, this is nothing." Sheng Wang bent to prop the stack against the back of the room, straightened up, and brushed off the dust, asking, "Anything else?"</p>
+        <p>"No, no, I can move the rest myself, thanks." The girl pointed out the window. "Jiang Tian's here."</p>
+        <p>She'd no sooner finished than she felt a gust of wind sweep past her. The next second, Sheng Wang had strode to the window, bracing the frame to tell the person outside, "A few girls really couldn't move their books and asked if I could help, hang on, almost done."</p>
+        <p>Jiang Tian finally understood what fit that earlier "I like you" had been—he'd probably just said "help whoever you like" and gotten swarmed by girls.</p>
+        <p>He thought of that row of kneeling, crying figures and wanted to laugh a little, so he asked Sheng Wang, "How many stacks left?"</p>
+        <p>"Two," Sheng Wang said.</p>
+        <p>Jiang Tian nodded, took one look at the free-for-all of Class B's open-door chaos, and walked straight in through the open back door.</p>
+        <p>"What are you doing?" Sheng Wang blanked.</p>
+        <p>Jiang Tian pushed his sleeves up to bare his forearms and said without lifting his eyes, "Helping you."</p>
+        <p>When they left the room, the girl Jiang Tian had helped was still a little dazed. She really hadn't figured a good turn like this came buy-one-get-one-free.</p>
+        <p>Sheng Wang swiped for three drinks at the vending machine downstairs and handed one each to the other two.</p>
+        <p>"What's Lao Gao brooding about?" He twisted off the cap and bent to dodge. Fine white foam hissed up fast at the bottle's mouth, spilling out through the gap and leaving scattered specks on the ground.</p>
+        <p>Gao Tianyang shot Jiang Tian a glance, signaling with his eyes: <em>Can I say it?</em></p>
+        <p>Jiang Tian was very direct. "Did I seal your mouth?"</p>
+        <p>"Then I'll say it." Gao Tianyang weighed it, then turned to Sheng Wang. "I suspect my Tian-ge's heart has stirred with mortal feeling."</p>
+        <p>Sheng Wang's grip slipped a touch and he accidentally twisted the whole cap off, the drink spurting out a good half.</p>
+        <p>Gao Tianyang retreated two steps to avert the tragedy of getting a pantful. "Holy crap, Sheng-ge, you ambushing me?"</p>
+        <p>"Hand slipped." Sheng Wang licked the drink off his thumb and borrowed a tissue from a passing classmate.</p>
+        <p>He covered the bottle's mouth and asked Gao Tianyang, "What were you just saying???"</p>
+        <p>"I was saying—" Gao Tianyang started, then, "never mind, let me put it this way. Just before we came down to Class B, I caught someone confessing to Tian-ge."</p>
+        <p>"Confessing?"</p>
+        <p>"Yeah, saying I-like-you and so on." Gao Tianyang's tone carried a teasing mischief, then quickly shifted to regret. "But Tian-ge's thumb happened to be in the way, didn't see the girl's avatar."</p>
+        <p>"Didn't see?" Sheng Wang gave a subtle "oh."</p>
+        <p>He and Jiang Tian stood on either side of Gao Tianyang; he shot the other a glance past Gao Tianyang, then tipped his head back for a gulp of the drink.</p>
+        <p>Gao Tianyang was wholly oblivious. He turned to Jiang Tian on his right, trying to coax it out: "So, Tian-ge."</p>
+        <p>"Mm," Jiang Tian answered.</p>
+        <p>"Is the girl someone we know?" Gao Tianyang asked.</p>
+        <p>Jiang Tian: "Don't know."</p>
+        <p>"Don't know?" Gao Tianyang met Sheng Wang's eyes, trying to find the same reaction in his ally's, only to see the other's numbness toward gossip.</p>
+        <p>"So she might or might not be someone you know?" Gao Tianyang caught on. "I get it—she's definitely someone you ran into during camp."</p>
+        <p>This time Jiang Tian gave an "mm."</p>
+        <p>Seeing him actually answering question after question, Gao Tianyang's energy surged.</p>
+        <p>"Hey, Tian-ge." He nudged Jiang Tian's shoulder. "Pretty?"</p>
+        <p>Jiang Tian's gaze swept past from some spot or other, then he calmly lowered his eyes and drank. "Mm."</p>
+        <p>No telling whether it was an illusion, but Gao Tianyang felt the corner of his mouth moved before the "mm"—whether a smile or what, no telling, but these were trivial, irrelevant matters.</p>
+        <p>"If Tian-ge says pretty then she's definitely insanely pretty!" Gao Tianyang turned and hooked onto Sheng Wang. "Sheng-ge, were there any insanely pretty people at camp?"</p>
+        <p>"Pretty, I don't know about." Sheng Wang dug at his phone, head down. "Insane, there was."</p>
+        <p>"Who?" Gao Tianyang's attention bolted the moment it was tugged.</p>
+        <p>"Guess."</p>
+        <p>"…"</p>
+        <p>"You gossip first, I'll send a WeChat," Sheng Wang said.</p>
+        <p>Gao Tianyang received the imperial decree and stopped bothering him, turning back to keep needling Jiang Tian with sidelong probes.</p>
+        <p>Over here Sheng Wang's thumb moved fast, and Jiang Tian's phone buzzed and buzzed in his pocket—but with Gao Tianyang riding high on curiosity, he didn't look the whole time.</p>
+        <p>Not until lunch was done and they were back in the classroom for the noon break did he pull it out for a look. A certain someone had first interrogated: <em>Pretty????</em></p>
+        <p>Then flooded him with a dozen-odd stickers, each one swinging a long blade, every blade drawing blood—some skewering three or four figures with one stroke, some seven or eight, very fierce.</p>
+        <p>Even that wasn't enough; he'd changed his avatar to a big-white-eyed Wangzai, zoomed in to nothing but the eye-roll, and changed his name to: <em>Say That Again.</em></p>
+        <p>The half-hour math practice, Jiang Tian finished unhurried in twenty-five minutes. In the remaining five he watched a certain someone throw a tantrum and pick fights for four and a half minutes, then in the final half minute changed his own WeChat name too.</p>
+        <p>They say people in a relationship turn dumb at certain moments, and grow more and more alike through subtle influence—catchphrases, certain habits.</p>
+        <p>In this moment Jiang Tian felt it keenly.</p>
+        <p>Finding it childish on one hand, he changed the name that hadn't once changed since he'd registered to: <em>Oh.</em></p>
+        <p>Not a few minutes later, Sheng Wang spotted the change.</p>
+        <p class="msg"><strong>Say That Again:</strong> ?</p>
+        <p class="msg"><strong>Oh:</strong> .</p>
+        <p>It really did look like couple names—the smolderingly understated kind, unruffled yet plain at a glance.</p>
+        <p>…and quite mocking too.</p>
+        <p>Pleased on one hand, Sheng Wang on the other wanted to find his ge and pick a fight.</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-077-possessed.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <span class="nav-link disabled">Coming soon</span>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

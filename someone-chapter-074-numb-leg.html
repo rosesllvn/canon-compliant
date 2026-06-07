@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 74 — Numb Leg — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 74 · A Certain Someone</p>
+      <h1 class="reader-title">Numb Leg</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>As a patient, Jiang Tian truly had no self-awareness whatsoever.</p>
+        <p>Sheng Wang located the infirmary, went to the kitchen to pour a fresh pot of water and plug it in—so they wouldn't be stuck with only cold water once the medicine was bought. He came back out to find Jiang Tian had already gotten up.</p>
+        <p>His bag lay toppled on the bed, zipper wide open, the speech draft Sheng Wang had hogged all night stuffed inside. One hand gripping the strap, he sat on the bed's edge, head down, easing through the dizziness.</p>
+        <p>He must have heard Sheng Wang's footsteps. He said hoarsely, "Give me five minutes."</p>
+        <p>"What five minutes?" Sheng Wang blanked. "What are you getting up for?"</p>
+        <p>Jiang Tian said, "Class."</p>
+        <p>Sheng Wang: "???"</p>
+        <p>"I've already gotten your leave approved, what class—lie down." Sheng Wang strode over to take the bag away. Jiang Tian yielded a little.</p>
+        <p>He opened his eyes. "It's not that dramatic."</p>
+        <p>"You're in my hands now—whether it's dramatic or not is mine to decide." Sheng Wang returned Jiang Tian's old words to him verbatim, grabbing the bag's other strap, eyeing him like a tiger. "You lying down or not? If not, I'm peeling off your jacket."</p>
+        <p>Jiang Tian looked at Sheng Wang a little speechlessly, his gaze coming through the scattered hair at his forehead. Maybe because his face was pale, his eyes looked blacker than usual, carrying a touch of illness.</p>
+        <p>After another moment, he finally decided this standoff reeked of foolishness, withdrew his gaze, and let go.</p>
+        <p>Sheng Wang immediately shoved the bag up to the upper bunk.</p>
+        <p>"Lie down a while. The hot water's heating, should take a few minutes—" Sheng Wang pulled on a jacket and dug a small sports pouch out of the cabinet, slinging it across his back.</p>
+        <p>He hadn't finished his instructions when Jiang Tian cut in: "You're going to class?"</p>
+        <p>"Huh?" Sheng Wang blanked. "No—I took leave too."</p>
+        <p>"Then where are you going?"</p>
+        <p>Sheng Wang shook the campus map in his hand. "To the infirmary to get you medicine."</p>
+        <p>Jiang Tian withdrew his gaze and turned his head to cough a few times. "No need for medicine. Some hot water's enough."</p>
+        <p>"What I burned is tap water, not cure-all tonic." Sheng Wang flipped his collar up to cover the lower half of his face. "Keep this up and I'll find a way to catch it right now, then the two of us can drink hot water face to face and see who beats the disease by willpower first."</p>
+        <p>Jiang Tian: "…"</p>
+        <p>Watching him finally lie obediently back down, Sheng Wang went out satisfied. The school infirmary sat beside the student dorms, a bit far from the teachers' apartments at the front of the hill. He ran the whole way.</p>
+        <p>The infirmary had no cumbersome procedures, and picking up medicine on someone's behalf was fine. Two teachers were on duty; one asked him, "What's the situation, how'd the fever start?"</p>
+        <p>"Probably took a cold shower."</p>
+        <p>"A cold shower in this weather?"</p>
+        <p>Sheng Wang lowered his eyes, silent a few seconds, then nodded. "Mm."</p>
+        <p>It was the on-duty teacher across the desk who said, "Hey, believe it or not, that's the third one in for medicine today. The teachers' apartments had the water shut off last night, didn't they—some really did get caught in a cold shower, though those two didn't have fevers, just sore throats."</p>
+        <p>"Oh, that explains it. I thought it was another student who couldn't take it and came faking sick leave." The teacher gave Sheng Wang an apologetic smile. "I'll go get you the medicine, hang on."</p>
+        <p>Probably for fear students would misuse it, the school clinic gave only a small dose, but tucked in an extra thermometer. Sheng Wang put the medicine away, and the teacher was just about to add one more reminder—"if you're worried it'll heal slowly you can come in for an IV"—when he saw him already three steps down the stairs at a time, bag on his back, and then in two or three bounds around the corner.</p>
+        <p>Sheng Wang dashed back to the dorm and, the moment he opened the door, caught a certain someone who hadn't been lying obediently down red-handed. Jiang Tian stood by the sink; he must have just finished washing up, towel still in hand, a clear scent of mint about him.</p>
+        <p>"Caught with the goods—what else have you got to say for yourself?" Sheng Wang was a little warm from running. He set the medicine and congee on the desk, rolled up his sleeves, and turned to nab his man.</p>
+        <p>Jiang Tian had nothing to say; he came over from there without a sound. Standing at the desk, he took two boxes of congee from a takeout bag and pushed one toward Sheng Wang.</p>
+        <p>"The teacher said two pills at a time for this." Sheng Wang unwrapped the medicine box, then eyed his ge suspiciously. "Did you use cold water or hot to wash your face?"</p>
+        <p>Jiang Tian's hand dividing the chopsticks paused. He said mildly, "Hot."</p>
+        <p>Sheng Wang reached over and touched it—ice cold.</p>
+        <p>Jiang Tian: "…"</p>
+        <p>Sheng Wang: "Do you take me for an idiot?"</p>
+        <p>Jiang Tian didn't lift his eyes; he stuffed the spoon into his hand. "Eat your food."</p>
+        <p>Eat my foot, you really know how to change the subject. Sheng Wang thought. But the moment he heard Jiang Tian's low, hoarse, weary voice, he couldn't keep a straight face at all.</p>
+        <p>The Sheng young master was exceedingly fussy when he himself was sick, but caring for someone else this way was a first. With Jiang Tian the patient, he wished he could deploy every fever-fighting method available, and couldn't help getting a bit flustered.</p>
+        <p>He watched Jiang Tian drink the congee and take the medicine, and lie obediently back down a second time, before sitting on the bed's edge to change his shoes.</p>
+        <p>He'd just stood when his wrist was caught.</p>
+        <p>"What now?" Jiang Tian asked.</p>
+        <p>"Going downstairs to buy something," Sheng Wang said.</p>
+        <p>Jiang Tian's burning-hot fingers loosened a little, sliding down off the wrist. He threw back the quilt. "I'll go down with you."</p>
+        <p>"What are you going down for?" Sheng Wang's hand shot out to pin the edge of the quilt. "I'm just buying cotton swabs or pads—I saw alcohol on the shelf by the sink just now, dabbing some on will bring the fever down faster."</p>
+        <p>Jiang Tian frowned. "It's not that much trouble, the medicine's enough."</p>
+        <p>"Auntie Sun used to dab some on my forehead and arms," Sheng Wang said.</p>
+        <p>"I don't need it."</p>
+        <p>"You dissipate heat especially fast or something?"</p>
+        <p>"Yes."</p>
+        <p>"…"</p>
+        <p>After that, several times Sheng Wang wanted to do something more, and Jiang Tian vetoed it outright—no need, don't, don't go. The guy was cold and hard at the best of times; sick, he was downright worse.</p>
+        <p>At first Sheng Wang thought he was being stubborn, too proud to admit he was sick, or that even sick he had to seem in peak health, cured by a few sips of water.</p>
+        <p>Later, leaning against the glazed counter waiting for the new pot of water to boil and searching, in passing, for nearby shops with food suitable for a patient, he stayed in the kitchen a bit too long without realizing it. In that span Jiang Tian came over twice—once with a cup, saying he wanted to pour water; once saying he'd touched dust on the inner side of the bed rail and was washing his hands.</p>
+        <p>Sheng Wang puzzled a long while and never worked out how that dust had gotten there. So he carried the freshly boiled water back to the bedside to keep watch. This time he sat a long while, and Jiang Tian never asked for water again, nor got out of bed again.</p>
+        <p>Not until a certain someone, unable to hold out against the medicine, finally fell into a real sleep did Sheng Wang suddenly realize, in some instant, that his ge maybe wasn't being proud—maybe being sick just made him a little clingy.</p>
+        <p>It wasn't really his fault for being slow on the uptake; no one would connect the word "clingy" with Jiang Tian. But once you did connect it, there was a marvelous effect.</p>
+        <p>Sheng Wang left the stool, braced on the bed's edge, and quietly leaned his head in. Jiang Tian slept on his side facing the wall, lips pressed into a straight line, seemingly back to his usual keep-your-distance look.</p>
+        <p>Sheng Wang silently tallied it up in his head: the ones who'd had a chance to care for Jiang Tian when he was sick—besides Old Man Ding, that'd be Jiang Ou, right? No telling whether Jiang Tian was like this with them.</p>
+        <p>Intuition told him no, but he also figured his intuition wasn't humble enough.</p>
+        <p>Being a bit humble, he could rank top three.</p>
+        <p>The young master cheered up in an instant, his long legs rocking the chair to and fro. He didn't get to be happy long, though, because a certain someone wasn't well-behaved even asleep.</p>
+        <p>A feverish person ran cold one moment, hot the next, and during the fever's breaking it was easy to feel stifled. When Sheng Wang was sick he'd wrap himself up tight even asleep; Jiang Tian was his antonym.</p>
+        <p>The guy slept and slept, and the quilt retreated from his chin to his chest. Sometimes, brows furrowing from the stuffy heat, he'd flip the top half of the quilt straight down and pin it under his arm.</p>
+        <p>In an hour he flipped it down six times, and Sheng Wang tucked him back in six times—nearly tucking him awake in the process.</p>
+        <p>In the end Sheng Wang stood by the bed, a headache on his face, and said in a low voice, "You forced my hand."</p>
+        <p>He fetched another fleece blanket from the cabinet, added a layer of sealing over the quilt for a certain someone, tucking it in snug as could be… and then climbed up himself.</p>
+        <p>He pulled the upper-bunk pillow down for a back cushion, sat sideways on the bed with his back to the wall, and stretched both legs out over the quilt to press against Jiang Tian's shins, pretending to be a counterweight.</p>
+        <p>From then on, Jiang Tian slept exceptionally well-behaved—didn't so much as turn over.</p>
+        <p>His spot was especially good; the sun fell right over it, warming a person into laziness. The handout lulled him toward sleep, so he reached up to the head of the upper bunk for the album and flipped through it.</p>
+        <p>It was no more than a dozen-odd photos back and forth, yet he could leaf through them a long while—long enough that Jiang Tian woke from his sleep and moved over to sit beside him.</p>
+        <p>"Still feeling bad?" Sheng Wang laid a hand to his forehead, then handed him the electronic thermometer at his side. "Seems less hot than this morning."</p>
+        <p>Jiang Tian sat shoulder to shoulder with him, the heat of his skin passing through the fabric. He held the thermometer to his ear. "Much better."</p>
+        <p>The thermometer beeped. He glanced down at the reading and held the display out for Sheng Wang to see. Under 38—quite a bit better than the morning.</p>
+        <p>"Hungry?" Sheng Wang asked.</p>
+        <p>Jiang Tian shook his head.</p>
+        <p>Sheng Wang said, "Then I'll go pour you some water."</p>
+        <p>He'd just started to rise when Jiang Tian pinned him. "Don't want any."</p>
+        <p>Given his earlier insight about Jiang Tian being "clingy," Sheng Wang automatically translated this into "sit with me a while," so he settled down and stopped rushing off the bed.</p>
+        <p>Jiang Tian looked down at the open album. "Why do you keep looking at this page?"</p>
+        <p>Sheng Wang pointed at the last photo, the one with his back in it. "Feels like it's missing one."</p>
+        <p>Jiang Tian blanked. "Missing which?"</p>
+        <p>Sheng Wang picked up the phone beside him and lifted it, catching the very instant Jiang Tian looked toward it.</p>
+        <p>In the photo, two boys leaned side by side, the bright, mild early-winter sun falling over them, gently veiling that touch of illness. Sheng Wang's eyes were curved in a smile, spirited and bright. Jiang Tian had just happened to lift his gaze, his thin eyelids nearly translucent in the sunlight. Quiet, yet vivid.</p>
+        <p>"There." Sheng Wang pulled up the photo, head down, and waved it at Jiang Tian. "Now it's complete."</p>
+        <p>"There happens to be one more slot below to slip a photo in—we'll find a shop tonight and print it." As he spoke he meant to fold his legs and shift position, but the moment he bent one leg his expression turned hard to describe.</p>
+        <p>"Damn, ssss—"</p>
+        <p>Jiang Tian glanced at him. "What?"</p>
+        <p>"Leg's gone numb."</p>
+        <p>Jiang Tian looked at his caught-between-laughing-and-crying face and asked, "Which leg's numb?"</p>
+        <p>"Both." Sheng Wang rested his head on the bent one. "All of it."</p>
+        <p>Jiang Tian shook his head, speechless, and reached out to knead the muscle of the other leg. "How long were you sitting?"</p>
+        <p>"Over two hours," Sheng Wang said thickly.</p>
+        <p>"Didn't think to change position?"</p>
+        <p>"Forgot."</p>
+        <p class="ellipsis">…</p>
+        <p>Sheng Wang rested his head on his knee and let Jiang Tian knead the straightened leg. After a good while he suddenly bent his knee and reached out to press down on Jiang Tian's wrist. "Stop kneading."</p>
+        <p>Jiang Tian paused and turned his head. "Better?"</p>
+        <p>"No."</p>
+        <p>Sheng Wang answered and said nothing more, lifting his head only after several seconds. He let go, and the warmth that had belonged to Jiang Tian lingered on his leg a moment before withdrawing.</p>
+        <p>For a long while after that, no one in the room spoke.</p>
+        <p>Sheng Wang bent his legs, elbows propped on his knees. Amid a drumbeat of a heartbeat he lowered his eyes, waiting for the ambiguity and restlessness around them to slowly recede.</p>
+        <p>In some instant, he vaguely realized that his and Jiang Tian's state was actually a little strange. They plainly understood each other's hearts, yet it still seemed faintly unclear, ambiguous—so much that he always felt that layer of intimacy floated in the air, never quite settling to the ground.</p>
+        <p>He stayed quiet a good while, head down, then suddenly flicked Jiang Tian's finger. "Ge, what are we now?"</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-073-liar.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-075-surprise.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

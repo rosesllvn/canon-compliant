@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 76 — Back to School — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 76 · A Certain Someone</p>
+      <h1 class="reader-title">Back to School</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>They got back into the city right on Monday after finishing the English main competition, perfectly missing a monthly break. Sheng Mingyang had told Xiao Chen to pick them up at the station, only for Fuzhong to snatch the job away.</p>
+        <p>The chartered bus was still the same chartered bus, the driver still the same driver—only the teacher in the front passenger seat had changed from Yang Jing to Big Mouth Xu.</p>
+        <p>Sheng Wang had felt a little lucky at first, thinking riding the school's car was a touch better than Xiao Chen's, sparing him the sight of Jiang Ou and Sheng Mingyang the moment he opened the door.</p>
+        <p>But opening the door to Big Mouth Xu wasn't a happy thing either. No un-graduated student liked being cooped up with the discipline director, all the more so a student who'd had his phone confiscated.</p>
+        <p>The instant Big Mouth showed his face, Sheng Wang stuffed his phone back into his pocket.</p>
+        <p>"Even at school I never saw you this obedient—you think I can confiscate your phone out here?" Big Mouth said sourly. "Reporting home that you're safe, or just chatting? If it's the safety report, carry on; if it's chatting and games, pretend I said nothing."</p>
+        <p>"My dad's asking if the school car's here yet," Sheng Wang answered.</p>
+        <p>"Then you'd better say so, or the parents will worry. Our school does well on this front—only ever early, never late; can't have students standing around the station with no one to pick them up." Big Mouth Xu launched into a thousand-plus-word disquisition on Fuzhong's earnest sense of responsibility toward students, and Sheng Wang kept up an endless string of "mm"s while rapidly replying to Sheng Mingyang on WeChat.</p>
+        <p class="msg"><strong>Wellness Encyclopedia:</strong> Temperature's dropped quite a bit lately. Your Auntie Jiang says the dorm quilt's probably a little thin. Free to come back to the dorm after class this afternoon? We'll make a trip to school and add a padded quilt for you and Xiao-Tian.</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> It's not cold</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> We've fallen two weeks behind on class, might not be free after class this afternoon</p>
+        <p class="msg"><strong>Wellness Encyclopedia:</strong> Give us the key, your Auntie Jiang and I will take care of it</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> The dorm's not just the two of us, there are roommates—you'd startle them showing up out of nowhere</p>
+        <p>Sheng Wang was typing head-down when he suddenly heard Jiang Tian say in a low voice, "Why are you frowning?"</p>
+        <p>"My dad." As Sheng Wang spoke he started to show Jiang Tian the chat, but having turned the screen over he felt it wasn't quite right.</p>
+        <p>For one thing, in this exchange he didn't want his intent of keeping Sheng Mingyang and Jiang Ou from coming to school to be too obvious; he was afraid Jiang Tian would see it and think he regretted things.</p>
+        <p>For another, he didn't want Jiang Tian to see Sheng Mingyang's and Jiang Ou's names; he was afraid Jiang Tian would feel burdened and regret things.</p>
+        <p>So he flashed the phone past Jiang Tian's eyes and pulled it back before the other could see anything, then grumbled with lowered eyes, "My dad insists it's gotten cold, interrogating us about whether we're wearing thermal underwear."</p>
+        <p>Having said it, he worried Jiang Tian wouldn't believe him, and simply reached over to feel Jiang Tian's thigh, murmuring, "Let me see if you've got yours on."</p>
+        <p>"…"</p>
+        <p>Jiang Tian yielded a bit and fended off that paw. Sheng Wang, refusing to give up, tried to slip in again and had his wrist caught by Jiang Tian.</p>
+        <p>The endlessly chattering Big Mouth Xu up front finally stopped and turned to look back.</p>
+        <p>The two instantly let go, and Sheng Wang even shifted a little to the side, leaning guiltily against the window to carve out a clear demarcation line.</p>
+        <p>He worried a little on instinct—Big Mouth Xu had eyes like a hawk, could suspect him of being in a relationship just from sending a text. Now, sitting shoulder to shoulder with Jiang Tian right under Big Mouth's nose, he was practically turning himself in.</p>
+        <p>But Big Mouth only gave a snort and shook his head at the driver. "Hey, good thing I've only got one son. If it were two brothers, like—" He pointed at the two in the back seat. "—they'd probably squabble from childhood to adulthood."</p>
+        <p>The driver looked deeply moved. "Mine's two sons. Fighting over toys, over food, over the bed—anyway, the other guy's stuff is always better."</p>
+        <p>"Right? Real headache."</p>
+        <p>Big Mouth got to talking with him about raising sons and stopped minding the two in the back.</p>
+        <p>Sheng Wang blanked a good while, and only then realized that in Big Mouth's and the rest's eyes, he and Jiang Tian were family—brothers—and being a little affectionate, horsing around a little, was perfectly normal; they'd never think of anything else. As long as they were careful.</p>
+        <p class="ellipsis">…</p>
+        <p>As long as they were careful, it'd be fine.</p>
+        <p>The muscles he'd kept taut the whole ride slowly relaxed, his mood turning bright again, and even his tone replying to Sheng Mingyang loosened up, as though the phone screen between them were a protective film—drop-proof, shatter-proof.</p>
+        <p>He shifted into a more comfortable position, head against the window, right leg against Jiang Tian, and bantered with Sheng Mingyang.</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> Tell Auntie Jiang the dorm's got AC—we already find long sleeves too hot sleeping at night, add a quilt and it'd spontaneously combust.</p>
+        <p>Sheng Mingyang replied sourly: <em>Nonsense</em></p>
+        <p class="msg"><strong>Anniversary Sale:</strong> It's true</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> Don't believe me, I'll take a photo to show you when I'm back tonight, one chubbier roommate even sleeps in a tank top</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> Do you want to roast your son to death</p>
+        <p class="msg"><strong>Wellness Encyclopedia:</strong> The temperature's bound to drop more later. Even if you don't lay it out, keep it there as backup.</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> Dad, think carefully—those cabinets in our dorm, you really think they'd fit a backup quilt?</p>
+        <p>Wellness Encyclopedia finally began to waver.</p>
+        <p>Sheng Wang added another line: <em>Next time I come home I'll just bring it back, wouldn't that do</em></p>
+        <p>Sheng Mingyang must have gone to confer with Jiang Ou; after a good while he finally replied: <em>Fine, next time you're off then.</em></p>
+        <p>His right hand, resting on the seat, snapped its fingers very lightly. Jiang Tian looked over. "Done talking?"</p>
+        <p>"Mm."</p>
+        <p>Having answered, Sheng Wang turned and tapped into the pinned chat box, typing: <em>I'm dead tired</em></p>
+        <p class="msg"><strong>Someone:</strong> …</p>
+        <p>Jiang Tian shot him a glance, his expression rather speechless—probably finding this a bit silly. <em>How childish</em> was written on his face, yet his fingers obediently played along and typed.</p>
+        <p class="msg"><strong>Someone:</strong> Sleep if you're tired</p>
+        <p class="msg"><strong>Someone:</strong> Still over half an hour to school</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> Can I have a human body pillow</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> Never mind, I know I can't have one</p>
+        <p>Jiang Tian's thin eyelids lifted, falling on the back of Big Mouth Xu's head, fixed there a good five seconds before lowering again, like a wordless displeasure. It was such a simple motion, but on Jiang Tian, Sheng Wang found it very funny.</p>
+        <p>Big Mouth Xu had the discipline director's occupational disease—eyes watching six directions, ears hearing all eight. He caught Sheng Wang's very faint snort of laughter and turned to ask, "What are you laughing at?"</p>
+        <p>Sheng Wang instantly recovered his serious face. "Not laughing at anything, scrolled past a joke on Moments."</p>
+        <p>Big Mouth asked with great interest, "Oh? What joke?"</p>
+        <p>Sheng Wang: "…"</p>
+        <p>This time Jiang Tian turned his head aside.</p>
+        <p>Laugh my foot.</p>
+        <p>Sheng Wang shifted his foot and, without batting an eye, stepped on Jiang Tian's shoe.</p>
+        <p>Luckily Big Mouth Xu wasn't fixated on hearing the joke and was soon led away by the driver's topic. Sheng Wang slumped back again.</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> Miss Uncle Xiao Chen</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> I could even just lie down in Uncle Xiao Chen's back seat</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> And he wouldn't ask me what joke I scrolled past</p>
+        <p class="msg"><strong>Someone:</strong> Take your foot off first</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> With Big Mouth up front, I have to behave from head to leg—only my foot gets to lean on you a while</p>
+        <p class="msg"><strong>Anniversary Sale:</strong> Not even this is allowed?</p>
+        <p class="msg"><strong>Someone:</strong> …</p>
+        <p>Sheng Wang teased Jiang Tian, snorting with held-in laughter, finding the car genuinely stifling and wanting only to reach school quick.</p>
+        <p>It'd be fine once they got off, fine once they reached school—it wouldn't be this stifling, Fuzhong was so big, he thought.</p>
+        <p>But once they actually got off, he realized he'd thought too much. Fuzhong was so big, yet it really wasn't much better than the car.</p>
+        <p>They got back at noon and ran into Shi Yu and Qiu Wenbing dropping off luggage at the dorm, then Old Man Ding and Mute Uncle going out to Wutongwai to eat.</p>
+        <p>Sheng Wang used to think those alleys were empty, with hardly anyone around; now he found them a bit too lively. One moment an old person carrying groceries greeted them, the next a child went chasing past, and many households had their first-floor windows open—watering flowers, cooking up oily smoke, watching TV and chatting idly.</p>
+        <p>The school's Road No. 3 wasn't as quiet as before either; there were always students walking the tree-lined path with drinks or newly bought stationery—not many, but giving the illusion of an unbroken stream.</p>
+        <p>The streets and lanes of the world, bustling and teeming.</p>
+        <p>Only in this moment did Sheng Wang truly realize the "vacation" was over. For a far longer stretch after this, they'd have no choice but to hide themselves away, tucking their intimacy and joy in more private, secret places.</p>
+        <p>In hidden spots, in corners no one knew.</p>
+        <div class="scene-break">❖</div>
+        <p>On their way up the stairs the two ran into a big wave of teachers coming from the cafeteria—several from Class A, Class B, and Class 9 all there.</p>
+        <p>Yang Jing called them straight over. "I had a class this morning I couldn't move, so I didn't go to the station for you. Luggage back at the dorm?"</p>
+        <p>"Mm," Sheng Wang said. "Just came over from lunch."</p>
+        <p>"Heard you two got sick?" He Jin was, as ever, the first to fret about their health.</p>
+        <p>"Huh?" Sheng Wang and Jiang Tian met each other's eyes and hurriedly looked away.</p>
+        <p>"Had colds for a while." Sheng Wang pointed at Jiang Tian. "He even ran a fever."</p>
+        <p>"Heard about it—said the place you stayed had the water shut off, and several people got sick, right?"</p>
+        <p>It wasn't Jiang Tian's first time competing away, so he wasn't surprised by this sort of thing; it was Sheng Wang who looked startled. He Jin explained, "There are only so many teachers running competitions in the province, and we all know one another. The school worried you wouldn't take good care of yourselves out there, so there's always plenty of asking around."</p>
+        <p>"Oh, that explains it."</p>
+        <p>"Plus your camp performance and report cards were sent to the school together, as camp feedback," Yang Jing said. "We got them yesterday."</p>
+        <p>Sheng Wang: "???"</p>
+        <p>"Why the scared look?" Yang Jing said sourly. "Skip class, or do something bad against the rules?"</p>
+        <p>"No," Jiang Tian said. "Just took one day of sick leave."</p>
+        <p>"Saw that, the feedback said so. You two performed quite outstandingly the whole time—not a single class missed apart from that one sick day," Yang Jing said. "The comments even rated you both excellent campers; you just came up a little short on PK points."</p>
+        <p>The Class 9 English teacher said, "Oh? I didn't see it yesterday. Behind by how much?"</p>
+        <p>Yang Jing said, "Four or five points, maybe."</p>
+        <p>"Who's in the lead?"</p>
+        <p>"Who else, the Yizhong one."</p>
+        <p>"Then it's basically… a bit of a tough spot."</p>
+        <p>The teacher had probably meant to say "basically hopeless," because camp results would also affect students' mindset in the main competition—the leaders might be more relaxed, the laggards under more pressure, and if not managed well the gap would only widen.</p>
+        <p>But mindful of student feelings, he switched to a more roundabout phrasing.</p>
+        <p>The Class B English teacher clapped Sheng Wang and Jiang Tian on the shoulder. "It's fine, making the final is already a breakthrough. Whatever happens, it's a major-competition experience, which is great."</p>
+        <p>Yang Jing said too, "Right, you've already done me proud. By the way, did Xu say anything when he picked you up today? He stood in my office yesterday clutching the report card, jabbering forever, asking me whether there's any hope of a national third prize in this situation."</p>
+        <p>Sheng Wang answered honestly, "Didn't say anything at first, all small talk. Mentioned it once after we got off. Said the number of winners in this competition is pretty small, and if we could land a third prize the school would be very satisfied—told us not to feel burdened, to prepare well for other competitions afterward."</p>
+        <p>Yang Jing nodded. "All right, finally said something not so over-the-top."</p>
+        <p>"Old Xu just loves to exaggerate—better to stay modest." He Jin finished with a smile and asked the two students, "So how'd you reply to him?"</p>
+        <p>Sheng Wang hesitated a moment, then said, "It won't come to falling as low as third."</p>
+        <p>He Jin: "…"</p>
+        <p>Well. Even cockier than Old Xu.</p>
+        <p>Yang Jing looked at these two maniacs sourly and, not knowing whether to be pleased or worried, forced out a line: "Fine. Results come out next month—I'll be waiting to see how the two of you manage not falling to third."</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-075-surprise.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-077-possessed.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

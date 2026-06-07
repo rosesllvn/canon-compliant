@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 73 — Liar — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 73 · A Certain Someone</p>
+      <h1 class="reader-title">Liar</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Sheng Wang stalked to the door flapping his wings, full of menace, and only once his hand was on the handle did he realize he'd been an idiot—he should have ignored everything and gone in for a bite of his ge first, then dealt with it.</p>
+        <p>Thinking that, he felt he'd lost out, big time.</p>
+        <p>The idiot was still knocking. He yanked the door open, face set to devour someone, and was about to ask "what"—only to find the "idiot" was the camp teachers, a party of five led by the logistics teacher, standing at the door beaming.</p>
+        <p>Sheng Wang: "…"</p>
+        <p>"Whoa, what's with that look? Not feeling well?" Teachers always had a soft spot for top students, and these few rather liked Sheng Wang; off the clock they spoke less sternly too.</p>
+        <p>Sheng Wang obediently laid down his butcher's knife and found an excuse. "My stomach hurts."</p>
+        <p>"How'd your stomach start hurting out of nowhere? Eat something bad, or catch a chill?" the teacher asked.</p>
+        <p>Sheng Wang braced himself and dug out the long-unused "couldn't-truss-a-chicken" persona. "No, just a weak constitution."</p>
+        <p>It was the logistics teacher who said, "Probably caught a chill after all. This school's a joke too—doesn't fix that wretched pipe early or late, has to pick camp time to do it. Never mind them, I almost got doused with cold water in the shower myself just now."</p>
+        <p>The grammar teacher said, "Oh, I showered at noon after my morning class, so I really didn't notice. Take a cold shower in this weather and you're done for."</p>
+        <p>"Exactly, you'd definitely get sick."</p>
+        <p>They filed in one after another, greeted Jiang Tian, and looked around the dorm.</p>
+        <p>"Teacher, why'd you all suddenly come by the dorm?" Sheng Wang asked.</p>
+        <p>The speech teacher gave a "heh." "Caught you spacing out in class, did I? One look and I knew you weren't paying attention. I said this afternoon we'd come tonight. The past two days we've been busy with all the prep work; only tonight did we get a little free time, said we'd come see how you're settled in. Didn't expect to hit the water shutoff—can't even say it now."</p>
+        <p>He finished and pointed at Jiang Tian. "See, Jiang Tian was paying attention. He knew we were coming, didn't ask a question like that."</p>
+        <p>Sheng Wang: "…"</p>
+        <p>He knew jack.</p>
+        <p>Jiang Tian had just set down his pen and risen from the desk. Seeing Sheng Wang's wronged-to-death expression, he couldn't quite hold back a smile. That instant's expression was caught dead to rights by the speech teacher, who said, "See, your feelings are plenty vivid right now!"</p>
+        <p>Jiang Tian: "?"</p>
+        <p>"I've told you eight hundred times these past two days, your script is beautifully written, the wording precise and sharp," the teacher said. "It's just the emotional delivery that's a bit of a problem. Look, a successful speaker can rouse a crowd to fury or move them to tears; when he's done, the audience's hearts should be surging, or stirred to a thousand feelings—"</p>
+        <p>The teacher worked himself up and held forth at great length, practically an impromptu speech on "how to warm up a cold-faced student."</p>
+        <p>Finished, he cracked open the bottled water in his hand, drank two mouthfuls still unsatisfied, and asked Jiang Tian, "Feel any surge in your heart?"</p>
+        <p>Jiang Tian: "…"</p>
+        <p>He pondered two seconds and was about to speak. The teacher raised a hand. "All right, all right, no need, your expression's enough."</p>
+        <p>He turned to his colleagues. "I'm resigning tomorrow."</p>
+        <p>The few teachers nearly died laughing.</p>
+        <p>The speech teacher then sobered. "All right, no joking, in all seriousness. The speech PKs during camp matter quite a bit. Think about it—between top players, one point more or less makes a big difference, and the PK score, converted into the total, comes to a considerable number."</p>
+        <p>"Coming tonight had this purpose too: while there are still plenty of days left, to give every student a heads-up. The final result is one thing, but our real hope is for excellent students to shore up their weak points and become more excellent. Everyone has their own temperament, their own strengths and weaknesses. I'm not set on forcing you to be all that vivid and impassioned—on the competition alone, what you've got now is entirely enough—but I'd still like you to push to improve a bit more."</p>
+        <p>The teacher pointed at Sheng Wang. "See, your roommate's a ready-made resource. One of you can give the speech, the other be the audience. Just see if you can move him—make his heart surge, make him cry, right?"</p>
+        <p>This bunch of teachers really did treasure talent. Class was plainly over, yet they couldn't resist pulling out a great deal of experience and technique, going dorm to dorm to talk it over.</p>
+        <p>At last they held a little group meeting, said a few things to mind for the final competition, and only then truly dispersed.</p>
+        <p>The night had grown deep. The voices in the corridor receded like an ebbing tide, then were shut out by the dorm doors.</p>
+        <p>Sheng Wang yawned twice; the drowsiness was setting in.</p>
+        <p>This bunch of students all had a quirk—they liked to wrestle with themselves. Plainly wanting to sleep, they'd still grab their phones for a round of games; eyes plainly unable to stay open, they'd still chat every which way on WeChat with someone. As if not wearing themselves down until they drifted off without noticing would waste the fine hours. Only during the ten-minute class breaks did they sleep with a clear conscience.</p>
+        <p>After brushing his teeth Sheng Wang circled the dorm twice, scooped up Jiang Tian's speech draft on the way, and sat down on the staircase to the upper bunk.</p>
+        <p>Jiang Tian was over at the sink, the rush of water mingling with the faint hum of his electric toothbrush. Sheng Wang, foot on the step below, listened to the other's movements while toying with the zipper pull and reading the draft, head down.</p>
+        <p>Jiang Tian came over from there. He'd splashed his face again, fine droplets clinging to the hair tips at his forehead. Sheng Wang sat a little high, and Jiang Tian's head was slightly bowed, so from the staircase's angle he could see only the straight bridge of his nose and the level line of his lips.</p>
+        <p>The Sheng young master stared a few seconds, then quietly slid his eyes away. Once the restlessness of this age found an outlet, it longed to stand on the threshold every single day.</p>
+        <p>Restless on one hand, silently self-reproaching on the other—</p>
+        <p>When he was restless, his gaze always drifted below the tip of Jiang Tian's nose, sometimes before he even caught himself. No telling whether Jiang Tian had noticed, and no telling what he'd think if he had.</p>
+        <p>Then Sheng Wang would silently reproach himself, feeling like a little hooligan.</p>
+        <p>"Why are you sitting on the staircase again?" Jiang Tian pulled out a tissue.</p>
+        <p>The moment he spoke, Sheng Wang had the sense of a wandering mind caught in the act, so he stretched out one leg into a more nonchalant posture.</p>
+        <p>He shook the notebook in his hand. "I'm reading your speech draft. Didn't the teacher just say it's quite beautifully written? I'm giving it a respectful read."</p>
+        <p>Jiang Tian thought of the teacher's teasing again, a little helpless. "Done reading? Give it back when you are."</p>
+        <p>"No." Sheng Wang hadn't taken in a single word; he flipped two pages at random. "Listening's faster than reading. Why don't you just say it for me?"</p>
+        <p>"Don't even think about it." Jiang Tian gave him no face at all.</p>
+        <p>"The teacher said you can't waste a free audience like me."</p>
+        <p>"Wasting it is fine."</p>
+        <p>"Hurry up—where else are you going to find an audience this cooperative." Sheng Wang was getting addicted to teasing him. He leaned back like a boss, spread his hands, and said, "Come on, a little vivid and impassioned. Make me cry."</p>
+        <p>"…"</p>
+        <p>A moment's quiet fell in the dorm. Jiang Tian shook the water from his hair tips, blinked once, and lifted his eyes.</p>
+        <p>Having said it, Sheng Wang felt the line wasn't quite right. He met Jiang Tian's gaze and immediately added, "No—I mean, with your speech, make me…"</p>
+        <p>He cut himself off halfway, feeling it was worse than not speaking at all.</p>
+        <p>The polished phrasing learned from Sheng Mingyang was utterly useless in a situation like this; he'd suddenly turned clumsy-tongued.</p>
+        <p>The young master silently withdrew his swaggering foot, brooded on the staircase a few seconds, then turned and slipped up to the upper bunk. The motion looked calm enough, but his retreating back was suffused with <em>I just humiliated myself again.</em></p>
+        <p>Jiang Tian's gaze stayed where it had fallen on the staircase. A long while later he blinked and came to, the person up top having already buried himself alive. On instinct he walked back to the sink, turned on the tap, and only then remembered he'd already finished washing up. So, perfectly composed, he washed his hands a second time, pulled a second tissue to dry them, then switched off the light and went back to bed.</p>
+        <p>As he drew open the quilt and sat down, a thread of night wind slipped in through the gap in the balcony door and window. He felt a little cold but paid it no mind—and the next day he paid for it.</p>
+        <p>Sheng Wang was roused by his alarm at 7:15, and only when he blearily opened his eyes did he find Jiang Tian's speech draft still in his hand. The temperature had dropped a bit more that day; the early morning was a little chilly.</p>
+        <p>He pulled on a jacket and came down from the upper bunk, meaning to return the draft—only to find the person in the lower bunk still asleep, facing the wall.</p>
+        <p>Jiang Tian always rose early; sleeping to this hour was a little unusual.</p>
+        <p>Sheng Wang braced on the bed and leaned his head in. "Awake?" he asked softly.</p>
+        <p>Jiang Tian's brow furrowed; he answered low, "Mm."</p>
+        <p>It was another good while before he opened his eyes, turned over and sat up. "What time is it?"</p>
+        <p>Sheng Wang didn't check the time; instead he studied his face a moment and asked, "Are you not feeling well?"</p>
+        <p>How his body felt, Jiang Tian knew best. He'd actually woken once past five, his throat parched, cold shuddering through him in waves, so he'd poured a cup of hot water in the kitchen and drunk it.</p>
+        <p>He'd thought he'd be fine after sleeping it off bundled up, but waking in the morning it was worse instead—even his eyes were dry to the point of aching.</p>
+        <p>It was the first time Sheng Wang had seen Jiang Tian like this: skin gone from cool-white to pallid, hair tousled across his forehead, half-veiling his eyes when he bowed his head. Through the gaps in the mussed hair you could see the tight pinch of his brow.</p>
+        <p>He suspected Jiang Tian had a fever, but there was no thermometer in the dorm. So he leaned in, meaning to press against the other's forehead and compare temperatures.</p>
+        <p>Jiang Tian must have felt the motion; he half-opened his eyes, hesitated an instant, then instinctively drew away. He said hoarsely, "Stay back. It's catching."</p>
+        <p>"Catching what, I'm checking whether you've got a fever." Sheng Wang stubbornly pressed to his forehead, and felt a stretch of heat.</p>
+        <p>"How'd you spike this high all of a sudden?" Sheng Wang straightened up and hurried to grab the campus map the logistics teacher had handed out, anxiously hunting for the infirmary's location.</p>
+        <p>Jiang Tian sat at the head of the bed a while. "Maybe I got up too early yesterday."</p>
+        <p>"That wouldn't do this, though." As Sheng Wang spoke, he suddenly remembered the offhand remark those teachers had made last night, and the thin film of steam in the bathroom before he'd showered. His page-turning stopped dead.</p>
+        <p>He looked at the patch of faint red the fever had burned beneath Jiang Tian's eyes and asked, "Ge, did you not use hot water in the shower last night?"</p>
+        <p>Jiang Tian didn't lift his eyes; he kneaded his temples on his own, his cracked lips moving faintly. "I did."</p>
+        <p>Liar.</p>
+        <p>Sheng Wang thought.</p>
+        <p>The teacher had said a successful speaker could, with words, stir a person to a thousand feelings, send their heart surging, make them laugh, make them cry—fill them up inside until they couldn't get a word out.</p>
+        <p>But Jiang Tian was different.</p>
+        <p>He didn't have to say a single word, and he'd done all of it.</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-072-thwarted.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-074-numb-leg.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>
