@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 90 — Blunt Knife — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 90 · A Certain Someone</p>
+      <h1 class="reader-title">Blunt Knife</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Jiang Tian didn't sleep soundly, yet still had several dreams.</p>
+        <p>He dreamed of Du Cheng poking his head out from behind the smoke, saying, "Huanyu, he's grown this big? Last time I saw him was ten years ago."</p>
+        <p>He dreamed of Ji Huanyu saying to Jiang Ou, "Your son likes men too—happy?"</p>
+        <p>He dreamed of Jiang Ou screaming, while he stood in the long alley at Wutongwai, the aged Captain lying motionless before his feet, Old Man Ding glancing at him and the cat and saying, "It's hard, can't be saved, let's go." And then shutting the courtyard gate in his face.</p>
+        <p>He stood in place, feeling tired and absurd. Though he held nothing in his hands, he wanted to brace on his knees and rest a while.</p>
+        <p>He tried several times and couldn't bend down no matter what, feeling only weary and irritable—and woke with a start from the dream.</p>
+        <p>The instant he opened his eyes, Jiang Tian couldn't tell where he was sleeping; he only saw Sheng Wang sitting in front of him, warm bright lamplight reflected in his eyes, gazing at him without blinking.</p>
+        <p>"Ge." Sheng Wang called him very softly, then braced on one knee and leaned in, kissing his brow, the corner of his eye, his lips, murmuring, "Eighteen. I love you."</p>
+        <p>The irritated, sorrowful feelings of the dream vanished in an instant—as if someone had briefly lifted the steel plate off his spine, letting him bend down and catch a breath.</p>
+        <p>Jiang Tian turned the tables, gripped the back of Sheng Wang's neck and meant to kiss back—then suddenly remembered they were still in the living room, the most dangerous spot in the house, where someone could come at any moment.</p>
+        <p>He stiffened and let go.</p>
+        <p>"What time is it?" Jiang Tian asked low. Sitting up, he found a fleece blanket over him, slipped to his waist by his just-now motion.</p>
+        <p>"Past 1:20." Sheng Wang reported the time without even looking at his phone.</p>
+        <p>Jiang Tian's heart went soft. He reached out to touch the other's face. "Waiting all this time?"</p>
+        <p>"No—went up and down the stairs a bunch, checked the time N times in a huff." Sheng Wang pointed at the remote on the coffee table. "Just now I was debating whacking you awake then pretending to change the channel. You probably sensed the killing intent and woke on your own."</p>
+        <p>Jiang Tian gave a laugh and was about to say something when a bedroom door opened in the distance, pale light leaking out in a long slant that cut straight across the sofa.</p>
+        <p>The two on the sofa hurriedly separated.</p>
+        <p>Sheng Mingyang shuffled over in his slippers, braced on the sofa back, and asked low, "Xiao-Tian's awake? Hungry? Sister Sun's snow-fungus soup is still warming in the pot."</p>
+        <p>"Not hungry." Jiang Tian threw off the blanket and shot a glance toward the bedroom.</p>
+        <p>He wasn't good at being warm with people, didn't like making overtures, but that didn't mean he was unreasonable. He knew that Ji Huanyu and Du Cheng, however much shadow they'd cast over him and Jiang Ou, had nothing to do with the Sheng family. Sheng Mingyang could perfectly well have chosen not to bear any of this, yet he'd taken it all on.</p>
+        <p>It gave Jiang Tian a very strange feeling—as if something he'd always carried had suddenly been shared off by Sheng Mingyang. He ought, it seemed, to feel lighter, but in fact he didn't. It was unlike what he'd grown used to all these years, but rationally he knew he should thank him or apologize.</p>
+        <p>"Today—"</p>
+        <p>Jiang Tian was silent a moment, and the instant he opened his mouth Sheng Mingyang cut in. "Today's business was an accident, nothing to do with any of you. Even if there's something to it, that's for us elders to work out among ourselves. I hadn't wanted you to go to the hospital… never mind, it's done, so don't keep dwelling on it. These are all things from years ago."</p>
+        <p>He said so, but his brow was furrowed. Maybe from the late hour without sleep, his face was full of fatigue. Probably everyone who says "never mind, don't dwell on it" is only expressing a hope.</p>
+        <p>Jiang Tian looked at his expression and fell silent again.</p>
+        <p>Sheng Wang glanced at his ge, folded up the blanket, and changed the subject. "Dad, you're up because?"</p>
+        <p>"Oh." Sheng Mingyang looked at the empty cup in his hand. "Your Auntie Jiang's running a slight fever, pouring her some water to keep on hand."</p>
+        <p>"Fever?"</p>
+        <p>"Don't worry, she took medicine. She just can't sleep soundly, panics with the lights off. With a shock this big today, anyone would be in a bad way. Those things on me, I'd probably break down a while too. She's not one to lose her temper to begin with, bottles up whatever upsets her—letting it out like today might even be a good thing. I've asked a friend to arrange a doctor; I'll take her to talk after the new year. For this stretch, just… let's all bear with each other a bit more."</p>
+        <p>"All right, it's late. After a night of upheaval, you two get to sleep too." Sheng Mingyang patted the sofa back, then suddenly glanced at the muted TV and, half-joking, pointed at Sheng Wang. "Said you'd watch a movie here—you're watching a silent film?"</p>
+        <p>For one instant, Jiang Tian felt Sheng Mingyang's gaze sweep past him—no telling whether intentional or not.</p>
+        <p>Sheng Wang's lips moved. "What else, my ge's sleeping, should I blast the big speakers at him?"</p>
+        <p>Sheng Mingyang urged them a couple more times, then took his water cup to the kitchen. Soon a creak sounded, and he pulled the door to behind him back into the bedroom—only it wasn't shut tight, the light gone from a block to a very thin line, still falling on the sofa.</p>
+        <p>The two boys sat at opposite ends of the sofa, cut into two lonely islands by that line.</p>
+        <p>After a moment, someone reached across the line, grabbed Jiang Tian's hand and gave it a shake. "Going up?"</p>
+        <p>"Mm." Jiang Tian glanced toward the bedroom and tugged him back up to the second-floor bedroom.</p>
+        <p>Having dozed through a rough sleep on the sofa, he wasn't really tired. It was Sheng Wang whose eyelids had started fighting, yet he still trailed after, circling about, as if he'd done something wrong.</p>
+        <p>Jiang Tian washed up; Sheng Wang leaned at the door. Jiang Tian made the bed; Sheng Wang held a corner of the quilt to help. Jiang Tian dug out that stack of Chu-ge's reference books; Sheng Wang pulled one out and said he could take a share too.</p>
+        <p>"What's with you?" Jiang Tian finally had to turn and catch him.</p>
+        <p>Sheng Wang stared at his fingers, quiet a moment, then clasped them back. "I won't pull my hand away anymore from now on."</p>
+        <p>Jiang Tian blanked before grasping what he meant. First he didn't know whether to laugh or cry; then a more complicated feeling welled up, and he suddenly didn't know what to answer.</p>
+        <p>A long while later, he blinked. "Afraid that won't work."</p>
+        <p>He understood, of course, why Sheng Wang had reacted that way. If he hadn't done it, then with Ji Huanyu's sickening streak there was no telling what wilder things he'd have said—probably each line stabbed straight at him again. He was Jiang Ou's last line of defense, and if even that line collapsed, she wouldn't be far from breaking.</p>
+        <p>But reason was reason, clarity was clarity. He understood every cause; it didn't mean the instant his hand emptied wouldn't ache. That was the helplessness and the unsolvable knot between him and Sheng Wang.</p>
+        <p>If only they quarreled, clashed, kept erupting into conflict—or wore each other down into tedium, dullness, mutual loathing. Under normal circumstances any of those fuses, thought through rationally, wouldn't be so hard to accept—because when one stands at the end of a quarrel, weariness always outweighs love, and so it isn't so painful.</p>
+        <p>But they had none of that—only the can't-be-helped under understanding. Like what he was doing this very moment.</p>
+        <p>"I'm a high-risk element now." Jiang Tian's tone was a little self-mocking, then slowly sank and settled. "That line of Ji Huanyu's—my mom and your dad both took it in, I'd say."</p>
+        <p>"They didn't. Anyone could see he was a cornered dog biting at random," Sheng Wang said.</p>
+        <p>Jiang Tian shook his head. "Heard is heard."</p>
+        <p>They might find it absurd and not believe it, but words were knives; what's said leaves a mark on the heart in the end, and then surfaces at some unguarded moment.</p>
+        <p>Intentional or not, they'd surely, without realizing, grow suspicious and sensitive.</p>
+        <p>Sheng Wang lowered his eyes, gripping Jiang Tian's fingers very tight. After a long while he said, "My dad's half open-minded, half old-fashioned. I remember someone once brought up, in front of him…"</p>
+        <p>He paused, then went on, "brought up something to do with homosexuality, and his reaction wasn't big—never said anyone was sickening or perverted. When they talked about that case at the hospital last time, the old man and the rest were just riffing off one another, and my dad's that type, you know—he goes along with what others say, it doesn't mean his own view."</p>
+        <p>This was only half the truth, really—Sheng Mingyang was indeed half open-minded, half traditional. Whether someone else's son liked women or men, took up with a person or a fairy spirit, he accepted just fine, could even hand over a fat red packet and offer sincere blessings. That was because he didn't like wagging his tongue, and it was none of his business.</p>
+        <p>But his own son was a different matter.</p>
+        <p>Sheng Wang didn't plan to mention this; he only wanted to tell Jiang Tian the good parts. "Auntie Jiang's side… is also because there's a knot in her heart. After the new year the doctor will have a good talk with her and untie the knot, and once she stops carrying prejudice over these things because of a piece of human garbage, it'll get much easier."</p>
+        <p>"High school's too close to home; university's different—the mountains are high and the emperor far. Not like here at Fuzhong, where the teachers more or less all know my dad and your mom," Sheng Wang said. "I'll put in the effort and get into the same school as you, rent a place again, bring the cat son along. There's a saying—distance lends sweetness, nearness breeds contempt—and by then we'll both be sweet, and we'll keep working on them slowly. There'll always come a day we can talk them around."</p>
+        <p>"Right now my dad would dare transfer my school at the drop of a hat; at university he won't. I don't believe that if I get into Tsinghua or Peking University he'll say, 'Come on, let's switch schools to stop you dating.'"</p>
+        <p>Jiang Tian was finally tickled by his words and laughed twice.</p>
+        <p>Sheng Wang got a burst of energy, pounced him onto the bed, and kissed him hard a good while as if roughhousing.</p>
+        <p>In the end it came down to nothing but the wrong timing. Sometimes Sheng Wang wished time would pass faster—best to lie down and open his eyes already grown up, in university, or working. If he'd met Jiang Tian then, it would probably be another shape entirely.</p>
+        <p>So just wait a while longer, and it'd be fine—just get through these two years.</p>
+        <p>In conversation, "high school," "university," a few words carried you across, taking under two seconds. But open your eyes, and the days still crawled slowly forward.</p>
+        <p>The mood they'd managed to ease at night was wrecked utterly by early the next morning, because Jiang Ou's state was truly bad. She tried to calm herself, spoke with a smile on her face, and busied about the kitchen with Auntie Sun, wanting to make Jiang Tian a proper birthday meal.</p>
+        <p>She rushed from one task straight to the next, not letting herself idle for a second. And all it took was Jiang Tian saying he wanted to go out with Sheng Wang for her to accidentally drop a whole clay pot.</p>
+        <p>A full pot of scalding stew spilled across the kitchen, splashing both her feet red.</p>
+        <p>"Auntie, we're just going to pick up the cake, ordered ahead of time." Sheng Wang didn't know what she was thinking, or whether she'd missed the latter half of Jiang Tian's words, and explained, alarmed and uncertain.</p>
+        <p>"I know, I know." Jiang Ou sat on the sofa, ointment rubbed on the scalded spots. She said it a few times in a low voice, then apologized, "Auntie's fine, just spaced out a moment."</p>
+        <p>At that, no one mentioned going out again, switching to having the cake shop deliver instead.</p>
+        <p>There were two cakes, both ordered by Sheng Wang long ago—one to eat, one a fondant cake to keep. He'd gotten the idea from the WeChat group: Carp and Pepper had made plans to learn it over winter break, saying that once made it could be kept a long time.</p>
+        <p>The fondant cake he'd ordered for Jiang Tian had a little house, with a cluster of chibi figures standing before it—Jiang Ou, Old Man Ding, Gao Tianyang, Zhao Xi, Lin Beiting, himself, and a cat—all ringed around the little figure that stood for Jiang Tian, lively and full. He'd hesitated a long while, then, for the sake of the father-son tie, pulled strings to add Sheng Mingyang on too.</p>
+        <p>Beside the house was a sign that read <em>The best eighteen.</em></p>
+        <p>But by the time the cake came in, the kitchen was a mess and the room a heavy silence.</p>
+        <p>The cake sat in a clear box, lovely from afar but flawed up close. Sheng Wang had had the shop use the best sugar, good to keep for many years. But somewhere on the way—knocked, or who knew how—a few places had already cracked.</p>
+        <p>Sheng Wang got a little anxious, and the delivery person kept apologizing, until Jiang Tian took the cake and said, "I'll carry it upstairs."</p>
+        <p>This was the eighteenth birthday the person he loved had given him, every person he cared about gathered around, whole and beautiful—he had to treasure it well. Even if reality was nothing like it.</p>
+        <p>Given that Jiang Ou's fever kept coming and going, leaving her in a state of unease every day, Sheng Mingyang had no choice but to postpone the arranged banquet indefinitely, and had to explain to every invited guest besides.</p>
+        <p>Sheng Wang and Jiang Tian took on more than half the trivia for him, which kept him from being utterly overwhelmed.</p>
+        <p>On the phone with someone, Sheng Mingyang said, "Lucky I've got two low-maintenance sons."</p>
+        <p>He was in fact very good to Jiang Tian, but had always kept a proper distance, because he knew Jiang Tian wasn't an easy person to get close to. He'd never before used "my son" to describe Jiang Tian, yet these two days he mentioned it frequently.</p>
+        <p>In Sheng Wang's and Jiang Tian's ears, those words became an emphasis and a reminder. Just as Jiang Tian had said, Ji Huanyu's words were like a blunt knife, grinding a mark into their hearts—not enough to draw blood, yet aching dully.</p>
+        <p>So much that Sheng Mingyang and Jiang Ou both would unconsciously observe Jiang Tian, watching his every move.</p>
+        <p>Under that watching, the thing where one of them abruptly pulled a hand away happened many times—so many they'd gone a little numb to it themselves.</p>
+        <p>So much that on the last day of winter break, Sheng Wang carried his phone downstairs for dinner and, while waiting, sat at the far left of the sofa. A moment later Jiang Tian came down and habitually sat at the far right; there was no longer that line of light leaking from the bedroom door between them, yet they were still separated by mountains and seas.</p>
+        <p>Sheng Wang stared at that blank space and a strange thought suddenly surfaced.</p>
+        <p>If there weren't that rented room waiting for them in the distance, if the environment he and Jiang Tian lived in day and night were always like this, if sitting at opposite ends and drawing a line had become a reflexive daily routine—would they still count as a couple?</p>
+        <p>As if a ring of faceless people stood around them: when he spoke, they stabbed Jiang Tian once; when Jiang Tian spoke, they stabbed him once.</p>
+        <p>Given time, would they no longer be able to tell whose doing that sorrow was?</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-089-needle-point.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-091-ice-arrow.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

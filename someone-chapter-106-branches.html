@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 106 — Branches — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 106 · A Certain Someone</p>
+      <h1 class="reader-title">Branches</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Zhang Chao arrived at the office on normal time and found a certain workaholic actually absent; asking, he learned the man had taken leave, and was suddenly a little worried, hurriedly sending a WeChat of concern. As it was, he waited nearly an hour for a single reply.</p>
+        <p class="msg"><strong>I don't want this hand anymore:</strong> Accidentally fell asleep again just now, only just saw it</p>
+        <p>Zhang Chao was a bit puzzled. The workaholic rarely took leave, and rarely passed out asleep at this hour; that "again" was very spirited, and made him worry more.</p>
+        <p class="msg"><strong>Zhang Chao:</strong> You okay?</p>
+        <p class="msg"><strong>I don't want this hand anymore:</strong> Fine, just a bit uncomfortable</p>
+        <p class="msg"><strong>Zhang Chao:</strong> Oh, I see you took personal leave—if you're unwell, why not sick leave?</p>
+        <p class="msg"><strong>I don't want this hand anymore:</strong> Too lazy to go to the hospital</p>
+        <p class="msg"><strong>Zhang Chao:</strong> You kidding, not going to the hospital</p>
+        <p class="msg"><strong>Zhang Chao:</strong> Don't mess around</p>
+        <p class="msg"><strong>I don't want this hand anymore:</strong> ?</p>
+        <p>There was a reason Zhang Chao asked this. Back in the day Sheng Wang wouldn't take leave even with a high fever; he took medicine conscientiously, though, even putting on airs picking the brand, the ingredients, the side effects, which gave Zhang Chao a headache every time as he earnestly urged, "Go home, sleep, drink fewer bottles of iced water—that beats any medicine," only the other wouldn't listen.</p>
+        <p>By contrast, this time he'd obediently taken leave without any urging—so how unwell must he be?</p>
+        <p>Zhang Chao filled in a whole scenario for himself and worried more the more he thought, only for the other to send a photo of a thermometer.</p>
+        <p class="msg"><strong>I don't want this hand anymore:</strong> See? Normal temperature, really nothing serious</p>
+        <p class="msg"><strong>Zhang Chao:</strong> Then what's wrong with you?</p>
+        <p class="msg"><strong>I don't want this hand anymore:</strong> …</p>
+        <p class="msg"><strong>I don't want this hand anymore:</strong> Twisted my ankle</p>
+        <p>Zhang Chao was about to send something more when the other fired off three bowing-emoji stickers in a row and asked: <em>You not busy today?</em></p>
+        <p>He'd wanted to say "I'm actually not too busy today," but the words were barely out before he got his comeuppance—snatched away by two emails and a phone call, with no spare attention left for gossip.</p>
+        <p>Sheng Wang stared at the screen a while, and once sure Zhang Chao had gone quiet, tossed the phone and climbed up to take his third shower since last night.</p>
+        <p>He pulled on a pair of loose black joggers, and was drying his hair on the way to the wardrobe for a clean tee when the front door sounded—Jiang Tian was actually back.</p>
+        <p>Sheng Wang glanced toward the bedroom door, draped the towel aside, and picked out a gray tee. He had a sleeve on and was pulling it over his head when Jiang Tian walked in, a hand at his waist.</p>
+        <p>Half-dressed, the bare muscles of his waist tensed instinctively at the touch. Sheng Wang hurriedly tugged the shirt down and grabbed Jiang Tian's fingers. "No more, no more, I don't want to take two days off in a row."</p>
+        <p>Jiang Tian: "…I just wanted to ask whether you're hurting."</p>
+        <p>Sheng Wang looked back at him in silence. "If it hurts, it's not here."</p>
+        <p>Jiang Tian's gaze flicked down, and he was about to move elsewhere when Sheng Wang immediately pressed him still. "Forget it, forget it, doesn't hurt at all, stop moving."</p>
+        <p>Jiang Tian was about to speak when Sheng Wang said, "Ge."</p>
+        <p>The moment the certain someone called that, Jiang Tian was helpless. He really hadn't planned to do anything—so wronged his face went numb. But Sheng Wang's line after line gave him no chance to speak at all—no telling whether on purpose—and in the end he could only seal it shut and be done.</p>
+        <p>Kissing and kissing, Sheng Wang felt the resentment and couldn't help laughing.</p>
+        <p>Jiang Tian drew back a little and asked, "Really hurting?"</p>
+        <p>Hurting wasn't really the word—just a bit awkward. Only last night, drenched in sweat, eye corners red, his voice all muffled into the pillow, had Sheng Wang realized his ge really was someone who'd taken clinical human-anatomy coursework…</p>
+        <p>Even if it wasn't quite comfortable at first, it was replaced by the later reactions, mental and physical. Or he wouldn't have been unable to resist exploring it once more in the shower.</p>
+        <p>"Okay enough." The young master forced a brave face. "I won't let you move around mainly because my willpower's a bit weak."</p>
+        <p>"What's that mean?" Jiang Tian raised a brow and lowered his head. "Explain, didn't quite get it."</p>
+        <p>Sheng Wang thought, I'd be a fool to say that again.</p>
+        <p>He turned Jiang Tian around, hooked his shoulder, and pushed him toward the kitchen. "I'm starving, Dr. Jiang, give me a bite to eat, I'll help."</p>
+        <p>Hooked by the neck, the not-exactly-skilled Dr. Jiang forgot his own level for a moment and asked, "What do you want to eat?"</p>
+        <p>"I get to order?" Sheng Wang thought. "Then I want sweet-and-sour pork ribs, stone-pot frog, black-pepper beef, chopped-chili fish head, and crab-roe tofu."</p>
+        <p>Jiang Tian: "…"</p>
+        <p>Sheng Wang stood lopsided, one hand in his trouser pocket, the other hooking him and giving a shake. "Wake up, I'm done ordering."</p>
+        <p>Jiang Tian's expression was indescribable. "I'm awake."</p>
+        <p>"Then why so silent?" Sheng Wang held back a laugh.</p>
+        <p>Jiang Tian glanced at him. "I dare make it, you dare eat it?"</p>
+        <p>Sheng Wang asked, "Does it come with a hospital trip?"</p>
+        <p>Jiang Tian: "I barely count as having studied medicine."</p>
+        <p>Sheng Wang: "Goodbye."</p>
+        <p>Jiang Tian only needed to go to the lab in the afternoon. He glanced at the time and asked Sheng Wang, "Really want to eat these? How about going out?"</p>
+        <p>The young master wore a blank face. "If you can find a restaurant where you eat standing up, I'll go out with you."</p>
+        <p>"…"</p>
+        <p>Dr. Jiang silently reflected a few seconds. Sheng Wang had already gone to the side and started rummaging through the fridge.</p>
+        <p>"I was just saying it—it'd be a wonder if eating those didn't give me a flare-up." Not wanting to take leave two days running, Sheng Wang braced the fridge door and picked through, then held up a bag. "Feel like pasta—can you make this?"</p>
+        <p>This Jiang Tian could in fact do.</p>
+        <p>Not only could he, he made it better than the average restaurant—because he knew which ingredients Sheng Wang liked and which he didn't. The adjusted result was tailored entirely to Sheng Wang.</p>
+        <p>To accommodate the young master's "delicate condition," Jiang Tian didn't even plate it; the two stood by the pan with a fork each, chatting and sharing it.</p>
+        <p>But two bites in, the cat son came trotting over, nose twitching. It had holed up in some corner since early morning; bored waiting for food, Sheng Wang had wanted to haul it out to play and hadn't found it at all. Now it came uninvited.</p>
+        <p>Sheng Wang had just called "son" when the son reached up a paw and clung to his trouser leg. The trousers were loose, the drawstring not yet tied after his shower, and the cat nearly dragged them down.</p>
+        <p>He hurriedly tugged them up and asked Jiang Tian, "Why's it pulling my pants?"</p>
+        <p>"Wants the pasta," Jiang Tian said.</p>
+        <p>A forehead full of question marks. "Isn't a cat a carnivore? You raised it into a mutant?"</p>
+        <p>Jiang Tian bent to grab the scruff of the cat's neck and moved it aside. "Likes the smell of milk and cheese, no telling who it learned that from."</p>
+        <p>Sheng Wang watched him coax the cat son back to the living room and open a can before returning, and inexplicably wanted to laugh, with an instant of gratitude besides—grateful his past self hadn't picked some other gift, but found him this cat.</p>
+        <p>Halfway through eating, Sheng Wang got a WeChat from Zhang Chao, replied a couple of lines on work, then offhandedly snapped a photo of the pasta and sent it over. He knew the other had suddenly turned over a new leaf lately, hired a personal trainer, and was eating trainer-customized fitness meals—the kind you photograph daily for the coach.</p>
+        <p>Sure enough, the other replied with a long string of bleeped words, saying he hadn't eaten anything with extras in ages, and told Sheng Wang to get lost. Sheng Wang got lost.</p>
+        <p>A few minutes later, Zhang Chao humbly asked: <em>Tasty?</em></p>
+        <p class="msg"><strong>I don't want this hand anymore:</strong> Tasty</p>
+        <p class="msg"><strong>Zhang Chao:</strong> Even you, this picky, call it tasty? Which restaurant?</p>
+        <p class="msg"><strong>I don't want this hand anymore:</strong> My place</p>
+        <p class="msg"><strong>Zhang Chao:</strong> You can cook? Who're you fooling—your fridge has nothing but bottled water and a few cans of beer we brought last time, you can't cook for crap.</p>
+        <p class="msg"><strong>I don't want this hand anymore:</strong> Who said I made it</p>
+        <p class="msg"><strong>Zhang Chao:</strong> ?</p>
+        <p class="msg"><strong>Zhang Chao:</strong> …</p>
+        <p class="msg"><strong>Zhang Chao:</strong> Oh come on! I'm out, done chatting.</p>
+        <p>The man insisted on coming to ask, then angered himself off after asking; Sheng Wang gave a "heh."</p>
+        <p>"Laughing at who?" Jiang Tian asked.</p>
+        <p>"Zhang Chao," Sheng Wang said. "That colleague of mine."</p>
+        <p>Speaking of which, he remembered something, scrolled the earlier chat down, and shoved it at Jiang Tian. "Chased me all morning asking where it hurts, forced me to say I twisted my ankle."</p>
+        <p>Complaint lodged, he pressed the phone dark and tossed it back into his trouser pocket, then twirled another forkful of pasta. He'd just got it in his mouth when he heard his ge suddenly say, "A twisted ankle could actually rest a week."</p>
+        <p>Sheng Wang's fork-hand paused, and he lifted his eyes to Jiang Tian.</p>
+        <p>He suspected his ge was playing hooligan but he had no proof.</p>
+        <div class="scene-break">❖</div>
+        <p>The days of two people and a cat were too pleasant—it was easy to lose track of time. Coming out of the lab one day, Jiang Tian glanced at his phone and only then found the new year was near.</p>
+        <p>The new year was early this time, January 25th. Jiang Ou and Old Man Ding had been due back around then too, just in time for the Spring Festival. But one thing suddenly cut in and threw the original plan into disorder.</p>
+        <p>On the 17th, Jiang Tian suddenly got a call from an unfamiliar number, a woman's voice. The other opened with, "Excuse me, are you Mr. Ji's family?"</p>
+        <p>"Mr. Ji" was a form of address he so rarely heard that for an instant he almost didn't register it. In the few seconds of his blankness the other went on, "He's not in very good shape now—walking and speaking are both difficult, so he asked me to call."</p>
+        <p>Jiang Tian frowned and swallowed back the line "I don't know him."</p>
+        <p>As early as the start of last year, Zhao Xi had told him Ji Huanyu's health had failed and he was already admitted to the hospital.</p>
+        <p>Back then Du Cheng's brain cancer hadn't held out long; he'd stopped breathing one day after winter break. Supposedly on that last day the hospital had advised Ji Huanyu to take him home—most dying patients, after all, think of returning to their roots. But Du Cheng's hometown was long gone; he'd lived a while in Beijing, in Shanghai, then years abroad, had been to many places, yet there was not one he could lie down to leave from, and in the end he stopped breathing on a hospital bed.</p>
+        <p>But at that time, things on Jiang Tian and Sheng Wang's side were a tangled mess; neither Sheng Mingyang nor Jiang Ou had any spare attention for Du Cheng's affairs, and by the time they finally heard the news, the moment had long passed.</p>
+        <p>After Du Cheng died, Ji Huanyu went silent. Supposedly he was in a dejected, negative state a long while—no telling whether because he'd wrecked the life of the ex-wife he'd once loved into ruin, or because his lover had passed. As for the former, he'd always been selfish, with not that much conscience; as for the latter, he'd never put much heart into it either.</p>
+        <p>Never mind others—even he himself probably couldn't say.</p>
+        <p>In any case, in that stretch he did everything to himself, like a heap of mud. The result was a pile of illnesses brought on himself, and then one day he fainted, and when he woke he couldn't walk, and couldn't speak clearly.</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-105-sobering-up.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-107-weeds.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 111 — The Mortal World — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 111 · A Certain Someone</p>
+      <h1 class="reader-title">The Mortal World</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>In fact, these years, every time Sheng Wang went back home he'd pass by Wutongwai. With the old man gone and Boss Zhao of Xile gone, he'd worried Mute Uncle's days would turn dull and hard to bear. Only, as luck had it, every time he came the little courtyard gate was locked, and Mute Uncle was forever busy somewhere—gathering scrap, or tending his little vegetable plot.</p>
+        <p>Later Sheng Wang heard from Zhao Xi that his parents couldn't sit still in Beijing at all; the moment their health improved a little they'd run off to Jiangsu, spending several months a year back home—half because they couldn't let go of Xile, half because of this lonely mute friend.</p>
+        <p>Hearing that, Sheng Wang felt that the bonds and ties between people were often deeper and more lasting than they looked.</p>
+        <p>Mute Uncle was very happy these days. In his view, the neighbors and friends he knew had all come home, batch after batch, lively beyond measure—just the way New Year should be.</p>
+        <p>Lately he'd been holed up at Xile. Boss Zhao had brought in a big batch of fine longan and honey dates, and he was helping portion and bag them. On New Year's Eve he carried two big bags home—one for the old man, one for the two young ones.</p>
+        <p>Sheng Wang and Jiang Tian didn't actually like things too sweet, but they accepted them happily. Because they knew that, for someone Mute Uncle's age, the best New Year's blessing was that every day to come be very sweet.</p>
+        <p>The two weren't good at preparing New Year gifts for elders, and had dutifully bought tonics—after all, what they wished most was for the old men to live to a hundred. But while waiting for the meal they changed their minds, slipped off to the nearest mall, and bought two smartphones suitable for the elderly.</p>
+        <p>Old Man Ding went without saying—he'd always used one, this was just an upgrade. As for Mute Uncle…</p>
+        <p>They just couldn't bear the sight of him alone, especially when the bustle dispersed and he stood there gesturing and waving, going "yi-yi-ya-ya," a sight that made a person unwilling to leave. Even though he couldn't make calls on a phone, at least he could write.</p>
+        <p>Sheng Wang set up the input method for him and taught him step by step how to use it. "Chat about whatever you like—you can message Boss Zhao, message the old man, message me or Jiang Tian."</p>
+        <p>Mute Uncle and the old man, delighted with the new gadgets, sat tucked in little rattan chairs facing each other and texted all afternoon, the efficiency actually beating their homemade sign language.</p>
+        <p>Jiang Tian pointed at the old man's back. "Look familiar?"</p>
+        <p>A forehead full of question marks. "No, why?"</p>
+        <p>Jiang Tian: "It does to me."</p>
+        <p>"Why?" the young master asked earnestly.</p>
+        <p>Dr. Jiang said mildly, "That's the pose you used to text head-down in class."</p>
+        <p>Sheng Wang: "…"</p>
+        <p>He was silent two seconds, popped the just-peeled orange segment in his mouth, then chased his ge out with the orange peel.</p>
+        <p>That evening's dinner was booked at a private-kitchen restaurant whose owner was an old Beijinger. Young Sheng Wang had especially loved his stir-fried hawthorn, poached shrimp balls, and pea-flour cakes, issuing imperial edicts to eat them every couple of days. Sheng Mingyang, apart from having no time to keep him company, could satisfy any request, and over time had struck up a friendship with the owner.</p>
+        <p>Sheng Wang's tastes had actually changed once he grew up, but the old comrade's information updates were like phone-model upgrades—always a few steps behind the young, still stuck many years back, stubbornly remembering those three dishes.</p>
+        <p>This was probably the most-attended New Year's Eve dinner in years; Sheng Wang had brought both the old man and Mute Uncle. Yet it wasn't lively—after all, Comrade Sheng Mingyang still had a few parts of unease undissolved, and the conversation ran entirely on emotional intelligence, the content nothing memorable in hindsight, neither pleasant nor dull, mostly painless trivialities.</p>
+        <p>The old comrade had handled too many social dinners and had a bit of an "occupational disease," always feeling a dinner shouldn't be set for nothing—it ought to advance something. So toward the end, unable to hold it, he tried a nudge—</p>
+        <p>Swirling the last drop of liquor in his glass, he asked, as if idly, "Xiao-Tian hasn't graduated yet, right?"</p>
+        <p>Jiang Tian nodded. "Two more years."</p>
+        <p>"So once your project's done you have to go back?"</p>
+        <p>"Yes."</p>
+        <p>The old comrade gave an "oh," took a sip, and shot his son a meaningful glance—only for his own son to suddenly speak up: "Since we're on the subject, let me tell you first."</p>
+        <p>Sheng Mingyang's intuition went bad; his fingers around the glass paused. "Tell me what?"</p>
+        <p>Sheng Wang said, "I might make a trip out then too."</p>
+        <p>Sheng Mingyang was flummoxed. "What do you mean, make a trip out too? Out to do what?"</p>
+        <p>"The firm has overseas postings," Sheng Wang said. "I talked with them a while back…"</p>
+        <p>Sheng Mingyang inwardly retched a mouthful of blood and silently set down his glass. What nonsense had been discussed the old comrade didn't want to hear; he only knew he had an instant of regret.</p>
+        <p>It was as if he'd played a fancy game of billiards, knocked in a black ball with one stroke that bounced this way and that along the cushion forever, then clattered into a white one, and both dropped into pockets. When he'd sent Jiang Tian away back then, who could have imagined there'd be such a roundabout sequel—six-some years later, finally nudging Sheng Wang out too.</p>
+        <p>But he had nothing to say in rebuttal; after all, that first stroke had been his own.</p>
+        <p>The restaurant owner sent over a generous lamb-spine dish as a courtesy, and the old comrade ate a little with the conversation; afterward he got a flare-up, his mouth sore. Especially seeing the two young ones go into one room on getting home, it hurt all the more.</p>
+        <p>By contrast, Sheng Wang was in quite a good mood.</p>
+        <p>Though the New Year's Eve atmosphere was still a fair way from "warm and harmonious," that was all expected. In fact, that they could sit at one table and finish a meal whole was itself the beginning of the iceberg melting.</p>
+        <p>On top of that, at the stroke of midnight on New Year's Eve, Jiang Tian got a WeChat from Jiang Ou. The content was simple, really—nothing but wishing her son a happy new year and telling him to rest. Only at the end of the blessing she added one extra line.</p>
+        <p>She said: <em>You've both had drinks, right—remember to brew some honey water, so your heads don't ache tomorrow.</em></p>
+        <p>Though sent to only one person, it was plainly not meant for one person. Maybe it was just a simple reminder, nothing more. But seeing the line, Sheng Wang inexplicably felt that in another year or two, perhaps they really could sit ringed together and properly eat a meal of dumplings, like that night at Wutongwai years ago.</p>
+        <div class="scene-break">❖</div>
+        <p>On the morning of the second day of the new year, Sheng Wang set an alarm but still accidentally overslept a little.</p>
+        <p>When he opened his eyes it was past 8; the downstairs bedroom door was open, the bedding neatly made—Sheng Mingyang had already left to catch an early flight, with no time for a farewell breakfast with his son.</p>
+        <p>Of course, maybe he'd deliberately not wanted to eat one—after all, the old comrade was still flaring up, a big blister at the corner of his mouth.</p>
+        <p>The AC had only just been turned off, and Sheng Wang turned them all on again one by one, hunting for food downstairs in his hoodie and trousers. Raking his hair, he lifted the pot lids in the kitchen, then turned to the fridge and saw the note pinned on it.</p>
+        <p>Sheng Mingyang wrote a fine hand Sheng Wang hadn't inherited—weightier and rounder than Jiang Tian's, plainly the business type:</p>
+        <p><em>Catching a flight, return uncertain. If I'm not home by the seventh, you and Xiao-Tian head to Beijing on your own. —Dad</em></p>
+        <p>As Sheng Wang held the note, Jiang Tian came over carrying the minty smell of having just washed up. A certain young master liked to run the AC all night, and got up mornings with a throat dry and hot, no help from the humidifier.</p>
+        <p>Jiang Tian took a bottle of water from the fridge, opened it, drank a couple of mouthfuls to wet his throat, and asked, "Your dad leave this?"</p>
+        <p>"Mm." Sheng Wang's voice still carried the husk of not-fully-waking. "You've never seen his notes before, right? Let me translate: it means I'm gone, you two fend for yourselves, and clear off once the holiday's over."</p>
+        <p>Jiang Tian gave a short, vague reply and touched the bottle mouth to the certain someone's lower lip. "Did you not drink any water?"</p>
+        <p>"Oh, forgot." Sheng Wang gulped a few mouthfuls from his hand. "No wonder my throat's so hoarse—I thought you'd snuck and done something while I was dead asleep."</p>
+        <p>He opened his mouth to drink more, but Jiang Tian had already withdrawn the bottle and turned to walk off.</p>
+        <p>The young master gulped at empty air and followed laughing. "Don't run, Dr. Jiang—how can you not take teasing?"</p>
+        <p>Jiang Tian turned on the TV, sat on the sofa with the half-bottle of water, and picked through apps with the remote. "Got the nerve, tease me in front of your dad."</p>
+        <p>"That won't do—middle-aged-and-older folks have clogged-up blood vessels, don't want him angering himself into a clot." Sheng Wang pulled the bottle from his hand. "Besides, in Comrade Sheng Mingyang's eyes, his son is refined and polite and would never play hooligan. If anything happens it must be the other person's fault."</p>
+        <p>Having said it, he mulled it over himself and said to Jiang Tian, "I can pretty much picture your image in my dad's mind."</p>
+        <p>Jiang Tian: "…"</p>
+        <p>The young master bit the bottle mouth and thought. "You've been wronged. To make up for it, I've decided to personally make you a breakfast—happy?"</p>
+        <p>Dr. Jiang did not feel happy. He glanced at the certain someone and pulled out his phone to start browsing takeout. Sheng Wang flung the bottle aside, pressed a knee into the sofa, and went to clamp his neck. "What's the takeout-browsing supposed to mean?"</p>
+        <p>Clamped in the crook of his elbow, Jiang Tian's Adam's apple stirred lightly as he laughed low.</p>
+        <p>Although Jiang Tian held not a shred of hope for the certain someone's cooking, he reluctantly agreed to be a guinea pig once—after all, the certain someone and Old Man Ding had teamed up to feed him all sorts of strange things back in the day, so one more wouldn't hurt.</p>
+        <p>He'd picked the boyfriend himself, after all—what else could he do.</p>
+        <p>Jiang Tian had meant to use "helping" as an excuse to stand watch in the kitchen, but the certain someone locked the sliding door outright, gestured "after you" through the glass, signaling him to keep his distance and not interfere, so he had to let it go.</p>
+        <p>In fact there was a reason Sheng Wang did this. The moment Jiang Tian left, he pulled his phone from his trouser pocket and opened WeChat to wrangle with Gao Tianyang and the rest.</p>
+        <p>The big Fuzhong Class A group had been bouncing happily these days, for no other reason than waffling over the return-to-school date. Most of the class were free from the third to the fifth of the new year; the more room for choice, the harder the date was to fix.</p>
+        <p>Sheng Wang, with a private motive, wanted Gao Tianyang and Song Sirui to discreetly steer it in the group—ideally set the reunion for tomorrow, because tomorrow was Jiang Tian's birthday.</p>
+        <p class="msg"><strong>Plain-and-Simple Gao Tianyang:</strong> Easy! Just say in the group it's Tian-ge's birthday, right?</p>
+        <p class="msg"><strong>I don't want this hand anymore:</strong> Don't, too high-profile. I'm afraid if he knows he won't even go.</p>
+        <p class="msg"><strong>Big Song:</strong> Why? It's a birthday, isn't that a happy thing?</p>
+        <p>Sheng Wang's thumb hovered over the keyboard, remembering what he'd heard before going back to Jiangsu—</p>
+        <p>They were back only a week, and the cat son fell sick easily with a rushed change of environment, so before leaving they'd entrusted the door card to Jiang Tian's doctoral labmate, Chen Chen. Chen Chen sent them a short video each day while feeding the cat, and through that grew familiar with Sheng Wang, chatting a few lines now and then. That day, as one thing led to another, Chen Chen happened to say something that quietly ached in Sheng Wang for a long while.</p>
+        <p>He said: <em>Jiang Tian never celebrates his birthday—the more you prepare, the more he hides; often he vanishes a few days early. No idea why he's so against it.</em></p>
+        <p>Sheng Wang stood with lowered eyes a while, then typed, pinching his knuckles: <em>Just don't bring it up, that's all.</em></p>
+        <p>Luckily Gao Tianyang and Song Sirui knew them inside out; some things, unsaid, they could guess seven or eight parts of. The two didn't ask more, and didn't insist on going high-profile. They flashed Sheng Wang an "OK" emoji and ducked back into the class group, and with a few lines of stirring, fixed the return-to-school date.</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-110-hometown.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-112-young.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

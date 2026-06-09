@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 86 — Family Dinner — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 86 · A Certain Someone</p>
+      <h1 class="reader-title">Family Dinner</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>That friend was Du Cheng.</p>
+        <p>The Du Cheng on the hospital bed was a different person from the eighteen-year-old he'd been; if she hadn't run into a visiting classmate in the corridor, Jiang Ou wouldn't have dared recognize him.</p>
+        <p>The scene of the teacher making a fool of himself back then, the front and back desks doubled over laughing, felt like yesterday—and in a turn of the head, they'd reached middle age.</p>
+        <p>Du Cheng was startled to see her, pushed himself up to sit on the bed but said nothing. It was Jiang Ou who spoke first, asking how he'd suddenly come back to the country. He pointed at his head. "Something grew, spread, no cure—one day fewer with each that passes. Abroad it's only so much; watch it long enough and it loses its interest, so I wanted to come back."</p>
+        <p>He was silent a long while, then smiled. "Didn't want to die out there."</p>
+        <p>Because of that line, Jiang Ou couldn't stay in the ward. After a few muddled words she hurried downstairs. For one, her emotions had been fragile these years and she cried easily, couldn't bear such things. For another, she feared that staying long she'd run into Ji Huanyu.</p>
+        <p>If Du Cheng had come home, Ji Huanyu was surely around too.</p>
+        <p>When Jiang Ou got back downstairs, Sheng Mingyang was handling Old Man Ding's discharge paperwork, and Sheng Wang was carrying the old man's clattering canvas bag and telling him jokes, doubling him over. Her precious son stood by, the old man's jacket hung over his elbow, his whole face writing <em>this joke is genuinely the dullest thing alive</em>, yet unable to keep the corners of his mouth from curving.</p>
+        <p>A scene like that eased her mood a little.</p>
+        <p>She'd just started over when her phone buzzed—a message from Du Cheng. They'd only just added each other on WeChat, and the content was a single short line: <em>Thank you for coming to see me.</em></p>
+        <p>Jiang Ou braked and replied: <em>Of course—friends of how many years. Rest well, don't overthink.</em></p>
+        <p>After that the other never replied anything more.</p>
+        <div class="scene-break">❖</div>
+        <p>This stretch every year was Sheng Mingyang's busiest. Funds, accounts, client dealings—every link prone to trouble—and the social obligations especially many besides, smoothing this, oiling that.</p>
+        <p>Ever since settling Old Man Ding, he hadn't put down his phone, call after message after call. Even stepping into the old courtyard at Wutongwai, he kept one eye on the ground underfoot and one on the screen.</p>
+        <p>Sheng Wang had meant to find a fitting chance to mention to his dad that, with coursework getting heavier and the dorm lights-out too early, he and his ge had rented a place by the school gate.</p>
+        <p>The contract wasn't actually signed yet, but from years of experience, acting first and reporting after was the one infallible rule for dealing with Sheng Mingyang.</p>
+        <p>As it was, the other couldn't spare a moment for idle chat, so Sheng Wang had to put the topic off.</p>
+        <p>Jiang Tian had noticed Jiang Ou's low spirits back at the hospital, and after holding it in the whole way finally asked, "What's wrong?"</p>
+        <p>"Hm?" Jiang Ou was distracted and nearly tripped on the kitchen threshold. She caught the door, embarrassed, and explained, "Nothing—just some trouble with cash flow lately, a permit that hasn't come through, it's been wearing. And I ran into an old classmate at the hospital just now, which was hard to see too."</p>
+        <p>"Which classmate?" Jiang Tian asked.</p>
+        <p>"You wouldn't know them if I said." Jiang Ou laughed. "Some day when I've time I'll dig out the old graduation photos for you to identify—I might not even know everyone myself, it's been too long."</p>
+        <p>Jiang Tian had just nodded when he thought of Ji Huanyu being in that graduation photo and pulled a face. "We'll see."</p>
+        <p>Seeing his ate-spoiled-rice expression, Jiang Ou started to speak and stopped, then patted him helplessly. "Go play with Xiao-Wang, I'll fix you two something to eat in the kitchen."</p>
+        <p>"Don't bother, order takeout." Sheng Wang poked a head in from outside the kitchen.</p>
+        <p>"Don't trust my cooking?" Jiang Ou laughed and tied on an apron.</p>
+        <p>In the end her cooking went undeployed: Sheng Mingyang took a call and hurriedly called her out—the two had to make a trip over to the city industrial park.</p>
+        <p>The kitchen was all set up, then suddenly had no one at the stove. Sheng Wang and Jiang Tian looked at each other. Old Man Ding rolled up his sleeves to take over himself and was hauled back into bed by the two big boys.</p>
+        <p>"The doctor said your blood pressure's high, prone to bleeds and clots." Jiang Tian was not in the least roundabout; he turned on the TV for him and wrapped him in a blanket. "Stay here."</p>
+        <p>Sheng Wang tugged him. "Pick your words—don't scare the old man back into the hospital."</p>
+        <p>Jiang Tian pointed at the old man. "Does he look like a man who scares?"</p>
+        <p>Old Man Ding struggled to throw off the blanket. "Back when I was a soldier, bullets grazed my scalp and I wasn't afraid—I'd be scared of this little ailment?"</p>
+        <p>Sheng Wang: "…"</p>
+        <p>He thought, then pried the blanket out of the old man's hands and tucked it in tight. "Grandpa, there was an old granny who lived next door to us, high blood pressure—sat up from bed just like that, wobbled, and was gone."</p>
+        <p>Old Man Ding: "…"</p>
+        <p>"This ailment, you can't overtire it, and you definitely can't get worked up. I was even chatting with a nurse today—she said there's an old person in the next ward with something like dementia, all from a clot, who got worked up about some little thing one day and went all muddled—" Sheng Wang said. "Grandpa, see, you were a bit worked up just now."</p>
+        <p>Old Man Ding: "…"</p>
+        <p>The old man was hard-boned; more than dying, he feared going dim. Cursing "brat" with his mouth, his body still settled down.</p>
+        <p>Sheng Wang was about to open his mouth again when Jiang Tian clapped a hand over it and dragged the fear-mongering little beast back to the kitchen.</p>
+        <p>"Keep talking nonsense and he really will end up back in the hospital," Jiang Tian said.</p>
+        <p>"Mmf mmf mmf." The young master, still covered, couldn't get human words out, and just pursed his lips to kiss Jiang Tian's palm.</p>
+        <p>"…"</p>
+        <p>It set Jiang Tian's heart itching; he snatched his hand back, and Sheng Wang braced on the counter, smirking.</p>
+        <p>"I wasn't talking nonsense either—the nurse really did tell me that, word for word." Sheng Wang hopped up to sit on the counter and looked at the washed vegetables. "What do we do with this whole spread? How about the two of us fix something?"</p>
+        <p>Jiang Tian eyed him suspiciously. "You can cook?"</p>
+        <p>Sheng Wang said with reserve, "A little."</p>
+        <p>The young master was a man of action—said and done. He hopped off the counter, washed his hands. "You heat the pan, I'll finish cutting this half-done cabbage. How was Auntie Jiang going to cook it?"</p>
+        <p>"Sweet and sour," Jiang Tian said.</p>
+        <p>"Right, wait for it." Sheng Wang stood at the board, one hand pressing the stacked cabbage, the other picking up the knife.</p>
+        <p>Given a certain someone had a weapon in hand, Jiang Tian didn't dare let his eyes off, bracing on the counter to watch him. He watched as Sheng Wang, in the state of a high-wire walker, cut two strokes—uneven widths aside—and on the third, lining it up, lined it right up with his finger.</p>
+        <p>I really did fall for your nonsense.</p>
+        <p>Jiang Tian thought.</p>
+        <p>He lifted a certain someone aside and pulled the knife away. "Door's there, out you go."</p>
+        <p>Sheng Wang craned over his shoulder. "Hey, I'm just not used to it, let me try two more strokes."</p>
+        <p>"I don't want to eat cabbage stir-fried with finger," Jiang Tian said expressionlessly. "Stand aside."</p>
+        <p>"Can you, then?" Sheng Wang asked.</p>
+        <p>Of course Jiang Tian could cook—he was used to being independent, and unlike Sheng Wang, who had Auntie Sun seeing to his meals, he handled it himself when alone. But he had no patience for studying it, so his technique was nothing special, only to the level of "edible."</p>
+        <p>Keeping himself alive was no problem; satisfying a certain picky-eating monster was a big problem.</p>
+        <p>Jiang Tian finished the cutting and, face set, was about to grit his teeth and take the stove when the courtyard gate creaked—Mute Uncle, carrying two bags, came to his rescue.</p>
+        <p>Mute Uncle had just come back from Boss Zhao's at Xile, buying dumpling wrappers, ground meat, and scallion and ginger along the way, planning to wrap some dumplings and freeze them, to boil up when hungry.</p>
+        <p>Without a word Jiang Tian minced the cut cabbage and had Mute Uncle mix it into the meat. Filling seasoned, the three crowded into the kitchen to wrap dumplings.</p>
+        <p>The young master was still no good at it, watching Jiang Tian's movements to copy, sometimes even grabbing the other's fingers to force a pause.</p>
+        <p>His filling was either stuffed too much or too little, leaking from one spot or flattened into a pancake that couldn't even stand up. Yet he had to save face and argue: "This wrapper's too stiff, no stickiness. Auntie Sun rolls her own wrappers, those are easy to fold."</p>
+        <p>Jiang Tian wouldn't play along at all. "Ours all hold together fine."</p>
+        <p>"The filling won't behave, keeps moving around."</p>
+        <p>"Mine's plenty behaved."</p>
+        <p>"…"</p>
+        <p>Sheng Wang tried to sabotage his ge while striving to refine his own technique, and after a heap of ugly things finally produced something with the shape of a dumpling. He held the product up in his palm and said to Jiang Tian, "Take a photo of me and my son together."</p>
+        <p>Jiang Tian: "…"</p>
+        <p>There were few wrappers left, and Mute Uncle happened to have washed his hands and gone aside to boil water—no one was watching them. Jiang Tian pulled a tissue to wipe his hands, fished out his phone to aim at Sheng Wang, and as he pressed the shutter said in a low voice, "I don't claim a son like this."</p>
+        <p>When Mute Uncle came back from putting the water on, he found Sheng Wang had suddenly stopped jabbering and was dutifully wrapping the last dumpling, careful and earnest as if crafting a handiwork piece—only his neck was a little red.</p>
+        <div class="scene-break">❖</div>
+        <p>Sheng Mingyang and Jiang Ou rushed back, meaning, while the dark had just fallen, to finish the spread left in the kitchen—only to step in and smell vinegar and dumplings.</p>
+        <p>Old Man Ding came out of the bedroom with his jacket draped on and waved them into the hall. "Back just in time, the two kids and Mute wrapped dumplings."</p>
+        <p>"The two kids?" Sheng Mingyang found it a little hard to believe. "You sure both of them wrapped?"</p>
+        <p>"They did, Xiao-Wang learned a good while," Old Man Ding said.</p>
+        <p>Sheng Wang's hall full of progeny showed their true shapes the moment they hit the pot—plenty split, the dumpling broth nearly turning into cabbage soup—but Mute Uncle still cheerfully fished them all out, piling several big plates full and carrying them to the table.</p>
+        <p>It was rare for the little courtyard to be this lively, and the first time three generations had sat together for a meal of honest home cooking. For one instant, it carried a downright tender warmth.</p>
+        <p>The old man dug out long-hidden liquor from under the bed, poured three cups, and sipped with Sheng Mingyang and Mute Uncle. Warmed up, he couldn't resist teasing, "Xiao-Wang, you've got to practice this cooking, or you won't con a wife later on."</p>
+        <p>Sheng Mingyang nearly choked on his drink, laughing helplessly beside them.</p>
+        <p>Sheng Wang opened his mouth to say something, then in the end gave an "mm" and bit into a dumpling, head down. He'd actually wanted to say <em>then I won't marry one</em>, but his shoe was lightly touched by Jiang Tian's, and his reason snapped back into place, swallowing the words.</p>
+        <p>He wasn't really a coward. If it were only his own affair, there'd be nothing to fear—he'd dare come out right in front of Sheng Mingyang, at worst be beaten to death.</p>
+        <p>But there was Jiang Tian too.</p>
+        <p>The moment Jiang Tian was involved, he suddenly turned timid.</p>
+        <p>Sheng Wang's leg pressed against Jiang Tian's under the table; he ate a few mouthfuls head-down, then, as if indifferent, played on his phone a while. Only when the elders' teasing had fully passed did he look up—and found that all the burst-skinned dumplings from his terrible craftsmanship had been picked out and eaten by Jiang Tian.</p>
+        <p>He blinked very lightly, then hurriedly lowered his head, his heart gone soft and aching.</p>
+        <p>The meal wasn't lavish, but they ate a long time. Sheng Mingyang's tolerance was deep as the sea, yet in the end he was a little tipsy. He poured the last drop from the bottle, raised his cup to clink with Old Man Ding and Mute Uncle, and, carried away, suddenly said, "Jiang Ou and I are thinking of finding a time before the new year to treat a few family members and friends to a meal. We're none of us young anymore, and a big to-do would be a bit ostentatious—we talked it over and felt simple was best. You must come."</p>
+        <p>Sheng Wang, full and spacing out after the meal, nearly didn't catch the meaning when he first heard it. It took him several seconds to realize Sheng Mingyang meant he and Jiang Ou were going to make it official.</p>
+        <p>Treat friends and family to a meal, register the marriage, and they'd be one legal family.</p>
+        <p>Sheng Wang's face was white past any color under the light. He pressed his lips, silent a long while, then lifted his eyes and met Jiang Tian's gaze.</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-085-moving.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-087-winter-break.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

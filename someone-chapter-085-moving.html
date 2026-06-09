@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 85 — Moving — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 85 · A Certain Someone</p>
+      <h1 class="reader-title">Moving</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>The honor wall sat where the covered walkway had to be passed, and the freshly added photos and red strip were especially conspicuous; students slowed to look as they came and went. In half a day, a string of little hearts had appeared beside Sheng Wang's photo, much like the ones beside Jiang Tian's—probably a Fuzhong-girl tradition.</p>
+        <p>Seeing it, Sheng Wang didn't know whether to laugh or cry, thinking: the guy in this photo's been such a coward lately, and you can still bring yourselves to draw hearts.</p>
+        <p>Having jumped out of his caught-off-guard state and looked back, he found himself of the past few days downright idiotic—nerves perfectly level during exams, yet thrown into a flustered rout the moment something like this came up.</p>
+        <p>Cowardly, childish, falling apart at a touch. He mocked himself inwardly.</p>
+        <p>People were often like this: braced for a deadly siege when the storm was coming, and the moment they dodged it, deciding those things were nothing at all.</p>
+        <p>Thanks to the earlier experience, a perfectly fine matter, once tangled up with Qi Jiahao, left one uneasy. Sheng Wang tried to sound him out with sidelong probing, but unfortunately they had only a grudge between them and no friendship, with no fitting angle in—so he could only work it out of Gao Tianyang in roundabout ways.</p>
+        <p>"The bag was found, picked it up yesterday, nothing lost. Old Song, in his class-officer duty, even went to express concern and got rebuffed—Qi said Old Song was being fake." Gao Tianyang had sensed nothing and poured it all out the moment asked. "Didn't notice anything off. Hasn't he been half-dead ever since he set you up? Heard his mom hit him over backsliding on the last weekly exam, and he's been getting more and more weird and snippy lately."</p>
+        <p>Sheng Wang found excuses to go to the discipline office twice more on his own. That bunch of teachers talked the same as ever, and Big Mouth Xu, in great spirits, kept cracking jokes with him—not the look of someone sitting on a secret. From Big Mouth he learned that the school's other students who'd lost things had recovered them one after another, so no one else would go pull the footage on a whim.</p>
+        <p>At that, this accident that had cut in seemed to pass just like that.</p>
+        <p>It was dusk when he came out of the discipline office, the last afternoon class just ending. Jiang Tian came down the stairs at the far end of the walkway and turned toward Class B on the third floor. Seeing him from afar, Sheng Wang inexplicably felt a weight lift—like getting lost running around Baima Lane as a child and, after no telling how many loops, finally seeing his own front door.</p>
+        <p>He ran over hunched, meaning to ambush Jiang Tian with a jump onto his back, but braked at the last second. He hesitated an instant, then only snapped his fingers by Jiang Tian's left ear and, smirking, shrank to the right.</p>
+        <div class="scene-break">❖</div>
+        <p>With finals near—another major exam bearing on class shifts—the whole school had its head down in feverish review.</p>
+        <p>Qiu Wenbing and Shi Yu finally packed up and rolled back from home to the dorm to join the review ranks. But his first day back, Shi Yu felt the chill of a fickle world and the rot of human hearts.</p>
+        <p>First Sheng Wang chatted with him during a break: grabbing food at the cafeteria was harder, the convenience store closed early now and then, the shower water wasn't quite enough—segueing to how at home the bed was big, the food good, the lights free to flick on and off, and there were a parent's earnest greetings.</p>
+        <p>Shi Yu held forth like a sluice gate flung open. Done talking, he suddenly caught the drift and felt that between every line Sheng Wang had been egging him to go back home and stay.</p>
+        <p>That one was relatively roundabout. Jiang Tian was different—he asked Shi Yu directly, "Why'd you come back?"</p>
+        <p>Shi Yu said, "Was I not supposed to? Look how long I've been home."</p>
+        <p>Jiang Tian gave an "oh." "I thought you were staying till next term."</p>
+        <p>Shi Yu: "…"</p>
+        <p>He mulled it over a long time and felt he'd been frozen out by a little clique.</p>
+        <p>With the roommates' return, their alone time was squeezed again, and the good days of the two knocking around together suddenly came to an end.</p>
+        <p>Jiang Tian had clearly felt lately that the young master was a bit clingy—not the sappy kind, more like having acquired a tagalong pet.</p>
+        <p>At the grade's old phys-activity periods, at most Class A and B would scratch together half a basketball game; the two would knock and bump under cover of the match, and whoever subbed out would sit at the sideline drinking ice water watching, and once the other came off too they'd go to the cafeteria early for dinner.</p>
+        <p>Lately Sheng Wang had no interest in the activities. The moment Jiang Tian subbed off, within a minute he'd swear his hand was banged or his ankle twisted and come trotting down ruffling the sweat at his hairline.</p>
+        <p>At the old evening study sessions, Sheng Wang would go to the lecture hall first by himself. Jiang Tian came down sometimes early, sometimes late. Only when he arrived would Sheng Wang move the bag beside him and clear a seat.</p>
+        <p>Lately it was different: the moment the day students' evening study let out, he'd go up a floor against the flow of people, fold his arms, and lean at Class A's back door waiting to leave with Jiang Tian.</p>
+        <p>These two days it had developed to the point that if he went to the bathroom during evening study, Sheng Wang would put down his pen and say "I'll go too."</p>
+        <p>But he just stayed near, with no intimate moves. In any setting the cameras could reach, he was very careful—like a cat circling round and round a person while keeping a few centimeters' distance.</p>
+        <p>Only at night, occasionally crossing Magpie Bridge, in the dappled, dense tree shadows, in spots screened by branches, would they relax a little, nose to nose, kissing each other.</p>
+        <p>Jiang Tian could in fact feel Sheng Wang's unease and conflict, the instinctive closeness, the occasionally surfacing pride, and the restraint under reason. Back at camp he'd already known: the moment they left Utopia, it would surely turn out like this—it was no one's fault.</p>
+        <p>A relationship with no proper name was destined to be hard to bring into the light. And a relationship that couldn't see the light was destined to leave one uneasy. Pile it up long enough, and either it became unstoppable, or it drifted apart.</p>
+        <p>He'd actually been able to accept drifting apart, at first. Countless people said adolescent love mostly came to nothing—wrong timing, even the wrong person. He and Sheng Wang were a little alike on this point: sometimes more impulsive than their peers, sometimes clearheaded with a marvelous accord.</p>
+        <p>So they'd said "I like you," but never "I'll like you a lifetime."</p>
+        <p>A lifetime was too long; the words too heavy.</p>
+        <p>What he'd thought before was <em>I'll walk a stretch with you, until you don't like me anymore.</em> But now he was a little greedy, wanting to walk a while longer.</p>
+        <p>He was good at simplifying math, physics, and chemistry, good at applying formulas, but not good at handling these things. All he could do was find a way to make the uneasy factors fewer—at least to have somewhere to let it out, to have a den.</p>
+        <div class="scene-break">❖</div>
+        <p>Evening study wasn't dead silent—after all, the whole grade's boarders gathered in one lecture hall, with only one teacher on duty.</p>
+        <p>Students often carried their books down to ask the teacher for help, and those who couldn't get in line would ask a high-scoring classmate, so Jiang Tian and Sheng Wang's spot was practically a thriving business.</p>
+        <p>Jiang Tian was no good at explaining problems; he'd skip many self-evident steps and just point out the key. Then those who got it would think "oh, so this problem's that simple," but turn around to a similar type and still not know it. As for those who didn't get it, they didn't dare tell that face "do it again."</p>
+        <p>So people generally didn't go to him to ask—only to borrow: papers, notes, anything borrowable. Then, item in hand, they'd circle over to Sheng Wang to ask.</p>
+        <p>Jiang Tian found this maneuver baffling, griped to Sheng Wang about it twice, reaped a fit of wild laughter, and stopped minding.</p>
+        <p>So the usual state of their evening study was Sheng Wang explaining problems to other students while Jiang Tian single-mindedly fed problems to Sheng Wang alone.</p>
+        <p>"Feeding problems" meant something simple: helping Chu-ge with the tutoring-class materials, he had to sweep through all sorts of guides and question banks. Whenever he swept up a problem worth doing, he'd flag it on a sticky note and paste it for Sheng Wang.</p>
+        <p>Lately his feeding frequency had risen, devoted to getting his boyfriend to grab a tiger by the tail at finals. Sheng Wang trusted his eye for problems absolutely—basically doing each one he was fed, no fussing.</p>
+        <p>That day Sheng Wang explained a problem to a girl for a while, finally got it through to her and sent her off, and turned to find seven sticky notes pasted at his desk.</p>
+        <p>"This many?" Sheng Wang was a little puzzled, but still peeled them off one by one and did them against the book. As he worked, Jiang Tian kept pasting notes at his desk, very much with the air of claiming his whole evening study.</p>
+        <p>He muttered his way through four, finally threw down his pen and rose in revolt, pinching Jiang Tian's neck. "Three of these four are repeat types—you playing me?"</p>
+        <p>Jiang Tian gave a low laugh, head down, and finally stopped bullying him, slapping the just-finished sticky note onto the back of Sheng Wang's hand.</p>
+        <p>"More?" Sheng Wang asked.</p>
+        <p>Jiang Tian jerked his chin at it. "Last one."</p>
+        <p>Sheng Wang looked down and saw this note had no page or problem number—just one line.</p>
+        <p>It said: <em>Let's rent a place to live.</em></p>
+        <p>Sheng Wang's heart jumped; he looked up at him.</p>
+        <p>Jiang Tian asked, "Want to?"</p>
+        <p>"I want to. But—" Sheng Wang said dazedly, "your luggage…"</p>
+        <p>Jiang Tian glanced elsewhere; a few classmates were discussing a hard problem several rows off, voices neither loud nor soft, a buzz enough to cover this little whispering of theirs.</p>
+        <p>He asked Sheng Wang, "Would you one day suddenly not open the door, and shut me out?"</p>
+        <p>"No!" Sheng Wang said. "What are you thinking, definitely not."</p>
+        <p>"Then why would I worry about luggage?" Jiang Tian said.</p>
+        <p>Sheng Wang was struck dumb, and after a while forced out, "If there's no one around."</p>
+        <p>Jiang Tian: "Hm?"</p>
+        <p>Sheng Wang started to speak and stopped, then wrote the rest on the note on the back of his hand: <em>I'd definitely kiss you swollen.</em></p>
+        <p>Jiang Tian: "…"</p>
+        <p>Grinning, Sheng Wang tore the note up and crumpled it.</p>
+        <p>His monthly spending Sheng Mingyang didn't check—more or less was all up to him—and Jiang Tian had a little savings of his own. The rent, at least, was no problem for the two of them.</p>
+        <p>Had this been before, they'd surely have asked Zhao Xi to help, but this time Sheng Wang had a slight reservation. So they found and contacted the place themselves. There were plenty of suitable listings at the west gate and north gate; they screened out three and planned to pick a day to go look.</p>
+        <p>It happened that Old Man Ding was discharged on Thursday. Sheng Wang and Jiang Tian took leave for the afternoon's two classes and evening study, looked at a place over by the north gate first, then went to the hospital to fetch the old man.</p>
+        <p>Sheng Mingyang was already at the hospital. He took his son's leave-taking in stride, but still said, "We could've come to fetch him, you know."</p>
+        <p>By "we" he meant himself and Jiang Ou—after all, to Old Man Ding, Jiang Ou could still count as his "grandson's" mother, while Sheng Mingyang was half an outsider; only he and this half-outsider got along especially well.</p>
+        <p>Jiang Tian packed the old man's things, looked around, and asked, "Where's my mom?"</p>
+        <p>Sheng Mingyang pointed up. "Just said she ran into an old classmate at the hospital, went to see them, she'll be down."</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-084-false-alarm.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-086-family-dinner.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

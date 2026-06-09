@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 93 — Bitter Summer — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 93 · A Certain Someone</p>
+      <h1 class="reader-title">Bitter Summer</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>The next time Jiang Tian saw Sheng Mingyang was that day at noon, in the chaos of the hospital.</p>
+        <p>Neither of them had wanted to push the matter in front of Jiang Ou, yet they'd forgotten one thing—there has never been a windowless wall in this world, and a school is precisely where rumors breed most easily.</p>
+        <p>After the grade parents' meeting, Jiang Ou called Sheng Mingyang and got no answer, only a WeChat message saying "something urgent's come up, back late." Because of Ji Huanyu, she and Sheng Mingyang were already in a not-quite-broken, conflicted phase, and for her health's sake she'd stopped touching the business too. So seeing the message she didn't ask further, but followed the main group to Mingli Building, meaning to say goodbye to Jiang Tian and Sheng Wang before leaving.</p>
+        <p>And in the corridor she heard those rumors about her son.</p>
+        <p>Gao Tianyang knew Jiang Ou, and was the first to notice something was very wrong with her. Sheng Wang's and Jiang Tian's phones and bags were both in the classroom; all he could do was redial the last number, and the call reached Old Man Ding.</p>
+        <p>And so the matter became unstoppable.</p>
+        <p>When Jiang Tian rushed back to Fuzhong, what greeted him was exactly this tangled mess.</p>
+        <p>In that instant he felt someone was playing an absurd joke on him—he'd plainly tried so hard, yet always seemed a few seconds too slow. Missing the first step, he was destined to miss all of it, and could only watch as the train cars slammed one into the next, smashing into upheaval and ruin.</p>
+        <p>And all he could do was stand and watch.</p>
+        <p>He was no good at talking, no good at letting things out—a mute with nothing but the look of one.</p>
+        <p>Sheng Mingyang got to the hospital fast. Coming out of the elevator, he saw Jiang Tian sitting on an empty bench in some deserted stretch of corridor, legs braced, body hunched, head nearly dropped to the crook of his elbow. The contours of his brow still carried a youth's sharpness, yet he was steeped in exhaustion.</p>
+        <p>Sheng Mingyang had meant to say something—he'd come with a chest full of forcibly suppressed fury—but seeing Jiang Tian like this, he suddenly opened his mouth and forgot the words.</p>
+        <p>In that instant, he abruptly realized this big boy before him was actually about the same age as Sheng Wang…</p>
+        <p>He seemed never to have truly realized it.</p>
+        <p>But the thought only flashed and was pressed back down. Jiang Tian heard the steps and glanced at him, then instinctively looked behind him—the elevator was empty, and clanged shut again.</p>
+        <p>Sheng Mingyang frowned, then after a moment said, "Sheng Wang didn't come, I had someone watch him."</p>
+        <p>The feeling of accounting to someone else for his son's whereabouts was very strange; a wave of irritation rose, and the fire he'd just pressed down churned back up. But he couldn't talk to Jiang Tian the way he did to Sheng Wang—he'd instinctively restrain himself, speak in officialese.</p>
+        <p>Only now did he discover that he'd never really counted Jiang Tian as family.</p>
+        <p>Jiang Tian stood up from the bench. He was in fact taller than Sheng Mingyang, and though he had a youth's particular leanness, he could still make a person feel a pressure. He said, "It's my problem. Don't scold him."</p>
+        <p>Sheng Mingyang found it absurd—plainly his own son, yet someone else was usurping the role, as if he were a villain bent on harming Sheng Wang. "When have you seen me scold him?"</p>
+        <p>He shot the question back, with no wish to say more, and hurried inside.</p>
+        <p>Sheng Mingyang had never seen Jiang Ou in such a hysterical state; for an instant he even thought she might go mad or, on impulse, do something irreversible—in any case, utterly different from the person he'd known back then. To say there was any deep feeling between them—there wasn't, really; she just happened to be a person who happened to stir a little of his longing for his dead wife, happened to fit. As if even Jiang Ou's fiercest feelings weren't with him, but had been given to Ji Huanyu.</p>
+        <p>The constantly taut nerves of that winter break had worn down the not-thick affection; for the Jiang Ou of now he had only a few parts duty, a few parts sympathy, and a blame he didn't want to admit yet couldn't ignore—</p>
+        <p>Without Jiang Ou there'd be no Jiang Tian, and things wouldn't have blown up into this unsalvageable, mortifying state.</p>
+        <p>But likewise, for Jiang Ou, without Sheng Wang none of today's troubles would exist. So alongside the blame, Sheng Mingyang felt a few parts guilt too.</p>
+        <p>The ward was thick with the smell of medicine, accompanied by the woman's broken cries and low, ceaseless whimpering, and weeping that erupted and ceased by turns, like several contradictory, forcibly fused, terrible tones, oppressive enough that one couldn't bear to stay.</p>
+        <p>Sheng Mingyang didn't know how long Jiang Tian stayed at the hospital; he himself couldn't quite take it after just a few minutes. In that span he went downstairs several times. When Old Man Ding had hurried to the school, dazed in mind, he'd taken a fall in the tussle with Jiang Ou.</p>
+        <p>They say the elderly can't take a fall, and Old Man Ding had one more rule besides—he couldn't get angry and couldn't get worked up. Ji Huanyu's wretched business over the break had already left him sleepless night after night, gone slow; this fresh blow left him wilted all over. White-haired, he leaned against the head of the bed, shoulders and back stooped, gazing out the window at no place in particular, lost in thought for a long time, as if he'd aged in one stroke.</p>
+        <p>Sheng Mingyang and Jiang Tian were run ragged at the hospital, catching a breath only at night. They sat down to rest in the family waiting area, and silence and suffocation slowly spread, filling the corner.</p>
+        <p>After a long, long while, Sheng Mingyang glanced toward the ward. "Do you regret it? Things coming to this."</p>
+        <p>Jiang Tian lowered his eyes, his gaze fixed on some patch of emptiness as if lost in thought, or simply silent.</p>
+        <p>"You're a bit older, much more mature." Fatigue showed in Sheng Mingyang's tone, and he pressed on with patience. "What are you thinking—let me hear it."</p>
+        <p>It was a while before Jiang Tian spoke. "I don't owe anyone."</p>
+        <p>He'd grown up bounced from place to place, never staying long with anyone, never taking anyone for a pillar. He was used to giving out, rarely taking from others. Take even a little, and he'd give back double.</p>
+        <p>He owed no one.</p>
+        <p>He did what he felt he should do, bore what he should bear. He had no one to fear, no one to defer to—he answered only to Sheng Wang.</p>
+        <p>Sheng Mingyang probably understood his situation, and for a moment couldn't find the words to answer. He blanked a while before saying, "But Wangzai's different."</p>
+        <p>Jiang Tian gave an "mm," in that instant nearly shed of all youthfulness. He said, "I know."</p>
+        <p>Sheng Wang was soft-hearted, sensitive—always saying his own temper was bad, yet always weighing others' feelings. Equally lonely as a child, his reaction had been the exact opposite: one sealed himself in ice, the other put out countless feelers, sounding out the goings-on on every side.</p>
+        <p>But it was precisely because of this that they'd crossed paths.</p>
+        <p>It was precisely because he was soft-hearted that, when Jiang Tian stood alone under the streetlamp in Baima Lane that deep night, Sheng Wang had opened the window and called to him.</p>
+        <p>He knew this so well that he'd searched the whole world for Sheng Wang in the morning, yet by afternoon asked no more. It wasn't that he didn't want to see him—it was that he didn't want Sheng Wang to come see <em>him</em>, didn't want Sheng Wang to see the wreckage spread across the floor before him.</p>
+        <p>He knew Sheng Wang would be hurt. And he knew that the instant he saw Sheng Wang hurt, he'd waver.</p>
+        <div class="scene-break">❖</div>
+        <p>It was the second day by the time Sheng Wang got to the hospital.</p>
+        <p>He had no bag and no phone; Sheng Mingyang had someone watch him a whole night. By day he was steeped in deep irritation and anxiety, wanting only to say a few words to Jiang Tian—even just to account for his whereabouts so no one would worry. At night he replayed over and over that scene at the cemetery, his mother smiling at him from the pale photo while he pressed his lips and looked elsewhere, his eyes going red without ever managing to say what he wanted to say.</p>
+        <p>They say the closest kin know best where to stab to hurt the most, and Sheng Mingyang knew all too well how to wound him. The first day he was taken to the cemetery; the second, to the bedside. Jiang Tian wasn't there when he went—Sheng Mingyang had deliberately staggered the timing.</p>
+        <p>The elderly sleep little; the nurse said Old Man Ding had been sitting hunched on the bed like that since before dawn, lost in thought all day long. The fall, half from urgency and half from fright, had triggered a clot, leaving him dulled—whatever anyone said, he only squinted and smiled, so you couldn't tell whether he was letting it go or simply didn't understand.</p>
+        <p>When Sheng Wang entered the ward, Old Man Ding turned his head half a beat slow, stared at him a while, then suddenly smiled and beckoned.</p>
+        <p>After the exposure, this was the only elder who'd smile. A sudden sting rose in Sheng Wang's nose, no telling whether sorrow or something else. He walked over hesitantly, and Old Man Ding's withered big hand gripped him—gripping with one hand while reaching with the other for the peeled orange at the bedside.</p>
+        <p>The old man stuffed the two biggest segments at him and jerked his chin. "Eat. It's sweet."</p>
+        <p>Sheng Wang lowered his head, orange tucked in the crook of his elbow, about to say something, when the old man pointed upstairs again. "Take one up for Xiao-Wang too. Sweet!"</p>
+        <p>He froze in an instant, then after a moment turned his head aside and clenched his jaw hard, the rims of his eyes reddening bit by bit. He knew old people sometimes misspoke when muddled—just a passing slip, not really senility unable to tell people apart. But the old man had been hale and sharp before, never like this; this was the first time…</p>
+        <p>It was harder to bear than a slap on the spot, and Sheng Wang all but fled.</p>
+        <p>Sheng Mingyang dragged him upstairs again, pointed at Jiang Ou inside the door. "I know you're stubborn—like not holding your ground would make you look especially weak. But look again, will you? Is this what you wanted to see?"</p>
+        <p>Sheng Wang couldn't recall what he'd felt the instant he saw Jiang Ou—only that he walked in almost dazed, wanting to say something to her, yet tongue-tied. He didn't know whether to show concern or apologize, until Jiang Ou slowly lifted her eyes to him, and her emotions suddenly broke control.</p>
+        <p>The nurse and Sheng Mingyang were both soothing her; she struggled to grab Sheng Wang. "Auntie's begging you—begging you, all right?"</p>
+        <p>Sheng Wang was bloodless.</p>
+        <p>Jiang Ou finally quieted under everyone's efforts. She glanced at Sheng Wang once, then curled back into the covers with her back to him, eyes red and swollen, shut, and said not another word. Sheng Wang stood stiffly a while, then went out of the ward.</p>
+        <p>When Jiang Tian came from the stairwell corner, this was the scene he saw.</p>
+        <p>He saw several nurses hurry out of the ward, plainly fresh from a great commotion. He saw Sheng Wang standing head-down outside the door, his back against the hospital's ghastly white wall, his lowered fingers unconsciously pinching at his knuckles—miserable and silent.</p>
+        <p>In that instant, Jiang Tian suddenly realized he hadn't seen Sheng Wang smile without burden in a very, very long time.</p>
+        <p>He suddenly realized everything he carried on himself was barbed—dense, countless thorns, all aimed straight at Sheng Wang—and that every step the other took toward him, every time he drew close, those thorns sank in and pulled out again, leaving him dripping blood.</p>
+        <p>That sun that always circled him no longer shone, because of him.</p>
+        <p>He wanted to kiss the other's lowered eyes, the corners of his mouth that no longer smiled. Standing there alone was too lonely; he wanted to go over and hold Sheng Wang. But he turned and saw the thorns covering his own body… until the day they were ground smooth, he couldn't draw near.</p>
+        <p>In the end Jiang Tian only walked over and called low, "Wangzai."</p>
+        <p>Sheng Wang lifted his head, the rims of his eyes red.</p>
+        <div class="scene-break">❖</div>
+        <p>Sheng Mingyang was bustling about arranging Sheng Wang's transfer when he suddenly got a call from Jiang Tian. He said, "He's transferred too many times, never stayed anywhere long, and the exam's coming up—don't transfer him again."</p>
+        <p>Sheng Mingyang said, "One of you has to go."</p>
+        <p>Jiang Tian said, "Me, then."</p>
+        <p>The luggage he'd taken out so long ago was at last packed back into the case. As if from a sound, whole dream he'd been startled awake.</p>
+        <div class="scene-break">❖</div>
+        <p>Jiang Tian transferred in mid-February, taking the cat Sheng Wang had signed to adopt. Leaving together with him were Jiang Ou and Old Man Ding. He took his thorns and left clean.</p>
+        <p>After that, Class A had an empty seat, and everyone forgot to remind the teacher to clear it—just as Big Mouth Xu had mentioned it twice out of nowhere yet never peeled Jiang Tian's photo off the honor wall.</p>
+        <p>The small exam in early March was held as usual; time doesn't stop its steps for the gatherings and partings in some corner. Class A's month of collective last-minute cramming paid off plainly—all 4 A's, completing He Jin's goal without suspense, no one falling behind.</p>
+        <p>For a long stretch Sheng Wang turned taciturn. Now and then, in some instant, Gao Tianyang and the rest would see in him the shadow of another person, and after a moment's sighing would inexplicably turn sad.</p>
+        <p>Class A had an open atmosphere; that affair only made things awkward for a few days before returning to where they'd been. Those close to Sheng Wang stayed close, gathering at all sorts of lively scenes, telling exaggerated jokes and gossip to cheer him, watching him climb to first, nail down first, slowly pull a great distance ahead of second place, then howl in mock lament like a chorus.</p>
+        <p>The second half of Year 2 was a busy season. After the small exam, the other classes began general review, while all of Class A's energy went into the competitions. Sheng Wang scooped up the second-round slots for math, physics, and chemistry, and July and August were packed full with special-training classes, summer camps, and intensives.</p>
+        <p>Gao Tianyang, the heaviest-bottomed tail-dragger in Class A, only made the chemistry second round. His mindset was excellent, glad of the leisure; every time he saw Sheng Wang's schedule he clicked his tongue and shook his head. "Brutal, just brutal."</p>
+        <p>Sheng Wang said sourly, "If you really think it's brutal, remember to bring offerings when you visit the prison."</p>
+        <p>It was the first time he'd joked like that since Jiang Tian left; Gao Tianyang and the rest were flattered out of their wits and swore a vicious oath that they'd be no human beings if they didn't go.</p>
+        <p>From that day, Sheng Wang slowly took on his old shape again—stepping on his chair to rock it back and forth, twirling his pen while undercutting Gao Tianyang and Song Sirui, tipping his head back to gulp water after basketball, then tugging his collar to fan himself while chatting and laughing with people.</p>
+        <p>Sometimes it gave the illusion that everything had returned to its track, the dust settled.</p>
+        <p>Only occasionally, passing the honor wall in the covered walkway, would he stop and watch his own photo go from one to two to three, then more and more, all but taking up nearly half the wall…</p>
+        <p>While the other half never changed again.</p>
+        <p>The summer the second year ended, Sheng Mingyang mentioned in passing that two senior schoolmates in Beijing had helped, and Jiang Tian had secured a school abroad, sparing him the awkwardness of mismatched curricula and exam systems, and had also arranged hospitals suited for Jiang Ou's and Old Man Ding's recovery.</p>
+        <p>Sheng Mingyang didn't mention himself, but Sheng Wang figured he must have had a hand in it too.</p>
+        <p>In that stretch Sheng Wang was at an intensive. There was a convenience store by the school's Gate 2, its décor extremely like Xile's, and Sheng Wang always went there to buy things, though it was extremely far from where he stayed. Back and forth, he got chummy with the owner.</p>
+        <p>When he got that message from Sheng Mingyang, Sheng Wang was buying water at the convenience store. The owner sat cross-legged sucking on cherries, and at checkout generously pushed the glass bowl forward. "Here, have some."</p>
+        <p>Sheng Wang stared at the phone screen a long time without coming to, and under the owner's urging grabbed one at random—but one bite was a strange bitterness.</p>
+        <p>He'd just been sweating, and his face was a little pale in the draft of the AC. The owner mulled that something was off and asked what was wrong.</p>
+        <p>He pressed the screen dark, stuffed the phone back into his pocket, and paid head-down. "There's something wrong with what you bought—I got a bitter one."</p>
+        <p>The owner turned the bowl over and looked it round. "Cherry season's short, they spoil easily—you're unlucky."</p>
+        <p>Sheng Wang didn't look up, and after a long moment gave an "mm," then waved a hand and walked off without turning back.</p>
+        <p>Maybe the bad cherry was to blame; he hadn't gone many steps before his stomach turned over in waves. The discomfort was too vague in its range, giving the illusion of a chill in his chest.</p>
+        <p>He suddenly remembered that day in February, Jiang Tian walking over and calling him low: "Wangzai."</p>
+        <p>Before he'd even spoken, he'd known what the other meant to say.</p>
+        <p>He'd been hesitant and muddled then, babbled something he could no longer recall—only that he'd gripped Jiang Tian and said, "I didn't let go this time."</p>
+        <p>Jiang Tian had been silent a long while, then said, "My fault. I let go first."</p>
+        <p class="ellipsis">…</p>
+        <p>His stomach churned terribly, and his chest was cold to aching. Sheng Wang stood in place a good while holding the iced water before slowly walking on.</p>
+        <p><em>This school had a plane-tree avenue like Fuzhong's too, the blazing sun shafting down through the broad leaves, dazzlingly bright. In a blink it was high summer again—but he never heard that clamoring cicada-song again.</em></p>
+        <p>【Coconut】</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-092-wilderness.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-094-fleeting-years.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

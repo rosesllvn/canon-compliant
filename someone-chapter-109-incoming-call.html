@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 109 — Incoming Call — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 109 · A Certain Someone</p>
+      <h1 class="reader-title">Incoming Call</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Some things can't be talked through in a few words; there always has to be a process of digesting them. Jiang Ou had no obvious emotional trouble—that was the biggest success—and the rest had to be left to time to slowly resolve. In the end Jiang Tian didn't let her meet Sheng Wang; he called her a car and saw her down to the ground floor.</p>
+        <p>The driver got out of the seat and helped open the door. Jiang Ou settled into the back seat smoothing her clothes, and in the end couldn't resist turning to look out through the rear window.</p>
+        <p>She saw Jiang Tian striding off toward the other side of the gate, and as he reached the corner of the courtyard wall, someone climbed out of a car parked at the roadside.</p>
+        <p>At this distance, Jiang Ou could only make out that the person wore the familiar navy overcoat, wrapped in a thick black scarf.</p>
+        <p>Was that really Sheng Wang? Jiang Ou watched the young man blankly.</p>
+        <p>She still remembered his cold, steady manner on the phone—maybe he'd been talking about work—giving an impression of orderly competence; placed in a crowd he'd surely be the most striking. But that really wasn't the Sheng Wang of her memory. So much that in her hurried glance she'd actually mistaken him for an unfamiliar man resembling Jiang Tian.</p>
+        <p>"Is the temperature in the car all right?" the driver asked as he started up.</p>
+        <p>Jiang Ou came to with a start and smiled, polite and hurried. "It's fine."</p>
+        <p>And when she turned back again, she dimly saw the young man lean on the car window and wave with a smile. In the instant he faced Jiang Tian, he finally had a shadow of the past about him—as if he were still that vivid youth who laughed and made a fuss.</p>
+        <p>Jiang Ou watched, lost in thought, a while, then at last turned away and lowered her eyes in silence.</p>
+        <div class="scene-break">❖</div>
+        <p>Sheng Wang swept a glance behind Jiang Tian and, seeing no other familiar figure—expected though it was—still felt a subtle loss.</p>
+        <p>Then, just as he got back in the driver's seat and went to fasten his belt, Jiang Tian leaned over and kissed him a while.</p>
+        <p>Sheng Wang was a little dazed. "The windshield's transparent."</p>
+        <p>Jiang Tian sat up and fastened his own belt. "You mind?"</p>
+        <p>"Of course I don't mind." Sheng Wang touched the corner of his mouth. "I was afraid you thought the windshield was one-way."</p>
+        <p>"…am I an idiot?"</p>
+        <p>Sheng Wang laughed.</p>
+        <p>It wasn't really that. He'd just found the gesture a bit out of character for Jiang Tian, and worried the mother-son talk hadn't been pleasant. But hearing his ge's familiar mocking tone, he set his heart down again.</p>
+        <p>Everything seemed quite a bit better than expected.</p>
+        <p>"Is Auntie going back on her own?" he asked.</p>
+        <p>"Mm, not on the way," Jiang Tian said.</p>
+        <p>Sheng Wang wanted to laugh, thinking, even if it were on the way she'd hardly ride in my car. His ge was blunt as ever; coming up with an "out of the way" excuse on purpose must have been agony for him.</p>
+        <p>Considering himself handsome and considerate, Sheng Wang of course wouldn't expose it. Searching the navigation, he asked, "She's not living at the sanatorium now, right?"</p>
+        <p>"Long since moved out, renting an apartment near the old man."</p>
+        <p>"What apartment?"</p>
+        <p>Jiang Tian glanced at him. "Am I this easy to fool?"</p>
+        <p>Elbow on the wheel, Sheng Wang typed with a stifled laugh, then after a moment held up his phone screen at Jiang Tian: "Like I wouldn't know where she lives unless you told me? I asked Xi-ge before coming."</p>
+        <p>He tapped the route on the screen. "See? Very. Much. On. The. Way."</p>
+        <p>Jiang Tian: "…"</p>
+        <p>A certain someone, in his ten-odd years, had loved watching others undercut him; now, grown bolder, he'd started doing it himself. Jiang Tian held a frozen face against him a while, then suddenly reached out to pinch the back of his neck. "Want to laugh, go slump in the back and laugh—I'll drive."</p>
+        <p>"Don't use your cat-hauling tricks on me." Sheng Wang was ticklish all over, every spot a weak point, especially afraid of Jiang Tian's touch. "Let go! I don't trust the driving skills your capitalism raised."</p>
+        <p>"Try them."</p>
+        <p>"Try what, there are two lives in this car, ge." Sheng Wang swept his hand off and—shifting gear, signaling, easing off the brake in one smooth motion, terrified of being banished to the back seat—said, "I'm still young, I've got a career, a family…"</p>
+        <p>Jiang Tian leaned against the seat listening to the certain someone's nonsense. He missed these unserious lines terribly—the squabbling and racket that filled every day. The best scenario he'd ever pictured was listening to it like this for a lifetime.</p>
+        <p>"…though I'm pretty handsome, you can't do me harm." The certain someone was barely reliable at the start and pure nonsense by the end.</p>
+        <p>In the traffic and lights, Jiang Tian raised a brow and drawled, "Didn't hear you mention a family when you bit my shoulder yesterday."</p>
+        <p>Sheng Wang gave a "heh" and stopped at the intersection. Maybe from the red light's glow, his neck and face flushed with color, though his expression was perfectly composed.</p>
+        <p>He blinked at the road ahead. "Of course I have one—conned out of an early romance. The family member's an overseas-returned PhD, tall and handsome—jealous?"</p>
+        <p>"Jealous of who?"</p>
+        <p>"Of me."</p>
+        <p>Jiang Tian shook his head. "I'm more jealous of that family member."</p>
+        <p>Sheng Wang narrowed his eyes, and only after a good while touched his earlobe.</p>
+        <p>He'd recognized this fact long ago, but he still wanted to say: his ge really was the smoldering type…</p>
+        <div class="scene-break">❖</div>
+        <p>In the last few days before Spring Festival, everyone was busy to the point of being mechanical. Gao Tianyang and Pepper had booked tickets early and asked Sheng Wang and Jiang Tian what day they were going back to Jiangsu.</p>
+        <p>Sheng Wang answered, "You really do probe the sorest spot."</p>
+        <p>Gao Tianyang thought it over and agreed. For Sheng Wang, back home there was only the ancestral house and Sheng Mingyang, and with the certain someone now out, going back would probably just be adding to his own father's troubles. As for Jiang Tian… Jiang Ou was in Beijing already, and in Jiangsu, apart from the now-rented-out old house by Fuzhong's gate, there was likewise nothing to see.</p>
+        <p>These two were special cases—going or staying, both were awkward.</p>
+        <p>Gao Tianyang said, "How about you two just book a trip, find some off-the-beaten-path place, and do a seven-day Spring Festival tour!"</p>
+        <p>Jiang Tian, who'd grown used these years to traveling around on holidays, instinctively went to look up sights and flights, only to be pressed still by Sheng Wang. "Don't humor him. There's no off-the-beaten-path place at New Year, there are over a billion people."</p>
+        <p>They agonized two days and in the end still booked round-trip flights to Jiangsu.</p>
+        <p>For one, the Class A WeChat group had started bouncing madly before the new year, everyone arranging to visit the teachers after the holiday. For another… three days before the break, Sheng Wang suddenly got a call from Sheng Mingyang—</p>
+        <p>Ever since that New Year's dinner, a certain awkwardness had hung between father and son. For a long while Sheng Mingyang had neither shared wellness articles with him nor forwarded Moments, abruptly gone silent—no telling whether wrestling with his thoughts or simply in a cold war.</p>
+        <p>This call was the first contact since New Year's Day; the instant it connected, both were silent a few seconds. In the end Sheng Mingyang spoke first. "You're coming back for Spring Festival, right?"</p>
+        <p>He hadn't used "are you coming back"—he'd gone straight to the half-affirmative form. This was still his usual way, masking the underlying force with a seemingly gentle manner. But somehow, used this time, it became a kind of disguised concession.</p>
+        <p>Sheng Wang blanked and didn't answer at once. In those few seconds he keenly sensed two parts of nervousness in Sheng Mingyang—his ever-forceful father actually nervous in the instant of waiting for his answer.</p>
+        <p>He didn't expose it. Coming to, he said, "If I get tickets I'll come back—hotels are a bit hard to book at Spring Festival too."</p>
+        <p>Before this call, he'd actually decided not to go back. Busy a whole year, holing up at home with Jiang Tian for some couple's time over the new year wasn't bad—far more interesting than going out to count heads in crowds.</p>
+        <p>But he didn't say this original plan aloud, attributing the reason only to hard-to-grab tickets—a kind of tacit avoidance, so as not to sadden the person on the other end.</p>
+        <p>Hearing him, Sheng Mingyang said, "Book a hotel for what? There's a house at home, you'll stay in a hotel?"</p>
+        <p>At that, Sheng Wang couldn't keep up the avoidance. He hesitated two seconds and said helplessly, "I'm not coming back alone."</p>
+        <p>Then he said nothing more.</p>
+        <p>The other end was quiet a good while; Sheng Mingyang was as if hit with a power-off button—you could hear how stiff he'd gone. After a long time, he said vaguely, "I know you're not coming back alone. Isn't your room still here?"</p>
+        <p>This time it was Sheng Wang's turn to forget his words.</p>
+        <p>Between clever people, conversation often didn't need to be spelled out so plainly—everyone understood the unspoken. Sheng Mingyang was very clever, and Sheng Wang the indigo surpassing the blue, yet this time he wanted to play the fool.</p>
+        <p>His lips moved; lifting his eyes to Jiang Tian across the dining table, he asked Sheng Mingyang earnestly, "Dad, is it the meaning I'm understanding?"</p>
+        <p>Sheng Mingyang was silent a moment and didn't answer directly. "I just saw on Moments, Lao Xu said your class's old students are planning to go back to school and visit."</p>
+        <p>Sheng Wang's heart beat a bit heavily, waiting for him to go on.</p>
+        <p>"You two are among them, aren't you," Sheng Mingyang said.</p>
+        <p>Sheng Wang gave an "mm."</p>
+        <p>Sheng Mingyang said, "I've got a lot on this year—I can only be home a couple of days, New Year's Eve and the first, eat a couple of meals, and I'll leave the morning of the second."</p>
+        <p>Sheng Wang gave another "mm," only his voice was a touch hoarse, not so clear. "Another pile of dinner engagements?"</p>
+        <p>"You've got to make the rounds at New Year."</p>
+        <p>"Look at your leg before you drink," Sheng Wang said.</p>
+        <p>For some reason Sheng Mingyang fell silent again, and only after a while said, "Buying now—are tickets still to be had?"</p>
+        <p>Sheng Wang said, "Flights are a bit easier."</p>
+        <p>Sheng Mingyang said, "All right."</p>
+        <p>One word, and the bulk of years of weight lifted off. Only as his shoulders and back and bones slowly loosened did Sheng Wang realize he'd been clenched tight all along.</p>
+        <p>"Once you're sure you're coming, I'll have Auntie Sun clean the room," Sheng Mingyang added.</p>
+        <p>Sheng Wang thought a moment. "Save Auntie the trouble, then—just tidy my room, skip the one next door, no need for two."</p>
+        <p>Sheng Mingyang mulled it over, found the line wasn't one to be mulled too closely, and without a word hung up directly.</p>
+        <p>Sheng Wang pointed at his phone and complained to Jiang Tian, "See? Hung up on me, won't humor me."</p>
+        <p>Jiang Tian thought over his line just now and was a little speechless. "You had to provoke him like that?"</p>
+        <p>"Provoked him plenty before too." Sheng Wang remembered the daily nonsense he'd traded with Sheng Mingyang when young—as if yesterday, and yet as if many, many years had passed.</p>
+        <p>He picked the last green grape from the glass bowl and tossed it in his mouth, then carried the now bare-stemmed bowl toward the kitchen. Passing Jiang Tian, he leaned over to kiss the corner of his mouth and said, head bobbing, "The old comrade's getting on, can't take teasing anymore—it used to be me hanging up on him."</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-108-pruning.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-110-hometown.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

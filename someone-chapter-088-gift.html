@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 88 — Gift — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 88 · A Certain Someone</p>
+      <h1 class="reader-title">Gift</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>He'd assumed Sheng Wang had slipped off to the rented place, but opening the door he found the other wasn't there. The room had gained some things, though: the bay window was spread with a blanket and stuffed with two throw pillows. A corner of the living room had acquired a beanbag chair fit for paralysis-by-lounging. A basketball hoop was stuck to the wall, and a few unopened boxes were stacked at the entryway.</p>
+        <p>Jiang Tian opened the deliveries: paired cups, slippers, toothbrushes, towels, and so on—regardless of whether they already had them, all bought, fully showcasing the young master's lavishness and excitement.</p>
+        <p>He set everything out one by one and stuffed the drinks into the fridge. Then he carried the emptied boxes down to the trash bin and called Sheng Wang.</p>
+        <p>"Where are you?" Jiang Tian asked.</p>
+        <p>Sheng Wang must have heard the horn of a passing e-bike; his voice carried a triumphant laugh. "You're at the school's north gate?"</p>
+        <p>Jiang Tian didn't want to admit his ambush had failed, and only after a while gave a grudging "mm."</p>
+        <p>"I picked up a few deliveries over there and left."</p>
+        <p>"I can tell." Jiang Tian walked out the complex gate, watching the passing traffic while switching the receiver to an earbud. "Where are you now?"</p>
+        <p>There seemed to be someone beside Sheng Wang; he asked the person something in a low voice, then sent Jiang Tian a location. "It's a bit far—you coming?"</p>
+        <p>"Mm. Wait for me," Jiang Tian said.</p>
+        <p>A certain someone usually longed to show off the slightest thing right under his nose. This time, against all habit, he was vague and tooth-pulling, his methods rivaling entrapment fishing—plainly to lure him to that place. If he couldn't even see that, then this boyfriend of his could be swapped out.</p>
+        <p>The location Sheng Wang sent was indeed a bit far—the university town on the city's outskirts. Two subway transfers, an hour to get there. Jiang Tian couldn't work out what present had to be prepared there.</p>
+        <p>Past midnight it would be January 27th—his birthday. Any fool knew what the young master was up to. But to play along with the surprise effect the other wanted, he had to condescend to dial down his intelligence and pretend to be an idiot.</p>
+        <p>A little idiotic, but he was glad to.</p>
+        <p>Jiang Tian had assumed it would be some shop or restaurant, but arriving, he found it was a small building beside the university's student dorms. Sheng Wang sent voice messages directing him: "Come in and go up to the second floor, third room on the left, the one labeled 'activity room.'"</p>
+        <p>Jiang Tian went up the stairs and saw a wooden sign hung at the room's door: <em>Please knock before visiting, thank you for your cooperation.</em></p>
+        <p>A little puzzled, he still raised a hand and knocked twice.</p>
+        <p>The door opened from inside, and the person he'd hunted all afternoon stood there, holding up a little something as if presenting a treasure, eyes curved as he said, "Ge, let me show you a treasure."</p>
+        <p>The little something in his hands cooperated to the extreme, giving a fine little cry.</p>
+        <p>It was a kitten.</p>
+        <p>The instant he saw it, Jiang Tian went a little dazed. Because it looked too much like the one from Wutongwai back then—even the patch of markings on the extra-marked left ear was exactly the same.</p>
+        <p>For a few seconds, he almost thought that kitten called "Captain" had come, twelve years later, to shake him down again.</p>
+        <p>Sheng Wang pushed the cat closer to Jiang Tian. "I asked—it can be petted. Just a bit young, can't be rough."</p>
+        <p>Jiang Tian stood stiff a moment, a little at a loss for where to start.</p>
+        <p>So many years gone by, and seeing a kitten like this he still had the same reaction, not a shred of progress. Only when Sheng Wang lightly kicked his shoe did he raise a hand to scratch behind the kitten's ear, and the little thing instantly narrowed its eyes and started purring.</p>
+        <p>"You came all this way just to pet a cat?" Jiang Tian's fingers sank into the kitten's fine soft fur, fingertips brushing Sheng Wang, and he asked low.</p>
+        <p>"To get the adoption form. Just signed and filled it out—it's nominally ours now." Sheng Wang jerked his chin behind him.</p>
+        <p>The activity room held many cat beds and climbing frames, with food and water dishes in a corner. Three older mother cats curled in a well-lit spot soaking up the sun, several kittens of varied markings sprawled on their bellies—clearly not all from one litter.</p>
+        <p>By the window sat an office desk, a stack of forms clipped to its edge—the ones Sheng Wang meant.</p>
+        <p>"This school runs a stray-cat rescue, and the kittens born can be adopted. There are actually four or five more with this kind of marking. Your WeChat avatar's angle is too single, so I wasn't sure, and I sent Grandpa Ding a few videos—he said this one looks most alike, exactly like Captain." Sheng Wang finished, hugged the kitten, and looked at him. "Alike?"</p>
+        <p>Jiang Tian nodded.</p>
+        <p>"I'd meant to drag you over tomorrow, but the rescue association people are going home for the new year. The old man who watches the cats doesn't handle adoptions, and I was afraid someone would beat us to it if I waited, so I came to sign today. The vice-chair went to copy the materials, I'm waiting here for him." Sheng Wang explained a long string.</p>
+        <p>Jiang Tian watched him quietly, then after a moment asked, "How long did you look?"</p>
+        <p>Stray cats were everywhere, pet shops had them too, but finding one whose markings matched this closely was like finding a needle in the sea. No telling how much thought this person had spent.</p>
+        <p>But Sheng Wang ran his mouth freely: "Not bad—I'd been keeping an eye out for a while, then swiped your avatar to post a reward, and it was easy to find."</p>
+        <p>He finished, went quiet a few seconds, then asked, "This birthday present… do you like it?"</p>
+        <p>"I like it," Jiang Tian said.</p>
+        <p>He'd always been a person who clung to the old—maybe because his memory was too good, he tended to brood over certain regrets. Like how he always remembered how "Captain" had slowly grown up, and slowly grown old. But the deepest impression was always the scene of it lying in its bed, breathing stopped.</p>
+        <p>The old man had said by his ear, "It's already gone, stop looking."</p>
+        <p>But he'd stubbornly crouched there a whole day.</p>
+        <p>The old man said, "Change that phone avatar of yours—doesn't it choke you up to keep looking at it?"</p>
+        <p>But he'd used it for years.</p>
+        <p>The old man also said a cat, once old, couldn't come back. But—</p>
+        <p>Look. Someone had brought it back.</p>
+        <p>Outside the window, the sun hung low on a distant branch, deep-gold light slanting into the room, plating the boy holding the cat with a downy rim.</p>
+        <p>Jiang Tian wasn't good at expressing himself, couldn't say anything fine-sounding. He glanced down at the kitten and asked Sheng Wang, "A son for me?"</p>
+        <p>"Hang on." Sheng Wang, one hand cradling the little thing, lifted its tail to examine the cat's rear in earnest. "Yeah, a son."</p>
+        <p>Jiang Tian turned his head aside and laughed deeply.</p>
+        <p>"Laugh my foot." Sheng Wang said, "This beats a dumpling, doesn't it?"</p>
+        <p>"Mm, by a fair bit." Jiang Tian turned back. "So whose surname does it take?"</p>
+        <p>Sheng Wang: "…"</p>
+        <p>The vice-chair came up the stairs with the copied materials, and Sheng Wang finally snapped out of his ge's smoldering teasing. "Name's not decided—take your time, it can't come home for now anyway."</p>
+        <p>The vice-chair caught only that last line. He came over and handed the materials to Sheng Wang. "Right, this cat's not a month old yet, has to nurse off the mother cat a while. Wait another month or so—we'll give it the first few vaccines and call you to come get it then. Too small and it's hard to keep alive at home."</p>
+        <p>"All right."</p>
+        <p>"Who do I contact then?" the vice-chair asked.</p>
+        <p>Sheng Wang was about to say it didn't matter who, since they'd come fetch it together anyway. But the vice-chair had already opened his WeChat QR code and asked Jiang Tian to add him too.</p>
+        <p>"Uh—" Sheng Wang said on instinct.</p>
+        <p>The vice-chair looked over blankly. "What is it?"</p>
+        <p>It was nothing, really; he'd just suddenly gone sensitive, feeling that adding both their WeChats wasn't a good omen—as if one of them might not be able to come. But saying that would sound strange, so he waved a hand with a smile. "Never mind, it's nothing."</p>
+        <div class="scene-break">❖</div>
+        <p>Jiang Tian got a voice message from Zhao Xi on the subway back, asking whether he and Sheng Wang had time tonight to come out for a meal.</p>
+        <p>"Our flight's tomorrow—we want to dodge the peak of the last two days of the lunar year. And tomorrow's your actual birthday; your family and all will surely celebrate, so Lin-zi and I won't hog you." Zhao Xi said.</p>
+        <p>In good spirits over the present, Jiang Tian replied: <em>Sure, my treat—Chu-ge just transferred me some money.</em></p>
+        <p>The tutoring class's Chu-ge was a sensible sort; mindful that the new year was coming, he'd settled the payment for the first batch of materials early, and even sent Jiang Tian an extra big red packet, hoping he'd put in a bit more effort after the new year and add some entry-level competition material to the packets.</p>
+        <p>Jiang Tian split off a portion of it and transferred it to Jiang Ou, saying: <em>From Ji Huanyu.</em></p>
+        <p>But all the way until they came out of the Wutongwai subway station, Jiang Ou hadn't replied, which puzzled him a little.</p>
+        <p>"What's wrong?" Sheng Wang noticed him frowning at his phone several times.</p>
+        <p>Jiang Tian said, "My mom hasn't replied."</p>
+        <p>Jiang Ou's phone was never off her, and she replied to Jiang Tian's messages especially fast. Usually a message like this got an answer within seconds. Today it was nearly an hour—genuinely a bit off.</p>
+        <p>Sheng Wang's steps paused.</p>
+        <p>Jiang Tian noticed the change in his expression and said, "They were both busy when I left, probably didn't see it."</p>
+        <p>Sheng Wang nodded. "Busy with what?"</p>
+        <p>Jiang Tian was silent a few seconds. "Sending out invitations."</p>
+        <p>Sending out invitations, though it wasn't that formal. Sheng Mingyang and Jiang Ou planned to host the meal the day after Jiang Tian's birthday. They'd already given their friends a heads-up before this; today was just to contact everyone again in one round, to seem courteous and respectful.</p>
+        <p>The friends they'd invited were a mixed bunch—some with genuinely deep ties, where a call couldn't be wrapped up in two or three sentences and always took a while. Some had business dealings, who could even less be slighted, what with the pleasantries and joking taking up a good deal of time too.</p>
+        <p>Back and forth, the whole afternoon had been spent on it.</p>
+        <p>Jiang Ou had been preoccupied these few days, her spirits listless throughout, perking up a little only at the thought of her son's birthday. Unfortunately, heaven seemed bent on teasing her: first she spaced out pouring water and scalded her hand, then snapped her necklace by accident changing clothes. In the afternoon, arranging for someone to mail new-year gifts to a few clients, she muddled up the messages too.</p>
+        <p>These all stemmed from her distraction, really, but gave the impression of a year gone unlucky. Sheng Mingyang took over what remained and had her rest against the sofa a while.</p>
+        <p>Jiang Ou muttered, "No telling if it's menopause syndrome, my heart's racing badly."</p>
+        <p>Sheng Mingyang joked with her, "Never seen menopause with a temper this good—probably just the poor sleep these days."</p>
+        <p>Jiang Ou gave an "mm" and leaned against the sofa, eyes shut to rest. After a while she sat up, replied to a few friends' WeChats, and scrolled Moments out of habit.</p>
+        <p>A few flips down, she saw the post Du Cheng had made that afternoon.</p>
+        <p>He said: <em>Headaches make a person deranged—feels like I could do anything.</em> With a self-mocking joke image attached.</p>
+        <p>Jiang Ou frowned, swiped past it a few times, and skipped the post. Then she called toward Auntie Sun bustling in the kitchen, "Sister Sun, any more snow-fungus soup? I'd like something hot, not feeling great."</p>
+        <p>"There is, I'll get you some."</p>
+        <p>Auntie Sun ladled a bowl and brought it over. As Jiang Ou reached to take it, her phone suddenly buzzed.</p>
+        <p>Her eyelid twitched for no reason; she lowered her eyes to the screen, where Du Cheng's avatar had flipped from the bottom to the very top, the message content shown beside it.</p>
+        <p>He said: <em>Can't sleep lately, keep thinking of the past. Maybe I've done too many things on my conscience, so I can't even die smoothly. I know it spoils the mood to say such dismal things at new year, but I don't know whether I'll live through this one, so I'll just lean on my muddled head and my reckless derangement and apologize to you in one go.</em></p>
+        <p>He said: <em>I'm a scoundrel, no good, vile and filthy. Huanyu and I wronged you.</em></p>
+        <p>The bottom of the bowl suddenly scalded her; Jiang Ou's hand flinched, and the full bowl of snow-fungus soup dropped onto the marble with a crash, the white porcelain shattering into pieces, splashing across the floor.</p>
+        <div class="scene-break">❖</div>
+        <p>Jiang Tian had meant to use this dinner to give Zhao Xi and Lin Beiting a proper send-off. Zhao Xi, too, had meant, riding the warmth of the drink, to point out a few things before leaving and talk with these two younger brothers.</p>
+        <p>But things didn't always go as one wished; trouble came hurried and sudden, never calling out "3, 2, 1" first.</p>
+        <p>Jiang Tian called Jiang Ou several times during the meal, the ringback tone sounding dozens of times with no answer. As he puzzled over it, Jiang Ou replied with a WeChat.</p>
+        <p>She said: <em>Was the money these past years really from Ji Huanyu?</em></p>
+        <p>The dinner couldn't be finished and broke up hastily. Jiang Ou kept not answering calls, and Sheng Wang, in his anxiety, dialed Sheng Mingyang several times; the last finally connected.</p>
+        <p>Sheng Mingyang said, "We're at the provincial hospital."</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-087-winter-break.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-089-needle-point.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

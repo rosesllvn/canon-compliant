@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 84 — False Alarm — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 84 · A Certain Someone</p>
+      <h1 class="reader-title">False Alarm</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>For students with their heads buried in exam papers, living the dorm-cafeteria-classroom three-point line all year round, no holiday was particularly worth marking—only days off held any meaning.</p>
+        <p>Fuzhong students counted the days by weekly and monthly exams and big events: see the sports meet and you knew it was October; see the arts festival and you knew the year was nearly out.</p>
+        <p>Sheng Wang hadn't formed this conditioned reflex yet.</p>
+        <p>He lounged in Jiang Tian's bed and slept in, openly and unashamed. Only when the sun hit his face did he blearily reach for his phone, and only then notice the screen reading, in large type, December 31st.</p>
+        <p>"Getting up?" Jiang Tian asked.</p>
+        <p>"No." Sheng Wang tossed the phone aside. The bed was murderously narrow, and two big boys in it more crowded still. He managed to roll over anyway and clamp onto Jiang Tian with all four limbs like a body pillow, saying lazily, "Tomorrow's New Year's Day, can you believe it."</p>
+        <p>He lay there eyes shut, half-buried in the quilt—no telling whether he simply didn't want to move or meant to sleep a while more. Jiang Tian resigned himself to being the hugged pillow; his left arm was actually a bit numb from being pinned, but since it was already numb he didn't plan to say anything.</p>
+        <p>"What about New Year's Day?" he asked.</p>
+        <p>Sheng Wang seemed about to drift off again, answering only after a moment: "Nothing. Just musing. Feels like this half year's been especially long—longer than all my dozen-some years before put together."</p>
+        <p>"Has it?" Jiang Tian shut his eyes too; he'd been wide awake, but the voice beside him was making him a little drowsy.</p>
+        <p>Sheng Wang said, "Maybe I just didn't remember things before."</p>
+        <p>What he'd done each day, who he'd met—big and small, he always forgot the moment he turned away. Spring, summer, autumn, winter changed fast; do a few papers, doze a couple of breaks, space out a few times, and the time just passed like that.</p>
+        <p>"Now it's different—I remember the tiniest things crystal clear."</p>
+        <p>"Why?"</p>
+        <p>Because he wanted to remember a little more—how they'd met, how he'd come to like him, how they'd gotten together… He didn't know why he wanted to remember these things either; he just felt like a miser hugging a pile of gold and silver, wanting the ingots and unwilling to lose the coppers, feeling cheated by even a fraction missing.</p>
+        <p>He'd never understood people who photographed every last thing—eating, sleeping, all of it—for keepsakes, finding it sappy and over-the-top. Now, suddenly, he could understand a little.</p>
+        <p>But the words were a touch melodramatic; you could give him ten faces and he still couldn't say them. So he answered Jiang Tian, "Don't know, maybe puberty's second growth spurt—good brain, strong memory."</p>
+        <p>Jiang Tian must have been pretty thunderstruck; after holding it in a good while he couldn't, and gave a short, cutting cold laugh.</p>
+        <p>"You mocking me?" Sheng Wang lifted his face from the covers, a little hot from being smothered, hair sticking in his eyes, glaring his ge down.</p>
+        <p>The other didn't open his eyes, playing dead in silence.</p>
+        <p>Sheng Wang stared a while, his hand under the covers creeping down, then suddenly probing along the hip into the other's trousers like an ambush.</p>
+        <p>Jiang Tian arched his back and grabbed his wrist, opening his eyes to look at him blankly. "…"</p>
+        <p>Mischief accomplished, Sheng Wang yanked his hand free, scrambled out of bed, and trotted over to the sink, bracing on the wall and laughing like a rascal. "Just saying hello—good morning, classmate Jiang Xiao-Tian."</p>
+        <p>It was thanks to that rascal's greeting that his lower lip was split when he went out.</p>
+        <div class="scene-break">❖</div>
+        <p>Fuzhong's way of giving holidays had always been odd—Buddhist, going-with-the-flow, landing on whatever day it landed on. The other schools in the city took the 1st off; it insisted on putting the holiday on the 31st.</p>
+        <p>There was hardly anyone at school, a chill of post-festivity desolation everywhere, with a touch of midwinter bleakness. The Xile convenience store had broken precedent and not opened, and even the mobile snack stalls at the gate were more than half gone.</p>
+        <p>Jiang Tian had something to do at the north gate, and the two wound through the streets and alleys into a little shop called "Drunkard Granny" for breakfast. A little storefront like this—you might not even find its name on a food app.</p>
+        <p>"You can find places like this?" Sheng Wang found a seat and flipped through the bare-bones breakfast menu.</p>
+        <p>"The old man used to come buy peanuts to drink with," Jiang Tian said.</p>
+        <p>"Came all the way from the west gate to the north gate for peanuts?" Sheng Wang marveled. "The old man's got the stamina. The owner here fries especially fragrant peanuts?"</p>
+        <p>Jiang Tian shook his head. "Good-looking."</p>
+        <p>Sheng Wang blanked and turned, and saw a little old lady part the cloth curtain and come over, set down two cups of hot tea, and ask with a smile, "Here for the vermicelli soup?"</p>
+        <p>Sheng Wang smiled and nodded too. "Two bowls."</p>
+        <p>"Ah, any dietary restrictions?"</p>
+        <p>"His bowl, no chili," Jiang Tian said.</p>
+        <p>"One moment, then." The little old lady wiped her hands and went back behind the cloth curtain.</p>
+        <p>Sheng Wang withdrew his gaze and sipped his tea. "Must have been a great beauty when she was young," he said in a low voice. "How come the old man doesn't come anymore?"</p>
+        <p>Jiang Tian said, "Not competitive enough."</p>
+        <p>"Hm?" It was rare to hear gossip out of his mouth, a novel experience. Sheng Wang pressed: "What do you mean, not competitive enough?"</p>
+        <p>"Stubborn temper, loud voice, fierce-looking." Jiang Tian summed up Old Man Ding's traits simply. "Lost out to a retired schoolteacher."</p>
+        <p>"Then the old man must've been heartbroken a while?"</p>
+        <p>Jiang Tian gave an "mm." "Got so mad he quit drinking."</p>
+        <p>Sheng Wang: "…"</p>
+        <p>That was quite a temper.</p>
+        <p>The old lady was deft and quick, and before long brought out two bowls of vermicelli soup. The two boys felt bad making her walk far and got up to take them.</p>
+        <p>Winter in this city was extreme: outdoors, anywhere the sun reached was warm as spring; indoors, gloomy instead, cold seeping from the marrow.</p>
+        <p>Sheng Wang didn't like wearing thick clothes; he'd come out in a hoodie under a gray-black denim jacket, his knuckles white with cold. Only after a couple of mouthfuls of hot soup did he warm fully through.</p>
+        <p>He ate head-down a while, then asked with affected offhandedness, "The old man's quite a worrier, isn't he—I often hear him say such-and-such kept him up all night."</p>
+        <p>Jiang Tian's motion paused; he lifted his eyelids to look at him.</p>
+        <p>Sheng Wang could feel the other's gaze but didn't look up, single-mindedly fishing the bean-curd puffs out of his soup, as if it really were just an offhand question.</p>
+        <p>"He only says that," Jiang Tian had already withdrawn his gaze, and said mildly. "He naps three or four hours in front of the TV in the afternoon, so of course he can't sleep at night."</p>
+        <p>Sheng Wang gave an "oh" and cheered up again. He always felt Jiang Tian's chili bowl smelled better, and despite the warnings fished out several chopsticks' worth, then, covering the split on his lip, perished gloriously on the table.</p>
+        <p>The old lady came out and got a fright. She asked Jiang Tian, "Did he eat too much?"</p>
+        <p>"Cried from the chili," Jiang Tian said sourly, getting up to pick a carton of milk from the counter and touch it to a certain someone's face.</p>
+        <p>The wind chime at the door suddenly jingled—a new customer had come in. Sheng Wang took the milk and rose from the dead to sit up, and found the newcomer was someone he knew.</p>
+        <p>"Xi-ge?" Sheng Wang greeted him.</p>
+        <p>Zhao Xi spotted them the moment he came in. He took a couple of drags, pinched the cigarette from his lips, and stubbed it out on the trash bin by the door, a faint haze of smoke drifting before his face.</p>
+        <p>He narrowed his eyes in the smoke and greeted them. "Day off and you don't sleep in, come for breakfast instead?"</p>
+        <p>"He's got something at the north gate." Sheng Wang pointed at Jiang Tian. "Grabbing breakfast on the way."</p>
+        <p>"Mm. Going to Chu-ge's in a bit," Jiang Tian said.</p>
+        <p>"Oh, right." Zhao Xi nodded. "Finals coming up."</p>
+        <p>The north gate was a den of hidden dragons and crouching tigers, the residential buildings stuffed with cram-class operations, a steady stream of clients and booming business. As an early-days school bully cum street boss, Zhao Xi knew a lot of people. He'd hooked Jiang Tian up with a line back then—editing math, physics, and chemistry tutoring materials for a friend's tutoring outfit, the kind used in deep-dive extension classes. For a top student like Jiang Tian it didn't take much time, and it paid well.</p>
+        <p>When Sheng Wang first knew Jiang Tian, he'd come do it over at the north gate and only go home after, to keep Jiang Ou from getting ideas. Later, once the term properly started, he'd given the other a heads-up and paused it.</p>
+        <p>Lately, with finals near—meaning winter break approaching—another peak cram season was coming.</p>
+        <p>Zhao Xi ordered two takeout vermicelli soups from the old lady and chatted with the two while waiting. At last, as if remembering something, he asked Jiang Tian, "Isn't your birthday before the new year?"</p>
+        <p>"Mm, what about it?"</p>
+        <p>"Then there's time," Zhao Xi said. "Lin-zi and I will treat you two to a meal."</p>
+        <p>Sheng Wang and Jiang Tian exchanged a glance and caught an undertone. "What do you mean, there's time?"</p>
+        <p>"There's time means we're about to leave," Zhao Xi said. "Lin-zi and I are going to Beijing."</p>
+        <p>"Vacation?"</p>
+        <p>"Work."</p>
+        <p>"Then the barbecue place…"</p>
+        <p>Zhao Xi laughed. "The two of us aren't the chefs—it'll run the same after we go. Shitou and that crowd are all chummy with you now; come for skewers and you'll get the same discount."</p>
+        <p>Sheng Wang gave a soft "ah," a faint, shallow loss in it.</p>
+        <p>The old lady soon packed up the two vermicelli soups, putting in plenty of chili for Zhao Xi like an old hand, which made Sheng Wang's mouth ache to watch.</p>
+        <p>The three walked together toward the residential buildings. Chu-ge's tutoring class was in the one near the north gate; Jiang Tian went up to get the scope and materials for the winter-break sessions.</p>
+        <p>Sheng Wang waited downstairs in the sun, and Zhao Xi stopped too. He looked at Sheng Wang and teased, "What mischief did you get up to, mouth swollen like that?"</p>
+        <p>"Chili." Sheng Wang gulped the anti-chili milk, looking thoroughly disgraced.</p>
+        <p>"Oh." Zhao Xi fished out another cigarette, lit it in a wind-sheltered spot, and held it in his mouth. Maybe because of the smoke between them, he looked a little tired.</p>
+        <p>"Xi-ge, you not sleeping well lately?" Sheng Wang asked.</p>
+        <p>"Are the dark circles that obvious?" Zhao Xi rubbed under his eyes. "Old Comrade Zhao hasn't been in great health this stretch. Lin-zi and I have been orbiting the old guy lately, sleeping little. When we head to Beijing, the two old folks are coming along too. Xile might have to be left to someone else to watch—if there's anything you need to buy, remember to get it before the new year; after, you might not get the friends-and-family price."</p>
+        <p>Seeing he could still joke, Sheng Wang relaxed a little.</p>
+        <p>Zhao Xi didn't linger; he took a call, stubbed out the cigarette, and made to go. Only, before leaving, his gaze swept over Sheng Wang's neck, and he clicked his tongue and pulled off his own scarf. "Must be getting old—just seeing you bare your neck in the dead of winter chills me. Wrap up. I'm off."</p>
+        <p>Sheng Wang clutched the scarf, baffled, while the man had already rounded the corner and gone.</p>
+        <p>The young master had to mind whether even a scarf looked cool, couldn't just sling it on any old way. The first-floor windows of the residential building had been wiped bright; he used one as a mirror, and saw a small mark on the side of his neck—no telling whether his ge had left it last night or this morning.</p>
+        <p>It was exactly where Zhao Xi's gaze had swept.</p>
+        <p>Sheng Wang stiffened on the spot, scarf in hand, his heart sinking with a thud.</p>
+        <p>By the time Jiang Tian came down, Sheng Wang had the scarf wrapped. The dark gray cashmere covered his chin, setting off a face gone snow-white.</p>
+        <p>"Where'd the scarf come from?" Jiang Tian asked.</p>
+        <p>"Xi-ge stuck it on me." Sheng Wang's voice was muffled under the scarf. "Said just looking at me made him cold."</p>
+        <p>They dropped the materials back at the dorm and walked to a nearby cinema.</p>
+        <p>The blockbusters were all being saved for the Spring Festival slot, and there was nothing worth seeing among the recent releases. The two picked one at random and got unlucky—it was too boring, so much that Sheng Wang's mind began to wander not long after they went in.</p>
+        <p>There weren't many people at the morning showing, and the two had only wanted somewhere to be together anyway, so when choosing seats Sheng Wang had found the least-crowded screening room and picked the back row no one else had taken.</p>
+        <p>Jiang Tian had no patience for this genre; halfway through, hooking Sheng Wang's finger and propping his head, he fell asleep. Sheng Wang didn't wake him, just pulled out his phone, dimmed it to the lowest, and scrolled Moments a while—and landed on two videos Sheng Mingyang had shared, with no caption, just two thumbs up.</p>
+        <p>One look at the thumbnails told him: they were the videos of his and Jiang Tian's arts-festival performance last night.</p>
+        <p>He blanked and hurried to message Sheng Mingyang.</p>
+        <p class="msg"><strong>Say That Again:</strong> You came to school yesterday?</p>
+        <p class="msg"><strong>Wellness Encyclopedia:</strong> No. Didn't I mention it before—Director Chen set up a dinner last night, your dad had begged off twice already, couldn't get out of it this time.</p>
+        <p class="msg"><strong>Say That Again:</strong> Oh, I just suddenly saw you'd shared two videos, thought you and Auntie Jiang had come to watch</p>
+        <p class="msg"><strong>Wellness Encyclopedia:</strong> Your Director Xu posted them on Moments, I went and asked him for the videos specially</p>
+        <p class="msg"><strong>Wellness Encyclopedia:</strong> To make up for the regret of missing it live. Your Auntie Jiang says very handsome</p>
+        <p class="msg"><strong>Say That Again:</strong> Naturally, when has your son ever not been handsome</p>
+        <p>Sheng Wang let out a breath, thinking: false alarm.</p>
+        <p>He'd no sooner relaxed than Sheng Mingyang dropped a line: <em>How come Xiao-Tian's wearing your shirt?</em></p>
+        <p>Sheng Wang nearly flung the phone. He caught it, snuck a glance at Jiang Tian, and seeing him only frown once, set his heart down, bit the tip of his tongue, and replied word by careful word: <em>My shirt got splashed with ink, not convenient for the chorus, so I borrowed his. His was a two-person act, the costume didn't have to match so exactly.</em></p>
+        <p class="msg"><strong>Wellness Encyclopedia:</strong> No wonder—I saw his shirt wasn't even tucked in right, only half tucked. Your Auntie Jiang said just looking at it made her want to tuck the other half in for him.</p>
+        <p>Sheng Wang couldn't help a snort of held-in laughter, and after laughing felt something hard to name.</p>
+        <p>He was silent a moment, then replied to his dad: <em>My ge calls that cool.</em></p>
+        <p class="msg"><strong>Wellness Encyclopedia:</strong> Oh, us old comrades can't get used to it. Tell Xiao-Tian the guitar was well played.</p>
+        <p>Sheng Wang sent back an "okay" and left it there.</p>
+        <p>Maybe because of the holiday, WeChat was especially lively that day, lighting up a dozen-some times in no time. Sheng Wang assumed it was still Sheng Mingyang, and only on tapping in found the activity was in a small group.</p>
+        <p>It was a prep group set up before the arts festival. Jiang Tian had been in it too, but had left the moment the festival ended last night. Sheng Wang hadn't gotten around to it.</p>
+        <p>Gao Tianyang and the rest, bored stiff, were sharing their holiday lunches in the group, trying to torment one another. Then Little Pepper suddenly popped up: <em>Something got stolen at the auditorium last night, you all hear?</em></p>
+        <p class="msg"><strong>Plain-and-Simple Gao Tianyang:</strong> Huh?</p>
+        <p class="msg"><strong>Big Song:</strong> Classmate Pepper, I greatly admire your gossip-sharing spirit, but @-ing everyone about this might get you roasted to death by Tian-ge and Sheng-ge</p>
+        <p>At that, Little Pepper suddenly went quiet.</p>
+        <p>It was Carp who added a line: <em>Hasn't Jiang Tian already left?</em></p>
+        <p class="msg"><strong>Big Song:</strong> Oh right, forgot</p>
+        <p>Carp said: <em>I'll leave in a bit too. I'm at home eating congee, just watching you all sticker-battle, it's torture.</em></p>
+        <p>They chatted on every which way a good while before Little Pepper reappeared with: <em>Hand slipped, accidentally @everyone</em></p>
+        <p>The instant she said it, Sheng Wang's end showed him @-ed again.</p>
+        <p class="msg"><strong>Plain-and-Simple Gao Tianyang:</strong> …I give up, Pepper, are you here to be a comedian?</p>
+        <p>Little Pepper sent a self-shutdown sticker.</p>
+        <p class="msg"><strong>Plain-and-Simple Gao Tianyang:</strong> So what's the deal with the auditorium theft?</p>
+        <p>This time Little Pepper replied fast: <em>Lots of people yesterday, must've been chaotic, several students lost things. Heard our class's English rep lost his bag.</em></p>
+        <p class="msg"><strong>Say That Again:</strong> Qi Jiahao?</p>
+        <p>Ever since Qi Jiahao had set Sheng Wang up back then, it was as if the person didn't exist in Class A. He basically took part in no events large or small, seemingly pouring himself wholly into studying. In other words, he'd been quietly isolated.</p>
+        <p>No one took the initiative to include him anymore, and he chose to keep his distance too. This faint, half-there isolation was hardly nothing to any student, so for all his apparent grind his grades slid steadily, and the whole of him seemed all the more marginal. Sheng Wang had barely seen him a few times since moving to Class B; if Pepper hadn't suddenly brought him up, he'd nearly have forgotten the person.</p>
+        <p>Pepper's end—no telling whether she was busy or lagging—went quiet again after Sheng Wang's message.</p>
+        <p>A good while later, she popped up: <em>Mm.</em></p>
+        <p>Then immediately added: <em>Heard he went to the discipline office today to pull the auditorium footage.</em></p>
+        <p>Sheng Wang had been about to turn off the screen, and at this his breath stalled, his blood pumped out as if by a hand, his chest a sheet of ice.</p>
+        <p>Pull the footage? Footage of what time? Would it reach the fourth floor?</p>
+        <p>Maybe his stiffness was too obvious, because Jiang Tian suddenly woke. He pinched the bridge of his nose, eased the drowsiness, and asked low by his ear, "What is it?"</p>
+        <p>Sheng Wang instinctively pressed the screen dark.</p>
+        <p>He scrubbed hard at his fingertips, felt warmth return to his extremities, then said, "Nothing—just that arts-festival group, Pepper's hand slipped and @-ed everyone twice, I thought something was up, turned out they're just posting hotpot and barbecue."</p>
+        <p>In fact, pulling the footage meant the things he and Jiang Tian had done on the fourth floor might well be seen, and talking it over with Jiang Tian in advance might be better.</p>
+        <p>But instinctively he didn't want to bring it up—like the mark Zhao Xi had seen this morning, like the videos Sheng Mingyang had posted.</p>
+        <p>He always felt that the moment he told Jiang Tian, it would mean they'd have no choice but to drag out some real problems and thrash them through. That outcome, he feared, wouldn't make either of them happy.</p>
+        <p>It won't be seen.</p>
+        <p>He told himself inwardly.</p>
+        <p>Rationally, there was no way out from the fourth floor; if there really were a light-fingered student who'd taken the bag, they'd only have gone out of the auditorium, not labored up the stairs.</p>
+        <p>And just looking at the auditorium's internal footage would tell you whose hands the bag was in—no need to be so dogged about checking everywhere, too time-consuming.</p>
+        <p>It definitely… wouldn't be seen.</p>
+        <p>He figured he'd probably gotten too cocky and floaty these past days, so heaven had decided to give him a few whacks to press him down—only, unluckily, the whacks had all landed on the same day, a combo attack, catching him off guard.</p>
+        <p>The rest was okay; the matter of Qi Jiahao pulling the footage was like a long sword hanging over his head, no telling when it might fall. So for several days after, he was a little out of his wits—the moment Jiang Tian wasn't beside him, he'd space out, unrestrained, for long stretches.</p>
+        <p>Until one morning a week later, when Little Mouth Xu came down during the long break, called Sheng Wang out at Class B's door, and said, "Go to the discipline office, the director wants you."</p>
+        <p>Sheng Wang blanked, saw Jiang Tian following down the stairs behind him, and his mind instantly roared into static.</p>
+        <p>He licked his lips and asked dryly, "Both of us?"</p>
+        <p>Little Mouth Xu nodded. "Yeah."</p>
+        <p>"Did he say what for?" Sheng Wang asked.</p>
+        <p>"Nope." Little Mouth Xu shook his head. "Just had me pass word, didn't say what for."</p>
+        <p>How he got to the discipline office Sheng Wang couldn't recall, and what he talked about with Jiang Tian on the way he forgot too—he only felt split in two, one half talking and smiling with Jiang Tian, the other frozen in frost, dead silent.</p>
+        <p>But entering the discipline office, there was no Qi Jiahao—instead there was Yang Jing. Big Mouth Xu held two velvet-bound, deluxe certificates, grinning like a big baboon, mouth split to his ears.</p>
+        <p>"Wonderful! Wonderful!" Big Mouth Xu spread the certificates open, waved them in a circle before the two, and clapped Sheng Wang and Jiang Tian hard on the shoulders. "The English competition results are out, and they cracked my mouth wide open laughing—two first prizes! National level! I've held it in all morning, just waiting to give you two and Xiao Yang a surprise during the long break! Well? Happy?"</p>
+        <p>"…"</p>
+        <p>I…</p>
+        <p>Sheng Wang stood there dumb a good dozen seconds before letting loose a savage curse inside.</p>
+        <p>Things being as they were, if anything had actually been discovered, Big Mouth Xu wouldn't have left a word of it unsaid—so it must be fine. The sword that had hung for a week crashed to the ground with a roar, knocking a forehead full of golden stars into him. In that instant he braced on Jiang Tian's shoulder, saying aloud "what a big surprise, scared me to death," and hung all his weight on Jiang Tian.</p>
+        <p>Leaving the office, the young master was every bit a "corpse," all but dragged along by Jiang Tian.</p>
+        <p>"When we go down the stairs in a minute, you sure you still want to hang on like this?" Jiang Tian shot him a glance.</p>
+        <p>Sheng Wang: "So happy my legs went weak."</p>
+        <p>Jiang Tian: "…"</p>
+        <p>Big Mouth Xu walked ahead holding two photos, head high, chest out, humming a tune, leading one Jiang Tian utterly unmoved by his prize and one Sheng Wang suddenly stricken with paraplegia to the honor wall, where he solemnly stuck the two photos side by side, then pasted a freshly cut strip of red paper across the top— Secondary School Students' English Comprehensive Ability Competition</p>
+        <p>National First Prize</p>
+        <p>Jiang Tian, Sheng Wang</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-083-mark.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-085-moving.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

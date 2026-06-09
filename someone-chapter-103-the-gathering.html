@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 103 — The Gathering — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 103 · A Certain Someone</p>
+      <h1 class="reader-title">The Gathering</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Dr. Jiang's research prowess was astonishing—capable of keeping a person forever young.</p>
+        <p>Cursing himself for a hooligan, Sheng Wang quietly went and searched up a few things. They said a top student's driving force lay in "keeping a vigorous curiosity about the world"—true of proper matters, and of not-so-proper ones too.</p>
+        <p>The last time he'd looked at this sort of thing was freshman year. Three of the six in his dorm were old reprobates with rich libraries, every genre on hand. Not two months into the term, under the banner of "appreciating fine works, deepening our bonds," they'd carefully selected a few and dragged Sheng Wang and the others through the whole lot.</p>
+        <p>Those guys had meant well, picking what counted as top-grade within their aesthetic framework. The only problem was… Sheng Wang wasn't in the same framework at all.</p>
+        <p>They liked nice voices, big chests and slim waists, and as for the rest, simple and crude would do. For Sheng Wang, the nice voice was his ge, the good figure was his ge too, and because he'd actually been in a relationship, simple and crude would <em>not</em> do. So that afternoon, his viewing experience came down to two words: blinded.</p>
+        <p>Those films took him straight from serene calm to utter desirelessness, and left a lingering dread for a good long while.</p>
+        <p>But human nature belongs to the goldfish: scar healed, pain forgotten.</p>
+        <p>So after many years, in the original spirit of "deepening our bonds," Sheng Wang reached out his sinful hand of his own accord. He figured that searching and screening himself would surely beat what those guys had picked.</p>
+        <p>Besides, his aim wasn't to set a mood—he just wanted to see what way was, scientifically speaking, the right one.</p>
+        <p>Unfortunately the young master forgot one thing: things filmed tend not to be very scientific. Some freeze-frames were artistic, intimate, like a real pair of lovers—then once it moved, all that was left in his mind was "oh my god."</p>
+        <p>Jiang Tian got a call from the professor before bed and went to the living room with his laptop and email open, talking a long while. Listening to him reel off cool, rational English, Sheng Wang sat propped against the headboard, opening and closing things in search of "the education of love."</p>
+        <p>When Jiang Tian came back to the bedroom, the young master was watching some clip where they dared to stuff in anything at all. He caught the movement at the door in his peripheral vision, made a show of calmly pulling out an earbud, and snapped the laptop shut.</p>
+        <p>"What are you watching, looking so awful?" Jiang Tian's gaze swept over his face, and he asked, puzzled.</p>
+        <p>The young master thought a moment. "Horror film."</p>
+        <p>Jiang Tian's expression turned stranger. "Which one could scare you like this?"</p>
+        <p>"Didn't catch the title."</p>
+        <p>"What's it about?"</p>
+        <p>"…" Sheng Wang's expression was indescribable, like the cat slumped on the neutering table. He started to speak and stopped, then said, "Mysteries of black holes, I guess."</p>
+        <p>Jiang Tian: "?"</p>
+        <p>Maybe that film really was very scary. As Jiang Tian sat at the head of the bed typing his email, a certain someone kneaded the dead-asleep cat and zoned out a while, fiddled with his phone a few times, and lay down.</p>
+        <p>When Jiang Tian finished the email and turned to look, he'd already fallen asleep face-down on the pillow, tousled bangs half over his eyes, lips slightly parted, his back like a sunken curve.</p>
+        <p>Jiang Tian lowered his eyes and watched a while, then reached out a finger to brush Sheng Wang's hair. He suddenly remembered the certain someone's posture just now, sitting cross-legged fiddling with his phone—exactly like the old days of changing avatars over nothing.</p>
+        <p>His thoughts stirred, and he tapped into WeChat for a look.</p>
+        <p>Maybe it was a meeting of minds—Sheng Wang's message screen really had changed. The avatar that had been blank since he started work was finally taken down, replaced by a cartoon palm.</p>
+        <p>Jiang Tian knew his habits well; without looking closely he knew the hand was clipped from a big-character Wangzai sticker, and the certain someone's nickname had changed from a question mark to a line: <em>I don't want this hand anymore.</em></p>
+        <p>Jiang Tian: "…"</p>
+        <p>How blinding did a film have to be to wreck a person like this?</p>
+        <div class="scene-break">❖</div>
+        <p>Thanks to the "blessing" of his itchy hand, Sheng Wang didn't think of those filthy things again for several days—in fact other things got muddled out of his head too. Not until the afternoon of the 4th, when he got Gao Tianyang's call at the office, did he remember there was still a friend gathering waiting for him.</p>
+        <p>"Same as always, barbecue and skewers!" Gao Tianyang's voice was booming as ever; you could tell his spirits were high. "That place the three of us went last time, the one by the subway exit. Their grilled oysters and razor clams are simply incredible—I mentioned them to Old Song several times, even sent him photos, he's been craving it forever, and this time he specifically asked for it."</p>
+        <p>Sheng Wang naturally had no objection. His mouth was too picky, and a tested place always had fewer minefields than an untried new one; besides, that place really was good. He'd booked a couple of meals there with Zhao Xi and Lin Beiting too.</p>
+        <p>He'd long had the showing-off habit—taste something good, hear of something fun, and he'd always look for a chance to show it off to Jiang Tian. Later, not together anymore, the habit couldn't be broken no matter what; it just skipped a step—thought it through in his heart, and that counted as having shown it off.</p>
+        <p>Every time he went to that barbecue place he'd think Jiang Tian would probably like their lotus-root sandwiches—not so much meat, not so greasy, the lotus root crisp and raw. If some year, some month, some day there was a chance, he'd drag Jiang Tian to try it. He had no idea how far off that "some" would be, so he'd always taken it for a daydream.</p>
+        <p>He hadn't expected the daydream to come true. Sheng Wang's mood was excellent the whole afternoon and his efficiency sky-high; under Zhang Chao's gossipy, suspicious gaze he finished everything early. The moment the workday ended he threw on his coat and left, walking into the elevator with such a draft about him that the two new intern girls facing him went red to the ears.</p>
+        <p>He'd just gotten into the car when Zhang Chao's WeChat came: <em>I've known you all these years and it's the first time I've seen you rushing to get off work. Is this the power of an old flame?</em></p>
+        <p>One hand spinning the wheel out of the space, the other hurriedly typing, Sheng Wang said: <em>Current boyfriend, thanks.</em></p>
+        <p>Zhang Chao: ???????</p>
+        <p>Zhang Chao: <em>damn</em></p>
+        <div class="scene-break">❖</div>
+        <p>That place was closer to Jiang Tian; Sheng Wang going over actually meant a detour, so the two didn't force a roundabout route to stick together for the walk. They'd set it for 7, and there'd been time to spare—but with traffic added it was murder.</p>
+        <p>Stopping and going the whole way, Sheng Wang finally inched into the place at 6:55. He parked and, following Gao Tianyang's message, entered the private room, to see a table of people sitting all in a row smiling at him.</p>
+        <p>"What'd I say! What'd I say—" Song Sirui tapped the watch on his wrist. "Sheng-ge's bound to arrive right on the dot, margin under two minutes. Called it, right? Bet's a bet, no welching—pay up!"</p>
+        <p>The glasses he'd worn for years had come off after graduation, switched to contacts, and he'd shot up a notch—not exactly big, but no longer the bean-sprout of before.</p>
+        <p>Since high school graduation, the times Sheng Wang had met most people at the table could be counted on his fingers. Someone like Song Sirui, whose air had changed so much, he might not dare recognize running into him on the street, and for the first instant in the door there'd even been a touch of unfamiliarity. But one word, and he was instantly pulled back to a few years ago.</p>
+        <p>The whole table sighed and dug out their phones, fingers tapping rapidly at something.</p>
+        <p>Sheng Wang felt a buzz between his fingers; swiping the screen open, he saw Gao Tianyang had made a WeChat group, and red packets were popping out one after another, Song Sirui collecting till his hand cramped.</p>
+        <p>When Gao Tianyang's turn came, the thing retracted the message with a quick eye and hand.</p>
+        <p>Song Sirui gave a "damn" and cursed, "Are you human? Retracting even two yuan?!"</p>
+        <p>Gao Tianyang wore a shameless look. "Is today the first day you've learned whether I'm human?"</p>
+        <p>The familiar bickering surfacing, Sheng Wang laughed. He jiggled his phone. "Bit much, no? I'm not even here yet and you're using me for a gambling ring? Reported."</p>
+        <p>"Don't—betting on you is the only reason anyone places a wager. Bet on Old Song and who'd bother, right? Not worth the money," Gao Tianyang said.</p>
+        <p>"Get lost!" Song Sirui cursed across the air. He patted the empty seat beside him and said to Sheng Wang, "Sheng-ge, take the seat of honor."</p>
+        <p>That empty seat was nearest Sheng Wang; without overthinking he hung up his coat and sat down. He was about to ask whether Jiang Tian had arrived when the private-room door was pushed open.</p>
+        <p>Jiang Tian had something on with the project and had given Gao Tianyang a heads-up in advance. But in the end he didn't count as late, only two minutes behind. He came in, swept a glance, his gaze colliding with Sheng Wang's, and was about to speak. Then a strange spectacle appeared in the room—</p>
+        <p>Carp, Old Song, Gao Tianyang and the rest clattered their chairs about, squeezing one against another, clearing another seat at the spot farthest from Sheng Wang—beside Gao Tianyang—and said to Jiang Tian, "Tian-ge, come sit."</p>
+        <p>Sheng Wang: "???"</p>
+        <p>A forehead full of question marks, he was bewildered a good while before remembering—oh, this bunch of warm-hearted citizens still thought he and Jiang Tian were on the outs.</p>
+        <div class="scene-break">❖</div>
+        <p>The whole table of geese—no, people—craned their necks toward Jiang Tian, the very picture of straining to keep things light, probably not wanting to add awkwardness for a certain two.</p>
+        <p>Under everyone's eager gazes Jiang Tian took off his coat and hung it on the rack, then walked over beside Gao Tianyang and grabbed the chair back. He lifted his eyes at the idiot. "You arranged the seats?"</p>
+        <p>Gao Tianyang tipped his head up. "…yeah."</p>
+        <p>Jiang Tian nodded, and—no telling whether mockingly or what—gave him a thumbs-up. Then he carried the chair over beside Sheng Wang and set it down with a clatter.</p>
+        <p class="ellipsis">…</p>
+        <p>The whole room was very quiet.</p>
+        <p>Mostly bewildered.</p>
+        <p>A round-faced waiter came in to top up Sheng Wang's and Jiang Tian's water, and at Sheng Wang's request brought a bucket of crushed ice. Only once the waiter had shut the door for them did Sheng Wang scoop some ice into his and Jiang Tian's empty drink glasses, push the ice bucket across, and call, "Lao Gao."</p>
+        <p>Gao Tianyang came back to life from his daze. He dragged the bucket over but forgot to add any to his glass, clutching it tight instead and asking, "No—what's the deal with you two???"</p>
+        <p>"Exactly the deal you're seeing."</p>
+        <p>Gao Tianyang tried to exchange a look with Little Pepper, but Pepper wouldn't even look at him. She raised a hand amid the crush and explained to Sheng Wang and Jiang Tian, "I didn't want to move—the second you two came in I felt something was off. They forced me; this idiot squeezing can't be stopped by a mountain—" She patted Gao Tianyang's dog head. "Don't look at me, hurry up and move over. One of my chair's four legs is dangling in the air."</p>
+        <p>So the bunch, foreheads full of question marks, clattered their chairs back, then looked in unison at Sheng Wang and Jiang Tian.</p>
+        <p>Song Sirui, nearest and hit hardest, finally couldn't help asking, "So… you two are back together?"</p>
+        <p>Sheng Wang exchanged a glance with Jiang Tian and, smiling, turned the glass on the table. "Mm, joined back up."</p>
+        <p>The whole table instantly glared in unison at Gao Tianyang.</p>
+        <p>"Lao Gao, you tell me if that's awkward!" Song Sirui scolded. "Reporting bogus intel—are you poison?"</p>
+        <p>"You're the poison, I'm so wronged!" Gao Tianyang called across at Sheng Wang, "Sheng-ge! Brothers all these years, you owe me justice! When I called you last week, didn't you say to invite Tian-ge and you wouldn't come?"</p>
+        <p>The idiot's words were barely out before an "ow," because his foot was ground under Little Pepper's heel.</p>
+        <p>Loosely holding his glass, Jiang Tian turned to look at Sheng Wang. "You said that?"</p>
+        <p>Sheng Wang: "…"</p>
+        <p>He sighed, grabbed a menu and stood it up by his face to block Jiang Tian's gaze, and said to Gao Tianyang, "You really are poison."</p>
+        <p>"All these years and your perceptiveness hasn't improved one bit," Pepper added.</p>
+        <p>Gao Tianyang tucked in one foot, deeply aggrieved. "Well, who could've guessed those two would get back so fast."</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-102-neutering.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-104-dog-food.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

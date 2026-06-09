@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 107 — Weeds — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 107 · A Certain Someone</p>
+      <h1 class="reader-title">Weeds</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Between people there is probably such a thing as fate—a good bond or a baleful one.</p>
+        <p>Before, when Jiang Tian and the rest were all in Jiangsu, Ji Huanyu had been in Jiangsu too, because Du Cheng had wanted to go home, wanted to return to his roots.</p>
+        <p>Now Jiang Tian and the rest were in Beijing, and Ji Huanyu happened to have come to Beijing too—because he had no such notion as Du Cheng's. Born an orphan, "home" was no important thing to him; he wanted better hospitals, better conditions, a bit of polish and dignity.</p>
+        <p>Jiang Ou hadn't told anyone before coming to the hospital.</p>
+        <p>She still remembered that terrible night long ago, when everyone at the hospital had been wrenched onto another fork of their lives, a fork that ran five or six years. The relationships of this bunch were like a snarl of twisted tree roots, but trace it down and the source of it all was only a sordid account between the three of them—her, Ji Huanyu, and Du Cheng.</p>
+        <p>At her most broken, she'd once been tangled into those crisscrossing ties, burrowed into the deepest dead end and unable to get out no matter what. Later it took two years of medication and treatment, and under guidance she'd slowly sorted out most of it, finally realizing the biggest knot was in herself.</p>
+        <p>Sometimes people are like this—those inside the matter are blind to it. In her good states she'd think: such a simple truth, why couldn't I see it clearly before? In her bad states she'd feel the trouble had no end.</p>
+        <p>Until this year, hearing Ji Huanyu had gone into the hospital, did she change. Like floating a long while in a gray haze, then suddenly dropping to the ground.</p>
+        <p>The doctor had suggested she try untangling it from the source. So when she got the caretaker's call, she decided to come see Ji Huanyu once more. This time no one else, nothing else dragged in—she came herself to undo this knot.</p>
+        <p>Only, before going up, she ran into a little episode at the hospital entrance. She'd just gotten out of the car, pulled her coat closed, and was about to head in through the gate when she glimpsed, not far off, someone in a navy overcoat standing at the roadside on the phone, side-on to her, one hand still on a car door.</p>
+        <p>Jiang Ou was nearsighted, but not severely, so she didn't usually wear glasses. At this distance she could only be sure the figure was a tall, lean, fair young man of striking bearing; she couldn't make out the face. But in some instant when he turned his head, Jiang Ou thought his manner speaking into the phone—calm and cool—was a little like Jiang Tian's, enough that even she nearly mistook him.</p>
+        <p>Luckily she caught herself in time; Jiang Tian had no overcoat this color, and rarely wore such a thick black scarf. So she gave a small laugh and shook her head, and went on into the hospital.</p>
+        <p>Jiang Ou hadn't seen Ji Huanyu in a long time; the last had been in Du Cheng's ward.</p>
+        <p>That day the man had rushed over deep in the night, cold clinging to him and beaten by Jiang Tian, the opposite of his usual immaculate look—a little wretched. In her impression, that had been Ji Huanyu at his least dignified.</p>
+        <p>When she first heard Ji Huanyu was ill, she'd imagined him along the lines of that night—thinner, paler, shabbier. And out of deep loathing, she'd uglified him by another three parts.</p>
+        <p>But when she actually saw the Ji Huanyu in the ward, she still froze.</p>
+        <p>If someone hadn't told her in advance, she'd never have recognized this as the person she'd been entangled with for over a decade.</p>
+        <p>That "liar" who'd once had a fine face wore the hospital's shapeless patient gown, one hand supported by the caretaker, the other gripping a steel cane braced to the floor—just a cane, really, only the word sat too awkwardly on Ji Huanyu.</p>
+        <p>He hunched and shuffled toward the bathroom step by tiny step, then glimpsed someone at the door midway and slowly turned his head…</p>
+        <p>And so Jiang Ou saw a pale, swollen face.</p>
+        <p>They say a person's gait affects the bones and bearing, and given time even the face changes with it. Long ago, when Jiang Ou and Ji Huanyu had been on good terms, she'd often heard people praise her husband as a handsome man, graceful and elegant. And now, not a trace of the past could be found on this swollen, sluggish man.</p>
+        <p>The bellyful of words Jiang Ou had stored up all vanished the instant she saw him.</p>
+        <p>For a few seconds she even fell into a kind of blankness, wondering: who is this pale, bloated middle-aged man? Why, the instant he saw her, did he instinctively raise a hand to cover his face, then drag the caretaker and shuffle in panicked haste toward the bathroom, so that his posture turned more ridiculous still?</p>
+        <p>Only after a long while did she come to and give a soft inward "oh": this is Ji Huanyu.</p>
+        <p>This was actually… Ji Huanyu.</p>
+        <p>Because of a person like this she'd had a breakdown, clung desperately to the only one she could hold, Jiang Tian, and wasted five or six whole years in the world…</p>
+        <p>How laughable.</p>
+        <p>Ji Huanyu stayed in the bathroom a long while—no telling whether simply from inconvenience or from being unready to face anyone. By the time the caretaker helped him out again, Jiang Ou had pulled the ward door to for him.</p>
+        <p>Ji Huanyu shuffled back to the bedside bit by bit. His eyes used to be lively, able to be gentle or ardent as needed; now they stayed lowered, looking numb and weak.</p>
+        <p>The caretaker helped him onto the bed, adjusted the backrest angle, then pulled a chair to the bedside and said to Jiang Ou, "Have a seat."</p>
+        <p>"No need," Jiang Ou said. "I just came to look in—standing's fine."</p>
+        <p>The caretaker meant to stay nearby, but seeing Ji Huanyu wave a hand and say thickly, "Go outside," "Then…" the caretaker hesitated, then gladly took the leisure and went out, leaving only two people in the ward.</p>
+        <p>Jiang Ou said, "Did you have me come to see how miserable you're doing, Ji Huanyu?"</p>
+        <p>The other still wouldn't look at her, sitting at the head of the bed with lowered brows. Moving just now, however hard, he'd had a little vitality at least. Now lying back, that deathly numbness wrapped around him again. After a long while he blinked and said thickly, "Xiao-Ou, I'm sorry."</p>
+        <p>Over a decade ago, hearing him say this line, Jiang Ou had always felt a little wronged. Five or six years ago, hearing such words at the hospital, she'd been so furious she went hysterical.</p>
+        <p>Now, hearing the line again, she should have been scornful and disdainful, but in this instant she was, instead, utterly calm.</p>
+        <p>A stranger Ji Huanyu had pulled her out of the shadow of the past, turned her into a bystander. She stood by the bed holding her bag, watching an unfamiliar patient say painless, pointless things.</p>
+        <p>In that instant she suddenly understood why the doctor had suggested she come see this person.</p>
+        <p>Only by truly seeing him would she understand: times had changed and the scene was not the same; the person she'd loved, wearied of, hated had long ceased to exist, and no one was left in place waiting to give her an explanation. What had tormented her these years was only a phantom in her memory.</p>
+        <p>"Still find me that sickening?" Ji Huanyu said.</p>
+        <p>Jiang Ou looked at this unfamiliar middle-aged man and suddenly wanted to laugh a little, and really did laugh inwardly, and then felt a tangle of things.</p>
+        <p>She tucked a fallen strand of hair behind her ear, drew a deep breath, and said, "Forget it."</p>
+        <p>Speaking of hatred with someone like this was, truly, a little ridiculous.</p>
+        <p>Ji Huanyu lifted his eyes a fraction, his motion still slow, but still caught the emotion in hers.</p>
+        <p>He'd schemed and competed for decades, all for a bit of dignity. Liked or loathed, as long as it wasn't contempt, he could accept it with composure. He'd once thought anyone in the world might, over some matter, show him a look of scorn—except Jiang Ou, because she would only never see him, or hate him.</p>
+        <p>Who'd have thought that in the end, in the eyes of this least likely person, he'd see the very thing he least wanted to see.</p>
+        <p>This was, probably… his greatest retribution.</p>
+        <p>He'd rather Jiang Ou were like years ago, hysterical, cursing and hitting him with red eyes, venting her pent-up anger and grievance. Instead Jiang Ou only took out her phone for a glance at the time and said to him, "I don't know what to say either—the things I'd planned, I don't want to say now. Let's leave it. Take it that I just answered a call and came to look, and I'll be going in a bit. You…"</p>
+        <p>Jiang Ou was silent a moment. "Rest well, do your rehab."</p>
+        <p>Ji Huanyu managed, with difficulty, a self-mocking smile—an expression that, on his face now, looked more like a muscle twitch. He opened his mouth, about to say something.</p>
+        <p>Jiang Ou cut him off: "Don't overthink. No one wants those properties and money of yours."</p>
+        <p>The line was, as it happened, cut from the same cloth as Jiang Tian's. Ji Huanyu slowly lowered his head, staring at a point in the void, and went still. He'd grubbed and schemed most of his life, and at last, in a rare prick of conscience, wanted to give away what he held—and no one would take it.</p>
+        <p>Jiang Ou looked at him one last time and pushed out of the ward.</p>
+        <p>This ward was at the end of the corridor, beside a wide glass window, the deep-winter sun shining through—not warm, only a ghastly white, a little harsh.</p>
+        <p>She walked a few steps off and sat down on an empty bench. She'd spoken so calmly in the ward, but the moment she sat, she couldn't help spacing out. Like a student who studies head-down for over a decade and always falls into emptiness the day the gaokao ends.</p>
+        <p>She couldn't say what she felt, and it was hard to describe whether it was loss or relief. Until someone sat down beside her and held a cup of water out in front of her, did she abruptly start.</p>
+        <p>"Xiao-Tian?" Jiang Ou took the water and looked dazedly at the person beside her.</p>
+        <p>For an instant she felt a strange unfamiliarity—perhaps because it had been so long since she'd sat calmly with Jiang Tian like this. As if she'd woken with a jolt from a long, dull dream to find that her tall, lean son, who always pressed his lips and turned his head away, had become an adult.</p>
+        <p>"How'd you get here?" Jiang Ou asked dazedly. "When did you come?"</p>
+        <p>"A while ago," Jiang Tian said.</p>
+        <p>The moment he'd gotten word Jiang Ou was in Beijing, he'd come straight to the hospital, almost on her heels. The difference was that he'd been held up a few minutes downstairs, because he'd seen Sheng Wang.</p>
+        <p>Jiang Tian hadn't meant to let Sheng Wang come, so on the phone he'd said only that something had come up and he'd be back later. As it was, the other had guessed it dead on. But he still didn't want Sheng Wang to face this stale wreckage, so with coaxing and cajoling he'd had the other wait in the car.</p>
+        <p>When he reached the ward, Jiang Ou had just pulled the door to; not wanting to see Ji Huanyu, he'd leaned outside the door and waited, hearing every word of the two's conversation.</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-106-branches.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-108-pruning.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 83 — Mark — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 83 · A Certain Someone</p>
+      <h1 class="reader-title">Mark</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>The arts festival stage was in Fuzhong's grand auditorium. Starting in the afternoon, the Senior Grade 1 classes went one after another to rehearse, the building up front a stream of comings and goings, bustling in and out. Senior Grade 2 was a good deal calmer—at least they sat dutifully through the afternoon study period.</p>
+        <p>Sheng Wang finished all his papers before the end of class and timed a WeChat to Jiang Tian:</p>
+        <p class="msg"><strong>Say That Again:</strong> Boyfriend's here for a spot inspection</p>
+        <p class="msg"><strong>Oh:</strong> ?</p>
+        <p class="msg"><strong>Oh:</strong> I'm in the classroom</p>
+        <p class="msg"><strong>Say That Again:</strong> Who's inspecting that</p>
+        <p class="msg"><strong>Say That Again:</strong> Done with today's and tomorrow's papers?</p>
+        <p>The day after the arts festival was a holiday—the last revelry before Senior Grade 2's finals, really—though some teachers got pretty "festive" assigning homework, flinging it down for free.</p>
+        <p>Sheng Wang wanted to go out and roam tomorrow, so he pushed the one upstairs to hurry up and finish his work. To his surprise Jiang Tian quickly sent a photo of his desk: three papers in all, every one already done.</p>
+        <p class="msg"><strong>Oh:</strong> He Jin and Sister Jing didn't hand out papers, this is all of it for two days</p>
+        <p class="msg"><strong>Say That Again:</strong> Damn! I'm going back to Class A</p>
+        <p>Sheng Wang was rattled but good. He gathered up the ten papers he'd finished and was just about to go upstairs to have dinner with that rattling someone when the music teacher came in.</p>
+        <p>She stood at the front door and clapped twice. "Come on, pack up, we're heading over to the auditorium."</p>
+        <p>"This early?"</p>
+        <p>"It's not early. The festival starts at 7, and it's already 5:30," the music teacher said. "Quick, let's go."</p>
+        <p>"None of us have had dinner yet."</p>
+        <p>"Class monitor? And the arts rep, go buy something at the supermarket to tide everyone over. Your act's pretty early in the lineup—eat at your leisure once you've performed."</p>
+        <p>Sheng Wang clicked his tongue and could only fish out his phone again to WeChat Jiang Tian, telling him to go to the cafeteria on his own.</p>
+        <p>There was a row of green rooms backstage, and with their limited number, most were shared between two classes. The door of Sheng Wang's lot was labeled "Class A, Class B," but there was no sign of any Class A students.</p>
+        <p>"It's not fair, Teacher—" Quite a few banged water bottles complaining at the music teacher. "How come Class A gets to go eat dinner and we have to come this early?"</p>
+        <p>"Is this your first day? Hasn't the Class A bunch always been like this—won't bother showing their faces in the green room until the act's about to start. It's an arts festival, no prizes!"</p>
+        <p>The music teacher slapped the boy who'd spoken. "Such a mouth on you. Change your clothes and come get your makeup done! Class A's got few people, I told them not to rush—they'd just be sitting around bored anyway."</p>
+        <p>The table by the makeup counter was piled with unopened clothes, all of them white shirts and black trousers—simple and easy.</p>
+        <p>Sheng Wang walked over and rifled through them, then turned to ask, "Just grab any?"</p>
+        <p>"No, they're labeled with names. Didn't we tally everyone's sizes before? Don't put on the wrong one." The music teacher said, "There are a few of Class A's in there too, look carefully before you grab."</p>
+        <p>"Class A wears the same as us? Teacher, you really cut corners."</p>
+        <p>Sheng Wang had assumed the names would be stuck on the bags, or at most somewhere out of sight like the collar or cuff. Who'd have guessed this music teacher was a piece of work too: she'd had the names printed on the <em>backs</em> of the shirts—in graffiti font. From the front, perfectly proper; turn around and it was loud and eye-catching.</p>
+        <p>The moment the bags were torn open, cries of "holy crap" went up around the green room.</p>
+        <p>Sheng Wang dug out his own and, remembering the "Super A" shirt from the last sports meet, couldn't resist snapping a photo to send Jiang Tian.</p>
+        <p class="msg"><strong>Say That Again:</strong> This teacher's poison</p>
+        <p class="msg"><strong>Say That Again:</strong> I suspect she's a relative of Gao Tianyang's, struts the same flamboyant streak as Lao Gao</p>
+        <p class="msg"><strong>Oh:</strong> Right up your alley</p>
+        <p class="msg"><strong>Oh:</strong> Weren't you keen to wear it last time?</p>
+        <p class="msg"><strong>Say That Again:</strong> ???</p>
+        <p class="msg"><strong>Say That Again:</strong> That was to trick <em>you</em> into wearing it, get it straight</p>
+        <p class="msg"><strong>Say That Again:</strong> Oh right, hang on</p>
+        <p>He dug out Jiang Tian's shirt too and snapped a photo to send over.</p>
+        <p class="msg"><strong>Say That Again:</strong> See, you don't get away either, happy?</p>
+        <p class="msg"><strong>Oh:</strong> …</p>
+        <p class="msg"><strong>Oh:</strong> Burn it for me</p>
+        <p class="msg"><strong>Oh:</strong> I'm not wearing it</p>
+        <p>Picturing Jiang Tian's reluctant cold face, Sheng Wang couldn't stop laughing.</p>
+        <p>He'd just finished laughing when the green room door was pushed open and two groups came in one after the other. The first two were Class B's class monitor and arts rep back from buying dinner, four enormous plastic bags in hand stuffed with bread and crackers.</p>
+        <p>The crowd swarmed up jeering, about to grab, when the group behind came through the door.</p>
+        <p>Everyone blanked, then instantly cried, "What in the world, your Class A came this early today?!"</p>
+        <p>Class A had broken precedent and come early this time, seven or eight of them between performers and helpers. Jiang Tian walked last, white earbuds in, scrolling his phone with his left hand and carrying a cafeteria takeout bag in his right, the aroma drifting out of it.</p>
+        <p>He came in head down and lifted the bag at Sheng Wang. "Dinner."</p>
+        <p>The group clutching bread and crackers instantly went wild, demanding of their class monitor, "How come we didn't get hot food? Why didn't you go to the cafeteria?"</p>
+        <p>"Dream on, the cafeteria had a line!" the monitor said sourly.</p>
+        <p>Gao Tianyang, who was friendly with everyone, shook the crosstalk script in his hand and cut in: "No, the line's not the problem—the key is, we're short a ge."</p>
+        <p>Sheng Wang gave the back of his knee a not-too-hard kick. "Get lost. Jealous?"</p>
+        <p>"Not jealous. Sheng-ge, cherish this stretch of time well—treatment like this is going to belong to someone else later on, right, Tian-ge?" Gao Tianyang dragged a chair over to sit in front of Sheng Wang, draped over its back, waggling his brows at Jiang Tian.</p>
+        <p>Jiang Tian set the food by Sheng Wang's hand and frowned at him. "What are you on about?"</p>
+        <p>"Tch—" Gao Tianyang lifted his head, displeased, and while no one was watching lowered his voice to remind him, "The one chatting with you, the insanely pretty one. Isn't that a sure-thing girlfriend-to-be?"</p>
+        <p>Sheng Wang: "…"</p>
+        <p>Jiang Tian shot a quick glance at a certain someone, grabbed the unopened shirt and tossed it aside, and gave an "mm." After a moment he added, "Drop the 'to-be.'"</p>
+        <p>Gao Tianyang: "???"</p>
+        <p>That one simple line nearly drove his childhood friend out of his mind. If a teacher hadn't been present, Gao Tianyang would have hounded him for gossip to the end of time.</p>
+        <p>The Class B crowd gnawed at their dry rations. Yang Jing and Zhaocai called Little Pepper over to help, doing the girls' makeup. The music teacher was in charge of pinning down the boys to apply foundation, a chaotic free-for-all.</p>
+        <p>Gao Tianyang dodged the running pack and inched his chair closer to Sheng Wang, trying to recruit an ally. "Hey Sheng-ge, did you hear? Tian-ge's got a girlfriend."</p>
+        <p>Little Pepper, holding a makeup brush for Yang Jing, whipped her head around at this, first all astonishment. Then she promptly kicked his chair.</p>
+        <p>Gao Tianyang nearly fell on the floor. He steadied himself and turned. "What's the kick for?"</p>
+        <p>Little Pepper shot a look at Yang Jing and the others and squeezed a few words through her teeth: "How quiet do you think your voice is?"</p>
+        <p>Gao Tianyang shrank his neck, shut his mouth, and behaved.</p>
+        <p>After that, besides Gao Tianyang, the ones bursting to talk gained Little Pepper too. Her eyes were big to begin with, and wide they were all the more striking—she kept sneaking glances Jiang Tian's way, the very picture of someone who wouldn't believe it if you killed her. Then she caught Sheng Wang's gaze and hastily withdrew, going red and still.</p>
+        <p>Yang Jing was doing Carp's makeup. Between brushing on eyeshadow she chatted all around, and asked Jiang Tian too, "Heard you learned guitar just now?"</p>
+        <p>"Mm."</p>
+        <p>"How's the practice going?"</p>
+        <p>Before Jiang Tian could answer, Sheng Wang's motion stalled. He tossed a winter jujube into his mouth, thinking: now that's a fine question… Under the banner of teaching Jiang Tian guitar, he'd stayed at school a week, and apart from the guitar not being mastered, he'd practiced everything else.</p>
+        <p>This age was hot-blooded and restless to begin with, and once you'd tasted the marrow, some things were hard to push back once begun. The bunk in the dorm wasn't wide, and a hung bed curtain made it like a secret place cut off from the world—cramped, narrow, but full of a sense of safety—and inside they kissed and caressed, doing private, intimate things.</p>
+        <p>Boys of seventeen, eighteen ran hot. Sheng Wang was usually fine, but at times like these he sweated terribly easily. He'd always thought his ge didn't sweat, cold as ice, as if never afraid of heat. Only these days had he discovered they were much the same.</p>
+        <p>Jiang Tian wore long trousers, his forehead damp with sweat, and when he reached for the water cup the lines of his shoulders, back, and neck drew out a lovely arc—like the daytime him and yet the opposite, with an indescribable sensuality.</p>
+        <p>Just seeing this side of him, Sheng Wang couldn't recall there was still a guitar in the room at all.</p>
+        <p>He was a thoroughly failing "teacher," and the "student" wasn't in the least diligent. The one consolation was that the other really was clever—fishing three days and drying the net two, he'd somehow learned "Childhood."</p>
+        <p>Jiang Tian was answering Yang Jing when Sheng Wang, just back to himself, heard a startled cry beside him, and then something splashed onto his white shirt. He looked down: a slanting row of ink spots had flown across the lower left half down to the hem.</p>
+        <p>"…Sorry!" The class monitor clutched a fountain pen, expression already blank. "I was fixing some lines for the interludes, the pen wasn't writing, so I shook it twice."</p>
+        <p>The music teacher let go of the boy's face she was holding, strode over, pulled Sheng Wang's hem straight, and shook her head. "No good, this is too obvious—you're standing dead center of the front row, how can the face of the show wear a dirty shirt."</p>
+        <p>The class monitor felt he'd caused a disaster, tore off a wet wipe, and clumsily moved to scrub it.</p>
+        <p>"Hey, don't—" The music teacher grabbed at him and missed; the ink spots, smeared by the wipe, bled out a little wider.</p>
+        <p>Sheng Wang: "…Class monitor, I suggest you run for your life."</p>
+        <p>The music teacher turned, glaring, but the monitor had already bolted in a panic toward the door. Things being what they were, losing her temper was useless—the shirt had to be sorted somehow.</p>
+        <p>"How about you take off the shirt and just wear the white tee underneath?" Yang Jing proposed.</p>
+        <p>"It's a chorus, mismatched outfits look terrible, and even a small flaw looks bad," the music teacher said. "How about swapping with someone in the back row?"</p>
+        <p>"Take mine." Jiang Tian handed Sheng Wang his own unopened shirt.</p>
+        <p>The music teacher blanked. "If you give him yours, what do you wear?"</p>
+        <p>"Whatever, it's not a group act," Jiang Tian said.</p>
+        <p>Carp chimed in, "Our act's just the two of us—similar color is fine, right, Teacher?"</p>
+        <p>"All right," the music teacher said.</p>
+        <p>Sheng Wang quickly changed, "Jiang Tian" in two big characters across his back, while the front was a sheet of snow-white, no problem visible at all.</p>
+        <p>"Then when you come off stage, be a little careful—keep at most your side to the audience, and the people behind shouldn't get too far from you, block it a bit," the music teacher instructed. "Otherwise sporting someone else's name is a little awkward."</p>
+        <p>Yang Jing punctured this from the side: "You're overthinking. He's the last person who'd be embarrassed."</p>
+        <p>Sheng Wang laughed.</p>
+        <p>He knew, of course, that Yang Jing didn't mean it that way—but to him, wearing a shirt with Jiang Tian's name on it gave him a strange illusion of being made public.</p>
+        <p>Someone knocked at the rest room door; the teacher in charge of coordination had come to remind them, "Class B second-year's act is up in fifteen minutes, get ready. Class A's right after Class B—the crosstalk first, then the guitar accompaniment."</p>
+        <p>The moment the coordinating teacher left, the atmosphere in the rest room turned tense. The people who'd been joking and fooling around all stopped—some needing the bathroom, some going out for air, some going to the side of the stage to take a look.</p>
+        <p>Carp got nervous easily; once Yang Jing finished her makeup, she dragged Little Chili out with her. Most of Class B had finished their makeup, even the boys lightly based; Yang Jing scanned the room with her makeup brush in hand and reached her claws toward Sheng Wang.</p>
+        <p>"You're the front man, right? Come here, let the teacher give you a handsome look!" She beckoned.</p>
+        <p>"No, no, no." Sheng Wang hurriedly dodged aside. "I'll pass."</p>
+        <p>"Everyone else did it, why won't you go along?"</p>
+        <p>Sheng Wang grabbed Jiang Tian and held him up as a shield. "Teacher, if you really want your fix, use him—I'll do it when he does."</p>
+        <p>Before Yang Jing could open her mouth, Jiang Tian said, "Not a chance."</p>
+        <p>In the end it was the music teacher who put a stop to Yang Jing's mischief: "With those two complexions, where would you even put powder? My powder would turn them dark, you believe me?"</p>
+        <p>Yang Jing looked at the shade of foundation in her hand and for a moment genuinely couldn't argue, so she had to set the brush down.</p>
+        <p>Hanging off Jiang Tian's shoulder, Sheng Wang let out a breath of relief—only to see Yang Jing turn a couple of circles, rummage through the makeup case, and dig out a lipstick.</p>
+        <p>"Fine, skip the foundation, but the lipstick's a must, or you'll have no color on stage." Yang Jing spoke earnestly. "Stage lights can make a person look at death's door."</p>
+        <p>This time the music teacher didn't stop her—on the contrary, he chimed in eagerly, "That's true."</p>
+        <p>Sheng Wang faced off with Yang Jing for a few seconds, then took off running. As it turned out, that bastard Jiang Tian actually grabbed him, seriously hampering his escape efficiency, and that pack of already-painted Class B boys wouldn't let him off either—in the spirit of all sinking together, they swarmed him and pinned him down under Yang Jing's hand.</p>
+        <p>"This color looks really handsome on fair-skinned boys, don't worry." Jing-jie spoke the devil's words and, brooking no argument, swiped a layer on him. Sheng Wang had never tried the stuff; it felt strange, and he instinctively went to wipe it off with the back of his hand, only to be forcibly stopped by Jing-jie. "Don't go smearing it, you'll mess up your mouth."</p>
+        <p>"…"</p>
+        <p>Sheng Wang wanted to eat people.</p>
+        <p>Having wrecked one, Yang Jing turned her gaze on the other.</p>
+        <p>Jiang Tian's reflexes were freakishly fast; almost the instant she turned her head he was already at the door, vanishing outside in the blink of an eye. Sheng Wang blanked for a second, then chased right out after him. "Don't you run—where was your guilty conscience when you were setting me up!"</p>
+        <p>On the first floor of the hall, sound and light converged, with people everywhere in front of and behind the stage. Jiang Tian turned at the end of the corridor and ran for the second floor; Sheng Wang followed.</p>
+        <p>The two big boys giving chase were tall and long-legged, taking the stairs three at a stride, and after a few turns they'd already reached the fourth floor. There were still people going to the bathroom on the second floor; the third and fourth floors didn't even have their lights on, the surroundings a hazy darkness. The sound system and the noise sank below their feet, muffled through the thick walls.</p>
+        <p>The fourth-floor staircase led to the rooftop. Sheng Wang felt a chill once he ran up here, and just as Jiang Tian slowed his pace, Sheng Wang, without a word, clamped an arm around his neck and pulled him into a bow, laughing as he scolded, "Are you going to set me up again? Set me up one more time and we'll go up to the roof and die together."</p>
+        <p>Jiang Tian let himself be held, bracing on his knees to catch his breath, and laughed low. "It won't come to that."</p>
+        <p>"Bullshit, with you it never comes to that. When Jing-jie had me pinned, why didn't you say it wouldn't come to that?" Nearly his whole weight pressing on Jiang Tian, Sheng Wang took the chance to catch his own breath too.</p>
+        <p>He hung there a while, then suddenly noticed he'd scraped up a big patch of dust on his palm, so he let go of Jiang Tian's neck. "Damn, this stair railing hasn't been wiped in a year."</p>
+        <p>"The bathroom's right there." Jiang Tian lifted his chin toward it. "Go wash."</p>
+        <p>Moonlight spilled down the rooftop staircase, clear and bright. Jiang Tian straightened up, found a clean stretch of railing, and leaned against it to wait.</p>
+        <p>Sheng Wang came out from washing, flicking the water off his fingers as he walked toward him. "Fair's fair, anyway—I got it put on, so you have to too, or this won't blow over."</p>
+        <p>Jiang Tian watched him come over and asked, "You serious?"</p>
+        <p>"Yeah, you'd better think about what to do," Sheng Wang said.</p>
+        <p>The two of them faced off half in earnest for a while, until Jiang Tian finally gave in. He nodded, then pinched Sheng Wang's chin and leaned in. The texture of Yang Jing's lipstick was a little tacky; there was a faint drag as their lips met and parted.</p>
+        <p>Jiang Tian eased back a bit. "I've put it on now."</p>
+        <p>"You absolute…"</p>
+        <p>"What?"</p>
+        <p>"Nothing." Sheng Wang narrowed his eyes and bit back in.</p>
+        <p>Little Chili never imagined that going up to the rooftop to help Carp calm her nerves with some air would mean glimpsing a scene like this.</p>
+        <p>The corner of the stairwell under the moonlight wasn't pitch black; everything had a half-lit, ambiguous outline, and the boy she'd once had a crush on was quietly kissing another boy.</p>
+        <p>Only after those two had gone downstairs did she come back from the blankness in her head and step out from behind the wall of the bathroom on the other side.</p>
+        <p>It was nearly time for Class B to go on. Carp came down from the rooftop and was startled at the sight of Little Chili. "Chili? What's wrong with you? How'd you lose your soul going to the bathroom?"</p>
+        <p>Only then did Chili truly register what she'd seen.</p>
+        <p>"Are you okay?" Carp grew more worried.</p>
+        <p>Chili came back to her own voice only after being shaken by the arm a few times. She opened her mouth, then pressed her lips shut. After a moment, she shook her head. "No, I just… remembered something."</p>
+        <p>"What thing? Is it important?"</p>
+        <p>"It's nothing." Chili shook her head a few more times. "It's nothing."</p>
+        <div class="scene-break">❖</div>
+        <p>Class B's chorus itself had no real highlights; it was simply a time-saving, fuss-free act. They'd split into rough voice parts, the front-row girls each holding a lamp, barely mustering a neat and cozy effect—but they still drew warm applause and whistles coming off stage, and Sheng Wang privately thought the crowd was being generous.</p>
+        <p>Classes that had performed couldn't go back backstage; a teacher would guide them straight to seats in the audience.</p>
+        <p>Sheng Wang wanted to slip away and couldn't, so he had to sit down with everyone else in Class B's allotted spot. He borrowed a tissue from the student beside him, wiped the leftover color clean off his lips, then hooked a finger in the slipknot and tugged loose the uniform tie.</p>
+        <p>He'd barely got it halfway when a few girls from another class in the row ahead turned around. "You're really handsome today."</p>
+        <p>Sheng Wang blanked. "That song could pull off handsome?"</p>
+        <p>"Who's looking at the song, look at the face!" One girl was brash and direct, hanging over the chair-back to tip her face up and ask, "Would you mind getting a partner?"</p>
+        <p>"…"</p>
+        <p>Sheng Wang smiled politely. "Sorry about that—already got one."</p>
+        <p>The girl turned away disappointed, but beside him Shi Yu nearly wrenched his head off. "What'd you just say?"</p>
+        <p>Sheng Wang leaned back into his seat and stuffed the loosened tie, balled up, to the entertainment officer collecting them. "Why're your ears so sharp all of a sudden?"</p>
+        <p>"Seriously?" Shi Yu asked in disbelief.</p>
+        <p>"What do you think?" Sheng Wang said.</p>
+        <p>Shi Yu muttered to himself a good while, deciding it was just a polite excuse to turn the girl down. Sheng Wang didn't say more, just pointed at the stage to tell him to watch the show like a good boy.</p>
+        <p>Shi Yu turned back around, but Sheng Wang himself quietly drifted off.</p>
+        <p>The recent fooling around had given him a bit of a reckless illusion, so that at certain moments, even knowing full well what the most rational answer was, he still couldn't help wanting to let a little slip.</p>
+        <p>He was itching to tell everyone, in all sorts of veiled words, that he had someone he especially liked—liked so much he didn't want that person hidden away in the dark.</p>
+        <p>Wave after wave of laughter rose below the stage, tide coming and going. Sheng Wang came back to himself amid the din to find that Gao Tianyang and Song Sirui's crosstalk was already near its end.</p>
+        <p>The lights dimmed slowly the instant they came off stage, the last bit of it vanishing at the upper right corner of the curtain. The hall went quiet for a moment, then, as the lights came back up, slowly filled with voices again.</p>
+        <p>The follow spots came down from above like pillars of heaven, and Jiang Tian stood at the center of one of those beams.</p>
+        <p>A wave of restrained cheering rose below, but none of it could match the buzzing chatter over on Class B's side. Sheng Wang didn't catch what they were saying; he was staring fixedly at the person on stage, because what the other was wearing was his shirt—the white shirt that had been splashed by mistake with ink spots.</p>
+        <p>Only now, those ink spots were nowhere to be seen. Jiang Tian had tucked half of that hem into his trousers and left the other half hanging out. The fabric draped loosely at his waist and hips, bending into a few geometric folds. Cool, and carrying a touch of the swaggering, unkempt arrogance peculiar to a big teenage boy.</p>
+        <p>The color of his eyes was cast pale, a faint light in them when he lifted his gaze. His eyes swept the area below the stage, found the place where Sheng Wang was, glanced lightly over once, then lowered as he began testing the sound.</p>
+        <p>Jiang Tian gave the strings a couple of casual sweeps, dropped his hand, and made a gesture to Carp beside him.</p>
+        <p>The wooden timbre of the guitar rose unhurried. For a moment Sheng Wang thought it a magical instrument, as though any idle pluck of it was sun-dazzled youth, like a boy running the lined long lane of a sports field—yet it always carried a few strands of inexplicable remembrance,</p>
+        <p>so much so that, though he was right in the middle of this age, in some instant he wanted to describe this scene with the words "that year."</p>
+        <p>That year, the person he liked finished a song on stage, and when he turned to go, his name was printed on his back.</p>
+        <p>The applause below was warm and long, like a grand blessing.</p>
+        <p>No one knew they were together, but everyone had once seen the way they looked together.</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-082-weekly-exam.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-084-false-alarm.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

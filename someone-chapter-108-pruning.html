@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 108 — Pruning — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 108 · A Certain Someone</p>
+      <h1 class="reader-title">Pruning</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Jiang Ou took a sip from the paper cup he'd handed her—the temperature adjusted just right. Swallowing, she suddenly realized that all these years her son had always been like this: not much for talking, yet always caring for people well. Precisely because he was too good, too steady, sometimes even she would forget that his age, in fact, wasn't very great.</p>
+        <p>"Took your medicine?" Jiang Tian sat with her a while, then asked low.</p>
+        <p>Jiang Ou nodded. "Took one specially before coming."</p>
+        <p>Communication between mother and son always seemed to go like this. Jiang Tian was no good at small talk, no good at consoling, still less at finding topics to relax and cheer a person; each time he just stayed silently within her reach, like a steady, wordless shadow.</p>
+        <p>Jiang Ou stared at the shadow at his feet a good while, then suddenly heard him ask, "How was the trip?"</p>
+        <p>She blanked, a little surprised. She'd thought Jiang Tian would get straight to it and ask what she'd said to Ji Huanyu; she hadn't expected that over the years he'd learned to be roundabout.</p>
+        <p>"Quite good, not tiring, very relaxing." Jiang Ou gave a small laugh, her brows and eyes easing into the gentle, amiable look as ever—only the years of mental torment had added a few parts of weariness compared to before. "The old man liked it too—found a couple of chess partners, even met an old lady who plays piano."</p>
+        <p>Jiang Tian gave an "mm," tipped his head toward the ward. "Then why bother coming back to deal with him?"</p>
+        <p>Jiang Ou's smile paused, and after a long while she gave a soft sigh. She'd known it: roundabout was only temporary; her son was still that blunt, cold, stubborn temper that couldn't turn a corner.</p>
+        <p>"Just wanted to try," Jiang Ou said.</p>
+        <p>"Try what?"</p>
+        <p>"Try the doctor's suggestion, see whether I've really gotten better."</p>
+        <p>"Why try all of a sudden?"</p>
+        <p>Jiang Ou opened her mouth, wanting to say <em>because I know how tired everyone around me is, and how tired you are.</em> But five or six years of living far abroad lay across that, making the line feel utterly pale and feeble, and she couldn't say it. Besides, she still grew tense for no reason over a few words—she hadn't recovered all that completely.</p>
+        <p>Asked into silence, she was about to joke—<em>is this any way to interrogate your mother?</em>—when she suddenly remembered something the doctor had said: that in this mother-son relationship she was more like the junior, depending on rather than caring for the other. It had always been so; she just hadn't clearly realized it, taking it for Jiang Tian being independent—she'd wanted to care for him but couldn't get a hand in.</p>
+        <p>Later, because of Ji Huanyu and Du Cheng, she'd turned fearful and suspicious, feeling no one was trustworthy, no one worth pouring feeling into. The one exception was Jiang Tian.</p>
+        <p>So without even realizing it, she'd made this son her life-saving straw, the survival instinct making her grip tight, terrified that if she turned her head, even this one would be gone.</p>
+        <p>Seeing her blank and slow to reply, Jiang Tian pressed his lips and lowered his eyes. Elbows on his knees, his ten fingers loosely laced. After a moment he asked again, "How'd the talk with him go?"</p>
+        <p>"Who?" Jiang Ou blanked a moment before realizing he meant Ji Huanyu, and after a beat answered, "Different from what I'd imagined."</p>
+        <p>Jiang Tian turned to look at her, and she frowned faintly, weighing her words. "I thought I'd be very uncomfortable—anxious, sweating, that sort of thing—but no. He's changed a lot, I nearly didn't recognize him. Or maybe he really is doing badly, and so I had nothing left to be angry about."</p>
+        <p>This time Jiang Tian said nothing, silent a long while—long enough that Jiang Ou herself couldn't quite sit still and glanced at him twice.</p>
+        <p>"Xiao-Tian?" she called.</p>
+        <p>"Mm."</p>
+        <p>"Do you think Mom's pretty laughable?"</p>
+        <p>Jiang Tian tugged the corner of his mouth—it couldn't count as a smile at all. He said, "Not laughable. I just can't quite work something out."</p>
+        <p>"Work out what?" Jiang Ou asked gently.</p>
+        <p>Jiang Tian didn't even lift his eyes, asking mildly, "If you can say 'forget it' even to Ji Huanyu, why can't you to me?"</p>
+        <p>Jiang Ou's heart clenched hard, as if the sharpest fingernail had pinched a bit of flesh at its very tip.</p>
+        <p>Blunt as he was, he'd never asked a thing like this—afraid she'd grow agitated, sleepless, or break down. He'd held down his own temper, probing in roundabout ways for all these years, and today, for the first time, hadn't held it.</p>
+        <p>"Am I even harder to accept than Ji Huanyu?"</p>
+        <p>His tone was actually very calm, as if it really were only confusion. The more so, the more painfully Jiang Ou's heart clenched.</p>
+        <p>Once bitten by a snake, ten years afraid of a coiled rope—she'd burrowed into a dead end these years out of nothing but fear that she'd raised him poorly, fear that Jiang Tian would warp onto Ji Huanyu's road… At bottom, she simply didn't want Jiang Tian to have the slightest thing in common with Ji Huanyu.</p>
+        <p>But she'd never imagined that, round and round through one great loop, Jiang Tian would put himself on the same scale as Ji Huanyu. And she was tongue-tied, not knowing how to refute it.</p>
+        <p>She wanted to say: of course not, how could that be? You and Ji Huanyu are worlds apart.</p>
+        <p>But looking blankly around, she found that every single thing she'd done these years seemed to stand opposed to that view, every one of her reactions seemed to clamor <em>you could so easily become that piece of human garbage.</em></p>
+        <p>The most frightening part was that, if Jiang Tian hadn't asked, she'd never even have realized it.</p>
+        <p>But—</p>
+        <p>"I really didn't mean it that way, Xiao-Tian." Jiang Ou took a sip of water and, gripping the cup, slowly pressed the emotion down. The just-finished process of facing Ji Huanyu had given her experience; she instinctively recalled that moment and strove to imagine herself a bystander. The one sitting before her was not her son, but an unfamiliar young man trying to open his heart to her.</p>
+        <p>She didn't grow anxious so easily anymore, far better than a few years ago. She was only very sad…</p>
+        <p>These years, to avoid violent swings of emotion, and because of the medication, she'd long gone without sorting out her own thoughts—or rather, she'd long gone without the act of "thinking," so that in this instant, too many words rushed to her lips and she didn't know how to say them.</p>
+        <p>After a long silence, she finally found an opening line: "I actually did try."</p>
+        <p>Jiang Tian lifted his eyes a fraction.</p>
+        <p>It was like encouragement. Gripping the cup, she went on, "Mom really did try to understand. For a while my state was decent, off the medication, and I thought for many days. I kept wondering… why do parents all hope their sons and daughters will marry well, have a child well? My mom—your grandmother—said it to me before too. She said she just thought of growing old someday, with her gone—what would I do all alone? Better to have someone beside me, a reliable person to look after me, and she'd be at ease. I'm about the same, really. I thought…"</p>
+        <p>She paused, the rims of her eyes a little red. She lowered her head for a sip of water before going on, "My son was alone since he was little, never anyone to look after him. Blaming Ji Huanyu is useless, really; I wasn't up to standard myself either—you're even closer to an old man with no blood tie than to me. But the old man's getting on, his health not what it was. Including me—we'll all go before you someday. If you still hadn't married then, you'd still be alone. Day to day it doesn't matter, but what about when you're sick? When you hit trouble? When you're old later on?"</p>
+        <p>Jiang Tian stirred. "Marriage can't guarantee those things either."</p>
+        <p>"I know." Jiang Ou spoke very slowly, always with a touch of nasal catch. "See, Mom really did think it through. Later I told myself: marriage doesn't actually mean anything—you marry and you might divorce; I'm a living example myself. But I have you—who will you have later? I thought and thought back then, burrowed in for many days and couldn't get out."</p>
+        <p>Jiang Tian mused a long while, then turned to Jiang Ou. "When you came to Wutongwai to take me in, were you thinking about having someone to look after you at seventy or eighty?"</p>
+        <p>"Of course not," Jiang Ou said.</p>
+        <p>"Then why have me think it?" Jiang Tian said.</p>
+        <p>It wasn't an interrogation, and his tone wasn't heavy—cold and indifferent as ever, with a few parts helplessness and pride. But Jiang Ou was genuinely struck dumb.</p>
+        <p>"The old man never married, never had a child, and still has someone caring for him now. Ji Huanyu has only a caretaker beside him." Jiang Tian's thumb rubbed at his knuckles, and he said as if lost in thought, "Who knows what'll happen later—is planning it all out so many years ahead any use?"</p>
+        <p>"How will you know without trying?" Jiang Ou said.</p>
+        <p>"I tried at eighteen," Jiang Tian said.</p>
+        <p>Jiang Ou suddenly couldn't speak.</p>
+        <p>Eighteen was a threshold; after it, Jiang Tian never celebrated a birthday again. She, Old Man Ding, the professor, classmates or neighbors—whoever tried to prepare something for him would be turned away. It was as if he feared that day, even loathed it.</p>
+        <p>Just thinking of it made Jiang Ou ache till she couldn't breathe.</p>
+        <p>She hurriedly lowered her head and drank a few more sips of water.</p>
+        <p>The corridor wasn't that warm, and the water cooled fast. Jiang Tian reached for her paper cup and got up toward the water room.</p>
+        <p>These years, Jiang Ou had seen his back many times. Maybe because this floor was too empty, it looked all the more silent and lonely. The corridor was long, the water room at the far end.</p>
+        <p>For an instant, Jiang Ou had an illusion—that the lonely back would walk on down a narrow road forever, never reaching its end.</p>
+        <p>She gripped her fingers, then suddenly rose and followed.</p>
+        <p>Jiang Tian was mixing warm water in the water room, steam misting at the cup's mouth, fogging a layer of white on the stainless-steel tank. In his peripheral vision Jiang Ou came over and stood beside him.</p>
+        <p>A few seconds later, he heard her ask softly, "Does it have to be Xiao-Wang?"</p>
+        <p>Jiang Tian blanked and nearly scalded his finger on the hot water.</p>
+        <p>He lowered his eyes, hurriedly shut off the tap, and stood holding the faintly hot cup a good while before saying, "Why can't it be him?"</p>
+        <p>Why could she face even Ji Huanyu calmly, yet always be so sensitive at the sound of Sheng Wang's name?</p>
+        <p>Jiang Ou's face was bloodless, looking a little pale. "Because I really did treat Xiao-Wang as a son."</p>
+        <p>She knew Sheng Mingyang, with a businessman's nature, would be good to Jiang Tian yet find it hard to regard him as his own. But she wasn't like that; for a long stretch she had genuinely treated Sheng Wang as a second son, her own. Not because she had any deep feeling for Sheng Mingyang, but because she'd taken Sheng Wang for a Jiang Tian in another timeline.</p>
+        <p>"I told you before, didn't I? I heard a lot about Xiao-Wang's childhood and felt he was a lot like you as a boy—only he was raised into that, and you were raised by me into this. I often thought, if I'd been a bit more up to standard, kept you company more, indulged you, would you have grown up like Xiao-Wang too—laughing, making a fuss, getting angry. Not that his character's better than yours, I just felt… if so, maybe you'd have matured later, thought less, and smiled a bit more," Jiang Ou said.</p>
+        <p>She really had treated Sheng Wang as a son—how was she to accept the fact of two sons being together?</p>
+        <p>Jiang Tian said nothing at those words, only stood in silence, staring at the faintly swaying waterline in the cup, lost in thought, before suddenly speaking: "Have you ever seen him?"</p>
+        <p>Jiang Ou didn't follow for a moment. "Seen who?"</p>
+        <p>"Sheng Wang."</p>
+        <p>"…No."</p>
+        <p>"You should," Jiang Tian said.</p>
+        <p>"Why?"</p>
+        <p>"When I saw him a month ago, he no longer knew how to laugh, or make a fuss, or get angry." He tugged the corner of his mouth, self-mockery in the smile. "Spent five or six years raising up another Jiang Tian."</p>
+        <p>Jiang Ou's breath stalled, her heart as if clawed open in a long gash, blood seeping out. She was sad to the extreme—no telling whether because of the Jiang Tian saying such words, or because of the Sheng Wang who'd turned into "Jiang Tian." Or perhaps… because of herself, who, round and round all these years, had ground everyone down into "Jiang Tian."</p>
+        <p>She suddenly remembered the young man she'd seen outside the hospital, opened her mouth blankly, and asked, "Did Xiao-Wang come?"</p>
+        <p>"He did. I didn't let him up," Jiang Tian said.</p>
+        <p>She instinctively wanted to ask why, but luckily braked before the words came out, or it would only have added awkwardness. She wanted to ask, too, <em>are you two back together?</em> but couldn't get that out either. Because she'd said "forget it" even to Ji Huanyu, and didn't know on what standing she could ask this.</p>
+        <p>It was as if, the moment she asked, she'd be setting the two of them on the same line as Ji Huanyu—and that was the very thing she least wanted to see.</p>
+        <p>She couldn't find the standing to ask, but Jiang Tian spoke of his own accord: "I probably can't swap him for anyone else."</p>
+        <p>Jiang Ou blanked.</p>
+        <p>"I want to spend a long time with him—don't want to miss a single year." Jiang Tian looked at her. "If you can't accept it, then it'll still be just me coming to you, nothing will change. If you can accept it, then it'll be the two of us together."</p>
+        <p>He paused. "I'm not asking your opinion. I just wanted to tell you."</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-107-weeds.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-109-incoming-call.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

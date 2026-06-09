@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 91 — Ice Arrow — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 91 · A Certain Someone</p>
+      <h1 class="reader-title">Ice Arrow</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>The house in Baima Lane had become a powder keg liable to blow at any moment. While packing his luggage, Sheng Wang had inadvertently overheard a conversation between Jiang Ou and Sheng Mingyang. It wasn't really a conversation—it was Jiang Ou apologizing, one-sided. Her nerves were stretched taut and raw this stretch, and the thing she did most every day was apologize, leaving one powerless to respond and with no grounds to blame her.</p>
+        <p>She felt there was something very wrong with her current state, that it wasn't fair to Sheng Mingyang, and she wanted to separate for a while. Sheng Mingyang only comforted her—"It's fine, don't overthink, getting your health right comes first"—then went to the terrace and smoked a long time.</p>
+        <p>Sheng Wang's intuition told him the two of them probably couldn't get married now.</p>
+        <p>He'd thought he'd feel relieved or regretful when he knew this; in fact he felt nothing at all. He and Jiang Tian stood side by side on a high wire, and just keeping their balance drained all their strength—there was no room to mind anything else.</p>
+        <p>Fuzhong was to hold a grade-level parents' meeting at the start of term: to discuss last semester's final results on one hand, and to do a mobilization for the small exam in early March on the other.</p>
+        <p>The parents' meeting was more formal than usual; the school, afraid someone wouldn't mention it to their parents, sent out a mass message with the contact list directly.</p>
+        <p>Ironically, this stretch was probably the longest Sheng Mingyang had stayed home. He got the notice from Big Mouth Xu at the discipline office and agreed readily on the spot.</p>
+        <p>He'd meant to go alone and let Jiang Ou rest at home with Auntie Sun caring for her. But thinking it over, he felt a chance to get out and clear her head might be good too—a change of scene might let Jiang Ou jump out of those wretched matters and stop fixating.</p>
+        <p>Sheng Wang had meant to catch his breath at the start of term, but this parents' meeting knocked him back to square one, so much that he wore a listless look on the way to school.</p>
+        <p>Sheng Mingyang drove himself, glancing at his son in the rearview mirror several times, and finally asked with a smile, "What's wrong—a grown person and still can't bear to part with the holiday?"</p>
+        <p>The instant he heard it, Sheng Wang found it absurdly ironic. He couldn't help tugging the corner of his mouth, like an offhand self-mockery. Jiang Tian's hand rested on the seat, and in a spot Sheng Mingyang and Jiang Ou couldn't see, he gave Sheng Wang's little finger a light flick.</p>
+        <p>The irritation in Sheng Wang's heart eased a bit. His eyes on the world outside the car, his fingers hooked tight around Jiang Tian's, he gave a vague, perfunctory "mm" when Sheng Mingyang looked over again. "Got up early, a little sleepy, I'll nap a while."</p>
+        <p>He grabbed a lumbar pillow, propped it against the window, and shut his eyes.</p>
+        <p>Twenty-four hours in a day, three hundred sixty-five days in a year; subtract class and sleep and what's left is barely a remainder. Thought of that way, graduation wasn't really so far off.</p>
+        <p>He'd gone through many books over winter break, done many problems. Sometimes he had an illusion that as long as they ran and ran for their lives, ran faster than anyone, the days would shrink a little.</p>
+        <p>Sheng Mingyang knew a lot of people; before he'd even entered Fuzhong his phone was buzzing nonstop with calls and WeChats—as if he'd come not for a parents' meeting but a gathering.</p>
+        <p>He'd been locked up the whole holiday by Jiang Ou's troubles, and only now remembered he hadn't kept up with his son's school in a long time, cramming the catch-up like a last-minute examinee, stuffing everything into his ears.</p>
+        <p>There wasn't really anything to it—mostly talk of grades and school performance, and almost all praise. But Sheng Wang felt he and Jiang Tian were like some farmed thing, nestled in a transparent petri dish, others narrating the observation logs and growth reports over them—the last line praise, the next line forever unknown—and all they could do was listen.</p>
+        <p>"Hear that? Xiao-Tian's impressive—apart from the time taking the old gentleman to the hospital throwing him off a little, he's been first every exam. This last final especially well done." Sheng Mingyang hung up and praised Jiang Tian without stinting, and Jiang Ou smiled gentle and lovely too.</p>
+        <p>Even grown-ups' prejudice was "decorous and polite." In this moment, it was as if they'd forgotten how they usually observed Jiang Tian, intentionally or not—as if the rift born of Ji Huanyu didn't exist at all.</p>
+        <p>"Wangzai's done very well too." Sheng Mingyang said with a smile. "Second. Honestly, to climb to this level in one semester—your dad's really pleased. You can tell it took hardship and effort."</p>
+        <p>Sheng Wang gave an "mm."</p>
+        <p>For some reason, this "second place," leaked out through those phone calls, always felt unreal and intangible. He couldn't feel its reality—no happiness, no relief.</p>
+        <p>Not long after Sheng Mingyang and Jiang Ou entered the school, a teacher guided them toward the grand auditorium where the grade parents' meeting was held. Big Mouth Xu, radiant, even took them to see the honor wall.</p>
+        <p>Only once they'd walked far off did Sheng Wang pat Jiang Tian, and the two went up Mingli Building. A few steps up, the long-frozen blood finally came alive.</p>
+        <p>Sheng Wang strode up to the second floor, hands in pockets, turned around, and walked backward up the stairs, smiling at Jiang Tian. "Hear that? Second. What'd I tell you—one semester and I'd grab the tiger by the tail for sure."</p>
+        <p>Jiang Tian gave an "mm," his steps matching Sheng Wang's, unhurried. When he answered there was still the habitual gloom of the holiday in it; a few seconds later it finally melted, and he cracked a joke: "Easy to grab?"</p>
+        <p>Sheng Wang was about to speak when He Jin came hurrying down from upstairs clutching some papers; seeing Jiang Tian, she let out a breath of relief. "Why so late? Come, come to the auditorium with me."</p>
+        <p>"What for?"</p>
+        <p>"You're first, the student representative. You'll need to say a few words at the parents' meeting in a bit." He Jin shook the papers in her hand. "Just a short bit, read off it."</p>
+        <p>Sheng Wang stood by a moment, then patted Jiang Tian's shoulder. "I'll head up first, talk later."</p>
+        <p><em>Talk later.</em> That line had filled their entire holiday.</p>
+        <p>These moments of being abruptly cut off and having to find another chance had happened too many times; they'd gotten very practiced at saying it. Only most of the cut-off words were interesting just in that instant—past the point, there was no meaning in picking them back up.</p>
+        <p>As Sheng Wang headed upstairs, He Jin called to him again, reminding him, "You did well on the final this time. Move your things back upstairs during study period in a bit—I just told the class monitor and the rest to clear a spot for you."</p>
+        <p>"Huh?" Sheng Wang blanked.</p>
+        <p>He Jin laughed. "What, a holiday loosened your nerves and slowed your reactions too? You placed second—back to Class A!"</p>
+        <p>Not long after Sheng Wang entered the Class B room, Carp and Gao Tianyang came down and leaned at the back door waving at him. Sheng Wang greeted his front and back deskmates, grabbed his bag, and came out.</p>
+        <p>Gao Tianyang had successfully clung on to Class A again, and happy for Sheng Wang, was all worked up, flailing his arms. "You came late, did you even get to ask around? I went to the office and eavesdropped for you, Sheng-ge—you're only 5 points behind Tian-ge this time. Old Wu said you had two small slip-ups, a real shame. I feel Tian-ge's throne is threatened now. This semester we can look forward to a first-place showdown between you two."</p>
+        <p>Carp said, "Teacher He had a spot arranged. The seat that opened up is too far in front, and you're tall with no vision problems, so you'd block people up front—they put you back in your old spot, in front of Jiang Tian."</p>
+        <p>Only now did Sheng Wang truly realize he was back in Class A. That idiotic class-shift decision from before had finally come to a full stop.</p>
+        <p>He'd gone a big loop and sat back down in front of Jiang Tian. The days ahead suddenly turned clear too—listen to lectures, do problems, work the competitions; maybe he could snatch first a few times, maybe stand shoulder to shoulder with Jiang Tian for a few prizes, turn the honor wall into a matching game, see whose photos were more.</p>
+        <p>Thought of that way, it seemed not bad at all.</p>
+        <p>This was probably the only thing worth being happy about recently. Sheng Wang walked upstairs with them and asked offhand, "So how many got tragically banished this time?"</p>
+        <p>"Oh, just one." Gao Tianyang's smile faded, something hard to name in it—sighing, or what, no telling.</p>
+        <p>"One? Who?"</p>
+        <p>"Who else? Qi Jiahao."</p>
+        <p>Sheng Wang blanked and braked.</p>
+        <p>"He's been sliding the whole last semester, was bound to happen." Gao Tianyang glanced upstairs and lowered his voice. "You came late today—earlier and you'd have seen it. Qi Jiahao's mom came over, damn… honestly kind of awful, I even—"</p>
+        <p>He cut himself off mid-sentence, because Qi Jiahao came down from upstairs with his bag. The corner of his mouth was split, his hair a mess, a tissue stuffed in his nose seeping a patch of red, making him look both ridiculous and wretched.</p>
+        <p>Sheng Wang going back to Class A meant Qi Jiahao squeezed out. One headed up, one headed down. The crossing was awkward and ironic, and destined.</p>
+        <p>The most wretched of states, run into head-on by the most disliked person, and unavoidable. Qi Jiahao's gaze at Sheng Wang in that instant was full of resentment, yet his neck was stiff with a few parts disdain.</p>
+        <p>Rounding the corner he deliberately didn't yield, ramming hard into Sheng Wang's shoulder. "Go on, keep talking—weren't you having a great time just now? Damn!"</p>
+        <p>"Are you sick?" Gao Tianyang was a little sheepish, but, knocked staggering along with it, still had fire in his belly—especially since Sheng Wang, the one rammed, hadn't said a thing. He knew Qi Jiahao was just hunting an excuse to pick a fight.</p>
+        <p>Qi Jiahao stopped short, turned with a dark face. "I am. Haven't you all always thought I was sick? Thought I was an idiot, treated me like I didn't exist—now I'm finally thrown out, happy?"</p>
+        <p>He turned to stare at Sheng Wang. "Squeezed me out—feels good?"</p>
+        <p>That gaze carried some unnameable something, like hauling an oil drum to watch by a fire. One second he was wretched, the next a few parts lofty. It baffled Sheng Wang and unsettled him. He suddenly remembered Little Pepper's reminder long ago, that Qi Jiahao had lost his bag and wanted the footage checked, and that it had come to nothing in the end.</p>
+        <p>Sheng Wang had meant to retort, "Were you second before? Did I steal your rank or what?" but thinking of that footage, he frowned and swallowed it, tugging Gao Tianyang. "Lao Gao, let's go."</p>
+        <p>"Go where? Why turn coward? Aren't you the proud one?" Qi Jiahao swiped at the blood by his nose, refusing to let it go. He'd bottled it up the better part of a semester in Class A's corner, invisibly shut out and isolated; at first he'd thought he was in the wrong. Over time, resentment and grievance took the upper hand, and at the moment of being squeezed out of Class A and beaten about the head by his mother, it had warped into twisted rage.</p>
+        <p>"What are you all doing, stop fighting, the parents are all here today," Carp said, a little dazed, trying to smooth it over.</p>
+        <p>Gao Tianyang rolled his eyes and added, "Yeah, parents' meeting—you make a scene here, isn't that humiliating?"</p>
+        <p>"What humiliation?! When my mom hit me with all those people standing around, what humiliation did I have? I've been kicked out of Class A—what humiliation is there?" Qi Jiahao roared.</p>
+        <p>Sheng Wang couldn't hold back: "Then go take it to your mom."</p>
+        <p>"My mom's unreasonable, but you lot are sickening," Qi Jiahao said.</p>
+        <p>Sheng Wang had nearly developed a conditioned reflex to the word "sickening"—the whole winter break had been shrouded by it in that suffocating watching. So much that hearing those two words made him irritated to the extreme.</p>
+        <p>Yet Qi Jiahao went on, "You all think I'm trash, an idiot—but it was you lot who used to fawn 'Lao Qi this, Lao Qi that' over your trash. So what does that make you?"</p>
+        <p>Gao Tianyang: "Can't we be blind?"</p>
+        <p>"You sure were blind." Qi Jiahao nodded, then shot Sheng Wang a glance and said word by word, "Keeping two homosexuals as treasures."</p>
+        <p>A roar went off in Sheng Wang's head, and the stairwell corner fell into dead silence in an instant.</p>
+        <p>The classrooms above and below clamored on, yet seemed shut out behind thick frosted glass, like the existence of another world—blurred, indistinct; he couldn't hear it clearly.</p>
+        <p>He had only one thought: so it was, after all…</p>
+        <p>That sword hanging overhead, flickering in and out, hadn't vanished after all—only waited for a chance to crash down. It must have been made of ice, or how would its shards, buried over his head, make a person cold to the bone.</p>
+        <p>"What the hell are you spouting?!" Gao Tianyang was first to react out of the daze, as if he'd heard a colossal joke, and furious beyond words.</p>
+        <p>Qi Jiahao tugged his bag. "You don't know? Your two best friends, brothers, carrying on incest—"</p>
+        <p>The last word never made it out; Sheng Wang had already swung a punch.</p>
+        <p>How Gao Tianyang cursed, how Carp tried to break it up, how Big Mouth Xu pulled away and rushed over from the auditorium—Sheng Wang couldn't recall any of it.</p>
+        <p>He didn't know why Qi Jiahao had chosen not to speak at first, and then couldn't hold it back. He only knew that the instant the other opened his mouth, the balance he and Jiang Tian had barely maintained was destroyed clean.</p>
+        <p>The high wire snapped with a clang; their feet went out from under them and they plunged straight into the abyss.</p>
+        <p>By the time he finally crashed to the ground and came dazedly to, he was already standing in the discipline office, Sheng Mingyang not far off, listening to Qi Jiahao argue with all his might.</p>
+        <p>Big Mouth Xu believed in handling everything quietly, involving as few people as possible. Apart from Sheng Mingyang, who'd come hearing the news through his well-connected channels, there was no one else. Over at the auditorium everything went on as usual—the student representative's speech had just ended, the parents below applauding warmly. By contrast, this office with no heating on was cold as an icehouse.</p>
+        <p>Qi Jiahao said he wasn't lying, he'd seen it—the day of the arts festival—he just hadn't wanted to say at the time.</p>
+        <p>Sheng Mingyang said, "I know my own son. I trust he couldn't do that kind of thing. A place like a school has cameras, doesn't it? True or false, one check settles it. It's normal for teenage students to have a bit of conflict and squabble; pushed in a hurry, they say things without thinking—all understandable. But rumors can't be stopped, and once they spread they ruin people. Lao Xu, check it for me."</p>
+        <p>Maybe he really didn't believe it, or maybe he was looking for evidence to prop himself up. Every line he said was calm, yet it was like pressing on Sheng Wang's shoulder and stabbing into his body, stroke after stroke.</p>
+        <p>…Not entirely right, either.</p>
+        <p>Sheng Wang thought: in fact it was also him pressing on Sheng Mingyang, stabbing stroke after stroke.</p>
+        <p>He spoke as Big Mouth Xu stood up, his voice hoarse. He said, "Don't check it."</p>
+        <p>When the holiday wasn't yet over, Sheng Wang would often wonder what he and Jiang Tian would become given time. But he'd forgotten—they had too many hidden perils, and might not even get the chance at "given time."</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-090-blunt-knife.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-092-wilderness.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

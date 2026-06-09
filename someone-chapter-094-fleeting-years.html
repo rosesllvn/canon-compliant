@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 94 — Fleeting Years — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 94 · A Certain Someone</p>
+      <h1 class="reader-title">Fleeting Years</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Sheng Wang had once imagined running into Jiang Tian at some subject-final exam hall or summer camp.</p>
+        <p>He could picture the scene—even the weather, overcast or clear, cold or warm, and whether the people around were hurrying or not, all of it concrete—but he couldn't imagine what he'd say. Maybe he'd call out "ge," maybe he'd put on an easy front and say hello, maybe… he'd turn sad before he even opened his mouth.</p>
+        <p>Later, learning Jiang Tian had gone abroad, even the room for imagining was gone.</p>
+        <p>Sheng Wang poured all his time into the competitions, busy and bustling, giving himself no chance to idle and space out—studying in an almost self-flagellating way. He reckoned himself clever, but he was nowhere near genius. Grabbing the tiger by the tail back then had taken some doing, and in the latter half of the competition track the strain grew plain.</p>
+        <p>Compared with ordinary classmates he could still be jokingly called a "god," but thrown in among the very top people of the whole province and even the country, he was only so-so; however much he used study to vent, his energy was genuinely finite.</p>
+        <p>So in physics he scraped a presentable provincial second prize, and in chemistry, his focus, he made the selection camp, hit good form and luck to make the national training team, and worked his way to a recommended-admission qualification.</p>
+        <p>Parents and teachers were all pleased, yet he felt as if he were stepping on emptiness, never quite landing on solid ground—as if some emotion had been driving him forward the whole time, not daring to stop, not daring to look around. Then one day a red ribbon suddenly hit his chest, the people beside him cheered, and told him, "Congratulations, you've reached the finish line."</p>
+        <p>The independent-recruitment thresholds of the major universities always came out in a cluster. Class A's competition performance that year was good overall; everyone clutched their prizes and went around submitting applications and materials, almost all of them landing a few selection slots.</p>
+        <p>Gao Tianyang's certificate was a lone seedling, and not a very high tier; in that stretch he kept joking, "I'm going to become the only left-behind child." Sheng Wang couldn't stand it, hugged his laptop and soaked online for a few days, and dug up several prestigious schools with suitable terms, then revised the essays and English materials for the preliminary review, submitted them—and unexpectedly they passed.</p>
+        <p>That month, Gao Tianyang all but wanted to kowtow three times to him daily, and threw in covering all his breakfasts besides. Lao Gao had a heart wider than a cannon barrel and didn't overthink; he always brought Sheng Wang whatever he himself found tasty. Twenty-some straight days of burgers and cola left Sheng Wang full at the mere sight of him.</p>
+        <p>By month's end, the idiot finally caught on that Sheng Wang was sick of it, and switched to Chinese fare. He strained to recall the breakfasts Sheng Wang used to eat, broke precedent to get up at dawn and queue at the cafeteria, and came into the room with tofu pudding, eggs, and a red can of milk…</p>
+        <p>And then for that whole day, apart from the "thanks" when he took the breakfast, Sheng Wang didn't say another word.</p>
+        <p>Around winter break, the classmates who'd passed the preliminary review and comprehensive-ability tests went off to the various universities' exams. In that stretch He Jin signed leave slips till her hand went numb; most of the room was empty seats, classes couldn't be scheduled, and they often had self-study all day long.</p>
+        <p>One day it poured, gloomy from morning on, the room lit with cold white lamps. Sheng Wang sat with his feet on the chair rung, a book open on his knees, doing problems on and off, when he suddenly heard the desk rapped once—<em>tok</em>.</p>
+        <p>He went still in a daze, nearly mixing up the time, as if back to some day when he'd just come to Fuzhong. It had poured like this then too; feverish and groggy, he'd lain on the desk, and Jiang Tian had made a trip to the infirmary, come back with a bag of medicine, talked to Gao Tianyang, and—it seemed—rapped his desk once like this.</p>
+        <p>Sheng Wang withdrew his eyes from the problem and looked up in a fluster, and saw the class monitor Carp with a form, asking him, "When do you leave school?"</p>
+        <p>He was silent a moment. "Don't know, around April, I guess."</p>
+        <p>Carp registered a rough time on the form, then eyed him with some worry. "You look terrible—are you sick?"</p>
+        <p>"No." Sheng Wang held his pen and pointed up. "It's the lighting."</p>
+        <p>It was a long while after Carp walked off before he lowered his eyes.</p>
+        <p>And a long while more before Sheng Wang suddenly remembered: the day Jiang Tian came back with medicine and talked to Gao Tianyang, he hadn't rapped his desk. The time he <em>did</em> rap his desk, Sheng Wang hadn't been sick.</p>
+        <p>It had only been a year and some, and already he was starting to misremember…</p>
+        <p>He sat silent a while, then hurriedly dug earbuds from the depths of his bag, stuffed them in, found a heavy-metal rock playlist at random, and turned the volume to max.</p>
+        <p>The classroom was too desolate.</p>
+        <p>Fuzhong's harvest that year was bountiful, reaping a great batch of university recommendations and score concessions. Pepper got first-tier admission qualification to the same school as Sheng Wang; Song Sirui and a few others were recommended into a top provincial school's honors track; Carp headed for Shanghai.</p>
+        <p>Gao Tianyang was probably born to be drama itself—even his independent recruitment had its twists and turns. He'd actually done well, securing a 15-point concession, which against a max of 480 was quite considerable. His parents were just about to celebrate when he balked at the bridge's edge and, with a grand sweep of his hand, gave it up.</p>
+        <p>"My dad got so mad he bought a feather duster off Taobao," Gao Tianyang said proudly. "After elementary school he swore by hands-off parenting, and this nearly broke the streak."</p>
+        <p>Sheng Wang asked him, "Why turn down the concession? Saving up a big move for the gaokao?"</p>
+        <p>"Didn't want to go to that school anymore, had a sudden enlightenment—want to go wild while I'm young," Gao Tianyang said. "Wait for it, your bro's coming to Beijing to keep you company."</p>
+        <p>The recommended batch left school in mid-April. Sheng Wang stayed calm throughout; Song Sirui and the rest went stir-crazy. On the day they left they insisted on making a scene, hurling the mountain of accumulated high-school exam papers off the top floor; the white sheets drifted down over the ground like snow, then got them cursed all morning by the classmates downstairs still not freed from their sea of suffering, and invited to the discipline office for one last cup of tea.</p>
+        <p>Sheng Wang, innocently caught up in it, was punished into sweeping up the papers with those few dumb birds—no leaving till it was done. Then the bunch of Class A idiots came charging downstairs cursing and laughing, and pitched in to help.</p>
+        <p>Yang Jing, rolling her eyes, had someone send over a scrap-collector's cart to pile the papers in.</p>
+        <p>The season had turned a little warm. With the wreckage all cleared, Sheng Wang had broken a light sweat. He bought a bottle of iced water at the Xile convenience store—staff changed now—and took off the stifling school jacket.</p>
+        <p>The instant he slung the jacket over his shoulder and walked out the school gate, water in hand, the teeming, bustling crowds of the mortal world streamed past on the street before him.</p>
+        <p>His frantic, restless adolescence drew thus to a hurried close—once in a lifetime, never to be turned back.</p>
+        <div class="scene-break">❖</div>
+        <p>Because of the recommended admission, Sheng Wang had twice as much time that summer as everyone else, yet he didn't stay home long. In fact, ever since Jiang Tian left, he'd rarely gone home.</p>
+        <p>To say there was no resentment would be a lie—but more of it was avoidance. The moment he returned to that house in Baima Lane, he couldn't help recalling a great many things.</p>
+        <p>He went and found Chu-ge of the tutoring class and took over what Jiang Tian used to do, using those few months of vacation to put together a sum of money for himself, and unbound every bank card Sheng Mingyang had given him.</p>
+        <p>Chu-ge had developed well these two years and didn't want to fixate on just the Fuzhong patch, opening branches in several of the city's districts. He said the scale was bigger now, demand bigger too, and told Sheng Wang not to forget him amid the grind of university—to help out when he had time and serve as his gold-lettered signboard besides.</p>
+        <p>Sheng Wang said, "For the sake of our good relationship, I can give you a discount—won't charge you the ad-endorsement fee."</p>
+        <p>Chu-ge laughed heartily, and right before term started wrapped him a fat red packet.</p>
+        <p>More than a businessman, he was like a man of the jianghu, loyalty in his every move, though his way of expressing loyalty was rather single-track: money. He liked Sheng Wang's character, and they happened to hit it off, so he was especially generous each time he paid. For a long stretch of the university years that followed, this became Sheng Wang's backing, independent of Sheng Mingyang.</p>
+        <p>Of course, mere independence wasn't quite enough.</p>
+        <p>The first time Sheng Mingyang discovered his son no longer spent his money was after Sheng Wang went to Beijing. He rarely checked those cards, having watched them only for a stretch during the period when Sheng Wang and Jiang Tian's relationship was discovered. Abruptly finding the spending had stopped long ago, he was a little surprised, but didn't take it to heart.</p>
+        <p>He reckoned he knew Sheng Wang well, knew his son was used to spending freely, always slipping off to foot the bill whenever he ate with anyone, while being a touch proud and a touch lazy. Unbinding the cards was at most a fit of pique, a rebellion over certain past matters. He couldn't keep it up long; he'd come back hangdog and rebind them.</p>
+        <p>But he waited a long time and never got the so-called "as expected."</p>
+        <p>What truly made him feel his son slipping from his grip was during Sheng Wang's sophomore year. One vacation he went to Beijing on business, contacted a few old business friends for a meal, and called Sheng Wang along. Only in the table talk did he discover Sheng Wang had already changed majors—and he'd known nothing of it.</p>
+        <p>Back then Sheng Wang had said the recommendation came through the competitions, so the chosen major was naturally related to the competition subject. But he'd stayed in that major only a year before switching to economics, and added a law double degree besides.</p>
+        <p>Sheng Mingyang asked what he'd been thinking. He didn't explain a tangle of reasons, just said one line: "Didn't like it, so I switched."</p>
+        <p>Sheng Mingyang himself didn't approve of switching after studying a few days, always feeling it a bit rash, but he had no understanding of Sheng Wang's original major and couldn't muster grounds for calling it rash, so he let it drop.</p>
+        <p>Sheng Wang sometimes ran into Pepper in class; her own major was law. After class, if the timing fit, they'd have lunch or dinner together. Only not the two of them—three—</p>
+        <p>Gao Tianyang, under threat of the feather duster, had a smooth gaokao and successfully made good on his promise to "come to Beijing and keep Sheng Wang company." His school wasn't far from Sheng Wang's; loop left or loop right, a few bus stops would do it.</p>
+        <p>Only the Baofusi Bridge and Wudaokou area was perennially jammed at rush hour, and he often sat on the bus tearing his hair, frantically WeChatting the group "almost there," "I can see the gate," while despairingly stuck dead in the traffic. So the three of them could never be on time for lunch or dinner.</p>
+        <p>In a fury Gao Tianyang switched to cycling. That area often blew "demon winds," and frequently he'd arrive with his brain blown silly too.</p>
+        <p>Sheng Wang fell for it at first and was even rather touched. Later it looked more and more off, and one day he finally grabbed him and asked, "Lao Gao, tell the truth—did you come to Beijing to keep me company or to chase Pepper?"</p>
+        <p>Twenty years of wandering the jianghu, and for the first time Gao Tianyang's face went red as a monkey's behind. "What are you on about, to keep you company, obviously!"</p>
+        <p>Sheng Wang gave a "heh." "Talk out your ass."</p>
+        <p>Gao Tianyang's dimwit spirit persisted two years, and at the tail end of sophomore year he finally won Pepper over. So the three-person squad became a little couple and one single dog.</p>
+        <p>Sheng Wang was both gratified the idiot had wised up and felt thoroughly cheated.</p>
+        <p>Once at a meal they ran into a friend from the student union, who, watching Sheng Wang's disgusted face at being fed dog food, couldn't help teasing, "What are you afraid of, find someone too! With that face, just say you want to date and the girls of a whole department would come charging—aren't you afraid that'd anger these two to death?"</p>
+        <p>He'd meant it as a joke, but at the words, the few at the table exchanged a glance and fell into an eerie silence. Gao Tianyang winked at him hard, frequency high as a twitch. He didn't know what he'd said wrong, and drank his soup with eyes on nose and nose on mouth. Sheng Wang ate head-down, nothing odd showing on his face either. He swallowed his food, took a sip of iced water, then smiled at the friend. "Makes some sense."</p>
+        <p>Pepper, biting her straw beside him, added, "He's busy to death, where would he find the spare heart for it."</p>
+        <p>The student-union fellow gave a couple of "oh"s. "True enough."</p>
+        <p>University wasn't like high school—you couldn't get to the end head-down on just doing problems and competitions. But Sheng Wang still kept himself very busy: the double degree, the student union, events and contests, and projects with a professor. As if he couldn't go on unless he packed all twenty-four hours full.</p>
+        <p>When a person's busy, time always slips by fast.</p>
+        <p>In high school time was reckoned by the day; in university it became by the year. As if he'd only slept a few sleeps, opened his eyes a few times, and a year was abruptly over.</p>
+        <p>One second he was a freshman just enrolled, the next he'd become an upperclassman.</p>
+        <p>When a girl cornered him behind a building and he heard her call him "senior," he had this sense of time gone hazy. By then he'd landed an enviable job, and apart from the thesis and paperwork, he rarely came back to school.</p>
+        <p>The girl wasn't tall, and when she smiled there was a dimple at the corner of her mouth, very sweet. She said, "I'm from the law school too. I always thought you and senior Li Jia were a couple and didn't dare confess. Then I found out she has a boyfriend, so I worked up the nerve—I waited a long time to catch you. Senior, it's almost New Year's Day, new year new beginnings—can I be your girlfriend?"</p>
+        <p>Not far from them the college was holding a New Year's gala, the sponsorship pulled in by their student union's external-liaison department. But Sheng Wang seemed only now to realize it, blanking two seconds and answering off the point, "What's the date today?"</p>
+        <p>"The 29th," the girl said.</p>
+        <p>Sheng Wang nodded.</p>
+        <p>Strange—he'd left Fuzhong a long time ago, yet hearing words like "year's end" and "New Year's Day," his first reaction was still <em>Fuzhong always held the arts festival at year's end.</em></p>
+        <p>Fuzhong always held the arts festival at year's end; the event ran late, figures crowding Road No. 3, and by the time you squeezed back to the dorm you were tired. Open your eyes again, and a year was over.</p>
+        <p>He'd plainly done so many things, packed every day full, yet his memory hadn't kept pace with the renewal. In the occasional spaced-out moment, his mind still ran on the past, the past, the past…</p>
+        <p>"Senior, do I have a shot?" The girl wasn't the shy type, and even waved a hand before his eyes in earnest.</p>
+        <p>Sheng Wang came to and said apologetically, "Sorry."</p>
+        <p>"Ah…" She drew out the note, then asked, "Why? Am I not good-looking? I think I'm pretty good-looking."</p>
+        <p>Sheng Wang was tickled and nodded. "Quite good-looking. But…"</p>
+        <p>The girl blinked, waiting for the rest of his "but."</p>
+        <p>Sheng Wang looked at her and suddenly felt time was truly a marvel: a rumor that had once boiled over at Fuzhong went unmentioned in a few months, then in a few years became an old tale of yesteryear, with not even anyone left who knew it.</p>
+        <p>No one here knew that in his old tales of yesteryear there was a person who'd stayed only a while and then left—yet he'd gazed at that blank space a long, long time.</p>
+        <p>Sheng Wang turned up his collar against the winter night's wind.</p>
+        <p>He smiled at the girl. "The one I like is a man."</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-093-bitter-summer.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-095-reunion.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

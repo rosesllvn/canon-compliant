@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 110 — Hometown — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 110 · A Certain Someone</p>
+      <h1 class="reader-title">Hometown</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Sheng Wang and Jiang Tian booked flights for early on the 24th, and they'd no sooner landed than they got a WeChat from Sheng Mingyang saying he had another dinner engagement during the day, telling them to settle in and rest at home—the New Year's Eve dinner had been booked in advance.</p>
+        <p>The old Sheng Mingyang, however busy, always kept New Year's Eve free. This year's sudden engagement was, anyone could tell, just avoiding people.</p>
+        <p>He both hoped Sheng Wang and the others would come home for the new year and couldn't get past his own pride. The little building in Baima Lane was a special existence, having witnessed the gatherings and partings of two families and four people. To see Sheng Wang and Jiang Tian return hand in hand in that setting—he genuinely didn't know what the first line should be.</p>
+        <p>The old comrade had been shrewd most of his life, skilled at all manner of fine talk, and in the end the one thing he couldn't handle was still his own son.</p>
+        <p>Sheng Wang of course knew his frame of mind; he just silently accepted the restaurant location the other had shared, and didn't expose it.</p>
+        <p>While waiting for the luggage, Sheng Wang took a call. Hearing him confirm directions and the parking area with the other party, Jiang Tian asked, "Who called?"</p>
+        <p>Sheng Wang said, "Uncle Chen."</p>
+        <p>Jiang Tian hadn't heard that form of address in a long time, and blanked a moment; by the time he came to, Sheng Wang had wheeled the luggage over. He snapped his fingers before Jiang Tian's face. "Come back."</p>
+        <p>Jiang Tian pressed down his mischievous fingers. "He's already here?"</p>
+        <p>"Yeah, at the parking lot."</p>
+        <p>Jiang Tian instinctively went to look at the overhead parking-area signs, but was pulled by Sheng Wang toward the escalator. "What are you looking at the signs for, just look at me."</p>
+        <p>Jiang Tian had only ever done departures at this airport, never arrivals. Sheng Wang, by contrast, had passed through quite a few times these years, always in a hurry—this time alone being the exception.</p>
+        <p>The young master was visibly in a good mood, with quite the air of an emperor on tour, bragging unreservedly in front of his ge. "Other places I can't speak for, but the airport I really do know. I can be your living navigation device—free of charge."</p>
+        <p>Pushing the luggage cart, Jiang Tian gave an "mm." "Free things tend to have problems."</p>
+        <p>"Bull." Sheng Wang stuck out a hand. "Or you can pay."</p>
+        <p>Jiang Tian pulled his phone from his pocket, slapped it into his hand, then lifted it away before his fingers could close. "Prove it first."</p>
+        <p>"Prove what?"</p>
+        <p>"That you're worth paying for."</p>
+        <p>"Ask away—name any shop and I can point you to it."</p>
+        <p>Jiang Tian gave another "mm." "Where's west?"</p>
+        <p>Sheng Wang: "…"</p>
+        <p>Right, the whole bit collapsed.</p>
+        <p>The young master had ranged the jianghu for years and traveled plenty of places at home and abroad, yet still couldn't tell the four directions apart. The living navigation device met its Waterloo the moment it opened for business, conning not a single cent.</p>
+        <p>During the Spring Festival travel rush everywhere was busy, the parking lot packed, private cars and ride-hails jammed into a long dragon, no telling who was who. Sheng Wang called Uncle Chen, and over the question of "where exactly is the car" launched into a Q&amp;A tug-of-war.</p>
+        <p>Uncle Chen tried countless ways of describing it, finally collapsing into: "Just—behind a white car, hazards flashing."</p>
+        <p>Sheng Wang said, "Uncle, white cars are the most common thing here, which one isn't flashing hazards? How about you give a range and we'll search along the way."</p>
+        <p>Uncle Chen said, "Zone K, toward the north."</p>
+        <p>Sheng Wang was silent two seconds, then handed his phone straight to his ge. "You take it, I only know left, right, front, back."</p>
+        <p>His ge didn't forget to ask, "Aren't you the living navigation?"</p>
+        <p>"Went bankrupt."</p>
+        <p>In the end Jiang Tian found the car in two minutes; the living navigation went straight from bankrupt to shut-in.</p>
+        <p>Uncle Chen, on the other hand, hadn't changed at all—hair still in the simplest style, this season's clothes still the eternal lapel short jacket. He got out to help with the luggage, and at the sight of Jiang Tian his step paused; then he marveled with a smile, "Grown taller again, and handsome as ever, eh?"</p>
+        <div class="scene-break">❖</div>
+        <p>Some places are just like this: a simple person, a road, a building can carry you back in a dream to your youth. Jiang Tian sat in the back of Uncle Chen's car, watched Sheng Wang doze leaning beside him, and had exactly this feeling. So much that at some instant he even wanted to roll his sleeves to the elbow, as if he still wore that blue-and-white school uniform.</p>
+        <p>Uncle Chen had other things on; having dropped them at the courtyard gate of Baima Lane, he drove off down another road. Jiang Tian stood at the gate watching Sheng Wang punch in the code and found that after all these years the numbers hadn't changed—still the string he'd been told back then. And opening the door, the faint detergent smell inside was as before too.</p>
+        <p>These years, every time Jiang Tian thought of this house, this smell would float before his nose. It was his last memory of this place, and not a good one—so much that the moment he smelled it, he'd instinctively feel he'd just run tens of thousands of li.</p>
+        <p>Luckily, the person he'd once searched everywhere for and couldn't find now stood beside him, talking and laughing, within reach—and so the smell turned gentle too, no longer so empty and cold.</p>
+        <p>The instant he clasped Sheng Wang's fingers, he finally, clearly realized: they would have a very, very long time—long enough to slowly cover over the lost, sorrowful, blankly empty years of before.</p>
+        <div class="scene-break">❖</div>
+        <p>The building got good light, but cleaned and then left empty half a day, it would turn cold and dim inside. Like before, Sheng Wang changed his shoes and started hunting for the remote, turning on the AC as he went. No matter where he tucked himself, every one that should be on couldn't be missed—cold enough in summer to want a quilt, warm enough in winter to wear a single layer; no telling what inborn quirk it was.</p>
+        <p>Jiang Tian followed behind him, and the slight unease from the doorway just now faded away amid the certain someone's various little antics, not a trace left.</p>
+        <p>The young master headed straight upstairs like catching a thief, twisted open the door of the bedroom Jiang Tian had lived in, looked, and said, "I knew it!"</p>
+        <p>"What?" Jiang Tian asked.</p>
+        <p>"Didn't I say tidying one room was enough?" Sheng Wang pushed the door fully open and jerked his chin inside. "Look—the old comrade didn't cooperate one bit, had Auntie Sun do two rooms."</p>
+        <p>When he was a kid he'd thought Sheng Mingyang never listened to him. Now, seeing this, he only found it a little funny.</p>
+        <p>Sheng Mingyang had shown the smoothness proper to a businessman; though eight hundred parts unwilling, on the matter of tidying Jiang Tian's bedroom he'd fully displayed an elder's magnanimity. The sheets and quilt cover were brand new, and he hadn't let it slide with just Auntie Sun changing them—at least the quilt had been sunned, fluffy and warm…</p>
+        <p>Of course, the wish to have Jiang Tian sleep obediently over here was also plain as day.</p>
+        <p>Sheng Wang twisted open the door of his own bedroom and wanted to laugh more.</p>
+        <p>Because two quilts were laid out on the bed in a mismatched way, plainly not Auntie Sun's tidying habit. He beckoned Jiang Tian, bent to inspect the corners of both quilts, then pinched one corner. "See? A cover like this not pulled straight, dented in a spot—no need to ask, it's definitely my dad's own doing."</p>
+        <p>Which showed that Auntie Sun had originally laid only one quilt here, and Sheng Mingyang, thinking it over, had felt it wouldn't do—what if the two insisted on cramming into one room? So he'd stubbornly added another. From this dented quilt corner Sheng Wang saw the old comrade's struggle.</p>
+        <p>Hooking Jiang Tian's shoulder, he laughed a good while, then took out his phone, snapped a photo of the quilt corner, and WeChatted it to Sheng Mingyang.</p>
+        <p class="msg"><strong>I don't want this hand anymore:</strong> Dad, your doing?</p>
+        <p>A moment later, Sheng Mingyang replied: <em>Where would I find the time</em></p>
+        <p class="msg"><strong>I don't want this hand anymore:</strong> Oh</p>
+        <p class="msg"><strong>I don't want this hand anymore:</strong> Then I'll go ask Auntie Sun—a year without seeing her and her skills have slipped</p>
+        <p>Two lines and the old comrade's bit of face and reserve shattered utterly. Sheng Wang had just finished replying when a call came chasing in, his tone quite helpless. "You're home?"</p>
+        <p>"Just walked in," Sheng Wang said.</p>
+        <p>"I can't get away here—make do for lunch, you two." Sheng Mingyang mused a moment, then finally brought up the other of his own accord: "Don't order takeout. I recall Xiao-Tian can cook a little, right? There's food in the kitchen. Or call Sister Sun."</p>
+        <p>Hearing the form "Xiao-Tian" from his mouth again, Jiang Tian was a little surprised.</p>
+        <p>Sheng Wang winked at his ge and said into the phone, "We'll go to Wutongwai in a bit—Grandpa Ding got home yesterday, lunch'll be sorted there."</p>
+        <p>"All right. The private room I booked tonight has enough seats. If the old folks are willing, eat the New Year's Eve dinner together." Sheng Mingyang was always like this—say what you would, the proper courtesy and grace were never missing.</p>
+        <p>Sheng Wang gave an "oh" and chatted a couple more lines. Right before hanging up, he added, as if up to mischief, "Oh, by the way, Dad—"</p>
+        <p>Sheng Mingyang thought he had something more. "Hm?"</p>
+        <p>"I had you on speaker the whole time."</p>
+        <p>"You—"</p>
+        <p>Sheng Mingyang was silent two seconds and hung up directly.</p>
+        <div class="scene-break">❖</div>
+        <p>By the time the two finished settling in and reached Wutongwai it was near noon, the long alley everywhere fragrant with cooking, and old men and women leading grandsons and granddaughters home. Seeing Jiang Tian, they'd all grab him and say, "Haven't seen you in years—all grown up now!"</p>
+        <p>Jiang Tian had probably never made pleasantries this frequently in his life, and the old folks' questions, asked over and over, were always those same few, so he was forced into a repeater. Sheng Wang just watched the show with both hands in his pockets, smiling—not only no help, he deliberately drew the old folks into asking a couple more.</p>
+        <p>A single straight alley took them a full half hour, and by the time they finally reached the end, Dr. Jiang's face had gone slack. He shot the certain someone a glance. "Fun?"</p>
+        <p>"It's all right." The laughter in Sheng Wang's eyes couldn't be hidden.</p>
+        <p>But soon he couldn't laugh, because the moment he stepped into that long-missed little courtyard, the old man busy pruning and watering before the flowerpots turned his head.</p>
+        <p>When Old Man Ding's face was set, the lines at his mouth pulled down, making him look fierce and unapproachable. But the instant he made out Sheng Wang, those two stiff creases curved, and his whole self turned kindly and gentle. He took off his reading glasses, set down the old-style big shears, and gripped Sheng Wang with a hand like withered branches.</p>
+        <p>For an instant, Sheng Wang thought he'd call out "Xiao-Wang" a couple of times, or mistakenly call him "Xiao-Tian," then sigh like the old folks in the alley, "haven't seen you in years and you've grown so big," and make a few pleasantries.</p>
+        <p>But the old man only squeezed his shoulder and said, displeased, "Why are you wearing so little again! Aren't you cold in class?"</p>
+        <p>Sheng Wang blanked a few seconds.</p>
+        <p>Jiang Tian lowered his head and said softly by his ear, "The old man's fine otherwise, just his sense of time gets a bit muddled sometimes."</p>
+        <p>…Probably still thinks we come every day.</p>
+        <p>Sheng Wang gave an "oh" and clasped the old man's hand back. He lowered his head and blinked fast a few times, and only once he'd blinked the heat in his eyes back down did he say to the old man, "It's all right, Grandpa, there's AC in the classroom—see, my hands are warm."</p>
+        <div class="scene-break">❖</div>
+        <p>Apart from the occasional muddle and a slightly stooped back, the old man was fine in every way. His voice was still loud, his set face still fierce, his greatest hobby still watching TV—the channel forever flipping among military, news, and agriculture, and when it lagged he'd roll up his sleeves and give it a slap. If another beast like Gao Tianyang came climbing the roof, he could surely still grab a broom and beat the person down.</p>
+        <p>Sheng Wang and Jiang Tian had arranged between them to cook, but they'd no sooner washed their hands than the old man shooed them out of the kitchen like driving ducks. Face set, he said, "What business is it of yours two—go stand aside."</p>
+        <p>"I can actually manage," Sheng Wang struggled. "Don't believe me, let me try."</p>
+        <p>"Go!" The old man wasn't the least bit polite. "And get me another pot of split-belly dumplings—who'll eat those?"</p>
+        <p>"Don't worry, made and consumed by the same person—I'll eat them." Having said it, Sheng Wang stuck out a finger and poked his ge.</p>
+        <p>Jiang Tian: "…there's me too."</p>
+        <p>The old man rolled his eyes. "Besides Xiao-Tian, who'd humor you."</p>
+        <p>Hooking Jiang Tian's shoulder, Sheng Wang leaned at the kitchen doorway laughing. The old man brandished the cleaver at them, then with one boom of his loud voice summoned Mute Uncle, who'd just come in.</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-109-incoming-call.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-111-the-mortal-world.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

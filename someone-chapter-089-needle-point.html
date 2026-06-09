@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 89 — Needle Point — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 89 · A Certain Someone</p>
+      <h1 class="reader-title">Needle Point</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>"The provincial hospital?!" Sheng Wang shot a glance at Jiang Tian and asked urgently, "What's wrong with Auntie Jiang? Why the hospital?"</p>
+        <p>"Not sick, it's not illness." Sheng Mingyang's end sounded like a tangle; you could tell he was caught in some sudden dispute, his words hurried, while not wanting to make Sheng Wang and the others panic too. "Something's come up. You and Xiao-Tian—Xiao Chen? Go let the nurse know."</p>
+        <p>He cut himself off mid-sentence to give the person beside him a hurried instruction, then said to Sheng Wang, "You and Xiao-Tian head home on your own in a bit. My end here—"</p>
+        <p>"Not going home." Sheng Wang said flatly. "We're coming over now—what's the room number?"</p>
+        <p>Sheng Mingyang's voice was wedged in the din; he hesitated a moment. "Forget it, come over. 903. Be safe on the way."</p>
+        <p>Fearing Jiang Tian would worry, Sheng Wang hung up and immediately soothed, "Don't fret, Auntie Jiang's fine, not sick. Probably something else—"</p>
+        <p>"Ji Huanyu," Jiang Tian cut in.</p>
+        <p>"What?"</p>
+        <p>"It's Ji Huanyu who's come to her."</p>
+        <p>Jiang Tian's expression was very bad, holding down his anger. As he spoke he'd already flagged a passing taxi and strode over to pull the door open. Sheng Wang blanked, hastily said goodbye to Zhao Xi and Lin Beiting, and chased after, climbing in too.</p>
+        <p>The driver must have been hurried; the door shut and the car shot straight off.</p>
+        <p>Jiang Tian's family affairs were complicated, and dragging in the name "Ji Huanyu" made them more of a tangled mess. Zhao Xi knew this much, and knew it was Jiang Tian's minefield and taboo, so he didn't rashly get involved—only sent each younger brother a WeChat: <em>Call ge if you need anything.</em></p>
+        <p>Jiang Tian was abnormally silent the whole way, his phone screen fixed on Jiang Ou's chat box, staring unblinking at the very last line. The instant he saw Jiang Ou's question, he knew it couldn't be hidden anymore.</p>
+        <p>The wall of protection he'd spent so many years building had been struck a heavy blow—undone at the final stretch, collapsing with a roar.</p>
+        <p>Ji Huanyu must have said something to Jiang Ou, or how would she suddenly have grown suspicious.</p>
+        <p>Jiang Tian thought.</p>
+        <p>The provincial hospital was the one Old Man Ding had stayed in, not far from Wutongwai, only three kilometers. The driver wove the car like a snake through the crowded night roads and got them there in under ten minutes.</p>
+        <p>They saw Ji Huanyu outside Room 903.</p>
+        <p>He came around the corner with his overcoat hanging open, two patches of bruised black under his eyes, his chin still dark with unshaven stubble. The trappings remained, the bearing entirely gone, his furrowed brow full of irritation and disgust. Gripping his phone, he nearly collided with them, hurriedly saying "sorry" before he made out whom he'd run into.</p>
+        <p>"Xiao-Tian?"</p>
+        <p>Ji Huanyu had just opened his mouth when Jiang Tian grabbed his collar and swung a punch. A wave of startled cries rose around them, the corridor instantly chaos—dodgers, separators, peacemakers all jumbled together. Jiang Tian's mind roared; he landed several blows before someone hugged him from behind and dragged him off.</p>
+        <p>"Ge! Not here." Sheng Wang clamped around him. "Don't fight here."</p>
+        <p>"Xiao-Tian!" Sheng Mingyang's and Xiao Chen's voices were in the mix too.</p>
+        <p>Nurses and doctors had rushed over, people everywhere, male and female voices blending into a sharp jab at the brain, like the clamor of frogs in a shallow pool.</p>
+        <p>"I told you not to come to her—" Jiang Tian, a low front of cold pressure about him, his face all gloom.</p>
+        <p>"I didn't come to her!" Ji Huanyu staggered upright, his face just as bad. "I never came to her!"</p>
+        <p>"If not you, then who?"</p>
+        <p>"I…"</p>
+        <p>He started to speak and stopped, and, rarely, cursed in front of others, wiping the split corner of his mouth and muttering a soundless "damn" with his head down.</p>
+        <p>"Xiao-Tian! Talk inside, go in first." Sheng Mingyang cut in to grab Jiang Tian's arm, and Sheng Wang, half-hugging, half-dragging from behind, pulled him into 903.</p>
+        <p>Jiang Ou stood there, her usually neat hair loose, a few strands fallen at the side of her face. Her gaze was lowered, the corners of her mouth pulled down, faintly puffy under the eyes—no telling whether from crying or just sheer exhaustion.</p>
+        <p>Jiang Tian wanted to call to her, and before he could open his mouth he saw the person braced on the bed rail.</p>
+        <p>For an instant, the man seemed both unfamiliar and familiar—unfamiliar in his terminally ill state, familiar in the look of him as he lifted his eyes to gaze over.</p>
+        <p>Jiang Tian blanked two seconds before finally recognizing him. This was the man tangled up with Ji Huanyu in that dim bedroom.</p>
+        <p>Jiang Tian didn't remember the man's face. The long childhood revulsion had erased the features, like a mosaic deliberately laid over them, but he remembered the man's stunned eyes—that instant of meeting gazes had sickened him for years.</p>
+        <p>So much that, at this moment of seeing him again, that churning nausea came back.</p>
+        <p>Jiang Tian's face went cold in an instant, his hand reaching on instinct for the scar at the back of his neck. The motion fell into Jiang Ou's eyes; she stiffened a good while, then slowly lifted her head and asked hoarsely, "Xiao-Tian, you know him?"</p>
+        <p>It was a question, but her tone was certain and numb.</p>
+        <p>Jiang Tian shook his head, the motion so small it was almost just a twitch.</p>
+        <p>"You know him." Jiang Ou said again.</p>
+        <p>This time Jiang Tian didn't deny it, but fell into silence.</p>
+        <p>"How do you know him?" Jiang Ou's voice was very soft, very slow. Though she was only standing, it seemed to cost her enormous effort. "Did you see them? At that old house by Fuzhong?"</p>
+        <p>After a long moment, Jiang Tian frowned and answered vaguely, "Mm."</p>
+        <p>"So…" Jiang Ou swallowed, as if pressing down some surging emotion, or as if straining to hold back nausea. "So you knew? You knew what he and your dad… what he and Ji Huanyu were to each other?"</p>
+        <p>"Mm."</p>
+        <p>In that instant, Jiang Ou felt a pang. But a vast sense of absurdity came flooding down over her, so that she struggled within it and overlooked that small aching sting.</p>
+        <p>She said, "So I was the only one who didn't know. Just me—like a fool—knowing nothing."</p>
+        <p>"Xiao-Ou—" Ji Huanyu called.</p>
+        <p>"Don't call me that!" Jiang Ou's voice nearly broke. Always gentle and soft, she'd never used such a sharp pitch. "Don't call me, I'm sick of it!"</p>
+        <p>In truth, before coming to the hospital, she'd thought she could keep her composure. Du Cheng had sent her many messages, and she'd sat on the sofa reading them one by one, every word clearly, with no breakdown, no chaos. She only felt cold—cold from her chest to her limbs, shivering with it.</p>
+        <p>Du Cheng had said, "All the money Huanyu sent Xiao-Tian was returned, not a cent accepted, and he always felt he hadn't done his duty." When she saw that line her mind hadn't yet gone blank—she'd even replied to Jiang Tian on WeChat.</p>
+        <p>She'd thought she could stay calm, never imagining the emotion was just too thick, jammed up on the way, until this instant when it erupted in a flood. And by the time she realized it, she was trembling all over, the rims of her eyes gone red in a blink.</p>
+        <p>She said, "I really do feel so sick, Ji Huanyu. I was with you at eighteen—do you know how many years that is? My whole life I'm only eighteen once. Can you give it back to me? Do you know how many times I fought with my mother because of you? She was old, couldn't keep people straight anymore, and still grabbed me and said, <em>don't keep your heart set on that boy, your mother reads people better than you.</em> How many times did I coax her around? How many times did I tell her, don't worry? My mother never set her heart at ease, right to the end. Can you give her back to me? You told me back then, <em>I'll take care of our son</em>—did you take care of him? When I brought him home, he flinched even when I covered him with a quilt in his sleep—do you know that?"</p>
+        <p>Ji Huanyu stood frozen, a wretched figure—like one paraded in disgrace and like one in self-reproach, both furious and ashamed.</p>
+        <p>"You don't know. All you knew was carrying on with Du Cheng," Jiang Ou said.</p>
+        <p>It was the first time she'd ever jabbed at someone so directly, with not a single bend, going for every sharp edge—like the hysteria before a breakdown. "Xiao-Wang—"</p>
+        <p>Suddenly called, Sheng Wang looked at her, dazed.</p>
+        <p>Jiang Ou pointed at the man by the bed. "Do you know what kind of person he is?"</p>
+        <p>Sheng Wang's lips moved. He ached for Jiang Ou, wanted her to stop—because every line she said cut both ways, jabbing Ji Huanyu and jabbing herself. But he had no standing and no right to dissuade her—not just him, no one here had the right.</p>
+        <p>"He's Auntie's middle-school classmate, sat right behind me," Jiang Ou said earnestly. "Auntie counted him as one of her best friends—the kind whose child I'd be godmother to."</p>
+        <p>"A friend that good, and he tumbled into one bed with my husband." Jiang Ou was still speaking to Sheng Wang, but her gaze bore into Ji Huanyu, the hand at her side trembling the whole time. "A man with a man—isn't it sickening?"</p>
+        <p>She knew Ji Huanyu cared about face, hated exposing the unbearable before any outsider. So she insisted on saying it, and insisted on saying it to the person who had the least to do with him.</p>
+        <p>All her attention was on Ji Huanyu, so she didn't notice that, as she finished that line, Sheng Wang's face went sheet-white.</p>
+        <p>He blinked very lightly, took a step back, and was caught by the wrist by Jiang Tian again.</p>
+        <p>Ji Huanyu met a Jiang Ou like this for the first time, every sore spot on him jabbed through. That trace of guilt vanished in an instant, packed full instead with shamed fury. He drew a breath and, restraining his tone, said, "Xiao-Ou, I never wanted to sicken you on purpose. I swear, being with you back then was sincere, I—"</p>
+        <p>Jiang Ou shut her eyes, the very picture of blocking him out. She'd suffered too much at Ji Huanyu's hands; she'd been frightened by it. Once she'd tried to believe every word he said; now she didn't want to believe a single one. She'd even fallen into a state of dread, feeling something was wrong with everyone around her, that no one told the truth.</p>
+        <p>"Fine, drop it—I know you won't believe me even if I say it." Ji Huanyu swallowed his words and tried to explain again. "I promised Xiao-Tian I wouldn't come to you, wouldn't add to your troubles. Even without Xiao-Tian saying it that's what I thought—I had no face to come to you, I find myself sickening, vile. But Du Cheng's different—he always thought you knew, and had just made your peace with it over time. Du Cheng, he—"</p>
+        <p>"Are you explaining things to me on behalf of your affair partner?" Jiang Ou said. "Or were you a homosexual to begin with—the two of you together back in high school—and I'm the one who cut in?"</p>
+        <p>Ji Huanyu was a little agitated. "No, I just—"</p>
+        <p>There wasn't a trace of color in Jiang Ou's face. The line had been meant to provoke Ji Huanyu, but the instant it left her mouth, she realized it provoked herself.</p>
+        <p>If that were really so, then she'd lived her life in utter ruin. Never once made a correct choice, blind from beginning to end.</p>
+        <p>She felt a churning in her stomach, her feet barely holding her. So, white-faced, she said to Ji Huanyu, "I don't want to hear you talk. The sight of people like you makes me want to throw up."</p>
+        <p>"People like us?" Ji Huanyu's patience finally ran dry. He went cold and asked cuttingly, "Like what? Together with a man? Homosexual?"</p>
+        <p>His temperament was extreme; even pushed to fury he had no filter, wanting only to fling every arrow back, aiming for the other's heart. And of Jiang Ou's heart there was probably only a son left.</p>
+        <p>So Ji Huanyu glanced toward Jiang Tian, sensitively catching that subtle something between him and Sheng Wang. Ji Huanyu gave a sneer and said to Jiang Ou, "Then you'd best keep an eye on your son too—maybe he's just like me."</p>
+        <p>Jiang Ou and Sheng Mingyang instinctively looked over at Jiang Tian.</p>
+        <p>Before their gazes landed, Sheng Wang drew his hand out from between Jiang Tian's fingers.</p>
+        <p>Jiang Tian had gripped hard, and he pulled away hard.</p>
+        <p>It was only to cover, really, but as Jiang Tian's fingers slid from his wrist, his heart dropped heavily—like standing in a malfunctioning elevator, the floor suddenly gone from underfoot.</p>
+        <p>Jiang Ou's astonishment lasted only an instant; the next second she straightened and slapped Ji Huanyu across the face.</p>
+        <p>Obedient as a child, lively as a youth, she'd grown frail and timid by middle age. In forty-some years she'd never raised a hand against anyone—this was the first time.</p>
+        <p>She shielded Jiang Tian behind her and said to Ji Huanyu, "Rest assured. Xiao-Tian has not one thing in common with you, and he could never be like you."</p>
+        <p>That one slap and that one line seemed to use all of Jiang Ou's strength; after it she was swaying all over, all but unable to stand. Sheng Mingyang caught her with quick hands and turned to call a nurse.</p>
+        <p>A crowd of people surged in flustered, then surged out again, bringing Jiang Ou and the rest with them.</p>
+        <p>Sheng Wang didn't remember how he'd followed them out, only that everyone's faces were terrible and their minds a jumble, like a flock of birds scattered by a blow. After all the upheaval, back home at last, Sheng Wang sat down on the sofa and only then, belatedly, felt a sting in his palms. He looked down: both palms had been pinched into a stretch of red marks, all but breaking the skin to blood.</p>
+        <p>He'd gripped too tight…</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-088-gift.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-090-blunt-knife.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

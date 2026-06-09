@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 82 — Weekly Exam — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 82 · A Certain Someone</p>
+      <h1 class="reader-title">Weekly Exam</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>The case at Fuzhong's gate wasn't all that hard to crack, and a conclusion came quickly—it turned out to be seventy percent close to what the old man in the ward had said.</p>
+        <p>The one who came to claim her really was the woman's same-sex partner, and the killer was an old friend of hers. The reasons tangled up money, the daily trivialities of life, and a murky, hard-to-articulate emotional knot—simple and complicated at once, the threads of it clear only to the people inside.</p>
+        <p>Someone had laid a handful of lilies in the corner of the river by the east gate. Students passing by saw them; there was a wave of sighing and discussion in the classes, and then there was no "and then."</p>
+        <p>Joys and sorrows in this world don't connect. One person's life and death, their parting, in another's eyes may be no more than a handful of white flowers.</p>
+        <p>The day this news reached the classroom, the weekly exam results happened to come out too.</p>
+        <p>Song Sirui went to the office during a break to drop off homework and came back to pounce on Jiang Tian's desk, looking utterly stunned and at a loss for how to begin.</p>
+        <p>Gao Tianyang gave him two heavy slaps. "Hey! You possessed? Where's your soul?"</p>
+        <p>Song Sirui said, eyes wide, "I saw the ranking sheet…"</p>
+        <p>"And?" Gao Tianyang asked.</p>
+        <p>"First isn't Tian-ge," Song Sirui said.</p>
+        <p>"What???"</p>
+        <p>That first place wasn't Jiang Tian was a rare event for the entire Senior Grade 2, and it instantly spread through every class.</p>
+        <p>Class B happened to have just had P.E. last period. Sheng Wang came back from the field with his jacket over his arm, raised a hand to catch a basketball another boy threw his way, and was about to enter the classroom when he heard the line from a passing classmate—the ball spinning on his fingertip dropped to the floor with a thud.</p>
+        <p>People were already discussing it in the room, several boys clustered on a few adjacent desks saying in tones of disbelief, "Who spread that? Did you see the ranking sheet? Hardly possible, surely?"</p>
+        <p>Sheng Wang bent to pick up the basketball and tossed it onto the rack in the corner.</p>
+        <p>Shi Yu called across the desks, "Sheng-ge! Tian-ge wasn't first this time, did you hear?"</p>
+        <p>"Heard." Sheng Wang walked back to his seat and draped his jacket over the chair back. "Came first with that many questions unanswered—you really think he's a god?"</p>
+        <p>At that, everyone remembered there'd been a hitch with his and Jiang Tian's weekly exam; sending someone to the hospital had eaten into the exam, and in that little time there was no way to finish the paper.</p>
+        <p>Jiang Tian was famously fast, but he'd still had thirty-some points' worth of questions he hadn't gotten to. Anyone else would probably have crashed on the spot.</p>
+        <p>In a situation like that, for there to be people surprised he <em>wasn't</em> first—it just went to show how far ahead of the pack he usually was.</p>
+        <p>Sheng Wang drank his water and listened to them babble, calm on his face, the world turning over inside.</p>
+        <p>He longed to snatch the homeroom teacher's little mic and tell everyone: sorry, this god named Jiang Tian belongs to me now.</p>
+        <p>But he was a little anxious too. He knew Jiang Tian wouldn't bomb too outrageously, yet he still wanted to know the actual score.</p>
+        <p>It was the first time the young master had so eagerly awaited the homeroom teacher's arrival, and luckily the teacher didn't disappoint, coming in early with the ranking sheet.</p>
+        <p>The teacher wore a spring-breeze look, pressing the sheet flat on the podium. "Our class did well this time—almost every subject's average went up, three students squeezed into the top 45, and our class ranked 12th in the grade for the first time, completely beyond my expectations, and—"</p>
+        <p>He held forth animatedly a good while, then looked up to find no one was listening closely, most faces bright with the desire to gossip. A boy in the very front couldn't hold it. "Teacher, tell us the grade first place first?"</p>
+        <p>The teacher stopped, swept a sour glance around. "Grade first is Class A's Li Jia."</p>
+        <p>Sheng Wang gave a soft "ah," thinking: Little Pepper's outdone herself this time.</p>
+        <p>The teacher went on, "You're not curious about first—you're curious where Jiang Tian placed this time, you think I can't tell?"</p>
+        <p>The students below cleared their throats one after another.</p>
+        <p>The teacher gave a "heh," rapped a knuckle on the desk. "All right, let's do this—you guess. I'll put it out there: he didn't touch a single character of thirty-six points' worth of questions."</p>
+        <p>Earlier only a few had caught Sheng Wang's explanation; at the teacher's words, the whole class understood.</p>
+        <p>Students were like this—the moment they heard anything score-related, they liked to put themselves in it. Everyone instinctively imagined wiping thirty-six straight off their own total… never mind, too suffocating.</p>
+        <p>It was that irrepressible front-row boy again: "Don't tell me he's still nailed to the grade top 30, top 20?"</p>
+        <p>He himself ranked first or second in Class B, and even squeezing into the grade top 20 was a stretch for him, so his guess instinctively landed there.</p>
+        <p>The teacher shook his head. "He's not."</p>
+        <p>The class was about to give an "oh," signaling that even a god was only so much, when the teacher drew a great breath. "He's 9th."</p>
+        <p>Damn.</p>
+        <p>It was the only word left in everyone's mind—even Sheng Wang echoed it first, then couldn't keep the corner of his mouth from curving up.</p>
+        <p>Impressive?</p>
+        <p>Mine.</p>
+        <p>It was the worst score Jiang Tian had gotten since entering Fuzhong, but in a way it was more thrilling than his numbingly familiar firsts.</p>
+        <p>The buzz of Class B's discussion went on a good while, and the teacher banged the desk to bring the room back to quiet. "Gossiped enough? Gotten your thrills? Can you sit still and listen to your own scores?"</p>
+        <p>The crowd drawled out a "yes."</p>
+        <p>The teacher said, "Then per custom, I'll single out a few students for praise first. Cao Ziya, class rank up 3, grade rank up 12—doesn't sound like a huge jump, right? But! After the 12-place jump, grade rank 43—you know what that means? Hold this state through finals and you can move up a class."</p>
+        <p>"Lu Wei, class rank up 12, grade rank up 33, excellent momentum, keep it up."</p>
+        <p>"Guo Can, class rank dropped one, from 1st to 2nd." The teacher looked at the lively front-row boy.</p>
+        <p>The boy looked baffled. "…weren't you doing praise first?"</p>
+        <p>"I didn't say I was criticizing you," the teacher said. "Your class rank dropped, but your grade rank went up 18 places. I recall you came so close at midterms—a hair short of making Class A—and you've improved every exam since. Stay steady, don't get a swelled head."</p>
+        <p>The boy said, "No swelled head, Teacher. Right now I just want to know who took class first and bumped me."</p>
+        <p>The teacher pushed up his glasses. "This time our class's first is a student who came down from Class A. When the class shift happened, all the grade's teachers thought it a real pity. Proves gold can't stay hidden—it'll shine when it's meant to, the ability's there. Right, Sheng Wang?"</p>
+        <p>The teacher looked over with a smile, and the whole class turned to look too.</p>
+        <p>Sheng Wang blanked a moment, then said, half-joking, half-calm, "Yeah."</p>
+        <p>The classmates: "???"</p>
+        <p>This bunch had never been in Class A, never been treated to the young master's peacock display and shamelessness, and for a moment couldn't process it at all—they just wanted to spit at him.</p>
+        <p>Not until the teacher switched to the next topic, about to criticize someone, did the boy named Guo Can suddenly cry "holy crap" and turn around again.</p>
+        <p>"What now?" The teacher had a higher tolerance for top students, but that didn't mean he'd let one cuss and interrupt at random.</p>
+        <p>Guo Can said, "Wasn't he late to the exam too???"</p>
+        <p>The teacher nodded. "That's right!"</p>
+        <p>The crowd blanked, then realized what he was holy-crapping about—Sheng Wang, like Jiang Tian, had lost most of the exam; if Jiang Tian had thirty-some points blank, then he was no better off.</p>
+        <p>In that case… Class B first? Grade 12th? Wasn't that already not far from Jiang Tian???</p>
+        <p>The teacher said, "He made basically no mistakes on the other subjects and rescued the score—very steady nerves."</p>
+        <p>The crowd thought: that's not steady nerves, that's freakish.</p>
+        <p>After that period, the names that swept the whole grade were Jiang Tian's and now Sheng Wang's too.</p>
+        <p>The feeling of running wild side by side wasn't half bad; the young master was quite satisfied—only there were still a few places between him and Jiang Tian, a slight regret.</p>
+        <p>He mulled it over and secretly sent a WeChat to the one upstairs—</p>
+        <p class="msg"><strong>Say That Again:</strong> Finally got you to bomb once and I'm still three places behind you</p>
+        <p class="msg"><strong>Say That Again:</strong> You're kind of hard to chase</p>
+        <p class="msg"><strong>Someone:</strong> ?</p>
+        <p class="msg"><strong>Someone:</strong> I'll help you chase</p>
+        <p>Sheng Wang stared at the screen and suddenly felt that ambiguous contact name could be put away now. With a couple name sitting right there, what a waste not to use it.</p>
+        <p>So he cleared Jiang Tian's contact-name field, and the chat refreshed.</p>
+        <p class="msg"><strong>Say That Again:</strong> You're kind of hard to chase</p>
+        <p class="msg"><strong>Oh:</strong> I'll help you chase</p>
+        <div class="scene-break">❖</div>
+        <p>Exams were always like this—some households joyful, some sorrowful. Class B did well overall, but there were still those who'd bombed: some who'd gotten cocky after improving last time, a few whose state had been thrown off by being in a relationship.</p>
+        <p>So when the results came down, the mood in the class was somewhat heavy—but it was soon stirred up again by the holiday notice.</p>
+        <p>Though the riverside case had leads now, Fuzhong was good as its word: it had said a week without evening study, and a full week was what it meant to give. Since the student dorms were separated from that river by only a wall, many boarders signed slips deciding to go home and stay a while.</p>
+        <p>Qiu Wenbing's grades had shot up fast this semester. He'd learned plenty of technique from Jiang Tian and Sheng Wang, and round after round of weekly exams had bumped his exam room from Class 12 to Class 8, his grade rank climbing from the bottom to near the middle, and things at home had warmed quite a bit.</p>
+        <p>His parents, terrified the incidents around the school would jeopardize his rising momentum, hurried to fetch him home.</p>
+        <p>Shi Yu had originally not wanted to sign a slip; he'd meant to use this stretch without evening study to spend more time with his little girlfriend, only He Shi had no such notion.</p>
+        <p>For one, she was timid—afraid of the dark, of ghosts, of all sorts of things—and ever since they'd fished someone out of the river she didn't dare head toward the east gate, or stay at school into the evening.</p>
+        <p>For another, she'd bombed this weekly exam and was low, with no heart for romance.</p>
+        <p>Shi Yu, alone at school and finding it dull, also chose to go home and stay a while, so the four-person dorm became a two-person room, leaving only Sheng Wang and Jiang Tian in the blink of an eye.</p>
+        <p>Sheng Mingyang had wanted the two of them to go home and stay too, but Sheng Wang used the excuse "I have to teach my ge guitar" to talk Sheng Mingyang and Jiang Ou around.</p>
+        <p>Sheng Mingyang was gratified by the deep brotherly bond and didn't want to spoil the mood. Jiang Ou was simply caught off guard—she'd never imagined the day would come when Jiang Tian agreed to take part in the campus arts festival, like a rare species emerging from its den, not to be disturbed.</p>
+        <p>So Sheng Wang finally scooped up a little real two-person time and "knocked around" with his ge for a week.</p>
+        <p>And then the arts festival arrived just like that.</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-081-neighbor.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-083-mark.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

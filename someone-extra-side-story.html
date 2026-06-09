@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extra — Extra — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Extra · A Certain Someone</p>
+      <h1 class="reader-title">Extra</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>It was the rainy season lately, the sky a gray-blue, everything damp. The people here seemed especially loath to carry umbrellas, always in hoodies and jeans, hurrying through the rain.</p>
+        <p>A rare free rest day, and Sheng Wang couldn't be bothered to go out. He'd meant to hold his ge and experience the tyrant's life of "refusing to hold morning court," but was dug out of the covers by a video call.</p>
+        <p>"This is disturbing the peace—I'll sue you when I'm back on leave," Sheng Wang yawned, sitting cross-legged on the living room floor after washing up, the laptop on the coffee table holding the big face of that idiot Gao Tianyang leaning in close.</p>
+        <p>"My bad, I forgot you two aren't in the old place these two months—there's a three-hour time difference now." Gao Tianyang pressed his palms together at the screen. "Sue me however you like when you're back, I promise not to deploy Lawyer Li first."</p>
+        <p>"Get lost, Pepper wouldn't aid a tyrant in evil."</p>
+        <p>Gao Tianyang snickered, a punchable smugness all over his face.</p>
+        <p>"Where's my Tian-ge?"</p>
+        <p>Sheng Wang sat too low, his view blocked by the kitchen bar; turning to look around, he saw no sign of him. "Probably still washing his face."</p>
+        <p>He'd no sooner said it than he faintly heard a sizzling from the kitchen, and added, "Heating the pan."</p>
+        <p>Gao Tianyang's brain didn't catch up. "Washing his face with a pan?"</p>
+        <p>"…" Sheng Wang asked sourly, "Have you been drinking tonight?"</p>
+        <p>"You know what, I really have had quite a bit."</p>
+        <p>It was night back home—deep night—yet Gao Tianyang was full of energy, face glowing red, a stark contrast to the young master, whose eyes were bleary, whose voice was thick, and who had bedhead sticking up on top. Those two tufts were very stubborn, sticking up no matter how he combed.</p>
+        <p>Luckily he didn't have to go out and see anyone, and a friend like Gao Tianyang hardly counted as a person, so after a few failed swipes the young master gave up struggling and let it be.</p>
+        <p>"All right, no more nonsense, to business—when do you and Tian-ge have time off this year?" Gao Tianyang asked.</p>
+        <p>"You mean a normal break or a long holiday?"</p>
+        <p>"Longer's better, obviously."</p>
+        <p>"Let me see, there aren't many months left this year." Sheng Wang flipped through the calendar. "July, I guess—July's a bit lighter, and his side happens to have a break too—"</p>
+        <p>As he spoke, he felt someone smooth down the tuft sticking up on his head; turning, he found Jiang Tian had come over at some point, carrying two cups of oat milk.</p>
+        <p>"Tian-ge," Gao Tianyang called.</p>
+        <p>Jiang Tian greeted him and handed one cup to Sheng Wang.</p>
+        <p>"Rare—Sheng-ge's actually drinking something hot?" Seeing the steam at the cup's mouth, Gao Tianyang joked, "Where's the standard-issue iced water?"</p>
+        <p>"Not allowed," Sheng Wang said.</p>
+        <p>"They control even that?"</p>
+        <p>Carrying the other cup, Jiang Tian sat down on the sofa behind Sheng Wang, his bent long legs serving the certain someone as a backrest. Elbow on his knee, he said to Gao Tianyang, "Ask him how few days it's been since his stomachache."</p>
+        <p>"Stomachache?" Gao Tianyang immediately pulled out the various scare-articles Pepper used on him. "Then you've got to be careful—if it's frequent, best to get it checked at the hospital. How'd you get a stomachache out of nowhere?"</p>
+        <p>Sheng Wang gave a dry laugh and jerked his thumb back at his ge. "Blame him."</p>
+        <p>Gao Tianyang: "Huh?"</p>
+        <p>"He got hold of a pack of wrappers from somewhere and tried frying a pan of spring rolls one day."</p>
+        <p>"And then?"</p>
+        <p>Gao Tianyang wanted to say "food poisoning?" but with his Tian-ge staring, swallowed the words back down. Just as well he didn't, because next he heard Sheng Wang say, "They came out above his usual level, tasted kind of good, so naturally I had to give him face and cheer him on, right?"</p>
+        <p>"So?"</p>
+        <p>"Stomachache from overeating," Jiang Tian concluded, pressing the certain someone's thumb back down.</p>
+        <p>The young master touched his stomach with lingering dread.</p>
+        <p>Gao Tianyang: "…"</p>
+        <p>He thought: I clearly have a girlfriend, how do I still get fed dog food?</p>
+        <p>Luckily the two showed mercy and didn't stuff him full too. Sheng Wang obediently drank a sip of hot milk and, picking up the earlier topic, asked, "We've got time off in July—any later and it'd be the Christmas–New Year stretch."</p>
+        <p>"You coming to visit?" Jiang Tian asked.</p>
+        <p>Gao Tianyang said, "Yeah, I'm coming to find you two."</p>
+        <p>"On vacation?"</p>
+        <p>"No." Gao Tianyang waved a hand. "On honeymoon."</p>
+        <p>"Go find Pepper for your honeymoon—what do you want with us?" A forehead full of question marks.</p>
+        <p>Jiang Tian was even more puzzled. "You're getting married? Why didn't you say so earlier?"</p>
+        <p>"Aren't I saying it now? Earlier I didn't even know I was getting married either." Gao Tianyang scratched the back of his head and grinned foolishly. "I proposed today."</p>
+        <p>Jiang Tian: "…"</p>
+        <p>Certain great idiots were truly admirable—just proposed and already planning the honeymoon.</p>
+        <p>"How'd you propose?" Sheng Wang asked.</p>
+        <p>Gao Tianyang, beaming, recounted his goofball procedure and the flustered comedy of errors he'd produced, until Sheng Wang's face went blank.</p>
+        <p>Jiang Tian, always with a way with words, asked, "Pepper actually said yes?"</p>
+        <p>Gao Tianyang said, "Maybe I cried so pitifully she couldn't bear it."</p>
+        <p>He mulled it over a couple of seconds and added with self-awareness, "Or maybe she wanted to hurry me home before I embarrassed her."</p>
+        <p>Sheng Wang pictured the scene and nearly toppled over laughing, propped up by Jiang Tian's leg.</p>
+        <p>He drank a few more sips of milk to recover. "I knew it—no wonder you're all glowing today. So what's the plan after?"</p>
+        <p>"We want to register on September 1st."</p>
+        <p>"September 1st?"</p>
+        <p>"The first day of school," Gao Tianyang said.</p>
+        <p>Sheng Wang thought over what the date signified, and felt a touch of comfort—good, the idiot's romantic cells hadn't gone entirely extinct.</p>
+        <p>"Pepper doesn't want it too traditional, so I figured we'd register and then find time to get away for a vacation, relax a bit," Gao Tianyang said. "Isn't Little Mouth in Canada now? Don't know if he's busy the second half of the year, I'll ask him in a bit."</p>
+        <p>Little Mouth Xu's nature was the polar opposite of his dad's—quiet, fond of plants. So he'd chosen a major in forestry engineering and thrown himself, peacefully, into nature.</p>
+        <p>Jiang Tian said, "We saw him a while back."</p>
+        <p>"How's he doing?"</p>
+        <p>Sheng Wang said, "He was out on a helicopter mission that day—look, walkie-talkie clipped here, and a sidearm too, in case he ran into a bear. Pretty cool, just covered in injuries—his arm got bitten by some venomous bug, swollen till it shone."</p>
+        <p>Gao Tianyang: "…Then I've got to go see him all the more."</p>
+        <p>"Forget it," Sheng Wang said, not knowing whether to laugh or cry. "Don't go provoking single brothers on your honeymoon, all right?"</p>
+        <p>"Little Mouth's such a calm person," Gao Tianyang said, disapproving. "He definitely wouldn't be provoked."</p>
+        <p>"He would," Sheng Wang said.</p>
+        <p>"How do you know?"</p>
+        <p>"Experience," Jiang Tian put in abruptly.</p>
+        <p>Gao Tianyang: "???"</p>
+        <p>Sheng Wang said gravely, "The two of us were sent packing by him."</p>
+        <p>"…" Gao Tianyang thought it over. "Then no surprise at all."</p>
+        <p>Gao Tianyang and Little Pepper did register on September 1st that year, commemorating the day in their youth when they'd met on the Yizhong campus. The honeymoon was set for late December; Sheng Wang and Jiang Tian of course didn't go early to play third wheel—they only arranged the itinerary and booked the hotels for them.</p>
+        <p>Not until the last two days of the honeymoon did Sheng Wang and Jiang Tian pack up and go to Venice to meet them, and see them off besides.</p>
+        <p>The lodging for those two days was one Jiang Tian had booked in advance—a very cozy, atmospheric place. The landlord, an older man, told them in heavily accented English how to cross the bridges to the island and which card was most convenient to buy, and even gave Gao Tianyang and Little Pepper a little wedding gift.</p>
+        <p>The island wasn't big, and walking it took little time. Water wound through rows of beautiful buildings, and between the rows were exquisite arched bridges everywhere.</p>
+        <p>Toward evening, Pepper was picking out a bag at a corner shop, getting a gift for Carp, with Gao Tianyang keeping her company. The young master leaned at the bridge with his hands in his pockets and waited a while, then, while his ge wasn't looking, slipped off to the artisan gelato shop nearby to buy a few scoops—and was caught red-handed by Jiang Tian in the act of paying with one hand and taking the goods with the other.</p>
+        <p>"Who sneezed three times in a row yesterday?" Jiang Tian asked, frowning.</p>
+        <p>The young master, shielding the gelato, pushed him out of the shop, over to a sheltered corner out of the wind. He scooped a spoonful himself first, then turned his head and gave his ge a kiss carrying the cold and the sweetness.</p>
+        <p>"There, now you've eaten some too, you've no standing to lecture me." Sheng Wang spread his hands frankly, and before Jiang Tian could catch him, turned and ducked into a gift shop next door.</p>
+        <p>Jiang Tian touched the gelato flavor lingering at the corner of his mouth and followed in.</p>
+        <p>The shop wasn't big, hung all over with tapestries and woven cloth, the shelves holding little brass and glass trinkets—quill pens, crystal balls, and so on—the patterned windows ornate and richly colored, so that the whole place was very dim, and with the smoke of incense had a mysterious air, quite the part.</p>
+        <p>An old woman sat tucked behind the counter, colored cords braided into her fluffy long hair, wrapped in a large shawl, head down at her own work, not paying customers much mind.</p>
+        <p>Sheng Wang flicked the wind chime hanging by the shelf and was about to leave when Gao Tianyang came in carrying several big paper bags. Pepper had little resistance to this sort of finely made thing; she circled the shop several times, itching to buy that boxed quill-pen set.</p>
+        <p>"You want it?" Gao Tianyang asked.</p>
+        <p>"No, for Carp," Pepper said. "What do you all think? Pretty?"</p>
+        <p>Jiang Tian gave his earnest opinion: "What would she use a quill pen to write?"</p>
+        <p>Pepper: "…"</p>
+        <p>"What about this, then?" She pointed at another feather pendant. "It's pretty too, could be a sweater chain."</p>
+        <p>Gao Tianyang asked, puzzled, "Is hanging a bird feather on yourself pretty?"</p>
+        <p>Pepper: "…"</p>
+        <p>Of these three browsing companions, one had a dead aesthetic sense and two were pragmatists; entering a gift shop of this style was the biggest mistake. Their faces plainly read "only a fool would buy this stuff." Pepper rolled her eyes, stopped minding them, picked out a few little things by her own taste, paid, and left.</p>
+        <p>In any case, the trip counted as a full haul. Back at the lodging that night, they spread the bags large and small on the table to take stock, and only then found they really had bought a great many things. But among them was something no one had seen before.</p>
+        <p>Sharp-eyed Pepper pulled two pendants from a corner, puzzled. "Eh? Who bought these two?"</p>
+        <p>"Wasn't it you?"</p>
+        <p>"Not me, I got the sweater chain, not these."</p>
+        <p>The two pendants plainly came from that "mysterious"-feeling gift shop—identical gray-blue bird feathers, brass clasps, engraved with a quaint pattern. Exactly the typical "only a fool would buy it" stuff in their eyes.</p>
+        <p>"Did that granny grab the wrong ones?" Pepper asked, worried.</p>
+        <p>As she and Gao Tianyang exchanged a look, Jiang Tian's voice suddenly cut in; he took the two clasps and said, "Not the wrong ones."</p>
+        <p>Gao Tianyang blanked. "Huh?"</p>
+        <p>Jiang Tian shot him a glance and put the clasps into his trouser pocket. "I bought them."</p>
+        <p>Gao Tianyang and Little Pepper, foreheads full of question marks.</p>
+        <p>Sheng Wang turned to look at Jiang Tian, and with his uncommon understanding, managed to read a trace of awkwardness beneath his ge's calm expression.</p>
+        <p>He couldn't help wanting to laugh, so he hooked Jiang Tian's shoulder and asked, "Ge, why'd you sneak and buy these?"</p>
+        <p>Why had he bought them?</p>
+        <p>Because as they were leaving the shop, Jiang Tian, falling last for replying to a phone message, suddenly heard the foreign old woman, head down at her own work, say in heavily accented English, "Take this little pair along."</p>
+        <p>Jiang Tian blanked and turned to look at her.</p>
+        <p>On her withered, aged fingers hung two not-very-eye-catching clasps—the first time she'd addressed a customer of her own accord. The fine chain of her glasses dangled at her front, the frames slid down to the lower bridge of her nose, and her pale blue eyes looked over from behind the lenses as she said again, "Take this little pair along—you'll love each other long and forever."</p>
+        <p>Those three had already left the shop; Jiang Tian glanced at the door and saw, not far off, Sheng Wang look back, as if searching for him.</p>
+        <p>His brow and eyes softened, and he took the pendants from the old woman's hand and said low, "Thank you."</p>
+        <p>In that moment the setting sun fell on Venice's winding waterways, gilding the patterned windows, the feathers on the clasps lit with a brilliant outline.</p>
+        <p>The years, like that blessing, were gentle and long.</p>
+        <p>──End of Extra──</p>
+        <p>(End of the Book)</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-112-young.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <span class="nav-link disabled">Next →</span>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

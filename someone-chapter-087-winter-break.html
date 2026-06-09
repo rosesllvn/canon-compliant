@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 87 — Winter Break — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 87 · A Certain Someone</p>
+      <h1 class="reader-title">Winter Break</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>"Xiao Chen's coming to pick us up in a bit—so, are you two going home to stay tonight?" Sheng Mingyang helped Jiang Ou carry the dishes and chopsticks to the kitchen and, washing his hands, asked Sheng Wang.</p>
+        <p>"Not going back." Sheng Wang shook his head. "The teacher only approved our leave for evening study, not the nighttime dorm check."</p>
+        <p>"That's fine too—finals are right around the corner anyway, go home and rest well once they're done."</p>
+        <p>"Mm…"</p>
+        <p>Sheng Mingyang pulled a tissue to dry his hands. The window before him was a bright wet sheet, and Sheng Wang stood in that reflected glow, lost in thought. Sheng Mingyang shot a glance over and asked, "What's wrong? You look out of sorts."</p>
+        <p>"Nothing, just tired." Sheng Wang rubbed the corner of his eye and answered offhand.</p>
+        <p>"Oh, I thought you were under pressure with the exam coming up."</p>
+        <p>"As if." Sheng Wang gave a small laugh. "When have you ever seen your son stressed about an exam?"</p>
+        <p>"True enough." Sheng Mingyang laughed and walked off, patting the back of his head on the way.</p>
+        <p>Boys shot up fast at this age, growing like bamboo. He still remembered Sheng Wang as a tiny thing, the back of his head all downy, easy to pat with a casual hand. As if in the blink of an eye, that little cub of years past had grown nearly as tall as him, and would shoot up some more besides; this head-patting motion no longer came easy to him.</p>
+        <p>Not many years left… Sheng Mingyang thought.</p>
+        <p>He could still shelter every side of his son now, but in a few years, who knew. Grown up, wings hardened, flown too far. No parent could face this process with equanimity—like beasts fighting over the last of their territory.</p>
+        <p>At least this precious son of his was relatively low-maintenance.</p>
+        <p>Sheng Wang and Jiang Tian said their goodbyes and walked back to school together. Xiao Chen picked up Sheng Mingyang and Jiang Ou and drove toward Baima Lane. Jiang Ou leaned against the seat back a while, then suddenly asked Sheng Mingyang, "Why move the time up? Didn't we say after the new year to treat everyone to a meal?"</p>
+        <p>She was someone with a keen sense of propriety and occasion, rarely undercutting anyone on the spot. There were in fact often differences between her and Sheng Mingyang—the unavoidable friction between work partners or spouses, and they were both—but they never showed it in front of Jiang Tian and Sheng Wang.</p>
+        <p>Sheng Mingyang patted the back of her hand and smiled. "The drink went to my head a little, got carried away and decided on my own. What, don't want it that early?"</p>
+        <p>Jiang Ou looked out the window a while. "Not that—there's just too much going on before the new year, afraid I won't manage it all."</p>
+        <p>It wasn't really Sheng Mingyang's fault; before or after the new year made little difference. She was just a bit out of sorts—maybe the aftereffect of that encounter at the hospital. She rubbed the phone screen, unlocked it, and scrolled Moments aimlessly a few times, then couldn't resist tapping into Du Cheng's album.</p>
+        <p>There wasn't much in his album—early on, the occasional shared article or report; these past couple of years, more about life, sometimes a gloomy framed painting, sometimes a hospital photo. Most of it low in spirits, even a bit changeable, like weather.</p>
+        <p>Jiang Ou had heard from the doctor that people with brain lesions turned like this—temper greatly altered, hard to read. She was still drifting in thought when she pulled the refresh out of habit, and saw Du Cheng's album had suddenly gained a post, made just now—</p>
+        <p>He'd photographed his nightstand, the fruit baskets from classmates and friends on it, including, of course, the bunch of flowers Jiang Ou had bought on the spur of the moment. He'd captioned it with three headless, tailless words: <em>I'm sorry.</em></p>
+        <p>A patient's ramblings easily dragged a person down with them; Jiang Ou stared at the post a while and felt uneasy.</p>
+        <p>"Your classmate?" Sheng Mingyang asked.</p>
+        <p>"Mm." Jiang Ou nodded.</p>
+        <p>"What illness?"</p>
+        <p>"Cancer, spread."</p>
+        <p>Sheng Mingyang felt a pang of regret. "Too rushed today. In a couple of days I'll find time to buy some things and go with you to see him again. He's probably about our age—if something happens, it'll be a hard road for his wife and kids."</p>
+        <p>Jiang Ou nodded, then after a moment said, a little uncertain, "He seems… not married."</p>
+        <div class="scene-break">❖</div>
+        <p>Sheng Wang and Jiang Tian settled on a place, and the agency moved fast, wrapping up the paperwork in a blink—only the landlord went on back-to-back business trips, so they'd have to wait for his return to get the access card and keys.</p>
+        <p>There weren't many days left in the term, so the two simply decided to move after exams.</p>
+        <p>What Sheng Mingyang had said that night hung overhead like this season's overcast rain, a sheet of gray-blue pressing down. Sheng Wang and Jiang Tian skipped over it in tacit accord—neither brought it up again.</p>
+        <p>Because they understood, better than anyone, that they could neither go charging recklessly over to tell Sheng Mingyang and Jiang Ou they were already together, nor stand between the two elders and say <em>don't get married.</em></p>
+        <p>For now, the problem had no solution.</p>
+        <p>In the last few days before finals, many day students stayed on of their own accord for one final evening study, including a few from Class A. Gao Tianyang filled a bottle at the water dispenser and strode over to Jiang Tian's desk in measured steps. "Tian-ge, moved? You finally don't have to have evening study to yourself."</p>
+        <p>Jiang Tian's pen didn't stop; he finished an equation before looking up. "Why are you doing an extra period?"</p>
+        <p>"His butt's heavy—sits firm in the class's dead-last spot, won't budge no matter who tugs." Song Sirui cut in: "Now he knows to panic, scared Sheng-ge'll kick him down a floor at finals."</p>
+        <p>"Your butt's the heavy one," Gao Tianyang cursed back without ceremony, then asked, "Why aren't you leaving either?"</p>
+        <p>Song Sirui said, "My mom put it out there: top five in the grade at finals and she'll reward me with a new phone."</p>
+        <p>"You're so materialistic." Gao Tianyang sat on the desk waiting for the bell. He turned to look behind and called, "Pepper? Little Pepper? Classmate Li Jia?"</p>
+        <p>Pepper, hit on the forehead by his little paper ball, finally looked up. "What?"</p>
+        <p>"You've placed grade first and you're still this hard at it?" Gao Tianyang pointed at Jiang Tian. "Looking at this, you don't want my Tian-ge back on the throne, huh."</p>
+        <p>Pepper shot Jiang Tian a glance, then hurriedly withdrew it. "Mind your own business."</p>
+        <p>Gao Tianyang, thick-nerved as he was, rarely noticed others' oddities, but asked, "Eh? I've noticed you've been kind of listless lately."</p>
+        <p>Ever since the arts festival, Pepper's state hadn't been great. She'd accidentally stumbled on a secret, and her first green crush had ended right there.</p>
+        <p>To say it didn't hurt would be impossible, but it wasn't as bad as imagined—a muffled, dull ache. Looking at Jiang Tian ached, looking at Sheng Wang ached more; only bickering with Gao Tianyang eased it briefly, and that dumb bird knew nothing, picking his way straight through the minefield—</p>
+        <p>Jiang Tian finished the problem, gathered his papers in a gap of their squabbling, and picked up his bag.</p>
+        <p>Gao Tianyang asked at once, "What are you grabbing your bag for, skipping evening study?"</p>
+        <p>Jiang Tian jerked his chin toward the back door. "Lecture hall."</p>
+        <p>Gao Tianyang followed his gaze and only then noticed Sheng Wang had come up, leaning at the back door with a hand on his bag and the other in his pocket.</p>
+        <p>"Lively today, huh?" Sheng Wang said.</p>
+        <p>"Sheng-ge!" Gao Tianyang and Song Sirui greeted him, then asked, "So Tian-ge, you usually do evening study in the lecture hall?"</p>
+        <p>Before Jiang Tian could speak, Sheng Wang cut in. "Yeah. More people downstairs, better atmosphere."</p>
+        <p>The moment Gao Tianyang heard "better atmosphere," he raked his books into his bag. "Then I'm going too."</p>
+        <p>At that, Sheng Wang, Jiang Tian, and Little Pepper all looked at him in silence. Gao Tianyang blanked, scratched his head. "What?"</p>
+        <p>Pepper thought: what an idiot, not a shred of perceptiveness.</p>
+        <p>And a few minutes later, this very perceptive person was dragged to the lecture hall by the pair of idiots Gao Tianyang and Song Sirui, who insisted on sitting right in front of Jiang Tian and Sheng Wang.</p>
+        <p>She heard Gao Tianyang turn around and lower his voice to the two of them: "I'm planning to board next term too. Wonder if I can talk to the teacher about a swap—I want to room with you two."</p>
+        <p>"We're not boarding next term," Jiang Tian said.</p>
+        <p>"Huh?" Gao Tianyang asked, puzzled. "Then where are you living?"</p>
+        <p>"Renting a place," Jiang Tian said.</p>
+        <p>"The two of you together?"</p>
+        <p>"Mm."</p>
+        <p>Pepper instinctively elbowed the desk behind her. She'd meant to remind them that with this many people in the lecture hall, they should be a little careful talking.</p>
+        <p>But having done it, she realized she'd overthought—Fuzhong had countless students renting; the words themselves were perfectly fine.</p>
+        <p>She lifted her head awkwardly and found the boys all looking over blankly.</p>
+        <p>Pepper met Sheng Wang's gaze and nearly cracked. After holding it in a while she forced out, "Talk after class if you've got things to say."</p>
+        <p>Maybe her acting was too poor to hide her thoughts, because over the next few evening study sessions Sheng Wang's gaze kept sweeping over her, intentionally or not, and after she caught it once he smiled apologetically and never looked over again—a kind of restrained, polite observation.</p>
+        <p>It wasn't until the dusk after finals ended that this observation had a sequel.</p>
+        <p>She got a WeChat from Sheng Wang on the school bus home. He said: <em>Pepper, can I ask you something.</em></p>
+        <p>The temperature plunged that day; a few scattered drops of rain fell before dawn and soon turned to snow, and by dusk all of Fuzhong was frost-white. The snow wasn't heavy; Sheng Wang and Jiang Tian carried no umbrella, and by the time they reached the west gate only a little damp had soaked their shoulders.</p>
+        <p>Sheng Wang typed fast, gripping his phone, his knuckles faintly red.</p>
+        <p>"Who are you chatting with, racing the clock like that?" Jiang Tian shot him a glance, drew his hand from his pocket, and grabbed his fingertips—and felt he'd grabbed an ice-skinned pastry.</p>
+        <p>Because of the snow, there was hardly anyone outside the west gate. Sheng Wang seized the chance to press the whole back of his hand into Jiang Tian's palm, warmed it a while, flipped it over, then rubbed his fingertips and went on typing.</p>
+        <p>Having sent the line, he looked up. "Asking Pepper something."</p>
+        <p>Flecks of snow rolled off his lashes; Jiang Tian caught one with the crook of a finger. "What thing?"</p>
+        <p>Sheng Wang was about to speak when the phone screen lit up. He pinched his knuckles, and a few seconds later lowered his eyes to unlock it—a new line in the WeChat chat box.</p>
+        <p class="msg"><strong>Pepper:</strong> I saw, the day of the arts festival.</p>
+        <p>So it was.</p>
+        <p>Sheng Wang thought.</p>
+        <p>He exchanged a glance with Jiang Tian and froze in the snow, for a moment not knowing how to reply. As he hovered his finger weighing his words, Pepper sent another line.</p>
+        <p>She said: <em>I didn't tell anyone.</em></p>
+        <p>She said: <em>Don't worry.</em></p>
+        <p>Sheng Wang blanked a good while, then suddenly his brows and eyes curved.</p>
+        <p>This was the first person in the know to state it plainly—and she stood on his and Jiang Tian's side. A little unexpected, but on Pepper it seemed only natural after all.</p>
+        <p>One friend really couldn't represent anything, or solve anything. But it still briefly swept the clouds aside and let them breathe a few easy breaths.</p>
+        <p>And so winter break arrived just like that.</p>
+        <p>Fuzhong's winter break was neither long nor short—from the 25th of the twelfth lunar month to the fifth day of the new year, dodging the peak periods on either side and barely scraping together ten days. Right before the break the school held a brief mobilization, the gist simple: break would be over by early February, exactly a month before the "small college entrance exam" in early March.</p>
+        <p>The "small exam" meant cramming all the remaining non-elective subjects into one go. For science students like Sheng Wang and Jiang Tian, that was history, geography, politics, and biology, graded by score: an A in one subject added a point to the college entrance exam, all four A's added five points.</p>
+        <p>And examinees who failed the small exam weren't qualified to sit the formal college entrance exam, so every school took it very seriously.</p>
+        <p>By Fuzhong tradition, the school would suspend the main subjects to focus solely on these four, cramming intensively for a month. By Class A tradition, there was just one requirement: all A's.</p>
+        <p>Not "try your best"—mandatory. Whoever dropped one disgraced themselves.</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-086-family-dinner.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-088-gift.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

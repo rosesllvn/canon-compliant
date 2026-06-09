@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 101 — Loosening — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 101 · A Certain Someone</p>
+      <h1 class="reader-title">Loosening</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Sheng Wang had an instant of blankness, the smile fading from the corners of his eyes and mouth.</p>
+        <p>Jiang Tian touched the glass of milk lightly to his cheek. He took it and drank, and glanced sidelong to see Jiang Tian replying to the labmates' messages in the group.</p>
+        <p>Sheng Wang watched a while, set down the glass, and said to the person on the phone, "All right—you set the time?"</p>
+        <p>Sheng Mingyang had only been waiting for his agreement, and laughed. "I'll be in this afternoon, free both days. Dad's not as busy as you right now, so I'll go by your schedule."</p>
+        <p>Sheng Wang said, "Tonight, then. What time do you land? I'll pick you up."</p>
+        <p>By the time Jiang Tian looked over, he'd already hung up.</p>
+        <p>"Work again?"</p>
+        <div class="scene-break">❖</div>
+        <p>Sheng Wang slung a hand over his shoulder and tossed the phone to the table's edge. "Mm. I just snuck a look—don't you have to treat the professor to a meal today too?"</p>
+        <p>In the world of grown-ups, the closer to a holiday, the less peace there was.</p>
+        <p>Beijing's New Year's Day came with snow flying, and the lovely vision of nesting in the room all day was strangled in the planning. Jiang Tian was called away by his labmates, mainly to celebrate the solar new year with the professor, and incidentally to gossip about the matter of him and his "old classmate." Sheng Wang went to see Sheng Mingyang.</p>
+        <p>Though the weather wasn't kind, it was New Year's Day after all, and everywhere was packed. Sheng Wang booked a spot at a villa-style hotpot place, which wasn't so noisy.</p>
+        <p>Sheng Mingyang took off his coat and draped it over the chair back, rolled the shirt sleeves up over his gray cashmere sweater, swept a glance around, and said, "Isn't there a mall restaurant right downstairs from you—why come all the way out here?"</p>
+        <p>"Don't you like the wagyu here?" Sheng Wang said.</p>
+        <p>Sheng Mingyang blanked.</p>
+        <p>He did like the wagyu here; earlier he'd invited friends and Sheng Wang to eat here a couple of times. He might have mentioned it offhand, or might not have said so outright—in any case he himself had no memory of it, and hadn't expected his son to remember.</p>
+        <p>This was how his and his son's relationship had been these years. Sheng Wang was filial, very filial, attentive to every detail large and small, even to a soothing degree. Just as Sheng Mingyang had hoped and pictured for that little tyke twenty-some years ago—outstanding, graceful as jade. By rights he should have been gratified and pleased, yet at some instant he'd always turn forlorn.</p>
+        <p>They said there must inevitably be a tug-of-war over the say between father and son, like male animals fighting over territory, from controlling to being controlled—some could squabble and battle over it a whole lifetime.</p>
+        <p>But they were different; he didn't like graceless squabbling, and Sheng Wang didn't like ruthless fighting.</p>
+        <p>Sheng Mingyang had once thought himself open-minded—he and his son each holding half the territory, peaceful and harmonious. Only much later did he realize he'd never stopped marking out ground; it was just that each block he marked, Sheng Wang would shift a little to the side—not fighting, not grabbing, yet walking farther and farther away.</p>
+        <p>By the time he finally caught on, he couldn't even make out the shadow anymore.</p>
+        <p>He occasionally missed that clumsy Wangzai a little—who'd find his voice messages too long and only listen to the openings, who'd rename his contact by whatever he shared, who'd hang up the phone outright in a bad mood and call him "Old Comrade Sheng Mingyang" when pleased.</p>
+        <p>He'd often found it a headache before; now he could never enjoy it again.</p>
+        <p>Sometimes, stifled past bearing, he'd want to ride the drink and ask, "Are you taking revenge on Dad?"</p>
+        <p>But he knew it wasn't that—Sheng Wang was soft-hearted and wouldn't do it on purpose. And precisely because it wasn't on purpose, Sheng Mingyang felt all the more stifled and pained.</p>
+        <p>This Beijing trip wasn't really so necessary; he could have come or not. But washing his face before bed last night, he'd glanced in the mirror and found white hairs at his temples—not one or two either, as if grown overnight.</p>
+        <p>He'd stood before the mirror a while parting his hair, and suddenly wanted very much to see his son, to have a proper meal with Sheng Wang on the first day of the new year.</p>
+        <p>Maybe it was age—more than a successful career and a respectable life, he wanted to hear Sheng Wang say, in the tone of his ten-odd-year-old self, "Comrade Sheng Mingyang, you've got white hairs."</p>
+        <p>But he looked up to see only Sheng Wang close the menu, smile at the waiter, and turn to ask, "Dad, do you want a drink?"</p>
+        <p>To say there was no disappointment would be a lie. Sheng Mingyang was silent a moment, then waved a hand. "No, water's fine. I've seen several people lately drink themselves into gout—I should hold back a bit."</p>
+        <p>The Sheng Wang of childhood would surely have said, "Too late once you're crippled." Now he only nodded. "If it's not for work obligations, better drink less."</p>
+        <p>The waiter brought the fish-maw broth base and two dipping-sauce plates. Sheng Mingyang took a sip of plain water and, with a smile, changed the subject. "I went to Hangzhou a while back, had a meal with Xiao Peng. He even complained to me—said when you're busy you turn night into day, and it's no easy thing to catch you once."</p>
+        <p>The "Xiao Peng" Sheng Mingyang meant was Peng Xie, WeChat handle Eight-leg Crab, who'd stayed in on-and-off contact with Sheng Wang all these years. He'd gone to university in Guangzhou; Sheng Wang had visited him a couple of times, and he'd come to Beijing too. After graduation each spun busy as a top, and meeting for idle chat grew much harder.</p>
+        <p>Crab's family had decent means; two months into a job after graduation he couldn't stand the supervision, borrowed some startup capital from his dad, quit, and went into business to scoop up gold. Loyal enough and able to drink and talk, he'd done surprisingly well.</p>
+        <p>There'd been a stretch when Sheng Mingyang hit a snag in business and wanted someone to smooth a connection; round and round it had come back to his son, and the one Sheng Wang found was Crab.</p>
+        <p>With the two ends connected, Sheng Mingyang had automatically crossed a generation and become Crab's business partner.</p>
+        <p>"He's all right," Sheng Wang said, mixing his sauce and handing the empty plate to the waiter. "He became a dad last time and got all worked up—didn't I keep him company chatting till three in the morning?"</p>
+        <p>Sheng Mingyang laughed, flipped through a few photos on his phone, and swiped them over for Sheng Wang to see. "Have you seen his kid? I met them that day—clear features, quite well-formed."</p>
+        <p>"It's only a few months, and you can already tell 'clear features'?" Sheng Wang said sourly. "Back then you said Director Xu from the discipline office was well-formed too."</p>
+        <p>It took Sheng Mingyang a beat to recall which Director Xu, and then he froze.</p>
+        <p>These years, when father and son met and chatted, they rarely mentioned the people and things of Fuzhong. It was like a forbidden zone—bring it up and nine times out of ten it would end in silence, and Sheng Mingyang didn't like courting awkwardness.</p>
+        <p>This was the first time Sheng Wang had brought it up of his own accord, and in a joking tone besides. An inexplicable ache rose in Sheng Mingyang's chest, like a long-pried rock finally showing a trace of give; as a father he was almost moved.</p>
+        <p>The fish-maw chicken broth, thick and golden, bubbled in the pot. The waiter blanched the wagyu for them and divided it into their plates. Sheng Mingyang lowered his head in the rising steam and, eating in a hurry, scalded the tip of his tongue.</p>
+        <p>He drank several sips of water in a row, wanting to keep the topic and the mood going, so he seized on Crab and dug in. He talked of how Crab had married right out of school, of how the IOU to his dad was finally paid off this year, of how the family of three shared one face, all blessed with fortunate looks. His parents did nothing these days but orbit their granddaughter, offered the stars and unwilling only over the moon.</p>
+        <p>Carried away, he carelessly chatted his way into the minefield.</p>
+        <p>Sheng Mingyang said, "When are you going to get me a little something too—then Dad can wash his hands of it all and enjoy the joys of family."</p>
+        <p>He'd only blurted it as one line led to another, and felt it inapt the moment it was out; seeing Sheng Wang's chopsticks pause, he regretted it the more. But with the waiter still blanching their meat, he eased a slow breath—there was still an outsider present, so Sheng Wang wouldn't say anything too far.</p>
+        <p>Sheng Wang paused only an instant before going on dipping his sauce. Having eaten that bite and drunk some water, he set down the glass. "That one probably won't work. How about I get you a cat, or adopt one home down the line—grandson or granddaughter, you call it."</p>
+        <p>Sheng Mingyang had just lifted a chopstickful of beef, and at this his motion stopped. He held the chopsticks frozen a few seconds, then laughed it off softly. "All right, you're still young. I know people your age are all like this—ask and it's a no, ask again and it's never. Set that aside, and later on—"</p>
+        <p>Sheng Wang cut him off, his tone very calm: "Later on it'll probably be the same too."</p>
+        <p>Sheng Mingyang lifted his eyes, about to speak, and Sheng Wang added, "Jiang Tian's back in the country."</p>
+        <p>Silence spread between father and son in an instant. Sheng Mingyang finally lost his appetite and set down his chopsticks. He glanced at the waiter, who, eyes fixed straight ahead, blanched the last slice of meat, set it in the plate, said "enjoy," and tactfully withdrew.</p>
+        <p>In that instant, time seemed to flow backward to that day years ago. They'd sat like this in silence in the car too, until one of them spoke first.</p>
+        <p>Back then it had been Sheng Mingyang; this time it was Sheng Wang.</p>
+        <p>He said, "Just these past few days—he's back doing a project, and we ran into each other at a dinner."</p>
+        <p>Nothing showed on Sheng Mingyang's face; he frowned, and only after a long while picked it up. "And then?"</p>
+        <p>"When you called me this morning, I was at his place." Sheng Wang paused a moment and said openly, "I still like him, and I still mean to be with him."</p>
+        <p>The fingers Sheng Mingyang rested on the table twitched.</p>
+        <p>For an instant he thought: if only it weren't a restaurant like this, if only there weren't so many people around… but then he realized—what would that change? Sheng Wang was no longer the youth he could pull along at a tug.</p>
+        <p>Then another awareness surged up from below like a rising tide. He finally knew why Sheng Wang had answered the phone with a smile, and finally knew why the rock had begun to loosen.</p>
+        <p>How absurd—that he, as a father, on the one hand anxiously awaited this day, and on the other wanted to press it all back down. He wanted the result, not the cause of it.</p>
+        <p>But it wasn't his to decide. He could only choose to accept it whole, or shatter it utterly.</p>
+        <p>Sheng Mingyang stared at a spot on the table, lost in thought a long while, drew a deep breath, then lifted his eyes. "And if my attitude were still the same as before?"</p>
+        <p>"That'd be normal," Sheng Wang said. "If you said you'd changed just like that, I'd actually be more surprised. But what I want to say is different from before."</p>
+        <p>"You said back then to have me tell everyone I like men, and see how people reacted." Sheng Wang gave a very faint smile. "You weren't here these years, so you may not know. I've told a lot of people—as long as someone asks, I dare say it. The conclusion's pretty strange: not one person pointed at me and said, <em>are you insane?</em>"</p>
+        <p>Sheng Mingyang couldn't help saying, "Those are all outsiders—of course outsiders don't care about you!"</p>
+        <p>"So if outsiders don't care, what is it the family worries about? Worried I'll be called absurd, perverted? Doesn't that logic seem strange?" Sheng Wang put away the smile and said, a little helplessly, "Dad, besides you, I really haven't heard anyone else talk to me that way."</p>
+        <p>Sheng Mingyang fell silent in an instant.</p>
+        <p>After a long while he gripped his glass and said heavily, "That's to your face—how do you know they don't say it behind your back?"</p>
+        <p>"There are so many people on the street, and the things said behind backs every day are beyond counting. This one's too slick, that one's too dull, this one's too tall, that one's too short, this one's brilliant and dazzling, that one's a useless good-for-nothing—saying behind my back that I like men, how is that any different from those words of mine just now? Who doesn't get talked about?"</p>
+        <p>Sheng Mingyang had no answer.</p>
+        <p>Sheng Wang looked at him and went on, "Back then you also asked me, if I don't find it absurd, why I'd be sad. What else could it be for, Dad?"</p>
+        <p>Sheng Mingyang of course knew what for; he'd simply swapped the concept while interrogating. He'd told Jiang Tian "Sheng Wang is soft-hearted"—how could he not know why his son was sad?</p>
+        <p>The world was like a vast cycle. To make him happy, Sheng Wang hadn't been happy these years. Now it was his turn to tread carefully, wanting only to win Sheng Wang a smile.</p>
+        <p>Sheng Wang said, "I dare go to the cemetery now, and dare tell my mom I like Jiang Tian and want to be with him. I think my mom probably wouldn't scold me—she might even tell me Happy New Year."</p>
+        <p>He was silent a long while, then lifted his eyes to Sheng Mingyang. "Will you say it to me?"</p>
+        <p>For an instant, Sheng Mingyang almost spoke. But maybe from too long a silence, his tongue had rusted; his heart was a sour ache, yet he couldn't get those words out.</p>
+        <p>Sheng Wang didn't press; he had a grown-up's grace and smoothness, and was still soft-hearted as in his youth.</p>
+        <p>They finished the meal in near silence. Sheng Wang had meant to drive him back, but Sheng Mingyang said the roads were slick with snow and there was no need for him to make the round trip.</p>
+        <p>Maybe fathers and sons were just like this—the words you wanted to hear could never be forced out, while useless nagging always came in heaps. In the end Sheng Wang still called him a private car.</p>
+        <p>As Sheng Mingyang got in, Sheng Wang stood outside the window holding the door for him, and before he left said, "Dad, Happy New Year."</p>
+        <p>The words jabbed a dense, prickling ache through his heart.</p>
+        <p>Sheng Wang stood a while in the amber light before the restaurant, until that car merged into the river of taillights strung along the long street. The snow had stopped for an afternoon, and now fell again over all the land. Sheng Wang pulled his scarf up and was about to head for the parking lot when he saw a familiar figure come down from the pedestrian overpass under an umbrella.</p>
+        <p>The man, like in his youth, liked to leave his front open, looking tall, lean, and aloof in the northern night. The hem of his overcoat whipped up in the wind, flecks of snow striking it, soaking out scattered pinprick marks.</p>
+        <p>He walked down the steps to the restaurant entrance, brushed the snow off his front, and said to Sheng Wang, "No umbrella again—nice and soaked?"</p>
+        <p>Sheng Wang's brow and eyes, stiff all evening, finally eased open. He jingled the keys in his hand. "I drove."</p>
+        <p>"How'd you get here?" Sheng Wang walked toward the car shoulder to shoulder with him.</p>
+        <p>Jiang Tian pointed at the commercial district across the way. "Happened to be eating over there—saw you said villa hotpot and came over."</p>
+        <p>"Lucky I stood around a while, or would you have chased after my car's tail?" Sheng Wang said.</p>
+        <p>"Am I insane, chasing a car in the snow?" Jiang Tian said mildly.</p>
+        <p>"Makes it look like deeper feelings."</p>
+        <p>"Give it a rest."</p>
+        <p>Sheng Wang's free hand silently extended a middle finger; before it could straighten, his ge pressed it precisely back down.</p>
+        <p>"How'd the work talk go?" Jiang Tian asked.</p>
+        <p>Sheng Wang got into the driver's seat and fastened his seatbelt head-down. He started the car, swept the thin layer of snow off the windshield, and only once merged into the street's flow of traffic said, "It wasn't actually work—my dad asked me to a meal, and I came out to him again while I was at it."</p>
+        <p>Jiang Tian all but had a complex about "Sheng Mingyang seeing Sheng Wang alone," and at this immediately frowned and looked over.</p>
+        <p>Sheng Wang thought: should've hit the gas before opening my mouth. He freed a hand to cover Jiang Tian's eyes. "I'm driving—accidents come easy in the snow, don't disturb me with your stare."</p>
+        <p>"So you lied and said it was work?"</p>
+        <p>"I know I was wrong, I'm confessing for leniency," Sheng Wang quibbled.</p>
+        <p>Jiang Tian glanced at his expression and thought, who're you fooling—you know nothing.</p>
+        <p>"Mainly, me going alone is reasoning with the old comrade; the two of us going is a show of force, and wouldn't he flip the table?" Sheng Wang smiled at the traffic ahead, then after a moment said earnestly, "Don't worry, it won't be like that time."</p>
+        <p>A long while later, Jiang Tian slowly relaxed and gave a deep "mm."</p>
+        <p>Sheng Wang said, "My dad seems to have loosened up a little."</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-100-wangzai.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-102-neutering.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

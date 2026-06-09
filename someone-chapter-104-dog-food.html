@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 104 — Dog Food — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 104 · A Certain Someone</p>
+      <h1 class="reader-title">Dog Food</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>"What kind of talk is that?" Song Sirui sniped at him. "Can you say that about a man?"</p>
+        <p>"What's it to you? Be civilized—can't you see the class monitor's gone red to the roots?" Gao Tianyang shot back.</p>
+        <p>Pepper rolled her eyes and, hooking the arm of class monitor Carp beside her, said, "Graduated all these years and these guys are still so…"</p>
+        <p>Idiotic.</p>
+        <p>Carp said, "Yeah."</p>
+        <p>Sheng Wang still liked to twirl his pen; ordering, the pencil spun to a blur between his lean fingers. Jiang Tian was still the same, sparing with words, the occasional cold-shot line, paired with Sheng Wang's blank face or "are you short on a beating" expression, enough to crack the whole table up.</p>
+        <p>Gao Tianyang still talked endlessly, able to wedge himself into any two people's conversation, able to spin any topic into a sea—a tan-skinned "social butterfly." Song Sirui was still like a big goose, catching him for a pecking and getting pecked back harder.</p>
+        <p>Little Pepper was still fierce; anyone who teased her got chased and beaten back. Only now she'd narrowed the range, mainly targeting Gao Tianyang.</p>
+        <p>Carp had studied clinical medicine in college, her schooling visibly long—even outdoing Jiang Tian, who'd gone straight for a doctorate. She still liked a simple ponytail, still blushed easily, going red in the face at a single tease.</p>
+        <p class="ellipsis">…</p>
+        <p>They'd plainly gone to different universities, north and south, with new classmates and friends they met more and talked with more, lives and work overlapping. But somehow, when they spoke of the closest, most missed people, it was always still that bunch from Class A.</p>
+        <p>Maybe because they'd witnessed each other's youth—witnessed each other at their most hot-blooded and most idiotic.</p>
+        <p>The third time Sheng Wang scooped ice into his glass, Carp finally couldn't help it. "Do you two know it's winter?"</p>
+        <p>"We do," Sheng Wang said, suppressing a laugh. "It's ten-some below outside."</p>
+        <p>"…" Carp asked earnestly, "Aren't you cold?"</p>
+        <p>"Damn, finally someone said it." Song Sirui cracked a beer open on the table edge. "I wanted to say it when the waiter came in with the ice bucket—eating ice in the dead of winter? You two really don't need to go to the hospital for a checkup? Temperature-perception disorder or something."</p>
+        <p>"Get lost," Gao Tianyang cursed.</p>
+        <p>"Old Song, let me tell you, popsicles used to sell best in winter at our school," Sheng Wang said. "Guess why?"</p>
+        <p>Song Sirui fell for it and asked earnestly, "Why?"</p>
+        <p>"Because we had heating." Having said it, Sheng Wang made a show of giving an "oh." "Right, you all didn't—you can't appreciate that joy."</p>
+        <p>"You—" Song Sirui was so mad he grabbed an empty bowl.</p>
+        <p>Sheng Wang leaned back smirking, dodging out of his attack range—and Jiang Tian happened to be braced right behind him.</p>
+        <p>His assault foiled, and a mouthful of dog food force-fed besides, the class officer set the bowl down hard and forced out, "Damn!"</p>
+        <p>Carp, who likewise couldn't enjoy heating, felt the injustice. She silently poured half a glass of beer and, in cahoots with the few Jiangsu-Zhejiang-Shanghai classmates, under Song Sirui's lead, toasted the Beijing delegation furiously.</p>
+        <p>A "delegation," though really just two—Pepper's cold hadn't cleared and she was still on medication, off alcohol, so she'd sent out her boyfriend. Sheng Wang had flashed his keys the moment he arrived, saying he'd driven, so he too sent out his boyfriend.</p>
+        <p>This only fired up the Jiangsu-Zhejiang-Shanghai delegation's fighting spirit. Friends all these years, and Gao Tianyang's and Jiang Tian's tolerance had always been a mystery—no one present had ever seen what either looked like drunk—so they set their hearts on getting them sloshed.</p>
+        <p>At first they found reasons: "Welcome Tian-ge back to the country, bottoms up," "Tian-ge and Sheng-ge had it hard, bottoms up," "Lao Gao got promoted, bottoms up."</p>
+        <p>Later it turned into "Pepper can actually tolerate an idiot like you, you have to drink one," "Tian-ge, you've got a cat, right? To the cat's health, clink."</p>
+        <p>Once every findable reason was exhausted, they had to start finding fun. A bunch of people grown all these years, and at the mention of table games their first reaction was still the old "Stuck on Seven."</p>
+        <p>Gao Tianyang was chummy with the owner here. He volunteered, "The owner's got tools over there, hang on, I'll get the waiter to bring them."</p>
+        <p>"There are tools?" Song Sirui's tolerance had grown since starting work, and he'd forced it this far—only his gaze had gone a little glassy.</p>
+        <p>When Gao Tianyang brought in a little box, everyone learned that his so-called tools were a deck of truth-or-dare cards, printed with ready-made questions and dares—whoever lost drew one.</p>
+        <p>If you could neither cough up a truth nor pull off a dare, then you just drank obediently. Song Sirui's lot slapped the table at this format—thick-skinned anyway, willing to do anything, so they could drink a few less and last a bit longer.</p>
+        <p>But Jiang Tian was different. Friends all these years—didn't they know his character? He'd surely pick neither and just drink. Wasn't that exactly what they wanted!</p>
+        <p>So the table rolled up its sleeves: let's play.</p>
+        <p>Jiang Tian was indifferent at first—his reactions were quick, and he'd never lost at this sort of thing. But later he turned a little helpless… quick reactions were no match for a certain young master trading on his favored status to deliberately sabotage him.</p>
+        <p>After narrowly surviving the fourth round, Jiang Tian picked up Sheng Wang's drink glass and sniffed it.</p>
+        <p>"What are you doing?" Sheng Wang eyed him.</p>
+        <p>"You added alcohol to it," Jiang Tian said.</p>
+        <p>"I did not."</p>
+        <p>"Not over your limit?"</p>
+        <p>"Perfectly clear-headed."</p>
+        <p>Jiang Tian looked at the wilting-mischief smile in his eyes, held it a few seconds, and couldn't. "Can you tell who's on whose team?"</p>
+        <p>"I can," Sheng Wang said. "My losses count for you."</p>
+        <p>Jiang Tian: "…"</p>
+        <p>By the sixth round, the perfectly clear-headed young master had finally toppled his boyfriend off the undefeated throne, and Jiang Tian shot the certain someone a headache-y glance.</p>
+        <p>Song Sirui was already tipsy, standing and gesturing. "Come! Tian-ge! Pick—this stack's truths, this stack's dares, pick a stack and draw! But we won't force you, don't want to draw, you can just drink, not much, three cups'll do."</p>
+        <p>As he spoke he picked up the bottle, all set to pour for Jiang Tian—only to hear the other say calmly, "I'll draw, then."</p>
+        <p>Song Sirui blanked. "Huh? You're actually drawing? Which stack?"</p>
+        <p>The words barely out, Jiang Tian had already drawn one from the truths.</p>
+        <p>To be precise, he didn't even draw—he just flipped the top one. Everyone crowded in to look, and saw on the card: <em>When was your most recent kiss?</em></p>
+        <p>The question was actually quite standard, but on Jiang Tian it had a curious effect. The people present had only ever seen his usual cold self, and could hardly connect him to words like dating or kissing.</p>
+        <p>The room sank into an ambiguous quiet.</p>
+        <p>Jiang Tian glanced at Sheng Wang, flipped the card face-down on the table edge, and answered mildly, "Today."</p>
+        <p>It was the simplest two words, yet Sheng Wang felt his face go a little hot. Maintaining a surface ease, he picked up his glass and drank some iced milk, and looking up again, found everyone had instinctively looked over at him.</p>
+        <p class="ellipsis">…</p>
+        <p>Damn.</p>
+        <p>The young master silently set down his glass, feeling he'd sabotaged himself to death.</p>
+        <p>He reflected a few seconds, then heard his ge turn his head and ask low, "Fun being a brat?"</p>
+        <p>A few rounds in, the sabotaged Jiang Tian was none the worse, but the toast-pushers blew up first. Song Sirui waved his hands. "Done, done, too much stimulation, can't take it. I'm a supreme idiot—what was I thinking, playing truth-or-dare with two couples, I'm gonna be force-fed dog food to death!"</p>
+        <p>After that, the single dogs began throwing tantrums, and on the grounds of wounded hearts dragged Gao Tianyang and Jiang Tian into another round of drinking. By the end those two really were a bit drunk, and Song Sirui couldn't even stand steady.</p>
+        <p>Elbow hooked over his chair back, he slumped and gathered himself a while, then suddenly said thick-tongued, "Tian-ge, Sheng-ge, there's a person, don't know if you two… you two remember."</p>
+        <p>Sheng Wang asked the waiter for warm water and handed it to Jiang Tian; hearing this, he blanked and turned to him. "Who?"</p>
+        <p>"Actually I told Lao Gao before—"</p>
+        <p>"I told you not to bring it up," Gao Tianyang, also a bit slow now, called across several people.</p>
+        <p>"Hey, I know." Song Sirui waved, signaling him to cut the nonsense. "Lao Gao said you two probably can't be bothered to know, but I can't hold it, just one thing."</p>
+        <p>"Go on," Sheng Wang said.</p>
+        <p>"I'm at the municipal government, you know," Song Sirui said. "Sometimes I deal with engineering matters, and earlier this year there was a safety accident at a construction site over in the development zone, so there was accountability—criminal liability. Sheng-ge, guess who I saw on the responsible-parties list?"</p>
+        <p>Sheng Wang had a faint premonition, but still asked, "Who? An old classmate?"</p>
+        <p>"Qi Jiahao."</p>
+        <p>At the name, Sheng Wang blanked a good while. After a long moment he gave a soft "oh," unexpectedly even-tempered. "Criminal liability? Then won't he get a record?"</p>
+        <p>"Yeah." Song Sirui nodded. "His dad does construction contracting, right? Small scale, of course. He bombed the gaokao from nerves, didn't he—seems after graduating he went to work with his dad, and then the safety measures weren't up to standard, so those things happened, owing a lot in damages, supposedly borrowing all over."</p>
+        <p>Gao Tianyang cursed from afar, "Serves him right!"</p>
+        <p>Song Sirui said, "I'm just letting you two know."</p>
+        <p>Sheng Wang nodded.</p>
+        <p>That these friends and classmates had known about him and Jiang Tian back then was thanks to Qi Jiahao; after that day his life had begun to derail, turning beyond recognition. To say he didn't care, didn't loathe it, would surely be a lie. But more of the time he had no leisure to even think of that person, and over time he couldn't even remember his face clearly.</p>
+        <p>At seventeen, the one called Qi Jiahao had been, to him, the fuse of all the great upheaval; now he'd become a blurry bit player in his life, small enough to exist only in a few drunken lines of after-dinner chatter, taking up barely a few minutes.</p>
+        <p>Time really was a marvel.</p>
+        <div class="scene-break">❖</div>
+        <p>In the end Song Sirui swore a thick-tongued oath to the heavens that he didn't want to see them until he was off the single market.</p>
+        <p>Gao Tianyang pointed at him from afar. "Got the nerve to swear it nastier?"</p>
+        <p>Song Sirui asked warily, "What?"</p>
+        <p>"There's a Fuzhong reunion this year—you come, you're a dog."</p>
+        <p>Hearing this, Song Sirui immediately added, "Sworn by: Gao Tianyang."</p>
+        <p>Drunk and sober alike, everyone present cracked up. Gao Tianyang cursed "damn" and threw the chicken-wing bone in front of him—only the idiot didn't even aim.</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-103-the-gathering.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-105-sobering-up.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

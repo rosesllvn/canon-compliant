@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 79 — Accident — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 79 · A Certain Someone</p>
+      <h1 class="reader-title">Accident</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Still, Gao Tianyang's words had reminded Sheng Wang: he and Jiang Tian had too many mutual friends, and the avatars were so distinctive that anyone with a mind to it could spot something wrong from a few extra glances at the chat—after all, not everyone was as blunt as Gao Tianyang.</p>
+        <p>What if someone else happened to see, later on? What if the one who saw didn't speak up and turn themselves in, but went off brooding and guessing in silence?</p>
+        <p>He suddenly felt that all the ties and tangles between people were such a nuisance. If only he and Jiang Tian had none of them—not a single thread on him, connected to no one—that would be good. Then they could do as they pleased.</p>
+        <div class="scene-break">❖</div>
+        <p>The morning of the weekly exam the weather suddenly turned overcast, the air heavy with damp, a gray haze drifting over from the river on Fuzhong's east side and winding through the school's canopy of plane trees and camphors.</p>
+        <p>Sheng Wang hadn't slept well; his eyelid had been twitching since early morning. As he and Jiang Tian walked toward Mingli Building, they ran into several teachers and faintly caught them murmuring about something—the moment they saw students approaching, they cut off the thread of talk, all mysterious.</p>
+        <p>"Did you hear what Old Wu just said?" Only once up the stairs did Sheng Wang look down over the railing, catching the thin-haired crown of the Class A math teacher's head.</p>
+        <p>"Didn't hear," Jiang Tian said. He stopped at the third-floor corner and gestured for Sheng Wang to head to Class B.</p>
+        <p>"Fine, it's got nothing to do with us anyway." Sheng Wang withdrew his gaze and instinctively walked toward the classroom, then after two steps backed up again.</p>
+        <p>"Just remembered—it's an exam. No special words of encouragement?" He looked at Jiang Tian, half a smile on his face.</p>
+        <p>"What counts as special?" Jiang Tian had already gone up a step; he turned back sideways to look at him.</p>
+        <p>Sheng Wang had only meant to tease him, with nothing in mind. Seeing him ask, he said offhand, "Give me your hand."</p>
+        <p>Jiang Tian drew his hand from his trouser pocket and held it out, palm up.</p>
+        <p>Sheng Wang rubbed once on the palm and once on the back. "A little fairy luck."</p>
+        <p>Jiang Tian raised an eyebrow, and before he could lower his hand, a few people came charging up the stairs, hollering, "Hold off, hold off! Fairy luck's the kind of thing everybody present should get a share of, isn't it?"</p>
+        <p>Gao Tianyang ran at the front, Song Sirui close behind, with several other boys pouncing over like starving wolves. "Let me touch Tian-ge too!"</p>
+        <p>"…" Without a word, Jiang Tian stuffed his hand back into his pocket.</p>
+        <p>Gao Tianyang slapped at empty air, then refused to give up and patted Jiang Tian's shoulder. "Does the shoulder count? I don't care, I got some."</p>
+        <p>"You animal, is my Tian-ge's shoulder something you get to touch? Out of the way! I want some luck too, last exam I bombed." Song Sirui rushed up.</p>
+        <p>In under two seconds, Jiang Tian was surrounded by that pack of boys.</p>
+        <p>He pointed at the melon-rinds clawing at him and asked Sheng Wang, a headache on his face, "Enjoy setting me up?"</p>
+        <p>Sheng Wang collapsed laughing on the stair rail, and while no one was looking blew him a kiss, then hurried to bolt—only to have his way blocked before he'd taken a step.</p>
+        <p>A big wave of chattering girls surged up the stairs, all of them Class B as it happened. Sheng Wang turned sideways against the rail to let them pass; the girls shot a glance Jiang Tian's way, then greeted him with giggles and smiles.</p>
+        <p>Sheng Wang nodded and replied politely, and the moment he'd finished smiling he felt a light pat on the top of his head.</p>
+        <p>"What." Sheng Wang leaned on the rail and turned to look up. "Getting your revenge already? Or have Lao Gao and the rest come touch me too."</p>
+        <p>"No." Jiang Tian tapped the right corner of his own mouth. "You've split here."</p>
+        <p>Gao Tianyang, Song Sirui, and the others all instinctively looked over, and the passing girls shot a glance at his mouth too. Sheng Wang licked the spot and tasted a very small split.</p>
+        <p>It had happened last night in the dorm. While Jiang Tian was washing up at the sink, Sheng Wang had used the excuse of the toilet to slip over, and—while Shi Yu and Qiu Wenbing weren't headed that way—grabbed Jiang Tian's shoulder and bit a kiss into him, only, with the guilty haste of a thief, to knock his own lower lip and run off covering the corner of his mouth.</p>
+        <p>As the party involved, Jiang Tian had witnessed the whole thing and knew it perfectly well, yet had to bring it up obliquely at this moment.</p>
+        <p>People streamed past on all sides, and amid the greetings and laughter Sheng Wang felt his face heat. He licked the split, tugged his collar for some air, and held a thumb up high at Jiang Tian. "You win."</p>
+        <p>He was realizing more and more clearly a great truth: when it came to smoldering understatement, no one could out-smolder his ge.</p>
+        <p>Sheng Wang's exam seat was the third in Class B, by the window. He'd just sat down when he heard a few day students behind him say, "Eh? Did you hear?"</p>
+        <p>"Hear what?"</p>
+        <p>"Something happened at the river by the east gate, you don't know?"</p>
+        <p>"We board, where would we hear it—quit dragging it out." That was Shi Yu.</p>
+        <p>"They say a body was pulled out."</p>
+        <p>"Huh???" Someone sucked in a cold breath. "Seriously?"</p>
+        <p>"Dunno, I didn't see it myself."</p>
+        <p>"Where'd a body come from?" someone guessed. "Don't tell me someone from school jumped in the river?"</p>
+        <p>"Our school wouldn't go that far, surely."</p>
+        <p>Almost every student had heard rumors of the sort—someone at such-and-such school in such-and-such city had jumped, drowned themselves, hanged themselves. Generally, having heard and mourned it, they slowly stopped discussing it, until they heard of the next one. Though Fuzhong packed its coursework and exams in densely, the overall atmosphere wasn't oppressive.</p>
+        <p>A line went around among the students: every time someone at some school jumped, Fuzhong would lay another layer of soft mud under all its teaching and dorm buildings—laid down so thick by now that you couldn't find a building in all of Fuzhong worth jumping off.</p>
+        <p>Last year a Senior Grade 3 student's exam paper had blown out the window, and in his panic he'd reached out to grab it and fallen straight from the fourth floor, scaring the whole body of teachers witless. Big Mouth Xu's legs supposedly went weak, and he'd rushed to the hospital only to learn it was a single, not-too-serious fracture.</p>
+        <p>Just like that, Fuzhong called in another batch of day laborers the next day to add a layer of soft mud, devoted to ensuring a student who fell wouldn't so much as break the skin.</p>
+        <p>The group debated to no conclusion in the end—students lived their daily two-point line, after all, with little time to spare for digging into such things.</p>
+        <p>But because of it, the atmosphere in the room turned suddenly heavy, and quite a few answered their questions a little distractedly.</p>
+        <p>Only at noon, out at Wutongwai, did Sheng Wang hear the rough story from Old Man Ding.</p>
+        <p>The old man ladled soup for Jiang Tian as he talked. "I didn't see it, but Damei up front did—doesn't she like to go clapping up and down the streets at night?"</p>
+        <p>There was a flock of old ladies in the alleys who, too old to dance anymore, liked to stroll the perimeter of the school, "clap-clapping" their hands as they went, saying the palms had many acupoints and a clap or two meant long life.</p>
+        <p>Old Man Ding always called this clapping.</p>
+        <p>"How miserable, soaking in the water in this weather—they say it was bloated when they fished it out." He gestured an exaggerated distance. "Swollen up to about this big. And it didn't all float over together, either."</p>
+        <p>"What do you mean, didn't float over together?" Sheng Wang's face went a little green.</p>
+        <p>"It was dismembered," the old man said.</p>
+        <p>"It wasn't a student who jumped?"</p>
+        <p>"How could it be." Old Man Ding said, "With your school's rules—boarders have to sign a slip to go out, so they'd have to go ask a teacher for a slip before jumping? Day students even less likely—come specially from home just to jump?"</p>
+        <p>The old man went on, "Nothing like this has happened in our parts before. Half the alley swarmed over to look yesterday; I didn't make it, got dragged off. Awful, all pale and bloated when they hauled it up."</p>
+        <p>"Forget it, let's not talk about this. I stewed a chicken specially since you two have exams—nourish yourselves up." So saying, he set the soup bowl in front of Jiang Tian, a pale chicken leg bobbing in it.</p>
+        <p>Jiang Tian: "…"</p>
+        <p>The business had left both boys without appetite, but not wanting to waste the food the old man had labored over, they sipped at it on and off. By the time that bowl of soup was down, the old man had already polished off a great bowl of rice and was clearing the dishes on his own, saying he'd go knead dough in the kitchen and wrap some buns over the next couple of days.</p>
+        <p>Jiang Tian said, "Leave it. I'll help you with it after the exam tonight."</p>
+        <p>The old man said, "Can't I manage without your help?"</p>
+        <p>"Kneading dough's pretty hard work," Sheng Wang said. "Grandpa, how many are you planning to make?"</p>
+        <p>The old man said, "Not many. Just a little."</p>
+        <p>Jiang Tian exposed him without hesitation: "Two hundred at least, like every year. Late December, early January, he makes a huge batch this time, eats hardly any himself, and sends them out bag by bag."</p>
+        <p>"Two hundred?" Sheng Wang blanked. "How much dough is that? No, we'd better come do it tonight."</p>
+        <p>"Meddlesome. Eat your food. It'll be at least another twenty years before it's your turn to help me."</p>
+        <p>The old man wouldn't listen at all and walked off muttering. But not long after, a sudden clatter came from the kitchen, like something heavy hitting the ground and knocking over a basin.</p>
+        <p>Sheng Wang and Jiang Tian froze a second, shoved their bowls aside, and rushed into the kitchen.</p>
+        <p>The old man had been a soldier in his youth, and old as he was he'd still thrashed unruly kids and unruly grown-ups, banking on his strength and good appetite to keep refusing to act his age, as if still in his prime, half a lifetime away from a stooped back.</p>
+        <p>But sometimes growing old happened in an instant—</p>
+        <p>He'd just seen a few grains of rice on the floor and bent to pick them up, stood up a little too quickly, and the next time he opened his eyes he was already in the hospital.</p>
+        <p>He was muddled a while, and once he'd grasped what had happened, his first reaction was, <em>thank goodness I can still open my eyes.</em></p>
+        <p>Old Man Ding liked strong tea day to day, and had always cooked on the salty side; Jiang Tian had eaten it silently for a long time without a word, and only when Zhao Xi and the others came to eat one time and mentioned it did he learn his own cooking was salty—after which he'd slowly toned it down. Oh, and the old man used to like smoking too, frying up some peanuts and braising a couple of mouthfuls of liquor when he had nothing on; though Jiang Tian had gotten him to cut back these two years, he still craved it now and then.</p>
+        <p>In short, various direct and indirect causes had led to this accident. When he woke, the sky was already near dusk, and Zhao Xi and Lin Beiting were in the ward with fruit and a bag of fresh clothes, saying, "Good thing it was only a trace of cerebral hemorrhage, and good thing Jiang Tian and Sheng Wang were there at the meal."</p>
+        <p>The old man still had an IV in his hand, the smell of disinfectant mixed with medicine boring straight into his nose. Looking at the slack, wrinkled skin on the back of his own hand, he suddenly realized he might really be getting on in years—refusing to act his age wasn't an option.</p>
+        <p>"Where are those two boys?" the old man asked.</p>
+        <p>"Lin-zi and I drove them off," Zhao Xi said. "Stubborn as anything—nearly didn't sit the afternoon exam. Lucky it's only a weekly exam, lax oversight, and their own school's easy to talk to, or who'd have let them into the exam room after being that late."</p>
+        <p>The old man got a little anxious at that. "Then did they sit it or not?"</p>
+        <p>"They did, they did." Zhao Xi said quickly, "You lie still first—even a trace of bleeding means bed rest, don't fret. Pass out again and they'll have to come back over."</p>
+        <p>He feared the old man would overthink, so he didn't mention anything else. In fact, by the time he and Lin Beiting had driven Jiang Tian and Sheng Wang back to school, the afternoon exam had been long underway; they'd sat it, yes, but the scores would surely take a hit.</p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-078-nickname.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-080-going-home.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>

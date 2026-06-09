@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ch. 99 — Melting — Canon Compliant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif;
+      font-size: 17px; line-height: 1.7; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
+    .site-title span { color: var(--rust); }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; transition: background 0.2s !important; }
+    .kofi-btn:hover { background: var(--rust-light) !important; }
+    main { max-width: 780px; margin: 0 auto; padding: 3rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { display: inline-block; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; margin-bottom: 2rem; }
+    .back-link:hover { color: var(--rust); }
+    .back-link::before { content: '← '; }
+    .tag { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.2rem 0.6rem; border-radius: 1px; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
+    .footer-note a { color: var(--rust); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    @media (max-width: 560px) {
+      .site-title { font-size: 1.6rem; }
+      nav { gap: 1rem; }
+      .kofi-btn { margin-left: 0; }
+      .footer-inner { flex-direction: column; }
+      .footer-sig { text-align: left; }
+    }
+
+    .reader-head { margin-bottom: 2.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .reader-meta { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.65rem; }
+    .reader-title { font-family: 'Libre Baskerville', serif; font-size: 1.85rem; font-weight: 700; line-height: 1.2; color: var(--ink); }
+    .reader-byline { margin-top: 0.85rem; font-size: 0.82rem; font-style: italic; color: var(--muted); }
+    .reader-byline span { font-style: normal; letter-spacing: 0.08em; }
+    .prose { font-size: 17.5px; line-height: 1.85; }
+    .prose p { margin: 0 0 1.15em; }
+    .prose p.ellipsis { text-align: center; color: var(--muted); letter-spacing: 0.4em; margin: 1.15em 0; }
+    .prose .scene-break { text-align: center; margin: 2.4rem 0; color: var(--gold); font-size: 1rem; letter-spacing: 0.6em; text-indent: 0.6em; user-select: none; }
+    .prose p.msg { margin: 0.25rem 0; padding: 0.12rem 0 0.12rem 0.95rem; border-left: 2px solid var(--border); color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .prose p.msg strong { color: var(--rust); font-weight: 700; letter-spacing: 0.01em; }
+    .chapter-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; margin-top: 3.2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-family: 'Libre Baskerville', serif; }
+    .chapter-nav .nav-link { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--rust); text-decoration: none; padding: 0.3rem 0.1rem; transition: color 0.15s; }
+    .chapter-nav .nav-link:hover { color: var(--ink); }
+    .chapter-nav .nav-link.contents { color: var(--muted); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.72rem; }
+    .chapter-nav .nav-link.contents:hover { color: var(--ink); }
+    .chapter-nav .nav-link.disabled { color: var(--muted); opacity: 0.55; cursor: default; font-style: italic; }
+    .kofi-prompt { margin-top: 2.6rem; padding: 1.4rem 1.2rem; background: var(--paper-dark); border: 1px solid var(--border); border-radius: 2px; text-align: center; font-size: 0.88rem; color: var(--muted); }
+    .kofi-prompt a { color: var(--rust); text-decoration: none; font-weight: 700; }
+    .kofi-prompt a:hover { color: var(--rust-light); }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="site-eyebrow">Fan Translations</span>
+      <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
+      <p class="site-tagline">Canon compliant. Mostly.</p>
+      <nav>
+        <a href="index.html">Novels</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <a href="someone.html" class="back-link">A Certain Someone</a>
+    <div class="reader-head">
+      <p class="reader-meta">Ch. 99 · A Certain Someone</p>
+      <h1 class="reader-title">Melting</h1>
+      <p class="reader-byline"><span>某某</span> by Mu Su Li · fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank" style="color:var(--rust);text-decoration:none;">rosesllvn</a></p>
+    </div>
+    <article class="prose">
+        <p>Sheng Wang didn't actually cry.</p>
+        <p>Every time his nose stung, he'd open his eyes wide or tip his head back, and after a moment the excess moisture would soak away; then he'd blink fast a few times and the feeling would pass. Only the corners of his eyes would flush a touch of red.</p>
+        <p>Jiang Tian had seen him like this, and only ever like this. Long ago he'd heard Sheng Mingyang mention that with his son, as long as he wasn't crying, it was nothing serious. Going by Sheng Wang's habits, there had probably been no "serious" matter since early childhood—even at the extremes of feeling, only the corners of his eyes would redden.</p>
+        <p>But this time, kissing Sheng Wang's eyes, Jiang Tian tasted a mouthful of salt. In his twenty-some years he'd lost many things, known "losing" many times—"losing and finding again" was the first.</p>
+        <p>So this was the taste of it: salty, wet, surging and sour.</p>
+        <p>Sheng Wang's mind was empty, his chest full. Led by Jiang Tian, he muddledly followed the other back to the lodging, up the stairs and into the room.</p>
+        <p>He was pressed against the door, barely able to breathe.</p>
+        <p>Jiang Tian looked cold, but his kisses were always gentle; even with a youth's green restlessness back then, it had only ever been intimate yearning. Today was different—he kissed deep and hard, as if confirming some existence.</p>
+        <p>Sheng Wang had once thought a thing not done in too long would leave him not knowing where to start, and a person not seen in too long would turn into someone with nothing to say.</p>
+        <p>Until he gave a fraction of room, turned his head to catch a breath, then—like back then—gripped the back of Jiang Tian's neck and chased the kiss. Only then did he realize that human memory was far more durable than he'd imagined—the kind in the heart, and the kind in the body.</p>
+        <p>Even drunk, slow to react, at a loss, muscle memory carried him to chase and answer the person he loved, just as at seventeen, eighteen—an instinct sunk to the marrow.</p>
+        <p><em>My bones say I still love you.</em></p>
+        <p>"Wangzai." Jiang Tian drew slightly apart, his gaze falling from half-open eyes, faintly bright amid the haze. His voice was very low, sounding in the quiet night, soft enough to ache. "Let's make up, all right?"</p>
+        <p>When young, he'd always made himself wait before doing or saying what he wanted, fancying it reason and maturity. Wait until they left Utopia, wait until Sheng Wang thought it through, wait until the drink wore off, wait until they grew up…</p>
+        <p>Later he'd finally understood: the world was always changing, and no one knew what the next instant held—like that "talk later" at the stairwell corner the year he'd just turned eighteen. Who could have guessed one night would stretch into so many years.</p>
+        <p>He didn't want to wait a second longer now.</p>
+        <p>Sheng Wang blanked a long while, then nodded heavily. His manner still carried the drink, his reactions a bit slow, which made him seem all the more blunt and earnest. Having nodded, he lowered his eyes, a streak of dejection in him. "But I'm not quite like before—lots of people say so."</p>
+        <p>His lowered thumb pinched at his other knuckles, the unconscious small motion beginning again. He wanted to say <em>you can wait a while and see.</em> But before he could, he heard Jiang Tian give an "mm." "Heard about it—more people like you than in high school, a lot more."</p>
+        <p>Sheng Wang blanked, wanting to say <em>that's not what I meant.</em> Sober as usual he'd have caught it at once—clever as Jiang Tian was, how could he not know what Sheng Wang meant. Unfortunately he was still drunk, and could only stare dazedly at the other.</p>
+        <p>Until Jiang Tian spoke again: "Then I'll do the chasing—you decide whether to say yes."</p>
+        <p>"Forget it." Sheng Wang said, deflated. He was quiet a moment, then muttered low, "Can't bear to."</p>
+        <p>His tone and look as he spoke were plainly no different from his seventeen-, eighteen-year-old self, making one inexplicably want to tease him. But Jiang Tian was full of ache now, only watching him calmly, then lowering his head to peck lightly at the corner of his eye, his cheek, the corner of his mouth.</p>
+        <p>It set Sheng Wang's heart itching unbearably, and he couldn't help responding.</p>
+        <div class="scene-break">❖</div>
+        <p>If not for some furry thing nudging his leg, startling Sheng Wang off balance into the corner of the coffee table, they might by now have rolled onto the sofa or the bed.</p>
+        <p>Muscle memory at work, Sheng Wang, kissing, couldn't resist going for Jiang Tian's Adam's apple. Before, it had been from a perverse streak and possessiveness—wanting to watch his ge teased bit by bit from his cold indifference into losing control. Now…</p>
+        <p>Now it seemed the same too.</p>
+        <p>That youthful streak of mischief always popped its head out abruptly in similar situations, with no need to think of it on purpose. As if, facing Jiang Tian, he could slowly, bit by bit, lay himself open.</p>
+        <p>The coffee table was wooden, its corners a little sharp. Jiang Tian had in fact bought a set of silicone edging, but his mind had flown off to Guangdong with a certain someone these days, and the package was still unopened.</p>
+        <p>A line was scraped raw on Sheng Wang's shin, blood beading finely. He rolled up his trouser leg and sat on the sofa, glaring eye-to-eye with the culprit crouched on the coffee table.</p>
+        <p>Maybe the cat's gaze was too focused. Sheng Wang's nerves struggled through the drink, sensing a subtle awkwardness, so he dragged a throw pillow over to hug, silently blocking his lap.</p>
+        <p>This cat had been spoiled lawless by Jiang Tian—dared sit anywhere, and wasn't shy of strangers.</p>
+        <p>At the word "strangers," Sheng Wang felt a touch displeased. While Jiang Tian went to the bedroom for ointment, he leaned forward where the other couldn't hear, draped over the pillow, and said to the cat, "Are you that long-lost son of mine?"</p>
+        <p>The cat, maybe thinking he meant to scratch it, silently drew its head back.</p>
+        <p>Sheng Wang asked again, "How'd you get so fat?"</p>
+        <p>The cat scowled and glared, ears flattening into airplane mode.</p>
+        <p>Sheng Wang was about to speak again when Jiang Tian came out of the bedroom holding a small box. "It's that one. Not fat, just a lot of fur."</p>
+        <p>The moment he appeared, both living things in the room settled. The cat slumped down and started licking a paw; Sheng Wang hugged the pillow and curled back in.</p>
+        <p>After a moment he obediently gave an "oh."</p>
+        <p>"Don't cross your legs." Jiang Tian signaled him to lower the hurt leg, pulling a bandage from the box. "Just moved in, nothing else on hand."</p>
+        <p>"I'll do it myself." Sheng Wang reached out, only for Jiang Tian to move past him.</p>
+        <p>The bandage, faintly bitter with medicine, went over the scrape; Jiang Tian's fingertips landed on the skin of his shin, smoothing and pressing at the bandage's edge. Sheng Wang instinctively drew his leg back and hugged the pillow tighter.</p>
+        <p>The cat—no telling whether curious about the medicine smell—suddenly came over and sniffed at the side of his leg with its wet nose.</p>
+        <p>"Is it kissing me?" The cat was, after all, the one Sheng Wang had gone to such trouble to pick years ago; the slightest gesture of closeness and he found it truly endearing.</p>
+        <p>But no sooner had he begun to enjoy this closeness than Jiang Tian doused him with a bucket of cold water: "No, it's wiping its snot."</p>
+        <p>Sheng Wang: "???"</p>
+        <p>Talk out your ass.</p>
+        <p>Sheng Wang gave him a kick—not hard, like a knee-jerk reflex from the hurt leg.</p>
+        <p>Only after kicking did he catch himself and blank a moment, then look up to see Jiang Tian standing there putting away the bandage box, and turn his head aside to laugh, very low.</p>
+        <p>Sheng Wang felt like a traveler long trekking through the snow who, having sat by a fire a long while, belatedly feels the warmth. The thaw began at the tips of his hands and feet, and once the blood came alive it flowed to fill his whole frame.</p>
+        <p>So all these years, even though he himself felt beyond recognition, he could still make that person laugh, just as before.</p>
+        <p>Jiang Tian's low laugh was like a switch. After that, Sheng Wang suddenly turned clingy, following him in and out of the bedroom and kitchen, watching him brew a cup of honey water for the hangover, then exceptionally promptly grabbing it and gulping it down.</p>
+        <p>His words finally, slowly, multiplied—at first asking Jiang Tian: why he'd changed WeChat, how he'd been at the school, whether life was convenient, whether he'd made any decent friends.</p>
+        <p>He heard Jiang Tian say the air where he lived was good, only there were few people, especially on holidays right before Christmas, when the shops around always stayed shut, and only a few cramped supermarkets had lights on, yet you couldn't find what you wanted to buy.</p>
+        <p>There was a Chinese restaurant nearby, the taste not too satisfying. One new year a few classmates roped Jiang Tian into making dumplings, but they'd only managed to buy fruit vinegar, strange to dip in. Some genius, breaking the pot since it was cracked, squeezed equally strange chili sauce and mustard into the vinegar, and that new-year's-eve dinner nearly became a lifelong trauma.</p>
+        <p>International students often had gatherings and mixers; Jiang Tian had been dragged to two, had genuinely no interest, and never went again.</p>
+        <p class="ellipsis">…</p>
+        <p>Then slowly, Sheng Wang turned from asking to answering, speaking of himself.</p>
+        <p>He'd always lived in a hurry, rarely looking back on these years—whom he'd met, what he'd done. As if once past, it was past, not worth dwelling on. Until today, when he truly cut an opening into these years and told Jiang Tian, scattered and piecemeal.</p>
+        <p>He'd thought it would be painful, but actually said aloud, it all felt all right.</p>
+        <p>He spoke of university life, with special griping about the intoxicating "aroma" of the next dorm, which had driven him to move out and rent early; he'd once wanted to keep a cat, lest the place be too cold and empty. But every time he went to pick one, he'd think of the one taken away years ago—so a whole set of cat bed, litter box, and toys was bought, yet left forever unused.</p>
+        <p>He spoke of various clubs and contests too—he could barely remember them now, yet described them with great liveliness under Jiang Tian's gaze. Toward the end he finally let a bit of his true nature show, casually boasting of his abilities in the student union, planning events and pulling in sponsors.</p>
+        <p>As if, seeing Jiang Tian's raised brows and flicker of surprise, those days of dashing about with night and day reversed hadn't been wasted.</p>
+        <p>Sheng Wang hadn't chatted with anyone like this in a long time—as if there were no end to it. Like in high school, when with nothing in particular going on he could still hug his phone trading lines with Jiang Tian, chatting WeChat the whole day in the gaps between classes.</p>
+        <p>Jiang Tian worried for a while that he'd get thirsty, glancing at his lips several times, and finally couldn't resist getting up to pour a glass of water in the kitchen. By the time he came back with the cup, the certain someone who'd sworn over and over to ring in the new year with eyes open had already fallen asleep.</p>
+        <p>He'd showered, shed the reserved, steady shirt, and dug a loose tee and sweatpants from the wardrobe to wear; hunched as he was, the contours of his shoulders and back stood clear, the cotton fabric wrapped at his waist drawing a lean, taut line.</p>
+        <p>He still liked to sleep face-down on the pillow, hair tousled and slipping, and because the heating was so ample, his forehead always carried a faint damp—exactly as years ago.</p>
+        <p>Jiang Tian took a sip of water himself, then braced on the bed's edge and bent to kiss him. Sheng Wang unconsciously licked his lips and turned his head to bury it deeper in the pillow.</p>
+        <p>He suddenly remembered the day after Fuzhong's arts festival years ago—a deep night like this too, Sheng Wang hogging most of his lower bunk, asleep before midnight. He'd kissed the other like this too then, waiting in hazy drowsiness for the new year to come.</p>
+        <p>In this instant, all the scenes joined up, as if the years missed in between didn't exist.</p>
+        <p>Yesterday was December 29th; he'd stood on the stage of Fuzhong's huge auditorium in a shirt bearing another name and played "Childhood" on a guitar learned in a last-minute cram.</p>
+        <p>Today was December 31st; he'd turned off the lights and lain down as usual, the person he loved close at hand.</p>
+        <p>New Year's Day was nearly here. In the last few seconds he closed his eyes, clasped Sheng Wang's fingers, and said low, "Wangzai, Happy New Year."</p>
+        <p><em>I miss you. Every single day.</em></p>
+    </article>
+    <nav class="chapter-nav">
+      <a class="nav-link" href="someone-chapter-098-speaking-up.html">← Previous</a>
+      <a class="nav-link contents" href="someone.html">Contents</a>
+      <a class="nav-link" href="someone-chapter-100-wangzai.html">Next →</a>
+    </nav>
+    <div class="kofi-prompt">
+      Enjoying the translation? <a href="https://ko-fi.com/rosesllvn" target="_blank">Support on Ko-fi ☕</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-note">
+        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
+        No profit is made. Translations will be taken down upon request.<br><br>
+        Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
+      </p>
+      <p class="footer-sig">Canon Compliant<br>rosesllvn</p>
+    </div>
+  </footer>
+</body>
+</html>
