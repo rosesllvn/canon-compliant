@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 4: The Office &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 4</h1>
+    <p class="chapter-title">The Office <span class="zh">办公室</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~5 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Yang Shaoyu sauntered up to the pair, spread an irresistible smile across his face, and greeted them both. "Hey — morning." Then he put out a hand and gave Xiao An a little wave. "Hello there, beautiful."</p>
+<p>Yang Shaoyu was the company's notorious playboy, swapping girlfriends faster than he changed his shirts — handsome with it, too, especially those single-lidded phoenix eyes, which were extraordinarily good at throwing sparks. They were throwing them at Xiao An now.</p>
+<p>"Good morning, Assistant Yang." Caught in the beam, Xiao An went briefly dizzy and returned the greeting before she quite knew she had. Beside her, Jiang Qi took it in and cleared his throat — a pointed reminder to rein it in.</p>
+<p>Yang Shaoyu heard it, of course, and turned to him with a theatrical sigh. "Honestly, this lot — would it kill them to come in a little earlier? Every day at this hour the elevators are fit to burst. Tell you what: ride up with me in the private lift."</p>
+<p>Jiang Qi glanced across the lobby. Ke Yan stood with both hands in his trouser pockets, shoulders tipped lightly against the wall, watching him — every line of him elegant and edged with command, so that the staff nearby couldn't look away. Xiao An was openly staring too. If Yang Shaoyu's sparks had merely dazed her a moment ago, CEO Ke had now fried her clean through, crisp outside and soft in the middle.</p>
+<p>"Ke— ah, CEO—" Jiang Qi began, but Yang Shaoyu cut him off. "Let's go." And he led the way to the lift.</p>
+<p>As they walked, Xiao An kept sneaking looks at Ke Yan — until he turned and gave her one cold glance, which sent her eyes snapping back to the floor, her head down, not daring to look again. Yang Shaoyu caught all of it. His own eyes narrowed a fraction. Now this, he thought, is going to be good.</p>
+<p>The four of them stepped into the elevator and it began its slow climb, Ke Yan and Jiang Qi in front, Yang Shaoyu and Xiao An behind. The two in front stood rather close, shoulders just barely brushing. From behind, Xiao An eyed them: there was room to spare on either side, so why stand so near each other?</p>
+<p>Jiang Qi, meanwhile, had tipped his head up the smallest fraction and was watching Ke Yan from the corner of his eye, checking, gingerly — was he still angry?</p>
+<p>Ke Yan's temper had already cooled. Catching the covert little looks, he found them unbearably endearing, and let his gaze drift over.</p>
+<p>One glance at his eyes and Jiang Qi knew the anger had passed. He let out a small, private breath.</p>
+<p>Ke Yan saw the breath go, and couldn't help the curve that tugged at his mouth.</p>
+<p>Both watchers caught the smile in the mirror. Only Jiang Qi, Yang Shaoyu thought, could make this ten-thousand-year glacier of a face smile so happily — not that he'd dare say so out loud, the reward for which would be getting worked to death. Xiao An was simply stunned: all this time at the company and she'd never once seen the CEO smile. And drawing on her years of hard-won instinct, a single conclusion rose up in her — there is something fishy going on between these two.</p>
+<p>The elevator reached the seventeenth floor, where Jiang Qi worked. He and Xiao An stepped out, and he nodded back at Ke Yan. "We'll get to work, then." Xiao An nodded too and followed him off.</p>
+<p>The doors slid shut and the climb resumed. Yang Shaoyu cut a sidelong glance at Ke Yan and needled him: "Quite the way with the ladies, our Jiang Qi, hm?" Ke Yan didn't deign to answer — only gave him a withering look. Yang Shaoyu rubbed his nose, having brought the snub on himself.</p>
+<p>"I had no idea you actually knew Assistant Yang," Xiao An said as they walked, "and rather well, by the look of it."</p>
+<p>"Mm. Since university," Jiang Qi answered.</p>
+<p>They came into the department to a chorus of good-mornings. Jiang Qi returned them, then went straight into his office and shut the door on the noise and the curious eyes both.</p>
+<p>The moment the door closed, the staff outside set down their work as one, and the women converged on Xiao An's desk, eyeing her like hawks. One of them tilted a desk lamp up into her face as though interrogating a suspect, slapped both palms on the desk, and demanded, "Xiao An. Out with it — the whole truth, and quickly."</p>
+<p>Startled half out of her skin, Xiao An looked round at them all. What on earth is this? Glaring at me like that — it's quite alarming. And confess to what, exactly? But she was no fool; a moment's thought and she'd guessed what they were after, and launched hastily into her defense. "You have to believe me." Then she rattled off the whole story of how she'd come to ride up with Ke Yan and Yang Shaoyu.</p>
+<p>They pressed her, over and over — "Every word the truth?" — and she nodded like a chick pecking grain, until at last they let her off and drifted back to their desks. Xiao An sat stroking her chin, lost in thought.</p>
+<p>Inside the office, where no sound reached, Jiang Qi was sorting carefully through his materials; he had the briefing shortly. The briefing was the summary report meeting the Ke Group held once every two months, a custom handed down unbroken from the days of Ke Yan's grandfather. Just then his secretary, Li Jing, came in with a cup of coffee. "Manager Jiang, your coffee." She set it down with some documents and went out. Jiang Qi took a sip, checked his watch — nearly time — and headed up to the thirty-ninth floor.</p>
+<p>Watching him go, the women of the department sighed in envy. "Manager Jiang has it so good — he gets to see CEO Ke again!"</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-003.html" class="prev">Chapter 3</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-005.html" class="next">Chapter 5</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

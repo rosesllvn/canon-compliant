@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 6: Holding Tight &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 6</h1>
+    <p class="chapter-title">Holding Tight <span class="zh">紧紧地</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~5 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">When everyone had eaten and come back, Jiang Qi returned to work. At five the day ended. He gathered the things on his desk, picked up his phone, and texted Ke Yan: <em>Heading to my parents' first. Don't work too late.</em></p>
+<p>Ke Yan was mid-task when the tone sounded. He glanced at it and replied: All right. Be careful on the way.</p>
+<p>It was already six by the time Jiang Qi arrived; his parents' place was a fair distance from the office. The moment he came in his mother bustled out to meet him, beaming. "Hungry, aren't you? Your sister-in-law's got dinner ready — go wash up and eat."</p>
+<p>"Mm, all right."</p>
+<p>Jiang Qi's parents had both been junior staff at a company once, retired now. Restless cooped up at home with nothing to do, they'd taken to roaming the neighborhood — chess, dancing, a neighbor to trade gossip with — and passed full, contented days. The housework fell to his elder sister-in-law, Yun Hui, married to his brother Jiang Bu these three years; the year before she'd had a chubby, healthy baby the whole family doted on beyond measure. There was a younger sister too, Jiang Lü, fresh out of university and hunting for work.</p>
+<p>Coming out from washing up, Jiang Qi noticed his father was missing. "Where's Dad? Off playing chess at a friend's again?"</p>
+<p>"That's right." His mother ladled chicken soup into his bowl. "Came home a while ago, studied a chess manual a bit, then went straight back out — thought up some new move, probably, and went to test it on old Zhao. Should be back soon. Here, eat up." She added another helping.</p>
+<p>His brother chimed in from the side. "Look how thin you are. With a frame like that, you'll never land yourself a wife."</p>
+<p>"Oh—" His mother slapped down her chopsticks. "Your brother nearly made me forget." And she hurried off toward the bedrooms.</p>
+<p>"What's Mom up to now?" Jiang Qi asked. Jiang Bu didn't answer, only grinned with the gleeful malice of a man enjoying another's misfortune. The grin gave Jiang Qi a bad feeling.</p>
+<p>Jiang Lü supplied the reason. "You're done for, second brother — Mom's finding you a match!"</p>
+<p>"Oh, hush — though it's true," Yun Hui scolded through a laugh. "Those are photos Mom hand-picked. Fought the neighborhood aunties for them."</p>
+<p>Jiang Qi's face fell at the news. You've got to be kidding...</p>
+<p>His mother emerged with the photos and handed him one. "Look — pretty girl, isn't she? A middle-school teacher. Good work, that, and a good family too — her parents are teachers as well. I—"</p>
+<p>Jiang Qi cut her off. "Mom, I'm only in my twenties. There's no rush — no need to marry this fast." He stalled for all he was worth.</p>
+<p>"No rush? Rush enough — you're twenty-seven. And aren't I just afraid you'll be hard to marry off in a few more years?"</p>
+<p>Pff— Jiang Lü burst out laughing. "Aiya, Mom, no offense, but look at second brother — he's actually pretty handsome, even if he's a touch more delicate-looking than your average man. Good job, fat salary. A little older's no obstacle; who wouldn't want him? Older men have more appeal anyway." Her mother was about to add something when the father came home.</p>
+<p>He walked into the dining room, took one look, and knew at once what that wife of his was up to. He glanced at the reluctant Jiang Qi, then at Jiang Bu and Jiang Lü making eyes from the side, and spoke up. "Now, wife — the boy's been at the office all day. Set these matters aside and let him eat in peace. Besides, children have their own fortunes to follow. Jiang Qi will see to it himself." His mother thought it over, found something in it, and put the photos away. Jiang Qi let out a breath. "Dad, your timing was perfect."</p>
+<p>"Timely as rain in a drought," Jiang Lü joked from her seat.</p>
+<p>"You child — nothing but a smart mouth. By the way, found that job yet?" his father asked between bites.</p>
+<p>"I've sent my résumé to a few companies. They'll let me know when it's time to interview."</p>
+<p>"And which one do you want to get into?" Jiang Bu asked.</p>
+<p>"Me? Mm—" Jiang Lü chewed her chopsticks. "The Ke Group, most of all. Better benefits than anywhere, and besides..." She propped her face in her hands, glum. "I hear the CEO is very handsome! Hehe. Though there's far more competition than anywhere else, too."</p>
+<p>"Oh-ho — isn't the Ke Group the very company your second brother's at? Go for it, girl!" their mother cheered.</p>
+<p>Jiang Qi encouraged her as well. "Go for it. Don't make it out to be so hard — it's not that difficult to get in."</p>
+<p>"Mm, I know."</p>
+<p>After dinner he played a while with his little nephew, chatted with the family, then — seeing the hour getting on — said his goodbyes and headed back.</p>
+<p>Down on the neighborhood road, Jiang Qi couldn't keep a certain bitterness from rising. How was he ever going to say it out loud, the truth about him and Ke Yan?</p>
+<p>"Jiang Qi." Ke Yan was waiting in his car downstairs. He'd watched Jiang Qi come out lost in thought, walking straight past without noticing him at all — so he got out and called to him.</p>
+<p>Deep in his own head, Jiang Qi heard a familiar voice say his name. He looked up — Ke Yan, sure enough — and came over. "Have you eaten? Why didn't you go home instead of waiting out here for me?"</p>
+<p>"Mm, I've eaten." Ke Yan reached out and brushed a hand across his face. "What did you and your family talk about? Why the unhappy look?"</p>
+<p>Jiang Qi touched his own cheek. "Is there one?"</p>
+<p>"There is. Written all over you — it makes my heart ache to see."</p>
+<p>And just like that, the unhappiness that had weighed on him was swept clean away. Jiang Qi flung himself into Ke Yan's arms and held on tight. Ke Yan wrapped him up in turn and held him — tight.</p>
+<p>And our two hearts, too, are bound close — always.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-005.html" class="prev">Chapter 5</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-007.html" class="next">Chapter 7</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

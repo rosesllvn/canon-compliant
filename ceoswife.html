@@ -3,218 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The CEO's Wife Is a Man — Canon Compliant</title>
+  <title>The CEO&rsquo;s Wife Is a Man &middot; Canon Compliant</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ink: #1a1510;
-      --paper: #f5f0e8;
-      --paper-dark: #ede6d6;
-      --rust: #8b3a2a;
-      --rust-light: #c4624e;
-      --gold: #b8933a;
-      --muted: #6b5f52;
-      --border: #c8bfad;
+      --ink: #1a1510; --paper: #f5f0e8; --paper-dark: #ede6d6;
+      --rust: #8b3a2a; --rust-light: #c4624e; --gold: #b8933a;
+      --muted: #6b5f52; --border: #c8bfad;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
-      background-color: var(--paper);
-      color: var(--ink);
-      font-family: 'Zilla Slab', Georgia, serif;
-      font-size: 17px;
-      line-height: 1.7;
-      min-height: 100vh;
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; font-size: 17px; line-height: 1.7; min-height: 100vh;
     }
     body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
+      content: ''; position: fixed; inset: 0;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 0;
+      pointer-events: none; z-index: 0;
     }
-    header {
-      border-bottom: 1px solid var(--border);
-      padding: 2.5rem 2rem 2rem;
-      background: var(--paper);
-    }
-    .header-inner {
-      max-width: 780px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-    }
-    .site-eyebrow {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    .site-title {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: var(--ink);
-      letter-spacing: -0.01em;
-      line-height: 1.1;
-      text-decoration: none;
-    }
+    header { border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; background: var(--paper); }
+    .header-inner { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.25rem; }
+    .site-eyebrow { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .site-title { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; line-height: 1.1; text-decoration: none; }
     .site-title span { color: var(--rust); }
-    .site-tagline {
-      font-size: 0.9rem;
-      color: var(--muted);
-      font-style: italic;
-      margin-top: 0.25rem;
-    }
-    nav {
-      margin-top: 1.25rem;
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    nav a {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    nav a:hover { color: var(--rust); }
-    .kofi-btn {
-      margin-left: auto;
-      background: var(--rust);
-      color: #fff !important;
-      padding: 0.4rem 1rem;
-      border-radius: 2px;
-      font-size: 0.75rem !important;
-      letter-spacing: 0.1em !important;
-      text-transform: uppercase !important;
-      transition: background 0.2s !important;
-    }
+    .site-tagline { font-size: 0.9rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+    nav.site-nav { margin-top: 1.25rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+    nav.site-nav a { font-family: 'Libre Baskerville', serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav.site-nav a:hover { color: var(--rust); }
+    .kofi-btn { margin-left: auto; background: var(--rust); color: #fff !important; padding: 0.4rem 1rem; border-radius: 2px; font-size: 0.75rem !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; }
     .kofi-btn:hover { background: var(--rust-light) !important; }
-    main {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 3rem 2rem 5rem;
-      position: relative;
-      z-index: 1;
-    }
-    .section-label {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1.25rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .novel-card {
-      padding: 1.5rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .novel-card:first-of-type { border-top: 1px solid var(--border); }
-    .novel-meta {
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-family: 'Libre Baskerville', serif;
-      margin-bottom: 0.4rem;
-    }
-    .novel-title-link {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--ink);
-      text-decoration: none;
-      line-height: 1.2;
-      transition: color 0.2s;
-    }
-    .novel-title-link:hover { color: var(--rust); }
-    .novel-title-zh {
-      font-size: 0.95rem;
-      font-weight: 400;
-      color: var(--muted);
-      font-style: italic;
-    }
-    .novel-description {
-      margin-top: 0.6rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-      max-width: 560px;
-      line-height: 1.7;
-    }
-    .novel-tags {
-      margin-top: 0.75rem;
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-    .tag {
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-family: 'Libre Baskerville', serif;
-      color: var(--rust);
-      border: 1px solid var(--rust);
-      padding: 0.15rem 0.5rem;
-      border-radius: 1px;
-    }
-    .novel-card--upcoming .novel-title-link { color: var(--muted); pointer-events: none; }
-    .novel-card--upcoming .novel-title-link:hover { color: var(--muted); }
-    .novel-card--upcoming { opacity: 0.6; }
-    .section-group { margin-bottom: 3rem; }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem;
-      background: var(--paper-dark);
-      position: relative;
-      z-index: 1;
-    }
-    .footer-inner {
-      max-width: 780px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .footer-note {
-      font-size: 0.8rem;
-      color: var(--muted);
-      line-height: 1.6;
-      max-width: 480px;
-    }
+    main { max-width: 780px; margin: 0 auto; padding: 2rem 2rem 5rem; position: relative; z-index: 1; }
+    .back-link { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+    .back-link:hover { color: var(--rust); }
+    .novel-header { margin: 1.75rem 0 2rem; }
+    .novel-meta { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-family: 'Libre Baskerville', serif; margin-bottom: 0.4rem; }
+    .novel-title { font-family: 'Libre Baskerville', serif; font-size: 1.8rem; font-weight: 700; line-height: 1.2; }
+    .novel-title-zh { font-size: 1rem; font-weight: 400; color: var(--muted); font-style: italic; }
+    .novel-description { margin-top: 0.8rem; font-size: 0.9rem; color: var(--muted); max-width: 560px; line-height: 1.75; }
+    .novel-tags { margin-top: 0.9rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .tag { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Libre Baskerville', serif; color: var(--rust); border: 1px solid var(--rust); padding: 0.15rem 0.5rem; border-radius: 1px; }
+    .updated { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; margin-bottom: 1.25rem; }
+    .section-label { font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin: 2rem 0 0.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    .chapter-list { list-style: none; }
+    .chapter-item { border-bottom: 1px solid var(--border); }
+    .chapter-link { display: flex; align-items: baseline; gap: 1rem; padding: 0.7rem 0.25rem; text-decoration: none; color: inherit; transition: background 0.15s; }
+    .chapter-link:hover { background: var(--paper-dark); }
+    .chapter-num { flex: 0 0 5rem; font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--gold); letter-spacing: 0.05em; }
+    .chapter-title { flex: 1 1 auto; font-size: 0.95rem; }
+    .chapter-zh { color: var(--muted); font-size: 0.8rem; letter-spacing: 0.05em; }
+    .chapter-date { flex: 0 0 auto; font-size: 0.75rem; color: var(--muted); }
+    .chapter-arrow { flex: 0 0 auto; color: var(--rust); font-size: 0.85rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: 780px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-note { font-size: 0.8rem; color: var(--muted); line-height: 1.6; max-width: 480px; }
     .footer-note a { color: var(--rust); text-decoration: none; }
-    .footer-note a:hover { text-decoration: underline; }
-    .footer-sig {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 0.75rem;
-      color: var(--muted);
-      font-style: italic;
-      text-align: right;
-      flex-shrink: 0;
-    }
+    .footer-sig { font-family: 'Libre Baskerville', serif; font-size: 0.75rem; color: var(--muted); font-style: italic; text-align: right; flex-shrink: 0; }
+    .chapter-item.gated .chapter-link { cursor: default; color: var(--muted); }
+    .chapter-item.gated .chapter-link:hover { background: transparent; }
+    .chapter-item.gated .chapter-num { color: var(--border); }
+    .chapter-item.gated .chapter-title { color: var(--muted); }
+    .chapter-soon { flex: 0 0 auto; font-family: 'Libre Baskerville', serif; font-size: 0.62rem;
+                    letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+                    border: 1px solid var(--border); padding: 0.1rem 0.45rem; border-radius: 1px;
+                    white-space: nowrap; }
     @media (max-width: 560px) {
+      body { font-size: 16px; }
       .site-title { font-size: 1.6rem; }
-      nav { gap: 1rem; }
-      .kofi-btn { margin-left: 0; }
+      .chapter-date { display: none; }
+      .chapter-soon { font-size: 0.55rem; padding: 0.1rem 0.35rem; }
+      .chapter-num { flex: 0 0 4rem; }
       .footer-inner { flex-direction: column; }
       .footer-sig { text-align: left; }
     }
-</style>
+  </style>
 </head>
 <body>
   <header>
@@ -222,33 +87,1258 @@
       <span class="site-eyebrow">Fan Translations</span>
       <a href="index.html" class="site-title" style="text-decoration:none;">Canon <span>Compliant</span></a>
       <p class="site-tagline">Canon compliant. Mostly.</p>
-      <nav>
+      <nav class="site-nav">
         <a href="index.html">Novels</a>
-        <a href="#about">About</a>
-        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">☕ Ko-fi</a>
+        <a href="index.html#about">About</a>
+        <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
       </nav>
     </div>
   </header>
   <main>
-    <a href="index.html" style="display:inline-block;font-family:'Libre Baskerville',serif;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-bottom:2rem;">← All Novels</a>
-    <div style="border-bottom:1px solid var(--border);padding-bottom:2rem;margin-bottom:2rem;">
-      <p style="font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);font-family:'Libre Baskerville',serif;margin-bottom:0.6rem;">橘子味 · Júzi Wèi</p>
-      <h2 style="font-family:'Libre Baskerville',serif;font-size:1.75rem;font-weight:700;color:var(--ink);margin-bottom:0.5rem;">
-        The CEO's Wife Is a Man
-        <span style="font-size:1.1rem;font-weight:400;color:var(--muted);font-style:italic;"> · 总裁夫人是男的</span>
-      </h2>
-      <p style="margin-top:1rem;font-size:0.95rem;color:var(--muted);max-width:560px;line-height:1.7;">Translation coming soon.</p>
-      <div style="margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
-        <span class="tag">Danmei</span><span class="tag">Modern</span><span class="tag">BL</span><span class="tag">Upcoming</span>
+    <a href="index.html" class="back-link">&#8592; All Novels</a>
+
+    <div class="novel-header">
+      <p class="novel-meta">橘子味 &middot; Júzi Wèi</p>
+      <h1 class="novel-title">The CEO&rsquo;s Wife Is a Man <span class="novel-title-zh">&middot; 总裁夫人是男的</span></h1>
+      <p class="novel-description">Jiang Qi, an unremarkable junior manager, is secretly the live-in &ldquo;wife&rdquo; of his company&rsquo;s impossibly cold, handsome CEO. A low-stakes, comedic slice-of-life mining warmth and humor from the gap between Ke Yan&rsquo;s public iciness and his private doting.</p>
+      <div class="novel-tags">
+        <span class="tag">Danmei</span>
+        <span class="tag">Modern</span>
+        <span class="tag">BL</span>
+        <span class="tag">Complete</span>
       </div>
     </div>
-    <p style="font-size:0.9rem;color:var(--muted);font-style:italic;">Chapters will appear here when the translation begins.</p>
+
+    <p class="updated">Last updated: July 2026 &middot; 10 of 168 chapters posted &middot; 4 extras &middot; 200,301 words &middot; source complete</p>
+
+    <p class="section-label">Chapters</p>
+    <ul class="chapter-list">
+        <li class="chapter-item">
+          <a class="chapter-link" href="ceoswife-chapter-001.html">
+            <span class="chapter-num">Ch. 001</span>
+            <span class="chapter-title">Good Morning <span class="chapter-zh">早上好</span></span>
+            <span class="chapter-date">July 2026</span>
+            <span class="chapter-arrow">&#8594;</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a class="chapter-link" href="ceoswife-chapter-002.html">
+            <span class="chapter-num">Ch. 002</span>
+            <span class="chapter-title">A Heart That Wouldn&#x27;t Settle <span class="chapter-zh">心跳久久不能平复......</span></span>
+            <span class="chapter-date">July 2026</span>
+            <span class="chapter-arrow">&#8594;</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a class="chapter-link" href="ceoswife-chapter-003.html">
+            <span class="chapter-num">Ch. 003</span>
+            <span class="chapter-title">Jealousy <span class="chapter-zh">吃醋</span></span>
+            <span class="chapter-date">July 2026</span>
+            <span class="chapter-arrow">&#8594;</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a class="chapter-link" href="ceoswife-chapter-004.html">
+            <span class="chapter-num">Ch. 004</span>
+            <span class="chapter-title">The Office <span class="chapter-zh">办公室</span></span>
+            <span class="chapter-date">July 2026</span>
+            <span class="chapter-arrow">&#8594;</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a class="chapter-link" href="ceoswife-chapter-005.html">
+            <span class="chapter-num">Ch. 005</span>
+            <span class="chapter-title">Soup <span class="chapter-zh">汤</span></span>
+            <span class="chapter-date">July 2026</span>
+            <span class="chapter-arrow">&#8594;</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a class="chapter-link" href="ceoswife-chapter-006.html">
+            <span class="chapter-num">Ch. 006</span>
+            <span class="chapter-title">Holding Tight <span class="chapter-zh">紧紧地</span></span>
+            <span class="chapter-date">July 2026</span>
+            <span class="chapter-arrow">&#8594;</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a class="chapter-link" href="ceoswife-chapter-007.html">
+            <span class="chapter-num">Ch. 007</span>
+            <span class="chapter-title">The Love Between Two People <span class="chapter-zh">两个人的爱</span></span>
+            <span class="chapter-date">July 2026</span>
+            <span class="chapter-arrow">&#8594;</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a class="chapter-link" href="ceoswife-chapter-008.html">
+            <span class="chapter-num">Ch. 008</span>
+            <span class="chapter-title">Marks <span class="chapter-zh">痕迹</span></span>
+            <span class="chapter-date">July 2026</span>
+            <span class="chapter-arrow">&#8594;</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a class="chapter-link" href="ceoswife-chapter-009.html">
+            <span class="chapter-num">Ch. 009</span>
+            <span class="chapter-title">Dinner? Or Poison? <span class="chapter-zh">晚餐？毒药？</span></span>
+            <span class="chapter-date">July 2026</span>
+            <span class="chapter-arrow">&#8594;</span>
+          </a>
+        </li>
+        <li class="chapter-item">
+          <a class="chapter-link" href="ceoswife-chapter-010.html">
+            <span class="chapter-num">Ch. 010</span>
+            <span class="chapter-title">Injured <span class="chapter-zh">受伤</span></span>
+            <span class="chapter-date">July 2026</span>
+            <span class="chapter-arrow">&#8594;</span>
+          </a>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 011</span>
+            <span class="chapter-title">Auntie Li <span class="chapter-zh">李婶</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 012</span>
+            <span class="chapter-title">Love Rival, or Matchmaker? <span class="chapter-zh">做情敌，还是媒人?</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 013</span>
+            <span class="chapter-title">Jiang Qi Treats Ke Yan to &quot;a Good Meal&quot; <span class="chapter-zh">江奇请柯言'吃菜'</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 014</span>
+            <span class="chapter-title">A Special Little Side Story <span class="chapter-zh">特别小番外</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 015</span>
+            <span class="chapter-title">Falling, and Caught <span class="chapter-zh">掉落与接住</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 016</span>
+            <span class="chapter-title">Man in Black?? <span class="chapter-zh">黑衣人？？</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 017</span>
+            <span class="chapter-title">What Are You Doing Here?? <span class="chapter-zh">你在这做什么？？</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 018</span>
+            <span class="chapter-title">This Person Has No Heart <span class="chapter-zh">这人真没爱心</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 019</span>
+            <span class="chapter-title">Ke Yan&#x27;s Home Is Very Strange <span class="chapter-zh">柯言的家很诡异</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 020</span>
+            <span class="chapter-title">The Helicopter During Military Training <span class="chapter-zh">军训时的直升机</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 021</span>
+            <span class="chapter-title">Ye Xingwei <span class="chapter-zh">叶星伟</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 022</span>
+            <span class="chapter-title">The Two People in the Library&#x27;s Far Corner <span class="chapter-zh">图书馆最角落的两个人</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 023</span>
+            <span class="chapter-title">A Heap of Sour Clothes <span class="chapter-zh">一堆酸衣服</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 024</span>
+            <span class="chapter-title">A Ghost?? <span class="chapter-zh">有鬼？？</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 025</span>
+            <span class="chapter-title">Progress <span class="chapter-zh">进展</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 026</span>
+            <span class="chapter-title">Blushing <span class="chapter-zh">脸红</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 027</span>
+            <span class="chapter-title">Liu Hao&#x27;s Birthday Request <span class="chapter-zh">刘浩的生日要求</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 028</span>
+            <span class="chapter-title">Stammering, Truly Anxious <span class="chapter-zh">支支吾吾真着急</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 029</span>
+            <span class="chapter-title">Drink, Then... <span class="chapter-zh">喝酒啊。。。</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 030</span>
+            <span class="chapter-title">Drunken Jiang Qi <span class="chapter-zh">喝醉酒的江奇</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 031</span>
+            <span class="chapter-title">Angry?? <span class="chapter-zh">怒了？？</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 032</span>
+            <span class="chapter-title">Happy <span class="chapter-zh">高兴</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 033</span>
+            <span class="chapter-title">That Makes Sense <span class="chapter-zh">有道理</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 034</span>
+            <span class="chapter-title">Don&#x27;t Say I&#x27;m Good-Looking <span class="chapter-zh">不准说我好看</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 035</span>
+            <span class="chapter-title">The Place <span class="chapter-zh">地方</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 036</span>
+            <span class="chapter-title">The Comic Book <span class="chapter-zh">漫画书</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 037</span>
+            <span class="chapter-title">Throwing Myself at You <span class="chapter-zh">扑向你</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 038</span>
+            <span class="chapter-title">A Coat, and Feelings <span class="chapter-zh">外套与感情</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 039</span>
+            <span class="chapter-title">Friends <span class="chapter-zh">朋友</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 040</span>
+            <span class="chapter-title">The First Intimate Contact <span class="chapter-zh">第一次的亲密接触</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 041</span>
+            <span class="chapter-title">Together <span class="chapter-zh">一起</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 042</span>
+            <span class="chapter-title">The Company <span class="chapter-zh">公司</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 043</span>
+            <span class="chapter-title">The Meal <span class="chapter-zh">吃饭</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 044</span>
+            <span class="chapter-title">Was It a Misunderstanding? <span class="chapter-zh">误会了没？</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 045</span>
+            <span class="chapter-title">Falling Asleep in the Meeting <span class="chapter-zh">开会睡着了</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 046</span>
+            <span class="chapter-title">The Coffee Shop and the Cake <span class="chapter-zh">咖啡店与蛋糕</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 047</span>
+            <span class="chapter-title">Seven-Year Itch (Part One) <span class="chapter-zh">七年之痒上</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 048</span>
+            <span class="chapter-title">Seven-Year Itch (Part Two) <span class="chapter-zh">七年之痒下</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 049</span>
+            <span class="chapter-title">The Difference <span class="chapter-zh">差别</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 050</span>
+            <span class="chapter-title">Visiting the Patient <span class="chapter-zh">探病记</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 051</span>
+            <span class="chapter-title">The Three of Them Eat <span class="chapter-zh">三人吃饭</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 052</span>
+            <span class="chapter-title">The Madam <span class="chapter-zh">夫人</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 053</span>
+            <span class="chapter-title">Ordinary <span class="chapter-zh">普通</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 054</span>
+            <span class="chapter-title">Chocolate for You <span class="chapter-zh">给你巧克力</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 055</span>
+            <span class="chapter-title">Rain <span class="chapter-zh">下雨</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 056</span>
+            <span class="chapter-title">Jiang Qi Caught a Cold <span class="chapter-zh">江奇感冒了</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 057</span>
+            <span class="chapter-title">Jiang Qi&#x27;s Hospital Stay (Part One) <span class="chapter-zh">江奇住院记上</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 058</span>
+            <span class="chapter-title">Jiang Qi&#x27;s Hospital Stay (Part Two) <span class="chapter-zh">江奇住院记下</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 059</span>
+            <span class="chapter-title">A Few Things About Recovering <span class="chapter-zh">康复三两事</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 060</span>
+            <span class="chapter-title">Xue Cheng <span class="chapter-zh">薛成</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 061</span>
+            <span class="chapter-title">The Wedding Banquet (Part One) <span class="chapter-zh">喜宴上</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 062</span>
+            <span class="chapter-title">The Wedding Banquet (Part Two) <span class="chapter-zh">喜宴下</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 063</span>
+            <span class="chapter-title">The Company Trip (Part One) <span class="chapter-zh">公司旅行上</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 064</span>
+            <span class="chapter-title">The Company Trip (Part Two) <span class="chapter-zh">公司旅行下</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 065</span>
+            <span class="chapter-title">The Misunderstanding, or Whatever (Part One) <span class="chapter-zh">误会神马的上</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 066</span>
+            <span class="chapter-title">The Misunderstanding, or Whatever (Part Two) <span class="chapter-zh">误会神马的下</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 067</span>
+            <span class="chapter-title">Ke Yan Hit Someone <span class="chapter-zh">柯言打人了</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 068</span>
+            <span class="chapter-title">Going Home <span class="chapter-zh">回家</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 069</span>
+            <span class="chapter-title">Meeting Ke Yan&#x27;s Mother? <span class="chapter-zh">与柯言妈妈见面了？</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 070</span>
+            <span class="chapter-title">Jiang Qi&#x27;s Blind Date <span class="chapter-zh">江奇相亲</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 071</span>
+            <span class="chapter-title">Ke Yan Wants a Gift <span class="chapter-zh">柯言要礼物</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 072</span>
+            <span class="chapter-title">Ke Yan&#x27;s Birthday Gift <span class="chapter-zh">柯言的生日礼物</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 073</span>
+            <span class="chapter-title">Xiao Feng <span class="chapter-zh">小冯</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 074</span>
+            <span class="chapter-title">The Discovery <span class="chapter-zh">发现</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 075</span>
+            <span class="chapter-title">The CEO&#x27;s Wife <span class="chapter-zh">总裁夫人</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 076</span>
+            <span class="chapter-title">Lin Zirui (Part One) <span class="chapter-zh">林子睿上</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 077</span>
+            <span class="chapter-title">Lin Zirui (Part Two) <span class="chapter-zh">林子睿下</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 078</span>
+            <span class="chapter-title">A Leg Rub in the Dead of Night <span class="chapter-zh">半夜揉腿</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 079</span>
+            <span class="chapter-title">Is It Their Nature, or Their Hearts <span class="chapter-zh">是性格还是心意</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 080</span>
+            <span class="chapter-title">Diarrhea <span class="chapter-zh">拉肚子</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 081</span>
+            <span class="chapter-title">Spanking Jiang Qi <span class="chapter-zh">打江奇</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 082</span>
+            <span class="chapter-title">The Business Trip <span class="chapter-zh">出差</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 083</span>
+            <span class="chapter-title">Topping Ke Yan? <span class="chapter-zh">压柯言？</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 084</span>
+            <span class="chapter-title">Buying Clothes <span class="chapter-zh">买衣服</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 085</span>
+            <span class="chapter-title">A Wedding-Banquet Farce <span class="chapter-zh">喜宴笑话</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 086</span>
+            <span class="chapter-title">The Quarrel <span class="chapter-zh">争吵</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 087</span>
+            <span class="chapter-title">Feelings <span class="chapter-zh">心意</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 088</span>
+            <span class="chapter-title">A Talk <span class="chapter-zh">谈话</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 089</span>
+            <span class="chapter-title">Coming Around <span class="chapter-zh">想通</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 090</span>
+            <span class="chapter-title">Want to Chase Me? Dream On <span class="chapter-zh">想追我？做梦去吧</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 091</span>
+            <span class="chapter-title">Buying Toys <span class="chapter-zh">买玩具</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 092</span>
+            <span class="chapter-title">Feeding <span class="chapter-zh">喂食</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 093</span>
+            <span class="chapter-title">Likes Children <span class="chapter-zh">喜欢小孩</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 094</span>
+            <span class="chapter-title">On the Matter of Adopting a Child <span class="chapter-zh">关于领养孩子</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 095</span>
+            <span class="chapter-title">First Time at the Ke House <span class="chapter-zh">柯家初体验</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 096</span>
+            <span class="chapter-title">The Price of Copping a Feel <span class="chapter-zh">占便宜的后果</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 097</span>
+            <span class="chapter-title">What Are You Up To? <span class="chapter-zh">想干嘛</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 098</span>
+            <span class="chapter-title">Don&#x27;t Bully My Wife <span class="chapter-zh">别欺负我媳妇儿</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 099</span>
+            <span class="chapter-title">Day One of Ke Yan&#x27;s Trip — Jiang Qi Does Just Fine <span class="chapter-zh">柯言出差第一天江奇很好</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 100</span>
+            <span class="chapter-title">Jiang Qi&#x27;s Mom Comes Over <span class="chapter-zh">江妈来了上</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 101</span>
+            <span class="chapter-title">Ke Yan Comes Home <span class="chapter-zh">柯言回来了</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 102</span>
+            <span class="chapter-title">A Date? <span class="chapter-zh">约会？</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 103</span>
+            <span class="chapter-title">Out of Sorts <span class="chapter-zh">郁闷</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 104</span>
+            <span class="chapter-title">Soup <span class="chapter-zh">汤</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 105</span>
+            <span class="chapter-title">The Search <span class="chapter-zh">找人</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 106</span>
+            <span class="chapter-title">Sleeping at Your Place <span class="chapter-zh">去你家睡</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 107</span>
+            <span class="chapter-title">Did It Happen? <span class="chapter-zh">成了？</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 108</span>
+            <span class="chapter-title">Contrast <span class="chapter-zh">反差</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 109</span>
+            <span class="chapter-title">Understanding <span class="chapter-zh">明白</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 110</span>
+            <span class="chapter-title">Let&#x27;s Go Home <span class="chapter-zh">我们回家吧</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 111</span>
+            <span class="chapter-title">Noodles <span class="chapter-zh">面条</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 112</span>
+            <span class="chapter-title">Always Together <span class="chapter-zh">一直在一起</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 113</span>
+            <span class="chapter-title">Closer <span class="chapter-zh">更近了</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 114</span>
+            <span class="chapter-title">Silly Wife <span class="chapter-zh">傻媳妇</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 115</span>
+            <span class="chapter-title">Silly Daughter-in-Law <span class="chapter-zh">傻儿媳妇</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 116</span>
+            <span class="chapter-title">Christmas Is Almost Here <span class="chapter-zh">快到了，圣诞节</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 117</span>
+            <span class="chapter-title">Buying Gifts <span class="chapter-zh">买礼物</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 118</span>
+            <span class="chapter-title">Discoveries <span class="chapter-zh">发现</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 119</span>
+            <span class="chapter-title">Isn&#x27;t He a Man? <span class="chapter-zh">不是男的吗</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 120</span>
+            <span class="chapter-title">Let&#x27;s Go Home Together <span class="chapter-zh">一起回家吧</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 121</span>
+            <span class="chapter-title">Ke Yan, Who Makes Jiang Qi&#x27;s Wishes Come True <span class="chapter-zh">实现江奇愿望的柯言</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 122</span>
+            <span class="chapter-title">Arriving <span class="chapter-zh">到家</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 123</span>
+            <span class="chapter-title">Ke Yan&#x27;s Grand Charm Offensive <span class="chapter-zh">柯言的讨好大计</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 124</span>
+            <span class="chapter-title">Telling Them <span class="chapter-zh">说了</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 125</span>
+            <span class="chapter-title">Two Fools <span class="chapter-zh">两个傻瓜</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 126</span>
+            <span class="chapter-title">Trust Me <span class="chapter-zh">相信我</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 127</span>
+            <span class="chapter-title">One More Person to Love Him <span class="chapter-zh">多一个人爱他</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 128</span>
+            <span class="chapter-title">Likewise <span class="chapter-zh">同样</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 129</span>
+            <span class="chapter-title">Going Home Again <span class="chapter-zh">再次回家</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 130</span>
+            <span class="chapter-title">Not So Bad After All? <span class="chapter-zh">也不错？</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 131</span>
+            <span class="chapter-title">Pouring Water <span class="chapter-zh">倒水</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 132</span>
+            <span class="chapter-title">Agreement <span class="chapter-zh">同意</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 133</span>
+            <span class="chapter-title">Holding Hands at the Company <span class="chapter-zh">在公司里牵手</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 134</span>
+            <span class="chapter-title">Merry Christmas Eve <span class="chapter-zh">平安夜快乐</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 135</span>
+            <span class="chapter-title">Let&#x27;s Get Married <span class="chapter-zh">我们结婚吧</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 136</span>
+            <span class="chapter-title">How to Meet the Parents <span class="chapter-zh">怎么见父母</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 137</span>
+            <span class="chapter-title">Going Somewhere <span class="chapter-zh">去一个地方</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 138</span>
+            <span class="chapter-title">The Yang Parents <span class="chapter-zh">杨家爸妈</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 139</span>
+            <span class="chapter-title">A Conversation <span class="chapter-zh">谈话</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 140</span>
+            <span class="chapter-title">The Love He Gives Him <span class="chapter-zh">给他的爱</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 141</span>
+            <span class="chapter-title">Men <span class="chapter-zh">男人</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 142</span>
+            <span class="chapter-title">They&#x27;d Known All Along <span class="chapter-zh">原来早就知道了</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 143</span>
+            <span class="chapter-title">All Seen <span class="chapter-zh">都被看到了</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 144</span>
+            <span class="chapter-title">Dependence <span class="chapter-zh">依赖</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 145</span>
+            <span class="chapter-title">The First Employee <span class="chapter-zh">第一个员工</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 146</span>
+            <span class="chapter-title">Happy Just to Have You Beside Me <span class="chapter-zh">有你陪就很幸福</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 147</span>
+            <span class="chapter-title">A Meal Together <span class="chapter-zh">一起吃顿饭</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 148</span>
+            <span class="chapter-title">Same as Always <span class="chapter-zh">老样子</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 149</span>
+            <span class="chapter-title">Trying On the Wedding Suits <span class="chapter-zh">试结婚要穿的西装</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 150</span>
+            <span class="chapter-title">Auntie <span class="chapter-zh">婶婶</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 151</span>
+            <span class="chapter-title">Our Family&#x27;s Child <span class="chapter-zh">我们家的孩子</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 152</span>
+            <span class="chapter-title">Thoughtful <span class="chapter-zh">贴心</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 153</span>
+            <span class="chapter-title">The Paintings in the Bookshop <span class="chapter-zh">书店里的画</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 154</span>
+            <span class="chapter-title">Closeness <span class="chapter-zh">亲昵</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 155</span>
+            <span class="chapter-title">I&#x27;ll Remember For You <span class="chapter-zh">我会帮你记得的</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 156</span>
+            <span class="chapter-title">The Meal <span class="chapter-zh">吃饭</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 157</span>
+            <span class="chapter-title">Asked to Mind a Child <span class="chapter-zh">拜托带孩子</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 158</span>
+            <span class="chapter-title">Chewing His Fingers Means He&#x27;s Hungry <span class="chapter-zh">咬手指说明肚子饿了</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 159</span>
+            <span class="chapter-title">Did He Make a Poo? <span class="chapter-zh">难道拉臭臭了？</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 160</span>
+            <span class="chapter-title">Looking After Xiao Ke <span class="chapter-zh">照顾小柯</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 161</span>
+            <span class="chapter-title">Yang&#x27;s Little Brother Is Coming Home <span class="chapter-zh">杨家小弟要回来了</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 162</span>
+            <span class="chapter-title">Yang&#x27;s Little Brother <span class="chapter-zh">杨家小弟</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 163</span>
+            <span class="chapter-title">Scolded Silly by Mother Yang <span class="chapter-zh">被杨妈骂傻了</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 164</span>
+            <span class="chapter-title">Lin Zirui&#x27;s Heart <span class="chapter-zh">林子睿的心里话</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 165</span>
+            <span class="chapter-title">Home for the New Year <span class="chapter-zh">回家过年</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 166</span>
+            <span class="chapter-title">Happy New Year <span class="chapter-zh">新年快乐</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 167</span>
+            <span class="chapter-title">A Visit <span class="chapter-zh">拜访</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Ch. 168</span>
+            <span class="chapter-title">The Wedding <span class="chapter-zh">结婚</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+    </ul>
+
+    <p class="section-label">Extras</p>
+    <ul class="chapter-list">
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Extra 1</span>
+            <span class="chapter-title">Extra 1 <span class="chapter-zh">番外1</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Extra 2</span>
+            <span class="chapter-title">Extra 2 <span class="chapter-zh">番外2</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Extra 3</span>
+            <span class="chapter-title">Extra 3 <span class="chapter-zh">番外3</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+        <li class="chapter-item gated">
+          <span class="chapter-link">
+            <span class="chapter-num">Extra 4</span>
+            <span class="chapter-title">Extra 4 <span class="chapter-zh">番外4</span></span>
+            <span class="chapter-soon">Coming soon</span>
+          </span>
+        </li>
+    </ul>
   </main>
   <footer>
     <div class="footer-inner">
       <p class="footer-note">
-        Fan translations for personal enjoyment only. All rights to original works belong to their respective authors.
-        No profit is made. Translations will be taken down upon request.<br><br>
+        Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+        All rights to the original work belong to 橘子味 (Júzi Wèi).
+        No profit is made. This translation will be taken down upon request.<br><br>
         Support the translator: <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a>
       </p>
       <p class="footer-sig">Canon Compliant<br>rosesllvn</p>

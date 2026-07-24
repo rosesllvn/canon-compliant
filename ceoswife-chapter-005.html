@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 5: Soup &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 5</h1>
+    <p class="chapter-title">Soup <span class="zh">汤</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~4 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">The Ke Group occupied forty floors. The thirty-ninth held the CEO's office; the fortieth, a small sky garden, planted thick with flowers of every color, a few winding stone paths threading toward a little pond at its center. The pond was paved with pebbles and dense with water plants, a dozen goldfish darting among them — a sight to lift the heart. A scattering of wooden chairs stood by the lawn for resting. Staff were free to come up over the lunch hour, but few ever did; everyone was too busy with their own affairs to remember to stop and look.</p>
+<p>What with one remark and another, by the time the meeting let out it was already one in the afternoon. Ke Yan set down his documents and checked his watch. "It's gotten late. My treat — I'll take everyone to lunch." Once the CEO himself had spoken, no one was about to refuse, and they all hastily agreed.</p>
+<p>In the parking garage, Wang Siqi, head of HR, came up to Ke Yan. "My car's in for servicing. Might I catch a ride with you, CEO?" Wang Siqi was among the most beautiful women in the company — lovely, poised, capable, pursued by well over half the male staff. Not that she had any use for them; the one she'd set her sights on was the CEO himself. Ke Yan had bearing and money and, crucially, looks besides — marry him, and wouldn't she be the CEO's wife? The other directors and managers understood this perfectly, and not one offered her a seat in his own car: nudge her toward the CEO, and surely there'd be something in it for them later. Off to one side, Jiang Qi's brow creased.</p>
+<p>Ke Yan raised an eyebrow and opened the front passenger door. "Get in." Delighted, Wang Siqi slid in — her chances, it seemed, were good indeed.</p>
+<p>The others traded knowing, soundless smiles.</p>
+<p>Jiang Qi watched, puzzled, as Ke Yan took out his phone, unsure what the man was thinking.</p>
+<p>Just then Ke Yan's driver, Xiao Wu, hurried out of the elevator and bowed. "CEO, I'm here."</p>
+<p>Ke Yan gave a low hum, then turned to Jiang Qi. "Manager Jiang hasn't a car either, has he? Ride with me."</p>
+<p>Jiang Qi blinked, and a happiness rose in him that he couldn't quite keep down. Beside him, Manager Lin was making frantic eyes — what are you doing, horning in? Turn him down, quick. But Jiang Qi never caught it, and answered readily, "All right," opening the rear door and climbing in.</p>
+<p>He missed the signaling; Ke Yan did not, and fixed Manager Lin with a cold, cutting stare before getting in himself. The driver took the wheel.</p>
+<p>Manager Lin flinched, smoothed a hand over his hair, and thought: what on earth just happened?</p>
+<p>Inside, Wang Siqi had been waiting for Ke Yan to climb in — when the rear door opened instead and Jiang Qi got in, her mood soured on the spot. Do you know how hard it was to get a chance to be alone with him? What are you butting in for? She hadn't finished stewing before Ke Yan settled into the back seat as well and the car pulled away. She ground her teeth in regret: had I known, I'd have sat in the back myself.</p>
+<p>And in that back seat, Ke Yan reached over and gently took Jiang Qi's hand where it rested between them. Jiang Qi didn't pull away. He gripped back, a little tighter.</p>
+<p>At the hotel the group filed into a private room, ordered, and began to eat. With Ke Yan right there, they were stiff and careful at first — but seeing that he only drank, and being half-starved after the long morning, they were soon tucking in with gusto.</p>
+<p>Seated at Ke Yan's left, Jiang Qi saw that he touched no food at all, only drank. He nudged him lightly with one foot: eat something first, or you'll ruin your stomach.</p>
+<p>Ke Yan was unmoved. He slid Jiang Qi a sidelong look — a hint that he should pick something out and feed it to him. The sheer shamelessness of it made Jiang Qi want to spit.</p>
+<p>At this point Wang Siqi, on Ke Yan's right, lifted a portion of a dish into his bowl with her chopsticks. "This one's very good — do try it," she said softly.</p>
+<p>Ke Yan only hummed and glanced again at Jiang Qi, never lifting his chopsticks — leaving Wang Siqi to cover the awkward moment with a sip of water.</p>
+<p>Seeing it, Jiang Qi gave in. Under the astonished eyes of the table, he took up Ke Yan's bowl, ladled out a serving of plain, mild soup, and set it before him. A little self-conscious, he said, "CEO — this soup is rather good." And before all those watching eyes, Ke Yan lifted it, took a sip, and smiled. "Mm. It's good indeed."</p>
+<p>The table's astonishment deepened, mouths falling open. The CEO smiled? And looked downright pleased at that — does the CEO have a thing for soup?</p>
+<p>Wang Siqi, beside them, was more thunderstruck than anyone — and then the shock drained from her face, replaced by a color that went from livid to white and back again. Her own dish sat untouched, and he'd drunk soup ladled out by a man.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-004.html" class="prev">Chapter 4</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-006.html" class="next">Chapter 6</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>
