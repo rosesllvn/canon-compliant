@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 14: A Special Little Side Story &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 14</h1>
+    <p class="chapter-title">A Special Little Side Story <span class="zh">特别小番外</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~5 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Subject: the birth of Jiang Qi.<br/>Time: the day before Jiang Qi was born.<br/>Place: the old little apartment where Jiang Qi's mom and dad used to live.<br/>Cast: Jiang Qi's dad, Jiang Qi's mom, the neighbors, the hospital staff.<br/>Events: as follows.</p>
+<p>In the entryway, briefcase in one hand and pulling on a leather shoe with the other, Jiang Qi's dad called into the apartment, "Wife, I'm off to work."</p>
+<p>"All right, careful on the way." Jiang Qi's mom lounged against the sofa watching TV, answering lazily.</p>
+<p>"Jiang Bu's at your folks', so don't worry about him — just rest and mind the baby, don't go running around. And leave the laundry in the basket, don't wash it; wait till I'm home and I'll do it—" He fretted out his instructions. Jiang Bu was at the age for kindergarten and had to be walked there and back each day, but with work so busy the father couldn't manage the daily run, and his mom, a belly nearly nine months along, couldn't either; so for the time being they'd left Jiang Bu with his grandparents.</p>
+<p>"All right, all right, I've got it — you say it every single day, I could recite it backwards." His mom had lost patience.</p>
+<p>"If I don't say it you complain I don't care, and now that I have, you find me a nuisance," he grumbled.</p>
+<p>She could see his mouth moving but couldn't catch the words. "What are you muttering?"</p>
+<p>"Nothing — nothing. I'll be late for work. I'm off."</p>
+<p>"Careful on the way."</p>
+<p>Once he'd gone, his mom watched TV a while longer, then felt thirsty. Bracing one hand on the sofa arm and steadying her belly with the other, she rose unsteadily and went to the kitchen for the kettle — eh? Why so light? She opened it: no water. Jiang Qi's dad must have forgotten to boil any.</p>
+<p>Too lazy to boil it herself, she set the kettle down and took an apple from the basket nearby — and knocked the whole basket over. She looked at the fruit on the floor, then down at her belly, and decided to leave it for Jiang Qi's dad to clean up when he got home. She rinsed the apple and turned to head back to the TV — and that was when Jiang Qi came early.</p>
+<p>Her belly was so large it blocked her line of sight; turning, she never saw the apple by her foot. One step, and down she went, landing hard on her backside.</p>
+<p>She froze where she sat, stunned. Only after a moment did it register; she reached down and touched her belly — no pain? Before she could breathe out in relief, a warm liquid trickled down between her legs. She lifted her skirt: blood. Amniotic fluid streaked with blood, flowing slowly out.</p>
+<p>She panted in alarm, soothing herself. It's all right, it's all right, don't panic. And then her belly began to hurt, more and more, and terror took her. What do I do? What do I do?</p>
+<p>"Xiaofang, are you home? I've stewed some pig's-trotter soup — dished you out a bowl, to build you up." The voice at the door belonged to the next-door neighbor, Wang Jie, a woman on good terms with Jiang Qi's mom, who called her Sister Wang.</p>
+<p>Mid-panic, his mom heard the call and snapped awake. She shouted with all her might: "Help — help — I'm having the baby, call an ambulance, ah!!" The pain worsened as she spoke; having borne one child already, she knew this baby was coming — but it wasn't full-term, and she'd taken a fall besides. She wept in fear, terrified the child would not survive.</p>
+<p>Outside, Sister Wang heard the cries and panicked too. She reached for the door — locked, and it wouldn't budge. She ran back to her own home, set down the bowl, and hauled her husband off the sofa and out behind her.</p>
+<p>"Where are you dragging me?" he asked, baffled.</p>
+<p>"Xiaofang's having her baby — she's trapped inside crying for help! Quick, break the door down."</p>
+<p>Bang— Bang— He threw himself at it a few times; it wouldn't give. Sister Wang grew frantic and was about to go for help when the neighbors round about, hearing the commotion, came out to look. "Come help, quick — Xiaofang's having her baby!" At that there was no standing by; they all came rushing.</p>
+<p>By the time they'd broken in, his mom was past bearing the pain, blood flowing steadily. "Ah!! It hurts." Everyone took fright, pulled out their phones, called an ambulance, and notified Jiang Qi's dad besides. When the call reached him he shot up out of his chair, grabbed his jacket and bolted — and when his boss called after him, whirled and roared, "My wife is having our baby!"</p>
+<p>A few of the aunties knelt by his mom, cheering her on. "Hold on now — the ambulance is coming any minute — deep breath." One went down to wait at the road, afraid the doctors wouldn't find the place. The ambulance arrived after a dozen-odd minutes, and the crowd helped get his mom aboard; Sister Wang rode along.</p>
+<p>By the time Jiang Qi's dad reached the hospital, his mom had already gone into the delivery room. He thanked Sister Wang at his side.</p>
+<p>"No need for thanks — I'll head back and stew your wife some tonic soup. A scare like today's must have shaken her badly."</p>
+<p>"Truly, thank you so much today."</p>
+<p>Once she'd gone, Jiang Qi's dad sat with his head in his hands, worried sick. The minutes ticked by one by one; he checked the time — thirteen past midnight.</p>
+<p>Just then the doctor and a nurse came out, the nurse carrying a baby. Jiang Qi's dad rushed forward. "My wife — is she all right?"</p>
+<p>"She's fine — a good thing she got here in time."</p>
+<p>"And — the baby...?"</p>
+<p>"This little one came before full term, but fortunately he's got a strong life-force. Still, you mustn't see him for a week or two — he's very frail, and catches illness easily."</p>
+<p>"Good, good." Both wife and child safe, Jiang Qi's dad was at ease, and hurried off beaming to see his wife.</p>
+<p>The time of Jiang Qi's birth: March 8th, 12:09 a.m.</p>
+<p>March 8th. International Women's Day.</p>
+<p>Looks like Jiang Qi has some sulking ahead of him.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-013.html" class="prev">Chapter 13</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-015.html" class="next">Chapter 15</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

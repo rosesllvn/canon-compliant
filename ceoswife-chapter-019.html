@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 19: Ke Yan&#x27;s Home Is Very Strange &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 19</h1>
+    <p class="chapter-title">Ke Yan&#x27;s Home Is Very Strange <span class="zh">柯言的家很诡异</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~6 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Ke Yan pulled Jiang Qi into the house and got him a towel.</p>
+<p>Jiang Qi rubbed his soaking hair, his expression a touch vacant. The wet clothes against his skin left him chilled, and he sneezed — colder and colder by the minute.</p>
+<p>Ke Yan frowned at the sneeze, went into a room, and came out with a set of clothes, which he tossed over. "Go take a shower."</p>
+<p>"Oh, all right," Jiang Qi answered, but didn't move, only stood there dazed.</p>
+<p>Ke Yan pointed. "The bathroom's that way."</p>
+<p>"Oh." One instruction, one action — Jiang Qi shuffled off. Ke Yan couldn't help a second glance at his retreating figure.</p>
+<p>In the bathroom Jiang Qi's head went fuzzy, his nose itchy. "Ah... achoo." He rubbed his nose: a cold, probably. For all that Jiang Qi was clever enough in the ordinary way and no slouch at his studies, the moment he fell ill he went dopey. As a small child in kindergarten the others had all called him Jiang Dai-dai — "Jiang the Dimwit." It had made the young Jiang Qi quite glum.</p>
+<p>He showered quickly and, fumbling, pulled on the borrowed clothes. The short-sleeved top fit well enough but for the broad shoulders; the trousers were too long, and he had to roll them up several turns. In the mirror, as if moved by some unseen hand, he lifted the hem to his nose and sniffed — only a faint scent of soap and detergent. It seemed Ke Yan didn't often wear it.</p>
+<p>When he came out, Ke Yan was on the sofa reading. He turned at the sound — and saw Jiang Qi flushed pink, all but swallowed by the oversized clothes, one whole shoulder nearly bared, the trousers rolled turn after turn. For the first time Ke Yan registered how very thin he was. Such a small thing.</p>
+<p>"Do you have any cold medicine?" Jiang Qi asked, oddly shy under the look, speaking to cover it.</p>
+<p>"No."</p>
+<p>"Then could you give me a glass of water?"</p>
+<p>Ke Yan poured him hot water. Jiang Qi set it aside without drinking. "I want warm, not hot." Ke Yan paused, then poured warm instead; Jiang Qi took it, well satisfied, drank a mouthful, and fixed his eyes on him. "I'm sleepy. I want to sleep."</p>
+<p>Ke Yan gritted his teeth; if Jiang Qi weren't ill, he'd have been booted out the door by now. "Come on."</p>
+<p>He led Jiang Qi upstairs, opened what looked like a guest room, and motioned him in. Jiang Qi didn't move — he was staring at the two doors across the way. One was white, with a wide-mouthed skull hung on it, as if it meant to bite, or was leering wickedly at you; a little sign on the handle read <em>Mo Lü</em>. The other Jiang Qi found worse still: hung with grotesque, misshapen masks, some bloody at the mouth, eyes staring eerily, split lips smiling toward him. Its sign read <em>Ma Tong</em>.</p>
+<p>He blinked, dazed, and shuddered. "K-Ke Yan, what is this?"</p>
+<p>Seeing the fear on his face, Ke Yan couldn't resist. "Careful — don't go looking around. If you see something, watch it doesn't come find you in the middle of the night." He delivered it perfectly flatly, without the eerie voice people put on for ghost stories — and the flatter he said it, the more frightening Jiang Qi found it.</p>
+<p>"This is your room. I'm off to sleep." And he pushed Jiang Qi in and shut the door.</p>
+<p>When Jiang Qi opened it again Ke Yan had gone. Not daring to let his eyes drift across the way, he shut the door, locked it, and burrowed under the covers. He'd thought he might not sleep at all — but perhaps because of the cold, he was soon fast asleep.</p>
+<p>Thanks to the night's heavy rain, the next day dawned bright and glorious. Jiang Qi opened his eyes, stared at the ceiling two or three seconds before it registered that this was Ke Yan's home — and then remembered the two doors, at which every drop of drowsiness fled and he scrambled out of bed. Downstairs, Ke Yan seemed to have gone out. But — two dark heads at the window. The pair had evidently worked out Ke Yan was gone and given up hiding, standing brazenly outside with their backs to the glass, chatting. The faithless wretches, Jiang Qi thought furiously, last night's sneaking-off coming back to him — never mind that he'd forgotten all about them too, so was hardly one to talk.</p>
+<p>Outside, Liu Hao was fretting. "Could it be Jiang Qi got caught tailing Ke Yan, and then..." He made a throat-slitting gesture.</p>
+<p>Meng Qing found it quite reasonable, and nodded. "Very possible."</p>
+<p>"Then if we ran off and left him — will he come back to get us?"</p>
+<p>"Also possible."</p>
+<p>"Could he have come already?"</p>
+<p>"That... probably not, surely."</p>
+<p>"I think so too..." They were chatting away merrily when both felt gust after gust of ghostly wind at the backs of their necks.</p>
+<p>Their necks went stiff. "Ha ha." Meng Qing forced out a couple of dry laughs. "Quite a cool breeze today."</p>
+<p>"Is — is it?"</p>
+<p>"Cool indeed — for this is a wind from the underworld, come to take you both down with me. Come along, come along." Jiang Qi had crept up behind them, and the overheard conversation had riled him into playing the ghost.</p>
+<p>But the two plainly weren't scared. They traded a glance, turned, and broke into smiles. "Ha — Jiang Qi, how would there be ghosts in broad daylight?"</p>
+<p>Found out, Jiang Qi dropped the act. "The two of you actually ran off on your own."</p>
+<p>"Don't say it like that — we meant to come rescue you, but then we saw Ke Yan and..."</p>
+<p>Jiang Qi rolled his eyes, walked out of the house, and shut the door behind him, checking several times that it was properly closed. Then he headed back with the two.</p>
+<p>On the way, Meng Qing tugged at his oversized clothes. "These wouldn't happen to be Ke Yan's, would they?"</p>
+<p>"That's right — mine got soaked yesterday."</p>
+<p>"Jiang Qi." Liu Hao caught at the clothes too. "Give these to me."</p>
+<p>"Why?"</p>
+<p>Meng Qing schooled him with a you-don't-get-it air. "Are you dense? Sell these to those girls and we'd make a fortune."</p>
+<p>"No." Jiang Qi refused without thinking.</p>
+<p>"You sure? You did lose my camera."</p>
+<p>"And whose fault was it for running off and leaving me? No means no."</p>
+<p>The three roughhoused their way back toward the school, and a few passing aunties thought what good friends these three young men were.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-018.html" class="prev">Chapter 18</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-020.html" class="next">Chapter 20</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>
