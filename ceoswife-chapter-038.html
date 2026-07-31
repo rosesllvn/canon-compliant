@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 38: A Coat, and Feelings &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 38</h1>
+    <p class="chapter-title">A Coat, and Feelings <span class="zh">外套与感情</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~8 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">"Did you need something?" Jiang Qi asked.</p>
+<p>Qiao Mi'er's face went red, and the hands clutching her clothes gripped harder. Having talked with her once before, Jiang Qi knew she couldn't be rushed, and could only listen patiently.</p>
+<p>"Actually, the one looking for you today was me. I wanted to finish saying what I didn't get to say last time."</p>
+<p>"What was that?"</p>
+<p>"...I... I."</p>
+<p>"It's all right, no need to be so nervous," Jiang Qi said.</p>
+<p>"Mm." Emboldened, she went on far more smoothly. "Do you remember that military training?"</p>
+<p>He nodded. "What about it?"</p>
+<p>"That time, I fainted from the heat and fell right onto you. Do you remember?"</p>
+<p>He thought hard; there did seem to have been a girl who'd fallen on him, though he didn't recall it being her. "I only remember someone falling on me — but I don't remember it being you," he answered guiltily.</p>
+<p>She shook her head. "I'd wanted to tell you this for a while, but never had the chance. The truth is, at first I didn't notice you, but then, somewhere along the way, I — I actually..."</p>
+<p>Actually what? Jiang Qi prompted inwardly.</p>
+<p>"I actually fell for you."</p>
+<p>He'd still been wondering what would follow her "actually," and hadn't expected her to come out with it so decisively; for a moment he didn't react — and when he did, his whole being went into disorder. Why would she like me? It had simply never occurred to him. He wanted to turn her down, but didn't know how — only that rejecting someone was best done early. He opened his mouth—</p>
+<p>Before he could get a word out, Qiao Mi'er had already run off in embarrassment. His opened mouth closed again helplessly, and he decided he'd say it the next time they met.</p>
+<p>"Hey, Jiang Qi." A pat on his back, a girl's voice. He turned to find, besides the two who'd called him out, several others he didn't recognize.</p>
+<p>"Did you need something?"</p>
+<p>The one who looked the ringleader spoke. "The day after tomorrow, come back here to give Mi'er your answer — she'll be waiting."</p>
+<p>Another chimed in, threatening, "Don't you dare turn her down. She's liked you for ages."</p>
+<p>Jiang Qi watched the cluster of them walk off, and said with a headache, "But I don't like her."</p>
+<p>He agonized over what to do, standing in the cold wind a full half hour without noticing, until a shiver and a sneeze brought him back. Because of several days' rain, even his thicker coat was washed but not dry, and today he wore only a thin one. Not cold at first — but after so long in the wind he was shivering. The coat had no buttons and no zip; all he could do was hold it shut.</p>
+<p>Should've known better than to stand there so long. Hands and feet gone icy, he was walking on when his arm was caught and pulled, his body turning a half-circle with the force. He looked up — Ke Yan.</p>
+<p>Ke Yan eyed the thin coat. "Why are you dressed so lightly?"</p>
+<p>"None of my clothes are dry," Jiang Qi answered obediently.</p>
+<p>Ke Yan's hand slid from his arm down to his palm, and he frowned. "Why are your hands so cold?"</p>
+<p>"Probably from standing in the wind too long."</p>
+<p>"On a day this cold, you went and stood in the wind — aren't you afraid of getting sick?"</p>
+<p>Jiang Qi realized he hadn't dared tell Ke Yan why he'd been standing there. Why not? Because the one asking was Ke Yan. His already-aching head ached worse, and he went hazy — until a warmth and a weight settled over his head: Ke Yan's coat. He looked up in confusion, and Ke Yan, made self-conscious by the stare, peeled off the thin coat hanging loose on Jiang Qi's shoulders and slipped it off in one motion.</p>
+<p>Jiang Qi watched blankly, only then understanding he'd been undressed. A coat isn't quite a shirt; had it been anyone else, he'd have thought nothing of it. But it was Ke Yan — and his heart raced, his face went red, until he didn't even feel the chill he ought to.</p>
+<p>Ke Yan finished settling his own coat on Jiang Qi, who went on staring at his face. The dazed look tugged the corner of Ke Yan's mouth up; he pinched the cheek. "Wear my coat for now." And he walked off in Jiang Qi's thin one.</p>
+<p>Watching him go, Jiang Qi couldn't help smiling — Ke Yan wore it better. He tipped his face down and sniffed the coat. Mm. With Ke Yan's coat on, it smelled so good. And his head didn't seem to ache anymore.</p>
+<p>With the cold, reading outdoors was out, and the two could only use the library. But since Ke Yan had been absent that stretch a while back, the crowd of girls had waited in vain, lost patience, and stopped coming — so the library had grown "quiet" again. The two hadn't told Yang Shaoyu they'd stopped using the little grove; if he'd known, he'd have snatched it back long ago.</p>
+<p>Two books sat before Jiang Qi, but he hadn't taken in a word, his head a chaos.</p>
+<p>"What are you thinking about?" Ke Yan asked.</p>
+<p>Jiang Qi shook his head — then nodded. "Ke Yan, someone confessed to me today."</p>
+<p>"What?" Ke Yan set down his book, frowned, his settled heart turning restless.</p>
+<p>"A girl said she likes me, but..."</p>
+<p>"Do you like her?" Having asked it, he couldn't help holding his breath — he had no wish to hear the words I like her from Jiang Qi's mouth.</p>
+<p>"I don't." Jiang Qi said it almost without hesitation — decisive, and a little unfair to Qiao Mi'er, but he didn't want Ke Yan to misunderstand for even a moment.</p>
+<p>Ke Yan secretly breathed out, letting none of it show, and picked his book back up. "Since you don't like her, then turn her down soon."</p>
+<p>"But how do I say it?" Jiang Qi asked, troubled.</p>
+<p>Ke Yan thought it over; he'd always just refused people outright. "Directly. Say you don't like her."</p>
+<p>Jiang Qi thought it over — better to be direct. His mood cleared, and he picked up his book; before long he'd gotten through a third of it. When they finished and walked out, they unexpectedly ran into Qiao Mi'er and her friends at the entrance. The moment she saw Jiang Qi her face went red and she hid behind them. Jiang Qi glanced at Ke Yan, then called her over. "Let's talk."</p>
+<p>She hesitated, then nodded, glancing at her friends, who cheered her on. As she turned to follow him out, her gaze drifted of its own accord to Ke Yan, standing silent to one side, and found it a little hard to leave him: good-looking, yes, but more than that an aura distinctly his own — a little proud, a little cold, radiating distance. And yet she felt he wasn't really meant to be this cold. She frowned. Good-looking enough to hold the eye, but no good as a lover — too cold; wouldn't being with someone like that be uncomfortable?</p>
+<p>At the entrance, seeing she'd come out, Jiang Qi didn't drag it out. "I'm very sorry."</p>
+<p>Her eyes reddened; her lips moved, but no words came, and only after a while did a muffled voice emerge. "Why? Is it because I'm ugly?"</p>
+<p>Jiang Qi shook his head — then, remembering she had her head down, said aloud, "No. It's just — there's no feeling of liking you."</p>
+<p>She grew sadder, and couldn't help a small sob. Hearing it, Jiang Qi felt he'd become some scoundrel bullying an innocent girl, and said low, "I'm sorry."</p>
+<p>She seemed not to hear, only murmuring so softly he thought she was talking to herself: "Can't we — can't we even try?"</p>
+<p>He didn't answer; she looked as though one more word of refusal would shatter her, and he sighed in his anxiety — what was he to do?</p>
+<p>"No. Jiang Qi doesn't like you." The voice came from behind him. He turned in astonishment — Ke Yan, come out at some point; it was he who'd said it.</p>
+<p>Ke Yan gave Jiang Qi a glance, then took his hand and walked off. Jiang Qi let himself be led — had he stayed, he truly wouldn't have known what to say.</p>
+<p>Watching them recede, Qiao Mi'er — tears not yet dry — suddenly no longer wanted to cry, and found herself thinking the two seemed somehow well-matched; the distance about Ke Yan seemed to have faded. Perhaps being with him wouldn't be uncomfortable after all. She didn't notice she'd stopped crying entirely, only watching the way the two were together. Really — there'd been no need to wait for the day after tomorrow; it had all been settled today. Matters of the heart are best dealt with early — aren't they?</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-037.html" class="prev">Chapter 37</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-039.html" class="next">Chapter 39</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

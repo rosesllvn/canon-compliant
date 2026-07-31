@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 36: The Comic Book &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 36</h1>
+    <p class="chapter-title">The Comic Book <span class="zh">漫画书</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Jiang Qi still read with Ke Yan every day, though not in the library anymore — they'd switched to the spot with the lovely setting. Remembering that Yang Shaoyu used to bring dates here, his heart, for some reason, beat a little faster. Things had been going smoothly of late — until smooth-sailing Jiang Qi discovered a few things, and promptly stopped feeling smooth at all.</p>
+<p>That week he went home for dinner, and his mom made a special early trip to the market for a chicken to stew. One look and Jiang Lü started up. "Mom, how come whenever second brother comes home it's chicken soup or fish stew, but when I want a little breakfast you grumble about it?"</p>
+<p>"Aren't you on a diet? Feeding you would just be a waste."</p>
+<p>Jiang Lü pulled a long face. "I think I've gotten fatter — the trousers I bought a while ago are tight now."</p>
+<p>Jiang Qi, in for a drink of water, couldn't help asking, "This thin and still dieting?"</p>
+<p>Jiang Lü promptly draped herself over his back and pinched his face. "If only I could be thin like you — eat and never gain, with skin this soft. That'd be wonderful."</p>
+<p>He peeled her off and bopped her on the head. "Where are your manners?" She pinched his side, and having teased her brother, bolted.</p>
+<p>He rubbed the spot ruefully. "That girl's got quite a grip."</p>
+<p>"Hasn't she," his mom said. "The bigger she gets the less she behaves like a girl. She'll never marry at this rate."</p>
+<p>"How could that be." Jiang Qi poured his water. "I'm going to sort my books in the study."</p>
+<p>"Taking them to school?"</p>
+<p>"Mm."</p>
+<p>The family study was shared — three bookcases, one per sibling, all crammed full; the Jiang siblings were plainly fond of reading. Jiang Lü's was a riot of color, all comics. Jiang Qi took down a few favorites to bring for Ke Yan, packed them into a paper bag, and at his mom's call to dinner left the bag by the desk and went out — to find Jiang Bu had come home and was at the table.</p>
+<p>"Yo — got yourself a girlfriend yet?" Jiang Bu ribbed him.</p>
+<p>"No."</p>
+<p>"Not to lecture you, but how are you so hopeless? Back in my day your big brother was really something—"</p>
+<p>"Second brother, don't listen to him — big brother's all hot air." Jiang Lü cut him off.</p>
+<p>"You girl, you'll never land a boyfriend," Jiang Bu said through his teeth.</p>
+<p>Their mom rapped him. "What kind of thing is that to say — I'm already worried she won't marry, and here you are adding to it."</p>
+<p>"How old even am I — and how am I unmarriageable?" Jiang Lü protested.</p>
+<p>"It's far too early for Jiang Lü to be talking about this," Jiang Qi agreed.</p>
+<p>"How are you this much like Dad?" Jiang Bu shook his head, and off to the side their silent father shot him a glance.</p>
+<p>Jiang Lü narrowed her eyes and muttered, "Actually I rather hope second brother gets himself a boyfriend."</p>
+<p>"What was that?" Jiang Qi hadn't caught it.</p>
+<p>"Nothing." She shook her head quickly.</p>
+<p>After dinner Jiang Qi said it was time to head back, his mom keeping up a steady stream of reminders to take care. At the study doorway he got his shoes on, then remembered he'd forgotten his books. "Jiang Lü, grab my books for me — they're beside the desk."</p>
+<p>"Okay." She went to fetch them.</p>
+<p>The next day, after his afternoon classes and with nothing to do, Jiang Qi went early to the grove with the books from home to wait for Ke Yan. He set the bag down, stretched, and took the books out one by one — then stopped. What's this? He'd opened a pink-covered book that had inexplicably turned up in the bag. A comic? Jiang Lü's?</p>
+<p>The moment he opened it, what met his eye were two boys — one sitting on the grass, the other lying on top of him, seemingly tugging at his clothes. Was this a fight? He shut it. On the cover, in big characters: <em>Just Give In to Me!!</em></p>
+<p>The startling title and the two boys lying ambiguously on the grass stirred a thread of curiosity, and despite himself he opened it and began to read.</p>
+<p>The story began with a boy named Ye Yi who, on entering university, met an upperclassman a year above, Pei Qian — named for "humble," yet nothing of the sort: proud and lofty, the object of every girl's affection, handsome, top of his class, excellent at sports, and yet never once taking a girlfriend. Ye Yi at first only thought him good-looking, but found his gaze drawn to him without meaning to, until Pei Qian saved him from a stray basketball — and Ye Yi realized he'd fallen for him. Reading to here, Jiang Qi understood: this book had no heroine, only two male leads. But could two men really end up together in the end? The question lured him on.</p>
+<p>So Ye Yi began constantly appearing in front of Pei Qian, working to become his friend; Pei Qian wanted nothing to do with him at first, but with time grew used to him. Once they were friends, Ye Yi pulled out every trick to seduce him. The part Jiang Qi had reached was the ninth such attempt, the raciest yet: Ye Yi shoves Pei Qian down onto the grass, tugging at his clothes, crying, "Just give in to me, Senior Pei." Jiang Qi was thoroughly embarrassed, with no idea how the artist had even drawn such a thing.</p>
+<p>The content grew more and more beyond anything he'd imagined, and he shut the book — only to find Ke Yan had arrived at some point. In fright he whipped it behind his back.</p>
+<p>"What are you reading?" Ke Yan asked, having seen him jump.</p>
+<p>"N-nothing."</p>
+<p>Ke Yan said nothing more, only sat to read — though privately he was a little curious.</p>
+<p>The two didn't talk, only read. On the surface Jiang Qi feigned composure, but inwardly his heart pounded, terrified Ke Yan would ask. After a good while with no question, he relaxed — and felt, too, a touch of disappointment.</p>
+<p>He turned a page, his heart a tangle. Thinking of the book, then of himself — at first he too had only thought Ke Yan good-looking, and then they'd read together, eaten together, slept over at his place. The more he thought, the more tangled it got. Head aching, he turned another page and resolved to stop. No sooner decided than drowsiness welled up; a little while later, when Ke Yan turned to look, Jiang Qi had already fallen asleep against the tree. Ke Yan carefully moved his head onto his own lap, and touched the somewhat reddened cheek. Because of that book?</p>
+<p>He picked up the comic Jiang Qi had dropped and read. Before long he couldn't help raising an eyebrow — where had this even come from? By the last page, he reckoned he'd broadened his horizons today. "Mn—" Jiang Qi stirred on his lap; Ke Yan quickly set the comic down and picked up a different book.</p>
+<p>Jiang Qi opened his eyes, found he'd fallen asleep on Ke Yan's lap again, and hurriedly sat up, rubbing the leg in case it had gone numb. "I didn't sleep too long, did I?"</p>
+<p>Ke Yan's body went stiff. "No, not too long."</p>
+<p>"Oh." Jiang Qi had discovered that this spot, lovely as it was, made it all too easy to doze off — none of the focus he'd had in the library.</p>
+<p>Then they gathered up their books. Jiang Qi picked up the comic and noticed it seemed to be in a different position than before. He looked at Ke Yan, already packed and waiting, wearing such a composed expression that Jiang Qi scratched his head. Being paranoid, surely.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-035.html" class="prev">Chapter 35</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-037.html" class="next">Chapter 37</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 39: Friends &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 39</h1>
+    <p class="chapter-title">Friends <span class="zh">朋友</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~8 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">"Did you see? Ke Yan's with some really pretty girl now."</p>
+<p>"No way — I definitely saw two, one long-haired and one short, and the long-haired one was gorgeous, prettier than our campus belle."</p>
+<p>"Really? Lucky guy — though it's just as well; if a beauty like that ends up with him, the girls here will give up on Ke Yan and settle for chasing me instead."</p>
+<p>"Tch—" said a third, gloomy. "Even if Ke Yan's got a girlfriend, there's still Ye Xingwei; and after him, Yang Shaoyu — though Yang Shaoyu's had a girlfriend for ages, a different one every week."</p>
+<p>"Is this school just cursed for us? So many handsome guys — what are us sorry sods supposed to do?" And the boys all sighed.</p>
+<p>In a corner of the classroom, Jiang Qi bit furiously into his bread, tearing off bite after bite — because two days without seeing Ke Yan over the weekend, he'd come in Monday morning to hear everyone discussing Ke Yan having a girlfriend.</p>
+<p>A girlfriend. If Ke Yan really had one — his gaze dimmed, and the bread turned to wax in his mouth. No — he had to confirm it. The thought no sooner struck than he was off, heedless of his classmate calling that class was about to start.</p>
+<p>Walking along, he realized he had no idea where Ke Yan even was. He sighed, his brain a little short-circuited. Two listless girls came toward him; "Did you hear? Ke Yan seems to have a girlfriend now," one said, and the other nodded with a long face, and the two grew more listless still.</p>
+<p>Jiang Qi ground his teeth. Is Ke Yan some celebrity? He's just a bit good-looking. Well — quite good-looking. No — very good-looking. His mouth went stiff, and he rapped his own head — what am I thinking about? Shouldn't I be working out whether he's actually got a girlfriend?</p>
+<p>His hand froze mid-rap. Two figures approaching from the opposite direction — far off, but he was certain: Ke Yan, and a girl. Too far to make out her face, he instinctively ducked behind a tree to wait for them to pass.</p>
+<p>"Ke Yan, I had no idea your school had such a nice setting," the girl said.</p>
+<p>"Mm."</p>
+<p>Behind the tree, Jiang Qi wanted to laugh — nothing to say to her, has he.</p>
+<p>"I didn't realize you were still this much of a wet blanket," the girl said, dissatisfied.</p>
+<p>Where's he a wet blanket — he's not the least bit dull. Before Ke Yan had even spoken, Jiang Qi had begun defending him; and this was the first time he'd seen any girl carry herself so easily at Ke Yan's side.</p>
+<p>"What brings you two back so suddenly this time?"</p>
+<p>Hmph — seems Ke Yan cares quite a lot about this girl.</p>
+<p>"Because Shaoyu said you'd changed lately, so Ma Tong and I came back to take a look."</p>
+<p>Her voice was sweet; perhaps Ke Yan liked that kind of voice. Jiang Qi bit his lower lip — but Ke Yan's next words rescued it.</p>
+<p>"Don't talk so revoltingly."</p>
+<p>The girl laughed, and as she passed the tree glanced over as if by chance, secretly tugging her mouth into a smile. Ke Yan really does seem different; Yang Shaoyu hadn't lied. If only Ma Tong were here — there'd be a good show to watch.</p>
+<p>Not realizing he'd been spotted, Jiang Qi went on hiding, and only emerged once they'd gone, heaving a grieved sigh at their good-looking retreating figures. That girl really is pretty — beside Ke Yan they're the very picture of a talented man and a beautiful woman; they do seem a bit suited. No, no — actually not suited at all. He didn't realize he was thinking like an aggrieved wife.</p>
+<p>His mood came down to one word: vexed. And vexed makes a person irritable. The irritable Jiang Qi went back to the dorm to sleep it off.</p>
+<p>When he woke it was very late. He threw on a coat and jogged to the library — only to find Ke Yan hadn't come. Held up by something? He took a book and waited, the minutes ticking by until closing. His stomach had gone flat with hunger. Is he not coming today? And not even a word. He rummaged for his phone to call — nothing. Where's my phone? Did I lose it?</p>
+<p>Thoroughly unlucky today — Ke Yan seemingly with a girlfriend, then not coming without a word. Head drooping, he went back. I'm telling you, Jiang Qi — how have you not noticed you're always thinking about Ke Yan?</p>
+<p>Liu Hao, on the computer in bed, took one look and jumped. "Holy — Jiang Qi, how'd you end up like this? Don't tell me you've had your heart broken."</p>
+<p>Jiang Qi couldn't even be bothered, just checked the bed for his phone, found nothing, and sat glumly on the edge.</p>
+<p>"What's wrong?" Meng Qing — no telling when he'd come back. Too embarrassed to say it was over Ke Yan, Jiang Qi only said, "I lost my phone."</p>
+<p>"Then buy a new one — don't be so listless." Meng Qing patted his shoulder.</p>
+<p>"Mm." Jiang Qi buried his face in the blanket. Just then he wanted only to shout one thing — Ke Yan, you bastard.</p>
+<p>The next day the phone still hadn't turned up; he'd have to buy a new one. But an old phone gathers some sentiment, so he retraced yesterday's route to look — and didn't find the phone, but found Ke Yan, leading two girls on a tour of the school. One was the long-haired beauty from yesterday; the other he hadn't seen, short-haired, also pretty, and rather like the first. He stood dazed — then saw them coming toward him, and instinctively hid again, feeling a deep helplessness at this "instinct" of his.</p>
+<p>"What exactly did you two come here to do?" Ke Yan's voice.</p>
+<p>"To see you, of course," said the long-haired one.</p>
+<p>"Don't think I don't know what you two are up to."</p>
+<p>"What?" The short-haired girl's voice, very gloomy, the kind that makes you shudder.</p>
+<p>"What did Shaoyu tell you?"</p>
+<p>"Nothing at all. Oh — Ma Tong, you remember what I told you yesterday?"</p>
+<p>"Mo Lü, I remember." The two looked together at Ke Yan, who paid them no mind, only gazing off in one direction with narrowed eyes.</p>
+<p>Ma Tong? Mo Lü? Why do those names sound familiar? Hearing Ma Tong's gloomy tone, he felt a faint familiarity. That's right — Ke Yan's house: the two eerie rooms, with these very names on the door-signs. Yang Shaoyu knows them too? Then are the few of them actually friends? The thought split his mouth into a foolish grin. Just as he grinned away, his collar went tight — someone had grabbed him by it. He turned, puzzled — and his expression went straight to nerves, then to awkwardness.</p>
+<p>What does it feel like to be caught red-handed eavesdropping? Jiang Qi knew now — and the one who'd caught him was Ke Yan; the feeling was dreadful.</p>
+<p>"Hi — what a coincidence." Awkward as he was, he still feigned nonchalance.</p>
+<p>"I saw you ages ago." The one sentence shattered the act, and Jiang Qi looked at him pitifully.</p>
+<p>Looking into those eyes, Ke Yan's breath caught; only after a moment did he speak. "Don't look at people like that in future." Jiang Qi didn't understand, but nodded.</p>
+<p>Ke Yan pulled him out from hiding, over in front of Mo Lü and Ma Tong. The moment Mo Lü saw him she draped an arm over his shoulder. "You wouldn't happen to be Jiang Qi, would you?"</p>
+<p>Uncomfortable, Jiang Qi made to pull away — but Ke Yan had already lifted Mo Lü's hand off. He breathed out; he really wasn't used to being this close to the opposite sex. "How do you know my name?"</p>
+<p>"Shaoyu told us." Ma Tong said it right by his ear, and Jiang Qi felt gusts of ghostly wind and hunched his shoulders.</p>
+<p>"So you two really did get something out of Yang Shaoyu." At Ke Yan's words the pair went stiff, then quickly laughed it off — well, Mo Lü did. Ma Tong patted Jiang Qi's shoulder; he turned, and found her staring without a word, then abruptly leaning in to sniff his neck. He went rigid, not daring to move. "What are you doing?"</p>
+<p>She went on sniffing, and after a long while said, "Smelling your scent."</p>
+<p>Smelling my scent. Jiang Qi decided Ke Yan's friends were nice enough — just a bit odd.</p>
+<p>"I should go." Ma Tong abruptly tugged Mo Lü away. Jiang Qi didn't react in time. "Why did they leave?"</p>
+<p>"In a little while it'll be the height of the sun, and Ma Tong hates being out in it."</p>
+<p>"How strange."</p>
+<p>"You'll get used to it later," Ke Yan said with a small smile.</p>
+<p>"Oh." Later? Jiang Qi smiled — but two seconds on, the smile faded; he remembered yesterday. "Why didn't you come to the library yesterday, without even telling me?" A note of grievance had crept in that even he didn't notice.</p>
+<p>Ke Yan took a phone from his pocket and handed it over. "You dropped your phone. I sent you a text."</p>
+<p>Jiang Qi snatched it up. "Where'd you find it? I searched forever."</p>
+<p>"Behind the tree trunk you were hiding behind yesterday." Ke Yan said it as if it were nothing.</p>
+<p>Jiang Qi froze — petrified. It hadn't occurred to him Ke Yan had seen him hiding there. Too humiliating; he could never face anyone again.</p>
+<p>The night before, when the others had gone out to eat, Ke Yan had texted with no reply, called with no answer, and grown a little worried; remembering where Jiang Qi had spied on him and Mo Lü, he'd gone and searched it — and there the phone was.</p>
+<p>Seeing Jiang Qi go red to the ears, Ke Yan broke into a smile, pinched his cheek, and took his hand. "Come on." Jiang Qi let himself be led, face still red, mouth still smiling.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-038.html" class="prev">Chapter 38</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-040.html" class="next">Chapter 40</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

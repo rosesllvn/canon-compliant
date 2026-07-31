@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 40: The First Intimate Contact &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 40</h1>
+    <p class="chapter-title">The First Intimate Contact <span class="zh">第一次的亲密接触</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~6 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">"Jiang Qi, there's a pretty girl downstairs looking for you."</p>
+<p>Just back at the dorm, Jiang Qi turned and went out again. People said this to him often lately — a pretty girl downstairs — and each time Liu Hao would tease him about his luck with women.</p>
+<p>It was Mo Lü. Since the previous week, she and Ma Tong had come every day to take Jiang Qi out to eat, and over those days he'd worked through all the best restaurants in the city. Only then did he discover the two were real eaters — three, counting Yang Shaoyu — though "connoisseurs" was nearer the mark: which place made the best of anything, which dish was the good one, they knew like the backs of their hands. After a few days he felt he'd actually put on weight. Not that Ke Yan minded; quite the opposite — otherwise he wouldn't keep heaping food into Jiang Qi's bowl.</p>
+<p>The moment he came down, Mo Lü pulled him along. "Where are we eating today?"</p>
+<p>"Today we're not going out — Ma Tong and I are cooking for you all."</p>
+<p>"You two can cook?" You couldn't blame his astonishment; the pair seemed every inch the pampered young ladies who'd never lifted a finger. For his own safety he asked in a small voice, "Is it edible?"</p>
+<p>"You dare doubt your big sister?" Mo Lü pinched his face, then gave a little cry. "How is your face so smooth, so soft? Better than my skin."</p>
+<p>He pulled her hand away. "What do you mean — I'm a man; how could it be better than yours."</p>
+<p>Mo Lü was about to say more when a voice cut in. "What are you two talking about?"</p>
+<p>She looked over — a man leaning at a slant against a tree with a book. Whoa. Had Mo Lü not grown up accustomed to the impossibly handsome poses Ke Yan struck without meaning to, she might really have whistled and gone to flirt. But Ye Xingwei plainly had no wish to be flirted with; his face was set in a scowl.</p>
+<p>"Ye Xingwei, what are you doing here?" Jiang Qi asked.</p>
+<p>"Nothing — just heading back to the dorm." He glanced at Jiang Qi. "Come back early."</p>
+<p>"Oh." Jiang Qi nodded.</p>
+<p>Once he'd gone, Mo Lü asked quietly, "You know that guy?"</p>
+<p>"Mm, he's in the bunk above mine."</p>
+<p>"The bunk above, oh..." In a certain sense, Mo Lü was even stranger than Ma Tong.</p>
+<p>The meal was at Ke Yan's place, and when Jiang Qi arrived they hadn't even bought the ingredients. "I'll go buy them now — Jiang Qi, rest on the sofa." Mo Lü hauled Ma Tong up; Ma Tong refused to go.</p>
+<p>"I'll come with you," Jiang Qi offered.</p>
+<p>"No need — Ma Tong's gone too long without sun; I'm taking her out for some." She glared Ma Tong into coming, and Ma Tong, on her way out, stomped hard on Mo Lü's foot.</p>
+<p>With them both gone, Ke Yan apparently not home, Yang Shaoyu not yet arrived, Jiang Qi sat bored and alone — when the phone on the table rang. He picked it up, registering only after that it was Ke Yan's home line, and gave a stiff "hello."</p>
+<p>"Hello — Jiang Qi, is it."</p>
+<p>"Oh, it's you, Mo Lü."</p>
+<p>"Yes. Go to Ke Yan's room a minute, there's something."</p>
+<p>"What is it?"</p>
+<p>"Something important." She hung up. Beside her, Ma Tong scoffed, "Childish little trick."</p>
+<p>"Don't you think it's fun, though? I never imagined it would actually work on Ke Yan."</p>
+<p>Jiang Qi opened the door to Ke Yan's room, and heard running water from the bathroom. Huh? Is Ke Yan home? Showering? Trying not to listen to the water, he looked around the room. What did Mo Lü call me in here for? No — Mo Lü went out; could it be Ke Yan who wants me?</p>
+<p>His head a bit muddled, he meant to back out — and just then the water cut off. He panicked, wanting only to get out fast, but tripped on the carpet and came down knees-first onto the floor.</p>
+<p>And so, when Ke Yan emerged from the bathroom, the scene that met him was Jiang Qi rear-end up, hands braced on the floor, back turned — a pose that sent a flush of heat through him. He steadied himself before walking over to help the mortified Jiang Qi up.</p>
+<p>What Jiang Qi felt just then was far past mortification; he wished he could knock himself out, sprawled there rigid, not daring to move. A warm breath drew near, the faint scent of body wash — and then Ke Yan's arm took him about the waist and lifted him up. To be precise: lifted him, and then pressed him down onto the bed.</p>
+<p>"Hm? Ke Yan?" He only came back to himself after being pinned a good while, and looked up in confusion.</p>
+<p>Ke Yan didn't answer, only lowered himself a little. The heat radiating off him left Jiang Qi dizzy, his heart racing, until he could scarcely breathe.</p>
+<p>Ke Yan's gaze darkened, and Jiang Qi seemed to catch a flicker of danger in his eyes. A hand stroked along the side of his waist, brushing softly, and he couldn't help a shiver, a tingling numbness spreading through him; he didn't need a mirror to know his face had gone red.</p>
+<p>The mood was charged past bearing. At a loss, Jiang Qi only looked at him — damp eyes, fair cheeks flushed, somehow bewitching; the pale throat, the collarbone faintly there and gone. Just then Ke Yan wanted only to set his mouth to it; as for the lips, he didn't dare look, afraid he wouldn't hold back.</p>
+<p>Drawing several deep breaths, Ke Yan lifted himself off, and as he helped Jiang Qi up stroked his back and said low, "Jiang Qi, I'll wait a while longer."</p>
+<p>Jiang Qi couldn't get a word out, sitting in disarray, listening to that now slightly husky voice murmur in his ear. Apart from a red face and ragged breathing, he had no strength to spare for anything. Ke Yan's effect on him was far too great — so great that even Jiang Qi didn't know it.</p>
+<p>When Mo Lü came back she found him sitting alone, face red, clothes neat — he'd already straightened them. No marks on his neck, no worn-out look. She heaved a sigh. What's this — he didn't manage it after all? Ke Yan's too slow.</p>
+<p>Ma Tong didn't study him like the deviant Mo Lü, only asked, "Where's Ke Yan?"</p>
+<p>"Show— shower." After they'd gotten up, Ke Yan had walked straight into the bathroom without a word, and Jiang Qi had hurried out.</p>
+<p>"Ma Tong, how do you suppose Ke Yan manages to hold back?"</p>
+<p>"Mo Lü. Ke Yan's behind you."</p>
+<p>She turned to find him watching with narrowed eyes, and spun back. "I'll go cook."</p>
+<p>Ke Yan sat beside Jiang Qi, who didn't dare look at him — one glance and his face heated.</p>
+<p>Because of that intimate contact, Jiang Qi's agitation lasted the whole evening: back at the dorm, through his shower, in bed, rolling about. He really did like Ke Yan, after all. The other three, seeing him like that, all suspected he'd been possessed.</p>
+<p>And just then Jiang Qi was thinking: since he liked Ke Yan, should he do something about it in practice? Ke Yan probably liked him too, didn't he?</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-039.html" class="prev">Chapter 39</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <span class="next disabled">Coming soon</span>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>
