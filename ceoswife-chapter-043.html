@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 43: The Meal &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 43</h1>
+    <p class="chapter-title">The Meal <span class="zh">吃饭</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~5 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">The first day of Ke Yan's trip, Jiang Qi went to work alone, came home alone, and looking at the house empty but for himself and Auntie Li, couldn't help a pang of melancholy — though at least Auntie Li was there. He patted his own head. When did I get this much like a girl.</p>
+<p>Changed and downstairs, he found Auntie Li had finished cooking, and every dish was a favorite: sweet-and-sour fish, sweet-and-sour ribs, stir-fried potato, beef with green peppers, and in the middle the poached fish fillets in chili broth he loved best of all. He loved spicy food but had a delicate stomach, so his mom had rarely made it, and since getting together with Ke Yan, Ke Yan only grudgingly let him have it once in a great while.</p>
+<p>He was about to start when Auntie Li set her own bowl on the table and smiled. "Jiang Qi, I'll eat with you today." She'd never stayed to eat before; it caught him off guard — though eating with someone beat eating alone by far.</p>
+<p>"Auntie Li, your cooking really is delicious," he said as he ate.</p>
+<p>She laughed happily and put more in his bowl. "Eat plenty, take your time. Don't choke."</p>
+<p>When he'd finished, he sat on the sofa and let out a burp — a touch overfull. It'd be nice to have some fruit just now. No sooner thought than Auntie Li set a plate of cut fruit before him, all of it his favorites — watermelon, honeydew, muskmelon, guava — in small bite-sized pieces.</p>
+<p>"Auntie Li, how do you know what I like?"</p>
+<p>She smiled. "The Young Master told me what you like, and asked me to prepare it."</p>
+<p>"Did he?" The watermelon in his mouth was sweet, but his heart was sweeter — sweet through and through.</p>
+<p>At bedtime he texted Ke Yan: <em>Work hard, come back soon.</em> And Ke Yan, in the middle of contract talks, looked at it and couldn't help his mood lifting. The Haiwei chairman across from him watched that face turn from icy to cheerful in an instant — and was certain he hadn't misread the faint upward curve of Ke Yan's mouth; farsighted he might be, but he had his reading glasses on.</p>
+<p>Jiang Qi's good mood lasted through breakfast and into the workday. At lunch he went to the canteen, and the moment he walked in saw Jiang Lü waving — then heard Xiao An: "Jiang Qi, Jiang Qi, come eat over here." Tray in hand, he looked between the two, and decisively took a table by himself.</p>
+<p>The two exchanged a glance. Jiang Lü thought: could that be second brother's girlfriend? Xiao An thought: could she be Jiang Qi's girlfriend — no way, wouldn't that wreck my grand plan? Both picked up their trays at the same moment and sat down across from him. "What are you two doing?"</p>
+<p>Xiao An spoke first. "Jiang Qi, that's not very nice of you. You didn't even tell me you have a girlfriend."</p>
+<p>Jiang Qi choked on a grain of rice. "Where'd you hear that?"</p>
+<p>Across the table, Jiang Lü heard it — first delighted (second brother doesn't have a girlfriend?), then, hearing more, confused.</p>
+<p>Xiao An pointed grievously at Jiang Lü. "Isn't she one?"</p>
+<p>Now it was Jiang Lü's turn to spray out her rice. What is going on?</p>
+<p>Jiang Qi looked at Xiao An, deadpan. "That's my little sister."</p>
+<p>"Huh?" Xiao An's mouth fell open, then she smiled. "Oh, good — I thought my wish was going to come to nothing."</p>
+<p>"What wish?" Jiang Lü asked.</p>
+<p>"Nothing." Xiao An shook her head quickly.</p>
+<p>Jiang Lü chewed her chopsticks, sensing a kindred, like-minded whiff coming off this person.</p>
+<p>Done eating, Jiang Qi made a quick exit, not stopping even as the two called after him — in a hurry to call Ke Yan, of course. Walking out, an arm was thrown over his shoulder; he turned — Fan Teng, with whom he was fairly well acquainted.</p>
+<p>Fan Teng grinned. "Jiang Qi, I had no idea you were such a hit with the ladies."</p>
+<p>Jiang Qi lifted the arm off. "What are you on about."</p>
+<p>"Still won't admit it? Then what's the deal with Xiao An and that other beauty both circling you?"</p>
+<p>"We're friends. All right, I've got things to do — I'm off." Actually he was telling the truth — except that Jiang Lü was his sister.</p>
+<p>But Fan Teng didn't believe it, and mentioned Jiang Qi's popularity to others: two girls after him, and he perversely wouldn't have either. Somehow the rumor spread — that Jiang Qi was mulling which of two girls to date, one Xiao An from his department, the other the newly-arrived Jiang Lü. It never crossed anyone's mind that two people with such similar names were, in all likelihood, siblings. And the party in question had no idea, still happily chattering away to Ke Yan on the phone.</p>
+<p>"I'll be back in a couple of days," Ke Yan said.</p>
+<p>"Mm, good, I'll wait for you."</p>
+<p>"Eat properly, go easy on the spicy food."</p>
+<p>"Mm — you eat properly too. If it's no good, eat enough to fill up at least."</p>
+<p>"...All right." Ke Yan, mid-meal and about to stop, picked his chopsticks back up at the words and ate. Sure enough, it wasn't good — not as good as Jiang Qi's cooking. If the five-star hotel's chef had heard that, he'd surely have wanted to cough up blood.</p>
+<p>Jiang Qi hung up satisfied and started his afternoon. Just off work and walking out, he heard Jiang Lü behind him. "Second brother — I forgot; Mom wants you home for dinner tonight. She says she hasn't laid eyes on you in half a month."</p>
+<p>"It's hardly that bad. All right, let's go." He texted Auntie Li an apology and got in a taxi with Jiang Lü, not noticing the company people remarking that he'd left together with her. "They wouldn't have gone home together, would they?" one said. The others nodded. Very possible.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-042.html" class="prev">Chapter 42</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-044.html" class="next">Chapter 44</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

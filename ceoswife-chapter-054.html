@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 54: Chocolate for You &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 54</h1>
+    <p class="chapter-title">Chocolate for You <span class="zh">给你巧克力</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~8 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">She'd promised to sound him out, but where to begin? On workdays her only chance was Jiang Qi's morning walk to the company — far too early for Ke Shao to rise and rush over for a chance encounter. On weekends the couple stayed home or went out together. She had no opening at all.</p>
+<p>What to do? Ke Shao sat on the sofa cradling her son, thinking.</p>
+<p>Her son, not yet one, blew spit bubbles in her arms. When her husband came home he found wife and child frozen on the sofa.</p>
+<p>"Shao, what's wrong?" Ke Shao's husband, Richard, was a foreigner — a German, to be precise — but he'd grown up in China since childhood, so his Chinese was even better than his German.</p>
+<p>Ke Shao looked at Richard while holding the child; Richard caught on at once and reached out to take their son.</p>
+<p>Ke Shao took a satisfied sip of black tea before laying out the matter.</p>
+<p>"Isn't that easy? Lure little brother-in-law away, then sound out his boyfriend."</p>
+<p>"Mm — but how do we lure Xiao Yan away? I'll leave that to you."</p>
+<p>"All right."</p>
+<p>Taking on the task Ke Shao had assigned him, Richard called his mother-in-law. "Hello, Mom, it's me, Richard..."</p>
+<p>Richard then told Lan Ruyin his plan, and the two began to scheme.</p>
+<p>And so, before Ke Yan had even gotten off work that day, he got a call from Lan Ruyin. "Xiao Yan, come home for a bit today." "What is it?" "Something about Jiang Qi." "All right, I'll be back in a while."</p>
+<p>Hanging up, Ke Yan called Jiang Qi. "I'm going home for a bit tonight." "Okay, I'll head back on my own first then." "Mm — remember to eat." "I know, I'm not a child." Jiang Qi smiled. "All right, hanging up." "Mm."</p>
+<p>Ke Shao watched Ke Yan drive off from the company, then came out of the coffee shop across the street, planning to wait for Jiang Qi to finish work and follow him.</p>
+<p>Suddenly the baby in her arms started crying; Ke Shao bent her head to soothe him. "There there, Xiao Ke."</p>
+<p>The baby's full name was Wang Ke, nickname Xiao Ke — a name Richard had spent four days and nights devising and considered excellent.</p>
+<p>Soothing the child, Ke Shao kept glancing toward the company to see whether Jiang Qi had come out.</p>
+<p>Jiang Qi left the company and walked farther down to catch a cab. He'd never minded not having a car, but today one seemed convenient. Rush hour had packed both taxis and buses; after a long wait he finally flagged a cab, only to be stopped as he opened the door. A woman stood there holding a child.</p>
+<p>Jiang Qi was momentarily startled. "Can I help you?" "No — I'd like to take this cab." "But I was first—"</p>
+<p>Ke Shao cut Jiang Qi off. "I've been waiting a long time holding my baby."</p>
+<p>Jiang Qi looked at the child in Ke Shao's arms, stepped back. "Then you take it first."</p>
+<p>Ke Shao got into the cab, and seeing Jiang Qi about to close the door for her, stopped him. "If you don't mind it being a bit of a detour, get in too — once I'm home you can have the driver take you back."</p>
+<p>Jiang Qi looked at the crowd all waiting for cabs, and nodded. "All right then."</p>
+<p>Jiang Qi got in too — though he took the front seat, while Ke Shao sat in back with Xiao Ke.</p>
+<p>They gave their addresses. Ke Shao feigned surprise at Jiang Qi's. "You live nearer than I do — what luck. We'll drop you off first."</p>
+<p>"All right."</p>
+<p>A silence fell in the car; after a while Xiao Ke in Ke Shao's arms suddenly started crying. Ke Shao had been thinking how to sound Jiang Qi out next — where was the energy for that now; she soothed her son.</p>
+<p>Seeing the child in back crying nonstop, and not knowing how to soothe children himself, Jiang Qi rummaged in his briefcase a while and pulled out a chocolate. "Miss," Jiang Qi called to Ke Shao; she looked up, and he held the chocolate out to her. "For the baby."</p>
+<p>Ke Shao gave it to her son. It was large enough not to swallow but small enough to hold, and Xiao Ke stopped crying at once, staring round-eyed at the glittering foil and babbling excitedly.</p>
+<p>Ke Shao smiled — it seemed this Jiang Qi wasn't as bad as Mom had said; how thoughtful.</p>
+<p>Jiang Qi's place wasn't far from the company; he got out, paid his fare, and said to Ke Shao, "I'm here, goodbye." Then he looked at the baby and waved. "Bye-bye, little one."</p>
+<p>Ke Shao smiled and said goodbye. Yes — perhaps they'd be seeing each other again very soon.</p>
+<p>When Ke Shao got home, Ke Yan was sitting on the sofa chatting with Lan Ruyin. When Lan Ruyin looked at Ke Shao, her eyes signaled: how was it?</p>
+<p>Ke Shao gave a quiet nod.</p>
+<p>Lan Ruyin couldn't help frowning. Ke Yan noticed and asked, "What is it?"</p>
+<p>"Nothing — I saw Xiao Ke's asleep; I haven't held him today." Lan Ruyin reacted quickly.</p>
+<p>Ke Yan's gaze paused on the chocolate in Xiao Ke's hand. His mother had called him home, yet through all their talk had never once mentioned Jiang Qi. He'd assumed that was the entire reason for the summons.</p>
+<p>"Mom, you're a grandmother now; some things you should fret over less, or you'll look old."</p>
+<p>Lan Ruyin reflexively touched her own face, then glared at Ke Yan — his meaning was plainly that she should mind Jiang Qi's business less.</p>
+<p>Just then the family's housekeeper came to say dinner was ready, and Ke Yan's father came down from upstairs, so Lan Ruyin had to drop the subject.</p>
+<p>At dinner Lan Ruyin couldn't hold back. "Husband."</p>
+<p>Ke's father: "Mm."</p>
+<p>"Xiao Yan hasn't slept at home in ages."</p>
+<p>"Mm."</p>
+<p>Lan Ruyin was used to this. "Then let Xiao Yan rest at home a few days; you go to work."</p>
+<p>Ke's father glanced at Ke's mother. "Whoever heard of chasing one's husband off to work — Ke Yan, keep going to work tomorrow."</p>
+<p>"Mm, all right."</p>
+<p>Lan Ruyin, furious at the father and son both, ate two big mouthfuls of rice.</p>
+<p>And nearly choked herself.</p>
+<p>After dinner Ke Shao took Xiao Ke out to the courtyard for some cool air, playing with the child in her arms, when she heard the rustle of footsteps on the grass; in a moment someone was standing beside her. Ke Shao looked up at her brother. "Got a question for me?"</p>
+<p>"You saw Jiang Qi?"</p>
+<p>"How did you know." Ke Shao didn't deny it, in fact admitting it quite frankly.</p>
+<p>"Mom called me home but never mentioned Jiang Qi. She can't hide anything, and her expression changed the moment you came back. You two were scheming."</p>
+<p>"You really can't be fooled."</p>
+<p>"Also..." Ke Yan gave Xiao Ke the other chocolate in his hand, swapping it for the one in the baby's grip. "I'll take this one back."</p>
+<p>"Hey, you're stealing your nephew's snack."</p>
+<p>"It was mine to begin with." Ke Yan waved a hand and left.</p>
+<p>Watching her brother walk off, Ke Shao gave a smiling sigh. "Xiao Ke, your uncle's become a real man — he's learned to protect the one he loves."</p>
+<p>"Ya-ya-ya-ya." Xiao Ke waved the chocolate in his hand, babbling.</p>
+<p>"Little thing, you can't eat this now; eat it when you're grown."</p>
+<p>A voice suddenly came from behind; Ke Shao didn't need to look to know it was her husband.</p>
+<p>Ke Yan stayed a while longer before telling Lan Ruyin he was heading home. Lan Ruyin said reluctantly, "Drive carefully on the way, and also..."</p>
+<p>"Hm?"</p>
+<p>"Nothing."</p>
+<p>"Then I'm off."</p>
+<p>"Mm."</p>
+<p>Lan Ruyin watched Ke Yan's retreating back and sighed helplessly.</p>
+<p>When Ke Yan got home Jiang Qi was playing a game with Mo Lü and the others in the living room. Seeing Ke Yan back, Jiang Qi tossed down the game controller.</p>
+<p>"You're back — go shower, quick."</p>
+<p>"Mm."</p>
+<p>"Jiang Qi, this level isn't cleared yet, where are you going?" Mo Lü said, exasperated.</p>
+<p>"Get Ma Tong to play with you."</p>
+<p>"Honestly — ditching your friends the second your man shows up."</p>
+<p>In the bedroom, Jiang Qi went to find clothes for Ke Yan, took out pajamas and underwear and handed them over; Ke Yan took them but just set them on the bed, with no sign of going to shower.</p>
+<p>Jiang Qi sat down beside Ke Yan. "What is it?"</p>
+<p>Ke Yan took a chocolate from his clothes pocket; Jiang Qi took it in delighted surprise. "Where'd you get this — I gave my last chocolate of this kind to a baby today."</p>
+<p>These chocolates were ones Ke Yan had bought on a business trip; of them, this kind was Jiang Qi's favorite.</p>
+<p>"Got it from my nephew — that is, the baby you met today."</p>
+<p>Jiang Qi's hand paused on the foil. "Then..."</p>
+<p>"That was my sister."</p>
+<p>Jiang Qi's hand went slack; the chocolate dropped onto the bed. Luckily he hadn't fully unwrapped it, or it would have left a chocolate mark on the sheets.</p>
+<p>"Then does your sister know we..."</p>
+<p>"She knows." Ke Yan sat to one side watching Jiang Qi's reaction with interest.</p>
+<p>"..." Jiang Qi was hard at work recalling whether he'd done anything wrong while with Sister Ke today.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-053.html" class="prev">Chapter 53</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-055.html" class="next">Chapter 55</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

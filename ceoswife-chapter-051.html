@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 51: The Three of Them Eat &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 51</h1>
+    <p class="chapter-title">The Three of Them Eat <span class="zh">三人吃饭</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~9 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">After talking until the sky had darkened, Jiang Qi judged they'd stayed long enough and took his leave of Lin Zhengrui.</p>
+<p>Wang Siqi looked at the sky, then at Ke Yan's profile, and proposed, "It's getting late — let's all eat together before heading back."</p>
+<p>The two had no objection to Wang Siqi's proposal, so the three got into Ke Yan's car and drove toward a restaurant.</p>
+<p>Back in the ward, Lin Zhengrui found Ke Yan's visit perfectly natural now that he knew about Jiang Qi. Wang Siqi's was stranger; at work she sometimes wouldn't even acknowledge people. Hadn't someone said she was interested in the CEO? If it was true, did Jiang Qi know? He'd have to warn him someday.</p>
+<p>Mrs. Lin, sitting beside her husband, watched his pensive face and couldn't help poking his big fat belly. "What are you thinking about?"</p>
+<p>"No — nothing."</p>
+<p>Mrs. Lin looked at him disbelievingly; Lin Zhengrui turned his face away from his wife.</p>
+<p>Over here, the three discussed where to eat in the car.</p>
+<p>Ke Yan looked around. "Meng Qing's place is close by — let's go there."</p>
+<p>Jiang Qi nodded, then, remembering Wang Siqi was in the car, asked her, "Manager Wang, is that all right? Or is there a restaurant you'd like to go to?"</p>
+<p>"Oh, I'm fine with it." Wang Siqi could learn what Ke Yan liked and where he ate. Meng Qing sounded like a friend; perhaps she could make his acquaintance too.</p>
+<p>Ke Yan drove to Meng Qing's restaurant; Wang Siqi got out and looked over the place's decor — not bad, looked quite nice.</p>
+<p>Jiang Qi, off to the side, called Meng Qing. "Hello, Meng Qing — I'm at your door; we're eating at your place today."</p>
+<p>Wang Siqi listened to Jiang Qi on the phone; no telling what the other side said, but Jiang Qi smiled and answered, "Okay, no problem."</p>
+<p>Jiang Qi hung up just as Ke Yan finished parking and came over.</p>
+<p>"What is it?" Ke Yan asked Jiang Qi.</p>
+<p>"Nothing — waiting for you. Meng Qing says he's not at the restaurant right now; he says we should eat first and it's on him."</p>
+<p>"Mm, let's go in then."</p>
+<p>The two talked as if she weren't there and walked inside. Wang Siqi stared after them — had they forgotten her? Fortunately they looked back and called, and she followed in good spirits.</p>
+<p>The restaurant, run by Meng Qing and his older brother, was handsomely decorated. Jiang Qi and Ke Yan ate here often, and most of the staff knew them.</p>
+<p>A server took them to the private room Jiang Qi and Ke Yan usually used; the three sat down to order. Jiang Qi and Ke Yan both ordered steak; Wang Siqi didn't like beef and ordered fish instead. As the server finished noting it down and was about to leave, Jiang Qi said, "And a bowl of white rice for me."</p>
+<p>"Of course, one moment please." Though puzzled why Jiang Qi wanted white rice with steak, the server showed not a flicker of surprise.</p>
+<p>Wang Siqi gave Jiang Qi an odd look too; Jiang Qi didn't notice, and stood. "I'll just go to the restroom."</p>
+<p>"Mm." Ke Yan acknowledged him.</p>
+<p>Wang Siqi was secretly thrilled. With Jiang Qi gone, she had Ke Yan to herself.</p>
+<p>The moment Jiang Qi opened the door and went out, Wang Siqi spoke. "CEO, may I call you Ke Yan?"</p>
+<p>"Mm."</p>
+<p>"Ke Yan, so you like steak — you and Manager Jiang have known each other so many years, and your tastes are still so alike, who'd have thought."</p>
+<p>After so many years at the same table, how could their tastes not be alike? "Yes — we've eaten together many years."</p>
+<p>Wang Siqi felt a flicker of envy that Jiang Qi could eat with Ke Yan for so many years, and smiled. "By my count, you and Manager Jiang have been together close to six or seven years now."</p>
+<p>Ke Yan looked at Wang Siqi strangely. "Didn't realize you'd counted so carefully." You should know that people at the company knew he and Jiang Qi were classmates, were friends, but apart from Yang Shaoyu, no one really knew how many years they'd known each other.</p>
+<p>"Oh, I just heard it from others." Wang Siqi smiled, very natural.</p>
+<p>"Mm."</p>
+<p>"Right — last time I saw you drinking coffee; what coffee do you like? I quite like coffee too."</p>
+<p>"Nothing in particular — I drink it now and then, not often."</p>
+<p>"Oh." Wang Siqi sipped her water.</p>
+<p>Just then the server brought the food in — and, of course, the bowl of white rice Jiang Qi had ordered separately.</p>
+<p>Once the dishes were set out, Ke Yan asked the server to bring a pair of chopsticks.</p>
+<p>This restaurant wasn't a dedicated Western place, so Ke Yan asking for chopsticks was fine.</p>
+<p>Ke Yan picked up his knife and fork; seeing this, Wang Siqi assumed he wasn't waiting for Jiang Qi and picked hers up too.</p>
+<p>To her surprise, Ke Yan cut not his own steak but Jiang Qi's, slicing it into neat, even strips.</p>
+<p>While Wang Siqi was puzzling over it, Jiang Qi came back in, sat down, and drank some water.</p>
+<p>"What took so long?" Ke Yan asked.</p>
+<p>"Ran into a university classmate; chatted a couple of words with him."</p>
+<p>"Eat up, then."</p>
+<p>Jiang Qi glanced at the steak Ke Yan had already cut for him and smiled, sweet in his heart.</p>
+<p>Just about to eat, he patted his head. "I forgot to ask them for chopsticks."</p>
+<p>The words were barely out when the door opened and the server brought a pair of chopsticks in for Jiang Qi.</p>
+<p>Jiang Qi took the chopsticks and started eating, an indescribable happiness in his heart.</p>
+<p>Wang Siqi felt Ke Yan's behavior was nothing like what a friend would do — more like a lover. But how could that be? Wang Siqi gave a self-mocking shake of her head.</p>
+<p>"What is it, Manager Wang?"</p>
+<p>Jiang Qi was eating when Wang Siqi, sitting across from him, suddenly shook her head, so he asked.</p>
+<p>"Oh, it's nothing — it's more that you, Manager Jiang..." Why eat steak with rice.</p>
+<p>"Oh." Jiang Qi scratched his head. "I just like eating it this way, and it tastes good."</p>
+<p>"Heh heh, you really do have particular tastes."</p>
+<p>In the subtle atmosphere, the three subtly finished dinner.</p>
+<p>In the end Ke Yan and Jiang Qi drove Wang Siqi home.</p>
+<p>After dropping Wang Siqi off, Ke Yan drove home. Jiang Qi leaned back in his seat and let out a comfortable sigh.</p>
+<p>"Ke Yan, do you think Manager Lin really got sick from you scaring him?"</p>
+<p>"Oh?" Ke Yan raised his tone with interest.</p>
+<p>"Because Manager Lin's face goes bad the moment he sees you."</p>
+<p>"This time the one who made his face go bad was you."</p>
+<p>"Why do you say that?" Jiang Qi didn't follow Ke Yan's meaning.</p>
+<p>"Nothing."</p>
+<p>"You're fobbing me off." Jiang Qi was displeased.</p>
+<p>Ke Yan freed one hand and stroked Jiang Qi's head.</p>
+<p>When the two got home they found the front door not properly shut, standing half-open.</p>
+<p>"Who didn't shut the door." Jiang Qi pushed it open. "Auntie Li didn't come to cook today, did she?"</p>
+<p>"A burglar?"</p>
+<p>Ke Yan's casual remark made Jiang Qi's nerves snap taut. Had a burglar really gotten in? He picked up the golf club kept in the entryway cabinet and shielded Ke Yan behind him. "Maybe there really is a burglar — we should be careful."</p>
+<p>Ke Yan looked helplessly at Jiang Qi shielding him in front — what an idiot; what if he got hurt himself?</p>
+<p>He pulled Jiang Qi behind him, the two switching places, and took the club from Jiang Qi's hand. Jiang Qi, before he could react, had it taken from him; he blinked, but didn't insist on staying in front, because he knew what Ke Yan was thinking, and his fighting ability really was no match for Ke Yan's.</p>
+<p>The two walked into the house, made a circuit downstairs and found no one — except that the place was a bit of a mess. Messy as it was, though, not a single valuable thing seemed disturbed; instead there was a big heap of snack bags of mysterious origin.</p>
+<p>Ke Yan set down the club. "Looks like the burglars are Mo Lü and Ma Tong."</p>
+<p>Jiang Qi realized it too, and added, "Maybe a Yang Shaoyu as well."</p>
+<p>Apart from Auntie Li, only those three had keys to their house.</p>
+<p>Jiang Qi and Ke Yan exchanged a glance and headed upstairs in unspoken accord. Reaching the guest room the sound was coming from, they opened the door — sure enough, the three of them.</p>
+<p>"Why are you here?" Ke Yan asked coldly.</p>
+<p>"We came here to hang out," the three answered in unison, of all things.</p>
+<p>"How long have you been here?" Jiang Qi picked up the potato chips that had fallen by his feet.</p>
+<p>"Dunno." Because they were gaming, none of the three looked up at Jiang Qi and Ke Yan.</p>
+<p>Seeing the three of them so distracted, Jiang Qi and Ke Yan withdrew.</p>
+<p>They'd arrived without a word and made a mess, but after so many years of friendship, neither Jiang Qi nor Ke Yan could truly be angry.</p>
+<p>Jiang Qi and Ke Yan returned to their own room; Jiang Qi opened the wardrobe to get clothes for a shower, while Ke Yan went to run the water. They usually just showered, and the occasional soak in the tub was also...</p>
+<p>Jiang Qi, holding his pajamas, went a little red in the face.</p>
+<p>He walked into the bathroom; Ke Yan had already run the water and taken off his suit. Jiang Qi set his clothes in the spot for laundry and took off his own suit too, and as he removed the last piece, felt a warm presence press against him from behind, arms wrapping around him, hands reaching to knead the two points on his chest.</p>
+<p>Under the slow kneading and stroking, they slowly grew red and firm.</p>
+<p>Jiang Qi panted faintly; Ke Yan kissed the corner of his mouth from behind, Jiang Qi twisting his neck to meet the kiss, and after a while, finding it uncomfortable, his tongue licked at Ke Yan's. Ke Yan only kissed deeper, and carried Jiang Qi into the tub. Jiang Qi could already feel Ke Yan had hardened below.</p>
+<p>The two's breathing grew heavier, hands already moving to each other's lower bodies — when suddenly a startling crash sounded. Jiang Qi jumped at the noise, his hand unconsciously tightening with force, and Ke Yan gave a muffled grunt. Jiang Qi instantly released the force in his hand and looked at Ke Yan in alarm...</p>
+<p>No telling how long passed before Ke Yan climbed out, pulled on a bathrobe, and left. Where to needs no saying. Soon came the wails of Yang Shaoyu and Mo Lü; Ma Tong, innocent of this round of destruction, escaped his wrath.</p>
+<p>And Jiang Qi, meanwhile, sat alone and despondent in the tub. That — should be all right, shouldn't it?</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-050.html" class="prev">Chapter 50</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-052.html" class="next">Chapter 52</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

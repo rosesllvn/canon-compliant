@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 48: Seven-Year Itch (Part Two) &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 48</h1>
+    <p class="chapter-title">Seven-Year Itch (Part Two) <span class="zh">七年之痒下</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~9 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">The next day, though Jiang Qi's body was nearly falling apart and he was drowsy, his mood was good — and good mood, good work efficiency; he thought he might finish early, and couldn't help smiling.</p>
+<p>Near the lunch break Ke Yan called. "I'm playing ball this afternoon, and after that I'll probably have a dinner tonight. Eat at home on your own — don't wait for me." Jiang Qi knew "playing ball" meant golf, and a dinner after meant business talks. "Okay, I've got it. Go easy on the drinking."</p>
+<p>"Mm."</p>
+<p>At the end of the workday Jiang Qi walked out to find the managers of every department gathered at the entrance. "What are you all doing? Waiting for someone?"</p>
+<p>Fan Teng was right in front of him. "Have you lost it? Didn't we agree on a group dinner?" Jiang Qi thought about it — there did seem to have been such a thing.</p>
+<p>Yulou was a top-tier grand restaurant — enormous, rather like a hotel, with rooms for guests to rest. Antique, classical decor, the food excellent and exquisitely plated, like palace dishes. The one drawback: every dish came on a small plate — two bites and gone — and it was expensive besides. Scarcity makes a thing precious, so plenty still came, mostly the wealthy. But Jiang Qi didn't like coming, because the first time, with Ke Yan, they'd ordered a whole table and he'd still left unfull — and the bill had given him a fright, nearly a month's salary for a meal that didn't even fill him. Ke Yan had paid in the end, but it still pinched, so ever since, whenever anyone treated him, he never came here.</p>
+<p>"I'm telling you, you wouldn't have forgotten?"</p>
+<p>"No, I remember." Jiang Qi flatly refused to admit it.</p>
+<p>"I think you forgot — and even if you didn't, you were late, so you've still got to drink a couple extra," Wang Pu said. There was no help for it; he had in fact forgotten.</p>
+<p>Just then Wang Siqi came out carrying her little bag and walked off without a glance at any of them; no one dared call out to stop her. Only once she'd gone did someone say it'd be great if she came along — "You dare call her? I wouldn't." "I've been here years and she's never once looked at me straight on." "Who told her to be such a beauty, and good at her job too — made manager in a few years." "How do you know she's good and not just sleeping her way up?" That went a bit far; not one person picked it up. Jiang Qi spoke: "Impossible. If it were really like that she'd have been fired by Ke Yan long ago."</p>
+<p>His words broke the silence, and Huang Shixiong, who'd said it, hurried to second him. Lin Zhengrui picked up: "Though — Jiang Qi, you've got nerve, calling the CEO by name straight out. I've been here years and don't dare say it once." Jiang Qi smiled; this was exactly why he liked being friends with Lin Zhengrui — a bootlicker and a bit timid, but frank sometimes.</p>
+<p>They reached Yulou, a room booked in advance. The food didn't come quickly, but the wine came first; Lin Zhengrui opened two bottles, and when everyone's glass was full, Huang Shixiong said, "Come — say nothing, let's down this first one."</p>
+<p>Jiang Qi spoke up: "Let's drink once the food's here — this way it's too easy to get drunk." He knew his tolerance was poor.</p>
+<p>"No good, Jiang Qi — if you hadn't spoken I'd nearly have forgotten your penalty. We drink one; you drink two." There was no help for it; under their coercion he downed two big glasses in one go.</p>
+<p>The food came after a while, and Jiang Qi hurried a couple of bites to steady himself — he mustn't get drunk; he knew his behavior when drunk was poor, and feared he'd talk nonsense. The food here was good, though; he snuck a couple of extra bites.</p>
+<p>"I'm telling you — better not to take a wife after all." It was Huang Shixiong, plainly drunk. "A wife's not as good as a concubine, a concubine's not as good as a fling — not a word wrong in it. Marry a wife and once she's home she's just a nuisance."</p>
+<p>Jiang Qi frowned. "What are you saying? Your wife keeps the house for you — how can you talk like that."</p>
+<p>"Manager Jiang, you've never married; you don't know. Once you're married you'll surely be the same; just wait," Wang Pu said.</p>
+<p>Jiang Qi puffed out his cheeks. Lin Zhengrui pressed a glass into his hand. "All right, enough talk — let's drink one."</p>
+<p>No telling how many glasses; Jiang Qi's head spun, his mouth was dry, and he wanted the toilet. He braced on the table, walked unsteadily to the door, and tried to open it. Lin Zhengrui hurried to steady him. "Manager Jiang, where are you going?" — having drunk little, his tolerance good, he was hardly drunk.</p>
+<p>"I need the toilet." Jiang Qi refused the room's own toilet — "I want to go outside" — what logic was this? — so Lin Zhengrui could only steady him out, and waited while he used it, afraid he'd wander into someone else's room.</p>
+<p>Jiang Qi came out looking all right — which didn't mean he wasn't drunk; he couldn't walk a straight line. The two wound this way and that, and just as they neared the room Jiang Qi veered off elsewhere. Lin Zhengrui caught him. "Manager Jiang, it's this way."</p>
+<p>Jiang Qi shook him off. "I saw someone. Ke Yan."</p>
+<p>"CEO Ke?" Lin Zhengrui glanced over — not a soul. "Then we definitely can't go over — you know my legs go weak the moment I see him."</p>
+<p>"No, I want to go over." And he walked on. Lin Zhengrui sighed, wiped his face, cradled his belly, and followed — how had he never noticed Jiang Qi was this sort of person.</p>
+<p>When he caught up, Jiang Qi was peeking around a corner. Lin Zhengrui leaned in for a look too — Ke Yan, and a man and a woman before him. The man he knew: Wei Changtian, chairman of Changcheng Group; the woman beside him must be the daughter just back from studying abroad. By the look of it, Wei Changtian was trying to introduce her to Ke Yan. Lin Zhengrui scratched his thinning hair — if they went up now, they'd both die miserable deaths. "Stop watching, let's go — if we're spotted it's all over."</p>
+<p>"No, I won't go. Why should we?"</p>
+<p>"Have you gone stupid from drink? If the CEO's interested in that woman, going up would only disturb them."</p>
+<p>"Interested?" Jiang Qi's eyes went red, and he made to go forward; Lin Zhengrui pulled at him desperately. But where was his strength against a drunk Jiang Qi's? Shaken off, Jiang Qi walked over — only to find the spot empty. He grabbed Lin Zhengrui's collar. "Where'd they go?"</p>
+<p>Lin Zhengrui wiped away the running sweat. Too old to take fright, even less able to exert himself. "How would I know — let's hurry back; everyone's waiting on us."</p>
+<p>"I have to find them. Go home — together." But Jiang Qi gave a wine-soaked hiccup, ignored him, and went banging on a private-room door; a man opened it, Jiang Qi pushed past, found no Ke Yan, and backed out. "Sorry, sorry — he's drunk, don't mind him," Lin Zhengrui hurried to smooth it, and hauled Jiang Qi off — only for Jiang Qi to shake free again and vanish. Never, ever drink with Jiang Qi again.</p>
+<p>Where to look? Lin Zhengrui decided to wait where he was — Jiang Qi had gone the wrong way, getting farther from Ke Yan's room. But he started to need to pee; just as he turned to go, that familiar bang bang bang bang came from behind. He turned — Jiang Qi, knocking on the very door Ke Yan was behind. His urge to pee shrank right back; he hurried over, pulled Jiang Qi away, and hid around a corner. The people inside opened to no one, frowned, and shut it again. He steered the now-docile Jiang Qi to a bamboo rest area, sat him on the sofa, and — marvelling at the sudden docility — went off to the toilet.</p>
+<p>He came out thoroughly satisfied, and promptly fell apart again: where was Jiang Qi? He searched the upstairs every which way — what a maze, so many corners — until he found himself back where he'd started. Was this a hotel or a labyrinth? Better sit and rest; too old for exercise. He went to the bamboo rest area Jiang Qi had used before, and saw figures inside; a few steps closer — two young people kissing, one on the sofa, the other on his lap. He looked away, but the more he looked the odder it seemed: both men. He craned closer — and was truly shocked. Wasn't that the CEO? The CEO liked men? He'd discovered the secret? Would the CEO kill him to keep it quiet?</p>
+<p>He turned to flee — and a low, husky voice. Jiang Qi's. He stiffly turned his neck. The suit on the person straddling the CEO's lap looked like the one Jiang Qi had worn today. Heh, haha — no way. Even thinking no way, he looked all the same.</p>
+<p>Inside, Jiang Qi sat on Ke Yan's lap, the two kissing until both their lips were swollen. He rubbed against Ke Yan. "Tell me, who was that girl who met you today?"</p>
+<p>"Chairman Wei's daughter. I've no relationship with her. Today I only arranged to meet Chairman Wei and a few others — I didn't expect she'd come along."</p>
+<p>"Really?"</p>
+<p>"Mm." Ke Yan, voice gone husky, held him still to stop the grinding. "Little imp, I'm about to lose it." And he bit Jiang Qi's earlobe.</p>
+<p>"If you're about to lose it, then don't hold it in — I want it."</p>
+<p>"All right." Ke Yan raised a smile, and scooped him up sideways.</p>
+<p>The two walked out; Lin Zhengrui hurried to hide, and only emerged once they'd gone. "Aiyo, my god — what did I just see?" The CEO and Jiang Qi, together?</p>
+<p>After the passion, Jiang Qi lay in Ke Yan's arms — not sleepy, rather bright-eyed. He mulled a while. "Ke Yan, do you believe in this seven-year-itch thing?"</p>
+<p>Ke Yan kissed his sweat-damp hair. "Believe it or not, that sort of thing will absolutely never happen to us — whether it's a few years, a dozen, or several dozen, we'll be happy together."</p>
+<p>"Mm, okay." Jiang Qi smiled, and in the smile there was happiness, and contentment.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-047.html" class="prev">Chapter 47</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-049.html" class="next">Chapter 49</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

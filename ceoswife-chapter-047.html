@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 47: Seven-Year Itch (Part One) &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 47</h1>
+    <p class="chapter-title">Seven-Year Itch (Part One) <span class="zh">七年之痒上</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~6 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Sitting on the living-room sofa, Jiang Qi checked the time — already midnight. For nearly a week now Ke Yan had been getting back this late, though the past few days just before twelve. But today it was past twelve, and still no Ke Yan. A little worried — had something happened? — he was about to call when the door opened.</p>
+<p>He walked up. "Why are you back so late? Did something happen?"</p>
+<p>Ke Yan frowned, stepped around him, and headed for the bedroom. "What could happen?"</p>
+<p>Something was off about him today — that he'd speak so impatiently. Jiang Qi drew a breath and followed in, where Ke Yan had already tossed his coat and was getting clothes to shower. Jiang Qi picked the coat up off the floor, and caught a waft of fragrance. His heart lurched; he held it to his nose — perfume, sure enough. Ke Yan didn't wear it, and neither did he. Where had this cloying sweet smell come from?</p>
+<p>His thoughts in a snarl, he asked fiercely, "Why do you smell of perfume — and so strongly..." If they hadn't been close, how would it be this strong? No, no — he should trust Ke Yan. How could Ke Yan do anything to wrong me? Pressing down the anger, he worked to talk himself round — and then Ke Yan's next words rooted him to the spot.</p>
+<p>"It was just a work function. What's there to ask about? Honestly, so annoying."</p>
+<p>So annoying? The two words kept echoing. Ke Yan had actually called him — annoying? He'd never been impatient with him before; for him to say something so heartless — and what bothered Jiang Qi most was how his attitude could have changed so much lately. His heart clenched and ached, his breath came short, his nose went sour, his eyes hot. Could it be that Ke Yan had grown tired of him? No — they'd been together so many years. But if he'd changed like this, wasn't it because he'd fallen for someone else? A man? Or a woman? The cloying sweet perfume kept drifting around him. It smelled like a woman's.</p>
+<p>Agitated and low, he grabbed a pillow and walked out — no sleeping beside Ke Yan tonight. When Ke Yan came out of his shower he saw only that the pillow was gone, shrugged, too lazy to bother, climbed into bed, and dropped off, with no wish to coax Jiang Qi round.</p>
+<p>In the guest room, pained as he was, Jiang Qi still faintly hoped Ke Yan would come looking. He waited until nearly dawn — Ke Yan wasn't coming. Heart aching, the pain welling up until even his throat hurt, the wretched Jiang Qi got out of bed, crept into Ke Yan's room, and searched the floor for his suit — he had to confirm whether Ke Yan had fallen for someone. But finding the jacket and the phone in it, he hesitated; he still wouldn't believe it. Perhaps in the dark a person grows helplessly fragile; he couldn't hold it in, and clutching the jacket, began to cry — quietly, tears simply running down, making no sound, until he'd cried half the jacket damp. Sniffling, he rubbed his swollen eyes, backed out, and sat on the dark living-room sofa, looking at the home he and Ke Yan had lived in together nearly four years—</p>
+<p>Jiang Qi jerked awake, gasping, looked around, then at Ke Yan beside him — and realized it was night. He switched on the bedside lamp, looked at Ke Yan's sleeping face, and only then registered he'd been dreaming. He breathed out — thank goodness it was a dream — and found himself soaked in cold sweat.</p>
+<p>Lying back, he nestled into Ke Yan's arms. They'd been together a great many years — nearly seven. He counted: together at twenty, a freshman then; now twenty-seven. Wait — isn't this year exactly the seven-year itch? Just relaxed, his nerves drew taut again, remembering the dream's attitude and the woman's perfume.</p>
+<p>He sat up again, reached out both hands, and slapped Ke Yan's face hard. Under the merciless slapping Ke Yan woke at once — bewildered to find Jiang Qi hitting him, and it hurt. But seeing the wronged little face and the faintly reddened eyes, he forgot the bewilderment and gathered him in. "What's wrong?"</p>
+<p>Jiang Qi didn't answer; he leaned in and bit down hard on the shoulder of Ke Yan's pajamas. Ke Yan let him bite until he let go, genuinely worried — how had he gone to sleep and woken like this? — and stroked his back, heart aching.</p>
+<p>After a while Jiang Qi couldn't bear to bite anymore, and slumped into his arms, saying aggrievedly, "I dreamed you came home late a whole week, and that when you got back you called me annoying, and smelled of a woman's perfume, and said it was a work function and called me annoying and ignored me. I went to sleep in the guest room and you didn't come find me, just slept soundly on your own, and I cried holding your suit, and sat alone on the sofa crying, and you ignored me."</p>
+<p>Incoherent as it was, Ke Yan could follow. So it really had been a dream. He drew Jiang Qi out of his arms and kissed the corner of his mouth. "I'd never do that. Trust me."</p>
+<p>"Even in the dream I really trusted you, worked to keep from doubting you, but..."</p>
+<p>"No buts. That will absolutely never happen. I, Ke Yan, like only Jiang Qi, won't ever like anyone else, won't lie to you. I love you, Jiang Qi."</p>
+<p>Hearing it, Jiang Qi leaned in of his own accord and kissed him, murmuring, I love you so much too.</p>
+<p>Their lips pressed together, rubbing softly; Jiang Qi slid down, kissing his neck, his hand moving slowly toward Ke Yan's lower body. Ke Yan knew this came of insecurity, and didn't stop him — and besides, why stop something so enjoyable? Under Jiang Qi's hand the heat below soon stood firm. He reached up to undo his own pajama buttons, lost patience halfway, and pulled the top off over his head, then yanked Ke Yan's open. Ke Yan turned them over and pinned him beneath him.</p>
+<p>Their bodies pressed close, the sweat running down mingling between them, and Ke Yan thrust in, now light, now hard, leaving Jiang Qi both pleasured and wrung taut. His legs hooked around Ke Yan's waist, winding tight. "Mm, Ke Yan, ah~ mm, faster."</p>
+<p>The consequence of telling Ke Yan to go faster? Jiang Qi went from late night to morning without sleep, his whole body nearly coming apart — while Ke Yan, fresh and bright-eyed, washed him.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-046.html" class="prev">Chapter 46</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-048.html" class="next">Chapter 48</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

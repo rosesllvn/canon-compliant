@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 50: Visiting the Patient &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 50</h1>
+    <p class="chapter-title">Visiting the Patient <span class="zh">探病记</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~12 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Rest days pass quickly; two vanished in a blink. Jiang Qi enjoyed them thoroughly. Lin Zhengrui enjoyed two days of thorough diarrhea.</p>
+<p>Mrs. Lin watched her husband head off to work with a strange expression, hoping he wouldn't frighten anyone.</p>
+<p>Lin Zhengrui rode the elevator down and ran into the neighbor from next door coming back from the market, and said hello. "Off buying groceries?"</p>
+<p>"Yes... indeed..." The neighbor looked at Lin Zhengrui in terror; Lin Zhengrui didn't notice and walked straight on.</p>
+<p>He touched his stomach. Two days of diarrhea; any more and he'd be hospitalized. Worse, the CEO might call him in, cold-faced: If you dare tell anyone, I'll kill you.</p>
+<p>Lin Zhengrui shivered. Better not go to work. He turned back, took two steps, then stopped. Maybe the CEO hadn't seen him; wouldn't hiding only look suspicious?</p>
+<p>At this thought Lin Zhengrui finally stopped trembling, and stuck out his beer belly to go to work.</p>
+<p>He reached the company afraid but observant enough to notice everyone staring — with sympathy, gloating, even terror.</p>
+<p>What on earth had happened? Why were they looking at him like this? Lin Zhengrui's heart jumped — could it be... He hurried over to the HR notice board. Could it really be he'd been fired?</p>
+<p>Lin Zhengrui read the whole notice board over and saw nothing about being fired — so why were they looking at him like that?</p>
+<p>While Lin Zhengrui was puzzling over it, Jiang Qi patted his shoulder. "Manager Lin, what's wrong? You all right?"</p>
+<p>Lin Zhengrui stared. Jiang Qi looked composed; he surely didn't know he'd been seen. Who would have thought the usually proper Manager Jiang was with the CEO and had hidden it so well? No wonder he was never scolded in meetings. No wonder he could sleep through them.</p>
+<p>Seeing Lin Zhengrui staring strangely at him, Jiang Qi couldn't help asking, "What is it? Have I got something on my face?"</p>
+<p>"No." Lin Zhengrui shook his head, still staring at Jiang Qi. Made uneasy by the stare, Jiang Qi changed the subject. "Manager Lin, you look awful — did you... have diarrhea?" "Mm. For nearly two days now."</p>
+<p>Jiang Qi started. "That bad? Did you see a doctor?" "I did. Didn't help." "You..." Lin Zhengrui wanted to ask Jiang Qi about him and Ke Yan, opened his mouth, then shut it again — he'd nearly walked into the trap. "Hm?" "It's nothing. I'll head back to the office and rest a while." "Oh."</p>
+<p>When Lin Zhengrui reached his office, before long a secretary came to say the CEO wanted him upstairs. At these words Lin Zhengrui's stomach gave a twist; he rode the elevator up with a stricken face. Did he know? Did he know?</p>
+<p>Lin Zhengrui's legs wouldn't stop trembling.</p>
+<p>Ke Yan was reading when Lin Zhengrui entered and said nothing. Lin glanced at that cold face. What did Jiang Qi see in him? Handsome and rich, yes, but wasn't that frost exhausting? Jiang Qi wasn't after money — so was it the looks?</p>
+<p>While Lin Zhengrui's mind wandered, Ke Yan spoke. "Manager Lin."</p>
+<p>Lin Zhengrui jolted, and answered, "Yes."</p>
+<p>Ke Yan closed the folder. "You saw, that day."</p>
+<p>"Saw — saw what?"</p>
+<p>"Saw me and Jiang Qi."</p>
+<p>"No, no no no, I didn't see anything."</p>
+<p>"Is that so." Ke Yan looked at Lin Zhengrui coolly. "But I saw you in the corner."</p>
+<p>"You're mistaken." Lin Zhengrui's voice shook a little.</p>
+<p>"Heh. Manager Lin, you've worked at the company some years; you know my patience is poor."</p>
+<p>Under Ke Yan's near-threat, Lin Zhengrui couldn't hold out. "I — I did see a little, but I'll absolutely never tell anyone."</p>
+<p>"Telling people is fine — but for now don't let Jiang Qi know."</p>
+<p>"Why?"</p>
+<p>Lin Zhengrui asked it without meaning to.</p>
+<p>"You and Jiang Qi get on well at the company. At the least, please don't keep him at arm's length — if he found out, he'd feel terrible."</p>
+<p>Lin Zhengrui had never seen Ke Yan look so tender. All for Jiang Qi? Even the air around him had softened; none of his usual frost remained.</p>
+<p>A moment passed, and Lin Zhengrui suddenly gave a snort.</p>
+<p>"Hmph." Lin Zhengrui snorted, turned, walked to the door, gripped the handle, and looked back. "I, Lin Zhengrui, am not that sort of person. Being good to Jiang Qi is being good to Jiang Qi; it's got not one cent to do with his orientation."</p>
+<p>And with that he walked out, slamming the door hard behind him with a bang.</p>
+<p>Ke Yan watched Lin Zhengrui leave and raised the corner of his mouth in a smile. Perhaps he overprotected Jiang Qi — but, liking him, he really didn't want him unhappy.</p>
+<p>Lin Zhengrui strode "dashingly" past the secretaries and into the elevator, tall and confident — until the doors closed. Then his legs gave out and he collapsed, gasping. What had possessed him? What exactly had he said to the CEO? It's over. I'm done for. Ke Yan will send someone to strangle me.</p>
+<p>Lin Zhengrui sat collapsed on the floor like this, unable to get up even when the elevator reached his floor. How did he get up in the end? Carried up by the doctors who came, and then sent to the hospital. The reason? Because the diarrhea had gotten so bad that when the tension in the elevator suddenly released, all the strength was drained from his body in one go.</p>
+<p>And so Manager Lin Zhengrui was loaded into an ambulance under everyone's sympathetic eyes and taken to the hospital.</p>
+<p>And afterward, no telling how it spread, the story went that Lin Zhengrui had been hospitalized because the CEO Ke Yan was too terrifying — which was, of course, part of the reason, and indeed the larger part.</p>
+<p>Learning Lin Zhengrui was hospitalized, Jiang Qi planned to visit him after work, and called Ke Yan to mention it.</p>
+<p>Jiang Qi gathered his things and got off work, and reaching the company entrance downstairs saw a familiar car parked there. He went closer; Ke Yan rolled the window down. "Manager Jiang, where are you off to?"</p>
+<p>"You know perfectly well."</p>
+<p>"Going to see Manager Lin? I'll come with you."</p>
+<p>"He's scared stiff the moment he sees you, and you want to go." Jiang Qi said it to Ke Yan in a low voice — he didn't dare say it loudly, afraid of being overheard.</p>
+<p>"Then I'll drive you there; I just won't go in. That works, doesn't it?"</p>
+<p>"Okay, then in a bit..."</p>
+<p>Before Jiang Qi could finish, a voice cut in. Wang Siqi came sauntering over. "Manager Jiang, who are you talking to over here?"</p>
+<p>"I..." Jiang Qi started to speak, and got cut off again. As if only just noticing Ke Yan, Wang Siqi interrupted Jiang Qi. "Oh my, the CEO's here too. What are you two talking about? I think I heard 'Manager Lin' — are you going to see Manager Lin?"</p>
+<p>"Mm." Jiang Qi nodded glumly.</p>
+<p>"What a coincidence — I was just planning to see him too; I didn't expect it to be so on the way." The implication being: since it's so on the way, surely you won't make me take a cab alone.</p>
+<p>"Then let's go together," Jiang Qi invited her — but Wang Siqi was gazing fixedly at Ke Yan, as if waiting for him to extend the invitation.</p>
+<p>Sure enough, Ke Yan said to them, "Get in." And Wang Siqi beamed.</p>
+<p>Jiang Qi grew glummer still — glum not because Wang Siqi acted as if he weren't there, but because Ke Yan attracted far too many admirers.</p>
+<p>Wang Siqi went to get in, and this time she'd judged it well — she'd absolutely take the front passenger seat, beside Ke Yan. What she hadn't expected was that Jiang Qi, who'd been standing right beside her, took a quick step forward, opened the front door, and got in.</p>
+<p>Wang Siqi was stunned for two or three seconds before reacting, then hurried in, afraid Ke Yan would drive off — cursing Jiang Qi in her heart all the while.</p>
+<p>From the back, Wang Siqi glared at Jiang Qi. No manners at all — not only had he failed to open the door for a lady, he'd stolen the seat that should have been hers. Hmph.</p>
+<p>Still, after a while Wang Siqi's mood improved — she could use today's chance to get acquainted with Ke Yan, and let him see she was a kind, gentle, understanding person.</p>
+<p>The three rode along, no one speaking. After a while Ke Yan asked, "What should we buy to see Manager Lin?" His tone was very casual. "Congee." "Flowers."</p>
+<p>Two voices sounded at once — the one who said congee was Jiang Qi; the one who said flowers was Wang Siqi. Ke Yan had meant to ask Jiang Qi, but forgot to add "Jiang Qi," so both answered.</p>
+<p>Jiang Qi and Wang Siqi were a little awkward; Ke Yan didn't notice the awkwardness between them, only that Jiang Qi had said one word and then gone quiet, and went on: "Let's buy from that medicinal-congee shop we ate at before."</p>
+<p>"Mm." Jiang Qi nodded. To ease the awkwardness, he said, "Manager Wang wants to buy flowers — I think there's a flower shop near there."</p>
+<p>"Heh heh, then I'll buy them there."</p>
+<p>Jiang Qi bought a qi-replenishing health congee, and Wang Siqi bought a big bouquet of lilies.</p>
+<p>The three reached the hospital; Jiang Qi and Wang Siqi got out, and seeing Ke Yan still seated in the car, Jiang Qi called to him, "Come up with us." "Didn't you say Manager Lin's scared of seeing me?"</p>
+<p>Seeing Ke Yan's slightly raised brow, Jiang Qi knew he was teasing him on purpose, and squeezed his palm. "All right, come up with me."</p>
+<p>Ke Yan never could hold out against a Jiang Qi who acted spoiled.</p>
+<p>Because Jiang Qi had walked over to the car window to talk to Ke Yan, and they'd spoken so quietly, however hard Wang Siqi strained she couldn't hear what they said — but to her delight, Ke Yan was coming up with them.</p>
+<p>The three walked in; Ke Yan took the thermos of congee from Jiang Qi's hand and carried it for him.</p>
+<p>Wang Siqi's pleasure faded. Jiang Qi was a grown man; couldn't he carry his own thermos? She hoisted her slipping bouquet. Had she known, she'd have bought something Ke Yan might carry for her.</p>
+<p>Miss Wang — even then, he probably wouldn't.</p>
+<p>Reaching Lin Zhengrui's ward, Lin Zhengrui, who'd been resting comfortably in the hospital bed, stiffened at the sight of Ke Yan coming in, then forced out an ugly smile and called, "CEO."</p>
+<p>"Mm." Ke Yan acknowledged him.</p>
+<p>Jiang Qi set the congee on the table. "Manager Lin, I bought some congee — try it; it's medicinal congee, good for the body."</p>
+<p>"Okay." Lin Zhengrui answered, then called out again, "Wife." "I'm here, what is it?" Mrs. Lin walked in from outside, and seeing several handsome men and a beauty gathered around Lin Zhengrui's bed, then looking at her husband, covered her face — how could the difference be this great.</p>
+<p>Seeing his wife's gesture, Lin Zhengrui was speechless a while before saying, "The CEO and my colleagues came to see me." "Oh my, this must be CEO Ke — hello, hello." Mrs. Lin shook Ke Yan's hand with a smile.</p>
+<p>Ke Yan nodded and gave Mrs. Lin a small smile, the curve very slight.</p>
+<p>Mrs. Lin greeted the flower-holding Wang Siqi too, took the flowers from her with a thank-you, and then saw Jiang Qi. Jiang Qi said hello to Mrs. Lin; she nodded with a smile — oh my, two handsome fellows, wonderful.</p>
+<p>After the greetings, Mrs. Lin had them sit down, while she went to wash fruit. Seeing this, Wang Siqi thought: isn't this my chance to perform? So Wang Siqi stood up again. "Mrs. Lin, let me help you wash them."</p>
+<p>Mrs. Lin at first declined, but seeing Wang Siqi so insistent, let her help.</p>
+<p>Outside, Jiang Qi and Ke Yan chatted with Lin Zhengrui. Though Lin Zhengrui feared Ke Yan, feared his frosty face, because of Jiang Qi's presence he wasn't so afraid, and they actually talked along well enough — most of it with Jiang Qi.</p>
+<p>After chatting a while Lin Zhengrui got thirsty and drank some water, watching Jiang Qi as he drank. Never in his wildest imaginings could he have thought Jiang Qi would be with Ke Yan — truly incredible.</p>
+<p>Wang Siqi brought out the washed fruit, set it on the table, and handed Ke Yan a lychee. "These are quite sweet."</p>
+<p>Ke Yan took the lychee, peeled it, and held it to Jiang Qi's lips. Jiang Qi blinked, then ate it — and only after eating realized this was in public, not one of the times when it was just the two of them.</p>
+<p>Wang Siqi's eyes went wide; so did Mrs. Lin's.</p>
+<p>Jiang Qi spat out the lychee pit. "Ha, ha — Ke Yan doesn't like sweet things, so..."</p>
+<p>Hearing this, Wang Siqi blinked, realized she'd lost her composure, and smiled it off.</p>
+<p>Mrs. Lin, meanwhile, realized — could this Jiang Qi be the person her husband had mentioned, the one with their CEO? "Haha, I hear you and the CEO were good friends back in university, Jiang Qi — who'd have thought you'd still be this close after so many years," Lin Zhengrui said, smoothing it over. "Right, right," Jiang Qi nodded along.</p>
+<p>Ke Yan, meanwhile, looked at Jiang Qi's face, watched his expression of earnest defense — really rather adorable.</p>
+<p>Five people in the ward, each with their own thoughts, talked a good long while all the same, and talked happily.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-049.html" class="prev">Chapter 49</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-051.html" class="next">Chapter 51</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

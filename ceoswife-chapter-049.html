@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 49: The Difference &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 49</h1>
+    <p class="chapter-title">The Difference <span class="zh">差别</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~8 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">The next morning Lin Zhengrui woke to his alarm, drank the warm water his wife had left on the nightstand, and went downstairs to breakfast. He chewed without tasting and held the paper without reading a word.</p>
+<p>Right, right — last night, before coming home, he'd seen two young people kissing. Young people these days really were too bold. Good thing he didn't know them, or how awkward would it be to meet again?</p>
+<p>After breakfast he went upstairs to change. Finding no suit laid out, he hollered, "Wife, where are my clothes?"</p>
+<p>"Don't you have the day off?"</p>
+<p>"Do I?" He thought about it. So he did.</p>
+<p>Lin Zhengrui burrowed back under the covers and recalled his mother's teaching: never run from difficulty; face it and solve it. "This is too hard," he muttered. "Of all things to see, why did I have to see the CEO?"</p>
+<p>He paced the room. "What do I do, what do I do—"</p>
+<p>His wife walked in. "What's wrong? You weren't fired, were you?"</p>
+<p>He shot her a sour look. "How would I get fired?" That was what he said; it wasn't what he thought. "Maybe — maybe I'm about to be."</p>
+<p>Mrs. Lin took fright. "Did you mess up at work?"</p>
+<p>"No." He sat on the bed and wiped his face. "I saw something I shouldn't have."</p>
+<p>"Company secrets?"</p>
+<p>"You've quite the imagination. I saw our CEO with one of the department managers."</p>
+<p>Mrs. Lin perked up. "Was the manager good-looking? Bewitching, or wholesome?"</p>
+<p>"Wife, we're discussing my problem."</p>
+<p>"Oh, right. Did the CEO notice?"</p>
+<p>"Probably." Though he'd hidden, Lin Zhengrui had felt Ke Yan see him.</p>
+<p>"Maybe he didn't. Don't scare yourself over nothing." She paused. "Anyway — was the woman pretty?"</p>
+<p>Lin Zhengrui gave in to mischief. "That manager was a man."</p>
+<p>"Huh?"...</p>
+<p>Jiang Qi woke in a hotel, dazed for two seconds before remembering last night. Then he caught the smell of the room and saw the used condom on the floor; his face reddened. Last night had been too fierce.</p>
+<p>He pinched the sleeping Ke Yan beside him. Ke Yan opened his eyes, voice husky. "What is it?"</p>
+<p>"Open the window and air the room."</p>
+<p>Instead Ke Yan gathered him close. "You seduced me first last night."</p>
+<p>"I did not." Fragments were returning, though none involved seducing Ke Yan. "Before I found you, I think I was with someone. Fan Teng? Manager Lin? Or..."</p>
+<p>"Stop trying to remember. We won't go home today."</p>
+<p>"Then where are we going?"</p>
+<p>"Up the mountain."</p>
+<p>"Hiking?"</p>
+<p>"Are you up to hiking in your state?" Ke Yan patted his backside. "We'll drive."</p>
+<p>Jiang Qi removed the hand. "Behave."</p>
+<p>"All right, get up and shower."</p>
+<p>"Carry me."</p>
+<p>Ke Yan laughed softly, bent, and lifted him.</p>
+<p>"What are we going up the mountain for?" Jiang Qi asked, seated in the car.</p>
+<p>"To relax up there."</p>
+<p>"Why so suddenly? Have you been tired lately?"</p>
+<p>"Mo Lü and Ma Tong are back today; they're waiting for us at the house Yang Shaoyu just bought."</p>
+<p>"They're back? How did I not know?"</p>
+<p>"I only found out at dinner last night. I meant to tell you when I got home, but you were drinking too."</p>
+<p>"I forgot there was a gathering last night."</p>
+<p>"Let's stop at the supermarket first."</p>
+<p>"Buy what?"</p>
+<p>"Food — there's nothing up there."</p>
+<p>"Oh, right — I'll cook today; they probably haven't tried my cooking yet."</p>
+<p>"...All right."</p>
+<p>Jiang Qi began reckoning what to buy. He only knew a couple of dishes well, but never mind — he'd try the others Mom had taught him.</p>
+<p>They reached the supermarket; Jiang Qi pushed a cart. "Let's go to the vegetable section first."</p>
+<p>"Mm." Ke Yan took the cart and followed behind.</p>
+<p>Walking out of the supermarket, Ke Yan looked at the cartload of things. "You can make this many dishes? How did I not know."</p>
+<p>"I learned from my mom before, just never had the chance to cook for you." Auntie Li had the kitchen all sewn up, and Jiang Qi was too shy to show off his cooking in front of her.</p>
+<p>Jiang Qi hadn't cooked in a long while, and spent the drive excitedly planning the dishes. Watching him, Ke Yan knew coming had been the right choice. Jiang Qi had been on edge lately — insecure about him, probably. He would have to do more to reassure him.</p>
+<p>By the time they reached the mountain it was already noon, just mealtime — yet there wasn't a soul in the mountain villa.</p>
+<p>"Where is everyone? Where'd they go." Jiang Qi set down the ingredients in his hands.</p>
+<p>"They're sleeping."</p>
+<p>A voice suddenly came from behind Jiang Qi, startling him. He turned — Ma Tong, sure enough.</p>
+<p>Only Ma Tong could startle Jiang Qi every single time.</p>
+<p>"Why aren't you sleeping — no jet lag?" Jiang Qi said.</p>
+<p>Ma Tong shook her head. "Slept enough."</p>
+<p>"Where's Yang Shaoyu? Why's he still asleep?"</p>
+<p>"He worked overtime last night." Ke Yan brought the rest of the things in.</p>
+<p>Jiang Qi nodded. "Right, Ma Tong — I'm cooking lunch today; what do you want to eat?"</p>
+<p>"Lemon salmon."</p>
+<p>"I don't know how to make—"</p>
+<p>"Mapo tofu."</p>
+<p>"...I'll go start cooking." Jiang Qi took the ingredients out of the bag and washed them clean.</p>
+<p>Ke Yan stroked his head and helped wash the vegetables. Cooking with Jiang Qi was always unforgettable; after all these years, every attempt still left Ke Yan's back soaked through.</p>
+<p>Jiang Qi peeled the washed potatoes with a peeler, set one on the cutting board, raised the cleaver, and chop — two halves.</p>
+<p>The cleaver landed less than a centimeter from the hand resting on the potato. Then Jiang Qi began cutting shreds, every hard stroke threatening his fingers. Ke Yan didn't dare call out; one distraction and Jiang Qi might truly slice one off. By the time the potato was done, Ke Yan's back was damp with frightened sweat.</p>
+<p>Ke Yan stopped Jiang Qi from cutting the next potato. "I'll cut."</p>
+<p>"Hm? Why? Better let me — you're not used to cutting; what if you cut your finger in a bit."</p>
+<p>"You're the one who's not used to it."</p>
+<p>"How could that be — I've cut for years and never had a problem."</p>
+<p>"I'll cut and you cook; it'll be faster."</p>
+<p>"All right, then."</p>
+<p>So Jiang Qi cooked and Ke Yan cut, which really was faster. Ke Yan rarely handled a knife but did far better; at least Jiang Qi didn't break into a cold sweat watching him.</p>
+<p>The food came quickly. If not for one charred dish, another oversalted and then oversugared, and meat boiled into hard black lumps, it might even have been perfect.</p>
+<p>When they finished, Mo Lü and Yang Shaoyu came downstairs. "You cooked?" Mo Lü asked.</p>
+<p>"Mm." Jiang Qi helped carry the dishes out.</p>
+<p>"First time I've ever seen Ke Yan cook," Yang Shaoyu said.</p>
+<p>"I didn't make it."</p>
+<p>"Then Jiang Qi did? This dish... the color's really something."</p>
+<p>Mo Lü's appetite faded. Of the five dishes, she could identify only cabbage, potato, and soup — though what the soup contained was anyone's guess.</p>
+<p>"Is this edible?" Yang Shaoyu asked.</p>
+<p>"Sit down and eat." Ke Yan sat first.</p>
+<p>Everyone sat at the table; Ke Yan picked up his chopsticks first and took a piece of the red-braised ribs Jiang Qi had boiled into hard black lumps.</p>
+<p>They watched Ke Yan swallow without the slightest distaste and thought: perhaps it only looked bad. Ke Yan never took a second bite of anything unpalatable — though what he disliked was generally what everyone else found delicious.</p>
+<p>Emboldened, the other three each tried one of the black lumps and spat it straight back out.</p>
+<p>"Is this even food?" Yang Shaoyu hollered.</p>
+<p>"Salty, spicy, hard — like black charcoal," Mo Lü added. Ma Tong silently rinsed her mouth.</p>
+<p>"Is it really that bad?" Jiang Qi tried one. "It's fine. Just a little odd."</p>
+<p>"Let's eat our own." Ke Yan gave him some shredded potato.</p>
+<p>"Is something wrong with both your taste buds? Ke Yan, are you really Ke Yan?" Mo Lü stared. "What happened to the man who found even a five-star chef's food unpalatable?"</p>
+<p>Yang Shaoyu remembered all the meals he'd booked for Ke Yan and suddenly felt he'd wronged those master chefs. Ma Tong remained silent.</p>
+<p>Jiang Qi "..."</p>
+<p>Ke Yan "..."</p>
+<p>The two of them ate their own and paid the others no mind.</p>
+<p>When Jiang Qi and Ke Yan had nearly finished, the others picked up their chopsticks again. Why? There was nothing else — Jiang Qi had bought no bread or other food. Worse, the couple had polished off the cabbage and potato, precisely the two dishes Jiang Qi cooked best.</p>
+<p>Over here Jiang Qi and Ke Yan were content; over there Lin Zhengrui had diarrhea, occupying the home toilet half the day. Mrs. Lin anxiously fetched him medicine. "There's no meeting — how have you got diarrhea again?"</p>
+<p>Well — the truth was Lin Zhengrui had gotten diarrhea from thinking of Ke Yan and getting scared.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-048.html" class="prev">Chapter 48</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-050.html" class="next">Chapter 50</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

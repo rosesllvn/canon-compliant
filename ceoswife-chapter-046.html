@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 46: The Coffee Shop and the Cake &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 46</h1>
+    <p class="chapter-title">The Coffee Shop and the Cake <span class="zh">咖啡店与蛋糕</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Rumors spread fast. Some laughed it off, some pitied the rumor's subject, and some took spiteful pleasure in it — Wang Siqi, for one. Jiang Qi couldn't recall ever crossing her, but when he saw a certain scene he finally understood why he always felt she disliked him. The reason? A certain person surnamed Ke.</p>
+<p>That day he ran into her at the elevator, exquisitely dressed as ever. He steeled himself and walked over — why steel himself? Because their wavelengths simply didn't match; one look at her and he felt uneasy all over. Why? He thought about it and landed on it: Ke Yan. She liked Ke Yan — yes, that was why. A romantic-rival relationship — could it ever be harmonious? No.</p>
+<p>Before he could even say hello she spoke first. "Manager Jiang, I hear you were called to the CEO's office yesterday and scolded quite badly?"</p>
+<p>"It was all right." He rubbed his nose, a little guilty.</p>
+<p>"Falling asleep in a meeting is a rare thing indeed. You may be the CEO's university friend, but public and private must be kept separate, or you put him in a difficult position."</p>
+<p>Actually the one who least separates public and private is the very CEO Ke you're talking about, Jiang Qi muttered under his breath.</p>
+<p>She didn't catch it. "What did you say?"</p>
+<p>"Nothing. The elevator's here, let's go up."</p>
+<p>She rode up with him, really did dislike him — in all her life the boys who'd refused her could be counted on less than one hand, and that time she'd asked his help he'd flatly turned her down. She drew a deep breath. I refuse to believe that without Jiang Qi's help I can't make Ke Yan fall for me. She smiled confidently, shot him a cold glance, and stepped off. Jiang Qi, not knowing he'd been "coldly glanced" at, only felt uncomfortable. Could she actually know we're romantic rivals? Romantic rival — what a strange phrase.</p>
+<p>How do you come to know, fierce and clear, that someone is dangerous? For instance — when she's sitting beside your man, laughing.</p>
+<p>That day, because Jiang Qi had to work late, Ke Yan went to the coffee shop across the way to wait. Wang Siqi got off early, planned on a coffee and cake there — and walked in to see Ke Yan, and sat down across from him, uninvited, greeting him as naturally as if they'd arranged it. After the meeting incident Ke Yan had no goodwill left for her, and answered colder than his usual cold. But she paid it no mind, taking that tone for no different from his everyday one. She ordered cake and coffee and ate elegantly — two bites, then set down the fork, sipped, and dabbed the corner of her mouth daintily with a handkerchief.</p>
+<p>Carrying a handkerchief is no longer old-fashioned but elegant, and she kept one on her always — though she'd never taken it out before, never having met anyone worth displaying her elegance for. Today was different, because Ke Yan was here. She firmly believed most men liked a well-bred woman, and with her looks, didn't believe he could fail to fall for her.</p>
+<p>Only — she'd guessed wrong. Ke Yan wasn't even watching her airs; he was looking at the magazine before him, glancing at the time. Why isn't Jiang Qi out yet? And he could not possibly fall for her.</p>
+<p>She tried for common ground. "By the way, CEO — you and Assistant Yang were university classmates, weren't you?"</p>
+<p>"Mm." How perfunctory a sound. She tried again: "Manager Jiang seems to be a friend of yours too." She hadn't wanted to bring up Jiang Qi, but since Ke Yan seemed close to him, she used him as a pretext.</p>
+<p>The moment Jiang Qi was mentioned, Ke Yan perked up. "Yes — a very good relationship."</p>
+<p>Sensing an opening, she tried, "Manager Jiang's a very nice person, ordinarily."</p>
+<p>"Yes, he's excellent." Hearing her praise Jiang Qi, Ke Yan answered in a good mood, as though he himself were the one praised.</p>
+<p>After these exchanges she somehow felt something was off — his answers seemed normal and yet a little strange, as if... she couldn't say what. She only felt the two were on far better terms than she'd imagined. Looks like I'll have to get on Jiang Qi's good side too. But how could Ke Yan ever be impatient talking about Jiang Qi? The one person he'd never tire of was Jiang Qi.</p>
+<p>The exquisite shop, two cups of coffee, one slice of cake, a magazine, a handsome man in a fine suit and a beautiful woman carrying herself like a refined lady — the scene made the part-time girl working there go starry-eyed, green with envy for the beauty with such a handsome boyfriend.</p>
+<p>"They're definitely not a couple." An older employee cut off her reverie.</p>
+<p>"Why, jie? What makes you so sure?"</p>
+<p>"Didn't you see the cold looks that man gives the beauty across from him? He clearly doesn't like her."</p>
+<p>"Maybe he's just the aloof-CEO type?"</p>
+<p>"Even the coldest person turns gentle in front of someone they like. And you know the real reason I'm certain? That man's come in before to buy cake — every time, baumkuchen — but his coffee's always without sugar or creamer, and he never orders cake to eat here. He doesn't like sweet things. So why would someone who dislikes sweets buy a sweet cake? And most telling of all — that woman comes for cake now and then, and always orders the mocha brownie. Never once baumkuchen. So they can't be a couple."</p>
+<p>"So from what you're saying, jie — this man already has a girlfriend?"</p>
+<p>"Mm, probably."</p>
+<p>Jiang Qi walked out of the company toward the coffee shop — only to see Ke Yan sitting there with Wang Siqi, the two chatting and laughing. Well — Ke Yan wasn't laughing; Wang Siqi was laughing on her own. What bothered him was why her face was flushed, why she wore such a bashful look — and, most of all, why Ke Yan hadn't gotten up and walked off impatient. A flicker of anger, an unpleasant churn. He knew he was jealous, and decided to sneak over and eavesdrop. He "stealthily" took two steps — then smacked his own head. Have I lost my mind? This is Ke Yan; how could he ever wrong me?</p>
+<p>Reasoning it out, he took out his phone and called. "I'm at the shop entrance."</p>
+<p>"Oh, all right." Ke Yan hung up and said to the still-unwilling-to-leave Wang Siqi, "Manager Wang, I have a matter to discuss with Manager Jiang shortly."</p>
+<p>She understood. He hadn't said he'd leave, which meant the matter was to be discussed here — and as a woman of good breeding, this was the moment to take her leave politely. Turn it over as she might, though, she couldn't guess what "matter" he meant.</p>
+<p>Having sent her off, Ke Yan ordered a slice of cake before Jiang Qi came in. Hearing the name of it, the young part-timer's eyes went wide. Could the girlfriend be coming?</p>
+<p>Jiang Qi came in to find Ke Yan alone with a coffee, sat down, and took the cup from his hand. "Drink less — haven't you had enough at the office during the day?"</p>
+<p>Ke Yan smiled. "All right, I won't drink it."</p>
+<p>Jiang Qi couldn't help a smile, then teased himself: "I really am turning into more and more of a nagging housewife."</p>
+<p>"When a housewife nags, others resent it; when you mind me, I'm glad to be minded."</p>
+<p>Jiang Qi laughed. "All these years together and only now do I find out what a smooth talker you are."</p>
+<p>Ke Yan took Jiang Qi's hand where it rested on the table and rubbed it gently, the gesture without a trace of anything suggestive — perfectly natural, if you overlooked that they were both men. The new employee bringing the cake over saw it and her eyes nearly popped out; she set down the plate and hurried off to the veteran. "That very handsome man doesn't have a girlfriend — he's got a boyfriend."</p>
+<p>"Does he?"</p>
+<p>The unruffled reaction unsettled the new girl. "Jie, how are you not even surprised?"</p>
+<p>"Once you've worked here long enough you won't find it strange. There are seven staff in this shop. Four of them are fujoshi."</p>
+<p>"Fujoshi?"</p>
+<p>"Don't know it? Go look it up online."</p>
+<p>"Huh?"</p>
+<p>Jiang Qi looked at the cake — a small slice of baumkuchen, a few dabs of white cream beside it, a little silver fork laid alongside — his appetite stirring. He took a bite, then forked off a small piece for Ke Yan, who ate it and then drank a few mouthfuls of water. Watching the reaction, Jiang Qi wanted to laugh — forgetting he was right across from the company, and could be seen by anyone at any moment.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-045.html" class="prev">Chapter 45</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-047.html" class="next">Chapter 47</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

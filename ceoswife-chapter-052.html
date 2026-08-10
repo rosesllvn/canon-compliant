@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 52: The Madam &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 52</h1>
+    <p class="chapter-title">The Madam <span class="zh">夫人</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">When Ke Yan returned, Jiang Qi was already asleep. He stroked his hair, gathered him close, and slept.</p>
+<p>In the night Jiang Qi opened his eyes, shifted closer, and studied Ke Yan in the dark. Looking wasn't enough; he gave him a gentle push. Ke Yan didn't wake. Jiang Qi was disappointed, but relieved too. Better sleep. If he wakes, I'll be the one with an aching back tomorrow.</p>
+<p>The next day Jiang Qi and Ke Yan got up, went to work as usual — though today there were three extra people at the breakfast table.</p>
+<p>In the end Ke Yan, Jiang Qi, and Yang Shaoyu all went to work, leaving Mo Lü and Ma Tong at home. The two finished breakfast and sprawled on the sofa watching TV with nothing to do.</p>
+<p>Over here, riding in Ke Yan's car to work, Jiang Qi looked at Ke Yan's black face and asked, "What's wrong?"</p>
+<p>"Unsatisfied."</p>
+<p>Yang Shaoyu wanted to laugh, but the memory of last night's beating made him shrink back. Best not provoke Ke Yan now.</p>
+<p>Jiang Qi went red at Ke Yan's words; remembering that last night he really had used too much force, that Jiang Qi had taken fright and couldn't help clenching his hand, and at the time...</p>
+<p>But Jiang Qi could hardly be blamed; Ke Yan should blame Yang Shaoyu and Mo Lü. Remembering last night, Jiang Qi let out a laugh, then hurried to cover his mouth. Yang Shaoyu heard perfectly and cast him an admiring look — who knew Jiang Qi dared laugh at Ke Yan to his face?</p>
+<p>Sure enough, at the next intersection Ke Yan stopped the car and told Yang Shaoyu to get out. This time Yang Shaoyu didn't holler that Ke Yan was stingy, but fled the car at speed, completely ignoring the pleading look Jiang Qi shot him.</p>
+<p>The instant Yang Shaoyu got out, the car drove off. Yang Shaoyu watched the rear of Ke Yan's car with a "you'd better take care of yourself" look.</p>
+<p>Alone with Ke Yan, Jiang Qi wished he could swallow the laugh back. The silence grew colder; his eyes darted about, seeking escape.</p>
+<p>Suddenly the car stopped. Jiang Qi glanced at Ke Yan and found Ke Yan looking at him, and quickly turned his head away.</p>
+<p>Jiang Qi turned his head to look outside, thinking, why is there no sound? He couldn't help glancing back a little to see what Ke Yan was doing — and the moment he turned, his mouth was stopped. Ke Yan kissed Jiang Qi, undid his belt, pulled down the zip, blocked the hand Jiang Qi reached over to stop him, tugged down his trousers, and smack smack smack delivered five in a row.</p>
+<p>Five slaps left Jiang Qi's backside red and his mind blank; he didn't react even as Ke Yan dressed him again.</p>
+<p>When the car stopped, Ke Yan found Jiang Qi glaring at him — and Jiang Qi hadn't noticed Ke Yan had already driven to the company; usually he got out just before they arrived.</p>
+<p>Seeing Jiang Qi keep glaring, Ke Yan asked, "What is it?"</p>
+<p>"You hit me." There was no grievance in Jiang Qi's three words, only the urge for revenge.</p>
+<p>Ke Yan was tickled by Jiang Qi, and stroked his backside. "Does it hurt?"</p>
+<p>"It hurts." Now there was a bit of grievance.</p>
+<p>"I was a little heavy-handed." Ke Yan switched from stroking to rubbing. "Come to my office in a bit; I'll put some medicated oil on it for you."</p>
+<p>"I don't want to." Jiang Qi refused, then lunged over and bit Ke Yan hard, just below his ear; the clear bite mark surfaced in no time. Looking at the spot he'd bitten, Jiang Qi couldn't help splitting into a grin.</p>
+<p>Ke Yan touched the spot Jiang Qi had bitten — hadn't expected him to bite so hard. Seeing Jiang Qi's smug face, he said in a threatening tone, "We'll see how you beg for mercy tonight."</p>
+<p>Jiang Qi started at Ke Yan's words, then quickly glanced at Ke Yan's lower body — not hurting anymore? It surely wouldn't last long.</p>
+<p>Ke Yan couldn't read the strange look on his face. Had he known the thought behind it, he'd surely have taken Jiang Qi there in the car and left him unable to get out.</p>
+<p>With things on his mind, Jiang Qi was quick about it; realizing they'd reached the company, he glared at Ke Yan — though Jiang Qi didn't notice that his glaring out of anger looked instead like he was acting spoiled, and made Ke Yan's heart skip a couple of beats faster.</p>
+<p>Jiang Qi first checked whether anyone was around, and finding no one, quickly got out and headed for the elevator. Once in, seeing Ke Yan hadn't come over yet, he quickly pressed the close button, and by the time Ke Yan arrived the elevator had already gone up.</p>
+<p>It seemed Jiang Qi really did have a bit too much energy lately.</p>
+<p>In the elevator Jiang Qi shivered, knowing Ke Yan wouldn't let him off. Could it be because it lasted longer on top? Ke Yan would never allow it — though the feeling must be different, and he rather wanted to try.</p>
+<p>Impossible. What am I thinking? Get to work. He patted his face.</p>
+<p>Jiang Qi, hard at work, could never have imagined how big a deal his one bite mark would turn into.</p>
+<p>The moment Ke Yan reached his office Yang Shaoyu came barging in, dying to ask: did you and Jiang Qi have a bloody battle, or a quarrel, or a fight, or—</p>
+<p>For someone who loves a spectacle, gloating over others' misfortune is a defining trait, and Yang Shaoyu was no exception — if anything, worse.</p>
+<p>But before he could get the words out, he spotted the kiss mark beside Ke Yan's neck — er, no, more precisely — the bite mark.</p>
+<p>Yang Shaoyu held in a laugh. "Ke Yan, did Jiang Qi bite you, or did a dog? Bit you pretty deep, too."</p>
+<p>"I'd quite like to know myself — why don't we go ask Auntie?" Auntie being Yang Shaoyu's mother. Ke Yan looked at Yang Shaoyu coldly.</p>
+<p>Yang Shaoyu pursed his lips. "I'll go report on work right away."</p>
+<p>Yang Shaoyu's mother had been pressing him for a grandchild — meaning, of course, that he should hurry and find a wife. For Yang Shaoyu, the task was far too daunting. Better shut his mouth.</p>
+<p>Just then, a person appeared in the lobby downstairs, dressed in fashionable yet dignified clothes, hair lightly pinned up, carrying a designer bag, her bearing extraordinary — a genuine, bona fide noble madam, and most crucially, truly beautiful.</p>
+<p>The longtime staff who'd worked at Ke Group for years all knew this was Ke Yan's mother, the wife of the former Ke Group chairman — Lan Ruyin.</p>
+<p>Old staff, however senior, greeted her respectfully as "Madam." Newer employees wondered why their superiors deferred to her.</p>
+<p>Lan Ruyin kept her elegant smile, boarded the elevator, and went to Ke Yan's office to find him.</p>
+<p>The elevator doors opened; the first thing she saw was Yang Shaoyu and several secretaries. Lan Ruyin spoke first. "Xiao Yangzi, is Xiao Yan inside?"</p>
+<p>Hearing the name "Xiao Yangzi," Yang Shaoyu couldn't help his mouth twitching, and seeing the suppressed laughter on his colleagues' faces beside him, said helplessly, "He's inside, Auntie."</p>
+<p>"Good, I'll go in and find him."</p>
+<p>Once Lan Ruyin had gone in, the secretaries outside began whispering. "I heard her say 'Xiao Yan' just now — is that the CEO?"</p>
+<p>"Mm, probably — she's CEO Ke's mother, isn't she; they look quite alike."</p>
+<p>"Mm, right — and she called Assistant Yang 'Xiao Yangzi' just now."</p>
+<p>The chatter buzzed on all around; Yang Shaoyu got annoyed. "Get to work — don't want your jobs anymore?"</p>
+<p>"..."</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-051.html" class="prev">Chapter 51</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-053.html" class="next">Chapter 53</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

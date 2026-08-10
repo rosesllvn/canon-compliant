@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 42: The Company &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 42</h1>
+    <p class="chapter-title">The Company <span class="zh">公司</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">What do a company's executives dread most? Not the daily overtime, nor the business trips, but the meetings.</p>
+<p>Before every one, the executives would steel themselves, walk in on trembling legs, sit, and wait for the CEO to begin. There was nothing really to fear — only that his gaze was too cold; when he disliked your proposal, the look he fixed you with, the tone he scolded you in, the sound of the document slamming down were enough to drain the color from anyone's face. Except Jiang Qi: when Ke Yan reprimanded someone with that cold face, slammed a proposal onto the table, listened with that intent focus, every gesture made Jiang Qi think my man is so handsome.</p>
+<p>So while everyone else filed out of the meeting room pale-faced, Jiang Qi alone walked out rosy and glowing — so much so that executives ranking above him came to him for advice. In this company, no matter how senior or how capable, nearly everyone had been dressed down by Ke Yan in public. Only Jiang Qi never had. At first everyone assumed it was because the two had been classmates and were now good friends — but when Yang Shaoyu, who ought to have been even closer to Ke Yan, got glared at and mocked all the same, they dropped the idea. So everyone was baffled. Why?</p>
+<p>Well — actually, Ke Yan was his man. When Manager Lin put the question to him, that was the sentence Jiang Qi answered silently in his heart.</p>
+<p>That night, home and freshly showered, lying beside Ke Yan, Jiang Qi said, "Someone asked me today why you never scold me in meetings."</p>
+<p>Ke Yan gathered him in. "Why would I scold you? They're the ones asking for it."</p>
+<p>Jiang Qi toyed with the button of his pajamas. "CEO Ke, has anyone ever told you that you play favorites far too shamelessly?"</p>
+<p>Ke Yan's hand slid in under his hem. "Only you."</p>
+<p>Jiang Qi squirmed and tried to negotiate. "I have to be up early tomorrow."</p>
+<p>Ke Yan stopped his lips, licking lightly. "I grant you leave." And since the great CEO himself had granted it, little employee Jiang Qi could only let himself be pressed down. Before long, though, he was gripping hard at Ke Yan's back, making sounds of "mn, mn, ah~ ah~."</p>
+<p>The consequence of sinking too deep into passion? Going to work the next day with an aching back and a sore behind.</p>
+<p>Jiang Qi walked through the lobby trying his best not to limp. Someone patted him from behind — one of the company's old hands, Lin Zhengrui. A fine name, "upright and wise," though the man was neither: forever pulling petty little tricks to curry favor. In Ke Yan's first years he'd done no small amount of bootlicking, always to the wrong spot, only making Ke Yan dislike him more. This past year had been better — probably because the meetings had made him ill: every time one neared, he'd get diarrhea. He'd reportedly seen a string of doctors to no avail, which made it a psychological ailment, frightened into him.</p>
+<p>"Manager Lin, what is it?"</p>
+<p>"Manager Jiang — I was away these past couple of days. Is the CEO in a decent mood? There's a meeting the day after tomorrow, and my heart's just..."</p>
+<p>Jiang Qi's mouth twitched; remembering last night, he nodded — apart from a faint blush. "His mood will be very good today."</p>
+<p>Manager Lin breathed out. "If only it would be good tomorrow too."</p>
+<p>Jiang Qi thought helplessly: Must I sacrifice my own body to put out Ke Yan's fire? No. He shook his head — that would only add fuel — and instinctively rubbed his sore waist. Tonight, absolutely no doing it.</p>
+<p>"Aiya." Manager Lin suddenly clutched his stomach.</p>
+<p>"What is it? Are you all right?"</p>
+<p>"It's nothing. It's just — lately the moment there's a meeting coming, I get diarrhea."</p>
+<p>You've got to be kidding — the meeting hasn't even started, a whole day to go, and it's already this bad?</p>
+<p>"Aiya, I'll talk to you later — I have to run." Watching Manager Lin dash for the toilets, Jiang Qi offered him a silent moment of mourning. Do take care of yourself.</p>
+<p>In his office, he took the documents Secretary Li handed him. "Wasn't the interview this morning? Why's it changed?"</p>
+<p>"Because Manager Wang wasn't in this morning."</p>
+<p>Jiang Qi nodded, then thought of something. "Were the interviewees notified?"</p>
+<p>"No — it was decided at the last minute."</p>
+<p>"All right, you can go." Li shut the door behind her.</p>
+<p>Jiang Qi took out his phone and called Jiang Lü. "Second brother, what is it?"</p>
+<p>"Did you have a Ke Group interview today?"</p>
+<p>About to head out, she perked up. "Yeah — I'm definitely going to pass."</p>
+<p>"Good luck, then." He hung up. Jiang Lü had no idea her brother had deliberately not told her the interview was pushed back, leaving her — and some of the others — to fret for nothing all day. But she passed it afterward, and all the earlier worry evaporated.</p>
+<p>At noon, on the phone with Ke Yan, Jiang Qi said, "Ke Yan, Manager Lin's been frightened sick by you."</p>
+<p>"Diarrhea?"</p>
+<p>"How did you know?"</p>
+<p>"Heard about it. Shaoyu told me." A pause. "Have you eaten?"</p>
+<p>"Mm, I have."</p>
+<p>"Does it still hurt there?"</p>
+<p>"Where?" Jiang Qi didn't catch it.</p>
+<p>"The place I was going in and out of last night."</p>
+<p>"Ke Yan—!" he yelped, and only after a beat managed, "You really are a scoundrel."</p>
+<p>Ke Yan gave a soft laugh. "So many years now, and you still blush this easily."</p>
+<p>"I am not blushing." A pause. "Huh? A business trip tomorrow — didn't you just get back?" Jiang Qi didn't notice the disappointment that had crept into his voice.</p>
+<p>Hearing it, Ke Yan felt a pang. "Come with me, then."</p>
+<p>"Never mind. I'll wait for you to come back."</p>
+<p>"Come home early tonight."</p>
+<p>"Okay."</p>
+<p>They came home early, and before Auntie Li had finished cooking they showered together — Jiang Qi walked in, and Ke Yan carried him out spent, laid him on the bed, and found him clothes. The bedside phone rang; Jiang Lü's excited voice came through: "Second brother, I passed! Come home for a bit — Mom's made loads of good food."</p>
+<p>On an ordinary day he'd have gone — but Ke Yan was leaving tomorrow, and he couldn't bear to part. "Xiao Lü, your brother's got to work late tonight — I'll treat you another day." As he spoke, Ke Yan quietly untied his bathrobe sash and helped him into his underwear; Jiang Qi shrank back, hurrying to answer. "All right, I've got it — I definitely won't welch on it."</p>
+<p>He hung up; Ke Yan had already gotten his trousers on for him. Jiang Qi put on his own shirt, and seeing Ke Yan still bare-chested, dressed him, doing up the buttons one by one, then leaned over and kissed the corner of his mouth. "Let's go eat."</p>
+<p>"Okay." Ke Yan kissed him back.</p>
+<p>After dinner they lingered tangled together all night, and early the next morning Ke Yan took his luggage and left for the airport.</p>
+<p>Jiang Qi went to the company as usual, and seeing Jiang Lü at the entrance, walked over. "What are you doing here?"</p>
+<p>She puffed out her cheeks. "Second brother, didn't I tell you I passed yesterday? I even called you last night — don't tell me you forgot."</p>
+<p>He rubbed his nose. "I didn't forget."</p>
+<p>"You obviously forgot."</p>
+<p>"All right, all right, get inside, you'll be late."</p>
+<p>The two walked in, not noticing the front-desk girls watching with disappointment. Could that be Manager Jiang's girlfriend? What a shame; he's got such a little-shou look about him.</p>
+<p>A colleague, seeing one of them muttering to herself, asked, "You all right? What are you mumbling about?"</p>
+<p>"It's nothing." She smiled and went back to work.</p>
+<p>It seemed the fujoshi had already taken over the world.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-041.html" class="prev">Chapter 41</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-043.html" class="next">Chapter 43</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

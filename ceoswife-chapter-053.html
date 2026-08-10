@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 53: Ordinary &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 53</h1>
+    <p class="chapter-title">Ordinary <span class="zh">普通</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~5 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Lan Ruyin walked into Ke Yan's office; Ke Yan glanced up when the door opened, then lowered his head and went back to work.</p>
+<p>Lan Ruyin walked up to the desk. "Son, your mother's here — the least you could do is lift your head."</p>
+<p>"What is it?"</p>
+<p>"Why so cold — exactly like your father used to be."</p>
+<p>"You say the same thing every time you see me."</p>
+<p>"Fine, I won't say it. Right — I heard something."</p>
+<p>"Hm?"</p>
+<p>"Someone's living at your place?"</p>
+<p>"Mm." Ke Yan wasn't the least surprised his mother knew, since there was still Auntie Li at the house.</p>
+<p>Lan Ruyin despaired of her son's coldness. How had she borne a child with his father's exact temperament — uninterested in everything and frosty besides?</p>
+<p>"Man or woman?"</p>
+<p>"A man."</p>
+<p>"What's his name?"</p>
+<p>"You wouldn't know?"</p>
+<p>This was definitely a dig at her.</p>
+<p>"That boy is called Jiang Qi?"</p>
+<p>"Mm." Ke Yan paused. "Not a boy anymore."</p>
+<p>Lan Ruyin's expression soured. As with girl and woman, there was a difference between boy and man — and she understood his emphasis perfectly.</p>
+<p>"Heh, heh — I suppose he has a girlfriend." Lan Ruyin tried to pry Jiang Qi loose from Ke Yan.</p>
+<p>Ke Yan gave Lan Ruyin a meaningful look. "He has no girlfriend, nor will he ever have one."</p>
+<p>"Then he's married."</p>
+<p>"If he were married, how would he be living with me?" Ke Yan's half-revealing answers left her no recourse. He knew she knew; the whole performance was a warning not to trouble Jiang Qi.</p>
+<p>Lan Ruyin was gratified and angry at once: gratified that her son had learned to cherish someone, angry that the someone was another man.</p>
+<p>"Mom just finished reading a manga, a pair of gay men, in love with each other, who later broke up because of the obstacles. The road of homosexuality is hard; those who don't understand will always outnumber those who do; people who see them as vermin are everywhere — how can the same sex be together."</p>
+<p>"How can different sexes fall in love."</p>
+<p>Lan Ruyin was stumped by Ke Yan's reply — she hadn't expected her son to grasp such an incisive point. "Hmph." Lan Ruyin gave a snort, not having expected her usually taciturn son to be so talkative today. "Mom, don't think I don't know there's manga of this sort on your bookshelf."</p>
+<p>Lan Ruyin was furious, and ignored Ke Yan, walking straight out.</p>
+<p>Lan Ruyin came out of Ke Yan's office, looked at the working Yang Shaoyu, and hauled him up by the arm.</p>
+<p>The two walked to the tea room, and Lan Ruyin asked Yang Shaoyu in a low voice, "Do you have a photo of Jiang Qi?"</p>
+<p>Yang Shaoyu looked at Lan Ruyin, puzzled. "Who's Jiang Qi? Do I know him?"</p>
+<p>"Hmph hmph — stop pretending, I already know."</p>
+<p>"Know what?"</p>
+<p>"Ke Yan and that Jiang Qi are together now, aren't they?"</p>
+<p>"Eh? Isn't Ke Yan working in there?" Yang Shaoyu kept playing dumb.</p>
+<p>Lan Ruyin gave Yang Shaoyu's ear a twist. "Still playing dumb — I already know they're even living together."</p>
+<p>"Aiya, Auntie Lan, let go — even if I knew I couldn't tell you; Ke Yan would kill me."</p>
+<p>"Fine, then just tell me which floor Jiang Qi's on."</p>
+<p>"Can't you just look it up?" Yang Shaoyu had no wish to say more — say more, err more; say less, err less.</p>
+<p>"Not telling, eh? Then I'll go look it up, and once I find it I'll say you told me; see how you explain that."</p>
+<p>"Okay okay okay, I'll tell, I'll tell — he's on the 17th floor."</p>
+<p>"Hmph, wouldn't that have been easier said sooner?"</p>
+<p>Watching Lan Ruyin's retreating back, Yang Shaoyu rubbed his pinched, aching ear — Ke Yan's mom was as fierce as ever.</p>
+<p>On the seventeenth floor, not wanting to expose herself, Lan Ruyin crept along the wall and pretended to check her phone whenever anyone passed — furtiveness utterly at odds with her elegant clothes.</p>
+<p>"Manager Jiang."</p>
+<p>A voice suddenly came from the corner ahead. Surnamed Jiang? Lan Ruyin was now extremely sensitive to the two characters "Jiang" and "Qi."</p>
+<p>Hearing "Manager Jiang," she took out her phone and pretended to make a call, head dipped low so her face couldn't be seen.</p>
+<p>Two people came toward her, a man and a woman — the man on the phone, the woman beside him holding documents, seemingly to show him.</p>
+<p>Lan Ruyin stole a look, then lowered her head. Not bad-looking, quite clean-cut — but only that. Ke Yan had been impossibly picky from childhood. If Jiang Qi were a great beauty, she might understand, but he wasn't nearly as handsome as her son. What did Ke Yan see in him?</p>
+<p>Lan Ruyin went home disappointed. Yes, she read BL manga, and yes, she could accept homosexuality — but accepting it in general wasn't the same as accepting her own son. And the partner wasn't even remarkably good-looking. Not that she judged by appearances; she simply couldn't see what was so special.</p>
+<p>When Ke Shao (Ke Yan's older sister) came home she found her mother lying on the sofa lost in thought.</p>
+<p>Ke Shao went over and patted her. "Mom, what are you thinking about?"</p>
+<p>"Thinking about your brother."</p>
+<p>"Then go to the company and find him."</p>
+<p>"Already did."</p>
+<p>"Then what are you still thinking about?"</p>
+<p>"Thinking about your brother and his boyfriend."</p>
+<p>"Oh — ... boyfriend?"</p>
+<p>"Mm."</p>
+<p>"Mom, are you sure you didn't get it wrong? Shouldn't it be a girl, not a boy?"</p>
+<p>"No — I saw him today; a hundred percent a man."</p>
+<p>"Wow, who'd have thought Ke Yan never took a girlfriend, and the moment he did, it was a boyfriend."</p>
+<p>Lan Ruyin was fretting, and at Ke Shao's words said, "Hurry and think of something."</p>
+<p>"Think of what? Make Ke Yan break up with that man?"</p>
+<p>"Best if so; if not, then go sound out this Jiang Qi — what's so good about him, why does your brother like him so much." "All right, leave it to me." "Good." Lan Ruyin nodded; she had great confidence in her daughter. "Right — why didn't you bring the child over today?"</p>
+<p>Youthful as Ke Shao looked, she was already a mother in her thirties.</p>
+<p>How would Sister Ke sound him out? She smiled over the investigation file in her hands. With Jiang Qi's work schedule and rest-day outings, it would be simple.</p>
+<p>Jiang Qi — just you wait.</p>
+<p>Jiang Qi sneezed.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-052.html" class="prev">Chapter 52</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-054.html" class="next">Chapter 54</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 55: Rain &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 55</h1>
+    <p class="chapter-title">Rain <span class="zh">下雨</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~8 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">When Ke Yan came out of the shower, Jiang Qi was still sitting on the bed; he hadn't even picked up the fallen chocolate.</p>
+<p>"What are you thinking about?" Ke Yan walked over and stroked Jiang Qi's hair.</p>
+<p>"Does your sister already know," Jiang Qi suddenly asked.</p>
+<p>"Yes." Ke Yan gave a soft laugh.</p>
+<p>"You're still laughing — your sister knows, so my running into her today wasn't a coincidence, was it."</p>
+<p>"Right — she just wanted to see what you're like."</p>
+<p>"And what am I like."</p>
+<p>"You're great." Ke Yan said it offhandedly.</p>
+<p>Jiang Qi gave Ke Yan a push. "I mean, what does your sister think of me."</p>
+<p>"She's quite satisfied with you."</p>
+<p>"Really?" Jiang Qi's heart eased.</p>
+<p>"Mm, go to sleep now."</p>
+<p>"Okay." Jiang Qi obediently pulled the covers up and lay beside Ke Yan, burying his face in Ke Yan's chest. "Thank goodness."</p>
+<p>"Thank goodness what?"</p>
+<p>"Thank goodness I didn't botch things today, thank goodness I behaved well."</p>
+<p>"Even if you hadn't done well it wouldn't matter; I'll help you set things right."</p>
+<p>"Mm, okay."</p>
+<p>The night was still as water, moonlight scattering silver over the earth.</p>
+<p>Ke Yan kissed the corner of Jiang Qi's mouth, softly at first, then deeper; Jiang Qi responded, lips and tongues tangling. Ke Yan's hands roamed his body, and Jiang Qi trembled — not from fear or cold, but from feeling his desire.</p>
+<p>The long night stretched on, yet Ke Yan felt he could never get enough; Jiang Qi moaned without cease, his throat gone hoarse from crying out.</p>
+<p>In the morning, sunlight slanted in from outside, falling on the shoulder Jiang Qi had bared from under the covers, lighting the kiss marks on it to an uncommon, bewitching vividness.</p>
+<p>Jiang Qi woke groggily and patted Ke Yan; Ke Yan, woken, took the water glass from the nightstand and handed it to him. Jiang Qi drank a couple of mouthfuls before feeling he'd come back to life. "My back aches so much..."</p>
+<p>Jiang Qi was startled by his own hoarse voice; he coughed twice — still that voice. No help for it; who told him to cry out so happily last night.</p>
+<p>He went glumly to brush his teeth and wash his face, and when he came out Ke Yan fed him a throat lozenge, which made Jiang Qi feel much better.</p>
+<p>His throat felt better, though his voice remained hoarse. He didn't want Mo Lü hearing it and giving him that suggestive look again.</p>
+<p>Jiang Qi and Ke Yan dressed and went downstairs to find not a soul. Jiang Qi picked up the voice recorder on the table; a voice came from it. "Ke Yan, it's Uncle Mo. I've taken Mo Lü and Ma Tong back home — they come back and don't even tell me, truly spoiled rotten by their mother and me. Thank you for looking after them this while."</p>
+<p>Mo Lü took her father's surname, Ma Tong her mother's.</p>
+<p>Jiang Qi set the recorder down. "This Uncle Mo really is something — he can dig them out every single time."</p>
+<p>Mo Lü and Ma Tong often returned without a word and hid out instead of going home, but Uncle Mo and Auntie Ma always dug them up. Then came what the sisters hated most: a family banquet where Papa Mo quietly selected marriage prospects — matchmaking dates, in plain terms.</p>
+<p>Mo Lü and Ma Tong had played around for years, and though they both had jobs now, they really didn't want to be tied down by marriage so soon.</p>
+<p>After breakfast Jiang Qi and Ke Yan were about to head out to work when a peal of thunder suddenly sounded outside. Jiang Qi opened the window — the sky had darkened, and with the thunder, it looked as though it might rain at any moment.</p>
+<p>"The weather really does change in an instant — the sun was so bright just now," Jiang Qi murmured.</p>
+<p>"Let's go straight to the company today."</p>
+<p>"Mm, okay." In weather like this Jiang Qi didn't want to get out partway and walk; he'd be soaked by the time he reached the company, and even with an umbrella his trouser cuffs and shoes would get wet — and besides, he and Ke Yan were both men; people wouldn't read anything into it, except to assume he could get into the company only because he and Ke Yan were friends.</p>
+<p>Let them say what they liked; Jiang Qi felt there was nothing worth minding.</p>
+<p>Riding in the car to the company, Jiang Qi looked at the downpour outside and couldn't help feeling glad he had a car to ride in.</p>
+<p>At the office, seeing his subordinates all in a bedraggled state, Jiang Qi stroked his chin — looked like he should find time to get a driver's license sometime.</p>
+<p>The idea had been in his head for ages, but work was always busy and Jiang Qi insisted on doing everything his best.</p>
+<p>At noon, while everyone was out eating, Jiang Qi snuck off to Ke Yan's office to eat.</p>
+<p>They'd nearly finished when Yang Shaoyu brought a document in for Ke Yan and sat on the sofa. "Ke Yan, the Changfu Group chairman is back today; tonight's our only chance to discuss the contract with him."</p>
+<p>"All right, get prepared."</p>
+<p>"Mm."</p>
+<p>As Yang Shaoyu was about to leave, he saw Ke Yan and Jiang Qi sitting close together being affectionate, and seethed inwardly — if you're going to flaunt your love, at least wait till I've left to flaunt it; isn't this deliberately throwing me off balance?</p>
+<p>"Head back on your own tonight." Ke Yan toyed with Jiang Qi's hand.</p>
+<p>"Mm, okay." Because he hadn't slept long last night, and had just eaten, Jiang Qi felt suddenly drowsy.</p>
+<p>Ke Yan gathered Jiang Qi onto the sofa to lie down; this sofa was larger than the usual kind, so two grown men lying on it didn't feel cramped.</p>
+<p>Jiang Qi could barely keep his eyes open; held in Ke Yan's arms on the sofa, he drifted off at once. Ke Yan meant to work once he slept, but soon fell asleep too.</p>
+<p>By the time Jiang Qi woke, Ke Yan had long since woken and worked a good while. Jiang Qi felt the empty space beside him — clearly the person had been up a long time; it had gone cold.</p>
+<p>Jiang Qi sat up and found a blanket had been laid over him, his coat and suit trousers taken off. He habitually touched the corner of his mouth — mm, good, no drool.</p>
+<p>Looking at the working Ke Yan, he asked, "Ke Yan, what time is it?"</p>
+<p>Ke Yan looked up and noticed Jiang Qi was awake; he came over and had him lie back down. "Sleep a while more."</p>
+<p>"What time is it?"</p>
+<p>"Not yet — still a while before work resumes."</p>
+<p>"Mm, then I'll sleep a bit more; remember to wake me when it's time."</p>
+<p>"Okay, sleep a while."</p>
+<p>Jiang Qi lay back down to sleep.</p>
+<p>Ke Yan looked at Jiang Qi and stroked his face. Jiang Qi surely had no idea how adorable his just-woken, slightly nasal voice had been a moment ago.</p>
+<p>Ke Yan went back to the desk to read documents, and checked the time — already past three.</p>
+<p>When Jiang Qi woke again, refreshed, Ke Yan brought him water. That was a good sleep — but isn't it nearly time for work? Why does it feel so late?</p>
+<p>He took the water Ke Yan poured and drank a mouthful, then put his clothes and trousers back on; dressed neatly, he took out his phone to check the time — oh, it was already past four.</p>
+<p>Past four? Jiang Qi rubbed his eyes and looked again — it really was past four!!</p>
+<p>Jiang Qi glared at Ke Yan. "It's already past four — this, this, this is nearly the end of the day."</p>
+<p>"All right, don't be cross; you were only a little late."</p>
+<p>"What do you mean a little — fine, I'm going down."</p>
+<p>Jiang Qi hurriedly tidied himself, ignoring the laughter in Ke Yan's eyes as he watched him from behind.</p>
+<p>That evening Jiang Qi got off work alone; Ke Yan had gone to talk business. Looking at the downpour outside, Jiang Qi dug an umbrella out of the bottom drawer of his desk.</p>
+<p>Good thing he'd bought a spare umbrella to keep at the office for just such a need.</p>
+<p>Holding the umbrella, he waited for a car by the roadside; the wind blew the rain in gusts, soaking people through, and even with an umbrella it was a sorry state.</p>
+<p>The rain had multiplied the usual taxi queue; near and far, no one wanted the bus. Jiang Qi surveyed the crowd and resolutely walked toward the bus stop.</p>
+<p>The bus stop wasn't far from the company, but it was some distance. Jiang Qi walked slowly under his umbrella, and saw a stooped old woman sitting alone by a flowerbed, not holding an umbrella even in rain this heavy.</p>
+<p>Jiang Qi hadn't meant to look, but the more he looked the more pitiable the old woman seemed, and in the end he couldn't help going over to ask. "Granny, are you all right?"</p>
+<p>The old woman looked up at Jiang Qi. "I'm waiting for someone."</p>
+<p>"It's raining so hard — you should go wait somewhere dry."</p>
+<p>"No — he won't be able to see me."</p>
+<p>"But you'll get sick like this." Seeing she seemed disinclined to move, Jiang Qi tried to persuade her.</p>
+<p>The old woman shook her head; unable to persuade her, Jiang Qi gave her the umbrella in his hand. "Use the umbrella."</p>
+<p>And with that Jiang Qi ran off. Ran where? To the bus stop, of course.</p>
+<p>Seeing Jiang Qi run off, the old woman took her phone from her pocket; the screen showed a call in progress.</p>
+<p>By the time Jiang Qi got home he'd been blown by plenty of wind and rained on plenty along the way, and hurried to take a shower.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-054.html" class="prev">Chapter 54</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-056.html" class="next">Chapter 56</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

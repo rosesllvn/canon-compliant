@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 57: Jiang Qi&#x27;s Hospital Stay (Part One) &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 57</h1>
+    <p class="chapter-title">Jiang Qi&#x27;s Hospital Stay (Part One) <span class="zh">江奇住院记上</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~8 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">"Come on, to the hospital." Ke Yan picked up the car keys and walked out; Jiang Qi hurried after him.</p>
+<p>The moment they got in the elevator Jiang Qi wrapped himself tightly around Ke Yan and wouldn't let go.</p>
+<p>"Ke Yan, I was wrong, don't be angry."</p>
+<p>"Wrong how?"</p>
+<p>"Wrong not to tell you I was sick."</p>
+<p>"That's all?"</p>
+<p>"Hm?"</p>
+<p>Jiang Qi looked up at Ke Yan, confusion flickering in his eyes.</p>
+<p>Ke Yan gave Jiang Qi's nose a hard pinch. "If you don't get it, work it out yourself."</p>
+<p>At the hospital the doctor diagnosed a chill, slight fever, and cold, prescribed medicine, and sent them home. All the way back Jiang Qi puzzled: if Ke Yan wasn't angry about the hidden cold, what was he angry about?</p>
+<p>Home again, Jiang Qi caught hold of Ke Yan. "I can't figure it out — don't ignore me."</p>
+<p>Ke Yan sighed. "You don't remember? Think back to that time you were hospitalized for three days."</p>
+<p>Jiang Qi remembered. It had been winter then; because of the cold, and some other reason he couldn't recall, that fever had truly run dangerously high, and he'd been on an IV drip in the hospital for three days.</p>
+<p>He nuzzled Ke Yan with his head. "I get it — I'll never let myself get sick again, never let you worry, never hide it from you." "Silly." Ke Yan stroked Jiang Qi's head...</p>
+<p>That university illness had been the worst of Jiang Qi's life. Heat never troubled him, but cold cut through however many layers he wore.</p>
+<p>That day was very cold; Jiang Qi felt cold no matter how many layers he put on, curled up in the dorm, in a padded jacket under a thick quilt, and still cold.</p>
+<p>Meng Qing and Liu Hao watched with concern. Ye Xingwei had been called home over family business and wasn't at school.</p>
+<p>Liu Hao asked, "Jiang Qi, are you all right?"</p>
+<p>"I'm fine." Jiang Qi answered listlessly.</p>
+<p>But you look just like a silkworm grub — that, Liu Hao said silently to himself.</p>
+<p>The Jiang Qi of that moment was rolled into a ball, wrapped up in his quilt, really looking just like a silkworm grub.</p>
+<p>"We're off to class, then; I'll get your leave sorted — call me if you need anything."</p>
+<p>"Mm, hurry off to class."</p>
+<p>Once Liu Hao and Meng Qing had gone, Jiang Qi lay shivering alone under the covers — too cold, surely; Jiang Qi knew his cold today was abnormal.</p>
+<p>Could he be sick? Jiang Qi pulled a hand out from under the covers and felt his forehead — so hot; running a fever, maybe. So sleepy; better sleep a while.</p>
+<p>Jiang Qi slept badly, cold and worn out.</p>
+<p>Ke Yan took out his phone and checked it — where had Jiang Qi gotten to today; he hadn't seen him all day, hadn't gotten a call or text from him.</p>
+<p>Ke Yan was just about to go find Jiang Qi when he saw the two who shared Jiang Qi's dorm, and went over to ask them, "Where's Jiang Qi? Weren't you with him?"</p>
+<p>"Huh?" Liu Hao was stunned for a moment, never having seen Ke Yan say so many words at once.</p>
+<p>"Jiang Qi's sick, in the dorm." Meng Qing got it out ahead of Liu Hao.</p>
+<p>Hearing this, Ke Yan said thanks and headed for Jiang Qi's dorm.</p>
+<p>Jiang Qi woke to jolting and a ceiling moving above him. Looking around, he realized he was the one moving — carried by Ke Yan.</p>
+<p>"Ke Yan." Jiang Qi called to him softly.</p>
+<p>"Hm?" Ke Yan was heading downstairs, his breathing a little labored.</p>
+<p>"Where are we going?"</p>
+<p>"To the hospital."</p>
+<p>"What for?"</p>
+<p>"Silly. You're sick."</p>
+<p>Sick after all; Jiang Qi coughed a couple of times.</p>
+<p>At the hospital, because it was evening, there weren't many patients; Ke Yan and Jiang Qi sat on the chairs outside waiting for the doctor to call them in.</p>
+<p>Jiang Qi leaned weakly against Ke Yan's shoulder; Ke Yan kept an arm lightly around Jiang Qi's shoulders.</p>
+<p>Ke Yan opened a bottle of water and gave Jiang Qi a sip; with his mouth dry from the fever, Jiang Qi drank a big mouthful.</p>
+<p>"Next, Jiang Qi."</p>
+<p>When the nurse called Jiang Qi's name, he and Ke Yan went in together.</p>
+<p>The attending doctor was a middle-aged man; Ke Yan handed him the thermometer reading he'd just taken but not yet looked at. The doctor took it and looked. "How did you let the fever get this bad before coming in?"</p>
+<p>Ke Yan frowned. "Does he need a drip?"</p>
+<p>"Definitely — he'll have to be admitted tonight."</p>
+<p>"All right." Ke Yan answered, while Jiang Qi dozed drowsily against him.</p>
+<p>In the end Jiang Qi was, wretchedly, admitted — though he was lucky enough that there was still a bed left for him to lie in.</p>
+<p>Jiang Qi lay weakly in the hospital bed, sniffling; Ke Yan sat in the chair beside it watching him with concern.</p>
+<p>"I don't want a drip."</p>
+<p>The next bed over held a young couple; the woman, probably afraid of needles, was acting coy with the man, while the man held her with a doting, pained look. "Darling, don't worry, I'm right here with you."</p>
+<p>"Mm, okay." The woman nodded, moved.</p>
+<p>The nurse arrived to set up the drip and rolled her eyes inwardly. Do they think this is an idol drama? Even if it were, they wouldn't be the leads.</p>
+<p>As she thought it, the nurse snuck a glance at the Ke Yan beside Jiang Qi's bed.</p>
+<p>"Hold out your arm." The nurse held the tourniquet out to the girl in the bed.</p>
+<p>The woman, looking frightened, held out her arm.</p>
+<p>"Make a fist."</p>
+<p>"No..."</p>
+<p>"How am I to set the drip if you won't?"</p>
+<p>"But I'm so scared."</p>
+<p>The nurse held in her temper. "Scared or not, you need the drip."</p>
+<p>"Hey, can't you see my girlfriend's frightened? What kind of nurse are you?"</p>
+<p>What the hell — her being scared is no business of mine, the nurse swallowed her anger and quickly got the woman's drip set.</p>
+<p>When it came to Jiang Qi's turn, he'd already held out his arm before the nurse said a word, because he felt so awful; maybe the drip would help.</p>
+<p>After the farce next door, Jiang Qi's calm face gave Ke Yan a sudden my one's simply better than yours feeling.</p>
+<p>Truly bewildering. Ke Yan shook his head, and seeing that Jiang Qi was set up and on the drip, reached over to rub his flushed cheek...</p>
+<p>Jiang Qi woke from hunger, having fallen asleep on the drip. Opening his eyes, he saw Ke Yan.</p>
+<p>"Ke Yan..."</p>
+<p>"What is it?"</p>
+<p>"I'm hungry."</p>
+<p>"I'll go buy food; wait for me."</p>
+<p>"Mm."</p>
+<p>"When this bottle's done, press the bell for the nurse, understand?"</p>
+<p>"Mm, I know; hurry back."</p>
+<p>"Mm."</p>
+<p>Ke Yan went out, and Jiang Qi felt a gaze on him; he looked toward it and found it was the girl in the next bed.</p>
+<p>"Did you need something?" Jiang Qi felt uneasy under her fixed stare.</p>
+<p>"Your friend's really good."</p>
+<p>"Oh."</p>
+<p>"He's so thoughtful — while you were asleep he kept rubbing your arm for you."</p>
+<p>At her reminder Jiang Qi noticed his arm wasn't ice-cold the way it usually went on a drip, but rather a bit warm. Touched inwardly, he didn't let it show on his face.</p>
+<p>"Hey, does he have a girlfriend?"</p>
+<p>The question set off Jiang Qi's alarm bells. "He has a girlfriend. I know his girlfriend; she's wonderful."</p>
+<p>"Really?" The woman's faintly disappointed expression pleased Jiang Qi — heh heh, however good his man was, he was still his.</p>
+<p>Ke Yan came back quickly, having bought some congee and tasty little side dishes; afraid Jiang Qi wouldn't want strong-flavored food just now, Ke Yan had bought plain congee.</p>
+<p>He spooned a mouthful of plain congee to Jiang Qi's lips; because there was a needle in his hand, Jiang Qi didn't bother feeling shy and ate a bite — then his face scrunched up. "I want seafood congee."</p>
+<p>"You're sick; you can't have that."</p>
+<p>"All right then."</p>
+<p>Ke Yan picked up a bite of a side dish for Jiang Qi; Jiang Qi gave it a sniff and didn't want it, turning his head away. "I don't want it."</p>
+<p>"No appetite?"</p>
+<p>"Mm."</p>
+<p>Ke Yan could only continue with the plain congee. Jiang Qi managed a few bites before his sudden hunger vanished, leaving him unwilling to eat anything.</p>
+<p>Ke Yan set the congee down and saw Jiang Qi had already tucked himself back in to sleep.</p>
+<p>Ke Yan looked from the barely touched congee to Jiang Qi. He'd never worried over anyone before, yet now fretted that Jiang Qi would lose weight before the illness passed. His health was poor already; wouldn't that make it worse?</p>
+<p>Looked like he'd have to think of a way to get Jiang Qi to eat more.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-056.html" class="prev">Chapter 56</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-058.html" class="next">Chapter 58</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>
