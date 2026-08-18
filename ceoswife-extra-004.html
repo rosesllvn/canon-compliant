@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extra: Extra 4 &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Extra</h1>
+    <p class="chapter-title">Extra 4 <span class="zh">番外4</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~11 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Though the shop was crowded, their order came fast.</p>
+<p>Ye Xingwei sipped his unsweetened soy milk and watched Jiang Bai add spoonful after spoonful of sugar to both his soy milk and tofu pudding.</p>
+<p>But Jiang Bai liked sweet, and seeing him add none, asked, "Don't you find soy milk no good without sugar?"</p>
+<p>"No."</p>
+<p>Jiang Bai sipped his — sweet enough — and put the spoon back in the sugar jar.</p>
+<p>He poured vinegar into a dish, dipped a steamed dumpling, and bit into shrimp, mushroom, finely minced pork, and cabbage brightened by the vinegar's tang.</p>
+<p>Jiang Bai narrowed his eyes in pleasure, swallowed, and reached for another.</p>
+<p>Watching that "so good" look on Jiang Bai's face, Ye Xingwei found he wanted a taste too, and reached over to take one from Jiang Bai's plate, dipped it in vinegar, ate it.</p>
+<p>Jiang Bai smiled, eyes crinkling. "Good, isn't it?"</p>
+<p>"Mm." Though Ye Xingwei didn't find it as good as it had looked, eaten by Jiang Bai.</p>
+<p>Anyone who ate with Jiang Bai discovered the same thing: however little appetite you began with, watching his enjoyment made you join in and eat more than usual.</p>
+<p>Before they knew it the breakfast was gone, Ye Xingwei having eaten a third, Jiang Bai the rest.</p>
+<p>Ye Xingwei was genuinely amazed at Jiang Bai's appetite.</p>
+<p>After, they went to the company; Ye Xingwei got out at the entrance, Jiang Bai took the car to the lot.</p>
+<p>Ye Xingwei had just heard Secretary Jin's report on the day's work when Jiang Bai knocked.</p>
+<p>He looked up; Jiang Bai came in with a damp towel. "Didn't you dirty your trousers? Wipe them with a wet towel first."</p>
+<p>But for Jiang Bai, Ye Xingwei had nearly forgotten; he stood, took the towel, and wiped the cuff.</p>
+<p>Done, he handed it back with a thanks.</p>
+<p>Jiang Bai took it, smiled, and went out.</p>
+<p>Ye Xingwei worked on, finding his mood unexpectedly good today — perhaps because of that decent breakfast.</p>
+<p>The workday seemed to fly; at lunch, his assistant had ordered a refined bento from a hotel.</p>
+<p>Ye Xingwei took a few bites of the elegant dishes, then remembered breakfast with Jiang Bai and abruptly lost his appetite for eating alone. He set down his chopsticks.</p>
+<p>Should he ask Jiang Bai to eat together next time?</p>
+<p>As he thought it his phone rang; he answered, and his mother's voice came.</p>
+<p>"Xingwei, Mom's at the hot-spring villa — come over tonight."</p>
+<p>Hearing she was at the villa, Ye Xingwei knew at once she'd quarreled with his father again.</p>
+<p>His father, like his grandfather, was rigid and hot-tempered. His parents often fought, and his mother would retreat to the villa until his father came to fetch her.</p>
+<p>Ye Xingwei thought it over and decided to go tonight; he'd been swamped lately and hadn't seen his mother in a while.</p>
+<p>At quitting time he took his keys, meaning to drive himself.</p>
+<p>In the lot he found Jiang Bai by the car, seeming to wait for him.</p>
+<p>He walked up. "No need to drive me tonight — I'll drive myself."</p>
+<p>Jiang Bai felt a pang of regret but could only nod. "All right, then."</p>
+<p>Ye Xingwei drove off; Jiang Bai sighed, pocketed his keys, and prepared to go home.</p>
+<p>Halfway there, it began to rain on Ye Xingwei, thunder rumbling now and then.</p>
+<p>The rain came harder; Ye Xingwei frowned and slowed.</p>
+<p>The car ahead suddenly braked hard. Even at his reduced speed, Ye Xingwei couldn't stop in time and struck its rear. A moment later, the car behind rammed into him.</p>
+<p>By the time Ye Xingwei's secretary got the call, he'd already been put in an ambulance.</p>
+<p>He'd been conscious when they loaded him, and had the paramedics notify Secretary Jin.</p>
+<p>Secretary Jin, getting the nurse's call, was alarmed, asked the hospital address, and rushed over.</p>
+<p>Jiang Bai only learned of the crash the next day at the company, from Secretary Jin.</p>
+<p>Jin had spent the whole night at the hospital and come straight to the office at dawn, looking exhausted.</p>
+<p>Seeing his fatigue, Jiang Bai asked with concern, "Secretary Jin, what's wrong?"</p>
+<p>"Jiang Bai, you've come at the right time — I need to ask a favor. The CEO had a car accident, but thank goodness his injuries aren't serious; the hospital can't get a caregiver right now — could you go today and look after the CEO?" Jin, fretting over the unfound caregiver, with himself needing to be at the office, saw Jiang Bai like a savior.</p>
+<p>At "car accident," Jiang Bai's heart clenched, his hands fisted, and cold sweat broke over him. Only the words "not serious" let him breathe again.</p>
+<p>He couldn't get to Ye Xingwei fast enough; he agreed at once, asked the address, and drove straight to the hospital.</p>
+<p>Both Ye Xingwei's arms were hurt, wrapped in bandages and casts, and one leg too, casted and resting outside the quilt.</p>
+<p>Ye Xingwei was asleep, lying still on the bed, his once-fair face pale now.</p>
+<p>Jiang Bai went to the bedside and lightly touched Ye Xingwei's face, afraid to wake him.</p>
+<p>Feeling Ye Xingwei's breath on his hand, the heart he'd held tight finally eased.</p>
+<p>He'd been terrified. But Ye Xingwei was alive and would recover; that was enough.</p>
+<p>Unable to help it, he stroked Ye Xingwei's face twice — and suddenly Ye Xingwei opened his eyes.</p>
+<p>Jiang Bai startled so badly he nearly jumped, his hand tensing — and with a smack, landed a slap on Ye Xingwei's face.</p>
+<p>Ye Xingwei froze, plainly not expecting to wake to a slap; light as it was, it stung.</p>
+<p>He fixed a cold eye on the slap's owner, waiting to hear him explain.</p>
+<p>Jiang Bai looked at him, apologetic. "Sor — sorry, I didn't mean it, are you all right?"</p>
+<p>Seeing his fluster, Ye Xingwei teased, "What were you doing just now?"</p>
+<p>"I, I…" Jiang Bai faltered, unable to say he'd been stroking his face.</p>
+<p>Seeing him flush with anxiety, Ye Xingwei let it go. "Pour me some water."</p>
+<p>"All right." Jiang Bai breathed out, turned to pour it.</p>
+<p>Since Ye Xingwei couldn't easily drink lying down, Jiang Bai found a straw and put it in the cup for him.</p>
+<p>Ye Xingwei drained it in a few sips.</p>
+<p>"More?" Jiang Bai saw how thirsty he was.</p>
+<p>"No."</p>
+<p>Jiang Bai set the cup down, sat in the bedside chair, and after a silence, "Does — does the wound still hurt?"</p>
+<p>"Not anymore…" The anesthetic had worn off, and of course it hurt. Yet the worry on Jiang Bai's face compelled him to lie.</p>
+<p>Ye Xingwei didn't like worrying those close to him, which was why he hadn't even told his family — telling his mother only that something had come up and he couldn't make it.</p>
+<p>But now, seeing Jiang Bai worry, he didn't want him to worry too much.</p>
+<p>"Good — can you eat fruit now? Want an apple?"</p>
+<p>"Peel one." It had been long enough since the procedure to eat.</p>
+<p>Jiang Bai found a small knife, sat, and slowly peeled an apple, the sunlight through the window falling just on his peeling hands, making them look paler, more slender.</p>
+<p>The apple peeled fast; with both of Ye Xingwei's hands hurt, Jiang Bai cut it into small pieces on a plate for ease.</p>
+<p>No toothpicks, so Jiang Bai washed his hands clean and fed Ye Xingwei a piece by hand.</p>
+<p>Maybe he'd cut the pieces too small; each time he fed one, Ye Xingwei's lips brushed Jiang Bai's fingers.</p>
+<p>Each brush of Ye Xingwei's warm lips and breath against Jiang Bai's fingers deepened his blush.</p>
+<p>Ye Xingwei finished the last piece, looked up at Jiang Bai, and was duly startled.</p>
+<p>"Are you all right? Why's your face so red?" As red as the apple he'd just eaten.</p>
+<p>"Is, is it? Haha, it's nothing, maybe it's too warm, haha." Jiang Bai covered his face with a dry laugh, unable to say it was all because of you.</p>
+<p>Ye Xingwei didn't find it that warm, but didn't press; he just had Jiang Bai turn on the TV.</p>
+<p>Jiang Bai found the remote. "What do you want to watch?"</p>
+<p>Ye Xingwei hadn't watched TV in ages; apart from at the office, at home he sometimes read or looked at his phone.</p>
+<p>"Anything."</p>
+<p>Jiang Bai flipped channels, landing on a variety show where the guests were playing a water-bucket relay. Ye Xingwei watched the water sloshing out and the splashing sounds…</p>
+<p>And, having just drunk water, Ye Xingwei suddenly needed the toilet…</p>
+<p>"Jiang Bai."</p>
+<p>"Mm?" Jiang Bai looked at him.</p>
+<p>"I need the toilet." Ye Xingwei wasn't embarrassed — both men, after all.</p>
+<p>"Toilet? But you can't easily get out of bed — what do we do?" Jiang Bai glanced at his injured leg.</p>
+<p>"…There's a urinal." Ye Xingwei pointed it out.</p>
+<p>"A—a urinal?" Jiang Bai looked at Ye Xingwei's lap. With both arms injured, he would need help. Jiang Bai wasn't ready for this. Wasn't it far too soon?</p>
+<p>"What's wrong? Hurry up." Ye Xingwei saw him not reacting.</p>
+<p>"Isn't — isn't this too fast?" Jiang Bai blushed, suddenly bashful.</p>
+<p>Ye Xingwei stared at him. What did Jiang Bai mean by calling an urgent bodily need "too fast"?</p>
+<p>Ye Xingwei looked at Jiang Bai, deadpan.</p>
+<p>The still-blushing Jiang Bai saw Ye Xingwei's expression and knew he was near losing patience.</p>
+<p>He drew a deep breath, took the urinal from under the bed, lifted Ye Xingwei's quilt, fixed his gaze on Ye Xingwei's lap, drew another deep breath, looking nervous beyond belief.</p>
+<p>Watching Jiang Bai's nerves, as if facing something unspeakable, Ye Xingwei felt a throb at his temple.</p>
+<p><em>Why is he this nervous? We have the same anatomy. Must he look so grimly resolved? Is he disgusted?</em></p>
+<p>At the thought, Ye Xingwei suddenly didn't want Jiang Bai's help with his urgent need.</p>
+<p>But Jiang Bai wasn't disgusted — he was genuinely nervous, hand trembling as he reached for Ye Xingwei's waistband.</p>
+<p>The hospital trousers had a very loose waist; a light tug and it loosened.</p>
+<p>Jiang Bai grew more nervous with every second. His hand shook so badly that he had to draw a third deep breath.</p>
+<p>Ye Xingwei forced himself to ignore Jiang Bai's movements, because he truly needed to go, and Secretary Jin wouldn't come until afternoon, and no caregiver yet.</p>
+<p>Jiang Bai gently drew down Ye Xingwei's trousers and saw it at once. Since the surgery had required it, Ye Xingwei's underwear had long been off, only the trousers on.</p>
+<p>Jiang Bai felt his brain about to crash, his face impossibly hot.</p>
+<p>With a trembling hand he took hold, and from nerves gripped a little too hard.</p>
+<p>Ye Xingwei felt the pain at once. "Gentler."</p>
+<p>"Yes, yes." Jiang Bai eased his grip and aimed at the urinal.</p>
+<p>Thirty seconds passed…</p>
+<p>A minute passed…</p>
+<p>Still nothing came.</p>
+<p>Having only just had the catheter out, the first time was hard.</p>
+<p>Jiang Bai stared fixedly at what he held. It was much larger than his own.</p>
+<p>Another dozen seconds, and Ye Xingwei, still unable to go, seeing Jiang Bai's gaze locked on his lower body, couldn't help saying, "What are you looking at?" — the blushing, bashful Jiang Bai looking, just now, like some lecher.</p>
+<p>"No — nothing." Jiang Bai quickly shifted his eyes.</p>
+<p>Seeing Ye Xingwei truly couldn't go, Jiang Bai softly went "shhh—."</p>
+<p>Ye Xingwei looked at him.</p>
+<p>Jiang Bai stammered, "This — this might make it come easier; I've seen parents do this when little kids need to go." He said it without daring to meet Ye Xingwei's eyes.</p>
+<p>Suddenly treated like a small child, Ye Xingwei gave up on speaking and let Jiang Bai continue his soft "shhh—shhh—" sounds.</p>
+<p>And whether or not it was psychological, after a moment it really did come.</p>
+<p>Blushing, Jiang Bai gave it a shake for Ye Xingwei, then, still red, pulled a tissue to wipe, and tucked it back into the trousers.</p>
+<p>For his part, Ye Xingwei, seeing Jiang Bai so bashful, felt a flicker of awkwardness himself.</p>
+<p>Done, Jiang Bai grabbed the urinal and dashed for the toilet.</p>
+<p>Watching his retreating back, Ye Xingwei's awkwardness eased a little.</p>
+<p>In the toilet, Jiang Bai looked at his own hands a while before washing them, his face still red.</p>
+<p>He could hardly believe he had touched Ye Xingwei there. It was mortifying.</p>
+<p>Hands washed, he found himself suddenly too shy to go out; he touched his burning face, drew a breath, and slowly opened the door a crack to peek.</p>
+<p>Ye Xingwei saw the little motion and found it funny. "Not coming over?"</p>
+<p>Jiang Bai came slowly.</p>
+<p>Seeing him approach, the awkwardness that had just receded returned; Ye Xingwei cleared his throat. "We're both men… thanks for just now; if it's uncomfortable for you, I won't trouble you next time."</p>
+<p>"Ah? No, no, not uncomfortable — I'm glad to help you."</p>
+<p>The instant he said it, an indescribable tension settled between them. Their eyes met and darted apart; the awkwardness refused to lift.</p>
+<p>Yet beneath it all, Jiang Bai was secretly delighted.</p><p class="end">❦ THE END ❦</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-extra-003.html" class="prev">Extra</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <span class="next disabled">End</span>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

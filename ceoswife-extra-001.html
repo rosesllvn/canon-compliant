@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extra: Extra 1 &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Extra</h1>
+    <p class="chapter-title">Extra 1 <span class="zh">番外1</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~4 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">"Hic—" Home from the wedding banquet, Xiao An kicked off her heels, pulled on cotton slippers, and followed the wall toward her room. Halfway there, she flung her bag to the floor, planted her hands on her hips, and burst into laughter.</p>
+<p>She'd just come from Ke Yan and Jiang Qi's wedding. The couple she'd rooted for all this time had actually married—and invited her. She was so thrilled she could have run laps around the building.</p>
+<p>"Hic—" Another hiccup; Xiao An took out her phone, plopped right down on the floor, logged onto the company forum and group chat, and posted the photos she'd snapped at the wedding.</p>
+<p>Done, she slumped tipsily against the sofa, eyes shut, ready to sleep — she'd drunk too much tonight, and felt rough.</p>
+<p>Xiao An's mother, woken in her room by the racket, came out to find Xiao An sprawled asleep over the sofa, reeking of drink.</p>
+<p>She went over and gave Xiao An's backside a hard smack, scolding, "This old and not a shred of ladylike about you, drinking this much." Then she hauled Xiao An up — luckily Xiao An's mother was sturdy enough — and half-carried her to bed.</p>
+<p>Meanwhile, those who saw Xiao An's photos couldn't sleep at all.</p>
+<p><em>What was going on? Was this a dream? Were their eyes playing tricks?</em> Yet it was real.</p>
+<p>The chat exploded. Everyone knew the CEO and Manager Jiang had been close since university, but few had dreamed they were lovers.</p>
+<p>And since when? Were they blind, that not one of them had noticed?</p>
+<p>The few who'd long known the truth, though, felt quietly smug — if they hadn't known already, they'd surely be as shocked and disbelieving as everyone else.</p>
+<p>Wang Siqi, seeing the photos, felt the world go black; she'd more or less understood already, but the wedding photos still left her unwilling to accept it.</p>
+<p>Sun Nianqing was shocked too — she'd thought, with Ke Yan's background, how could he accept Jiang Qi, and how would he dare hold a wedding with him openly?</p>
+<p>Wasn't he afraid of the media?</p>
+<p>But she'd badly underestimated Ke Yan — when had he ever feared such things?</p>
+<p>And with Ke Yan's power, he'd naturally have the media speaking well of him.</p>
+<p>The next day Xiao An, up near noon, checked her phone — and froze at the flood of messages. What were all these? She opened them, and nearly lost her mind.</p>
+<p>What — what had she done last night?</p>
+<p>She rushed to delete the photos, but many had already saved them, the company girls especially; some had even made them phone wallpapers.</p>
+<p>She wavered over whether to tell Jiang Qi she'd blundered, but thought — today Jiang Qi and Ke Yan were leaving for their honeymoon; calling now would only spoil their mood.</p>
+<p>Still, she'd blundered; she had to tell him. So she texted Jiang Qi.</p>
+<p>Jiang Qi and Ke Yan hadn't yet boarded their flight. Jiang Qi showed Ke Yan the message, and Ke Yan replied with three characters: <em>Doesn't matter.</em></p>
+<p>Xiao An breathed easy at the reply — though, knowing Jiang Qi, she soon guessed it was the CEO who'd answered.</p>
+<p>The holiday ended quickly, and the first workday came; on it, not a single person was late — as if by agreement, everyone arrived early.</p>
+<p>Barely at their desks, some of the women, slipping off to the break room to brew coffee, were already gossiping. "When I saw the photos I thought they were Photoshopped," said Female Employee A, pouring water.</p>
+<p>"I was completely floored. Sure enough — all the good men go and love men," sighed Female Employee B.</p>
+<p>"Actually, think about it — maybe they got together long ago? Weren't the CEO and Manager Jiang college classmates? Could they have been together since college?" This one had hit the truth.</p>
+<p>"No way — that'd be many years together." Someone objected.</p>
+<p>"Why not? Now I think of it, that's why the CEO stayed unmoved even facing a beauty like Manager Wang — there was already someone in his heart." Even unspoken, the whole company's sharp eyes had read Wang Siqi's little hopes.</p>
+<p>"True." They nodded.</p>
+<p>Then one woman said wistfully, "I always figured that even if the CEO's wife wasn't me, she'd at least be some beauty. I never imagined the CEO's wife would be a man." What young woman in the company hadn't dreamed of Ke Yan—handsome, wealthy, and famously unattached? He had been their very image of Prince Charming.</p>
+<p>And right now, the two everyone gossiped about were honeymooning abroad, back in a couple of days.</p>
+<p>So Yang Shaoyu, busier than usual the moment the holiday ended, could only hope Ke Yan would hurry home.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-168.html" class="prev">Chapter 168</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-extra-002.html" class="next">Extra</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

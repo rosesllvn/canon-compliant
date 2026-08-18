@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extra: Extra 3 &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Extra</h1>
+    <p class="chapter-title">Extra 3 <span class="zh">番外3</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Ye Xingwei &amp; Jiang Bai, Part 1</p>
+<p>Late at night, Ye Xingwei glanced wearily at the time — past eleven. He shut down his computer and rubbed his temples.</p>
+<p>He took his coat and left the office, meaning to go home and rest.</p>
+<p>In the parking garage, he had barely stepped out of the elevator and taken out his keys when something slammed into him and knocked him flat.</p>
+<p>When he came to and made to get up, he couldn't — and found someone on top of him.</p>
+<p>He pushed at the person, who didn't react.</p>
+<p>"You — all right?" Seeing the figure stir his head, Ye Xingwei reached out and gave him a shove.</p>
+<p>"I — I'm fine." The person on him said it low, voice a little muffled.</p>
+<p>Ye Xingwei waited, but the man showed no sign of getting up.</p>
+<p>"If you're fine, why aren't you getting up?" Ye Xingwei said, impatient.</p>
+<p>"S-sorry." The young man quickly sat up—but remained on top of him, with his backside planted in the most awkward possible place.</p>
+<p>"You—" Ye Xingwei was about to tell him to get off, but caught sight of the blood on the young man's face and startled, swallowing the rest.</p>
+<p>"Sorry." The young man covered his nose. "I got blood on your shirt."</p>
+<p>Ye Xingwei looked down — a smear of blood on his white shirt, sure enough.</p>
+<p>He sighed; tired already, he felt wearier still. "Get off fir—" Before he finished, the man on him moved, pulling tissues from somewhere to stanch his own nose.</p>
+<p>Ye Xingwei was speechless. He'd never met anyone like this — sitting on someone and not getting up, busy stopping their own nosebleed.</p>
+<p>"Sorry," the young man repeated through his blocked nose. He tried to rise, but his numb foot gave way and he dropped back down, inadvertently wriggling against him.</p>
+<p>Ye Xingwei felt that if this went on it would end badly. "Are you getting up or not?" His patience spent — he'd never been even-tempered, kind only, once, in front of Jiang Qi.</p>
+<p>The young man quickly stood, bracing on Ye Xingwei's shoulder this time so as not to repeat the earlier mishap, his legs still numb.</p>
+<p>Ye Xingwei got up, picked up his coat, in a foul mood.</p>
+<p>Perhaps his thoughts of Jiang Qi were darkening his mood. He had been foolish not to seize his chance, but dwelling on it was pointless now. Jiang Qi belonged with Ke Yan.</p>
+<p>The more he thought the more irritable he grew; he raked a hand through his hair, no longer wanting to drive, and called for his driver.</p>
+<p>The moment he dialed, the young man standing opposite him had his phone ring…</p>
+<p>"Heh heh — I'm the new driver, started today, hadn't gotten to introduce myself yet." The young man, two wads of tissue stuffed up his nose, said it with a smile, baring white teeth.</p>
+<p>Ye Xingwei felt a throb at his temple, hung up, and looked at the still-smiling new driver. "Aren't you going to get moving?"</p>
+<p>"Yes — coming."</p>
+<p>Ye Xingwei used a driver only for work functions, rarely otherwise — he liked driving himself. Old Chen, his former driver, had retired with age.</p>
+<p>"Oh — I'm Jiang Bai. Looking forward to working with you." In the car, Jiang Bai pulled two tissues and wiped the blood from his hands, but couldn't get it all off; he wiped again, then started the car.</p>
+<p>Jiang Bai had reported to the company only that afternoon. Truthfully, he'd gotten the job through a connection: Old Chen was his family's neighbor and had recommended him after learning he needed work.</p>
+<p>"Drive." Ye Xingwei said coldly.</p>
+<p>Jiang Bai gave a small pout, glanced at Ye Xingwei in the rearview, then withdrew his gaze and eased the car toward the exit.</p>
+<p>To be fair, Jiang Bai had a deep impression of Ye Xingwei, because they'd met once before today, at a hotel — he'd accidentally bumped into him…</p>
+<p>And oddly, he'd found himself thinking now and then of the person he'd bumped that day.</p>
+<p>The thought left Jiang Bai a little excited — to think they'd get to meet again.</p>
+<p>He'd thought Ye Xingwei handsome that time; up close just now, more handsome still.</p>
+<p>Yes — Jiang Bai liked men, though he'd never been in a relationship.</p>
+<p>He'd always believed that fate simply hadn't found him yet. But after that first glimpse of Ye Xingwei, he'd kept thinking of him—and now, impossibly, had become his driver. When fate arrived, apparently there was no fending it off.</p>
+<p>Thinking it, Jiang Bai blushed.</p>
+<p>He was the sort who blushed the moment he got excited — luckily, in the night car, it didn't show much.</p>
+<p>He wriggled his nose, drew a soft breath; it still ached. Ye Xingwei's body was too hard — one careless bump and his nose had bled.</p>
+<p>The ride passed without a word, and they soon arrived; Ye Xingwei got out and went in without a sound.</p>
+<p>Jiang Bai watched his figure vanish before driving off.</p>
+<p>Home, Ye Xingwei went straight to the bathroom to shower.</p>
+<p>Peeling off the shirt with Jiang Bai's blood on it, his hand paused at the smear, then he tossed it in the basket, thinking of the new driver Jiang Bai — quiet, but rather clumsy.</p>
+<p>The next day, without Ye Xingwei calling, Jiang Bai was at his door early — Ye Xingwei hadn't driven his own car back the night before, so today Jiang Bai had to drive him to work.</p>
+<p>Seeing Ye Xingwei come out, Jiang Bai's gaze fell to his face, and after a few seconds he blushed despite himself.</p>
+<p>Only when Ye Xingwei opened the car door did Jiang Bai realize he'd forgotten to open it for him.</p>
+<p>Ye Xingwei plainly didn't mind, just gestured for him to drive.</p>
+<p>Jiang Bai started off and asked, "Mr. Ye, have you had breakfast?"</p>
+<p>"No." Ye Xingwei usually ate at the office; his assistant prepared it.</p>
+<p>"Then perfect — I haven't either. Let's have breakfast together; I know a great place — soy milk, fried dough sticks, soup dumplings, congee, they've got it all."</p>
+<p>Ye Xingwei meant to refuse, but suddenly thought he hadn't had a Chinese breakfast like that in ages; his assistant almost always got him a sandwich and coffee.</p>
+<p>Suddenly craving it, he didn't refuse. "Let's go, then."</p>
+<p>Jiang Bai's mouth curved, glad.</p>
+<p>A bit of traffic, but to Ye Xingwei's surprise Jiang Bai seemed to know the area well, weaving shortcuts, and they arrived quickly.</p>
+<p>There, Jiang Bai deftly found the nearest spot; Ye Xingwei opened his door and saw a small puddle outside.</p>
+<p>He stretched his leg and stepped carefully over it.</p>
+<p>Just then an elderly man rode an electric scooter through the rainwater left on the road, splashing Ye Xingwei's suit trousers.</p>
+<p>Ye Xingwei looked at the splattered trousers, brow furrowing, holding back the urge to change them at once.</p>
+<p>Jiang Bai, seeing him stand there, came over. "What's wrong?"</p>
+<p>Seeing the dirty water on his trousers, Jiang Bai quickly grabbed tissues from the car to wipe them.</p>
+<p>Ye Xingwei wiped, but the mark wouldn't come off.</p>
+<p>"Stop — wipe it with a towel at the office, it won't come off like this," Jiang Bai said, smiling.</p>
+<p>Ye Xingwei stopped, got out, and tossed the tissues in a bin.</p>
+<p>"Come on — what do you want to eat?" Jiang Bai eagerly tugged Ye Xingwei toward the breakfast shop.</p>
+<p>Ye Xingwei stared at his face, lost for words — this Jiang Bai, so quick to act familiar.</p>
+<p>They sat, each ordered. Ye Xingwei: soy milk, soup dumplings, dough sticks, a bowl of congee.</p>
+<p>Then watched, astonished, as Jiang Bai reeled off a long list: shaomai, steamed dumplings, dry noodles, wontons, soy milk, tofu pudding, fried buns, peanut buns…</p>
+<p>Ye Xingwei asked, surprised, "Hard to believe someone this thin eats so much."</p>
+<p>"It's nothing — I like to eat a bit more when I'm in a good mood." Jiang Bai grinned.</p>
+<p>"Is that so." Ye Xingwei said no more, and they waited in silence for the food.</p>
+<p>Jiang Bai propped his hands on the table and watched Ye Xingwei, unable to look away. Could this really be love at first sight?</p>
+<p>He'd never believed in it before. The first time, he'd only thought Ye Xingwei handsome; the second, he'd recognized him instantly and felt his pulse quicken. Perhaps calling it love was hasty, but he already liked Ye Xingwei a little.</p>
+<p>Ye Xingwei happened to turn and meet Jiang Bai's eyes, and paused — he hadn't expected Jiang Bai to be watching him.</p>
+<p>Meeting his gaze, Jiang Bai felt no awkwardness, and instead smiled at him.</p>
+<p>Ye Xingwei turned away — this Jiang Bai was a bit odd, but he certainly loved to smile.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-extra-002.html" class="prev">Extra</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-extra-004.html" class="next">Extra</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

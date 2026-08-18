@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 160: Looking After Xiao Ke &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 160</h1>
+    <p class="chapter-title">Looking After Xiao Ke <span class="zh">照顾小柯</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~8 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Jiang Qi and Ke Yan sat up together, both looking down at Xiao Ke, who waved his little hands and feet on the bed, cooing and chuckling.</p>
+<p>"All right, all right — looks like he really did make a poo." Jiang Qi was at a loss.</p>
+<p>"…" Ke Yan's face had gone stiff too.</p>
+<p>Afraid the squirming baby would spread the mess everywhere, Jiang Qi removed Xiao Ke's outer trousers, revealing open-crotch pants beneath. The smell immediately grew stronger. He had never changed a diaper and had no idea where to begin.</p>
+<p>Peeling the open-crotch trousers down, Xiao Ke kicked two plump little legs in the air.</p>
+<p>The room was warm, so there was no cold to worry about; Jiang Qi undid the diaper, but had no idea what to do next, so first he took the diaper off.</p>
+<p>He reached for the diaper, but Ke Yan stopped him. "I'll get Secretary Wu."</p>
+<p>"Good." Jiang Qi had been about to say he'd manage, but seeing Ke Yan's near-stiffening face, found it funny, and said all right.</p>
+<p>"I'll call her. Don't move." Ke Yan got off the bed and went out.</p>
+<p>Before long, Secretary Wu entered. One breath told her why the CEO had summoned her. "Do you have tissues, baby wipes, and a fresh diaper?"</p>
+<p>Ke Yan went straight to the bag Ke Shao had brought and rummaged through it.</p>
+<p>He found the tissues and wipes quickly, but no spare diaper.</p>
+<p>He handed Jiang Qi the tissues first; Jiang Qi took them and wiped away the worst of the mess, then didn't know who to hand the soiled diaper to.</p>
+<p>Jiang Qi held it out; Ke Yan quickly took it and tossed it in the bin.</p>
+<p>Secretary Wu cleaned away the worst with tissues, then used two wet wipes on Xiao Ke's bottom.</p>
+<p>She asked Ke Yan, "Where's the fresh diaper?"</p>
+<p>"Didn't find one — only this." Ke Yan handed him a cloth diaper from the bag.</p>
+<p>Secretary Wu took the cloth, then handed it to Jiang Qi. "You do it. I'll teach you."</p>
+<p>Following her directions, Jiang Qi secured it properly.</p>
+<p>"There. Though tonight, a disposable diaper would be better." She turned to Ke Yan. "CEO, I'll head out now."</p>
+<p>Ke Yan nodded. "Thank you."</p>
+<p>Flattered by the thanks, Secretary Wu even carried out the bag containing the soiled diaper.</p>
+<p>Jiang Qi dressed Xiao Ke again, lifting the freshly-clean baby.</p>
+<p>"Let's leave now and buy diapers. Sis seems to have forgotten to pack them."</p>
+<p>"All right." Jiang Qi settled the woolen-knit cap back on Xiao Ke.</p>
+<p>The freshly-changed Xiao Ke was in fine spirits, twisting his head this way and that in Jiang Qi's arms to look around.</p>
+<p>Ke Yan gathered up Xiao Ke's bag, and the two left the office.</p>
+<p>Telling Yang Shaoyu he was off, Ke Yan rode the elevator down with Jiang Qi under the gaze of a few secretaries.</p>
+<p>"The bookshop first, then the supermarket — but what about dinner tonight, what does Xiao Ke eat?"</p>
+<p>"Congee — you make good congee."</p>
+<p>"Then what about you? You can't fill up on congee."</p>
+<p>"I'll cook a couple more things. Won't your hands ache?" Ke Yan looked at the round little bundle Xiao Ke was, worried Jiang Qi's arms would tire.</p>
+<p>"They won't, he's light." So saying, they reached the ground floor, got in, and Ke Yan put the bag on the back seat.</p>
+<p>Jiang Qi and Ke Yan went to the bookshop first; with people still inside, they had to wait for them to leave before locking up, but hung the "Temporarily Closed" wooden sign on the door first.</p>
+<p>The staff, surprised to see the boss who'd vanished at noon suddenly turn up holding a baby, but with Ke Yan beside him, didn't dare come ask.</p>
+<p>Once everyone had gone, Jiang Qi handed Xiao Ke to Ke Yan, locked the door, said goodbye to the staff, and went with Ke Yan to the supermarket.</p>
+<p>Parked, they walked to the entrance — this hour, prime grocery time, the place was packed.</p>
+<p>Ke Yan took Xiao Ke in his arms. "Crowded — I'll carry him."</p>
+<p>"All right." Jiang Qi pushed the cart ahead of Ke Yan.</p>
+<p>"We'll get diapers first, then some groceries — should we buy him a toy? Sis seems not to have packed any." Jiang Qi said, pushing the cart.</p>
+<p>"Good — we'll look at the toy section later; no need for groceries, there's plenty in the fridge at home." Ke Yan held Xiao Ke a little stiffly, and the baby seemed uncomfortable, though he didn't cry at the bottom-pats, just looked around wide-eyed.</p>
+<p>At the baby aisle, Jiang Qi looked over the brands of diapers, with no idea which was good, and simply picked the priciest — one pack would do — and put it in the cart.</p>
+<p>Diapers bought, they carried Xiao Ke to the toy section, where the baby fixed on a plush dog and stared.</p>
+<p>Jiang Qi looked at Ke Yan. "How about this one?"</p>
+<p>"Good — Xiao Ke seems to like it."</p>
+<p>"I think so too." Jiang Qi picked up the plush dog. "Let's go."</p>
+<p>By the time the two left the supermarket the sky had darkened a little; they put the plush dog in the back, and Jiang Qi held Xiao Ke in the back seat too. Xiao Ke seemed very taken with the dog, staring at it, patting it, mumbling, "Dog. Doggy."</p>
+<p>"Ke Yan, Xiao Ke can talk." Jiang Qi marveled.</p>
+<p>"Xiao Ke's a year old; he can say a few words. Teach him to call you 'shushu' now and he'll be calling you uncle in no time."</p>
+<p>"Really?" Jiang Qi, half-convinced, still tried, leaning to Xiao Ke. "Shushu. Say shushu."</p>
+<p>But who knew whether Xiao Ke heard; he ignored Jiang Qi, patting the plush dog as before.</p>
+<p>Jiang Qi was a little put out, but kept saying at Xiao Ke's ear, "Shushu. Call me shushu."</p>
+<p>By the time they got home, Jiang Qi laid Xiao Ke and the plush dog on the bed first, turned on the TV, took off Xiao Ke's coat, and let the baby play.</p>
+<p>He'd meant to make congee, but remembering Ke Shao's note about using disposable diapers, he opened the pack, took one out, and pulled Xiao Ke's trousers down again to put the disposable on, setting the cloth one aside, then studied how to fasten it. Looking at the packaging, sure enough there were picture steps, and Jiang Qi followed them, slowly getting the disposable diaper on.</p>
+<p>It looked a little crooked, but Jiang Qi felt he'd done well enough — it really wasn't easy.</p>
+<p>Trousers back on Xiao Ke, Jiang Qi went to make congee; Ke Yan was already below — Xiao Ke would have congee, he and Jiang Qi noodles.</p>
+<p>Rice in the pot, he and Ke Yan ate the noodles first, and once the noodles were done Jiang Qi sent Ke Yan in to check on Xiao Ke.</p>
+<p>Going in, Ke Yan found Xiao Ke sitting on the plush dog watching TV.</p>
+<p>Ke Yan looked at the screen too — a wolf chasing some sheep.</p>
+<p>"Xiao Ke." Ke Yan sat beside the baby, and once he had his attention, said, "Shushu."</p>
+<p>"Ahh."</p>
+<p>"Shushu."</p>
+<p>"…" Xiao Ke stared at Ke Yan.</p>
+<p>The congee was done in no time; coming in, Jiang Qi found Ke Yan and Xiao Ke staring at each other, and asked, "What are you two doing?"</p>
+<p>"Nothing — come feed Xiao Ke."</p>
+<p>"All right."</p>
+<p>Jiang Qi fed Xiao Ke congee, his movements practiced now, none of the nervousness from the diaper.</p>
+<p>After eating — since they hadn't bathed the baby — Jiang Qi ran a basin of warm water, took a fresh towel, washed Xiao Ke's bottom, Ke Yan holding the baby while Jiang Qi washed.</p>
+<p>Once Xiao Ke was washed, and Jiang Qi and Ke Yan had taken turns showering, Jiang Qi again followed Ke Shao's note from that afternoon and mixed Xiao Ke a bottle of formula.</p>
+<p>Xiao Ke sat contentedly in Jiang Qi's arms drinking it.</p>
+<p>Jiang Qi kept teaching him to say "shushu."</p>
+<p>Xiao Ke drank and drank, and finally, full, his eyes drooped shut.</p>
+<p>Jiang Qi took the bottle from Xiao Ke's hands and set it on the table, laid the baby between him and Ke Yan, and slowly stroked Xiao Ke's belly.</p>
+<p>Xiao Ke gave a hiccup, then closed his eyes and slept.</p>
+<p>Jiang Qi breathed out. "Finally asleep."</p>
+<p>"Tired?" Ke Yan set his book down too.</p>
+<p>"Tired, but happy."</p>
+<p>"Get to sleep — we have to mind him another day tomorrow."</p>
+<p>"All right."</p>
+<p>Ke Yan turned off the light.</p>
+<p>In the dark, Jiang Qi blinked. "Ke Yan, it feels strange — feels a little cold."</p>
+<p>"I'm not used to it either, used to holding you to sleep."</p>
+<p>Jiang Qi held the Xiao Ke beside him. "Tonight I can only sleep holding Xiao Ke — though he's nice, soft. Only, Xiao Ke still hasn't called me shushu." And saying it, Jiang Qi fell asleep.</p>
+<p>Ke Yan sat up, and in the dark, accurately, kissed Jiang Qi, then lay down to sleep too.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-159.html" class="prev">Chapter 159</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-161.html" class="next">Chapter 161</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

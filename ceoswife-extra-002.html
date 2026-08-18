@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extra: Extra 2 &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Extra</h1>
+    <p class="chapter-title">Extra 2 <span class="zh">番外2</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">After the banquet, the Ke and Jiang families saw the guests home by car.</p>
+<p>Ke Yan and Jiang Qi rode the wedding car to the room that would be theirs tonight.</p>
+<p>Home was a good two hours away, so Ke Yan had arranged a hotel suite as their bridal room.</p>
+<p>Jiang Qi took in the decorated room, especially the great floor-to-ceiling window in the living room with a large 囍 ("double happiness") character pasted on it.</p>
+<p>The ceiling, walls, and even the carpet had been decorated in a festive, romantic style.</p>
+<p>"I'll shower first; rest a bit." Ke Yan pulled off his tie; he'd drunk a fair amount tonight and smelled of it.</p>
+<p>Jiang Qi nodded. "Go on." Ke Yan had fielded much of the toasting for him tonight, so Jiang Qi hadn't drunk much.</p>
+<p>While Ke Yan showered, Jiang Qi looked into the bedroom and was surprised to find the big bed brand new, made up with red sheets, the duvet cover and pillowcases a bright red, embroidered with gold-thread patterns.</p>
+<p>He touched the quilt, sat on the bed, and noticed at once the bed seemed identical to the one at home — surely not newly bought?</p>
+<p>Ke Yan showered fast and came out in a festive red bathrobe.</p>
+<p>Jiang Qi couldn't help laughing. "Even the bathrobe's red?"</p>
+<p>"Of course it has to be red — tonight's our wedding night." Ke Yan lowered his voice.</p>
+<p>To Jiang Qi it sounded both sexy and suggestive.</p>
+<p>He touched his warming ears and asked, "Is this bed newly bought?"</p>
+<p>"Mm — the hotel's bed isn't fit for us to sleep on tonight."</p>
+<p>Jiang Qi understood; even with fresh sheets, who knew how many had slept on that bed, expensive suite or no.</p>
+<p>"Go shower — I've run the water for you." Ke Yan came to him, bent to kiss his forehead, his hand not behaving, giving Jiang Qi's backside a squeeze.</p>
+<p>Usually it would be nothing, but unusually sensitive today, Jiang Qi flushed red and pushed Ke Yan off, fleeing to the bathroom.</p>
+<p>Ke Yan laughed low, looking forward to the sight of Jiang Qi stripped bare, pale and naked against the red sheets.</p>
+<p>Jiang Qi soaked in the tub, the warm water wrapping him comfortably, and breathed out.</p>
+<p>After, he dried off with the towel set ready.</p>
+<p>Then reached for the robe to put on — but its feel in his hands was wrong, too light; he looked — this, this was what he was meant to wear? He doubted it.</p>
+<p>The robe in his hands was silk, thin and sheer, hiding nothing.</p>
+<p>Holding the thin silk robe, he didn't need to think to know Ke Yan had set it out on purpose. Too embarrassed at first, he hesitated — then, after a moment, slowly put it on and tied the sash.</p>
+<p>He looked at himself in the full-length mirror and immediately flushed. The loose red silk was so thin that it hid almost nothing. His gaze dropped, and his legs pressed together instinctively; the hem barely reached his thighs and would ride up with the slightest movement.</p>
+<p>This robe was mortifying — as good as wearing nothing.</p>
+<p>Jiang Qi swallowed and opened the bathroom door, nervous.</p>
+<p>Ke Yan was pouring wine at the bar; hearing the door behind him, he turned — and froze, his gaze burning on Jiang Qi.</p>
+<p>Jiang Qi was devastating in the sheer red silk, his flushed face only sharpening the effect. Ke Yan felt his body respond at once.</p>
+<p>Jiang Qi felt his burning gaze and nearly shrank back into the bathroom.</p>
+<p>Ke Yan crossed quickly, took Jiang Qi's waist, and couldn't help kissing his mouth, murmuring, "You're too sexy."</p>
+<p>Kissed breathless, Jiang Qi pushed him off when he could barely breathe.</p>
+<p>Ke Yan led him to a bar stool and handed him the poured wine. "We've drunk a lot tonight, but this cup is the loving-cup, ours alone."</p>
+<p>Jiang Qi took it, hands crossed with Ke Yan's — and found Ke Yan watching him fixedly; he flushed, looked up, and downed it in one.</p>
+<p>Setting the glass down, he found Ke Yan's gaze hotter still; his cheeks burned.</p>
+<p>He felt the gaze move down, fixing on his chest; he knew well what Ke Yan was looking at, and turned away in embarrassment.</p>
+<p>But seeing Jiang Qi's back, Ke Yan held back even less — this robe truly suited his taste; he reached out, kneaded Jiang Qi's backside, and lifted him onto his own lap.</p>
+<p>Seated on Ke Yan's lap, Jiang Qi remembered the back was sheer too.</p>
+<p>Ke Yan bent to kiss him, a hand straying over his body.</p>
+<p>The kiss moved down; through the thin gauze Ke Yan sucked at the two points on his chest.</p>
+<p>Jiang Qi looped his arms around Ke Yan's neck, low moans escaping as Ke Yan's kisses and touches grew bolder.</p>
+<p>Only when the fabric over Jiang Qi's chest had slowly gone damp did Ke Yan lift him steadily and carry him to the bed.</p>
+<p>Carried, Jiang Qi caught his hazy breath, and when Ke Yan set him down, Ke Yan's next move undid him completely.</p>
+<p>Ke Yan buried his head at Jiang Qi's lower body, his tongue at the softest place behind; Jiang Qi went rigid. "K — Ke Yan, don't."</p>
+<p>It wasn't the first time, but Jiang Qi still found it mortifying. How could anyone use their mouth there?</p>
+<p>Thinking it, he shrank upward, but Ke Yan had anticipated the reaction and held him fast from the start, not letting him move.</p>
+<p>Instead he worked all the harder to please him.</p>
+<p>Jiang Qi's legs trembled a little; Ke Yan's mouth was more than he could bear, the tingling below sending waves of pleasure through him.</p>
+<p>He clutched at the sheets. "Ke Yan, stop, get up, not like this."</p>
+<p>At that, Ke Yan obligingly rose, and put lubricant on his hand to prepare Jiang Qi.</p>
+<p>The red robe hung disordered now, slipped from his shoulders with the movement; Ke Yan laid a kiss on Jiang Qi's shoulder, biting lightly.</p>
+<p>After a while Jiang Qi hunched his shoulders and said softly, "It's all right now."</p>
+<p>Ke Yan understood, withdrew his hand, and slowly pressed his heat in.</p>
+<p>At first only small movements.</p>
+<p>Once Jiang Qi adjusted, Ke Yan began to move, and Jiang Qi swayed with him, arms around Ke Yan's neck, feeling the pleasure.</p>
+<p>Ke Yan lifted Jiang Qi to sit on his lap and went on.</p>
+<p>Jiang Qi found it too deep, shifted his hips, leaned at Ke Yan's neck. "K—, mm, Ke Yan, too deep, mm."</p>
+<p>"Is it?" Ke Yan said it but didn't ease, the movements only growing larger.</p>
+<p>Jiang Qi moaned low, gripping Ke Yan's back, raking a few red lines into it.</p>
+<p>Ke Yan bent to kiss the two points on his chest, sucking hard, the sensation making Jiang Qi hook his legs around Ke Yan's waist.</p>
+<p>Ke Yan's movements quickened until they finished together. He took Jiang Qi several more times before Jiang Qi finally lay spent in his arms, their discarded robes tangled together.</p>
+<p>Ke Yan stroked his back. "Tired?"</p>
+<p>"What do you think?" Jiang Qi didn't want to move a finger.</p>
+<p>"I'll carry you to wash, then sleep." Seeing Jiang Qi drowsy, Ke Yan lifted him and bathed him in the bathroom.</p>
+<p>When Jiang Qi, clean, lay on the changed sheets, his eyes were already too heavy to keep open, but he didn't forget to give Ke Yan's face a reward-kiss.</p>
+<p>Ke Yan lay down too, gathered Jiang Qi in, kissed his forehead, and said softly, "Goodnight, Jiang Qi — do you know, being with you is the happiest thing in my life? I want to tell you, I love you."</p>
+<p>"I love you too — do you know, when we first started dating I couldn't even imagine we'd be this happy, that we'd even marry. Thank you, Ke Yan, for spoiling me all these years, for making me this happy. Ke Yan, I love you." That said, Jiang Qi drowsily nuzzled him and fell asleep.</p>
+<p>Ke Yan smiled, leaned close to Jiang Qi's ear, and murmured, "Spoiling you is what I most love to do; loving you is the happiest thing I know." He kissed Jiang Qi, turned off the light, held him, and slowly fell asleep too.</p>
+<p>To have found each other—and to love each other for a lifetime—was their greatest good fortune.</p>
+<p>Wishing you both joy in your marriage.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-extra-001.html" class="prev">Extra</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-extra-003.html" class="next">Extra</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

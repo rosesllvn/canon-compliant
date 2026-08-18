@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 166: Happy New Year &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 166</h1>
+    <p class="chapter-title">Happy New Year <span class="zh">新年快乐</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~8 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">On the morning of New Year's Eve, Jiang Qi had been curled up asleep, but Mother Jiang woke him early.</p>
+<p>"Up you get — go to the market with your brother for seafood. Lots to do today; come back and help after." Knowing Jiang Qi felt the cold, she didn't pull the quilt off, just patted him through it.</p>
+<p>The quilt was thick; Jiang Qi felt nothing, but opened his eyes at her voice and yawned.</p>
+<p>"I know — I'm getting up." He sat up groggily and pulled on a sweater.</p>
+<p>Satisfied he was up, Mother Jiang went to make breakfast.</p>
+<p>Jiang Qi sat a while longer waking, then shuffled out of bed to wash.</p>
+<p>Leaving his room, he met Jiang Bu coming out across the hall with a yawn of his own. Apparently neither brother had slept enough.</p>
+<p>After breakfast the two brothers set out, driving to the seafood market.</p>
+<p>The household's other groceries had already been bought, but seafood had to be purchased the same day.</p>
+<p>The market today was several times more crowded than usual; Jiang Qi and Jiang Bu shouldered through to the stalls.</p>
+<p>The Jiang family all loved seafood, so they bought many kinds, in good quantity.</p>
+<p>Come New Year, seafood prices doubled; even common kinds ran seventy or eighty a catty, never mind abalone and sea cucumber.</p>
+<p>Packed shoulder to shoulder, they finally finished and got home, where Jiang Qi and Jiang Bu helped Mother Jiang and the eldest sister-in-law clean the seafood.</p>
+<p>Then Father Jiang brought out the New Year couplets, and Jiang Qi helped him paste them up — standing on a small stool by the door while Father Jiang checked they were straight.</p>
+<p>The neighbor across the way came out to paste couplets too, greeted Father Jiang, and fell to chatting; the woman of the house asked, "Does Jiang Qi have a girlfriend? Shall I set him up?"</p>
+<p>Jiang Qi was about to answer, but Father Jiang answered first. "No need — Xiao Qi has someone. But thank you for your concern."</p>
+<p>"Has someone — good, good," she said.</p>
+<p>Father Jiang smiled.</p>
+<p>Couplets up, he said goodbye to the neighbor and went in with Jiang Qi to help Mother Jiang.</p>
+<p>While the Jiang family bustled, Ke Yan had nothing to do. Most of the servants were off, but two or three who lived nearby stayed to help during the day, and Auntie Li's family lived at the Ke house and joined them every year to prepare the New Year's Eve dinner.</p>
+<p>So Ke Yan wasn't needed; he was thoroughly at leisure, brewing a cup of tea and reading on the balcony, the picture of ease.</p>
+<p>Yang Shaoyu and Lin Zirui went to the Yang house, of course — partly as agreed, partly because the Lin family hadn't asked Zirui home for the New Year. Setting aside what the Lin parents thought, the eldest and second brothers called to tell Zirui to spend a good New Year at the Yang house, and to tell Yang Shaoyu to take good care of him.</p>
+<p>They said little to Zirui, but the eldest brother had privately called Yang Shaoyu to explain. "I don't know how they came around so suddenly — these two days they've wanted Zirui home for the New Year, but Lin Le threw a tantrum against it. This time, though, the two old folks didn't indulge her; they've realized her temper's too wild, too immature, and are at a loss how to set her right." A note of helplessness in his voice.</p>
+<p>Yang Shaoyu had no interest in Lin Le's temper, but knowing the Lin parents' shift set his mind a little at ease — at least they thought of Zirui now; Lin Le he wasn't worried about.</p>
+<p>Though he'd told Zirui not to grieve—that the Yang parents would cherish him—Yang Shaoyu still hoped Zirui's own parents would learn to love him. Now it seemed they might.</p>
+<p>Lin Zirui went with Yang Shaoyu to the Yang house. Mother Yang, a fine cook who seldom troubled to cook these days, always cooked herself on this day; the eldest sister-in-law, less skilled, helped alongside the staff.</p>
+<p>Being family, Yang Shaoyu brought nothing — but Lin Zirui bought a toy for the eldest brother's son, and gifts for Father and Mother Yang.</p>
+<p>The two arrived only on the Eve; they could have come the day before, but had lounged at home all that day and only set out early this morning.</p>
+<p>Yang Shaoyu had told Mother Yang in advance which dishes Lin Zirui liked, so today she made two extra of his favorites; seeing how thin the boy was, she stewed an extra fish soup — last time Shaoyu brought Zirui home she'd seen he liked it, and kept it in mind; so the day before, when Father Yang went fishing, she had him bring back two extra fish.</p>
+<p>Lin Zirui wasn't skilled in the kitchen, and Mother Yang wouldn't let him busy himself there anyway, so he sat on the sofa chatting with the eldest brother and Yang Shaowen; Father Yang sat with them too, all smiles, and Lin Zirui liked his cheerful, kindly look.</p>
+<p>Father Yang told a funny fishing story; Lin Zirui laughed along, then sipped the tea the eldest sister-in-law had made and let out an easy breath. This felt wonderful.</p>
+<p>This day, though every household bustled for the New Year, being with family made it especially happy; by evening the day's work was done, and night meant the whole family sitting down to a good New Year's Eve dinner.</p>
+<p>At the Jiang table, Jiang Qi had prepared red packets for Jiang Bu's son and Jiang Lü.</p>
+<p>Though over twenty, Jiang Lü thick-skinnedly took hers.</p>
+<p>And at the Yang house dinner was about to begin too. It wasn't Lin Zirui's first New Year apart from his birth family — but the first with family this warm.</p>
+<p>Lin Zirui was very happy just then.</p>
+<p>But at that moment, at the Lin house, Lin Le had angrily shut herself in her room. The reason: a couple of days ago Father and Mother Lin had begun saying they wanted Lin Zirui home for the New Year, and the moment Lin Le heard it she objected, expecting her parents to agree to whatever she said as before — but this time they ignored her and meant to bring Lin Zirui home.</p>
+<p>So Lin Le threw a fit, because they hadn't listened.</p>
+<p>But seeing her so unreasonable, Father and Mother Lin grew angry instead, and scolded her. "How are you this old and still so childish? Zirui's your brother — how can you forbid your brother to come home?"</p>
+<p>Lin Le felt wronged. "You never cared about him before."</p>
+<p>The Lin parents paused. It was true, but hearing it from Lin Le made their past neglect of Zirui feel even more shameful.</p>
+<p>"No more talk — we're bringing Zirui home for the New Year this year." Father Lin said.</p>
+<p>"If you go fetch Lin Zirui home, I'll go on a hunger strike," Lin Le said.</p>
+<p>Mother Lin's heart softened at once — but seeing how willful Lin Le was being, she got angry instead. "Then strike — let's see how long you can last."</p>
+<p>Lin Le ran to her room, slamming the door — bang — and locking it.</p>
+<p>Mother Lin sighed. "Seems we've spoiled that child too much."</p>
+<p>Father Lin sighed too — strange, how a family could end up this estranged; thinking it over, that was their failing as parents.</p>
+<p>For all Mother Lin's hard words about waiting out the hunger strike, when mealtime came she couldn't help having a servant carry food to Lin Le's door.</p>
+<p>Lin Le, pampered from childhood, couldn't bear hunger — one missed meal was bearable, but after two she couldn't stand it, and once the servant brought food up she snuck it into her room and ate it, though she still wouldn't come out.</p>
+<p>Relieved to see Lin Le eating, Mother Lin steeled herself to leave her be, hoping to grind down her bad temper; even on New Year's Eve, with the reunion dinner, she didn't go coax Lin Le out.</p>
+<p>Lin Le was furious.</p>
+<p>After the Eve dinner, with the New Year's gala about to begin, the Jiang family had readied fruit and snacks to watch TV together.</p>
+<p>Before it started, Jiang Qi called Ke Yan; soon his phone rang back, and the moment he answered he said, "Happy New Year, Ke Yan."</p>
+<p>On the other end Ke Yan gave a soft laugh and said gently, "Happy New Year, Jiang Qi."</p>
+<p>Hearing Ke Yan's voice, Jiang Qi couldn't help a foolish smile — and then caught Jiang Lü's gossipy gaze.</p>
+<p>"What are you doing right now?" Jiang Qi turned and stepped out onto the balcony.</p>
+<p>"Watching TV." At Ke Yan's, his parents were watching TV on the sofa.</p>
+<p>On the balcony, Jiang Qi pulled his coat tighter against the cold, looked at the sky, and said suddenly, "Ke Yan — all these years with you, every year I've been happy. Let every year ahead be this happy too, until we're old."</p>
+<p>"Jiang Qi — one year, ten, twenty, fifty, a hundred — we'll be happy, for certain. I love you."</p>
+<p>"I love you too." Jiang Qi said it softly, smiling sweetly.</p>
+<p>He believed it — he and Ke Yan would go on happy, always.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-165.html" class="prev">Chapter 165</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-167.html" class="next">Chapter 167</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>
