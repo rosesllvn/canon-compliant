@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 68: Going Home &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 68</h1>
+    <p class="chapter-title">Going Home <span class="zh">回家</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">At the airport, Jiang Qi gathered his luggage, planning to go home for a visit with Jiang Lü. He got his things together and said to Ke Yan, "I'll head off first; I promise to be home early."</p>
+<p>Ke Yan glanced at him. "It's fine, spend more time with your parents; I'll go home for a bit too."</p>
+<p>"Mm, okay." Jiang Qi nodded.</p>
+<p>The two walked along behind the others; Jiang Qi glanced at the suitcase in Ke Yan's hand — if he remembered right, it held only his and Ke Yan's clothes.</p>
+<p>"Ke Yan." Jiang Qi called to him, then split his local specialties in half and gave them to Ke Yan. "You can't go home from a trip without bringing back any specialties."</p>
+<p>Ke Yan raised an eyebrow. "I never have."</p>
+<p>"Liar — you bring me food back from every business trip..." Saying this, Jiang Qi seemed to realize something. "Don't tell me you've only ever brought them back for me."</p>
+<p>"Mm."</p>
+<p>Jiang Qi stared, then broke into an irrepressible grin. Ke Yan glanced at his foolish smile and pinched his cheek. "Does that make you so happy?"</p>
+<p>"Mm." Jiang Qi nodded.</p>
+<p>Seeing Jiang Qi's earnest face, Ke Yan nearly couldn't resist pinching his cheek again; if Jiang Lü hadn't shown up just then, Jiang Qi might well have gone home to his parents with a red face.</p>
+<p>After saying goodbye to Ke Yan, Jiang Qi got in a cab with Jiang Lü and headed home.</p>
+<p>Ke Yan looked at the specialties in his hand and shook his head with a smile; going home with these would probably give his mom a fright.</p>
+<p>Remembering Jiang Qi's earnest face just now, Ke Yan's own face couldn't help softening.</p>
+<p>In the car, Jiang Lü looked at Jiang Qi. "Brother, where are your clothes?" When she'd put the luggage in the trunk just now she'd looked carefully — only specialties, no clothes at all.</p>
+<p>Jiang Qi was startled; he'd left his clothes with Ke Yan. Seeing Jiang Lü staring at him, he told a lie. "I had the colleague next door take my clothes back first."</p>
+<p>"Oh." Jiang Lü was a little let down — not a whiff of anything "going on," it seemed.</p>
+<p>The cab dropped Jiang Qi and Jiang Lü at the entrance to their family's complex, where they happened to meet Mom on her way home. As Jiang Qi unloaded their purchases, she scolded them for wasting money—while beaming too broadly to hide her delight—and reached to help him carry everything upstairs.</p>
+<p>Jiang Qi found the things in his hands quite heavy and wouldn't let her. "Mom, I'll carry them."</p>
+<p>"All right, you carry them then." Mom didn't insist, because she knew Jiang Qi was stubborn about certain things.</p>
+<p>As the three walked toward the building, Mom said, "If I'd known, I'd have had the driver bring the car around. Aren't you two hot?"</p>
+<p>"It's fine, Mom; a walk to work up a sweat counts as slimming," said Jiang Lü, in her hat.</p>
+<p>"As thin as you are, what's there to slim? You slim down — your second brother doesn't need to; your second brother's too thin as it is. I'm afraid his future wife will find him too thin to be dependable."</p>
+<p>Jiang Qi sighed inwardly as Mom circled back to finding him a wife. Then he spotted several aunties from her dance group beneath their sun umbrellas, leafing through a stack of photographs. "Mm, I think this family's daughter is the better one."</p>
+<p>The moment Jiang Qi heard this he had a very bad feeling, and sure enough, the instant Mom heard it she rushed over. "What good things have you got there? Let me see too."</p>
+<p>The aunties grew happier still at the sight of Mom. "It's Xiao Jiang — we were just about to come find you. Look, the girls in these photos have wonderful prospects."</p>
+<p>"Is that so? And my son's come home to see me today, as it happens." Mom said, and the aunties' eyes turned to Jiang Qi.</p>
+<p>Jiang Qi greeted them with a stiff smile.</p>
+<p>"Xiao Jiang, your son's so handsome; girls these days love this type — refined, not coarse."</p>
+<p>"Is that so? I'm afraid girls will find him lacking in manliness, being so thin."</p>
+<p>Lacking in manliness? That's a bit much, Jiang Qi thought, looking at his own frame — he was plainly quite sturdy.</p>
+<p>"Don't worry, girls love this type."</p>
+<p>After a few more pleasantries, Jiang Lü really couldn't take it — it was too hot — and said, "Mom, let's go up and chat; we can have the specialties we brought back, too."</p>
+<p>At Jiang Lü's reminder, Mom invited the entire group up to the apartment.</p>
+<p>Jiang Qi trailed behind, itching to slip away.</p>
+<p>Meanwhile, Ke Yan had arrived home. The housekeeper opened the door and greeted him with pleasant surprise. He handed her a share of the specialties, then walked into the living room.</p>
+<p>The housekeeper stared at the gift, astonished that the young master had actually brought home local specialties.</p>
+<p>Lan Ruyin was sitting on the sofa chatting with Ke Shao; seeing Ke Yan back, she stood up happily. "How was it? Did you have a good time?"</p>
+<p>"Mm." Ke Yan set the specialties on the living-room table. Lan Ruyin leaned in for a look. "This..." Surely not specialties.</p>
+<p>"Xiao Yan, how is it you bought specialties back this time — how rare."</p>
+<p>Ke Shao took the specialties from the bag, wonder on her face.</p>
+<p>Lan Ruyin looked at her son too — this really was a rare thing.</p>
+<p>Ke Yan sat on the sofa and glanced up at them. "These are gifts from Jiang Qi to you."</p>
+<p>Lan Ruyin's hand, reaching for the specialties, paused; she gave Ke Yan a complicated look and withdrew her hand.</p>
+<p>Ke Shao, however, looked entirely indifferent.</p>
+<p>"Son, do you really think this Jiang Qi is good?"</p>
+<p>Ke Yan smiled, his whole face tender. "He's wonderful."</p>
+<p>Lan Ruyin was startled — it had been a long while since she'd seen Ke Yan smile...</p>
+<p>Meanwhile, the Jiang family's living room was packed. His sister-in-law, Yun Hui, poured juice and cut fruit for Mom and her friends.</p>
+<p>Jiang Lü slipped back to her room to sort her luggage; Jiang Qi had wanted to go to his room too, but Mom kept him, forcing him to look at photos with her.</p>
+<p>"Look, this girl's got fine features; do you think she's pretty?" Mom held a photo out to Jiang Qi.</p>
+<p>Jiang Qi had troubles he couldn't speak of, wanting only to settle the matter quickly, and said, "Honestly I'm really not in a hurry; besides, I'd rather wait until my career's a bit better before..."</p>
+<p>One of Mom's friends cut Jiang Qi off. "Jiang Qi, where do you work now?"</p>
+<p>"At Ke Group," Jiang Qi answered.</p>
+<p>"That's not bad — my son's at Ke Group too; he'll be promoted before long, to department team leader. Team leader isn't all that high a promotion, but at Ke Group it's different — the place is full of talent; who there isn't a formidable character? Getting promoted there isn't easy. Right, Jiang Qi, you're still a junior staffer at Ke Group, aren't you — what do you do there?"</p>
+<p>Mom was made a little uncomfortable by her tone.</p>
+<p>Jiang Qi said, "Huh? I'm just a department manager..."</p>
+<p>Mom beamed at the woman who'd just spoken — you should know a manager is a good deal higher than a team leader.</p>
+<p>After this little episode no one was much in the mood to pick photos anymore, which suited Jiang Qi just fine.</p>
+<p>Once everyone had dispersed and dinner was done, Jiang Qi quickly slipped away. Seeing how fast he slipped off, Mom thought to herself she'd have to arrange a blind date for Jiang Qi sometime.</p>
+<p>Outside, Jiang Qi called Ke Yan. "Are you coming home tonight? I'm home now... Never mind, you should spend more time with Auntie. I won't come home after all." He wanted to see Ke Yan, but Ke Yan deserved time with his family too.</p>
+<p>Hearing Jiang Qi say this, Ke Yan guessed he'd already left home, and said, "Yes, I'm almost home."</p>
+<p>Ke Yan said this just as the Ke family, having finished dinner, were eating fruit in the living room.</p>
+<p>Ke Yan's father had a golf appointment today and wasn't in; Lan Ruyin, hearing this, was first puzzled who'd called to make her son lie — then realized it must be Jiang Qi.</p>
+<p>Ke Shao, meanwhile, looked at Ke Yan with a knowing, suggestive expression. Ke Yan hung up and said, "I'm heading back; I'll come again another time."</p>
+<p>"Mm." Lan Ruyin didn't stop him, but in fact agreed quite readily.</p>
+<p>Once Ke Yan had gone, Ke Shao gave Lan Ruyin a probing look — why so readily?</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-067.html" class="prev">Chapter 67</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-069.html" class="next">Chapter 69</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

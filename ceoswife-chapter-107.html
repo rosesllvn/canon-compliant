@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 107: Did It Happen? &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 107</h1>
+    <p class="chapter-title">Did It Happen? <span class="zh">成了？</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">On the drive home, Yang Shaoyu wondered if he were dreaming. Once it sank in, he couldn't keep down the wild, leaping joy of it.</p>
+<p>Could it be that tonight, he and Zirui really might… He glanced at Lin Zirui sitting quietly in the passenger seat, and his pulse jumped higher still.</p>
+<p>Inwardly thrilled as he was, Yang Shaoyu kept the car steady. Lin Zirui, for his part, felt a flutter of nerves — ever since he'd said he'd come to Yang Shaoyu's place, Yang Shaoyu hadn't seemed especially pleased. Did he not want him there?</p>
+<p>Lin Zirui drew a breath and pressed a hand over his heart. So nervous. He hadn't been this nervous in a long time.</p>
+<p>Soon the car stopped, down in the underground garage. They got out, Yang Shaoyu pressed the elevator button, and as they stepped in he could see the nerves on Lin Zirui beside him.</p>
+<p>He took Lin Zirui's hand and said softly, "Don't be nervous. If you're frightened, I won't push you into anything."</p>
+<p>Lin Zirui's whole face went red. He stole a glance at Yang Shaoyu, only to find Yang Shaoyu watching him, and went redder — but the tenderness in Yang Shaoyu's eyes eased something in him.</p>
+<p>The elevator arrived. Yang Shaoyu opened his door and led Lin Zirui in by the hand.</p>
+<p>Lin Zirui took in Yang Shaoyu's home — beautifully done, clearly the place of a man who knew how to enjoy life.</p>
+<p>"Sit." Yang Shaoyu drew him down onto the sofa. "What would you like to drink?"</p>
+<p>"Orange juice." Lin Zirui had a sudden craving for it.</p>
+<p>"Wait here, then — I'll run down and get some." Yang Shaoyu had none in the house.</p>
+<p>"Don't bother, it's fine if you don't have any."</p>
+<p>"I'll be right back." He poured Lin Zirui a glass of water first, in case he was thirsty, then hurried out for the juice.</p>
+<p>With Yang Shaoyu gone, Lin Zirui drank some water and wandered the living room. Beyond the floor-to-ceiling windows, city lights spread below. Then he noticed the open master-bedroom door. He switched on the light, and the enormous bed immediately caught his eye. <em>It must be very soft.</em></p>
+<p>At the thought, he didn't need a mirror to know he'd flushed; his face was hot.</p>
+<p>Ordinarily, Yang Shaoyu could not be bothered to make a special trip for anyone. Lin Zirui was different: the person he meant to cherish and could not bear to see slighted. Whatever Lin Zirui wanted—even orange juice—Yang Shaoyu would get for him.</p>
+<p>He didn't go to a supermarket — he drove to a coffee shop not far off and bought freshly pressed juice.</p>
+<p>While the staff pressed it, Yang Shaoyu sat waiting, and suddenly heard a woman's voice that sounded uncannily like Mo Lü's. He started — could those two women have come?</p>
+<p>He looked toward the source and let out a breath. Not Mo Lü and Ma Tong after all.</p>
+<p>The last thing Yang Shaoyu wanted tonight was for him and Lin Zirui to be interrupted.</p>
+<p>Even though he hadn't actually seen the pair yet — but what if they turned up later? At that thought he pulled out his phone and called Jiang Qi. "Hello — Jiang Qi, where are Mo Lü and Ma Tong right now?"</p>
+<p>"Oh, here with me — but they're just about to set off for your place."</p>
+<p>"Jiang Qi, you absolutely cannot let them come over."</p>
+<p>"Why not?"</p>
+<p>The juice was ready just then; Yang Shaoyu paid. "I'll explain tomorrow. Just — whatever you do, don't let them come. Brother, my happiness for the rest of my life is in your hands."</p>
+<p>"Ah? Oh, all right, I'll keep them here." Jiang Qi had no idea what Yang Shaoyu's lifelong happiness had to do with any of this, but he agreed to stop the two of them.</p>
+<p>Yang Shaoyu thanked him and hurried home with the juice.</p>
+<p>When he got back, Lin Zirui was watching television. He handed over the juice, and Lin Zirui took the fresh-pressed orange juice with a smile. "I'm rather fond of juice."</p>
+<p>"I'll go buy a juicer tomorrow." Yang Shaoyu filed the preference away at once.</p>
+<p>Lin Zirui laughed and took a sip — sweet and tart, and very good indeed.</p>
+<p>Yang Shaoyu sat down beside him, draped an arm around his shoulders, and gently guided his head to rest against his chest.</p>
+<p>They sat quietly. Meeting no resistance, Yang Shaoyu shifted closer and kissed him softly. Lin Zirui's eyes widened, then closed. Yang Shaoyu's tongue brushed his lips before slipping between them to twine with his.</p>
+<p>The searing kiss left Lin Zirui dazed. The television and room faded until nothing remained but Yang Shaoyu's mouth. His body softened, strength draining from him as he clutched Yang Shaoyu's shirt.</p>
+<p>Once started, Yang Shaoyu couldn't bear to stop, and only released Lin Zirui's lips, reluctantly, when they were both short of breath.</p>
+<p>Lin Zirui leaned against his shoulder, panting, and gave him a push. "You shower first — I'll go after."</p>
+<p>"All right." Yang Shaoyu's voice had gone a little hoarse.</p>
+<p>Watching Yang Shaoyu go off to shower, Lin Zirui grabbed a cushion off the sofa and buried his face in it. So embarrassing.</p>
+<p>Yang Shaoyu washed quickly and came out in a bathrobe.</p>
+<p>He handed Lin Zirui a change of clothes, and Lin Zirui took them without daring even to look at him and went into the bathroom.</p>
+<p>Inside, he didn't shower right away. He looked at the new underwear Yang Shaoyu had given him — Yang Shaoyu's size, surely, because it was far too big.</p>
+<p>Sheepishly, he set aside the new underwear that wasn't his size.</p>
+<p>Then he showered.</p>
+<p>Yang Shaoyu sat waiting on the sofa, and every second felt impossibly long, an exquisite torment.</p>
+<p>At last the bathroom door opened. Yang Shaoyu looked over to find Lin Zirui in the doorway, the new bathrobe hanging loosely enough to bare the pale skin of his throat.</p>
+<p>Yang Shaoyu crossed the room and swept him up. Lin Zirui stiffened with nerves. Yang Shaoyu murmured, "Want a drink first? Some wine?"</p>
+<p>"No — let's go to the bedroom." Lin Zirui shook his head.</p>
+<p>Yang Shaoyu gave a soft laugh and carried him in.</p>
+<p>He laid Lin Zirui on the bed and kissed his mouth, gentle, while slowly working the robe open. "Don't be afraid. I'll be gentle."</p>
+<p>"Mm." Lin Zirui felt the heat of Yang Shaoyu's body envelop him, his breath against his skin, scalding.</p>
+<p>Yang Shaoyu kissed slowly down his throat, now and then biting lightly, both hands roaming over his body.</p>
+<p>Lin Zirui trembled faintly; a sensation he'd never known left him at a loss for how to respond.</p>
+<p>As the robe came off, his heart beat faster and faster, and Yang Shaoyu kissed his lips as if to soothe him.</p>
+<p>He drew Lin Zirui's hand slowly downward, and Lin Zirui felt his fingers meet something hot and thick. Being a man himself, how could he not know what it was?</p>
+<p>Before he could react, Yang Shaoyu guided his hand into motion, and at once Lin Zirui heard his breathing turn heavy and ragged.</p>
+<p>So big after all, came the un-innocent thought in Lin Zirui's head.</p>
+<p>And his face so hot — hotter than it had ever been…</p>
+<p>"Ring—" The sudden sound of a phone.</p>
+<p>Lin Zirui jumped, then realized it was his own ringing.</p>
+<p>He pushed at Yang Shaoyu, who was still kissing him without pause. "It's my phone."</p>
+<p>"Ignore it." Yang Shaoyu only quickened the motion of Lin Zirui's hand and went on stroking his body.</p>
+<p>"No — I can't, it might be the hospital."</p>
+<p>At that, Yang Shaoyu went, breathing hard, to fetch the phone from the bathroom. If he'd only thought to shut the bedroom door, they'd never have heard it ring.</p>
+<p>Carrying the want of his body, he brought the phone in. Lin Zirui answered; with the lights off, Yang Shaoyu couldn't make out his expression.</p>
+<p>Lin Zirui hung up quickly. "Shaoyu, I'm sorry…"</p>
+<p>"The hospital?"</p>
+<p>"Mm."</p>
+<p>"Come on, I'll drive you." With a silent sigh, Yang Shaoyu, defeated, flicked on the light.</p>
+<p>The light exposed everything. One glimpse of Yang Shaoyu's naked, aroused body made Lin Zirui clap a hand over his eyes.</p>
+<p>And Yang Shaoyu, catching sight of Lin Zirui's pale, tender skin, stared transfixed — then hastily pulled the quilt over him; any longer looking and he truly wouldn't be able to hold back.</p>
+<p>The two dressed, and Lin Zirui glanced apologetically at the part of Yang Shaoyu that hadn't yet subsided.</p>
+<p>Yang Shaoyu gave him a hard kiss. "Next time I really won't let you off."</p>
+<p>Lin Zirui nodded, flushed.</p>
+<p>Inwardly, Yang Shaoyu heaved a heavy sigh. He was going to die of frustration.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-106.html" class="prev">Chapter 106</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-108.html" class="next">Chapter 108</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 145: The First Employee &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 145</h1>
+    <p class="chapter-title">The First Employee <span class="zh">第一个员工</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~6 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">The company was abuzz with one topic above all: the CEO and Manager Jiang had been caught kissing in the elevator.</p>
+<p>At first, only the witnesses knew. Then someone posted the story to the junior-and-mid-level staff group chat—the one that naturally excluded both men and had sprung up when employees first discovered their "affair." Few believed it at first, but as the gossip spread, the doubters began to waver.</p>
+<p>This morning, Ke Yan and Jiang Qi had set out late from home — but luckily the flat wasn't far from the company, so they didn't arrive too late.</p>
+<p>Getting out of the car, Jiang Qi held his waist. So sore.</p>
+<p>"All right?" Ke Yan steadied his waist.</p>
+<p>"Fine — don't go hugging me at the company." Jiang Qi refused too much closeness there.</p>
+<p>"You're about to leave, and you still won't let me hold you at the company? Fine if you wouldn't before, but everyone knows now; I won't be like before." Ke Yan made his stance clear.</p>
+<p>"I haven't even settled accounts with you over yesterday." Jiang Qi thought of the elevator humiliation.</p>
+<p>Though in that elevator only Jiang Qi had been mortified; Ke Yan was thick-skinned, and the others had simply enjoyed the show.</p>
+<p>At that Ke Yan still supported his waist, and Jiang Qi, protesting aloud, didn't actually refuse.</p>
+<p>They got in the elevator, while down in the lot the guard posted the photo he'd just taken to the group chat.</p>
+<p>It being work hours, few saw it then — but at lunch break, those who'd doubted before all came around at the sight of the image.</p>
+<p>These two, this affectionate at the company! What were the singles meant to do?</p>
+<p>Two people, though, were sore and unhappy — why could neither of them ever see it with their own eyes, when they were closer to Jiang Qi than most? Why did they always learn everything only from the group chat?</p>
+<p>At the hospital, Lin Zirui had worked the night shift, changed dressings for some patients through the morning, and come back to his office to grab his things before heading home.</p>
+<p>Unexpectedly, he found Lin's eldest and second brothers in his office, with several boxes of luggage.</p>
+<p>He didn't need telling what it meant.</p>
+<p>"Xiao Rui." The eldest brother stood at the sight of him.</p>
+<p>"Eldest Brother."</p>
+<p>"…Thank you for still calling me that." The eldest brother felt the tangle of it, more guilty than ever.</p>
+<p>"Zirui, we're sorry — your second brother and I were truly wrong. We thought we'd been good to you all these years, but…" The second brother stood too, not daring to meet his eyes.</p>
+<p>"You were good to me these years. I don't blame you." Lin Zirui didn't blame his two brothers; it was his parents who'd left his heart cold.</p>
+<p>"Xiao Rui — be happy with Yang Shaoyu." The eldest brother gave his sincere blessing.</p>
+<p>"Yes, Xiao Rui — Yang Shaoyu treats you well?" "Very well." Lin Zirui nodded.</p>
+<p>"Good." The second brother was relieved — but there was the other matter. "Xiao Rui, Mom and Dad, they…"</p>
+<p>"They had you pack my things and bring them out to me?" Lin Zirui had guessed from the boxes.</p>
+<p>"Yes, we…"</p>
+<p>He looked at the boxes — packed carefully, even labeled with what was inside.</p>
+<p>"Thank you. Come have a meal at Shaoyu's and my place sometime." Lin Zirui's heart was soft, and the two brothers had truly looked after him more than his parents had.</p>
+<p>"Really? Yes—of course." They were delighted that Zirui would still share a meal with them.</p>
+<p>"I'm off shift — I'll head back. I'll call you sometime." A night shift had left him exhausted; he wanted to go sleep.</p>
+<p>"Let us drive you — and there are all these boxes to carry."</p>
+<p>"It's fine, I drove."</p>
+<p>"Then — let us load the boxes into your car at least."</p>
+<p>"All right." Lin Zirui took off his white coat.</p>
+<p>He and his brothers loaded the boxes into his car. After saying goodbye, Lin Zirui drove home and went straight upstairs to sleep; the boxes could wait until Shaoyu returned.</p>
+<p>At the company, near work time, Jiang Qi's phone rang — an unknown number. He answered. "Hello?"</p>
+<p>"Hello — are you the owner of the bookshop across from Ke Group?" A young woman's voice.</p>
+<p>"Yes." Jiang Qi thought of the notice he'd posted. An applicant?</p>
+<p>"It's like this — I've come to apply. I'd like the job."</p>
+<p>"Are you at the shop door now?" Jiang Qi was thrilled — the first applicant.</p>
+<p>"Yes."</p>
+<p>"Wait there — I'll be right over." He hung up and ran out, calling Ke Yan from the elevator. "Ke Yan, someone's come to apply — I'm heading over."</p>
+<p>"All right. Want me to come with you?"</p>
+<p>"No, keep working." Jiang Qi was the idlest person in the whole company now; if not for the agreed resignation next week, he could have left early already.</p>
+<p>From the company entrance he could see, across the way, a girl with a ponytail standing at the shop door.</p>
+<p>When the light turned green he hurried over.</p>
+<p>"Hello." He came up to her.</p>
+<p>"Hello, I'm here about the job." The girl wore glasses, dressed simply.</p>
+<p>"Good, come in." Jiang Qi opened the door.</p>
+<p>She stepped inside, looked over the shop, then noticed the chibi figures painted on the wall.</p>
+<p>"One of these is you — and who's the other?"</p>
+<p>"You can tell it's me?"</p>
+<p>"Yes — it's drawn very true to you."</p>
+<p>"He's my friend." Jiang Qi didn't say much to a stranger.</p>
+<p>"Is that so?" Plainly not — the two figures were so intimate, every bit a couple.</p>
+<p>"Have a seat." Jiang Qi sat across from her.</p>
+<p>"What's your name?" he asked.</p>
+<p>"Wang Xiaoyu."</p>
+<p>"I'm Jiang Qi. Have you worked before?"</p>
+<p>"No. After graduating I stayed home; my family couldn't stand how lazy I was and made me go find work."</p>
+<p>"I see." So he was her first employer.</p>
+<p>"There's a one-month trial. If you do well, you'll become permanent. You've seen the pay rates; you'll have one day off a week, and the shop closes fairly early in the evening."</p>
+<p>"All right — when do I start?" Wang Xiaoyu had no objections.</p>
+<p>"Next Monday. If that's all right, then we're set for today. Oh — your phone number?" Jiang Qi still had to get back.</p>
+<p>"13xxxxxxxxx."</p>
+<p>"Good — come Monday, then."</p>
+<p>They stepped out, Jiang Qi locked up, and said to his first employee, "Goodbye."</p>
+<p>"Goodbye." Watching her boss head across to Ke Group, she was surprised — a Ke Group employee?</p>
+<p>She pushed up her glasses and glanced at the shopfront. Such a lovely place — it had a special feel to it.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-144.html" class="prev">Chapter 144</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-146.html" class="next">Chapter 146</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

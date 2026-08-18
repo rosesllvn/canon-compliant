@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 98: Don&#x27;t Bully My Wife &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 98</h1>
+    <p class="chapter-title">Don&#x27;t Bully My Wife <span class="zh">别欺负我媳妇儿</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">With Ke Yan gone to the office, lunch, unsurprisingly, was Jiang Qi alone with the Ke family.</p>
+<p>Ke Xin still had not returned, which frankly relieved Jiang Qi. He found Ke Xin more intimidating than Lan Ruyin, perhaps because the man supposedly knew nothing about their relationship. Jiang Qi took pains not to seem too close to Ke Yan around him, yet Ke Xin's gaze always suggested he knew something. It left Jiang Qi guilty and uneasy.</p>
+<p>"Where's Xiao Yan?" Ke Shao and Richard came down with the baby only once it was lunchtime, and finding only Jiang Qi at the table, she asked.</p>
+<p>"Something came up at the office — he went to deal with it," Jiang Qi answered.</p>
+<p>"Right, so I told Jiang Qi not to go home either — to stay and keep me company shopping this afternoon."</p>
+<p>Ke Shao gave her mother a startled look. "Mom. Don't go scheming anything, now."</p>
+<p>"Eat your food, you." Lan Ruyin didn't deny it — though Jiang Qi didn't catch the meaning. Only Ke Shao did, and she shot Jiang Qi a sympathetic glance.</p>
+<p>Jiang Qi ate, thinking ahead to the afternoon's shopping and how to get on Lan Ruyin's good side. But how?</p>
+<p>When lunch was over, Lan Ruyin handed Jiang Qi the car keys. "Can you drive?"</p>
+<p>"Mm, yes." He took them and opened the car door for her.</p>
+<p>On the road, Lan Ruyin watched him drive and said, abruptly, "Does Ke Yan usually drive?"</p>
+<p>"Mm." Jiang Qi nodded.</p>
+<p>"So you usually ride to work in Ke Yan's car?"</p>
+<p>"That's right. Why?" Seeing her fall silent, Jiang Qi asked quietly.</p>
+<p>"He hasn't bought you a car?"</p>
+<p>Now Jiang Qi caught the drift — Lan Ruyin was probably put out that Ke Yan rode in to the office with him every day. He explained, "No one sees. They — they know Ke Yan and I were classmates before, and, uh, I have my own savings anyway. I don't need Ke Yan to buy me one."</p>
+<p>Listening to him stumble through his muddled explanation, Lan Ruyin nearly laughed; she caught it just in time and cleared her throat.</p>
+<p>Jiang Qi glanced at her. This mother-in-law was a hard woman to please.</p>
+<p>Though — Jiang Qi, are you sure she's your mother-in-law and not your husband's mother in the other sense?</p>
+<p>Women love to shop for clothes, and Lan Ruyin was no exception. The moment they reached the mall she made straight for the women's section.</p>
+<p>Jiang Qi trailed obediently behind.</p>
+<p>"Have you ever been shopping with Ke Yan?" Lan Ruyin asked, holding up a blue coat.</p>
+<p>"I have — not often, though. Ke Yan's not big on shopping."</p>
+<p>"Mm." She took the coat off to try it on.</p>
+<p>Jiang Qi sighed. He couldn't read Lan Ruyin's attitude toward him at all — couldn't tell if it was good or bad.</p>
+<p>"All right, wrap it up." She tried just the one and stopped there, telling the attendant to bag it.</p>
+<p>Jiang Qi followed behind carrying Lan Ruyin's clothes. She didn't linger in womenswear but headed for the men's section.</p>
+<p>"Are you buying menswear?"</p>
+<p>"Mm. Picking something out for Ke Yan. You can weigh in."</p>
+<p>"Me? Your taste is surely better — you don't need my input." Jiang Qi was quick to flatter.</p>
+<p>"You've got a sweet mouth on you, I'll give you that." Lan Ruyin smiled.</p>
+<p>Jiang Qi smiled along, privately relieved. As long as he could keep her happy.</p>
+<p>With the weather having turned cold, Jiang Qi thought he'd buy Ke Yan a sweater.</p>
+<p>Lan Ruyin, meanwhile, settled on a coat.</p>
+<p>They split up to shop. Jiang Qi stood agonizing over two sweaters — which to get? One was black, very Ke Yan. The other was a deep blue; he'd never seen Ke Yan wear that color. He hesitated — then gave himself a smack on the forehead. What was there to agonize over? Just buy both.</p>
+<p>He flagged down a salesperson, gave Ke Yan's size, and had them fetch the sweaters.</p>
+<p>Clothes bought, he went to find Lan Ruyin, who'd just finished too.</p>
+<p>"What color coat did you get?" An afternoon together had loosened Jiang Qi up by degrees.</p>
+<p>"Black and blue." Black would look sharp and serious on Ke Yan — but then her eye had caught on the blue, and she'd wondered how he'd look in that. So she bought both.</p>
+<p>"I bought black and blue sweaters too." Jiang Qi laughed.</p>
+<p>Lan Ruyin blinked, not expecting to have landed on the same colors. "What a coincidence."</p>
+<p>"Mm." Jiang Qi agreed.</p>
+<p>"Let's go for afternoon tea." A whole afternoon's shopping had left her a little tired.</p>
+<p>"Sure."</p>
+<p>So the two went looking for a café — and the picture they made now really did have something of the mother-in-law and daughter-in-law about it, the younger keeping the elder company over shopping and tea. Except this daughter-in-law happened to be a man.</p>
+<p>In the café, Jiang Qi and Lan Ruyin each ordered cake and coffee. She took out the coat and showed it to him. "Does it look nice?"</p>
+<p>"Mm, very nice. Look at the sweater." Jiang Qi took his out too.</p>
+<p>For once the two of them had hit on a shared interest, and the talk flowed happily.</p>
+<p>Back home, while Jiang Qi went up to rest, Lan Ruyin sat on the sofa wearing a small contented smile. Auntie Li noticed and asked, curious, "Madam, what's put you in such a good mood?"</p>
+<p>"Oh, we went shopping."</p>
+<p>"With Jiang Qi? He's not a bad sort, that boy."</p>
+<p>"Yes—" Lan Ruyin stopped short. Hadn't she meant to give Jiang Qi a hard time? How had she ended up chatting away with him?</p>
+<p>Her face fell, hardly able to believe she'd been so foolish. And yet she wasn't really all that angry about it.</p>
+<p>Perhaps Lan Ruyin hadn't noticed it herself — but she had already begun, slowly, to accept Jiang Qi.</p>
+<p>Jiang Qi got back to the room to a call from Ke Yan. "Hello — what are you doing?" Ke Yan sat in his chair and let his brow unknit a little.</p>
+<p>"Just got back from shopping with your auntie." Jiang Qi lay down on the bed.</p>
+<p>"Auntie?"</p>
+<p>"Your mom. I bought you two sweaters, even."</p>
+<p>"You went shopping with her? She didn't give you a hard time?" Ke Yan was startled.</p>
+<p>"No — Auntie's lovely. She bought you two coats, same colors as the sweaters I got. Black and blue."</p>
+<p>"I'll see them when I'm back." Ke Yan laughed soundlessly. "By the way — why didn't you call me?"</p>
+<p>"I was afraid you were busy. Didn't want to bother you."</p>
+<p>"Call next time. Don't worry about bothering me — I like being bothered by you." His voice had gone gentle.</p>
+<p>Jiang Qi flushed. "When are you coming home?"</p>
+<p>"Looks like" — straight onto a business trip — "I've got a flight in a bit."</p>
+<p>"Ah? So suddenly?" Jiang Qi's heart sank a little; another trip meant several days again.</p>
+<p>"Mm. I'll be back as soon as I can."</p>
+<p>"All right, I'll let you go. Take care of yourself."</p>
+<p>"All right. Bye."</p>
+<p>"Mm. Bye."</p>
+<p>Jiang Qi hung up, reluctant to let go.</p>
+<p>And on his end, Ke Yan placed another call — to Lan Ruyin. "Mom, you kept Jiang Qi today?"</p>
+<p>"And what of it? Afraid I'd give him a hard time?"</p>
+<p>"I suspect that was the plan at the start. And then you forgot about it."</p>
+<p>Caught out, Lan Ruyin felt no alarm — only surprise. "How did you know?"</p>
+<p>"Because Jiang Qi has that effect on people. Anyway, I won't keep you — I'm off on another trip. See you don't go bullying my wife."</p>
+<p>"Hmph. Yes, yes. Mind your own health, won't you — don't go skipping meals because you're busy."</p>
+<p>"I know. Bye."</p>
+<p>"Bye." Lan Ruyin hung up. The boy really had gotten himself a wife and forgotten his own mother.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-097.html" class="prev">Chapter 97</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-099.html" class="next">Chapter 99</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

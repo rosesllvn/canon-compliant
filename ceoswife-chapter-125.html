@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 125: Two Fools &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 125</h1>
+    <p class="chapter-title">Two Fools <span class="zh">两个傻瓜</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~6 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">No one had time to react. Father Jiang, standing closest, had never imagined his wife would be so rash; the cup was already flying toward Ke Yan.</p>
+<p>Jiang Qi reacted first, grabbing for Ke Yan's hand to shield him.</p>
+<p>But how could Ke Yan let Jiang Qi take it? As Jiang Qi moved to block for him, Ke Yan pulled him into his arms and bent his head, and the cup struck Ke Yan square on the head.</p>
+<p>"Ah—" Jiang Lü and Yun Hui both cried out.</p>
+<p>Jiang Qi scrambled out of Ke Yan's arms to look at his head. "Does it hurt?" His hands roamed frantically over the spot the cup had hit.</p>
+<p>"It doesn't hurt." Ke Yan smiled and stroked his face.</p>
+<p>Jiang Qi parted Ke Yan's hair and found broken skin seeping blood. His heart twisted as though caught in a vise. He blew softly on the wound and tried to drag Ke Yan to the hospital.</p>
+<p>Ke Yan stopped him and looked at Mother Jiang. "Auntie, you see — I'll protect Jiang Qi, always. And you mustn't hurt Jiang Qi either."</p>
+<p>"What kind of talk is that? He's my son; how would I hurt him?" Mother Jiang had regretted her rashness the moment the cup struck Ke Yan. But seeing her son frantic over him—and remembering Jiang Qi had tried to take the blow himself—rekindled her anger.</p>
+<p>"Jiang Qi is your son — but what if the cup had really hit him just now?" It was the first time Ke Yan had been so angry before the Jiang family.</p>
+<p>"I…" Mother Jiang had no answer.</p>
+<p>"Dad, Mom, I'm sorry — Ke Yan and I will go now." Jiang Qi wanted to get Ke Yan to a hospital; he was bleeding, what if something happened?</p>
+<p>"Yes — go, get to the hospital." Father Jiang urged them to take Ke Yan to be seen.</p>
+<p>Jiang Qi didn't waste words, just pulled Ke Yan along. Down in the car, he said, "Ke Yan, you idiot."</p>
+<p>"What?" Ke Yan looked at him.</p>
+<p>"It hurts me too — seeing you hurt. I was scared. Scared something would happen to you."</p>
+<p>Ke Yan held him. "Silly. I'm your man; of course I'll protect you. If that cup had really hit your head, I'd have been heartbroken. The thing I least want is to see you hurt — when you're hurt I lose all reason. I'd rather take the injury myself than have that cup hit you."</p>
+<p>"Let's get to the hospital." Jiang Qi sniffed, fighting back tears — now wasn't the time to cry; he had to get Ke Yan seen first.</p>
+<p>He buckled Ke Yan's seatbelt for him, then his own, and drove to the hospital.</p>
+<p>At the Jiang house, the moment the two left, Father Jiang couldn't help reproaching his wife. "What's the matter with you, so hot-tempered? No wonder even that boy Ke Yan got cross with you. If you'd really hit our son, who'd have been the heartbroken one but you?"</p>
+<p>"Ke Yan — Ke Yan — don't tell me you agree to them being together? I know I was too rash just now, I'm regretting it too. But I will never agree to them being together. I won't have my son turned into a homosexual."</p>
+<p>"Didn't you see how much Jiang Qi likes Ke Yan? He nearly cried just now seeing Ke Yan hurt."</p>
+<p>Father Jiang was at a loss too; much as he didn't want his child to be gay, the way Jiang Qi and Ke Yan were, they likely couldn't be pried apart.</p>
+<p>"Yes, Mom — just let Brother and the CE— Ke Yan be together." Jiang Lü came to plead too; nothing would please her more than her brother and the CEO together.</p>
+<p>"What do you know? Get back to your room."</p>
+<p>"I…"</p>
+<p>"Enough. Not another word." Mother Jiang cut Jiang Lü off.</p>
+<p>With that she went back to her room. Father Jiang sighed, and Yun Hui, worried, texted Jiang Bu to come home the moment he'd wrapped things up.</p>
+<p>Meanwhile, by the time Ke Yan and Jiang Qi came out of the hospital it had gone dark — winter dark came early, black already at five — Ke Yan's head wrapped in a bandage.</p>
+<p>Jiang Qi held his hand tight, hadn't let go even inside the hospital; even the old shyness he used to feel holding Ke Yan's hand in public was gone now, clinging to it, unwilling to let go.</p>
+<p>Ke Yan called the driver and asked him to buy dinner on the way. Knowing how particular Ke Yan was, the driver dared not choose casually and stopped at a five-star hotel.</p>
+<p>When the driver arrived, Jiang Qi and Ke Yan were waiting outside the hospital. They got in without a word, Jiang Qi only resting his head lightly on Ke Yan's shoulder.</p>
+<p>The driver couldn't help glancing at them in the mirror. What had happened today? The CEO injured, the air so strange — had they quarreled? But it didn't look like it; they were so close. Unable to puzzle it out, he focused on driving — the boss was in a bad mood, best to just do his job and not provoke him.</p>
+<p>Home, they plated the food on the table. Jiang Qi had no appetite, but wanting Ke Yan to eat something, put on a show of hunger so Ke Yan would eat with him.</p>
+<p>Ke Yan ate two bites and stopped; Jiang Qi set down his chopsticks too.</p>
+<p>"Eat more." Ke Yan put a piece of the meat Jiang Qi liked in his bowl.</p>
+<p>"If you won't eat, I won't either."</p>
+<p>"Then I'll eat — and you hurry and eat too, or you'll be hungry at midnight." Ke Yan started eating again.</p>
+<p>When Ke Yan ate, Jiang Qi ate; when he stopped, Jiang Qi stopped. Afraid Jiang Qi would go hungry, Ke Yan continued. Knowing Ke Yan would lose his appetite if he stopped, Jiang Qi did the same.</p>
+<p>So the two kept eating, and eating, until every dish was gone, and both were stuffed. Jiang Qi gave a full burp.</p>
+<p>Too full to shower and sleep right away, and not wanting to walk in the cold park downstairs, they paced about the flat to settle their stomachs, then showered and got ready for bed.</p>
+<p>Lying down, Jiang Qi couldn't sleep at all. Ke Yan gathered him into his arms, and knowing he was awake, patted his back gently to soothe him. Jiang Qi, thinking of his mother's words today and the moment Ke Yan was struck, felt a pang, and wrapped his arms around Ke Yan's waist. "I'm sorry."</p>
+<p>Ke Yan's hand paused. "Sorry for what?"</p>
+<p>"Because my mom…"</p>
+<p>"Never say sorry to me — there's no need. I understand how your mom feels. And your mom is my mom too; even if she doesn't like me now, I'll work to make her like me, to make her agree to us."</p>
+<p>"All right." Jiang Qi smiled, as if a knot in his chest had come loose, and felt suddenly sleepy; he closed his eyes and fell asleep with his arms tight around Ke Yan.</p>
+<p>Ke Yan stroked his head, heart aching. This fool — he really did make a person's heart ache.</p>
+<p>As for Mother Jiang — he would make her agree, no question.</p>
+<p>Ke Yan closed his eyes; he really was tired today, and was soon asleep.</p>
+<p>The truth was, Jiang Qi and Ke Yan were both fools — fools who knew only how to ache for each other.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-124.html" class="prev">Chapter 124</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-126.html" class="next">Chapter 126</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

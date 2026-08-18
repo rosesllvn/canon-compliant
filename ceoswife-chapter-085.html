@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 85: A Wedding-Banquet Farce &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 85</h1>
+    <p class="chapter-title">A Wedding-Banquet Farce <span class="zh">喜宴笑话</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">"Here for barbecue?" Ke Yan's father — that is, Ke Xin — walked up to Ke Yan and asked.</p>
+<p>"Mm; you brought the little fatty?" Ke Yan stood up.</p>
+<p>"Mm. And this is?" Ke Xin answered, looking at Jiang Qi.</p>
+<p>Jiang Qi's heart clenched, his pulse quickening; he hurried to stand and said stiffly to Ke Yan, "He— hello."</p>
+<p>Seeing Jiang Qi's nerves, Ke Yan gave his back a soothing pat.</p>
+<p>Ke Xin frowned, then recalled that Jiang Qi was the one who'd caught the little fatty when he fell at the airport the other day.</p>
+<p>"Hello." Ke Xin nodded at Jiang Qi; from his son's gesture just now, the two seemed on fairly good terms.</p>
+<p>"I won't disturb you two; we'll talk when you come home next time." With that Ke Xin sat back down at the little fatty's table.</p>
+<p>Jiang Qi sat down, stiff all over.</p>
+<p>"This nervous?" Ke Yan put the remaining grilled meat onto Jiang Qi's plate.</p>
+<p>Jiang Qi glanced at Ke Xin's table again. "Who'd have thought you'd run into your dad just from eating barbecue."</p>
+<p>"It is quite a coincidence." Ke Yan nodded.</p>
+<p>At the next table, Ke Xin poured the little fatty a drink and gave Jiang Qi a glance.</p>
+<p>The two hadn't ordered much; when they were ready to leave, Ke Xin said a goodbye and went on his way.</p>
+<p>Home again, Jiang Qi took out the suit he'd just bought, meaning to hang it up.</p>
+<p>But he found an extra bag, and opening it — wasn't this the white suit he'd worn before?</p>
+<p>"Ke Yan, Ke Yan." Jiang Qi went downstairs; Ke Yan was on the sofa reading email.</p>
+<p>"What is it?" Ke Yan set down the laptop.</p>
+<p>"When did you buy that white suit? I didn't see it when we paid."</p>
+<p>"While you went to change into the black one, I had them bag it up."</p>
+<p>"Then which one do I wear the day after tomorrow." Jiang Qi said it to Ke Yan on purpose.</p>
+<p>"Don't wear the white suit out." Ke Yan looked at Jiang Qi.</p>
+<p>"Then what'd you buy it for?" Jiang Qi sat down beside Ke Yan.</p>
+<p>"Well... then wear it when I take you home to meet my parents."</p>
+<p>Speaking of parents, Jiang Qi remembered yesterday's business at the airport and told Ke Yan.</p>
+<p>Ke Yan laughed. "Who'd have thought it'd be such a coincidence."</p>
+<p>Jiang Qi nodded too. "Good thing I didn't do too badly yesterday, probably."</p>
+<p>Ke Yan ruffled Jiang Qi's hair. "You're wonderful; Dad will like you, don't worry."</p>
+<p>Jiang Qi didn't say so, but ever since seeing Ke Yan's father this evening he'd been nervous.</p>
+<p>He smiled and leaned his head on Ke Yan's shoulder. "With you here, I'm not afraid."</p>
+<p>Ke Yan put an arm around Jiang Qi's shoulders; the two nestled on the sofa a while, then Ke Yan scooped Jiang Qi up and headed upstairs. "Wife, let's go take a mandarin-duck bath together."</p>
+<p>"You're the wife — you old lecher."</p>
+<p>"Calling me old — we'll see if you're still saying that in a bit."</p>
+<p>Ke Yan set Jiang Qi in the tub and ran the hot water.</p>
+<p>And then it was time for the two of them to take their mandarin-duck bath.</p>
+<p>Soon the day of Xue Cheng's wedding arrived; because it was in the evening, Ke Yan and Jiang Qi went after work.</p>
+<p>The wedding was held at the city's top grand hotel, the ceremony on the sixth floor.</p>
+<p>The whole sixth floor was filled with balloons, fresh flowers, and other decorations.</p>
+<p>"I hear the bride's very pretty." Jiang Qi handed in the cash gift and went into the hall with Ke Yan.</p>
+<p>Ke Yan looked at Jiang Qi. "How do you know?"</p>
+<p>"Heard the guests at the door say so."</p>
+<p>"Even if she were ugly as sin, in front of her parents she'd be praised as a goddess descended."</p>
+<p>Jiang Qi was tickled by Ke Yan's words, just as Xue Cheng came walking up.</p>
+<p>He composed his expression and offered Xue Cheng congratulations.</p>
+<p>Xue Cheng smiled and said, "Thank you both for coming; eat well today, have a couple more drinks."</p>
+<p>Jiang Qi nodded with a smile. "Definitely, definitely."</p>
+<p>"CEO Ke, I never dreamed you'd come; it's truly my honor."</p>
+<p>"Mm." Ke Yan nodded.</p>
+<p>"Right..." Xue Cheng was about to say something more when a ringing phone cut him off; he smiled apologetically, then took the call.</p>
+<p>Whatever the person on the other end said, Xue Cheng's face turned very ugly.</p>
+<p>"Didn't I tell you? Whatever you do, don't come." Xue Cheng was clearly enraged by the caller, and snapped out the line loudly.</p>
+<p>Then he caught himself, covered the phone, and said to the people who'd turned at his voice, "It's nothing, it's nothing, don't mind me."</p>
+<p>With that he walked off; Jiang Qi watched the still-on-the-phone Xue Cheng — what had happened?</p>
+<p>Leaving that episode aside, Jiang Qi and Ke Yan found their seats and sat down to wait for the ceremony.</p>
+<p>Before long all the guests had arrived; when the time came, the bride walked in on her father's arm, step by step, up to the groom, and her father handed her over to him.</p>
+<p>Then the two said their vows, exchanged rings, and the groom kissed the bride.</p>
+<p>Jiang Qi watched the newlyweds kissing on stage and said to Ke Yan beside him, "She really isn't all that pretty."</p>
+<p>Jiang Qi had more than just Ke Yan at his table, so he said it ever so quietly.</p>
+<p>Ke Yan found it funny inside; watching Jiang Qi's "so it really is the case" expression, he wanted badly to kiss him hard — it was rare for Jiang Qi to wear such a look.</p>
+<p>The bride then went off to change her gown, and everyone ate; Jiang Qi ate and nodded approvingly to himself.</p>
+<p>Watching Jiang Qi like this, Ke Yan noted it inwardly — he'd bring Jiang Qi here to eat again sometime.</p>
+<p>"Why aren't the bride and groom coming out to toast?" said a lady at Jiang Qi's table.</p>
+<p>At this everyone remembered; it had been a while — the bride ought to come out and toast.</p>
+<p>Just as they thought it, they saw the bride in her white gown pulling the groom out to toast.</p>
+<p>Jiang Qi looked at the bride's ornate gown — he'd thought she'd gone to change into something more practical.</p>
+<p>Back when his own sister-in-law and elder brother married, the toasting had been done in simpler attire.</p>
+<p>Because the bride's lounge was fairly close to Jiang Qi's table, she came to his table first.</p>
+<p>The moment Xue Cheng saw, he panicked, and caught hold of the woman dragging him along, Su Manmei. "Stop making a scene, all right? If Yinyin comes out and sees, I'm finished."</p>
+<p>Su Manmei gave a cold, mocking laugh. "Pah — when you dared dump me for this woman you should've known I'd cause trouble for you sooner or later. What more have you got to be afraid of — worst case I dump you, same as you did me."</p>
+<p>Just then Xue Cheng wanted nothing more than to slap this woman; one more day and everyone would have acknowledged him as the Lin family's son-in-law — he couldn't let her ruin it.</p>
+<p>But Su Manmei didn't care about any of that; how else could she have come barging in like this?</p>
+<p>It was only since learning that Lin Yinyin was pregnant with Xue Cheng's child — and, by her reckoning, that the child had been conceived while she and Xue Cheng were still together — that she couldn't hold back.</p>
+<p>Su Manmei dragged Xue Cheng to Jiang Qi's table to toast; she poured a glass of red wine and forced one into Xue Cheng's hand, then said, "Welcome, everyone, to the wedding; let me toast you first."</p>
+<p>The people at this table were all businesspeople; one look at the bride and they could tell she wasn't the one from before. They glanced around at each other, all baffled, and so none of them raised their glasses.</p>
+<p>Except Jiang Qi and Ke Yan.</p>
+<p>Jiang Qi because of his face-blindness — having seen her only once, he basically couldn't tell who was who.</p>
+<p>And Ke Yan because he hadn't looked at the bride's face at all.</p>
+<p>But whether or not she was the real bride, Ke Yan had no wish to raise his glass, not even to take a sip.</p>
+<p>Jiang Qi alone raised his glass and drank, noticing too late that no one else had moved. Sensing something amiss, Ke Yan refused to leave him embarrassed and promptly drained his own.</p>
+<p>Lin Yinyin came out of the dressing room just in time to see this scene, and stormed over in a fury; Xue Cheng stood frozen, his face ugly. Now everyone had a good show to watch.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-084.html" class="prev">Chapter 84</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-086.html" class="next">Chapter 86</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

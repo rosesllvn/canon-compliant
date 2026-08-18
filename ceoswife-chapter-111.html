@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 111: Noodles &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 111</h1>
+    <p class="chapter-title">Noodles <span class="zh">面条</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~6 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Back home, it dawned on Jiang Qi that they still hadn't eaten. He asked Ke Yan, "Are you hungry?"</p>
+<p>"Starving. I'll make you a bowl of noodles."</p>
+<p>"You? Can you?" Jiang Qi was dubious.</p>
+<p>"Just wait and watch." Ke Yan dragged a chair to the kitchen doorway and sat Jiang Qi down to watch him cook.</p>
+<p>Jiang Qi didn't sit right away — first he fetched a scarf and wrapped it round Ke Yan, and only then sat.</p>
+<p>Hands braced on the chair back, chin resting on his arms, he watched Ke Yan cook noodles in the kitchen. His body wasn't tired today; it was his heart that was worn out.</p>
+<p>While they had missed dinner, the meal at the Ke house was ready. Only the newly awakened Mo Lü and Ma Tong had any appetite. Lan Ruyin still slept off the wine, and thoughts of Ke Yan and Jiang Qi left Ke Xin unable to eat.</p>
+<p>In the bedroom, watching the sleeping Lan Ruyin, he was sure his wife had known — that was why she'd been so odd with Jiang Qi. He'd thought her behavior strange before; now he knew the reason for it, and to think she'd kept it from him.</p>
+<p>"Husband?" Lan Ruyin opened her eyes to find him watching her, dark-faced — an expression she hadn't seen in years. It startled her. "What's wrong?"</p>
+<p>"I know about Ke Yan."</p>
+<p>"Ke Yan what?" She didn't follow at once.</p>
+<p>"About him and Jiang Qi."</p>
+<p>Now she knew without being told what it was. She sighed. "How did you find out?"</p>
+<p>"Jiang Qi got drunk and let it slip." Ke Xin looked at her.</p>
+<p>"Oh." She took a sip of water, fairly composed.</p>
+<p>"Jiang Qi came to the study just now and laid it all out. Ke Yan came back too, though he only said a few words and left."</p>
+<p>"Cough, cough cough." Lan Ruyin choked. She'd thought Jiang Qi so timid — never imagined he'd have the nerve to come out to Ke Xin all on his own.</p>
+<p>"You knew already?" Ke Xin asked.</p>
+<p>"Not all that long ago, really. I've spent a bit of time around Jiang Qi — the boy may not be especially endearing, but he's genuinely a decent sort. At first I quite disliked him; I always thought it was because of him that Ke Yan turned out gay."</p>
+<p>"Isn't it?" Had Ke Yan turned gay all on his own, then?</p>
+<p>"No. Jiang Qi didn't turn Ke Yan gay. Ke Yan isn't gay — at least, he doesn't like any man but Jiang Qi. Ke Yan just loves Jiang Qi, and Jiang Qi happens to be a man." Lan Ruyin offered her understanding of it.</p>
+<p>Ke Xin was quiet a while. "You've agreed to them being together?"</p>
+<p>"Husband, I didn't agree at first either. But Ke Yan loves Jiang Qi more than we imagined—so tenderly, so ardently. I've never seen him so gentle. He's just like you: cold to others, gentle with family, and ardent with me, as though looking at his most precious treasure."</p>
+<p>"Hmph." Ke Xin wasn't one to voice his inner feelings; he'd said I love you to Lan Ruyin only once, when he proposed, and never since, so being seen through so plainly left him faintly awkward.</p>
+<p>"Husband, you should think it over carefully. Perhaps it's hard for you to accept — but don't rush to tear them apart." Lan Ruyin put her arms around him and nestled into his embrace.</p>
+<p>"I know." His tone wasn't gracious, but he agreed to think it over.</p>
+<p>In his arms, Lan Ruyin smiled. <em>Son, your mother has done her part.</em> Besides, Jiang Qi truly was a fine match. He understood and loved Ke Yan; perhaps no woman, however prominent her family, could suit him better.</p>
+<p>Jiang Qi looked at the noodles Ke Yan had made — not bad at all, with a fried egg on top besides.</p>
+<p>They smelled good, too. The taste should be all right.</p>
+<p>"Give it a try." Ke Yan dished himself a bowl as well.</p>
+<p>"Mm." Jiang Qi lifted a strand and ate — barely needed chewing before it slid down; the noodles were boiled to mush.</p>
+<p>"Overcooked, it seems." Ke Yan tried a bite too. Soft and falling apart.</p>
+<p>"Mm — but the flavor's good." Jiang Qi thought Ke Yan had more knack for cooking than he did, since whatever Jiang Qi turned out — and he was forever in the kitchen — was worse than what Ke Yan made having scarcely set foot in one.</p>
+<p>"Eat up. We'll watch TV after."</p>
+<p>"Watch TV?" Jiang Qi lifted his face from the bowl.</p>
+<p>"Mm. I'll watch with you tonight."</p>
+<p>"Really?" How rare — Ke Yan watching television with him, a melodrama no less.</p>
+<p>His spirits lifted a little, and he picked up his pace, no longer eating one strand at a time.</p>
+<p>At the Ke house, Lan Ruyin, dinner finished, slipped off to Mo Lü and Ma Tong's room. "Where did you two get off to this afternoon with your drinking?"</p>
+<p>"Off to rest."</p>
+<p>"Did you two know — Ke Xin's found out everything. About Jiang Qi and Ke Yan."</p>
+<p>"What?" Mo Lü and Ma Tong jumped.</p>
+<p>"And it was Jiang Qi who let it out himself after getting drunk — then he went and found Ke Xin and told him everything. Gave me a fright too."</p>
+<p>"I thought Ke Yan had just come and fetched Jiang Qi home — turns out something this thrilling happened." Mo Lü was sorry to have missed the show.</p>
+<p>"And how does Uncle feel about it?" Ma Tong asked the key question.</p>
+<p>"He's agreed to think their situation over properly."</p>
+<p>"Really? Doesn't that mean he isn't so opposed in his heart?"</p>
+<p>"Who can say." Lan Ruyin shook her head.</p>
+<p>And the two they were discussing were, just then, freshly showered and lying in bed watching the eight-o'clock melodrama.</p>
+<p>Jiang Qi nestled into Ke Yan's arms, feeling the same warmth as ever.</p>
+<p>"Want to rest at home tomorrow?" During an ad break, Ke Yan stroked his head.</p>
+<p>"Could you take the day off with me tomorrow?" Jiang Qi said.</p>
+<p>"What for?"</p>
+<p>"I want us to go back to the Ke house again. I want Uncle to agree to us being together."</p>
+<p>Thinking of the words Jiang Qi had faced Ke Xin alone with today, Ke Yan stroked his face, heart aching. "You were frightened today. Let's wait and go back Saturday — give Dad some time to think."</p>
+<p>"All right."</p>
+<p>Jiang Qi went to work the next day in fairly good spirits, since Ke Yan had obediently watched the show through with him and then slept, no funny business.</p>
+<p>He'd just reached the office when Mo Lü called. "Jiang Qi, awake?"</p>
+<p>"I'm already at work." He checked the time — she'd probably only just gotten up.</p>
+<p>"Oh — I heard about yesterday. Never thought you had it in you. Ma Tong and I are scared even looking at Uncle Ke, and you actually dared tell him everything. He must've been furious."</p>
+<p>At that, Jiang Qi hung up on her, most impolitely, and slumped over his desk. Thinking back on it now, he really had been brave yesterday — hadn't even known to be afraid — though perhaps a bit foolish too. Did Ke Xin dislike him now? The thought made Jiang Qi fret all over again.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-110.html" class="prev">Chapter 110</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-112.html" class="next">Chapter 112</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

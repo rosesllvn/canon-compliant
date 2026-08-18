@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 64: The Company Trip (Part Two) &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 64</h1>
+    <p class="chapter-title">The Company Trip (Part Two) <span class="zh">公司旅行下</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">The night before they left, Jiang Qi emerged from the shower determined to sleep well before the dawn ride to the airport. But the moment his head touched the pillow, sleep deserted him. He stared at the empty space beside him, then sat against the headboard with a book. When Ke Yan came in, Jiang Qi was reading without absorbing a word.</p>
+<p>He went over and ruffled Jiang Qi's hair. "Not asleep yet? Don't oversleep tomorrow."</p>
+<p>Jiang Qi took Ke Yan's hand away. "But I can't sleep."</p>
+<p>Ke Yan's eyes suddenly darkened. "Want to do something, then?"</p>
+<p>At that Jiang Qi instantly burrowed under the covers. "I'm going right to sleep."</p>
+<p>Ke Yan couldn't help a laugh, lay down beside Jiang Qi, and gathered him into his arms.</p>
+<p>The day of the company trip finally arrived. Their destination was Sanya, a tropical seaside city at the southern tip of Hainan Island.</p>
+<p>After days of anticipation, everyone happily piled onto the coach with bags large and small and headed for the airport.</p>
+<p>Ke Yan and Jiang Qi, of course, rode to the airport in old Wang the chauffeur's car; Yang Shaoyu slipped along too, riding shotgun and chatting with Ke Yan and Jiang Qi.</p>
+<p>Those who had their own cars drove themselves; those without took the coach, the whole way clustered together chattering about what they'd brought and what swimsuits they'd bought.</p>
+<p>Soon, in this relaxed and eager mood, they reached the airport; once all the formalities were done they could board. Jiang Qi's seat happened to be right next to Ke Yan's; Jiang Qi sat down and gave Ke Yan a look — really just "happened to be"?</p>
+<p>Not everyone had come, since the staff had to contribute this time. In other years, the cheaper destinations allowed the company to foot the entire bill. With transportation, hotels, and other expenses, Sanya cost too much to cover for everyone, so anyone unwilling to pay could stay home.</p>
+<p>The staff flew economy; anyone who wanted business class could pay extra for it. As a department manager, Jiang Qi got to take this trip without paying, and ride business class without paying extra — why? Because this company's boss was his man.</p>
+<p>Most of the department managers sat in business class, while Yang Shaoyu ran off to economy, because, he said, "Don't you think there are more beauties in economy? Sitting in business with you lot is a waste of time."</p>
+<p>After takeoff Jiang Qi asked for a glass of water and looked out the window at the scenery — though there wasn't really any scenery, the plane being too high to make much out. But for Jiang Qi, who rarely flew, it was all quite novel.</p>
+<p>And Ke Yan, who usually flew first class on business trips abroad, found a day like this rather nice; the seat wasn't as comfortable as first class, but — he glanced at Jiang Qi beside him — this way was actually better.</p>
+<p>The seating arrangement was rather delicate. Lin Zhengrui, beside Wang Siqi, watched the scene across the aisle and called for a glass of water himself.</p>
+<p>Lin Zhengrui and Wang Siqi sat across the aisle from Ke Yan and Jiang Qi, Wang Siqi in the inner window seat, Lin Zhengrui on the aisle.</p>
+<p>Wang Siqi tried to see what Ke Yan was doing, but Lin Zhengrui's large belly blocked her view. A flicker of distaste crossed her face. She leaned forward at last—and saw Ke Yan handing Jiang Qi water. She gritted her teeth. Didn't Jiang Qi have hands? Couldn't he get it himself?</p>
+<p>Wang Siqi didn't notice that her face was a little twisted just then.</p>
+<p>Lin Zhengrui was suffering too. He had caught that flash of distaste and was now sucking in his stomach—see, it wasn't even that big. Before long, though, he grew tired and short of breath. One exhale, and his belly sprang back to its original size.</p>
+<p>Wang Siqi was still watching when her view suddenly went dark; only after she focused did she realize — it was Lin Zhengrui's big belly.</p>
+<p>Wang Siqi's face went black with lines; she sat back properly and fixed her hairstyle.</p>
+<p>Lin Zhengrui awkwardly rubbed his head.</p>
+<p>With Ke Yan there, no one dared talk much, leaving the mood awkward. Jiang Qi merely found an entire crowd sitting in silence incredibly boring.</p>
+<p>He glanced at Ke Yan reading a magazine and found he couldn't look away. Ke Yan often dressed casually at home, but today felt different: khaki trousers, a white T-shirt, that faintly aloof face, and his mature air...</p>
+<p>He was painfully handsome. Jiang Qi stared until he caught himself, then looked down at his own cream-yellow T-shirt and white trousers. Somehow, they seemed childish by comparison.</p>
+<p>This outfit had been given to him by Jiang Lü the day before they left, saying their mom had had her bring it for Jiang Qi.</p>
+<p>Jiang Qi thought nothing of it, just assumed his mom knew he was going to the beach and had bought it for him, so he wore it.</p>
+<p>Jiang Qi shot Ke Yan an "aggrieved" glance — what was the point of being so handsome.</p>
+<p>Suddenly Ke Yan turned his face over; Jiang Qi jumped, and before he could react Ke Yan had kissed him...</p>
+<p>Kissed him... Jiang Qi was stunned! Before he could enjoy it, fright took over. He pushed Ke Yan away and looked around guiltily, relaxing only when he saw that no one had noticed.</p>
+<p>Over here Lin Zhengrui had just been given a fright; glancing inadvertently toward Ke Yan, he'd seen Ke Yan suddenly kiss Jiang Qi, and before he could look again he sensed Wang Siqi beside him about to look toward Ke Yan and Jiang Qi, and quickly turned sideways to block her view.</p>
+<p>Lin Zhengrui felt miserably like the emperor's chief eunuch. Knowing a secret no one else did was no blessing at all.</p>
+<p>Jiang Qi, red-faced, glared at the Ke Yan reading his magazine as if nothing had happened, and reached out to pinch Ke Yan's thigh, but just before he could Ke Yan caught his hand and held it, saying softly, "In that outfit, I really want to have you right here on the plane."</p>
+<p>Jiang Qi started, and his face went redder; he let Ke Yan hold his hand. Actually this outfit's not bad at all.</p>
+<p>The plane soon landed; everyone got off to collect their luggage, then rode the hotel's coach to the hotel together.</p>
+<p>At the hotel, Yang Shaoyu handed out room keycards. Once nearly everyone was settled, he suddenly put on a troubled expression. "Boss, there aren't enough rooms."</p>
+<p>Ke Yan glanced at Yang Shaoyu. "Then whoever's left can room with me."</p>
+<p>"Right, let me see — oh, Manager Jiang..." Yang Shaoyu looked at Jiang Qi, and Jiang Qi answered, "Then I'll room with the CEO." Then he looked at Ke Yan and said, "Sorry to impose, CEO," feigning a look of worrying he'd be a bother.</p>
+<p>Ke Yan looked at Jiang Qi with a smile. "It's fine."</p>
+<p>So the two took their luggage up in the elevator first, under everyone's eyes; Wang Siqi stared daggers at Jiang Qi's back — why should a man, every single time, make her this jealous and resentful.</p>
+<p>Jiang Lü watched her second brother go off with the CEO, brimming with excitement, and exchanged a glance with Xiao An.</p>
+<p>The moment they reached the room, Jiang Qi had barely set down the luggage before Ke Yan scooped him up and pressed him onto the bed; Jiang Qi let Ke Yan kiss him, reaching up to wind his arms around Ke Yan's neck in response. Ke Yan rucked up Jiang Qi's shirt, kneaded the little buds on his chest, kissed and nipped at his neck; Jiang Qi flinched slightly away. "Mm, Ke Yan, don't leave marks."</p>
+<p>At that Ke Yan eased the force, licking the spot he'd bitten...</p>
+<p>After washing up, he carried Jiang Qi out; the sheets had been changed for fresh ones at some point. Jiang Qi sat on the bed wrapping his bare body in the quilt, waiting for Ke Yan to fetch him clothes.</p>
+<p>Being waited on really is wonderful.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-063.html" class="prev">Chapter 63</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-065.html" class="next">Chapter 65</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

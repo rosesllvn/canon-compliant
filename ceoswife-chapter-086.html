@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 86: The Quarrel &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 86</h1>
+    <p class="chapter-title">The Quarrel <span class="zh">争吵</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~6 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Jiang Qi looked at the two women, one in a wedding gown and one in formalwear — what was this situation?</p>
+<p>"Su Manmei, what do you mean by this!" Lin Yinyin's eyes were faintly red — not from crying, but from anger.</p>
+<p>"Heh, what do I mean — you stole my boyfriend; what do you mean by that?"</p>
+<p>"Ha, that's rich. I didn't steal your boyfriend; he came to me himself." Lin Yinyin looked at Su Manmei smugly.</p>
+<p>Ke Yan watched the two quarrel coldly; then his phone rang, and he said a word to Jiang Qi and went to take it.</p>
+<p>"Then let me ask you — did you get pregnant while he and I were still together?" Su Manmei deliberately raised her voice on "pregnant."</p>
+<p>The scene erupted; this time Lin Yinyin really did want to cry.</p>
+<p>Jiang Qi, hearing it, reflexively glanced at Lin Yinyin's belly.</p>
+<p>Lin Yinyin felt exposed before the murmuring guests. Su Manmei was too formidable to out-argue, but Lin Yinyin had to draw attention away from the pregnancy. Only a few people knew; if word spread, she was finished.</p>
+<p>Lin Yinyin scanned the room, and her eye landed on Jiang Qi, the only one at Su Manmei's toast table who'd drunk.</p>
+<p>"You, what are you doing?" Lin Yinyin lifted her skirt and looked at Jiang Qi imperiously.</p>
+<p>"Me?" Jiang Qi was startled.</p>
+<p>"Yes — what's wrong with you, no eyes in your head? You drink whenever anyone toasts you?"</p>
+<p>"Miss Lin, it's because I can't remember what you look like, so..." What Jiang Qi meant was that having seen her only once he couldn't recall her face, but to Lin Yinyin's ears it came out as you're too plain to remember.</p>
+<p>Lin Yinyin glared at Jiang Qi, her tone shifting. "Right — how did you even get in? One look and anyone can tell you're a nobody with no status; did you sneak in to mooch a free meal?"</p>
+<p>Jiang Qi looked at Lin Yinyin like she was an idiot. "Without an invitation how would I have a seat? Miss Lin, you really ought to use your head." Jiang Qi had realized the point of Lin Yinyin suddenly picking a fight with him, so his tone hardened a little.</p>
+<p>"You— Dad." Just as Lin Yinyin was wondering what to do, she saw old Lin hurrying over.</p>
+<p>"Where's Xue Cheng?" old Lin said the moment he saw the scene.</p>
+<p>"Dad." Xue Cheng, hiding behind the crowd, answered.</p>
+<p>Old Lin shot Xue Cheng a fierce glare, then said to Su Manmei, "Don't talk nonsense. Since you wanted to break up with Xue Cheng, then Yinyin being with him is no wrong against you."</p>
+<p>The way old Lin put it, his words twisted it into: Su Manmei had insisted on breaking up with Xue Cheng, and now, learning Lin Yinyin was with him, was bitter about it.</p>
+<p>"I've said it — Lin Yinyin was pregnant with Xue Cheng's child before he and I had even broken up." Su Manmei gave a mocking laugh.</p>
+<p>"I know — you just want Xue Cheng to give you a break-up payment, don't you? No need to slander my daughter here; I'll give you a sum of money, and you needn't do this sort of thing again."</p>
+<p>Listening to old Lin twist black into white, Su Manmei was so angry she couldn't speak.</p>
+<p>Old Lin gave Su Manmei no chance to talk, and called security to throw her out.</p>
+<p>Security forcibly pinned Su Manmei's arms and walked her out.</p>
+<p>"Wait." Old Lin called the guards to a halt.</p>
+<p>"You get out too; I don't welcome a man so blind he can't even tell people apart."</p>
+<p>Jiang Qi frowned. "If this is old Lin's way of treating guests, then I've learned my lesson."</p>
+<p>With that Jiang Qi made to leave.</p>
+<p>"Wait." Ke Yan, just back from his call, walked in to hear the exchange.</p>
+<p>He walked up to old Lin, cold-faced, unreadable. "Old man Lin, your way of treating guests really has opened my eyes."</p>
+<p>"CEO Ke?" Old Lin's heart clenched; his company was currently partnering with Ke Group, yet he had no idea why Ke Yan was so angry.</p>
+<p>"Since you can't even handle your own affairs, I'll be leaving with my friend. Take good care of yourself." With that Ke Yan took Jiang Qi and left, and passing Lin Yinyin, who was glaring venomously at Jiang Qi, he raised a leg and kicked the chair beside her hard; the chair went flying, and Lin Yinyin jumped, trembling all over.</p>
+<p>A dead silence fell over the room.</p>
+<p>Ke Yan walked Jiang Qi out by the hand and loosened his tie.</p>
+<p>Jiang Qi reached over to undo it for him.</p>
+<p>"Why so fierce, slapping old Lin's face like that?"</p>
+<p>Ke Yan turned to look at Jiang Qi. "Old man Lin?"</p>
+<p>"Who told him to be so rude."</p>
+<p>"Let's go eat; this place fed me a bellyful of anger."</p>
+<p>The two got in the car and went to eat.</p>
+<p>A few days later, Ke Xin was playing golf.</p>
+<p>"CEO Ke." Someone called to Ke Xin.</p>
+<p>"The CEO now is my son." Ke Xin went on with his swing, not even turning his head.</p>
+<p>"Is that so? Well, CEO Ke threw quite the tantrum at my daughter's gathering the other day; it really was..." That's right, this was old Lin, shaking his head as he spoke.</p>
+<p>Ke Xin turned to look at old Lin. "You begging for a beating?"</p>
+<p>Ke Xin had never partnered with old Lin before, but he'd heard old Lin had a poor mouth on him.</p>
+<p>Old Lin froze; he'd nearly forgotten Ke Xin's temper — Ke Xin's mouth was a famously vicious one, his manner arrogant, a single offhand line capable of stopping your breath like venom.</p>
+<p>"Hmph." Old Lin gave a snort and turned to go; behind him came Ke Xin's voice, "Not playing?"</p>
+<p>Old Lin's steps paused; he'd come to play and hadn't even started, but now he had no wish to play at all.</p>
+<p>Ke Xin took a swing, then shook his head — Ke Yan had his old bearing.</p>
+<p>When Ke Yan got home, at dinner he suddenly recalled the Ke Yan and his friend he'd seen at the barbecue place — he'd heard Ke Yan call him Jiang Qi?</p>
+<p>"Do you know a Jiang Qi?"</p>
+<p>"Cough cough." Lan Ruyin choked.</p>
+<p>Ke Xin quickly poured her a glass of water.</p>
+<p>"How do you know about Jiang Qi?" Lan Ruyin asked the moment she'd had a couple of sips.</p>
+<p>"Ran into him taking the little fatty for barbecue the other day." Ke Xin found Lan Ruyin's reaction strangely strong.</p>
+<p>"Oh, they're friends." Lan Ruyin said, fobbing him off.</p>
+<p>Ke Xin looked at Lan Ruyin, then went on eating. It seemed this Jiang Qi wasn't so simple.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-085.html" class="prev">Chapter 85</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-087.html" class="next">Chapter 87</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

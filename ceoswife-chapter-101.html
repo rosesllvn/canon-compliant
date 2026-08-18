@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 101: Ke Yan Comes Home &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 101</h1>
+    <p class="chapter-title">Ke Yan Comes Home <span class="zh">柯言回来了</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~10 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Upstairs, Jiang Qi led his mother and Jiang Lü to the guest room—the one he'd deliberately cleared out.</p>
+<p>"How can this room be so empty?" His mother frowned at the sight.</p>
+<p>"How is it empty? I never had much stuff to begin with."</p>
+<p>"True enough, but this is too little, surely — a few books, a few odds and ends." Jiang Lü pulled open a drawer to look. "Ah, so it's all in the drawers."</p>
+<p>"That's right," said Jiang Qi, thanking his stars he'd had the wit to put those few things in the drawers.</p>
+<p>"Hm? Xiao Qi, why do you have so few clothes—have you been pinching every penny?" His mother thought of the money Jiang Qi sent his parents each month, on top of the rent, and wondered—</p>
+<p>"Xiao Qi, don't send money home anymore. Save it for yourself, buy yourself a few more outfits. Lucky your dad and I haven't spent what you've sent — we'll keep it for when you marry."</p>
+<p>"?" Jiang Qi couldn't follow where any of this had come from.</p>
+<p>"Mom, what's brought all this on?" Jiang Lü was puzzled too.</p>
+<p>"Right, Mom — what's the matter?" Jiang Qi looked at the strange expression on his mother's face, utterly lost.</p>
+<p>"You've gone and given all your money to your father and me, haven't you — never keeping any for yourself." His mother's heart ached for him.</p>
+<p>"What on earth are you talking about?" Jiang Qi was bewildered.</p>
+<p>"Look how few clothes you have — why won't you keep some money back and buy yourself a few more!"</p>
+<p>Now Jiang Qi understood her strange expression and nearly laughed. Ke Yan was forever taking him shopping; clothes were the last thing he lacked.</p>
+<p>"Mom, I've got plenty of clothes — they're just not in this room. This wardrobe's too small, what with all the suits and everything, so I keep them elsewhere," he said.</p>
+<p>"Elsewhere? Where?" She didn't quite believe it.</p>
+<p>"Uh — in the walk-in closet in the master bedroom."</p>
+<p>"Why would they be in the master bedroom's closet?" His mother found this odd.</p>
+<p>"Oh—my friend thought this wardrobe was too small for all my suits, so I put some over there." Jiang Qi scrambled for an explanation.</p>
+<p>"You're as close as all that, are you? Where's this friend now? If he's free I'd like to meet him — he's taken such good care of you, I should treat him to a meal sometime." His mother proposed it with real enthusiasm.</p>
+<p>"Ah? There's no need, ha ha — he's very busy, lots of work, and he's away on a trip. No telling when he'll be back." Jiang Qi laughed it off, hoping to fob her off.</p>
+<p>"Oh, no matter. We'll have a meal together once he's back from his trip. Be sure to call me when he returns." His mother, plainly, was not so easily fobbed off.</p>
+<p>"All right then." Jiang Qi figured she'd probably forget about it in a while.</p>
+<p>"Mm. See you remember, now."</p>
+<p>"Mm."</p>
+<p>"Mom, since we're here, let's stay for lunch before we head back," said Jiang Lü, eyeing the elegant, spacious flat and wanting to linger.</p>
+<p>"Sure. Let's pop out to the supermarket for groceries, then." Jiang Qi agreed readily — it had been a long time since he'd had his mother's cooking.</p>
+<p>His mother nodded too. "Let's go, then. Earlier's better, the supermarket gets crowded."</p>
+<p>So the three of them went to the supermarket nearby.</p>
+<p>At the supermarket, his mother asked what he wanted for lunch. Jiang Qi named several favorites, then wished Ke Yan were there to taste her excellent cooking. Was he eating properly?</p>
+<p>Thinking of Ke Yan, Jiang Qi added a few dishes Ke Yan liked.</p>
+<p>Groceries bought, they returned to Jiang Qi and Ke Yan's place. His mother went to start lunch, Jiang Lü stepped onto the balcony to take a call, and Jiang Qi sat on the living-room sofa watching television.</p>
+<p>For once, he had a leisurely day with no work. Yet he missed Ke Yan more sharply than ever.</p>
+<p>Suddenly Jiang Qi heard the sound of a key in the front door.</p>
+<p>His heart gave a leap. Could it be Ke Yan, home?</p>
+<p>He hurried to the door just as it swung open.</p>
+<p>Ke Yan stood there with his suitcase, a coat over his suit.</p>
+<p>"Ke Yan? You're back? You said Monday."</p>
+<p>Ke Yan took in Jiang Qi standing barefoot and dazed, asking the obvious.</p>
+<p>He opened his arms. "Come here, let me hold you."</p>
+<p>Jiang Qi stepped into them and breathed in deeply the familiar scent of Ke Yan — not enough — and breathed in again.</p>
+<p>Ke Yan lifted him up, toed off his shoes, and carried him in, settling Jiang Qi's bare feet on the tops of his own. "Why didn't you come running to hug me when I got back — just stood there blank instead?"</p>
+<p>"I was too surprised. I thought you weren't back till Monday." Jiang Qi looped his arms around Ke Yan's neck.</p>
+<p>"Did you miss me?" Ke Yan kissed him, deep.</p>
+<p>"Of course I did."</p>
+<p>"And not a thought to put on slippers — your feet are like ice, you must be freezing." Ke Yan hitched him up higher, meaning to carry him inside.</p>
+<p>"I knew it was you. I was in too much of a hurry." Jiang Qi laughed.</p>
+<p>"Xiao Qi, who are you talking to?" His mother, frying something in the kitchen, had caught the faint sound of Jiang Qi speaking to someone.</p>
+<p>"Put me down — quick, put me down." Jiang Qi patted at Ke Yan frantically.</p>
+<p>How could he have been so muddled — his mother was still here, and he'd forgotten.</p>
+<p>"Who is it?" Ke Yan was puzzled to find anyone home.</p>
+<p>"My mom," Jiang Qi whispered.</p>
+<p>"Your mom's here? Why didn't you tell me?" Ke Yan made to go in.</p>
+<p>Jiang Qi stopped him. "No — no, go, quick."</p>
+<p>"What is it? Don't tell me you still won't let me meet your mother." Ke Yan watched his antics, amused.</p>
+<p>"Oh — right. Sorry, reflex." Jiang Qi fetched Ke Yan's slippers and set them by his feet.</p>
+<p>"Has someone come?" Getting no answer from Jiang Qi, his mother came out of the kitchen to look — and was surprised to find a strange man, a strikingly handsome one at that.</p>
+<p>That was Jiang Qi's mother's first impression of Ke Yan.</p>
+<p>Seeing the luggage at his side, she guessed who he was. "You must be Xiao Qi's friend. I'm his mother — I was just thinking I'd treat you to a meal. Thank you for looking after Xiao Qi."</p>
+<p>"Hello, ma'am. I'm Ke Yan. Xiao Qi talks about you often—I didn't expect you to look so young." Ke Yan deployed his secret weapon: a smile.</p>
+<p>Jiang Qi's mother was duly charmed. "What a sweet-talking boy. Come in, come in — I've made a whole table of food today, by way of thanks for taking such good care of Xiao Qi."</p>
+<p>"It's nothing. Looking after Xiao Qi is the least I can do." Of course it was the least he could do — he was, after all, Jiang Qi's man.</p>
+<p>Jiang Qi flushed; only his mother missed the meaning. As they went in, Jiang Lü returned from her call, caught sight of Ke Yan, and cried, "CEO?"</p>
+<p>"CEO?" His mother turned to Ke Yan, surprised.</p>
+<p>"Mom, this is our company's CEO," Jiang Qi told his startled mother.</p>
+<p>"Ma'am, Xiao Qi and I have been friends since university," Ke Yan added.</p>
+<p>"Oh — no wonder he can afford such a fine place." It all made sense to her now.</p>
+<p>"Xiao Qi is wonderful." Ke Yan came out with it, just like that.</p>
+<p>It struck Jiang Qi's mother as faintly odd — but it was only Ke Yan praising her son, so she smiled. "Oh, not at all — it's only that you don't hold his shortcomings against him. Well, I'll go finish the cooking."</p>
+<p>"Of course." Ke Yan smiled again.</p>
+<p>His mother went back to the kitchen. Ke Yan picked up his suitcase, and Jiang Qi gathered up the coat Ke Yan had just shed, and the two went upstairs together — leaving Jiang Lü still standing there staring after Ke Yan, stunned.</p>
+<p>"A moment slower, and your mother would've found out today she's got a son-in-law," Ke Yan said, with no small note of regret in his voice.</p>
+<p>"Get away with you." Jiang Qi gave him a shove. "Mom listened to her friends and decided she absolutely had to see where I live, to put her mind at ease."</p>
+<p>"Come here and let me kiss you properly — I didn't get my fill downstairs." Ke Yan pressed Jiang Qi against the wall and kissed him, and this kiss wasn't gentle as his usually were but a little rough, a little impatient, the two of them nearly unable to part.</p>
+<p>When it ended, Jiang Qi was faintly out of breath. "Stop now — hurry and change, then come down. Lunch should be nearly ready."</p>
+<p>"Mm." Ke Yan reined his wanting back in.</p>
+<p>Jiang Qi laid out a set of house clothes for him to change into, and set the clothes Ke Yan took off to one side, ready for the cleaning lady to take to the dry cleaner's tomorrow.</p>
+<p>Jiang Qi just then was for all the world like a little wife, fussing around a husband home from a trip.</p>
+<p>Changed, the two went down just as Jiang Qi's mother was bringing the dishes to the table.</p>
+<p>"Come eat." She waved them over.</p>
+<p>Jiang Lü brought out the rice she'd dished up.</p>
+<p>The four sat down. Ke Yan looked over the table of food he liked, glanced at Jiang Qi beside him, and smiled.</p>
+<p>"I didn't know what you'd like to eat," his mother said.</p>
+<p>"I like all of this. Xiao Qi and I have very similar tastes — what I like, he likes, and what he likes, I like too." Ke Yan picked up a bite and put it in Jiang Qi's bowl.</p>
+<p>As Ke Yan served Jiang Qi, his mother's earlier sense of oddness strengthened. Unable to name anything actually wrong, she only smiled and urged them both to eat.</p>
+<p>Jiang Lü, for her part, didn't dare say a word — proof of how deeply Ke Yan's stern company persona had impressed itself on everyone.</p>
+<p>After the meal his mother wanted to wash up, but Jiang Qi and Ke Yan stopped her, saying the cleaning lady would handle it. Seeing there was nothing left for her to do, and remembering she had afternoon tea with friends, she and Jiang Lü prepared to head back.</p>
+<p>She told them not to see her off, but Ke Yan insisted on having the driver take them home. Having already refused once, she didn't like to refuse again, and so let the driver drive them back.</p>
+<p>His mother and Jiang Lü gone, Jiang Qi and Ke Yan sat on the sofa.</p>
+<p>Jiang Qi leaned into Ke Yan's arms. "Let's go back to my family's place one of these days."</p>
+<p>"All right." Ke Yan held him tight.</p>
+<p>"All those nights without you, the bed was cold as ice." There was a small note of grievance in his voice.</p>
+<p>"From now on I'll keep you warm every night."</p>
+<p>"Mm." Jiang Qi nestled against Ke Yan, the television on, the two of them holding each other and watching, sunlight slanting in through the window — and though it was winter, it was warm.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-100.html" class="prev">Chapter 100</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-102.html" class="next">Chapter 102</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

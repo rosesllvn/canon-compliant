@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 129: Going Home Again &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 129</h1>
+    <p class="chapter-title">Going Home Again <span class="zh">再次回家</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~6 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">In the dead of night, Mother Jiang suddenly sat up in bed, frowning, and shook Father Jiang beside her.</p>
+<p>"What is it?" He woke.</p>
+<p>"I can't sleep."</p>
+<p>"How are you suddenly not able to sleep?"</p>
+<p>"Ke Yan came over today, and it just struck me — Jiang Qi said before that he wanted to learn to cook. Thinking about it now, was it to cook for Ke Yan?"</p>
+<p>"Probably." Father Jiang was groggy; he rolled over to go back to sleep.</p>
+<p>"Hmph. Jiang Qi's never once cooked for us, but he'll cook for that Ke Yan every day." She felt distinctly hard done by.</p>
+<p>"They live together every day — Jiang Qi cooking for Ke Yan is only natural. And didn't you say Jiang Qi's cooking is terrible?" Father Jiang mumbled, half-asleep.</p>
+<p>"Wait." She narrowed her eyes at him, then reached over and pinched his ear.</p>
+<p>"Ow, ow." Father Jiang shot up to defend his ear.</p>
+<p>"You — out with it!" She pinched harder. "Do you, or do you not, agree to them being together?"</p>
+<p>"Ow, ow, that hurts! Wife, let go first."</p>
+<p>"Hmph." She released him.</p>
+<p>"It's not as if you don't know," Father Jiang said, rubbing his ear. "Jiang Qi's been obedient since he was small, but once he digs his heels in, who's ever changed his mind?"</p>
+<p>"I don't believe it."</p>
+<p>"His whole life, you don't know that temperament of his?" Father Jiang reasoned with her. The way she and Jiang Qi were now, his heart actually ached a little for his son — wondering whether the boy was lying awake too, trying to think how to get his mother to agree.</p>
+<p>She fell silent, lay down — and suddenly remembered something from Jiang Qi's childhood.</p>
+<p>Jiang Qi had been a sickly child who often stayed home from school. One such day, while they watched a man abandon his girlfriend for money on television, she had told him, "Xiao Qi, never become that kind of person. You must cherish your wife."</p>
+<p>Little Jiang Qi had watched a while, then shaken his head and said softly, "When I grow up, I want to marry someone who'll cherish Xiao Qi."</p>
+<p>She'd blinked, then laughed. "Xiao Qi is a boy — when you find a wife you cherish her; the wife doesn't cherish you. A boy must learn to cherish a girl."</p>
+<p>Little Jiang Qi had shaken his head again, as if he didn't want it the way she said. "Then I'll find a boy to cherish me."</p>
+<p>"Silly — a boy can only find a girl. And why would you want to marry someone who cherishes you — don't you want to cherish your wife?" She'd asked it and then thought the question too deep for little Jiang Qi.</p>
+<p>"Because someone who loves me will cherish me. And I don't want to cherish a girl." But little Jiang Qi's answer made her blink. Was her son too precocious? There was nothing to fault in the reasoning. But that last bit — not wanting to cherish a girl — what was that about?</p>
+<p>Remembering it now, she wondered whether Jiang Qi had rejected the idea of a girlfriend even then. He had been young, but perhaps not too young. She did not even know how the two men had met.</p>
+<p>Fretting, she couldn't sleep at all. While Jiang Qi — the object of Father Jiang's worry — had been so worn out he was long since fast asleep.</p>
+<p>The next day, after lunch with Jiang Qi, Ke Yan left the company. Jiang Qi asked where to, and Ke Yan said, again, a lunch meeting.</p>
+<p>Jiang Qi looked, helpless, at Ke Yan who couldn't even lie to his face properly. "Go on, then."</p>
+<p>Given the okay, Ke Yan nodded and left.</p>
+<p>A while after Ke Yan had gone, Jiang Qi left the company too.</p>
+<p>Headed the same direction as Ke Yan.</p>
+<p>Ke Yan reached the Jiang door and rang the bell, but no one came; he rang a few more times, still no movement inside.</p>
+<p>He knocked. "Auntie, please open the door."</p>
+<p>Inside, Mother Jiang ate her lunch unmoved. Yun Hui glanced toward the door, then at Mother Jiang, and ventured, "Mom…"</p>
+<p>"Eat your food." Mother Jiang ate a piece of meat.</p>
+<p>"Wife, how is anything going to get solved with Ke Yan shut out like this?" Father Jiang made to rise and answer the door.</p>
+<p>"Don't you dare!" She slapped her chopsticks down.</p>
+<p>He sighed and sat back down.</p>
+<p>Outside, Ke Yan sighed too — it seemed she had no intention of seeing him.</p>
+<p>"You are…?"</p>
+<p>Jiang Bu, suitcase in hand, reached his own front door to find a stranger knocking on it.</p>
+<p>"You're Jiang Qi's eldest brother?" Hearing the voice, Ke Yan turned to see Jiang Qi's eldest brother, Jiang Bu.</p>
+<p>"Yes… you are…? Xiao Qi's boss? The CEO of Ke Group?" Jiang Bu placed who Ke Yan was.</p>
+<p>"Yes, I'm Ke Yan." They shook hands.</p>
+<p>"So it is Mr. Ke." Jiang Bu smiled.</p>
+<p>"Just Ke Yan is fine."</p>
+<p>"All right, Ke Yan — you're here to see…?"</p>
+<p>"I've come to see Uncle and Auntie about something."</p>
+<p>"Something to do with Xiao Qi?" Jiang Bu asked, concerned.</p>
+<p>"Yes. I haven't introduced myself properly — I'm Jiang Qi's partner."</p>
+<p>"Part— partner?" Jiang Bu's hand paused on the key, sure he'd misheard.</p>
+<p>"Yes. I came to see Uncle and Auntie hoping they'll allow Jiang Qi and me to be together."</p>
+<p>"…" Jiang Bu was thoroughly stunned, but after a moment used the key to open the door. "Come in first, let's talk inside."</p>
+<p>Mother Jiang, eating, heard the door open and someone come in, looked over, and saw Jiang Bu wheeling his suitcase in.</p>
+<p>Yun Hui rose happily and went to help him with the case.</p>
+<p>But seeing Ke Yan behind Jiang Bu, she glanced at Mother Jiang.</p>
+<p>Mother Jiang saw Ke Yan too, and stood. "What are you doing here again?"</p>
+<p>"Because you still haven't agreed to us being together." Ke Yan looked at her.</p>
+<p>"Mom, does Xiao Qi really like Ke Yan?" Jiang Bu, still not fully caught up, asked.</p>
+<p>"He does — but I will not agree to the two of them being together."</p>
+<p>"But — what about Xiao Qi?" Jiang Bu thought of his brother, worried.</p>
+<p>"Ding-dong—"</p>
+<p>The doorbell sounded again. Yun Hui, nearest, opened it — and there was Jiang Qi.</p>
+<p>He came in, saw Jiang Bu, then Father and Mother Jiang, and called out, "Brother. Mom, Dad. I'm home."</p>
+<p>Two days without seeing Jiang Qi, and now at the sight of him Mother Jiang's eyes reddened despite herself.</p>
+<p>"Brother, Ke Yan and I are together, we can't be parted. Mom, I'm begging you, please — forgive me, please agree to us being together." Jiang Qi crossed to Ke Yan and took his hand.</p>
+<p>Surprised as Ke Yan was that Jiang Qi had come, he held his hand fast.</p>
+<p>Mother Jiang turned away. She had avoided Jiang Qi because she feared softening—and if she softened, what if Ke Yan made him unhappy later?</p>
+<p>But how could Ke Yan ever make Jiang Qi unhappy? The one who most wanted Jiang Qi happy was Ke Yan himself — only, Mother Jiang didn't know that yet.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-128.html" class="prev">Chapter 128</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-130.html" class="next">Chapter 130</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 95: First Time at the Ke House &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 95</h1>
+    <p class="chapter-title">First Time at the Ke House <span class="zh">柯家初体验</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Xiao Ke's father, Richard, did make it home by eight, just as promised. Jiang Qi studied Ke Shao's foreign husband and wondered whether Xiao Ke might grow up to look like that.</p>
+<p>Once he was back, Richard scooped up Xiao Ke and they cut the cake — and though the baby was fast asleep, that did nothing to dampen the grown-ups' good cheer.</p>
+<p>After the cake was cut, the baby was carried off to bed. Jiang Qi managed a couple of bites. Ke Yan had been drinking, so Lan Ruyin told him to stay the night; Jiang Qi had meant to head home on his own, but Ke Yan wouldn't hear of it and insisted he stay too.</p>
+<p>Jiang Qi was too embarrassed to stay. If Ke Yan's mother and sister hadn't known about the two of them, he might have brazened it out and stayed anyway — but as things stood, and with Ke Yan's mother seemingly not keen on his staying, he declined.</p>
+<p>Ke Yan had no intention of sending Jiang Qi home alone — Jiang Qi would only feel wretched about it, and he didn't want him hurt. So he decided they'd both go.</p>
+<p>Seeing Ke Yan about to leave with Jiang Qi, Lan Ruyin shot him another glare. Wouldn't her son even listen to her now?</p>
+<p>The truth was, her insistence that Ke Yan stay the night had a private motive: she'd hoped to make Jiang Qi back down of his own accord, to let him understand that she hadn't accepted him yet.</p>
+<p>Ke Shao saw what was happening and pressed Jiang Qi to stay. "It's so late already — don't go all that way back. Stay the night here with Xiao Yan."</p>
+<p>Jiang Qi was about to refuse again when Ke Xin came over and added his voice to it.</p>
+<p>In the end, Jiang Qi stayed the night with Ke Yan. Ke Xin offered to have a guest room made up, but Ke Yan waved it off. "No need to trouble anyone tidying a room. He can sleep in mine."</p>
+<p>Jiang Qi clearly felt Ke Xin's eyes settle on him after Ke Yan said it — a look that seemed, somehow, complicated.</p>
+<p>Back in Ke Yan's room, showered, with no clothes of his own to change into, Jiang Qi had to borrow Ke Yan's. No matter how many years passed, Ke Yan's clothes still hung off him.</p>
+<p>He rolled up the sleeves and trouser cuffs, then studied himself in the mirror. The clothes swallowed him, the collar gaping to reveal his collarbones and throat. He laughed. It looked almost exactly like the first time Ke Yan had lent him clothes, when he had folded the sleeves and hems again and again. Back then, it took several turns. Now two were enough.</p>
+<p>And the relationship between them was nothing like back then, either. Then they'd been, at most, classmates who barely knew each other. Now they were lovers.</p>
+<p>Ke Yan walked into the bathroom to find Jiang Qi grinning foolishly at the mirror. He came over and wrapped him in his arms. "What are you smiling at?"</p>
+<p>"That rainy day, way back, when you lent me your clothes." Jiang Qi lifted the collar and gave it a sniff — the faint scent of detergent. "Even smells the same as it did then."</p>
+<p>"You still remember that?" If Jiang Qi remembered, then of course Ke Yan did too.</p>
+<p>"Of course I remember. You were so cold back then — kicking me out into the wind and rain."</p>
+<p>"Didn't I let you back in afterward?" Ke Yan smiled.</p>
+<p>"Hmph."</p>
+<p>"All right then. Let me make it up to you now — properly." Ke Yan swept him up and carried him toward the bed.</p>
+<p>Jiang Qi let himself be pressed down into it, let Ke Yan kiss his way over him, holding on and now and then kissing back.</p>
+<p>Ke Yan worked his mouth along Jiang Qi's collarbone, one hand kneading at the soft swell of his chest, the other sliding down to the round curve of his backside, squeezing once, twice — and finding that not enough, gripping hard with both hands at the springy flesh, his fingers gradually drifting toward the place behind.</p>
+<p>Jiang Qi's breath caught and quickened. He opened his half-lidded eyes and gazed up at the ceiling. Hm?</p>
+<p>"Wait — wait." He stopped Ke Yan hastily, pushing him back a little.</p>
+<p>"What's wrong?" Ke Yan let himself be pushed off and asked patiently — but the heaviness of his breathing told Jiang Qi exactly how much want, and how much restraint, was in him.</p>
+<p>"Not tonight."</p>
+<p>"Why not?" Ke Yan dipped his head again to kiss Jiang Qi's neck, the kisses traveling lower, his fingers nearly reaching the place behind.</p>
+<p>Jiang Qi knew he was already worked up — that if he didn't stop Ke Yan now, he wouldn't be able to hold himself back either.</p>
+<p>He pushed; Ke Yan didn't budge. So Jiang Qi gathered himself and shoved hard, sending Ke Yan clean off the side of the bed.</p>
+<p>A snort of laughter burst out of him.</p>
+<p>Ke Yan hauled himself up off the floor with a face like thunder. Seeing Jiang Qi still laughing, he reached out and pinched his cheek.</p>
+<p>Jiang Qi caught his hand and clung to it, wheedling. "I don't want to be a wreck in the morning. I want to make a good impression on your family."</p>
+<p>Ke Yan had told him before that his family ate breakfast very early; Jiang Qi didn't want to come down tomorrow only after everyone had finished.</p>
+<p>Ke Yan let out a sigh, dragged the covers up over them both, and gathered Jiang Qi into his arms. "Sleep."</p>
+<p>Jiang Qi closed his eyes against Ke Yan's chest — and felt something hot and hard pressing against his leg.</p>
+<p>Flushing, he rubbed against Ke Yan, and was immediately pinned still. "Don't move. Move again and you'll be in trouble."</p>
+<p>"Mm."</p>
+<p>He shut his eyes, and before long the drowsiness took him; he fell quietly asleep in Ke Yan's arms.</p>
+<p>Jiang Qi slept. Ke Yan couldn't. He lay there, fighting down the heat in his body, patting Jiang Qi's back as he slept.</p>
+<p>Having done nothing strenuous the night before, Jiang Qi woke the next morning, unsurprisingly, very early.</p>
+<p>Seeing Ke Yan still asleep, he shook him awake. "Ke Yan, Ke Yan, wake up. Let's get up, quick."</p>
+<p>The two of them washed and went down, arriving just in time for breakfast.</p>
+<p>They sat down. The whole Ke household, Richard included, was already there — everyone but Ke Xin.</p>
+<p>"Where's Dad?" Ke Yan asked as he sat.</p>
+<p>"He went out fishing at the crack of dawn. Probably won't be back till tonight." Lan Ruyin spoke over her bowl of salted congee.</p>
+<p>Jiang Qi took in the spread of Chinese breakfast dishes on the table — more than a dozen plates, enough to whet anyone's appetite.</p>
+<p>He'd no sooner picked up his chopsticks than a fried bun appeared in his bowl. He smiled at Ke Yan, picked it up, and bit in — and yes, it was delicious.</p>
+<p>Ke Shao, catching this rare display of attentiveness from her brother, glanced at her husband. Richard, busy feeding the baby his milk, promptly picked up a piece of Ke Shao's favorite and set it before her. Ke Shao smiled, satisfied.</p>
+<p>Lan Ruyin, for her part, pretended not to see — and dropped into Ke Yan's bowl the very thing he least liked to eat.</p>
+<p>Jiang Qi ate his way through the delicious breakfast in unusually high spirits, not even especially on edge with Lan Ruyin there.</p>
+<p>Spotting the food Ke Yan disliked sitting in his bowl, he did what he always did, picking it up and eating it himself, entirely natural about it.</p>
+<p>But this time, when he'd finished, he felt someone glaring at him. He looked up — and there was Lan Ruyin, staring. Only then did Jiang Qi remember this was Ke Yan's family home. He gave her a friendly smile, then dropped his head and ate fast, not daring to look up again.</p>
+<p>Ke Yan watched and smiled, and gave the hand Jiang Qi had set down by his bowl a little squeeze.</p>
+<p>And that was Jiang Qi's first breakfast at the Ke house.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-094.html" class="prev">Chapter 94</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-096.html" class="next">Chapter 96</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

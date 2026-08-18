@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 110: Let&#x27;s Go Home &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 110</h1>
+    <p class="chapter-title">Let&#x27;s Go Home <span class="zh">我们回家吧</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">After lunch, Ke Yan figured Jiang Qi must be awake. If not, he needed waking; having skipped breakfast, he could not miss lunch too.</p>
+<p>He dialed Jiang Qi's phone. No one picked up.</p>
+<p>Downstairs, maybe? Ke Yan thought Jiang Qi might be on the ground floor with his phone left upstairs, so he called the home line. Still no answer.</p>
+<p>Now Ke Yan was a little worried. Jiang Qi wasn't home? Where had he gone?</p>
+<p>After a moment's thought, he called Auntie Li, who answered quickly. "Hello, young master."</p>
+<p>"Auntie Li, are you back at the old house?"</p>
+<p>"Mm, I'm back — and Jiang Qi's here too." She'd guessed at once that Ke Yan must be calling about Jiang Qi.</p>
+<p>"I see. I'll come by this evening to get him."</p>
+<p>He hung up, relieved, and went back to his documents.</p>
+<p>Little did he know that Jiang Qi was at that moment at the Ke house drinking — and drunk, no less.</p>
+<p>The drunk Jiang Qi lay sleeping it off on the bed while Ke Xin sat in the chair beside him, watching, having guessed at the truth of Jiang Qi and Ke Yan's relationship.</p>
+<p>Not friends. But… lovers?</p>
+<p>Ke Xin's face was cold. He'd never had any particular view on two men being together — or rather, had never given it thought — but to discover his own son was homosexual?</p>
+<p>Ke Xin was no stick-in-the-mud; he didn't think two men together was wrong, nor find it in any way disgusting.</p>
+<p>But abruptly learning that his own son was gay felt entirely different. Ke Xin had valued Ke Yan since boyhood and, over everyone's objections, entrusted him with the company while he was still young.</p>
+<p>And Ke Yan hadn't disappointed him — had, in fact, run the company even better than he had.</p>
+<p>Ke Xin rose abruptly and patted the sleeping Jiang Qi. "Wake up."</p>
+<p>But Jiang Qi slept on, dead to the world, and seeing he wouldn't wake, Ke Xin went off to the study — and there he sat, not even reading, simply turning it over in his mind.</p>
+<p>He remained in the study nearly all afternoon, then went straight to Jiang Qi's room. They needed to talk.</p>
+<p>But Jiang Qi was still asleep — a capacity for sleep no less than Lan Ruyin's, out cold like a log.</p>
+<p>"Mm, my head hurts." As Ke Xin stood there, Jiang Qi stirred on the bed, rolled over, clutched his head with both hands and mumbled, then rubbed at his temples.</p>
+<p>Feeling better, perhaps, he slowly sat up — and saw someone seated in the room. Taking him for Ke Yan: "Ke Yan? You're off work? I didn't listen to you today — I had some wine." Not fully awake yet, Jiang Qi still thought he was at home.</p>
+<p>Confessing to Ke Yan first — but the person seated there said nothing, and Jiang Qi paused, puzzled.</p>
+<p>Then it came to him: the bed beneath him wasn't as soft as the one at home, and the person sitting there didn't seem to be Ke Yan.</p>
+<p>"You're awake?" The moment the voice spoke, Jiang Qi knew it wasn't Ke Yan's — Ke Yan never spoke to him so coldly; Ke Yan's voice to him was always full of warmth.</p>
+<p>"Mm — Uncle?" The voice told him it was Ke Xin.</p>
+<p>"You — why do you do as Ke Yan says about drinking?" Ke Xin asked, picking up on what Jiang Qi had just said.</p>
+<p>"Ah? That, um…" The question stumped him, and for some reason he suddenly felt Ke Xin's manner toward him was different, a tautness in the air.</p>
+<p>"What exactly is your relationship with Ke Yan." Ke Xin's voice grew colder.</p>
+<p>"I…" Jiang Qi had a feeling — did Ke Xin know? But then again, maybe not?</p>
+<p>"I — Ke Yan and I…" His head wasn't keeping up; he didn't know what to say.</p>
+<p>"Since you're awake, come down and have some sobering soup." Ke Xin cut off whatever Jiang Qi was about to say, stood, and went downstairs.</p>
+<p>Jiang Qi got up quickly, meaning to call Ke Yan — then remembered he'd forgotten his phone.</p>
+<p>Downstairs, he saw a bowl of sobering soup on the table but no Ke Xin. He drank it down in one go and asked Auntie Li in the kitchen, "Auntie Li, where's Uncle?"</p>
+<p>"In the study. Did you drink the soup?"</p>
+<p>"Mm, I did."</p>
+<p>He found the study, hesitated at the door, then knocked.</p>
+<p>"Come in."</p>
+<p>Jiang Qi took a breath and went in.</p>
+<p>Ke Yan had clocked off early today and gone straight to the old house, but stepping in he saw only Auntie Li and the servants, no one else.</p>
+<p>"Where's Jiang Qi?" Ke Yan set down his briefcase.</p>
+<p>"In the second-floor study, I expect — he was just asking me where you were."</p>
+<p>Ke Yan nodded and headed up.</p>
+<p>Jiang Qi entered the study tense. Ke Xin stood looking out the window, saying nothing, the silence heavy.</p>
+<p>"Uncle." Jiang Qi stood across from him. "Uncle, first I have to say I'm sorry."</p>
+<p>Ke Xin said nothing.</p>
+<p>"You have a wonderful son — but because of me he's become a homosexual, a homosexual that society doesn't accept, that people look down on. But I really do love him very much."</p>
+<p>"How did you know I'd found out about you and Ke Yan?"</p>
+<p>"I wasn't sure, but I wanted you to know. You must have sensed something. The truth is, I'm afraid of you because Ke Yan and I are lovers, so seeing you makes me nervous. I hadn't planned to tell you so soon, but we intend to spend our lives together. You would have to know eventually. I hope you can accept us." Terrified and not entirely coherent, Jiang Qi still strained to lay his heart bare.</p>
+<p>"Are you so certain Ke Yan will love you all his life? That he won't fall for someone else? That he won't leave you under the pressure? If he lost all his money and power — would you still stay with him?" Ke Xin spoke with a rare urgency.</p>
+<p>"Ke Yan will love me all his life. He always lays his heart before me; no one knows his feelings better, and I believe him. He won't leave under pressure either—you know what kind of man he is. I don't love his money or power. Without either, no pressure could separate us. Even if we were poor and life were hard, being with Ke Yan would be enough."</p>
+<p>Ke Xin looked at Jiang Qi, the same age as his son, and saw in his eyes such certainty, such faith in the words he spoke, such faith in Ke Yan and… in himself.</p>
+<p>It had been many years since Ke Xin had seen eyes like that.</p>
+<p>"And if I said I won't agree to the two of you being together?"</p>
+<p>"Then we'll work to make you agree."</p>
+<p>"If you insist on being together regardless, isn't my agreement neither here nor there?"</p>
+<p>"No — if you don't agree, both Ke Yan and I will be miserable."</p>
+<p>"And insisting on being together, with no thought for your parents' feelings — isn't that selfish?"</p>
+<p>"I am selfish. I selfishly believe being together matters more, believe parents ought to understand us. So I really am sorry."</p>
+<p>"Dad, I'm sorry." Ke Yan had reached the study door just in time to hear Jiang Qi call himself selfish, and his heart ached. He opened the door and came in.</p>
+<p>He took Jiang Qi's hand and found it ice-cold, and thought: this fool is surely frightened and putting on a brave front.</p>
+<p>"Don't say any more," Ke Xin said, rising.</p>
+<p>"Dad, I want to say it. I love Jiang Qi. I won't leave him. I hope you can support us — and if you don't, I still won't leave him. He matters more to me than my own life. We'll head home for now. I hope you'll think it over."</p>
+<p>Ke Yan led Jiang Qi out, and neither spoke until they were in the car. Ke Yan stroked Jiang Qi's face, and Jiang Qi, as if only just coming back to himself, threw himself into Ke Yan's arms. "I was so scared."</p>
+<p>"Don't be afraid. I'll be by your side always." Ke Yan held him tight.</p>
+<p>"Mm." Jiang Qi nodded. "Let's go home."</p>
+<p>"All right."</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-109.html" class="prev">Chapter 109</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-111.html" class="next">Chapter 111</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

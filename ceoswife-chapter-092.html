@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 92: Feeding &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 92</h1>
+    <p class="chapter-title">Feeding <span class="zh">喂食</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Yang Shaoyu's daily routine now was to run to the hospital — at noon, in the evening — but since he didn't know Lin Zirui's night-shift schedule, sometimes when he went over in the evening Lin Zirui had already gotten off and gone home, so Yang Shaoyu made the trip for nothing; still he kept at it tirelessly, content if he could just see Lin Zirui once.</p>
+<p>This day, off work, Yang Shaoyu went to the hospital as usual to find Lin Zirui; he looked in his office — no one there.</p>
+<p>Assuming Lin Zirui was doing rounds, Yang Shaoyu checked the several rooms Lin Zirui was responsible for — still no one.</p>
+<p>Where was he? Lin Zirui usually wasn't off work yet at this hour; Yang Shaoyu went to ask the nurses at the station.</p>
+<p>"Oh, here to find Doctor Lin again? Doctor Lin's gone into surgery; he probably won't be out for another two hours." Most of the orthopedics nurses knew Yang Shaoyu by now; everyone knew Yang Shaoyu came every day to take Doctor Lin to meals — though mostly Doctor Lin went off to eat on his own and ignored Yang Shaoyu.</p>
+<p>"How long has he been in there?"</p>
+<p>"Nearly an hour, probably." The nurse checked the time.</p>
+<p>"Then hasn't he gone without eating?" Yang Shaoyu checked the time too; by the time Lin Zirui came out it'd be past dinnertime, and he'd surely be hungry.</p>
+<p>Yang Shaoyu went back to Lin Zirui's office, thinking to wait a while and then go out to buy Lin Zirui some food.</p>
+<p>Lin Zirui's office was very plain; apart from hospital-related things, there were hardly any personal items.</p>
+<p>Not even a single photo, and few decorations on the desk.</p>
+<p>Yang Shaoyu opened Lin Zirui's drawer to see what was inside.</p>
+<p>In the left drawer, the first thing to catch his eye was a flat glass jar; the time he'd taken chocolate before, Yang Shaoyu hadn't looked carefully, but this time he looked closely — it wasn't glass but crystal, a very fine jar.</p>
+<p>Only two or three chocolates were left in the jar, probably because Lin Zirui had eaten them and not yet bought more; besides the chocolate there was a phone, a wallet, and some other items — probably left in the drawer because he'd gone into surgery.</p>
+<p>Finding nothing else, Yang Shaoyu closed the drawer and tugged at the one on the right. It resisted, then opened on the second try, crammed to the top with papers. He thought of the nearly empty drawer beside it. So this was how Lin Zirui organized things.</p>
+<p>Having seen the drawers, Yang Shaoyu checked the time — time to go buy dinner.</p>
+<p>Before buying dinner, Yang Shaoyu went to the supermarket to pick out chocolate for Lin Zirui; Lin Zirui ate quite a few kinds — Yang Shaoyu had noticed from the wrappers each time Lin Zirui ate chocolate.</p>
+<p>He found several kinds and bought a little of each.</p>
+<p>One last kind left, Lin Zirui's favorite; pushing a cart, in his suit, Yang Shaoyu searched the supermarket.</p>
+<p>The outfit drew quite a few sidelong glances — shopping for groceries dressed so formally? It seemed a bit odd.</p>
+<p>Actually there was someone dressed just as oddly as Yang Shaoyu, unbeknownst to him; Yang Shaoyu finally found the last box of that chocolate on the shelf and reached for it.</p>
+<p>Suddenly another hand grabbed a corner of the chocolate box at the same time as Yang Shaoyu.</p>
+<p>Yang Shaoyu looked at the other person; the other looked at Yang Shaoyu; neither would give way.</p>
+<p>The man dressed the same as Yang Shaoyu said, "My little brother loves this kind of chocolate best; buy another kind."</p>
+<p>"My sweetheart likes it; I can't let it to you."</p>
+<p>"You— wait a moment." The man was about to say more when his phone suddenly rang.</p>
+<p>The man answered; Yang Shaoyu checked the time — if he didn't get back soon Lin Zirui would be out of surgery.</p>
+<p>He took the chocolate and left; the man, seeing Yang Shaoyu take the chocolate, was about to call out to stop him, but the person on the phone forced him to deal with them; by the time he hung up Yang Shaoyu was long gone.</p>
+<p>"Brat." This man dressed the same as Yang Shaoyu was, in fact, second brother, on his way to see Lin Zirui; he'd meant to buy Lin Zirui some chocolate, but the last box of that one kind had been bought out from under him.</p>
+<p>After buying the chocolate, Yang Shaoyu went to buy Lin Zirui noodles.</p>
+<p>Lin Zirui liked noodles; Yang Shaoyu hadn't much cared for them before, but over these days of following Lin Zirui around for lunches and dinners, he'd noticed Lin Zirui ate noodles fairly often.</p>
+<p>Yang Shaoyu drove to a noodle shop near the hospital and packed the same noodles for Lin Zirui and himself.</p>
+<p>When he got back to the hospital Lin Zirui was still in surgery.</p>
+<p>Yang Shaoyu first put the chocolate and noodles in the office, then went to wait outside the operating room for Lin Zirui to come out.</p>
+<p>He wasn't the only one outside the operating room; there were patients' families too. Yang Shaoyu sat composedly across from them; the families looked at Yang Shaoyu, wondering who he was.</p>
+<p>Yang Shaoyu waited ten minutes, and Lin Zirui finally came out; pale-faced, he told the patient's family the surgery had gone well.</p>
+<p>That said, he made to go rest in his office, then eat.</p>
+<p>He'd walked a couple of steps when his legs suddenly went weak; just as he thought he'd fall, someone caught him.</p>
+<p>He looked blankly at the Yang Shaoyu holding him up, then pushed him away.</p>
+<p>He hadn't eaten since morning; though he had no appetite now, his stomach was very hungry, and he had no strength.</p>
+<p>Yang Shaoyu stuffed a piece of the chocolate he carried into Lin Zirui's mouth; Lin Zirui ate it but ignored Yang Shaoyu and went on toward his office.</p>
+<p>Walking into the office he caught the smell of tomato and egg; he looked at the noodles on the table, then at the Yang Shaoyu following behind him.</p>
+<p>Yang Shaoyu pulled Lin Zirui to sit down and urged him to eat.</p>
+<p>Lin Zirui looked at the noodles — a bit soggy now; Yang Shaoyu hadn't noticed before. "Eat a bit first; I'll go buy another bowl."</p>
+<p>"No need." Lin Zirui picked up the chopsticks and ate; probably famished, he finished in no time, gave a burp, then opened the drawer.</p>
+<p>He'd meant to get his wallet, but seeing the jar full of chocolates, he couldn't help glancing at Yang Shaoyu, then without hesitation took out his wallet, pulled out two hundred yuan, and handed it to Yang Shaoyu.</p>
+<p>Yang Shaoyu took it with a wry smile, not refusing — because he'd refused before and Lin Zirui had insisted on giving it.</p>
+<p>After the noodles he stayed at Lin Zirui's a while longer, then was chased off by Lin Zirui, who was on night shift.</p>
+<p>Yang Shaoyu's heart ached — why always night shift; he was thin to begin with, and being run ragged like this only made him thinner.</p>
+<p>Not long after Yang Shaoyu left, second brother came with food, taking it out as he said, "I could've come earlier, but something came up; also, I didn't get the chocolate you like this time — it got bought out by some brat." Second brother handed Lin Zirui the chocolate.</p>
+<p>Lin Zirui took the chocolate, looked at the food on the table, gave a burp — already full, couldn't eat any more.</p>
+<p>In the end second brother took all the food back home; second brother even worried over why Lin Zirui's appetite was so poor, never knowing his little brother had already been fed full by the very "brat" he'd cursed.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-091.html" class="prev">Chapter 91</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-093.html" class="next">Chapter 93</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

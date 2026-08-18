@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 61: The Wedding Banquet (Part One) &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 61</h1>
+    <p class="chapter-title">The Wedding Banquet (Part One) <span class="zh">喜宴上</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~8 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Jiang Qi hadn't expected to see Xue Cheng again the next morning — still with the same two people, and at the worst possible hour.</p>
+<p>Then again, it was understandable; probably never managing to see Ke Yan had driven them to it.</p>
+<p>"Jiang Qi."</p>
+<p>Not only had Jiang Qi seen Xue Cheng — Xue Cheng had seen Jiang Qi, and came over smiling to greet him.</p>
+<p>About to step into the elevator, Jiang Qi had to stop.</p>
+<p>"Jiang Qi, I meant to ask yesterday — what's your position at Ke Group? I was going to ask then, but we got to chatting and I forgot."</p>
+<p>"Oh, I'm just a department manager, nothing worth mentioning."</p>
+<p>"Oh." Xue Cheng lowered his brows in thought, wondering who the owner of that luxury car could be — perhaps even someone at the same company as Jiang Qi.</p>
+<p>"Xue Cheng? What are you thinking about?" Seeing Xue Cheng suddenly fall silent, head down as if pondering something, Jiang Qi called to him.</p>
+<p>"Oh, nothing — I'll treat you to a meal next time; let's not chat now, another time."</p>
+<p>"Mm, all right."...</p>
+<p>"Xue Cheng, you think that hooking the Lin family's second daughter will let you become their son-in-law as you please? What — now you've come to me for something? Asking me to help you? Dream on."</p>
+<p>Jiang Qi looked at the cup in his hand, hesitating whether to go in; he seemed to have accidentally become an eavesdropper.</p>
+<p>He listened a moment more; the other party seemed to have hung up, and looked about to come out. Jiang Qi glanced left and right, then quickly backed up several big steps and walked slowly toward the tea room, wearing an expression as if he'd only just appeared at the tea-room door.</p>
+<p>At least that was what Luo Peipei, coming out of the tea room, took it to be, relieved inwardly that the call had ended.</p>
+<p>"Manager Jiang." Luo Peipei greeted Jiang Qi with a smiling little bow.</p>
+<p>Jiang Qi nodded and went into the tea room.</p>
+<p>Luo Peipei had been at Ke Group quite a few years; before Jiang Qi became a department manager the two had even been colleagues for a stretch.</p>
+<p>Pouring his water, Jiang Qi thought he'd heard Luo Peipei say the two characters "Xue Cheng" — could they have known each other before?</p>
+<p>Xue Cheng had called Luo Peipei from necessity: Lin Yinyin's father, Lin Zhengxiong, opposed their relationship.</p>
+<p>But Xue Cheng was unwilling to let the power within his grasp slip away just because of Lin Zhengxiong's disapproval; Lin Zhengxiong simply couldn't stand him, though, so Xue Cheng went to Lin Yinyin to have her think of something.</p>
+<p>Lin Yinyin thought it over and said, "I don't really know what my dad wants most, but I do know he's long wanted to do business with Ke Group and never gotten the chance."</p>
+<p>"Right." Hearing this, Xue Cheng cheered inwardly — there was a play here.</p>
+<p>Business with Ke Group was notoriously difficult, but Xue Cheng believed sufficient determination could accomplish anything.</p>
+<p>But by the time he'd been to Ke Group several times without managing to meet Ke Yan even once, he knew he'd been overconfident — he didn't even know what the man looked like; how was he to talk business?</p>
+<p>Yet he'd promised Lin Yinyin he'd surely succeed this time in getting her father to accept him. Worst of all, Lin Zhengxiong knew about it too, and was waiting to watch him make a fool of himself.</p>
+<p>Too proud to be looked down on, Xue Cheng redoubled his visits — without result, until even his two subordinates grew impatient. When he suggested they stop accompanying him, they hastily hid it; he could dismiss them with a word.</p>
+<p>So the group made another trip to Ke Group, only this time they happened to run into Jiang Qi. The earlier visits had been during working hours; the time they met Jiang Qi was at quitting time, because, never managing to catch Ke Yan, Xue Cheng had figured he could catch him when Ke Yan got off work — forgetting that Ke Yan took a private elevator down to the basement parking garage.</p>
+<p>Though Xue Cheng now knew Jiang Qi had a rich friend, it wasn't yet the time to make use of it; before he'd sized the other up, Xue Cheng wouldn't act rashly.</p>
+<p>So what to do? Xue Cheng remembered his ex-girlfriend seemed to work at Ke Group, and called to reach her, asking her to keep an eye out for any of Ke Yan's likes, so he might have a chance to ingratiate himself. Though he'd been refused, Xue Cheng knew that with a bit more sweet-talking, Luo Peipei would help him...</p>
+<p>Meanwhile, here — "Jiang Qi, are you coming to our gathering this time?"</p>
+<p>Today Jiang Qi got a call from Liu Hao.</p>
+<p>"Right — the class beauty from before is getting married; she says it's a good chance for us all to get together. Quite a few people are going that day; will you come?" Liu Hao said.</p>
+<p>"I'll come; let's go together." Jiang Qi agreed at once; after graduation, apart from Liu Hao and Meng Qing, he hadn't been in touch with the others in ages.</p>
+<p>"Good, I rather want to go too. Oh, right — you can bring family or a friend; will you bring Ke Yan?" Liu Hao teased.</p>
+<p>Jiang Qi thought a moment and replied, "Let me see."</p>
+<p>Not long after he'd hung up with Liu Hao, Jiang Qi got the invitation; since they hadn't seen each other in years and no one knew where the others lived now, it was all sent by email.</p>
+<p>Getting the email, Jiang Qi asked Ke Yan, "Do you want to go?"</p>
+<p>Ke Yan glanced at it. "I'll pass. Go easy on the drinking."</p>
+<p>"Mm, I know."</p>
+<p>Jiang Qi looked at the email again and found it listed which old classmates had been invited; looking over the names, he was surprised to find Ye Xingwei was going too.</p>
+<p>"Ke Yan, Ke Yan, I didn't expect Ye Xingwei to go — I haven't seen him in so long."</p>
+<p>Reading his book, Ke Yan heard this, moved his eyes from the page to Jiang Qi's screen, and sure enough there was Ye Xingwei's name. Seeing Jiang Qi's faintly excited face, Ke Yan couldn't help asking, "Are you happy to see Ye Xingwei?"</p>
+<p>"Mm." Jiang Qi nodded, not catching the faint trace of vinegar in Ke Yan's words.</p>
+<p>Jiang Qi went on, "We were dorm-mates back then; I haven't seen him in so long, no idea how he's been."</p>
+<p>"I'll come with you that day," Ke Yan added.</p>
+<p>"Didn't you just say you weren't going?" Jiang Qi looked at Ke Yan, puzzled.</p>
+<p>Ke Yan lowered his head and cleared his throat. "I'll keep you company after all."</p>
+<p>Ke Yan hadn't forgotten that Ye Xingwei used to like Jiang Qi; though he probably didn't anymore, seeing Jiang Qi this excited, better to go together.</p>
+<p>Jiang Qi was still puzzled why Ke Yan had suddenly changed his mind, but he was glad Ke Yan could come with him.</p>
+<p>Soon the day of the wedding banquet arrived. Jiang Qi dressed in a suit as he did for work, only swapping his tie for a more festive one.</p>
+<p>And Ke Yan — Jiang Qi snuck a glance at him — dressed no differently than for work, yet a suit on him simply felt one of a kind.</p>
+<p>Sure enough, when a person is good-looking even their clothes look good.</p>
+<p>The banquet started at noon, but the hotel hosting it was rather far from Jiang Qi and Ke Yan's home, so the two set off bright and early.</p>
+<p>Ke Yan didn't drive himself today but had the chauffeur drive, because Jiang Qi worried both of them might drink, and if they got drunk there'd be no one to drive, so he'd had Ke Yan let the chauffeur take them.</p>
+<p>The chauffeur, Driver Wang, was Ke Yan's own hire rather than one from the old residence. He was among the few who knew about the relationship; no one had told him, but the couple hardly hid it. Shrewd enough to say nothing and treat Jiang Qi with growing respect, he pleased Ke Yan and remained their driver for years.</p>
+<p>Having driven nearly all morning, they finally arrived before the banquet began. Stepping out of the car, Jiang Qi saw the heart-shaped balloons and roses set out in front of the hotel.</p>
+<p>Being a wedding, the hotel's exterior was decorated very prettily and very romantically.</p>
+<p>Jiang Qi was looking at the decorations when he suddenly felt someone standing beside him; assuming it was Ke Yan, he said, "Ke Yan, look, they've decorated this so nicely."</p>
+<p>"It is nice." A voice came from beside him — but not Ke Yan's. Jiang Qi turned and found, to his delight, that it was Ye Xingwei. "Long time no see, Ye Xingwei."</p>
+<p>Ye Xingwei, accustomed these past two years to being called "CEO Ye," was startled for a moment to hear someone call his name in so casual a tone, then smiled, and reached out to ruffle Jiang Qi's soft-looking hair. His hand was halfway there when another hand suddenly blocked it. Ye Xingwei looked at the hand's owner, and his face turned ugly at once — it was Ke Yan!!!!!</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-060.html" class="prev">Chapter 60</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-062.html" class="next">Chapter 62</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

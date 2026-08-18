@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 74: The Discovery &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 74</h1>
+    <p class="chapter-title">The Discovery <span class="zh">发现</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">I'm Xiao Feng — Xiao Feng is what most people call me, but my real name is Feng Mi. Why "Feng Mi"? Because my family back home produces honey, so when my dad was naming me he just named me Feng Mi, a homophone for "bee honey."</p>
+<p>From childhood, I studied hard. That effort took me out of the countryside and into a top university, where I worked harder still. Heaven finally rewarded me with a position at Ke Group as one of the CEO's secretaries. The job is tiring, but the pay and conditions are excellent, and our team works happily together. I think it's a very good job.</p>
+<p>Speaking of which, I have to say something about my boss, the CEO of Ke Group. The first time I laid eyes on him I was struck dumb, because he really is so handsome; I'd genuinely never seen anyone that good-looking in real life, and so, never having been in love, I couldn't help a little stir of feeling — though that little notion was thoroughly "ground down" under the boss's stern, cold treatment.</p>
+<p>Still, cold and stern as this boss is, he's far better than my friend's boss.</p>
+<p>In any case, I really do love this job — but I think I may not be able to keep doing it; not that I don't want to, but that I'm very likely going to be fired, and the reason goes back to a secret of the CEO's that I accidentally discovered two days ago...</p>
+<p>Because she'd urgently needed the toilet, Xiao Feng had gone to use the one at Ke Yan's home. After finishing and washing her hands, she looked in the mirror and only then realized her makeup had melted quite badly, so she opened her little carry-bag, took out her cosmetics, and started fixing it.</p>
+<p>The touch-up took a little time, so when Xiao Feng came out of the toilet she found, of all things, that the sofa where only the CEO had been sitting now held two people, and the other person was sitting on the CEO's lap, the two of them being intimate, the man nestled in the CEO's arms — which Xiao Feng found unthinkable. From the back-and-side angle she even thought the CEO's expression looked rather... gentle.</p>
+<p>No, no, no — Xiao Feng rubbed her eyes, thinking she must have seen wrong, because she was a bit nearsighted, so she firmly decided she'd misseen, rubbed her eyes, softened her steps, and went a little closer to look.</p>
+<p>That man's back looked rather familiar — like she'd seen him somewhere; the hairstyle too seemed familiar — the more she looked the more familiar, as if she really had seen him somewhere...</p>
+<p>Suddenly, that man tipped his head up and kissed Ke Yan...</p>
+<p>Now Xiao Feng saw clearly...</p>
+<p>Wait! Wait! Isn't that — isn't that Manager Jiang?</p>
+<p>Xiao Feng swallowed; she hadn't seen wrong, had she — she asked herself, though in her heart she knew she hadn't.</p>
+<p>Xiao Feng felt her legs tremble, harder and harder. No — she hadn't seen wrong; it really was Manager Jiang. Now Xiao Feng saw it clearly, and felt she might faint, her legs shaking till they didn't feel like her own.</p>
+<p>Over here, Jiang Qi, kissing Ke Yan, lifted his head and saw Xiao Feng standing behind Ke Yan staring at them as if her soul had been sucked out. Jiang Qi froze, and asked reflexively, "Xiao Feng, what's wrong?" Then he sensed something off. "Why are you here?" And only at last realized he was sitting on Ke Yan's lap; he quickly got down, glanced at Xiao Feng, and asked Ke Yan, "How is Xiao Feng here?"</p>
+<p>"She came to bring me documents." Ke Yan pointed at the documents scattered on the table.</p>
+<p>"Then why didn't you tell me just now?" Jiang Qi asked, annoyed.</p>
+<p>"I forgot she was still in the house." Ke Yan really had forgotten Xiao Feng was still there; absorbed in the documents earlier, he hadn't paid attention, and once Jiang Qi came down he'd forgotten the Xiao Feng who'd gone to the toilet entirely.</p>
+<p>"You — you saw it all?" Jiang Qi guessed Xiao Feng must have seen, but asked anyway.</p>
+<p>Xiao Feng looked at the Manager Jiang questioning her, and the CEO eyeing her coldly, and suddenly thought of TV plots — someone discovers the villain's secret and so gets silenced, killed to keep the secret.</p>
+<p>Could it be her beauty was ill-fated, and she'd be killed today? And her body destroyed to leave no trace?</p>
+<p>At this thought Xiao Feng panicked, her head going hot, and hurried to feign that she'd seen nothing, saying, "Ah, I didn't see anything, really nothing at all, I didn't see Manager Jiang sitting on the CEO's lap, didn't see Manager Jiang and the CEO kissing, didn't see your affair — please, please don't kill me."</p>
+<p>Jiang Qi "..."</p>
+<p>Ke Yan "..."</p>
+<p>Kill her? The child's been scared out of her wits.</p>
+<p>"Ahem, calm down." Jiang Qi cleared his throat, cutting off whatever Xiao Feng was about to say next. "We won't kill you."</p>
+<p>Huh? Had she said they'd kill her? Well — seemed she had, and moreover she'd blurted everything right out; she slapped her own face hard, nearly weeping at her own stupidity.</p>
+<p>"Sit down." Ke Yan pulled Jiang Qi to sit, and had Xiao Feng sit too.</p>
+<p>Stiff all over, Xiao Feng walked to the sofa and sat.</p>
+<p>"I, I won't say anything."</p>
+<p>"It's fine even if you do." Ke Yan said indifferently.</p>
+<p>Xiao Feng glanced at Ke Yan, then at Jiang Qi; right now she wanted badly to go home, so she made a frightened face at Jiang Qi.</p>
+<p>The reason Xiao Feng made the frightened face at Jiang Qi was that she'd judged Jiang Qi easier to talk to than Ke Yan; sure enough, seeing it, Jiang Qi spoke up. "Stay and have a meal before you go."</p>
+<p>"Huh?" No, no, no, she didn't want to stay for a meal; she wanted to go right now.</p>
+<p>Xiao Feng wanted to refuse but didn't dare, and could only nod.</p>
+<p>Just then Auntie Li had finished cooking and called everyone to eat.</p>
+<p>This meal, Xiao Feng ate without tasting a thing.</p>
+<p>Leaving aside Xiao Feng eating her tasteless meal here, let's talk about how Yang Shaoyu's blind date over there was going.</p>
+<p>Yang Shaoyu had gone straight from the company, too lazy to change his clothes — they were all suits anyway, change or not.</p>
+<p>Reaching the agreed restaurant, Yang Shaoyu called his mom. "Hello, Mom, where's the person?"</p>
+<p>"You're here? I was afraid you'd run off. The one in blue sitting by the second-floor window — that's her."</p>
+<p>Yang Shaoyu hung up and went up to the second floor, and at the window saw a person in blue, looking out the window, lost in thought — but he hadn't seen wrong, had he? That person was a man? Since when had his mom gotten so progressive? But the one he liked was women.</p>
+<p>He sat down, and the man across from him turned his gaze from the window to Yang Shaoyu.</p>
+<p>"You're Miss Lin's..." Yang Shaoyu asked.</p>
+<p>"Oh, hello, I'm her older brother; she today..." The man pursed his lower lip, clearly not knowing how to go on.</p>
+<p>"She had something come up today and couldn't make it?"</p>
+<p>"Yes — she has a message for you. She says she, um, that, she doesn't like you, so... she can't come to the blind date."</p>
+<p>"Is that so?" Yang Shaoyu gave a cold laugh — he hadn't expected to see the day a woman turned him down.</p>
+<p>"Sorry, my sister's being childish."</p>
+<p>"What's your name?"</p>
+<p>"Me? Lin Zirui."</p>
+<p>"Oh." Yang Shaoyu took a sip of water. He looked at the man across from him — decent-looking, in rimless glasses, fair skin, sitting there looking rather reserved.</p>
+<p>He sighed, picked up the menu on the table, and started ordering — he was hungry, as it happened.</p>
+<p>"My treat; what do you want to eat?" Lin Zirui asked, seeing Yang Shaoyu pick up the menu.</p>
+<p>"Then I won't stand on ceremony."</p>
+<p>"Mm, don't."</p>
+<p>Yang Shaoyu glanced at Lin Zirui again, and found the man really was rather nice-looking.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-073.html" class="prev">Chapter 73</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-075.html" class="next">Chapter 75</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

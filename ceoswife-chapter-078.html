@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 78: A Leg Rub in the Dead of Night &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 78</h1>
+    <p class="chapter-title">A Leg Rub in the Dead of Night <span class="zh">半夜揉腿</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">"Knock-knock—" Lin Zirui was going over a patient's chart in his office when two raps came at the door.</p>
+<p>"Come in."</p>
+<p>The door opened, but whoever came through didn't say a word — only set something down on the desk. Lin Zirui glanced up to find a thermos in front of him; he glanced up again and saw Big Brother Lin standing there. He blinked, then smiled. "Big Brother. What brings you here?"</p>
+<p>"Brought you some soup. I had a function nearby, and I figured you probably hadn't eaten, so I had them pack this up for you. The soup here is good — drink plenty of it, it's good for you."</p>
+<p>"Mm. Thanks, Big Brother."</p>
+<p>Big Brother Lin gave a rueful little smile. Xiao Rui was always like this with him — unfailingly polite, never warm. It probably traced back to that thing from when they were children. Xiao Rui would smile at him, thank him, call him Big Brother — and yet he would have given anything for Xiao Rui to drop the courtesy and treat him like family.</p>
+<p>The thought left him feeling faintly wounded, and a sigh escaped him before he could stop it.</p>
+<p>Lin Zirui shot him a look. "Go on home and rest. You reek of liquor. Cut back on the drinking from now on — and whatever you do, don't get behind the wheel after you've had a drink." Having said all that, Lin Zirui realized it was the first time in all these years he'd fussed over anyone like somebody's old mother.</p>
+<p>"Mm, I hear you. I'll head home and turn in, then." Big Brother Lin's face lit up with a smile — it wasn't often Xiao Rui showed him any concern.</p>
+<p>Once Big Brother Lin had gone, Lin Zirui uncapped the thermos and took a couple of sips. He really had forgotten to eat tonight — chiefly because the hospital cafeteria food was terrible, and he couldn't be bothered to go back out for anything.</p>
+<p>He finished the soup and ate the meat at the bottom too, then let out a satisfied burp.</p>
+<p>A mouthful of water, and he decided to look in on Yang Shaoyu, see whether he was awake. The anesthetic would have worn off by about now, and the wound would be starting to hurt.</p>
+<p>"How are you doing?" Lin Zirui pushed open the door to Yang Shaoyu's room and found him, sure enough, with his brows knit. "Does it hurt a lot?"</p>
+<p>"You're here. Yeah, it hurts."</p>
+<p>Lin Zirui dragged a chair over and sat down. "Want some water?" The caregiver had already fallen asleep on the sofa to one side, so he asked it casually.</p>
+<p>"Sure. You feed it to me."</p>
+<p>Lin Zirui paused. He picked up the cup from the table, decided the water was a touch too cold, topped it off with some hot, fetched a fresh straw from the drawer and put it in the cup, holding the other end out for Yang Shaoyu to drink from.</p>
+<p>Yang Shaoyu watched the whole performance in silence, a small warmth kindling in his chest.</p>
+<p>When he'd finished, Lin Zirui looked over the leg and asked, "Anything bothering you besides the pain?"</p>
+<p>"No."</p>
+<p>"Oh." With nothing more to say, Lin Zirui figured he might as well head off. He was on the point of leaving when Yang Shaoyu spoke up again. "This room is genuinely miserable to be stuck in."</p>
+<p>"Of course it is. The bed's uncomfortable, it's noisy, the food's bad — and above all, it's nothing on being at home."</p>
+<p>"You know the beds are uncomfortable to lie on?" Yang Shaoyu asked, amused.</p>
+<p>"I do. Patients complain about it all the time." Lin Zirui made a face.</p>
+<p>"I'm telling you, it's not just that the leg hurts — propped up like this it's wretched. Aches and pins-and-needles both." Yang Shaoyu wasn't the type to fear a little pain or go in for complaining, but something about Lin Zirui made him feel at ease, and he couldn't help running on a bit.</p>
+<p>Hearing it, Lin Zirui got up and kneaded the leg for him, and seeing that it seemed to bring him some relief, slowly settled into working at it.</p>
+<p>"If it's bad again tomorrow, have the caregiver rub the leg for you. It helps a lot."</p>
+<p>Yang Shaoyu's eyes fixed on the hand kneading his leg — very pale, the fingers long and slender, very fine… and it felt very good.</p>
+<p>"You've got a good temperament, you know that? Want me to set you up with a girlfriend? If I were a girl, I'd think you made pretty good boyfriend material." Yang Shaoyu said it as a joke.</p>
+<p>"…" Yang Shaoyu's words skipped Lin Zirui's pulse a beat or two, and the hand pressed a shade harder.</p>
+<p>But he came back to himself quickly enough, and the pressure of his hand evened out again.</p>
+<p>Nothing showed on his face — yet inside, everything had gone to disorder.</p>
+<p>That was right; he was gay. He couldn't even remember when he'd worked it out, though he did still remember how: he'd noticed that boys were always more appealing than girls, better than girls, that girls got on his nerves — and then one day it had clicked, the question of whether there was something not quite right about him.</p>
+<p>He gave a wry, self-mocking little smile, then looked over at Yang Shaoyu — eyes shut, asleep. The man really could sleep. Lin Zirui worked at the leg a while longer before he left the room.</p>
+<p>The next day Lin Zirui could finally go home. Before heading out he fished a chocolate from his drawer and ate it; he'd always run a little low on blood sugar, no help for it — and as luck would have it, he didn't even like sweet things.</p>
+<p>By the time Lin Zirui got home the Lin family was in the middle of breakfast. Spotting him, Second Brother Lin said, "Hurry up and eat, you haven't had anything yet, have you? Did you have your chocolate this morning? Or you'll be feeling rough again." These last few years Second Brother Lin had grown even more of a nag than Big Brother — anything at all and he had to get his two cents in.</p>
+<p>Lin Zirui washed his hands and sat down, took a sip of milk.</p>
+<p>"Third Brother, you smell like hospital disinfectant all over — it's awful," said Lin Le, the youngest of the Lin children, the little sister, pinching her nose in distaste.</p>
+<p>"Zirui, go up and take a shower first. Breakfast can wait a bit," Mother Lin said at once.</p>
+<p>Lin Zirui frowned, but before he could get a word out it was Second Brother Lin, across the table, who weighed in. "Xiao Rui's gone hungry all night — what shower? Obviously he eats first. You, though, Xiao Le — didn't you say you were on a diet? Stop eating and go study. You're about to graduate university; do a little reading once in a while instead of nothing but shopping for clothes every single day."</p>
+<p>"What kind of talk is that," Father Lin scolded.</p>
+<p>"All three of you are her older brothers. Zirui, whatever your sister says, you're to give way to her," Mother Lin added in turn.</p>
+<p>"Xiao Rui, eat up." Not having heard a word of it, Big Brother Lin poured Lin Zirui another glass of milk.</p>
+<p>Lin Le slapped the table and stood. Big Brother and Second Brother only ever knew how to give in to Third Brother — neither of them had any tenderness to spare for her. To Lin Le, who'd been doted on by their parents from the cradle, the unfairness of it rankled badly.</p>
+<p>Seeing that Lin Le had stopped eating, Father and Mother Lin had no kind looks left for Lin Zirui either.</p>
+<p>Lin Zirui took a couple more bites and decided to go shower, then sleep the whole day through.</p>
+<p>Yang Shaoyu didn't catch sight of Lin Zirui once all day at the hospital — his day off, presumably. Bored, he watched some television, looked over the newspaper, and with truly nothing left to do, reflected that it really was better to be at work; lying here, a man would grow mushrooms from sheer idleness.</p>
+<p>He returned to the television, now tuned to a health program demonstrating mushroom-and-chicken soup. Yang Shaoyu swallowed as a sudden craving seized him, then called Jiang Qi. "I've got a hankering for soup. Have Auntie Li make me mushroom-and-chicken, would you?"</p>
+<p>"Sure. I'll bring it over this evening." Jiang Qi hung up, thinking he'd knock off early tonight and make Yang Shaoyu the soup himself — Auntie Li had taken the day off.</p>
+<p>Looked like Yang Shaoyu was in for a treat today.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-077.html" class="prev">Chapter 77</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-079.html" class="next">Chapter 79</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 144: Dependence &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 144</h1>
+    <p class="chapter-title">Dependence <span class="zh">依赖</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~6 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Too embarrassed, Jiang Qi didn't call Ke Yan all afternoon.</p>
+<p>At quitting time he was too sheepish to take the regular elevator, so he took Ke Yan's private one to the lot.</p>
+<p>Ke Yan was already waiting in the car. The moment Jiang Qi got in he asked, "How did Xiao Feng find out?"</p>
+<p>"You forgot already? When he came to deliver documents."</p>
+<p>Jiang Qi remembered Xiao Feng bringing papers to the flat and discovering them. He smacked his forehead. "How did I forget that completely? My memory's been awful lately. Maybe I need something for my brain."</p>
+<p>Ke Yan flicked him on the head.</p>
+<p>Then started the car.</p>
+<p>"What's good for the brain? Walnuts?" Jiang Qi was still on it.</p>
+<p>"No need — a bit dim is better." Ke Yan couldn't resist teasing.</p>
+<p>"I'm like this because with you I don't have to worry about anything, don't have to fret, so the unimportant things just slip my mind." Jiang Qi fretted at forgetting something so important — but then, "Ke Yan, did you forget too?"</p>
+<p>Ke Yan glanced at him, not a trace of awkwardness. "I did, actually."</p>
+<p>"You forgot too — so I'm not dim after all. Though you remembered before I did; at bottom, I'm too dependent." Jiang Qi reflected, then suddenly wanted to try not depending on Ke Yan, to see how it went. "Tonight I'm sleeping alone."</p>
+<p>"Why?"</p>
+<p>"Because I depend on you too much. And tomorrow I'm going to work on my own too."</p>
+<p>"No."</p>
+<p>"Why?" Jiang Qi protested.</p>
+<p>"I can't sleep without you, and I don't sleep well. And don't you get cold at night?" Ke Yan had no wish to sleep apart.</p>
+<p>"It's decided. The weather isn't that cold lately anyway — heating on, hand-warmer, I won't be cold. And I don't want to depend on you so much."</p>
+<p>"What's wrong with depending on me?" Ke Yan didn't understand.</p>
+<p>"It's fine, but depending on you all the time doesn't sit right — and I want to be someone you can depend on sometimes too." Jiang Qi didn't want it to run one way; he wanted, now and then, to be the one Ke Yan could lean on when tired.</p>
+<p>"…" Ke Yan was silent. He understood Jiang Qi's heart — but he'd far rather Jiang Qi simply depend on him.</p>
+<p>Neither said more, and they went home like that.</p>
+<p>It had been a while since the two had felt this close to a cold war. Even so, Ke Yan wrapped Jiang Qi's forgotten scarf around him when they left the car, and Jiang Qi still laid out Ke Yan's clothes at shower time.</p>
+<p>Still, at bedtime Jiang Qi took his pillow, set on the guest room.</p>
+<p>Ke Yan stopped him. "I'll sleep in the guest room."</p>
+<p>"No, I will." Jiang Qi insisted.</p>
+<p>Ke Yan let go and watched him leave, then lay on the bed. What were they even fighting about? Not a fight, really — just different ideas.</p>
+<p>He sighed. Dependence — he'd never given the word thought, but Jiang Qi seemed to mind it.</p>
+<p>Jiang Qi minded, so Ke Yan settled in to think it over properly.</p>
+<p>In the guest room, Jiang Qi set his pillow on the bed, turned on the heating, charged the hand-warmer.</p>
+<p>Sitting there alone, he felt lonely. He turned on the television, suddenly unsure what he and Ke Yan were fighting about—not a fight so much as Jiang Qi sulking.</p>
+<p>Once the hand-warmer had charged, he lay down. Even wrapped tightly in the quilt, he felt cold. The space beside him was painfully empty; he missed Ke Yan's warmth, his scent, his arms, his tenderness.</p>
+<p>He really didn't know what had gotten into his head, sulking at Ke Yan like this.</p>
+<p>Thinking it, Jiang Qi drifted into a hazy sleep — but never quite comfortable.</p>
+<p>Ke Yan couldn't sleep at all, turning the word "dependence" over and over. He rolled over and, by habit, reached to pull Jiang Qi in — and found only empty space.</p>
+<p>Jiang Qi was in the guest room. Without him beside him it wasn't comfortable at all.</p>
+<p>In the dead of night, the restlessly sleeping Jiang Qi suddenly felt warmth, an arm tightening at his waist, his whole self going warm and comfortable — and he seemed to catch Ke Yan's scent.</p>
+<p>He slept well the rest of the night.</p>
+<p>But waking in the morning, the first thing he saw was Ke Yan's pajamas before his eyes; looking up, Ke Yan's handsome face.</p>
+<p>No wonder he'd slept so well — Ke Yan had come in the night to hold him.</p>
+<p>He touched Ke Yan's face, regretting the inexplicable sulk. Maybe he did depend on Ke Yan too much — but as Ke Yan had said, what was wrong with that? Jiang Qi liked depending on Ke Yan after all.</p>
+<p>He kissed Ke Yan's chin, and managed to wake him.</p>
+<p>"Awake?"</p>
+<p>Hearing Ke Yan's habitual morning rasp, Jiang Qi owned his fault. "I was being unreasonable yesterday. I'm sorry."</p>
+<p>"It's not your fault. I thought about it a long while too. The truth is, I've always depended on you — depended on you to knot my tie, lay out my clothes, on holding you to sleep at night and wanting to hold you when I wake. With you beside me when I'm tired, I'm filled with energy again."</p>
+<p>"Mm, I understand now — and I think there's nothing wrong with depending on you; it feels like happiness, having someone to lean on." Jiang Qi nuzzled into his chest.</p>
+<p>Ke Yan kissed his forehead.</p>
+<p>They lay holding each other — then Jiang Qi suddenly pinched the flesh at Ke Yan's waist. "Why did you kiss me in the elevator yesterday, and get us seen, too?" The thought still mortified him.</p>
+<p>"Couldn't help myself." Ke Yan sucked in a breath; Jiang Qi pinched hard.</p>
+<p>"Hmph. Today at the company, keep your distance from me."</p>
+<p>"No need for that."</p>
+<p>Jiang Qi pinched harder. "Until everyone who saw forgets about it — until then, don't come near me at the company." Then let go.</p>
+<p>"In that case, a little compensation at home isn't too much to ask." Ke Yan made to peel off Jiang Qi's pajamas.</p>
+<p>"No — it's morning, we'll be late for work." Jiang Qi clutched at them.</p>
+<p>"It's fine. The whole company knows you're the CEO's wife now; who'd dare say anything if you're late? You're about to resign anyway — enjoy a little CEO's-wife privilege."</p>
+<p>"Even if I wanted to enjoy it, I don't want to do it in the morning." Jiang Qi held out — but was soon stripped bare by Ke Yan, kissed everywhere.</p>
+<p>And so Jiang Qi got some "vigorous exercise" first thing in the morning. By the time they left for work, they were already late; Jiang Qi was limp and aching all over and, having changed his mind, rode in Ke Yan's car.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-143.html" class="prev">Chapter 143</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-145.html" class="next">Chapter 145</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

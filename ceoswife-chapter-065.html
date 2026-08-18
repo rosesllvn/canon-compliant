@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 65: The Misunderstanding, or Whatever (Part One) &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 65</h1>
+    <p class="chapter-title">The Misunderstanding, or Whatever (Part One) <span class="zh">误会神马的上</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~6 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">When they reached the lobby, everyone was waiting. "Sorry," Jiang Qi said sheepishly.</p>
+<p>"No, no — let's eat," Fan Teng answered.</p>
+<p>Ke Yan and Jiang Qi had come down together, so if you said Jiang Qi was late, weren't you saying the same of Ke Yan? Who'd dare.</p>
+<p>That evening they ate seafood at an open-air restaurant by the water, cool sea breeze pleasing both body and appetite.</p>
+<p>Jiang Qi deftly cracked open a crab shell, picked out the roe and ate it, then broke the crab in two — half for Ke Yan, half for himself.</p>
+<p>Jiang Lü, sitting across from Jiang Qi, watched her brother's "practiced" movements and thought, excited and amazed: was her second brother just used to ingratiating himself with his boss, or used to being this close with the CEO?</p>
+<p>Xiao An, for her part, watched even more excitedly than Jiang Lü.</p>
+<p>The group split between two long tables. Jiang Qi naturally sat beside Ke Yan; Wang Siqi moved quickly enough to claim the other side.</p>
+<p>Ke Yan ate the half-crab Jiang Qi gave him, then picked out the things Jiang Qi liked, shelled them, and dipped them in sauce for him.</p>
+<p>The two's habit of paying no mind to anyone else made Wang Siqi marvel inwardly, yet she couldn't accept that Ke Yan hadn't noticed her.</p>
+<p>Glancing at the big crab before her, then at her freshly done nails, Wang Siqi deliberately said toward Ke Yan in a coy voice, "This crab's so hard to shell — I just can't manage it."</p>
+<p>She finished and looked at Ke Yan expectantly; hearing her, Ke Yan immediately shelled the crab in front of Wang Siqi, picked out the meat, dipped it in sauce, and held it to Wang Siqi's mouth. Wang Siqi ate it bashfully.</p>
+<p>Then, seeing everyone's envious looks, she grew happier still, and most pleasing of all, when she saw Jiang Qi actually staring in surprise at Ke Yan's gesture, she felt even more smug.</p>
+<p>Sure enough, Ke Yan had noticed her charm after all.</p>
+<p>Thinking this, Wang Siqi couldn't help breaking into a smile — then someone patted her shoulder. She came to and turned to look: it was Zheng Meng, a fairly good friend cum subordinate of hers. Wang Siqi asked, "What is it?"</p>
+<p>Wang Siqi's friend Zheng Meng asked with concern, "Are you all right?"</p>
+<p>Wang Siqi blinked, then realized she'd been daydreaming — and grinning like an idiot.</p>
+<p>At this Wang Siqi's face went uncomfortable for a moment, then she said stiffly, "I'm fine."</p>
+<p>That said, she glanced at the crab before her, then at Ke Yan — maybe it could work after all? What man isn't tender toward a delicate woman?</p>
+<p>After a moment's thought, Wang Siqi decided to give it a try, and said weakly, "This crab's so big, how do I even eat it?"</p>
+<p>She finished and looked at Ke Yan expectantly; Ke Yan heard Wang Siqi's voice, but paid no attention.</p>
+<p>Wang Siqi waited a good while without Ke Yan acknowledging her, bit her lip, and decided to go all in. "Ke Yan, could you shell one for me?"</p>
+<p>Before Ke Yan could answer, Jiang Qi glanced at him, his eyes saying: on a first-name basis now?</p>
+<p>Caught by Jiang Qi's faintly jealous look, Ke Yan's mood couldn't help lifting.</p>
+<p>But when he turned his face to Wang Siqi there wasn't a trace of pleasure on it, just his usual ice-cold look; he called over a nearby waiter to serve Wang Siqi.</p>
+<p>Wang Siqi smiled at the waiter; though Ke Yan hadn't shelled it for her himself, he'd at least called a waiter over — something none of the other women got, a waiter summoned just for her — and with that Wang Siqi was reasonably satisfied.</p>
+<p>Wang Siqi finished her crab while Ke Yan went on shelling Jiang Qi's. Why should he serve Jiang Qi when he hadn't served her?</p>
+<p>Couldn't a grown man like Jiang Qi shell his own?</p>
+<p>Wang Siqi glared. Jiang Qi, eating merrily, felt the stare and looked up. What had he done to earn such deep enmity?</p>
+<p>Ke Yan noticed Jiang Qi's eating had slowed, then saw he wasn't eating at all but looking at... Wang Siqi?</p>
+<p>Ke Yan followed Jiang Qi's gaze, and saw Wang Siqi give a seductive smile.</p>
+<p>Ke Yan frowned and turned Jiang Qi's face back.</p>
+<p>Jiang Qi looked at Ke Yan, puzzled; Ke Yan pinched his cheek while no one was watching.</p>
+<p>Jiang Qi asked in a low voice, "What is it?"</p>
+<p>Still asking? Ke Yan said, "What are you looking at her for?"</p>
+<p>Jiang Qi knew Ke Yan meant Wang Siqi, and said quietly, "I felt Manager Wang looking at me strangely, so I looked at her."</p>
+<p>At Jiang Qi's words Ke Yan turned and glanced at Wang Siqi, who was still smiling at him.</p>
+<p>Ke Yan turned his gaze away expressionlessly; Wang Siqi gritted her teeth — didn't Ke Yan think she looked lovely when she smiled?</p>
+<p>After dinner everyone dispersed; the sightseeing wouldn't start until the next day.</p>
+<p>Jiang Qi and Ke Yan took a stroll outside, walking to a spot thick with grass, and Ke Yan asked, "Are you over-full?"</p>
+<p>Jiang Qi gave a burp and nodded. "Stuffed."</p>
+<p>"There are digestive tablets in the room."</p>
+<p>Jiang Qi shook his head. "Let's walk a bit more; I don't want to go back so soon."</p>
+<p>"All right."</p>
+<p>Seeing no one around, Jiang Qi took Ke Yan's hand. "Ke Yan, when did you and Manager Wang get so familiar — she called you by name straight out today." Jiang Qi asked.</p>
+<p>Ke Yan glanced at Jiang Qi. "Jealous?"</p>
+<p>"No!"</p>
+<p>"I'm not familiar with her at all," Ke Yan explained.</p>
+<p>"Oh." Jiang Qi tugged the corner of his mouth.</p>
+<p>Voices came from around the corner — Jiang Lü and Xiao An. Jiang Qi dropped Ke Yan's hand and meant to stroll past casually, only to trip on a stone. Ke Yan caught him around the waist; before Jiang Qi could breathe twice, the women rounded the corner...</p>
+<p>And so, they saw Jiang Qi and Ke Yan in a clinch.</p>
+<p>What they actually saw was Ke Yan holding Jiang Qi round the waist from behind, Jiang Qi's upper body tipped slightly forward...</p>
+<p>No one spoke; the air froze for two or three seconds. Ke Yan steadied Jiang Qi; Jiang Qi gave a "haha" laugh and explained how they'd ended up in this pose, but Jiang Lü and Xiao An gave him a meaningful look, and Jiang Qi was on the verge of tears...</p>
+<p>And Ke Yan showed not the slightest intention of explaining...</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-064.html" class="prev">Chapter 64</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-066.html" class="next">Chapter 66</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

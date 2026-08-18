@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 73: Xiao Feng &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 73</h1>
+    <p class="chapter-title">Xiao Feng <span class="zh">小冯</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~6 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">When he woke the next day, Jiang Qi checked the time — long since late for work. He struggled to get up, then flopped back down weakly, glanced at the still-sleeping Ke Yan, and gave Ke Yan's arm a hard pinch; his back was killing him, and his behind burned with a raw, stinging pain.</p>
+<p>"What is it?" Ke Yan was pinched awake.</p>
+<p>Jiang Qi looked at Ke Yan with a grievance he didn't notice himself. "My behind hurts."</p>
+<p>"Hm? I put medicine on it for you last night and it still hurts? Looks like I'll have to switch ointments."</p>
+<p>"Can't you just not do it so many times?"</p>
+<p>"No." Ke Yan refused without a second thought, then got out of bed to fetch the ointment.</p>
+<p>Jiang Qi lay on his stomach watching Ke Yan's bare upper body and gave a few foolish smiles. "Ke Yan, you've got a great body."</p>
+<p>Ke Yan glanced back at Jiang Qi, who was wrapped in the quilt grinning like a fool; amused by the sight, Ke Yan smiled, found the ointment, came over, lifted the quilt, and applied it for him.</p>
+<p>Jiang Qi let Ke Yan pull his trousers down without feeling embarrassed, because Ke Yan often put medicine on him after they'd finished; over time Jiang Qi had stopped being shy about it.</p>
+<p>Ke Yan tugged Jiang Qi's trousers down a little, baring his fair, round backside — though the usually pale cheeks now bore faint handprints, and one look told Ke Yan he'd put them there last night. He gently parted them; the little place behind was red and a bit swollen. He squeezed ointment onto his fingers and rubbed it gently into Jiang Qi.</p>
+<p>Once the medicine was on, Ke Yan covered him up, looked again, and found Jiang Qi had fallen back asleep — truly worn out, it seemed.</p>
+<p>He pulled Jiang Qi's trousers back up, tucked the quilt around him, then went out of the room to call Auntie Li and have her come early today.</p>
+<p>Usually Monday through Friday Ke Yan and Jiang Qi were at work, so Auntie Li came in the evening to make a meal for them; on weekends, when they were off, she came earlier to make lunch and dinner.</p>
+<p>After calling Auntie Li, he called Yang Shaoyu. "I'm not coming in today; have Xiao Feng bring the documents over to me."</p>
+<p>"Worn out last night?" Yang Shaoyu gave a sleazy laugh.</p>
+<p>"Cut the nonsense."</p>
+<p>"All right, I'll bring them over in a bit."</p>
+<p>"Have Xiao Feng do it instead; don't you have a blind date today?"</p>
+<p>"How do you know that?" Yang Shaoyu yelped.</p>
+<p>"Your father called to ask whether you had any special work today — looks like he was afraid you'd find an excuse. This time he's dead set on you getting married."</p>
+<p>He'd actually been planning to use bringing Ke Yan the documents as an excuse to dodge the blind date; that wouldn't work now. Yang Shaoyu hung up, figuring he'd better go take a look after all.</p>
+<p>When Xiao Feng arrived at Ke Yan's home with the documents, Jiang Qi hadn't woken yet; in her high heels, drenched in sweat, Xiao Feng pressed the doorbell of Ke Yan's house.</p>
+<p>Xiao Feng had never been to Ke Yan's home; Yang Shaoyu usually handled these errands, but he was busy today. She had gotten lost, and in the heat, she reached the house drenched in sweat with her makeup melting.</p>
+<p>It was Ke Yan who came to the door; he'd meant to take the documents and send Xiao Feng off, but seeing her bedraggled state he said, "Come in and have a glass of water."</p>
+<p>Xiao Feng shot Ke Yan a grateful look — she really was parched.</p>
+<p>Xiao Feng walked into Ke Yan's home; at first she felt nothing in particular, but when Auntie Li brought juice she took it and drained the whole glass; seeing this, Auntie Li quietly brought another.</p>
+<p>Only when Xiao Feng was no longer thirsty did she suddenly realize she was sitting on the CEO's sofa drinking the CEO's juice... Xiao Feng didn't know what she was so afraid of — probably the CEO's usual image at the company, which frightened her, always that cold face, stern, no warmth toward anyone.</p>
+<p>At this thought Xiao Feng glanced uneasily at Ke Yan reading documents on the sofa.</p>
+<p>At home, of course, Ke Yan wore loungewear today, which let Xiao Feng see a Ke Yan unlike the usual one, looking far less terrifying than at work.</p>
+<p>Needs the toilet!! Xiao Feng suddenly clutched her belly — too much water, it seemed.</p>
+<p>No good, probably because she'd been so nervous earlier; now she urgently needed to go.</p>
+<p>Clutching her belly, her voice a little shaky, Xiao Feng said, "CEO, I'd like to use the toilet."</p>
+<p>Ke Yan glanced up. "Go ahead; the toilet's over there."</p>
+<p>"Okay." Xiao Feng stood; though she wanted to bolt, for her image's sake she walked over slowly, step by step.</p>
+<p>Jiang Qi woke from hunger, put on clothes, and came downstairs to find Ke Yan hadn't gone to work today; seeing the documents in Ke Yan's hands and on the table, he said in surprise, "Why are you working from home today?"</p>
+<p>"I was afraid you'd wake up, find I'd left you to go to work, and feel hurt."</p>
+<p>"As if."</p>
+<p>"How is it — feeling better?" Ke Yan pulled Jiang Qi to sit beside him.</p>
+<p>"Mm." Jiang Qi nodded. "So from now on, once a week, and it won't hurt."</p>
+<p>"That won't do." Ke Yan shook his head, scooped Jiang Qi onto his lap. "Wear that outfit again next time."</p>
+<p>"Get lost — my behind still hurts." Jiang Qi gave Ke Yan a pinch; this scoundrel, taking him that many times, so that now though down below no longer hurt, his back was still sore.</p>
+<p>Jiang Qi shifted his body, settling himself comfortably on Ke Yan's lap.</p>
+<p>Seeing the way Jiang Qi sat, Ke Yan knew his back was sore, and reached out to knead it for him. After a while Jiang Qi suddenly said, in a low voice that left the listener feeling how downcast he was, "Am I not young anymore? Lately I keep feeling tired; looks like I'm getting old."</p>
+<p>"Nonsense, you're only twenty-seven; how are you old?" Ke Yan scolded. What Ke Yan dreaded most was Jiang Qi talking in that tone, because he feared Jiang Qi was feeling low inside — could it really be that he'd done it too many times? Better do less from now on.</p>
+<p>"All right, stop thinking about it; I'll show some restraint from now on."</p>
+<p>"Mm, okay, I won't think about it." Jiang Qi nodded, then buried his head in Ke Yan's chest, and where Ke Yan couldn't see, couldn't help breaking into a grin — hmph, I knew you'd say that; don't I know you? Just watch how I handle you.</p>
+<p>It seemed Jiang Qi had really gotten Ke Yan riled up this time.</p>
+<p>Kneaded comfortable by Ke Yan, Jiang Qi tipped his head up and kissed him; Ke Yan kissed back, and just as the two were kissing happily, the person watching them from behind had gone weak in the legs at the earth-shaking secret she'd just discovered.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-072.html" class="prev">Chapter 72</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-074.html" class="next">Chapter 74</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 63: The Company Trip (Part One) &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 63</h1>
+    <p class="chapter-title">The Company Trip (Part One) <span class="zh">公司旅行上</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~9 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">"Where do you suppose this year's company trip is going?"</p>
+<p>"No idea, but I really don't want to climb a mountain like last year and then spend two days up there feeding mosquitoes."</p>
+<p>"Me neither, but who told us to draw such bad lots — the past few years' company trips have all been mountain-climbing or vegetable-farming in the countryside."</p>
+<p>"If it were up to me, I'd love to go to the beach this time."</p>
+<p>During work hours, the women at the front desk whispered about how much they wanted to go to the seaside.</p>
+<p>"Hey, you know — if we went to the beach, wouldn't we get to see the CEO with his shirt off?"</p>
+<p>"You call that a sight?" said the colleague sitting beside the one who'd spoken. "Plainly it's a scene." She put a deliberate stress on "scene."</p>
+<p>"What I envy most, though, is Manager Jiang," another girl said. "Last year he actually shared a room with the CEO."</p>
+<p>"Right — I wonder if the CEO will room with someone again this year." The others nodded. Manager Jiang had been so lucky.</p>
+<p>Most companies have an annual trip these days, and Ke Group was no exception — though Ke Group had one quirk other companies didn't.</p>
+<p>Ke Group chose its destination by lottery. Every year, HR wrote possible destinations on slips and put them in a large box. One representative from each department drew; if two or more slips matched, that destination won. If none did, the staff voted among the places drawn.</p>
+<p>It was a fine system when someone drew the seaside. Unfortunately, for several years running, they had ended up in remote, exhausting places: climbing mountains, farming vegetables, or camping with no one but themselves to arrange the food and drink.</p>
+<p>Everyone loved and hated the lottery in equal measure. Before the drawing had even begun, each department debated whom to send. Everyone secretly believed they might draw somewhere wonderful; no one wanted the blame if they didn't.</p>
+<p>Most of the company was discussing this now, and when Jiang Qi came back from lunch he heard everyone talking about it. He stood at the doorway and saw that in his department not only the women were chatting — even the men had crowded into the women's huddle to talk.</p>
+<p>Jiang Qi sighed helplessly; better not spoil their fun.</p>
+<p>He turned and went upstairs to find Ke Yan.</p>
+<p>"Ke Yan?" No one outside; Jiang Qi guessed he'd gone to eat and wasn't back. He gently opened the door to Ke Yan's office — no one inside.</p>
+<p>"Ke Yan." Jiang Qi called again; no answer.</p>
+<p>He gently opened the rest-room door and found Ke Yan napping on the bed.</p>
+<p>Jiang Qi crept to the bedside. Somehow, Ke Yan only grew more handsome the longer he looked. Jiang Qi bent down and kissed him softly.</p>
+<p>Ke Yan opened his eyes and deepened the kiss.</p>
+<p>Jiang Qi gently pushed him away, face flushed, panting a couple of breaths; one look at Ke Yan's eyes told him he wasn't fully awake yet, still a bit groggy. Jiang Qi patted Ke Yan's face with both hands. "You're not even properly awake and you're kissing — what if it'd been someone else?"</p>
+<p>Ke Yan curved his lips in a smile, wrapped his arms around Jiang Qi's waist, and buried his face in Jiang Qi's belly. "You smell nice."</p>
+<p>"Smell?" Jiang Qi sniffed his own sleeve — no smell. He looked at Ke Yan, puzzled.</p>
+<p>"A milky sweetness." So saying, Ke Yan sniffed at Jiang Qi's neck again.</p>
+<p>Jiang Qi was helpless against this puppy-like behavior of Ke Yan's.</p>
+<p>Some time ago, the two of them had caught a supermarket promotion: spend more than five hundred yuan and receive a lottery draw. Their receipt came to 523.98, so Jiang Qi promptly dragged Ke Yan into the queue.</p>
+<p>His luck was decent. While many people won nothing, Jiang Qi's first draw earned him five bottles of milk-scented body wash. He went home beaming, the eco-bag clutched in his arms.</p>
+<p>Body wash expired too, so Jiang Qi had already worked his way through two bottles. Ke Yan, no matter how Jiang Qi coaxed him, refused to help. That was why the milky scent still lingered on Jiang Qi's skin.</p>
+<p>Jiang Qi gave Ke Yan's thigh a pinch, then lay down on the bed with him; loosening his tie, he asked, "Ke Yan, everyone seems to want to go to the beach for this company trip."</p>
+<p>"Is that so? Where do you want to go?"</p>
+<p>"Anywhere's fine with me." Jiang Qi figured any place would be fun.</p>
+<p>"Then we'll put a couple extra beach slips in."</p>
+<p>"Who came up with this, anyway — deciding by lottery." Jiang Qi asked, puzzled.</p>
+<p>"When Ke Group was first founded and had just gotten on track, the staff were under a lot of pressure; Grandfather wanted to give everyone a chance to relax, so he thought the whole company could go away for a couple of days. But back then Ke Group was short of funds, and Grandfather didn't want the staff paying out of pocket, so he came up with this method — write extra slips for the places that were both relaxing and cheap, and let them draw; whatever they drew, they drew, and they couldn't blame the company for being stingy."</p>
+<p>"A businessman through and through." Jiang Qi couldn't help admiring Ke Yan's grandfather.</p>
+<p>"Though they can afford better now, they still keep drawing mountain-climbing and vegetable-farming."</p>
+<p>"Their luck really is terrible." Jiang Qi laughed.</p>
+<p>Ke Yan ruffled Jiang Qi's hair, gathered him into his arms, and said, "Sleep a while longer."</p>
+<p>"Mm."</p>
+<p>By the time Jiang Qi finished his nap upstairs and came down, the group who'd been chatting earlier were already at their computers working. Jiang Qi quietly tugged at the slightly creased back of his suit, wrinkled from being slept on.</p>
+<p>Suddenly someone called him, "Manager Jiang."</p>
+<p>Jiang Qi turned to the one who'd stopped him. "What is it?"</p>
+<p>"We've just decided — we're entrusting this department's drawing to you."</p>
+<p>"Me?" Jiang Qi pointed at his own face, puzzled and startled.</p>
+<p>"Yes, so you'll have to work hard and draw us a good one."</p>
+<p>"Huh?" Jiang Qi wanted to say he didn't want to draw at all — if he drew a bad one, wouldn't he get the dirty looks?</p>
+<p>Amid everyone's eager anticipation, the drawing day finally came; every department wore a solemn expression.</p>
+<p>But the people pushed forward to draw wore nervous ones — Jiang Qi, for instance.</p>
+<p>"Do you really need to be that nervous?" Yang Shaoyu watched the expressions on everyone's faces in the lobby downstairs, then looked at the faintly nervous Jiang Qi beside Ke Yan.</p>
+<p>Jiang Qi tugged at his own face, remembering how at quitting time yesterday everyone had stared at him the moment he stepped out of his office, all with a "you absolutely must draw us the beach" look.</p>
+<p>"Honestly, isn't going to the mountains fun too?" Jiang Qi muttered.</p>
+<p>Ke Yan glanced at Jiang Qi. "Two extra beach slips have already gone in; don't be so nervous."</p>
+<p>"Mm." Jiang Qi nodded.</p>
+<p>Ke Yan had briefly considered rigging Jiang Qi's draw. But the slips and box were displayed for inspection first, so Yang Shaoyu—the man in charge—would have to slip in the two extra beach options while loading the box.</p>
+<p>Once everything had survived the crowd's sharp-eyed inspection, the drawing began. One nervous, hopeful representative after another stepped up, only to come away crestfallen.</p>
+<p>As the drawing neared its end, Jiang Qi still hadn't appeared; his department grew anxious — it was nearly over, where on earth had he gone?</p>
+<p>And where was Jiang Qi just then? In the toilet. He had diarrhea — not from nerves, but from eating too much at lunch.</p>
+<p>By the time Jiang Qi came out of the toilet it was exactly his turn. He was startled to find he'd become the last, the grand finale; he quickly scanned the already-drawn slips with his eyes, his brow twitching — how was not a single one good.</p>
+<p>Jiang Qi looked at the draw box, went over, quickly reached into it, pulled out a slip, and unfolded it under everyone's eyes.</p>
+<p>The moment they saw the slip, the crowd cheered. The men began planning to buy swim trunks after work; the women debated which swimsuits to wear.</p>
+<p>Jiang Qi smiled. Sure enough — to draw something good you must never hesitate; draw fast and what you get is the good one.</p>
+<p>This was Jiang Qi's hard-won insight from years of lottery-drawing.</p>
+<p>He glanced at Ke Yan behind the crowd and waved the slip with a smile; Ke Yan saw and smiled too. Jiang Qi didn't know that his eyes, bright with joy just then, looked very lovely.</p>
+<p>After work, Jiang Qi happily dragged Ke Yan to a swimwear shop. It was pricey, but the quality looked good. Jiang Qi chose an almost patternless black pair for Ke Yan and a simple pair for himself. Ke Yan approved, and they were in and out in under five minutes.</p>
+<p>That was how—and how quickly—men shopped!</p>
+<p>Home again, Jiang Qi took out his suitcase to pack his clothes — T-shirts, casual cropped trousers, underwear, and clean towels. As he was packing, Ke Yan came in and saw him at it. "Happy?"</p>
+<p>"Mm." Jiang Qi nodded. "Of course I'm happy. Go pack yours — we leave in a couple of days."</p>
+<p>Ke Yan raised an eyebrow. "Just put mine in with yours; there's plenty of room left in your case."</p>
+<p>"No." Jiang Qi shook his head, refusing. "We're not in the same room; how would we split it up — and whoever heard of a boss and a subordinate sharing one suitcase."</p>
+<p>"Then you pack for me." Ke Yan liked Jiang Qi packing his case, because Jiang Qi knew his preferences inside out and would never put in anything he didn't like.</p>
+<p>"Okay." Jiang Qi agreed.</p>
+<p>Ke Yan walked out of the room, took out his phone, and made a call.</p>
+<p>"Hello?" Yang Shaoyu's voice came from the other end.</p>
+<p>"Arrange for me and Jiang Qi to be in the same room."</p>
+<p>"Ah, all right, listen, you—" Before Yang Shaoyu could finish, Ke Yan hung up. Yang Shaoyu tossed the phone aside and went back to flirting with the woman beside him.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-062.html" class="prev">Chapter 62</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-064.html" class="next">Chapter 64</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

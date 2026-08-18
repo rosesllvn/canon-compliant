@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 96: The Price of Copping a Feel &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 96</h1>
+    <p class="chapter-title">The Price of Copping a Feel <span class="zh">占便宜的后果</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">While Jiang Qi was at breakfast, Yang Shaoyu was only just waking — and woke to a throbbing ache low in his body.</p>
+<p>He drew a sharp breath through his teeth. A whole night and it still hurt?</p>
+<p>He looked over at Lin Zirui asleep beside him, and the ache seemed to sharpen — but he gathered Lin Zirui carefully into his arms all the same, thinking back to what had happened when he'd brought him home the night before…</p>
+<p>Yang Shaoyu hadn't drunk anything the previous evening, but Lin Zirui had had a little. Yang Shaoyu had declined the Ke family's invitation to stay and driven Lin Zirui back to his place.</p>
+<p>Lin Zirui had fallen asleep on the way. Yang Shaoyu adjusted his seat for him and, on arriving, didn't wake him — just carried him straight up.</p>
+<p>He laid Lin Zirui on the sofa and sat on the floor a while, watching him. Times like this were the only times he could be this close, could simply look at him like this. Ordinarily, the instant he edged any nearer, Lin Zirui would fix him with that wary, guarded look — and it left Yang Shaoyu thoroughly miserable.</p>
+<p>He looked at Lin Zirui's pink lips and felt an itch he couldn't scratch. He bent down. His mouth was a bare two or three centimeters from Lin Zirui's now; he had only to lower his head a fraction to kiss him.</p>
+<p>His nose filled with the smell of wine on Lin Zirui, and a faint trace of disinfectant.</p>
+<p>Catching that disinfectant scent, Yang Shaoyu couldn't help smiling. He'd heard people say doctors always carried it on them — so it was true. Though on Lin Zirui it was fainter.</p>
+<p>Watching him sleep, that whole face open and undefended, Yang Shaoyu finally couldn't hold back. He dipped his head and kissed Lin Zirui's lips.</p>
+<p>One kiss and he was lost. He couldn't stop himself going back for another, and another, the kiss deepening by degrees. He hadn't touched a drop of wine — but kissing Lin Zirui now, he felt drunk all the same.</p>
+<p>In his dream, Lin Zirui suddenly felt as though he were suffocating, something pressing over his mouth and blocking his nose so he couldn't breathe.</p>
+<p>Yang Shaoyu pulled back from Lin Zirui's lips before he could stir to push him off. The sight of him still sleeping, yet breathing hard, was unbearably endearing.</p>
+<p>He stroked Lin Zirui's face, then climbed onto the sofa, bracing his arms and legs against it so as not to crush him.</p>
+<p>He lowered himself and kissed Lin Zirui again — and this time it wasn't only a kiss. His hand worked at the buttons of Lin Zirui's shirt; he managed only two before sliding a hand in at the collar, tracing down along the throat, while he prised Lin Zirui's teeth apart and tangled his tongue with his.</p>
+<p>Kissing his way down, sucking at Lin Zirui's neck, his other hand found the rise on Lin Zirui's chest and gave it a light pinch, then a slow knead — utterly besotted, unwilling to let go.</p>
+<p>He kissed and sucked from the neck down to the chest, working two more buttons open, baring the whole of Lin Zirui's chest. Yang Shaoyu looked at those two pink points and his eyes all but glowed — especially when he saw one of them flushed crimson from his kneading. His breath went hot.</p>
+<p>He bent quickly to kiss the other.</p>
+<p>The truth was, Yang Shaoyu only meant to indulge a momentary craving — to take a small taste. He had no real intention of doing anything to Lin Zirui while he was drunk.</p>
+<p>Besides, Lin Zirui hadn't truly accepted him yet. How could he do something so beastly under such circumstances?</p>
+<p>So Yang Shaoyu was only copping a small feel for now, and meant to go no further than this.</p>
+<p>Lin Zirui knew none of that. He felt someone licking, sucking, and biting him—uncomfortable, yet somehow pleasurable—and cracked open his bleary eyes. Yang Shaoyu sprawled over his chest, pinning both his hands. His legs, however, were free. Lin Zirui braced himself and drove one knee upward—straight into Yang Shaoyu's most vulnerable place.</p>
+<p>The blow flung Yang Shaoyu off the sofa and onto the floor.</p>
+<p>He curled in on himself like a shrimp, his whole body bent into a bow, both hands clamped over his groin, a look of pure agony on his face, cold sweat breaking out despite everything.</p>
+<p>Lin Zirui, having delivered the kick, simply rolled over on the sofa and dropped back to sleep.</p>
+<p>Poor Yang Shaoyu. He hadn't gotten two proper bites of his stolen tofu — hadn't even swallowed it down — before he was kicked, and kicked in the one place that mattered for a man's marital happiness, left lying on the floor unable to get up, hurting badly enough to weep.</p>
+<p>It was a searing, throbbing pain, and it came in waves.</p>
+<p>He had no idea how long he lay there. Only when it had eased a little could he get up at all. He pushed himself up against the sofa, looked at the soundly sleeping Lin Zirui, and dearly wanted to give him two hard smacks on the backside, the heartless little thing — fast asleep, no less. Though, he supposed, this was a calamity entirely of his own making.</p>
+<p>He took off his jacket first and draped it over Lin Zirui so he wouldn't catch cold, then sat on the floor, unmoving, waiting to feel a bit better before he tried anything.</p>
+<p>When at last he could stand, he carried Lin Zirui from the sofa to the bedroom, his legs still trembling a little as he did.</p>
+<p>Once he'd tucked Lin Zirui in, he climbed in himself without so much as a shower. He had absolutely no mood for one!!</p>
+<p>When Lin Zirui woke, he found himself in Yang Shaoyu's arms. Yang Shaoyu was already awake, watching him. Lin Zirui pushed him off and sat up; he must have gotten drunk last night and been brought home, he reasoned. He'd sat up too fast and his head spun — but a chocolate was promptly popped into his mouth. He held it on his tongue without asking where it had come from, because he knew Yang Shaoyu didn't care for sweets.</p>
+<p>His head settled. And then Lin Zirui noticed his chest felt cold, and oddly bare.</p>
+<p>He looked down — and his face went black at once. His shirt buttons were undone, the two points on his chest flushed an unusual red and a little swollen, his whole chest scattered with kiss-marks.</p>
+<p>Seeing the look on his face, Yang Shaoyu hurried to explain. "I didn't do anything — just a couple of kisses. And you kicked me last night, I'll have you know. I'm the one who came off worse." He pointed, for emphasis, at his own lap.</p>
+<p>Lin Zirui followed the gesture; his face went blacker still, his expression frankly disbelieving.</p>
+<p>"I'm really not lying. Want to see for yourself?" Yang Shaoyu actually reached for his zipper — and Lin Zirui snatched up the nearest pillow and hurled it at him. The man's nerve was bottomless. Lin Zirui got out of bed and headed for the bathroom.</p>
+<p>"It's over there. The washing things are in the little cabinet."</p>
+<p>Lin Zirui said nothing — but Yang Shaoyu knew well enough where he was headed.</p>
+<p>He shut the door, looked in the mirror, and a few fragments came back: yes, he had kicked Yang Shaoyu last night. At the thought, looking at his own kiss-marked skin in the glass, he couldn't help flushing — and feeling, faintly, a little sheepish.</p>
+<p>Still — that kick hadn't been wrong, had it??</p>
+<p>This was the price of copping a feel.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-095.html" class="prev">Chapter 95</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-097.html" class="next">Chapter 97</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

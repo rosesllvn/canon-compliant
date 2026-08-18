@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 79: Is It Their Nature, or Their Hearts &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 79</h1>
+    <p class="chapter-title">Is It Their Nature, or Their Hearts <span class="zh">是性格还是心意</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~8 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">He looked up a recipe on his phone, then went to the supermarket for the ingredients. Back home, Jiang Qi dashed into the kitchen, ready to make soup.</p>
+<p>He washed the mushrooms, wood-ear, and bean sprouts he'd bought, then got out the chicken, still uncut, and laid it on the board. Jiang Qi made a couple of practice passes with the cleaver, not at all sure where he was supposed to bring it down — well, he'd just cut it however; Auntie Li only ever went chop-chop-chop and had it done in no time.</p>
+<p>After a great deal of effort Jiang Qi finished cutting the chicken, and in the end at least had the sense to trim off the parson's nose and keep it out of the soup.</p>
+<p>That done, he gave the chicken a rinse and let it drain.</p>
+<p>Then he checked the recipe again: heat rendered lard in the pot. Rendered lard? Did they even have such a thing in the house? What did it look like? Jiang Qi rummaged blankly through the cupboards. Cooking oil would have to do — unable to find any lard, he settled for oil instead.</p>
+<p>He poured in a little, waited for it to heat, then added soy sauce to flavor the pot. Another look at the recipe: put in the chicken and cook through. Once the chicken was more or less done, Jiang Qi dumped in the mushrooms, wood-ear, and bean sprouts all at once, and finished with some seasoning at the end — salt, MSG, white pepper, sesame oil. Since Yang Shaoyu still couldn't eat anything cooked with rice wine, Jiang Qi left the rice wine out.</p>
+<p>Watching the soup come to a boil in the pot, Jiang Qi felt, for the first time, genuine confidence in his own cooking. He really wasn't half bad at this.</p>
+<p>Before cutting the heat at the end, Jiang Qi tasted it — not bad at all, quite good in fact.</p>
+<p>He poured the mushroom-and-chicken soup into a thermos and headed straight out without tidying the kitchen, since Ke Yan had probably already gotten home and was waiting for him downstairs.</p>
+<p>Sure enough, the moment Jiang Qi came down he spotted Ke Yan's car. He opened the door, climbed in, and offered to let Ke Yan have a taste of the soup he'd made.</p>
+<p>Ke Yan gave him a complicated sort of look. "I'll pass. Save it for Shaoyu."</p>
+<p>"Don't worry, I really did make it pretty well this time — I tasted it myself."</p>
+<p>"Really? Then I'd say your cooking's improved."</p>
+<p>Jiang Qi accepted the praise happily.</p>
+<p>At the hospital, Jiang Qi ladled out the soup for Yang Shaoyu, then sat by the bed watching him expectantly.</p>
+<p>Yang Shaoyu took an expectant sip — and found the taste off, somehow, nothing like Auntie Li's standard. He took another; the flavor really was decidedly strange. And then he noticed Jiang Qi watching him with those eager eyes — could it be Jiang Qi had made this? Yang Shaoyu looked down at the chicken soup in his hands. No wonder it tasted so bad.</p>
+<p>He was about to say as much when Ke Yan took the bowl out of his hands, ladled him another big spoonful, and said to Jiang Qi, "Looks like Shaoyu likes it a lot."</p>
+<p>Yang Shaoyu silently took the bowl back, then feigned drowsiness. "I'm getting a bit sleepy. I'll finish the soup and turn in — you two head home."</p>
+<p>"Oh — finish it, then. If you want more, just call me." Jiang Qi pressed it on him warmly.</p>
+<p>Once Jiang Qi had gone, Yang Shaoyu hurriedly poured all the soup back out.</p>
+<p>He'd just finished doing it when Lin Zirui happened to come in.</p>
+<p>"Night shift again?" Yang Shaoyu asked.</p>
+<p>"Mm. It's been me on nights these past few days." Lin Zirui nodded, then spotted the soup on Yang Shaoyu's table. "You want some soup? I'll pour it out for you."</p>
+<p>Yang Shaoyu looked over Lin Zirui's thin frame. "Come pour yourself a bowl."</p>
+<p>Lin Zirui poured out a bowl for Yang Shaoyu, who took it, spooned some up, and held it to Lin Zirui's lips. Lin Zirui froze, then his face went red. He glanced at Yang Shaoyu — and finding nothing in his expression, decided he only meant for him to have a taste. Lin Zirui shot him an aggrieved look, then drank a mouthful. Not bad at all.</p>
+<p>"How is it?" Yang Shaoyu asked.</p>
+<p>"Tastes fine," Lin Zirui answered honestly.</p>
+<p>Tastes fine? Yang Shaoyu eyed him oddly. The man's sense of taste really was peculiar.</p>
+<p>He handed the whole flask over to Lin Zirui. "It's all yours. You're so thin, you ought to build yourself up."</p>
+<p>Lin Zirui took it, flushing, then thanked him and walked out of the room. He, he hadn't actually been hungry — but since it had been given to him, he might as well drink it.</p>
+<p>The truth was, this was simply how Lin Zirui was made: the calm, unruffled front he usually wore was only a disguise.</p>
+<p>"By the way — Xue Cheng's an old classmate of yours?" Ke Yan asked suddenly, from the car.</p>
+<p>"Yeah, why?" Jiang Qi looked at him.</p>
+<p>"He proposed a partnership with me a while back. I turned it down at the time, but today he showed me his proposal again, and I thought it had merit."</p>
+<p>"How'd you suddenly take an interest in his deal? You wouldn't even see him before."</p>
+<p>"He's the son-in-law of Director Lin, of the Lin-Bai Group."</p>
+<p>The Lin-Bai Group had two heads of house. The two who'd founded the group — one surnamed Lin, the other surnamed Bai — held equal shares, and their standing within the company was the same.</p>
+<p>Xue Cheng's new bride was Old Lin's daughter, Lin Yinyin. Old Lin had wanted a son-in-law useful to his business, not Xue Cheng. But Lin Yinyin was pregnant with Xue Cheng's child, and her mother pressed for a wedding before she began to show. However much Old Lin disliked the match, he had little choice.</p>
+<p>Xue Cheng had gone into the whole business with his heart in his throat; his real fear had been that Old Lin would disregard the child in Lin Yinyin's belly and demand she get rid of it. Mercifully, that hadn't happened.</p>
+<p>With that, Xue Cheng's standing in the company rose with the tide, and there was no shortage of people lining up to curry favor with him.</p>
+<p>But Xue Cheng was no fool. He knew that to satisfy Old Lin completely, the partnership with Ke Yan was one he absolutely had to land. So, taking the chance afforded by sending out the wedding invitations, he talked it over with Old Lin, and had Old Lin himself telephone Ke Yan to ask him to meet with Xue Cheng once.</p>
+<p>Why on earth would Old Lin ordinarily lower himself to ask anything of Ke Yan? But Xue Cheng was his son-in-law now, and if Xue Cheng really could secure this contract, it was a credit to his own face as well.</p>
+<p>Ke Yan, receiving Old Lin's call, agreed to it — agreed to meet Xue Cheng once.</p>
+<p>In the end, after talking with Xue Cheng, Ke Yan judged the partnership proposal genuinely sound, and Xue Cheng himself a man of considerable capability.</p>
+<p>Satisfied, Ke Yan said he would think it over — and went so far as to say a partnership was very likely.</p>
+<p>Because Ke Yan had said he'd consider it, Xue Cheng was simply over the moon.</p>
+<p>At last, on his way out, Xue Cheng handed Ke Yan an invitation. "This is my wedding invitation. I hope you'll be able to come."</p>
+<p>Ke Yan took the invitation. He had no intention of going — but Xue Cheng, rather carried away just then, said to himself half-aloud, "An old classmate of mine works at the Ke Group too, and he'll be there this time. If you come, you two might just run into each other."</p>
+<p>Ke Yan knew that Jiang Qi and Xue Cheng had once been classmates — Jiang Qi had mentioned it to him — so it occurred to Ke Yan: would Jiang Qi be going as well?</p>
+<p>After Xue Cheng had gone, Ke Yan studied the invitation a moment, set it aside, and decided to ask Jiang Qi about it.</p>
+<p>"I forgot to mention it to you — I'd actually meant to go on my own. You don't like these things, do you?" Jiang Qi said.</p>
+<p>"I'll go with you. I worry about you drinking." Ke Yan looked over at Jiang Qi while they waited at a red light. Jiang Qi smiled. "Then let's go together." The truth was Jiang Qi had badly wanted to go with Ke Yan all along — he'd only kept quiet because he knew Ke Yan disliked places like that.</p>
+<p>And the truth was Ke Yan didn't want to go either — but still less did he want Jiang Qi going alone.</p>
+<p>The two of them had turned it over and over, and arrived at the very same point: each was thinking of the other.</p>
+<p>It wasn't a matter of either one's nature. It was the feeling each held for the other.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-078.html" class="prev">Chapter 78</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-080.html" class="next">Chapter 80</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

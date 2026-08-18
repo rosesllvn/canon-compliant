@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 104: Soup &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 104</h1>
+    <p class="chapter-title">Soup <span class="zh">汤</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~8 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Jiang Qi knew perfectly well that his cooking didn't pass muster. He wanted to restore Ke Yan's strength, not serve him something inedible that caused a stomachache instead.</p>
+<p>He'd meant to ask Auntie Li to make the soup, but Auntie Li's daughter-in-law had just had a baby, and she was away helping with the month of confinement, so she hadn't been coming to cook.</p>
+<p>Who did that leave? Then it struck him: Mom. He called her. "Hello, Mom—could you make me some soup? Something nourishing would be best."</p>
+<p>"What's brought on this sudden craving for soup? I used to have to force it down you, and even then you wouldn't drink it." The moment Jiang Qi said soup, she was already turning over which kind to make.</p>
+<p>"Uh, it's not for me. It's for my friend — the one I live with."</p>
+<p>"Oh. All right, I'll buy the ingredients in a bit." This friend was also Jiang Qi's boss, all the more reason to stay on good terms with him. Ke Yan, was it? He looked after Jiang Qi so well. What soup should she make?</p>
+<p>She hung up, mulling it over.</p>
+<p>Jiang Qi hung up too, planning to go home tomorrow to fetch the soup so it would be ready for Ke Yan at lunch.</p>
+<p>Home that evening, freshly showered, he said to Ke Yan, "Tomorrow morning I'm taking a half day. You go in to work without me."</p>
+<p>"Something on?" Ke Yan was blow-drying Jiang Qi's just-washed hair for him.</p>
+<p>"Mm, something to do."</p>
+<p>"Where are you off to?"</p>
+<p>"Back to my family's place. I'll be at the office before noon."</p>
+<p>"All right. I'll drive you tomorrow."</p>
+<p>"No need, I'll go myself." His hair dry, Jiang Qi took the dryer to do Ke Yan's.</p>
+<p>When they'd finished, the two lay down to sleep, Jiang Qi tucked into Ke Yan's arms and wrapped in warmth.</p>
+<p>He laid his feet over Ke Yan's, and Ke Yan trapped them between his own. Come winter, Jiang Qi's feet were always ice-cold, while Ke Yan's ran hot.</p>
+<p>Jiang Qi's frozen feet drank up the heat of Ke Yan's — better than any hand-warmer.</p>
+<p>"Cold?" Ke Yan pulled the quilt snug around him, sealing out the draft.</p>
+<p>"Not cold." Jiang Qi shook his head.</p>
+<p>Good, then. Ke Yan held him close and let him sleep in comfort.</p>
+<p>With the heating on and Jiang Qi's thick winter quilt, Ke Yan—rarely bothered by cold—felt uncomfortably hot. But one chill could make Jiang Qi ill, so Ke Yan said nothing.</p>
+<p>If Jiang Qi knew, he would insist on a thinner quilt. Ke Yan refused to tell him, because then Jiang Qi would be cold and never admit it.</p>
+<p>It had happened before. During their first winter together, Ke Yan had held Jiang Qi through the night and repeatedly woken with his back damp from the heat.</p>
+<p>A few days of this, and Ke Yan noticed that while Jiang Qi's hands and feet went cold at first, by the latter half of the night he didn't seem to mind the cold so much. So he suggested switching to a thinner quilt. Jiang Qi promptly scolded him: "Why didn't you say so earlier! I'll go buy a thinner one tomorrow."</p>
+<p>And buy one he did, the next day — airing it out in the sun, then spending the better part of the evening wrestling it into its cover.</p>
+<p>Ke Yan looked at the thin quilt and breathed a private sigh of relief. He shouldn't wake up cooked tonight.</p>
+<p>Come bedtime, Ke Yan held Jiang Qi to sleep as always, and Jiang Qi slept the night without a word of being cold, and Ke Yan slept just right — and so it was that he was never again woken by the heat.</p>
+<p>Except that night Ke Yan was suddenly woken by movement beside him — to find Jiang Qi burrowing against him, working his way down, his whole head vanishing under the covers.</p>
+<p>Ke Yan tucked him back up; before long Jiang Qi had burrowed down again.</p>
+<p>The next day, Ke Yan asked whether he had been cold. Jiang Qi denied it, despite burrowing beneath the quilt all night. Ke Yan wanted the thick one back; Jiang Qi flatly refused—and promptly fell ill that very day.</p>
+<p>Ke Yan hurried the thick quilt back on at once. And never again dared say he was too warm in bed.</p>
+<p>Remembering all this, Ke Yan couldn't help pinching Jiang Qi's cheek. The stubborn-mouthed thing.</p>
+<p>The next morning, Jiang Qi made breakfast for them both before anything else — just bread and milk, but still — then shaved Ke Yan and knotted his tie. With Ke Yan about ready to head out, Jiang Qi fetched his coat and briefcase, helped him into the coat at the door, and handed him the briefcase.</p>
+<p>Ke Yan took it, put on his shoes, and finally planted a hard kiss on Jiang Qi's lips.</p>
+<p>"I'm off to work, wife." He smiled, gentle.</p>
+<p>"Mm. Take care on the way."</p>
+<p>Jiang Qi saw him off—not downstairs, because Ke Yan refused to let him into the cold, but as far as the elevator.</p>
+<p>Ke Yan gone to work, Jiang Qi put the plates and cups in the sink, bundled up, and headed to the Jiang house.</p>
+<p>His mother had just gotten back from the market and was about to start the soup when Jiang Qi arrived.</p>
+<p>She looked at him. "No work today?"</p>
+<p>"There is. I came to pick up the soup." The heating was on here too, so he shed his heavy coat.</p>
+<p>"I haven't even started it yet."</p>
+<p>"I know. I'll help."</p>
+<p>"Will you make it to work in time? Xiao Lü's already left."</p>
+<p>"I'm not in until the afternoon."</p>
+<p>"Oh. Have you eaten breakfast?" She took his hand — and yes, ice-cold.</p>
+<p>"I've eaten. Mom, it's turned cold lately — you and Dad remember to layer up."</p>
+<p>"Yes, yes." She smiled.</p>
+<p>They fussed over each other a bit, then set to making the soup.</p>
+<p>Jiang Qi wasn't planning to do any actual cooking today, so he chopped vegetables and meat and assisted his mother from the side.</p>
+<p>Despite helping, Jiang Qi had no idea what soup she was making. It seemed elaborate: the pot simmered all morning, and he chopped an array of vegetables and ingredients he could not name.</p>
+<p>When the soup was done, Jiang Qi ladled it carefully into a thermos, said goodbye to his mother, and headed for the office.</p>
+<p>She watched him rush off and shook her head. The boy — what was the hurry, that he couldn't even stay to eat a meal.</p>
+<p>Jiang Qi was in a hurry, of course — it was nearly noon, and he had to make it back before Ke Yan went to lunch.</p>
+<p>It hadn't even occurred to him to just call Ke Yan first — but luckily Ke Yan called to ask where he was.</p>
+<p>"I'm almost at the office. Don't go to lunch yet."</p>
+<p>"All right. I'll wait for you."</p>
+<p>Jiang Qi got back to the office hauling a huge thermos and a lunchbox.</p>
+<p>Ke Yan eyed what he'd brought. "What's all this…"</p>
+<p>"Soup Mom made. And dishes and rice." Jiang Qi beamed.</p>
+<p>"You went home this morning just for this?"</p>
+<p>"Mm. Wanted to build you back up." He nodded.</p>
+<p>Warmth spread through Ke Yan. A wife really was a lovable thing.</p>
+<p>"Let's eat, then." Ke Yan opened the thermos.</p>
+<p>"Mm." Jiang Qi sat down beside him.</p>
+<p>As they ate, Jiang Qi said smugly, "Well? My mom's cooking's good, isn't it?"</p>
+<p>"Mm. It's good." The look on Jiang Qi's face made Ke Yan want to laugh. So cute.</p>
+<p>They were well into it when someone marched in — high heels, clacking briskly across the floor.</p>
+<p>Jiang Qi looked up to see Wang Siqi carrying a thermos, and froze. Could it be…</p>
+<p>"Ke Yan, you've been away on business so much lately, you must be worn out — I made you some soup." Wang Siqi had come up while the secretary was at lunch.</p>
+<p>Jiang Qi glanced at Ke Yan. Drawing the bees and butterflies again, this one.</p>
+<p>"There's no need—" Ke Yan hadn't finished when the clack of heels sounded again. Jiang Qi had a sinking guess…</p>
+<p>And he was right. Sun Nianqing.</p>
+<p>Carrying her own pot of finished soup, smiling as she offered it to Ke Yan.</p>
+<p>Ke Yan frowned. "Take them away, both of you. Don't let this happen again — I hired you to work."</p>
+<p>Wang Siqi looked about to say something, but pressed her lips shut.</p>
+<p>Sun Nianqing's smile stiffened, then recovered. "And Manager Jiang? Is he the same as us?" She had planned to give Ke Yan the soup after work, but followed when she saw Wang Siqi go upstairs. Her meaning was clear: <em>You ate what Jiang Qi brought. Why not mine?</em></p>
+<p>"I only eat Jiang Qi's. Take all this back down, and don't come up here as you please again — see to your own jobs." Ke Yan's voice went cold.</p>
+<p>Jiang Qi had been about to answer, but his man had spoken for him, so he obediently shut his mouth and ate.</p>
+<p>Sun Nianqing shot Jiang Qi a vicious glare, managed an ugly smile, and went back down.</p>
+<p>Wang Siqi, somewhat mollified by Sun Nianqing's comeuppance, left without glaring at Jiang Qi at all.</p>
+<p>Jiang Qi went on eating as though he'd noticed nothing — but once they'd gone, he sneaked a pinch at Ke Yan.</p>
+<p>Ke Yan winced. "I'm the one who only wants to eat your food, and you pinch me?"</p>
+<p>"Bee-and-butterfly magnet."</p>
+<p>"All right, all right, eat up." Privately Ke Yan resolved there must be no more of this — it surely upset Jiang Qi, and an upset Jiang Qi was the thing he most dreaded.</p>
+<p>So Jiang Qi won, outright. The reason for his victory was Ke Yan's heart.</p>
+<p>And Ke Yan's heart would stay, always and forever, with Jiang Qi.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-103.html" class="prev">Chapter 103</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-105.html" class="next">Chapter 105</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

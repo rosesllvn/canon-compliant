@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 91: Buying Toys &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 91</h1>
+    <p class="chapter-title">Buying Toys <span class="zh">买玩具</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">"How come there's been cilantro in everything lately." Jiang Qi, eating with Ke Yan in the company canteen, looked at his favorite dish buried in cilantro.</p>
+<p>"I'll go change it for another dish." Ke Yan made to get up.</p>
+<p>"Never mind; I'll just pick the cilantro out — the other dishes have it too."</p>
+<p>"Seems they changed chefs lately. Cilantro's not bad, though."</p>
+<p>The two looked toward the voice — Sun Nianqing.</p>
+<p>Sun Nianqing set her tray on the table and said with a sweet smile, "May I sit here?"</p>
+<p>Jiang Qi nodded; Sun Nianqing, though, looked at Ke Yan, who glanced up and said, "Suit yourself."</p>
+<p>Sun Nianqing's smile sweetened, and she sat down across from Ke Yan.</p>
+<p>Jiang Qi pursed his lips, looked at the Sun Nianqing beside him, and wrinkled his nose — what a strong smell of perfume.</p>
+<p>Watching Jiang Qi wrinkle his nose, Ke Yan found it funny.</p>
+<p>Jiang Qi went back to picking out the cilantro, but even picked out, the cilantro taste lingered, and his appetite vanished.</p>
+<p>"Manager Jiang dislikes cilantro?" Sun Nianqing asked, seeing this.</p>
+<p>"Mm, don't like the taste."</p>
+<p>"Actually it's not bad; but some like it, some don't — wouldn't you say, Ke Yan?"</p>
+<p>"Mm." Ke Yan answered faintly.</p>
+<p>"Actually I don't mind the taste of cilantro either; in that I'm rather like Ke Yan."</p>
+<p>Hearing this, Jiang Qi couldn't help glancing at Sun Nianqing.</p>
+<p>"Hurry and eat." Seeing Jiang Qi look at Sun Nianqing, Ke Yan tapped Jiang Qi's tray, urging him to eat.</p>
+<p>Jiang Qi looked a bit wilted. "No appetite; I'll go buy bread in a bit."</p>
+<p>"Then go now, Manager Jiang; it's no good going hungry." Sun Nianqing said with concern.</p>
+<p>"I'll go buy it then, and come back after." Jiang Qi felt rather hungry too.</p>
+<p>"Go on; don't forget to buy milk."</p>
+<p>Sun Nianqing lowered her head to pick at her food — CEO Ke really is attentive to Manager Jiang.</p>
+<p>The place Jiang Qi bought bread wasn't far; he got a sandwich and a bottle of chocolate-flavored milk.</p>
+<p>When he came back to the canteen, Jiang Qi found Sun Nianqing had at some point moved to sit beside Ke Yan, and quite close, their upper bodies nearly stuck together.</p>
+<p>Jiang Qi raised an eyebrow, walked over quickly, and gave a loud cough.</p>
+<p>Hearing the abrupt sound, Sun Nianqing looked up to see Jiang Qi back with his bread, and shifted her upper body a little away from Ke Yan's shoulder.</p>
+<p>"Manager Jiang, you're back?" Sun Nianqing took another bite of meat tossed with cilantro.</p>
+<p>Watching her, Jiang Qi felt his own mouth fill with the taste of cilantro, thoroughly unpleasant.</p>
+<p>"Let's go; eat in my office." Ke Yan set down his chopsticks and stood.</p>
+<p>Jiang Qi nodded.</p>
+<p>Walking out of the canteen with Ke Yan, just as they were about to turn the corner Jiang Qi glanced back at Sun Nianqing and was startled — Sun Nianqing's expression just then was a little vicious.</p>
+<p>Jiang Qi blinked, and Sun Nianqing's expression returned to normal, even giving Jiang Qi a sweet smile; Jiang Qi turned back, doubting he'd seen right.</p>
+<p>In Ke Yan's office, Jiang Qi quickly polished off the sandwich, downed the milk in two or three gulps, gave a burp, and said, "You absolutely have to file a complaint — no more cilantro; the smell of it gives me goosebumps."</p>
+<p>Ke Yan smiled. "All right, I'll have someone pass it along in a bit — absolutely no cilantro."</p>
+<p>"Mm." Jiang Qi nodded, with a "that's more like it" look.</p>
+<p>Ke Yan sat beside Jiang Qi, lowered his head, and kissed him; Jiang Qi smiled and kissed back.</p>
+<p>Ke Yan put an arm around Jiang Qi's waist; Jiang Qi draped an arm over Ke Yan's neck.</p>
+<p>Just as the two were kissing, lost in it, Ke Yan's phone suddenly rang.</p>
+<p>Jiang Qi jumped; Ke Yan let him go, picked up the phone, looked — Ke Shao.</p>
+<p>He answered. "What is it?"</p>
+<p>"What what is it? This Saturday is your nephew's first-birthday party; don't you dare forget — be sure to come home. Right, bring Jiang Qi too, and remember to buy a gift." With that Ke Shao hung up, probably to go notify others.</p>
+<p>"What is it?" Jiang Qi asked.</p>
+<p>"It's Xiao Ke's birthday this Saturday; come home with me."</p>
+<p>"Huh?" Jiang Qi got a little nervous at once.</p>
+<p>"Sis told you to come; it's a party, lots of people will be there, no need to be nervous."</p>
+<p>"Mm." He said so, but he was nervous all the same.</p>
+<p>"Wear the white suit we bought last time that day." Ke Yan thought about it and added.</p>
+<p>Jiang Qi nodded, no objection. "Right — should we go buy a gift for Xiao Ke?"</p>
+<p>"Mm, after work let's go to a mall together."</p>
+<p>"I'll get back to work then." Jiang Qi checked the time; the lunch break was about over.</p>
+<p>Walking into his office, Jiang Qi saw Yang Shaoyu sitting there, brows knit, glum.</p>
+<p>"You didn't go to the hospital to see Doctor Lin today."</p>
+<p>"Just got back."</p>
+<p>One look at Yang Shaoyu told you he'd struck out with Doctor Lin again today.</p>
+<p>"Just keep at it." Jiang Qi patted Yang Shaoyu's shoulder.</p>
+<p>Meanwhile, in the tea room, Wang Siqi glanced at Sun Nianqing brewing tea and gave a cold snort inwardly.</p>
+<p>She's decent-looking, sure, but a far cry from me.</p>
+<p>She picked up her cup of coffee and walked out of the tea room in her high heels.</p>
+<p>Sun Nianqing took a sip of tea, watching the direction Wang Siqi had gone; from what she knew, this Wang Siqi seemed to like Ke Yan too — looked like this rival was rather green.</p>
+<p>After work, Jiang Qi and Ke Yan went to the mall; Jiang Qi looked at the various toys, not knowing what to buy.</p>
+<p>"A race car?" Jiang Qi looked at a cool race car. "No, Xiao Ke's too little."</p>
+<p>"A rocking horse?" Jiang Qi gave the rocking horse a push. "Pity Xiao Ke's too small."</p>
+<p>Ke Yan watched Jiang Qi muttering to himself and picked up a cloth doll. "This one?"</p>
+<p>"No, too much fur; not good for a child to play with."</p>
+<p>Watching the so-earnest Jiang Qi, Ke Yan suddenly laughed. "If you bore me a child, would it be like this too? Mom-Jiang?"</p>
+<p>"Get lost — could I bear a child?" Jiang Qi's face went red; saying that, in broad daylight, out in public no less.</p>
+<p>"Hard to say; if I work at it a bit harder maybe you'd conceive."</p>
+<p>Jiang Qi reached out and gave Ke Yan's waist a vicious pinch.</p>
+<p>The two browsed half the place — it was quite big — and in the end Jiang Qi spotted, on a shelf, a pink mesh bag of little rubber ducks of various sizes; he took it down, looked, and laughed. "Ke Yan, look, this is so cute."</p>
+<p>Ke Yan reached out and squeezed one; the duck immediately let out a quack-quack-quack. Looking at the duck's silly-cute face, Ke Yan nodded.</p>
+<p>"Mm, cute; let's get this."</p>
+<p>Jiang Qi happily held it, and in the end also took a duck nightlight.</p>
+<p>"Get one more of these." Ke Yan took another bag of little rubber ducks.</p>
+<p>"All right, but who are you giving it to?"</p>
+<p>Ke Yan didn't answer, and Jiang Qi didn't ask further; the two paid and went home.</p>
+<p>That night, Ke Yan pressed Jiang Qi onto the bed and took him hard, over and over.</p>
+<p>In the end Jiang Qi couldn't help begging for mercy.</p>
+<p>Ke Yan kissed the corner of Jiang Qi's mouth. "I still have to work at getting you pregnant."</p>
+<p>Jiang Qi, mortified into fury, clawed Ke Yan's back, and several fresh scratches appeared there at once.</p>
+<p>In the end Jiang Qi lay limp and spent on the bed while Ke Yan went to run the bath.</p>
+<p>Ke Yan carried Jiang Qi into the tub. Jiang Qi leaned against him in a daze until a sudden quack made him open his eyes. The rubber ducks they had bought that day floated around them, large and small.</p>
+<p>Jiang Qi happily picked one up. "Is this the extra bag you bought today?"</p>
+<p>"Mm; like it?" Ke Yan watched Jiang Qi's smiling face, pleased.</p>
+<p>"Mm — but isn't this a child's toy?" Jiang Qi felt a flicker of glumness at liking a child's toy.</p>
+<p>"Mm... but no one said grown-ups can't play with them." Ke Yan consoled.</p>
+<p>Jiang Qi nodded, let the ducks float on the water, turned, and kissed Ke Yan; the corners of Ke Yan's mouth lifted in a smug, victorious smile.</p>
+<p>And then, the silly-cute little rubber ducks witnessed firsthand a rather R-rated scene.</p>
+<p>How shameful — the little rubber ducks shut their eyes, as it were.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-090.html" class="prev">Chapter 90</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-092.html" class="next">Chapter 92</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 77: Lin Zirui (Part Two) &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 77</h1>
+    <p class="chapter-title">Lin Zirui (Part Two) <span class="zh">林子睿下</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~7 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">Lin Zirui was born into a wealthy family, but from very young he watched his parents cradle his little sister every day, coaxing smiles from her; the two-year-old Lin Zirui looked on from the side, and being so small felt nothing much, but a little older he understood envy — he envied that his little sister could laugh in their parents' arms, envied that she had someone to lull her to sleep at night.</p>
+<p>But Lin Zirui was also puzzled why his parents doted on his little sister so, why even his two older brothers doted on her so, while no one doted on him.</p>
+<p>Whenever their parents came home they'd go to see the little sister first, and once they'd seen her they'd forget to look in on him; at those times Lin Zirui, watching the three of them laughing merrily in the corner, felt a little sad.</p>
+<p>One day Lin Zirui came home from kindergarten and was drawing in the living room; that day his eldest brother came home from school and scooped the Lin Zirui off the sofa up into his arms, and Lin Zirui was happy, because his eldest brother would occasionally hold him, so he was glad.</p>
+<p>And lately his second brother sometimes played with him too, which set the small Lin Zirui's heart fluttering with joy.</p>
+<p>In fact, the reason eldest and second brother had lately begun noticing Lin Zirui was that they'd once seen him secretly watching them play with the little sister from the corner; second brother had thought rather a lot of it then, and discussed it with eldest brother: "Seeing how much we dote on little sister, do you think Xiao Rui might secretly bully her at home down the line?"</p>
+<p>Eldest brother thought about it. "Then let's play with Xiao Rui a bit too, and he won't secretly bully little sister, will he."</p>
+<p>Eldest and second brother weren't very mature back then.</p>
+<p>In truth, the two older brothers naturally preferred their adorable little sister. They had been too young to care for Lin Zirui when he was born, and once their sister arrived, no one paid him much attention at all. Even after they learned to dote on her, they still had little interest in spending time with him.</p>
+<p>One day, eldest and second brother called Lin Zirui to say they'd take him out to play; Lin Zirui was overjoyed, so excited the night before he couldn't sleep, and set off early the next morning in the family chauffeur's car to wait for eldest and second brother at the amusement park.</p>
+<p>Lin Zirui waited and waited at the amusement-park gate, waited and waited, but a whole morning passed and eldest and second brother never came; he was very hungry, and the driver had gone back, but he didn't dare leave, afraid that if he left, his brothers would come and not find him — so Lin Zirui could only go on waiting with an empty stomach.</p>
+<p>And the two he was waiting for, meanwhile, had come home from school and were watching the little sister dance and wave her arms about on the ground, having completely forgotten their promise to little Lin Zirui.</p>
+<p>In the afternoon, the sky began to pour rain; the Lin family driver wondered whether to call the eldest young master to go pick them up — with the rain, the young masters probably couldn't play anymore.</p>
+<p>So he called eldest brother: "Eldest young master, it's old Zhong; it's raining now — shall I go pick you up?"</p>
+<p>Eldest brother was startled. "I'm at home; where would you go to pick me up?"</p>
+<p>"Huh? Didn't you go to the amusement park with the third young master today?"</p>
+<p>"Oh no, I forgot — get the car ready, quick." Only then did eldest brother remember, and he pulled second brother and dashed out.</p>
+<p>In the car, second brother said, "It's raining; Xiao Rui will have found somewhere to shelter, surely."</p>
+<p>"Mm." Eldest brother agreed.</p>
+<p>But when they reached the amusement-park gate and saw Lin Zirui standing in the rain, head bowed, eldest and second brother got out with umbrellas; second brother, impatient by nature, said, "Are you stupid? Couldn't you find somewhere to take cover?"</p>
+<p>"I — I was afraid you'd come and not find me." Lin Zirui said, picking at the hem of his clothes.</p>
+<p>Second brother frowned. "You think too much; you're not always plotting how to bully little sister, are you." Second brother was a bit irritable, because he didn't want to admit it was he who'd forgotten Lin Zirui and left him waiting half a day in the rain.</p>
+<p>"I'm not." Lin Zirui heard this and protested loudly.</p>
+<p>"Not, then not; what are you shouting for — someone who didn't know would think you had a guilty conscience."</p>
+<p>Eldest brother wanted to stop second brother from saying more, and gestured at him to shut up.</p>
+<p>Lin Zirui dimly understood second brother's meaning too; his eyes reddened, and head down, he walked toward the car.</p>
+<p>Eldest brother sat in front, Lin Zirui and second brother in back, Lin Zirui wrapped in the blanket old Zhong the driver had given him, very sad inside — he'd never imagined this was the sort of person eldest and second brother thought he was; perhaps they didn't want to be good to him after all. Sad, he couldn't help wanting to cry, but he didn't want to cry out loud, so he held it in.</p>
+<p>They reached home soon; second brother had meant to carry Lin Zirui out of the car, but Lin Zirui dodged him and got out himself.</p>
+<p>Second brother thought nothing of it, taking it for Lin Zirui throwing a tantrum.</p>
+<p>But over the next few days, eldest and second brother found that Lin Zirui, after falling ill following that day, no longer liked them as before; in the past whenever they went to hug him he'd be delighted, but now, on the rare occasion they went to hug him, Lin Zirui would dodge away and not let them.</p>
+<p>Eldest and second brother understood — it seemed Lin Zirui no longer wanted to be close with them; second brother understood in his heart that he'd probably overthought it, made Lin Zirui out to be more complicated than he was, but he couldn't bring himself to apologize.</p>
+<p>One day, the driver old Zhong, unable to watch any longer, said to the two Lin young masters: "Young masters, the truth is the third young master is very lonely, and very sensitive inside; if you two would just talk with him, he used to be so happy. This time he really was hurt badly, which is why he's like this; don't be angry with him."</p>
+<p>Put this way by old Zhong, eldest and second brother thought — surely they weren't that petty.</p>
+<p>So they went to find Lin Zirui, thinking children are easy enough to coax; but afterward eldest and second brother found that Lin Zirui really didn't like them anymore.</p>
+<p>"A-choo—" Lin Zirui sneezed, lifting his head from the desk, sniffled, and pulled his clothes tighter — dreaming again, was he.</p>
+<p>He picked up the water glass on the desk and took a sip, then straightened his white coat and decided to do his rounds, to see how Yang Shaoyu was doing.</p>
+<p>Reaching the door of Yang Shaoyu's room, Lin Zirui knocked and went in; inside, Yang Shaoyu was frowning, because the anesthetic in his leg had worn off and it hurt now. One look at his expression told Lin Zirui it surely hurt a lot; he walked over and said, "Pain is normal; bear with it and it'll pass — though if you really can't stand it you can take painkillers, but I'd advise against it."</p>
+<p>"Mm, got it. You're on duty tonight?"</p>
+<p>"Mm." Lin Zirui nodded, looked around the room, didn't see the carer. "Where's the carer?"</p>
+<p>"Gone to fetch water."</p>
+<p>"Oh — in another hour you can have water and eat something, and you can lie back on the pillow; just don't eat anything spicy or greasy soup."</p>
+<p>"Got it. I had no idea you were a doctor." Yang Shaoyu smiled.</p>
+<p>Lin Zirui rubbed his head, a little embarrassed. "Yeah — I never thought I'd be the one doing your surgery today."</p>
+<p>"Mm — why do I feel like I can never get enough sleep." After a couple of sentences Yang Shaoyu grew drowsy again.</p>
+<p>"It's just the anesthetic; it's only a half-dose, but it makes you sleepy easily."</p>
+<p>"Is that so? Then I'll sleep a while." So saying, Yang Shaoyu shut his eyes.</p>
+<p>Lin Zirui watched Yang Shaoyu a while, leaving the room only when the carer came back; he thought Yang Shaoyu was a decent sort, and that if his little sister had come to the blind date that day, she might well have fallen for him.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-076.html" class="prev">Chapter 76</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-078.html" class="next">Chapter 78</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>

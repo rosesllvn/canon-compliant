@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 66: The Misunderstanding, or Whatever (Part Two) &middot; The CEO&rsquo;s Wife Is a Man</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1510;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --rust: #8b3a2a;
+      --rust-light: #c4624e;
+      --gold: #b8933a;
+      --muted: #6b5f52;
+      --border: #c8bfad;
+      --reading-width: 660px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--paper); color: var(--ink);
+      font-family: 'Zilla Slab', Georgia, serif; line-height: 1.85; min-height: 100vh;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+    body { font-size: 18px; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20; background: var(--paper);
+      border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .topbar-home {
+      font-family: 'Libre Baskerville', serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .topbar-home:hover { color: var(--rust); }
+    .topbar-novel {
+      flex: 1 1 auto; text-align: center; font-style: italic;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .kofi-btn {
+      background: var(--rust); color: #fff; padding: 0.35rem 0.9rem; border-radius: 2px;
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .kofi-btn:hover { background: var(--rust-light); }
+    main { max-width: var(--reading-width); margin: 0 auto; padding: 3rem 1.5rem 2rem; position: relative; z-index: 1; }
+    .chapter-novel {
+      font-family: 'Libre Baskerville', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .chapter-label { font-family: 'Libre Baskerville', serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.3rem; }
+    .chapter-title { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+    .chapter-title .zh { font-style: normal; font-size: 0.85rem; letter-spacing: 0.08em; }
+    .chapter-date { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; letter-spacing: 0.05em; }
+    .chapter-read { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.05em; }
+    .divider { width: 3rem; height: 1px; background: var(--border); border: none; margin: 2rem 0; }
+    .chapter-body p { margin-bottom: 1.3rem; }
+    .chapter-body p.first::first-letter { font-size: 1.05em; }
+    .scene-break { text-align: center; color: var(--gold); letter-spacing: 0.3em; margin: 2.2rem 0; }
+    .kofi-note {
+      max-width: var(--reading-width); margin: 3rem auto 0; padding: 1.2rem 1.5rem;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--muted); text-align: center;
+    }
+    .kofi-note a { color: var(--rust); text-decoration: none; }
+    .kofi-note a:hover { text-decoration: underline; }
+    .chapter-nav {
+      max-width: var(--reading-width); margin: 2rem auto 3rem; padding: 0 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      font-family: 'Libre Baskerville', serif; font-size: 0.78rem; position: relative; z-index: 1;
+    }
+    .chapter-nav a { color: var(--rust); text-decoration: none; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .chapter-nav .disabled { color: var(--border); }
+    .prev::before { content: '\2190 '; }
+    .next::after { content: ' \2192'; }
+    .nav-toc { color: var(--muted) !important; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; background: var(--paper-dark); position: relative; z-index: 1; }
+    .footer-inner { max-width: var(--reading-width); margin: 0 auto; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+    .footer-inner a { color: var(--rust); text-decoration: none; }
+    .footer-inner a:hover { text-decoration: underline; }
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .chapter-label { font-size: 1.5rem; }
+      .topbar-novel { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="index.html" class="topbar-home">Canon Compliant</a>
+    <span class="topbar-novel">The CEO&rsquo;s Wife Is a Man</span>
+    <a href="https://ko-fi.com/rosesllvn" target="_blank" class="kofi-btn">&#9749; Ko-fi</a>
+  </div>
+  <main>
+    <p class="chapter-novel">The CEO&rsquo;s Wife Is a Man</p>
+    <h1 class="chapter-label">Chapter 66</h1>
+    <p class="chapter-title">The Misunderstanding, or Whatever (Part Two) <span class="zh">误会神马的下</span></p>
+    <p class="chapter-date">July 2026</p>
+    <p class="chapter-read">~6 min read</p>
+    <hr class="divider" />
+    <div class="chapter-body">
+<p class="first">"I really did just trip and fall by accident." Jiang Qi explained, glancing at Ke Yan.</p>
+<p>Ke Yan, with a teasing edge, said, "Right, Manager Jiang just took a fall; I steadied him."</p>
+<p>Jiang Lü and Xiao An quickly nodded, because the one explaining to them was the CEO — they couldn't treat it the way they would Jiang Qi.</p>
+<p>Once they'd gone, Jiang Qi let out a breath.</p>
+<p>Ke Yan looked at the state of his face and, itching to, pinched Jiang Qi's cheek.</p>
+<p>Jiang Qi, all in a huff, wouldn't let Ke Yan touch him. "Why didn't you explain just now!"</p>
+<p>"The more you explain, the more suspicious it gets — don't you think?"</p>
+<p>Jiang Qi saw the logic: too much explanation bred suspicion; better to act naturally.</p>
+<p>But Manager Jiang didn't know — when an explanation is called for, you really do still have to explain...</p>
+<p>The two went back to the room, got their clothes, and planned to shower together.</p>
+<p>Mid-wash, someone suddenly rang the doorbell; Jiang Qi was startled — who, this late?</p>
+<p>Thinking this, he made to get out of the tub; Ke Yan, seeing Jiang Qi about to go answer the door, stopped him. "You keep washing; I'll go."</p>
+<p>So saying, he climbed out of the tub, took the bathrobe hanging on the wall and put it on, and went out.</p>
+<p>Seeing Ke Yan go, Jiang Qi sank back into the water.</p>
+<p>Ke Yan opened the door, and was surprised to see Jiang Lü holding a bag, with Wang Siqi standing beside her; he hadn't expected Jiang Qi's sister to come knocking, and asked, "Is there something?"</p>
+<p>Jiang Lü had thought it would be her brother answering, never expecting the CEO, and was startled; the CEO looked fresh from a shower, still giving off heat. Jiang Lü peered into the room but didn't see her brother.</p>
+<p>If Jiang Lü was startled, Wang Siqi was transfixed. Ke Yan's robe hung low and loose, exposing a glimpse of firm chest.</p>
+<p>Wang Siqi blushed.</p>
+<p>Jiang Lü lifted the bag in her hand. "I forgot to give my brother this when I was sorting out the luggage earlier."</p>
+<p>"Mm." Ke Yan took the bag from Jiang Lü. "He's showering; I'll give it to him."</p>
+<p>"Okay."</p>
+<p>Seeing her errand done, Jiang Lü was about ready to go, then suddenly remembered Manager Wang beside her, and said, "I had Manager Wang to thank for bringing me up just now — I couldn't remember which room my brother was in."</p>
+<p>Seeing it was finally her turn to speak, Wang Siqi smiled. "It was nothing."</p>
+<p>Wang Siqi finished and waited for Ke Yan to praise her, but a voice cut off her hopes.</p>
+<p>"Ke Yan, where are you, why aren't you back yet — weren't we showering together? I've been waiting ages; I'm done, hurry up and go wash."</p>
+<p>Because Jiang Qi and Ke Yan's room was a suite, Jiang Qi, coming out from inside, couldn't see the door and didn't know where Ke Yan was.</p>
+<p>It came out naturally. The three at the door fell silent; Jiang Lü and Wang Siqi looked at Ke Yan, and Ke Yan looked back...</p>
+<p>Jiang Qi made a circuit of the room without spotting Ke Yan — had he gone out? Thinking this, Jiang Qi walked to the doorway, and saw the silent trio. Jiang Qi froze for two or three seconds, then said in a trembling voice, "How long have you been there?"</p>
+<p>Ke Yan looked at the visibly-startled Jiang Qi with amusement.</p>
+<p>Jiang Lü came to herself and gave her second brother a complicated look. "Since before you came out of the shower."</p>
+<p>Jiang Qi thought he was done for — then remembered they were both men, not a man and woman to be misread, and settled again.</p>
+<p>"Brother, I never imagined you and the CEO were so close you'd even shower together."</p>
+<p>Jiang Lü's words lifted Jiang Qi's just-settled heart right back up; he was about to explain, then suddenly remembered what Ke Yan had said before — the more you explain, the more suspicious — so he nodded and didn't explain.</p>
+<p>"Oh~" Jiang Lü said, with a meaningful little "oh."</p>
+<p>Wang Siqi found it strange — close enough to shower together? They were two men, nothing to think about, yet something felt off. But Jiang Qi answered openly and Ke Yan's face revealed nothing; she must be overthinking it.</p>
+<p>As Wang Siqi was thinking this, she noticed Jiang Lü about to leave, said a goodbye, and rode the elevator down with Jiang Lü.</p>
+<p>Once they'd gone, Jiang Qi first glanced at Ke Yan, then buried his face in Ke Yan's chest, gently bumping his head against it.</p>
+<p>Ke Yan laughed, his chest shaking against Jiang Qi's forehead, and shut the door. An arm around Jiang Qi's shoulders, he led him to the sofa.</p>
+<p>Jiang Qi pushed at Ke Yan. "Go shower, quick."</p>
+<p>"Mm." Ke Yan made a sound but didn't move; instead he pulled Jiang Qi up onto him, so Jiang Qi sat on his lap. Just as Jiang Qi was about to struggle, he suddenly felt something hard pressing against his backside.</p>
+<p>Jiang Qi said, half-shy, half-cross, "We did it today already."</p>
+<p>"Not enough."</p>
+<p>Jiang Qi was stopped short by Ke Yan's bluntness.</p>
+<p>But he didn't refuse either, letting Ke Yan undo the sash of his robe.</p>
+<p>Ke Yan's hand reached to Jiang Qi's waist and tugged lightly; the sash came loose, baring Jiang Qi's fair chest. He drew the robe down from the shoulders, revealing Jiang Qi's pale skin still marked with kiss-marks not yet faded from before...</p>
+<p>Jiang Lü dashed back to her room in high spirits, leapt onto the bed, and shook awake Xiao An, who'd drunk a little earlier and was now sound asleep.</p>
+<p>"Xiao An, Xiao An, wake up, quick."</p>
+<p>Shaken awake against her will, Xiao An said, "What are you doing?"</p>
+<p>"I saw something incredible."</p>
+<p>"What's so incredible? Just tell me tomorrow."</p>
+<p>"My brother showered together with the CEO — and in the same tub, no less."</p>
+<p>"..." Xiao An didn't answer, seemingly back asleep.</p>
+<p>Jiang Lü pursed her lips and was about to go shower when Xiao An suddenly shot upright in bed — then, head aching, flopped back down, lying there with her eyes wide open at Jiang Lü. "Is that true?"</p>
+<p>"Of course." Jiang Lü said smugly. "I even saw them both in bathrobes, and my brother said to the CEO he'd been waiting in the bathroom forever, why wasn't he coming in."</p>
+<p>"Damn, if I'd known I wouldn't have drunk — then I could've gone with you to find the CEO and your brother."</p>
+<p>Xiao An was beside herself with regret; Jiang Lü, smiling and in fine spirits, went off to shower.</p>
+    </div>
+  </main>
+  <div class="kofi-note">
+    <p>Enjoyed this chapter? Leave a comment or request a new translation at <a href="https://ko-fi.com/rosesllvn" target="_blank">ko-fi.com/rosesllvn</a> &#9749;</p>
+  </div>
+  <nav class="chapter-nav">
+    <a href="ceoswife-chapter-065.html" class="prev">Chapter 65</a>
+    <a href="ceoswife.html" class="nav-toc">Chapter list</a>
+    <a href="ceoswife-chapter-067.html" class="next">Chapter 67</a>
+  </nav>
+  <footer>
+    <div class="footer-inner">
+      Fan translation by <a href="https://ko-fi.com/rosesllvn" target="_blank">rosesllvn</a>.
+      All rights to the original work belong to 橘子味 (Júzi Wèi).
+      No profit is made from this translation. If requested by the author or publisher, this translation will be taken down.
+    </div>
+  </footer>
+</body>
+</html>
